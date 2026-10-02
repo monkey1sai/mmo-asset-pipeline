@@ -44,6 +44,8 @@ flowchart LR
 
 `catalog/assets.json` 保留首批批量候選。原 repo source 的 path／line／head 仍須完整；新清單可用 brief／reference／library 類型來源。專案 ID 不再限制兩款遊戲；`pipeline plan --project standalone` 可篩選 project null。未知、缺少操作狀態會停止規劃，失敗／取消也不自動釋出成可重送。
 
+`generate`／`split_then_generate` 的 `plan` 另提供 `creation_workflow`：由美術工程師整理每件／部件輸入，優先透過已核實的 Hyper3D API 創作，並追蹤、下載和後製。API 可用性、圖生輸入、額度來源與付費授權分開核對。網站是額度查核或有理由的備援；完整步驟見 [API 創作流程](api-creation-workflow.md)。離線計畫不直接提交生成。
+
 ## 按用途驗收
 
 | 類型 | 基本美術／技術／交付之外的檢查 |

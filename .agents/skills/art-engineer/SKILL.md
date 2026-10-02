@@ -68,6 +68,12 @@ python -B scripts/workbench.py plan requests/wood-gate.json
 
 剩餘點數不能替代需求。修訂上限目前是規劃欄位，由協調者比對 runs 追蹤，不宣稱程式已強制執行。
 
+## API 創作入口
+
+Hyper3D API 是需求整理後由美術工程師操作的創作工具。選 `generate`／`split_then_generate` 時，讀 [API 創作流程](../../../docs/api-creation-workflow.md)，使用 `plan.creation_workflow` 完成逐件／逐部件設計交接。工程師負責 prompt、參考圖與當前 backend 參數對應；不把自然語言委託直接轉交使用者到網站製作。
+
+先探測可見工具與非扣點認證。工具能力、輸入、月訂額度證據及花費授權分別報告；網站補查分項不代表模型需用網站生成。沿用已存在的具體授權，缺少圖生輸入時先準備設計圖，既有任務 pending／unknown 時只查原操作。工作台 CLI 提供離線交接，由工程師使用 MCP 執行 API，沒有自動交易鎖或扣點執行器。
+
 ## 製作與後製
 
 `plan` 列出能力需求，不執行工具也不授權花費。選目前可用的 Hyper3D、Blender 或其他合適工具；實際模型編輯時才讀適用的建模／拆件／骨架／匯出 skill，不預載整個美術技能庫。能力登記為 `unverified` 時先做範圍內的能力核對，未執行就保持未驗，不能承諾自動骨架、LOD 或 Unity 匯入。

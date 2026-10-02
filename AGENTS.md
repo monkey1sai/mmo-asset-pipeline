@@ -9,6 +9,7 @@
 - `assess` 只核對證據格式、需求雜湊及本機檔案雜湊。`eligible_for_delivery_review` 不是自動交付通過，不能取代美術判斷、DCC 實測或目標 runtime。
 - 原始 master、後製與交付包皆隨 repo。依 `docs/asset-storage.md` 使用 Git／Git LFS，禁止忽略整個 assets 或 deliveries；雲端網址不能代替本機交付檔。保留來源、索引、版本、相依檔及使用說明。
 - LFS 指標、本機 LFS 物件、遠端同步與重新 clone 還原是不同證據。`git add`、commit 與 push 依當次使用者具體授權；先核對遠端可見性及既有歷史，不擅自改可見性、加購配額、安裝 hook 或修改全域 Git 設定。
+- Hyper3D API 是美術工程師在需求整理後的創作工具；生成路徑優先使用當下可用 API，依 `docs/api-creation-workflow.md` 完成輸入設計、提交、追蹤、下載與後製。網站只用於額度證據或有明確理由的備援，不能把工具／額度限制說成只能網站生成。
 - Hyper3D 只使用使用者明確授權的月訂額度；普通點數、加購、升級不在預設範圍。API 總餘額不能替代月訂／普通分項。金額與點數以即時服務回傳為準。
 - 密鑰使用既有受支援的憑證提供者。禁止在 repo、命令列、log、聊天或 Git 保存密鑰、subscription_key、cookies、signed URL。
 - 付費提交前保存唯一 operation ID 與需求。pending／unknown 不自動重送；先查服務狀態。未知／缺少狀態使離線計畫停止；failed／cancelled 保留既有操作，由新證據決定新修訂。每筆扣點、下載及 QA 分別記錄。

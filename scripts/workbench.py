@@ -223,6 +223,50 @@ def make_draft(aid: str, brief: str, task_type: str, profile: dict | None = None
     }
 
 
+def api_creation_plan(request: dict) -> dict:
+    """Artist handoff, not an API payload or spending authorization."""
+    split = request["production"]["route"] == "split_then_generate"
+    parts = request["spec"]["parts"] if split else [{"id": request["id"]}]
+    return {
+        "owner": "art_engineer",
+        "preferred_execution": "hyper3d_api_via_available_mcp",
+        "execution_state": "not_submitted",
+        "capability_state": "requires_current_probe",
+        "authorization_state": "requires_existing_scope_check",
+        "credit_pool_state": "requires_monthly_credit_evidence",
+        "input_state": "requires_artist_design_and_backend_mapping",
+        "submission_ready": False,
+        "jobs": [{
+            "subject_id": part["id"],
+            "design_brief": {
+                "purpose": request["purpose"],
+                "style": deepcopy(request["style"]),
+                "part": deepcopy(part) if split else None,
+                "whole_asset_spec": deepcopy(request["spec"]),
+            },
+            "prompt": None,
+            "reference_images": [],
+            "operation_id": None,
+        } for part in parts],
+        "preparation_pending": (["拆件路徑需先定義部件"] if not parts else []) + [
+            "美術工程師將需求轉成單件／單部件 prompt，逐張確認參考圖與上傳範圍",
+            "核對當前工具 schema；圖生工具缺圖時先準備設計圖，不把需求文字直接當圖片輸入",
+            "生成參數與最終規格分開；固定輸出無法滿足的面數、尺寸、rig、動畫由後製處理",
+            "查既有 runs，保存唯一 operation ID、需求雜湊、輸入雜湊與 Authorization Envelope",
+        ],
+        "execution_steps": [
+            "探測工具及憑證狀態，查即時餘額；分開記錄 API 能力、額度來源與花費授權",
+            "沿用明確授權，核對月訂分項、單次成本、總預算及候選上限",
+            "逐筆保存 prepared 操作後呼叫 API；保存任務 ID 並查同一任務",
+            "完成後下載至 repo 的新 raw 版本，核對檔案與雜湊",
+            "美術工程師後製、品質比較、驗收及交付歸檔",
+        ],
+        "unknown_submission_policy": "reconcile_original_operation_never_resubmit",
+        "website_policy": "credit_evidence_or_documented_fallback_only",
+        "note": "這是待工程師整理的創作交接；不是可直接送出的 API payload、交易鎖或付費許可。",
+    }
+
+
 def production_plan(request: dict) -> dict:
     checks = required_checks(request)
     route = request["production"]["route"]
@@ -233,7 +277,7 @@ def production_plan(request: dict) -> dict:
         "generate": "建立原創視覺參考及工具輸入；依已記錄的資源授權產生候選",
         "split_then_generate": "先制定各部件、pivot 與活動規格，再分別製作及組裝",
     }[route]
-    return {
+    result = {
         "mode": "offline_plan_only", "request_id": request["id"], "request_sha256": request_sha256(request),
         "project": request.get("project"), "route": route, "reason": request["production"]["reason"],
         "pending": readiness(request), "reuse_candidates": request["production"]["reuse_candidates"],
@@ -243,6 +287,11 @@ def production_plan(request: dict) -> dict:
         "required_checks": checks, "paid_submission_authorized_by_this_plan": False,
         "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。",
     }
+    if route in {"generate", "split_then_generate"}:
+        result["creation_workflow"] = api_creation_plan(request)
+        if route == "split_then_generate" and not request["spec"]["parts"]:
+            result["pending"].append("拆件生成前需定義部件")
+    return result
 
 
 def check_artifact(item: dict, root: Path) -> str | None:
