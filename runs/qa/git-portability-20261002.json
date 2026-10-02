@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-10-02",
   "scope": "authorized_git_and_lfs_delivery_with_fresh_clone_verification",
-  "status": "pre_sync_verified",
+  "status": "remote_content_and_fresh_clone_verified",
   "authorization": {
     "source": "commit and push 建立 git 上的美術工程師可帶著走",
     "destination": "github.com/monkey1sai/mmo-asset-pipeline main and its Git LFS endpoint",
@@ -57,9 +57,44 @@
     "workspace_pointer_local_object_match": true,
     "art_engineer_relative_links_in_index": 9,
     "asset_acceptance_status": "needs_revision; not_delivered",
-    "lfs_upload": "not_run",
-    "git_push": "not_run",
-    "fresh_clone_restore": "not_run"
+    "local_lfs_fsck": "pass: objects and pointers at committed HEAD",
+    "lfs_upload": {
+      "result": "pass",
+      "operation": "git lfs push origin HEAD",
+      "objects": 5,
+      "bytes": 28703326,
+      "provider_result": "Uploading LFS objects: 100% (5/5), 29 MB, done"
+    },
+    "git_push": {
+      "result": "pass",
+      "verified_content_commit": "1c321dff94ddb1d27cd104bde99a1583563c5263",
+      "remote_ref": "refs/heads/main",
+      "mode": "fast_forward",
+      "remote_ref_readback_matches": true
+    },
+    "fresh_clone_restore": {
+      "result": "pass",
+      "source": "git@github.com:monkey1sai/mmo-asset-pipeline.git",
+      "verified_content_commit": "1c321dff94ddb1d27cd104bde99a1583563c5263",
+      "method": "remote clone --no-checkout; checkout pointers with GIT_LFS_SKIP_SMUDGE=1; clear that command-local flag; explicit git lfs pull origin",
+      "independent_lfs_storage": true,
+      "payload_objects_before_pull": 0,
+      "payload_objects_after_pull": 5,
+      "asset_workspace_and_object_hashes_match_expected": true,
+      "restored_asset_count": 5,
+      "restored_asset_bytes": 28703326,
+      "seven_skill_and_evaluation_snapshot_hashes_match": true,
+      "relative_skill_reference_count": 9,
+      "relative_skill_references_resolve": true,
+      "unittest": {"tests": 62, "result": "pass"},
+      "catalog_validation": {"assets": 39, "result": "pass"},
+      "vendor_lock": "pass",
+      "skill_format": "Skill is valid!",
+      "lfs_fsck": "pass",
+      "clean_worktree": true,
+      "same_host_fresh_clone_not_new_os": true
+    },
+    "evidence_record": "This record is committed after verification of the content commit above; obtain the record revision from Git history. It does not assert its own subsequent push before that operation happens."
   },
   "limits": {
     "new_paid_generations": 0,

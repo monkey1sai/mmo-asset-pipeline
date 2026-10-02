@@ -69,4 +69,6 @@ python -B -m unittest discover -s tests -v
 
 Git LFS 設定、本機暫存、Git／LFS 遠端同步及重新 clone 還原各自需要證據；保存進度見 [Git 可攜性紀錄](runs/qa/git-portability-20261002.json)。舊 QA 中的未提交／未推送欄位是當時快照，不代表後續同步狀態。本 repo 不保存憑證或臨時下載網址，不自行加購、升級、修改可見性或建立排程。另兩個遊戲的既有變更保留。目前沒有背景生成或排程繼續執行。
 
+2026-10-02 已實際完成內容提交的 Git／LFS 遠端同步，並從 GitHub 全新 clone，以空白獨立 LFS 儲存區還原五個資產、核對雜湊及執行 62 個離線測試。這驗證 repo 還原，不表示新電腦的 Blender、Unity 或代理 UI 已驗收；兩個候選仍需修訂。
+
 本機曾出現 `sandbox provisioning failed`；個別經核准的原使用者環境檢查不能證明正常沙箱已恢復。驗證紀錄需清楚區分工具測試、模型實測、目標環境與遠端保存證據。
