@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-02",
+  "timezone": "Asia/Taipei",
+  "subscription_credits_observed": 205,
+  "regular_credits_observed": 25,
+  "last_refill_date_observed": "2026-10-01",
+  "next_reset_at": null,
+  "api_unit_cost_estimate": 0.5,
+  "cost_estimate_source": "https://docs.hyper3d.ai/en/api-specification/rodin-gen2-5",
+  "estimate_note": "API 基礎設定估算；MCP／網頁的實際扣點另記，不假定相同",
+  "budget_scope": "subscription_only",
+  "regular_credit_spending_allowed": false,
+  "top_up_allowed": false,
+  "automatic_schedule_enabled": false,
+  "maximum_open_submissions": 1,
+  "unknown_submission_retry_allowed": false,
+  "monthly_goal": "優先將到期月訂額度轉為有用途且可追溯的委託與素材庫資產；按實際交付需求配置，需求不足時回報缺口",
+  "stop_conditions": ["普通點數減少", "費用來源不明", "提交結果不明", "月訂額度不足", "沒有已規劃的素材需求", "重置時間未核對而需跨週期執行"],
+  "allocation_guidance": {"order": ["active_delivery_requests", "planned_requests", "purposeful_library_stock"], "fixed_project_percentages": false},
+  "historical_bootstrap_guidance": {"evoloot_percent": 45, "changshan_longdan_percent": 45, "shared_percent": 10},
+  "allocation_note": "45／45／10 僅保留首批歷史建議；現在依需求及驗收能力配置，政策不是強制花費、永久財務授權或排程"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example-openable-gate",
+  "title": "可開合古代木城門範例",
+  "brief": "古代木城門，局部戰損但仍可使用，左右門扇可開關，先交付獨立模型。",
+  "purpose": "展示部件、pivot、活動與驗收需求；不是付費委託",
+  "task_type": "interactive_prop",
+  "project": null,
+  "status": "specified",
+  "provenance": {"kind": "example", "reference": "docs/art-workflow.md#互動物件"},
+  "style": {"description": "原創風格化古代木構，克制戰損、乾淨可重用輪廓", "references": [], "must_have": ["門框、左右門扇分離", "損傷不破壞鉸鏈結構"], "must_not_have": ["人物、地面、整座城池、烘焙火焰"]},
+  "spec": {"size_m": [4, 4.5, 0.6], "target_triangles": 6000, "texture_px": 2048, "units": "m", "up_axis": "+Y", "forward_axis": "+Z", "parts": [{"id": "frame", "pivot": "門洞地面中心", "motion": null}, {"id": "left-leaf", "pivot": "左鉸鏈軸", "motion": {"kind": "rotation", "axis": "+Y", "range_deg": [0, 100]}}, {"id": "right-leaf", "pivot": "右鉸鏈軸", "motion": {"kind": "rotation", "axis": "+Y", "range_deg": [-100, 0]}}], "requires_rig": false, "animations": []},
+  "delivery": {"scope": "standalone", "formats": ["glb"], "target_environment": null},
+  "production": {"route": "split_then_generate", "reason": "先拆門框與門扇，避免融合網格無法開合；工具與費用另按實際授權核對", "reuse_candidates": [], "max_revisions": 2},
+  "additional_checks": [{"id": "clearance", "area": "technical", "description": "兩扇門在指定角度範圍內不穿插門框或彼此"}],
+  "assumptions": ["尺寸、面數、材質和開啟角度為可修訂範例值"],
+  "open_questions": []
+}

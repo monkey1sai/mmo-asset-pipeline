@@ -1,5 +1,45 @@
+# 模型、貼圖及大型交付封裝使用 Git LFS；指標與本機物件必須一起驗證。
+# 文字需求、清單、README、驗收報告及小型證據截圖維持一般 Git。
+.gitattributes text eol=lf
+.gitignore text eol=lf
 *.md text eol=lf
 *.json text eol=lf
 *.py text eol=lf
 *.toml text eol=lf
+.agents/skills/** text eol=lf
+# Skill 試用文字快照保留相同位元組，供跨平台雜湊核對。
+runs/qa/art-engineer-skill-*/**/*.json text eol=lf
+runs/qa/art-engineer-skill-*/**/*.md text eol=lf
+runs/qa/art-engineer-skill-*.json text eol=lf
+*.glb filter=lfs diff=lfs merge=lfs -text
+*.gltf filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.usd filter=lfs diff=lfs merge=lfs -text
+*.usdc filter=lfs diff=lfs merge=lfs -text
+*.usdz filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+assets/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
+assets/**/*.tga filter=lfs diff=lfs merge=lfs -text
+assets/**/*.tif filter=lfs diff=lfs merge=lfs -text
+assets/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+assets/**/*.exr filter=lfs diff=lfs merge=lfs -text
+assets/**/*.hdr filter=lfs diff=lfs merge=lfs -text
+assets/**/*.psd filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.png filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.webp filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.tga filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.tif filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.exr filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.hdr filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.psd filter=lfs diff=lfs merge=lfs -text
+# 保留已鎖來源的原始位元組，避免移機換行改動破壞 vendor SHA-256。
 /vendor/blender-skills/** -text

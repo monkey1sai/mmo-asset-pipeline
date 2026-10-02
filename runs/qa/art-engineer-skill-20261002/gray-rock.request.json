@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "forward-gray-rock",
+  "title": "獨立灰色岩石離線試用",
+  "brief": "我要獨立灰色岩石，尺寸 1×0.8×1 公尺，1500 三角形、不需要貼圖，GLB；不指定遊戲。",
+  "purpose": "依模擬委託整理獨立靜態岩石；本輪只保存需求及離線計畫，不製作或交付模型。",
+  "task_type": "static_prop",
+  "project": null,
+  "status": "specified",
+  "provenance": {
+    "kind": "user_brief",
+    "reference": "tmp/art-engineer-forward-20261002/gray-rock.request.json#brief"
+  },
+  "style": {
+    "description": "灰色、不規則自然岩石，單件可獨立使用；未指定風格時採中度簡化的自然形體。",
+    "references": [],
+    "must_have": ["灰色岩石本體", "無貼圖的基本色材質"],
+    "must_not_have": ["外部或內嵌貼圖", "地面、人物、文字與 logo"]
+  },
+  "spec": {
+    "size_m": [1, 0.8, 1],
+    "target_triangles": 1500,
+    "texture_px": null,
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [{"id": "rock", "pivot": "底面中心；模型底面置於 Y=0", "motion": null}],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {"scope": "standalone", "formats": ["glb"], "target_environment": null},
+  "production": {
+    "route": "generate",
+    "reason": "已查 library/index.json 並以岩石／rock 搜尋，均無候選；需要新做獨立灰色岩石。具體製作工具待本輪以外核對，本計畫不授權 Hyper3D、Blender 或任何生成。",
+    "reuse_candidates": [],
+    "max_revisions": 0
+  },
+  "additional_checks": [{"id": "no-textures", "area": "technical", "description": "GLB 不含貼圖圖像、不引用外部貼圖；灰色由材質基本色提供"}],
+  "assumptions": [
+    "size_m 依 X寬／Y高／Z深記錄為 1／0.8／1 公尺；岩石前向僅用於格式一致性。",
+    "1500 三角形視為交付上限，不刻意增加無用三角形；不宣稱已達此上限。",
+    "未指定灰色數值與風格時使用中性灰基本色、粗糙非金屬材質與自然輪廓；這些是可修訂預設。",
+    "不需要骨架、動畫、LOD 或指定遊戲／Unity 驗收。",
+    "max_revisions=0 表示本輪離線試用不安排付費修訂，不代表未來模型製作的資源授權。"
+  ],
+  "open_questions": []
+}

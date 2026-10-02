@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "forward-wood-gate",
+  "title": "可獨立開合古代木城門離線試用",
+  "brief": "古代木城門，4×4.5×0.6 公尺，門框與左右門扇分開，兩扇能各開 100 度，不穿插，6000 三角形／2K，獨立 GLB。",
+  "purpose": "依模擬委託整理有三個獨立部件的木城門，左右門扇能以鉸鏈 pivot 各自開合；本輪只保存需求及離線計畫。",
+  "task_type": "interactive_prop",
+  "project": null,
+  "status": "specified",
+  "provenance": {
+    "kind": "user_brief",
+    "reference": "tmp/art-engineer-forward-20261002/wood-gate.request.json#brief"
+  },
+  "style": {
+    "description": "原創古代木構城門，門框與木製左右門扇分離；未指定年代與地域時採無特定朝代裝飾的簡潔木構。",
+    "references": [],
+    "must_have": ["固定門框", "左右門扇為獨立節點與可分別操作部件", "木紋材質與必要鉸鏈", "兩扇各能開啟 100 度"],
+    "must_not_have": ["融合成單一不可操作網格", "活動時穿插門框或另一門扇", "人物、地面、整座城池、文字與 logo"]
+  },
+  "spec": {
+    "size_m": [4, 4.5, 0.6],
+    "target_triangles": 6000,
+    "texture_px": 2048,
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [
+      {"id": "frame", "pivot": "門洞地面中心；閉合組裝根節點設於 X=0,Y=0,Z=0", "motion": null},
+      {"id": "left-leaf", "pivot": "面向 +Z 側觀看時的左外側鉸鏈垂直軸；相對 frame 保存局部變換與實際位置", "motion": {"kind": "rotation", "axis": "+Y", "range_deg": [0, 100]}},
+      {"id": "right-leaf", "pivot": "面向 +Z 側觀看時的右外側鉸鏈垂直軸；相對 frame 保存局部變換與實際位置", "motion": {"kind": "rotation", "axis": "+Y", "range_deg": [-100, 0]}}
+    ],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {"scope": "standalone", "formats": ["glb"], "target_environment": null},
+  "production": {
+    "route": "split_then_generate",
+    "reason": "已查 library/index.json 並以城門／gate 搜尋，均無候選；先設計門框與左右門扇的組裝及 pivot，再分別製作，避免融合。具體工具及費用仍未授權，本輪只有離線計畫。",
+    "reuse_candidates": [],
+    "max_revisions": 0
+  },
+  "additional_checks": [
+    {"id": "clearance", "area": "technical", "description": "左門 0至100 度、右門 -100至0 度的完整運動掃掠，以及兩扇同時或各自活動的組合，均不穿插固定門框、鉸鏈結構或另一門扇；僅測端點不能證明全範圍"},
+    {"id": "independent-leaves", "area": "technical", "description": "同一 GLB 中 frame、left-leaf、right-leaf 為具名獨立節點；各門扇可獨立旋轉，pivot 與局部軸正確，改一扇角度不帶動另一扇"},
+    {"id": "texture-budget", "area": "technical", "description": "所有貼圖每邊不超過 2048px；材質與貼圖在交付 GLB 中完整、相依引用可移機重現"}
+  ],
+  "assumptions": [
+    "4／4.5／0.6 公尺指閉合組裝模型的 X寬／Y高／Z深包圍盒；開啟後掃掠可超出閉合深度。",
+    "6000 三角形視為門框、兩扇與鉸鏈合計交付上限；2K 指貼圖每邊至多 2048px。",
+    "+Y 向上、+Z 為門外正面；閉合為 0 度，左門正向、右門負向繞 +Y 旋轉，兩扇都向 -Z 側開啟。",
+    "開啟方向與中性古代木構風格為可修訂預設；鉸鏈精確位置、門厚與安全間隙在製作時必須以幾何掃掠確認，不以文字規格假定已可行。",
+    "交付單一 GLB 內的三個具名獨立節點；部件分開不解讀成必須交三個 GLB。",
+    "使用剛體節點旋轉即可，不另要求骨架、烘焙動畫、LOD、Unity 或其他目標遊戲驗收。",
+    "max_revisions=0 表示本輪離線試用不安排付費修訂，不代表未來模型製作的資源授權。"
+  ],
+  "open_questions": []
+}

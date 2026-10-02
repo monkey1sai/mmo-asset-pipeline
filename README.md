@@ -1,70 +1,72 @@
-# MMO Asset Pipeline · Asset Forge
+# 3D 美術工程工作台
 
-從構圖文字與概念設計，製作可在 **Unity MMORPG** 使用的角色、服裝、武器、建築、景觀與場景。Hyper3D 負責生成候選幾何；Blender 負責設計修正、重拓樸、UV／烘焙、骨架、蒙皮及動畫；Unity 負責實際匯入、換裝、材質、動作與效能驗收。
+這個 repo 管理「理解一份需求，製作並交付符合需求的 3D 資產」的工作流。人物、道具、場景、建築可來自不同客戶或遊戲；EvoLoot 與 changshan-longdan 是首批需求來源，客戶設定可選用，核心不固定綁定兩個 repo 或 Unity。
 
-**目前版本：workflow 與可執行的前置規畫／檢查工具。尚未完成付費生成、自動蒙皮、Unity 外掛或完整端到端資產交付。** 附件方案名稱 `mmo-asset-forge` 保留為 Asset Forge 概念，GitHub 目的地維持 `monkey1sai/mmo-asset-pipeline`。
+需求決定是否重用、修改、生成、拆件，以及必要的骨架、動畫、LOD 和目標環境驗收。Hyper3D 與 Blender 等是製作工具。工程師的原始 master、後製版本及交付包保存在本 repo；模型與大型貼圖透過 Git LFS 跟著 repo 走。
 
-```mermaid
-flowchart TD
-    A[文字構圖／角色與世界設定] --> B[設計探索：輪廓、材質、玩法距離]
-    B --> C[三視圖、分件線、裝備干涉與尺度]
-    C --> D{素材策略}
-    D --> E[Hyper3D 候選模型]
-    D --> F[既有基準／Blender 手工或程序模型]
-    E --> G[Blender 微調與分件]
-    F --> G
-    G --> P[快速 Unity 預覽：明確標記 PREVIEW]
-    P --> H[設計定稿 → 重拓樸 → UV／烘焙]
-    H --> I{資產分支}
-    I --> J[角色／服裝：骨架家族、蒙皮、次級動態]
-    I --> K[武器：握點／掛點／剛體部件]
-    I --> L[建築／景觀：模組、點綴、LOD／碰撞]
-    J --> M[Unity 匯入與實際驗收]
-    K --> M
-    L --> M
-    M --> N[版本化交付包與證據]
-```
+## 已實作的離線能力
 
-流程與美術彈性：[workflow](docs/workflow.md)、[角色／換裝契約](docs/character-and-wardrobe.md)、[材質／場景規範](docs/materials-and-environments.md)、[快速迭代](docs/iteration.md)、[Hyper3D adapter](docs/hyper3d.md)。來源與實作界線見 [sources](docs/sources.md) 及 [驗收](docs/acceptance.md)。
+- 保存自然語言原文為需求草稿，整理規格、來源、預設、待確認項目與交付範圍。
+- 搜尋素材庫，制定重用／修改／生成／拆件計畫；依資產類型產生必要驗收項目。
+- 核對證據是否對應目前需求及檔案雜湊，列出未驗或失敗項目；輸出待交付審查結果。
+- 保留既有 39 筆模型候選需求、月訂規劃、操作紀錄與局部 GLB 結構清點。
 
-## 本地使用
+這些工具不連網、不呼叫生成或 Blender、不花點數。`intake` 不會自動解讀出完整尺寸與功能；`assess` 檢查申報證據的完整性，不代替外觀判斷、幾何實測或引擎實測。
 
-工具只需 Python 3.10+，不自動安裝、上傳或消耗 credits。
+## 使用
+
+在此 repo 可使用 `$art-engineer` 處理美術需求。Skill 保存於 [.agents/skills/art-engineer/SKILL.md](.agents/skills/art-engineer/SKILL.md)，會沿現有需求、素材庫、製作、驗收與交付流程操作；客戶與引擎可選用，不自行擴張扣點或外部操作範圍。
+
+例如：`$art-engineer 製作一座可開合的古代木城門，先交付獨立模型；門框與左右門扇分離，資產保存於本 repo。`
+
+使用 Python 3.12 以上，僅需標準函式庫。完整流程見 [美術工作流](docs/art-workflow.md)，資產保存見 [Git／LFS 保存規範](docs/asset-storage.md)。
+
+換電腦時先備妥 Git、Git LFS 與 Python，clone 本 repo 後在根目錄執行 `git lfs pull`，取得大型資產的實際內容；只有 LFS 指標時，模型還不能使用。Repo 內的 `.agents/skills/art-engineer/`、需求、素材庫、工具與資產一起搬移，不需把 skill 複製到全域個人目錄。啟用支援 repo skills 的代理後使用 `$art-engineer`；新機的製作工具、憑證及客戶來源位置仍需各自核對。
 
 ```powershell
-python tools/pipeline.py check-brief examples/character.json
-python tools/pipeline.py plan examples/character.json --out artifacts/plans/character.json
-python tools/pipeline.py plan examples/building.json --out artifacts/plans/building.json
-python tools/pipeline.py plan examples/landscape.json --out artifacts/plans/landscape.json
-python tools/pipeline.py verify-vendor
-python -m unittest discover -s tests -v
+python -B scripts/workbench.py intake --id wood-gate --brief "木製城門，兩扇門可開關" --type interactive_prop
+python -B scripts/workbench.py search "火盆"
+python -B scripts/workbench.py validate requests/examples/standalone-stone.json
+python -B scripts/workbench.py plan requests/examples/openable-gate.json
+python -B scripts/pipeline.py validate
+python -B scripts/pipeline.py brief cl-brazier
+python -B scripts/pipeline.py inspect assets/raw/cl-brazier/v001/base_basic_pbr.glb
+python -B -m unittest discover -s tests -v
 ```
 
-`plan` 產生階段、技能路徑、交付物與待驗證項目；不呼叫生成服務。每次輸出用新檔名，避免覆寫先前版本。
+`intake` 只輸出 JSON 草稿，由協調者保存及補齊。`--profile evoloot` 等參數選用客戶設定；增加客戶只需建立規格檔，不修改核心專案枚舉。`requests/examples/` 是流程範例，不是待扣點工作。
 
-實際模型檢查由 Blender 執行；以下輸入路徑只是命令格式範例，需替換成已存在的資產：
+## 檔案位置
 
-```powershell
-& 'C:\Program Files\Blender Foundation\Blender 4.5\blender.exe' --background --factory-startup --disable-autoexec --python tools/blender/inspect_asset.py -- --input src/characters/warrior.blend --report artifacts/evidence/warrior.json --tri-budget 45000 --rig-profile humanoid-v1
-```
+| 位置 | 用途 |
+| --- | --- |
+| `requests/` | 需求、用途、設計約束、製作路徑與交付承諾 |
+| `projects/` | 選用客戶風格與限制，首批包含兩款遊戲 |
+| `tools/capabilities.json` | 工具能力與已驗／未驗狀態，屬描述資料 |
+| `library/index.json` | 工程師資產、版本、來源、驗收與重用缺口 |
+| `catalog/` | 既有候選清單及月訂政策，保留首批歷史紀錄 |
+| `assets/raw/<id>/<version>/` | 原始模型與貼圖，不覆寫唯一 master |
+| `assets/processed/<id>/<version>/` | 清理、拆件、重拓撲、骨架等衍生產物 |
+| `deliveries/<request-id>/<version>/` | 獨立交付包、依賴、manifest、預覽及使用說明 |
+| `runs/` | 提交、扣點、下載、QA 與視覺證據 |
 
-此工具實際讀模型並檢查 mesh、三角數、UV、骨架階層與權重。即使技術檢查 PASS，仍不代表動作、美術、Unity 或 production 驗收完成。
+`assets/unity/` 可保留指定 Unity 任務的衍生版本，核心沒有強制 Unity 步驟。來源理解與選用客戶契約見 [repo 調查](docs/repo-understanding.md) 及 [首批遊戲／Unity 契約](docs/art-and-unity-contract.md)。
 
-工具本身的 Blender 合成資料回歸可執行 `python tests/run_blender_checks.py --blender 'C:\Program Files\Blender Foundation\Blender 4.5\blender.exe'`；結果寫入 `artifacts/blender-checks/`，不代表使用者的正式角色通過驗收。
+既有 `tools/pipeline.py`、`configs/`、`examples/`、vendor 及 [舊 Unity 工作流](docs/workflow.md) 保留為指定 Unity 任務的專用路徑；`tests/test_legacy_pipeline.py` 保留其原測試。一般需求以本文件、`scripts/workbench.py` 與 `$art-engineer` 為入口，不自動套用舊流程的 Unity／FBX 門檻。
 
-## 資料布局
+## 現有資產與實際完成界線
 
-| 路徑 | 用途 |
-|---|---|
-| `.agents/skills/mmo-asset-pipeline/` | 專案 skill 入口，按階段讀取 vendor 技能 |
-| `vendor/blender-skills/` | 固定 commit 的 9 個核心技能、參考與 MIT 授權 |
-| `configs/` | 起始預算、骨架 profile、部件與 socket 契約 |
-| `examples/` | 角色、建築與景觀 production brief 範例 |
-| `tools/` | 離線 planner、來源雜湊確認、Blender 實際檢查 |
-| `src/` | DCC 原檔、參考、highpoly／lowpoly；由專案儲存策略管理 |
-| `assets_staging/` | 準備匯入 Unity 的版本化 FBX／材質／貼圖 |
-| `artifacts/` | 不進普通 Git 的預覽與本機測試證據 |
+2026-10-02 首批已生成並下載兩個候選，月訂實際使用 1 點。當時完成後網頁月訂 204、普通 25、API 合計 229；這是歷史快照，每次新的付費操作都需重新核對分項與帳單週期。
 
-未啟用 Git LFS 或 hook；大型二進位檔目前不納入普通 Git。確認 LFS 或物件儲存方案後再導入真實素材。附件提出的全自動 CI、貼圖打包、權重轉移與引擎同步是後續里程碑，本版不宣稱已實作。
+| 候選 | PBR 三角形清點 | 美術狀態 | QA |
+| --- | --- | --- | --- |
+| 常山龍膽火盆 | 2,500 | needs_revision：靜態火焰、金屬支腳偏離需求 | `runs/qa/cl-brazier-v001.md` |
+| EvoLoot 普通鐵劍 | 1,800 | needs_revision：雙叉刃及金色裝飾偏離鏽鐵劍 | `runs/qa/evoloot-iron-sword-neutral-v001.md` |
 
-第一個端到端試產建議：一個標準人形角色、兩套輪廓不同的服裝、一把武器；同一組 idle／walk／run／attack／cast／jump 動作。通過後再擴充 giant／elf／creature 骨架家族及一組城鎮模組與點綴資產。
+兩件的 Hyper3D 來源頁保持私有；四份 GLB 與一張貼圖實際保存於 `assets/raw/`，索引、原始操作紀錄及 QA 一起納管。來源頁可見性與 Git repo 可見性分開：目前 GitHub 遠端為公開，本次經使用者授權推送的檔案隨 repo 可讀。它們尚未交付，沒有 Blender 後製、遊戲接入或 Unity 驗收。普通史萊姆只有 `prepared` 草稿，尚未提交、扣點；查同一 operation 及即時餘額後才能續作。
+
+原始 38 筆新增候選的基礎費估算共 19 點，需求量不足以吸收初始 205 點。月訂政策按正在交付的需求、已規劃需求、有明確用途的素材庫資產配置；不固定分配兩個遊戲比例。模型修訂取決於需求差距，不能為耗點重複生成。
+
+Git LFS 設定、本機暫存、Git／LFS 遠端同步及重新 clone 還原各自需要證據；保存進度見 [Git 可攜性紀錄](runs/qa/git-portability-20261002.json)。舊 QA 中的未提交／未推送欄位是當時快照，不代表後續同步狀態。本 repo 不保存憑證或臨時下載網址，不自行加購、升級、修改可見性或建立排程。另兩個遊戲的既有變更保留。目前沒有背景生成或排程繼續執行。
+
+本機曾出現 `sandbox provisioning failed`；個別經核准的原使用者環境檢查不能證明正常沙箱已恢復。驗證紀錄需清楚區分工具測試、模型實測、目標環境與遠端保存證據。

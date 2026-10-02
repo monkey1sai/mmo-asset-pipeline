@@ -1,20 +1,10 @@
 __pycache__/
 *.py[cod]
 .venv/
-artifacts/
 .env
 .env.*
-*.key
-*.pem
-*.blend
-*.blend1
-*.fbx
-*.glb
-*.obj
-*.ztl
-*.psd
-*.spp
-*.tga
-*.png
-*.exr
-*.zip
+!.env.example
+tmp/
+# 工程師素材、原始 master、後製與交付檔皆隨 repo；大檔由 .gitattributes 的 LFS 規則管理。
+# 只排除工具暫存，不排除 assets 或 deliveries。
+%SystemDrive%/

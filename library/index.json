@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "cl-brazier-v001", "asset_id": "cl-brazier", "name": "常山龍膽火盆候選", "project": "changshan-longdan", "version": "v001",
+      "tags": ["火盆", "brazier", "三國", "prop", "iron"], "status": "needs_revision",
+      "acceptance": {"art": "needs_revision", "technical": "inventory_only", "target_environment": "not_run", "delivery": "not_delivered"},
+      "files": ["assets/raw/cl-brazier/v001/base_basic_pbr.glb", "assets/raw/cl-brazier/v001/base_basic_shaded.glb", "assets/raw/cl-brazier/v001/texture_emissive.png"],
+      "provenance": {"operation_id": "bootstrap-20261002-cl-brazier-v001", "generation_id": "c4fead7e-d088-4c2b-bc68-4efe5216a58b", "record": "runs/2026-10-02-bootstrap.json"},
+      "qa_report": "runs/qa/cl-brazier-v001.md", "open_issues": ["靜態火焰需處理", "金屬支腳與石座目標不符", "尺寸、材質、LOD與交付驗收未完成"]
+    },
+    {
+      "id": "evoloot-iron-sword-neutral-v001", "asset_id": "evoloot.weapon.iron_sword_neutral", "name": "EvoLoot 基礎鐵劍候選", "project": "evoloot", "version": "v001",
+      "tags": ["鐵劍", "sword", "weapon", "dark-fantasy", "neutral"], "status": "needs_revision",
+      "acceptance": {"art": "needs_revision", "technical": "inventory_only", "target_environment": "not_run", "delivery": "not_delivered"},
+      "files": ["assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_pbr.glb", "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_shaded.glb"],
+      "provenance": {"operation_id": "bootstrap-20261002-evoloot-iron-sword-neutral-v001", "generation_id": "4574e81b-b870-4b71-a066-9b557b36ab9d", "record": "runs/2026-10-02-bootstrap.json"},
+      "qa_report": "runs/qa/evoloot-iron-sword-neutral-v001.md", "open_issues": ["雙叉刃及金色飾件偏離普通鏽鐵劍", "握點、尺度、LOD與交付驗收未完成"]
+    }
+  ]
+}

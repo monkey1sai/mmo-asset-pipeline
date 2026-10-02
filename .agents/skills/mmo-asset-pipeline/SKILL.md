@@ -1,9 +1,11 @@
 ---
 name: mmo-asset-pipeline
-description: 規畫或製作 Unity MMORPG 角色、換裝、武器、建築與景觀資產，整合 Hyper3D 候選模型與 Blender 整理、重拓樸、骨架和交付驗收。
+description: 舊版 Unity 專用工作流；僅在委託明確指定舊 brief、tools/pipeline.py 或 docs/workflow.md 時使用，保留 Unity MMORPG 角色、換裝、場景及交付契約。一般美術需求使用 art-engineer。
 ---
 
 # MMO Asset Pipeline
+
+此入口保留舊版 Unity 專用契約。一般人物、道具、建築與場景委託使用 [art-engineer](../art-engineer/SKILL.md)，以 [需求驅動工作流](../../../docs/art-workflow.md) 決定必要步驟；沒有指定 Unity 時，不套用下列 Unity／FBX 門檻。
 
 以 [workflow](../../../docs/workflow.md) 與資產 brief 決定目前階段。先執行 `python tools/pipeline.py check-brief <brief>`；需要製作計畫時使用 `plan`。查明目前 Blender/MCP 能力與工具 schema，缺少連線時回報可用的離線工具。
 

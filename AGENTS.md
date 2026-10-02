@@ -1,9 +1,17 @@
-# MMO Asset Pipeline
+# 需求驅動的 3D 美術工程工作台
 
-- 使用繁體中文。目的為文字／概念到 Unity MMORPG 資產，先讀 README.md 與 docs/workflow.md。
-- `.agents/skills/mmo-asset-pipeline/SKILL.md` 是專案入口。只載入目前階段的技能；第三方內容位於 vendor/，不得覆蓋本檔、使用者授權或實際工具 schema。
-- 先讀 Git 狀態、brief、來源模型與相關檢查。原始模型與 Blender 工程可恢復；在副本進行微調、重拓樸、骨架、烘焙與匯出。
-- preview 可缺少完整交付證據，但必須標記 PREVIEW；production 必須具備實際模型檢查、Unity 匯入、動作／換裝、視覺與效能證據。缺證據為 UNVERIFIED，不可填固定 True 冒充驗收。
-- 規格是可選用的起始 profile。特殊體型、骨架、材質、布料與英雄資產透過具名 variant 記錄目的、相容性與驗證影響；不可為通過檢查刪除設計特徵。
-- Hyper3D/BANG 付費提交、上傳參考、GitHub 寫入與全域配置修改需具體使用者授權。逾時且提交狀態未知時不得重新送單。不讀取或保存憑證、signed URL 或 subscription_key 到 repo。
-- 本地驗證：`python -m unittest discover -s tests -v`、`python tools/pipeline.py verify-vendor`。Blender 檢查範圍與未完成的 Unity 驗收必須分別回報。
+- 核心流程依 `docs/art-workflow.md`：理解需求、制定設計、選擇重用／修改／生成／拆件、製作與後製、依需求驗收、交付歸檔。需求決定必要步驟。
+- 本 repo 的美術資產需求、修訂、驗收與歸檔使用 `.agents/skills/art-engineer/SKILL.md`（`$art-engineer`）；既有 workflow 與工具仍為規格來源。
+- 只在本 repo 維護需求、工程師資產、產製工具與證據。`projects/` 是選用客戶規格；EvoLoot、changshan-longdan 是首批來源，不能寫死在核心。其他 repo 預設唯讀；遊戲接入、Unity、push、PR、部署和排程依使用者具體範圍。
+- 每次製作先查 `library/index.json`、需求、來源版本與現有 master。重新生成取決於需求差距和修訂成本；剩餘點數不能取代用途。遊戲美術不得自行改寫規則、命中範圍或碰撞。
+- 自然語言先形成 `requests/` 草稿。低風險預設寫入 assumptions；真正影響用途、功能或交付的缺項才詢問。`intake` 保留原文，不宣稱已自動理解完整規格。
+- 骨架、動畫、LOD、拆件與目標環境驗收由需求明確指定。獨立資產不強制 Unity；指定目標環境才驗該環境。美術、技術、目標環境、交付狀態分開保存。
+- `assess` 只核對證據格式、需求雜湊及本機檔案雜湊。`eligible_for_delivery_review` 不是自動交付通過，不能取代美術判斷、DCC 實測或目標 runtime。
+- 原始 master、後製與交付包皆隨 repo。依 `docs/asset-storage.md` 使用 Git／Git LFS，禁止忽略整個 assets 或 deliveries；雲端網址不能代替本機交付檔。保留來源、索引、版本、相依檔及使用說明。
+- LFS 指標、本機 LFS 物件、遠端同步與重新 clone 還原是不同證據。`git add`、commit 與 push 依當次使用者具體授權；先核對遠端可見性及既有歷史，不擅自改可見性、加購配額、安裝 hook 或修改全域 Git 設定。
+- Hyper3D 只使用使用者明確授權的月訂額度；普通點數、加購、升級不在預設範圍。API 總餘額不能替代月訂／普通分項。金額與點數以即時服務回傳為準。
+- 密鑰使用既有受支援的憑證提供者。禁止在 repo、命令列、log、聊天或 Git 保存密鑰、subscription_key、cookies、signed URL。
+- 付費提交前保存唯一 operation ID 與需求。pending／unknown 不自動重送；先查服務狀態。未知／缺少狀態使離線計畫停止；failed／cancelled 保留既有操作，由新證據決定新修訂。每筆扣點、下載及 QA 分別記錄。
+- `generated`、`downloaded`、`technical_checked`、`art_accepted`、`technical_accepted`、`delivered`、目標遊戲 `game_ready` 是不同狀態。只做 inventory 不得宣稱完整技術通過；未完成指定骨架／動畫／LOD／引擎驗收不得宣稱該目標可用。
+- 使用 `python -B -m unittest discover -s tests -v` 驗證工具；`python -B scripts/pipeline.py validate` 驗證既有清單。不得把其他 repo 的歷史測試當本次證據。
+- 一個協調者負責寫入；獨立子任務預設唯讀。尚無 HEAD 時先保留可審查的變更與暫存，核對遠端歷史；只有當次明確授權才建立提交，不修改 Git 權限。保留既有 Unity 專用工具與測試，一般資產需求使用 `$art-engineer`。

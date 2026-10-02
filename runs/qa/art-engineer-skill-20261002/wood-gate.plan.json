@@ -1,0 +1,73 @@
+{
+  "mode": "offline_plan_only",
+  "request_id": "forward-wood-gate",
+  "request_sha256": "93a0c6b37690e9d83104b4264ccc2d96832483e4351d88481880d4bac0992d1a",
+  "project": null,
+  "route": "split_then_generate",
+  "reason": "已查 library/index.json 並以城門／gate 搜尋，均無候選；先設計門框與左右門扇的組裝及 pivot，再分別製作，避免融合。具體工具及費用仍未授權，本輪只有離線計畫。",
+  "pending": [],
+  "reuse_candidates": [],
+  "steps": [
+    "理解需求與交付承諾",
+    "制定設計、參考與可修訂預設",
+    "先制定各部件、pivot 與活動規格，再分別製作及組裝",
+    "製作與需求指定的後製",
+    "逐項記錄美術／技術／必要目標環境證據",
+    "核對交付檔案並歸檔"
+  ],
+  "needed_capabilities": [
+    "part_design",
+    "candidate_generation",
+    "mesh_edit",
+    "format_export"
+  ],
+  "required_checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全"
+    },
+    {
+      "id": "separate_parts",
+      "area": "technical",
+      "description": "活動部件分離，旋轉中心正確"
+    },
+    {
+      "id": "articulation",
+      "area": "technical",
+      "description": "指定活動範圍及穿插檢查通過"
+    },
+    {
+      "id": "clearance",
+      "area": "technical",
+      "description": "左門 0至100 度、右門 -100至0 度的完整運動掃掠，以及兩扇同時或各自活動的組合，均不穿插固定門框、鉸鏈結構或另一門扇；僅測端點不能證明全範圍"
+    },
+    {
+      "id": "independent-leaves",
+      "area": "technical",
+      "description": "同一 GLB 中 frame、left-leaf、right-leaf 為具名獨立節點；各門扇可獨立旋轉，pivot 與局部軸正確，改一扇角度不帶動另一扇"
+    },
+    {
+      "id": "texture-budget",
+      "area": "technical",
+      "description": "所有貼圖每邊不超過 2048px；材質與貼圖在交付 GLB 中完整、相依引用可移機重現"
+    }
+  ],
+  "paid_submission_authorized_by_this_plan": false,
+  "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。"
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "changshan-longdan",
+  "name": "常山龍膽",
+  "source_repo": "C:/Repos/changshan-longdan",
+  "source_access": "read_only",
+  "art_direction": "原創風格化三國；英雄比例、遠距可辨識輪廓，魏軍藍灰甲色",
+  "defaults": {"units": "m", "up_axis": "+Y", "forward_axis": "+Z", "texture_px": 1024},
+  "constraints": [
+    "專案設定不授權改寫來源 repo，需求可另行選擇獨立模型交付",
+    "場景接入時以 src/world/layout.ts 的集中尺寸與碰撞為準",
+    "300 兵場景需要重用材質與 LOD／實例化方案；普通兵 4000、隊長 5500 三角形是候選起點，並非性能驗收",
+    "既有趙雲在 e00 工作樹，優先複核重用，專用 21 骨 adapter 不能當作通用綁骨",
+    "角色與持握武器分離，素材不得改寫招式、命中或槍尖契約",
+    "火盆本體與動態火焰效果分離；Unity 只在需求指定時加入驗收"
+  ],
+  "source_summary": "docs/repo-understanding.md",
+  "integration_contract": "docs/art-and-unity-contract.md",
+  "observed_at": "2026-10-02"
+}

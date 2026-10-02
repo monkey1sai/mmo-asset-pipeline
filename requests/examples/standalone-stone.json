@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "example-standalone-stone",
+  "title": "獨立低面數岩石範例",
+  "brief": "製作一塊可獨立使用的低面數灰色岩石，先交 GLB，不指定遊戲或引擎。",
+  "purpose": "展示無客戶 repo 的靜態需求結構；不是付費委託",
+  "task_type": "static_prop",
+  "project": null,
+  "status": "specified",
+  "provenance": {"kind": "example", "reference": "docs/art-workflow.md#獨立靜態模型"},
+  "style": {"description": "原創風格化、灰色、乾淨輪廓，無場景與烘焙光", "references": [], "must_have": ["可站立底面"], "must_not_have": ["文字、logo、地面或人物"]},
+  "spec": {"size_m": [1, 0.8, 1], "target_triangles": 1500, "texture_px": null, "units": "m", "up_axis": "+Y", "forward_axis": "+Z", "parts": [{"id": "rock", "pivot": "底面中心", "motion": null}], "requires_rig": false, "animations": []},
+  "delivery": {"scope": "standalone", "formats": ["glb"], "target_environment": null},
+  "production": {"route": "review_existing", "reason": "先找可重用岩石；沒有適合版本才評估修改或新做", "reuse_candidates": [], "max_revisions": 1},
+  "additional_checks": [],
+  "assumptions": ["尺寸與面數是教學範例值；無貼圖以材質基本色交付"],
+  "open_questions": []
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "evoloot",
+  "name": "EvoLoot",
+  "source_repo": "C:/Repos/EvoLoot",
+  "source_access": "read_only",
+  "art_direction": "原創風格化黑暗奇幻；活體武器人格可透過輪廓、配件與材質辨識",
+  "defaults": {"units": "m", "up_axis": "+Y", "forward_axis": "+Z", "texture_px": 1024},
+  "constraints": [
+    "專案設定不授權改寫來源 repo，需求可另行選擇獨立模型交付",
+    "五人格武器的握柄、長度及 socket 應共用，實際握點另量測",
+    "史萊姆家族優先重用主體，冰殼、刺與冠冕可分離",
+    "目前 Godot BattleScene 使用 2D JPG；3D 接入需另立目標環境驗收",
+    "Unity 是未來方向；只有需求明列 Unity 交付時才加入該驗收"
+  ],
+  "source_summary": "docs/repo-understanding.md",
+  "integration_contract": "docs/art-and-unity-contract.md",
+  "observed_at": "2026-10-02"
+}

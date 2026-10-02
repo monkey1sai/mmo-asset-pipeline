@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "scope": "offline_workbench_and_local_git_lfs_storage",
+  "authorization": {
+    "source": "使用者要求 repo 保存美術工程師及交付資產，大檔可用 LFS add",
+    "destination": "C:/Repos/mmo-asset-pipeline 本機工作區、Git index 及 LFS object store",
+    "allowed_operations": ["local_edit", "offline_test", "local_git_add", "local_lfs_verification"],
+    "data_transmitted": "無對外傳送；需求、資產、索引及驗收資料只留本機",
+    "forbidden_operations": ["commit", "push", "publish", "paid_generation", "schedule", "global_config_change", "credential_read"],
+    "stop_conditions": ["未知檔案", "秘密資料", "路徑跳出工作區", "雜湊或大小不符", "LFS 處理失敗"]
+  },
+  "tool_verification": {
+    "unittest": {"command": "python -B -m unittest discover -s tests -v", "tests": 51, "result": "pass", "scope": "offline_control_logic_only"},
+    "catalog_validation": {"assets": 39, "result": "pass", "source_freshness_or_runtime_verified": false},
+    "smoke_checks": ["standalone request validates without engine or rig gate", "interactive gate has part, motion and clearance checks", "intake without project preserves brief as draft", "optional customer profile does not force target environment", "empty evidence returns not_ready", "library search preserves needs_revision"],
+    "historical_budget_plan": {"input_credits": "204", "selected_count": 35, "reserved_count": 3, "estimated_cost": "17.5", "unallocated_credits": "186.5", "live_balance_verified": false, "paid_submission": false},
+    "execution_context": "個別經核准的原使用者本機命令；正常沙箱先前 sandbox provisioning failed，未宣稱沙箱恢復"
+  },
+  "storage_verification": {
+    "git_lfs_version": "3.4.0",
+    "git_head": null,
+    "index_entries_observed_before_this_record": 36,
+    "asset_count": 5,
+    "total_bytes": 28703326,
+    "attribute_check": "five assets use lfs and -text; runs evidence screenshots use normal Git",
+    "ignore_check": "asset and delivery paths not ignored",
+    "pointer_check": "bounded index blobs contain exact three-line LFS v1 pointer, SHA-256 and size",
+    "staged_whitespace_check": "git diff --cached --check passed",
+    "files": [
+      {"path": "assets/raw/cl-brazier/v001/base_basic_pbr.glb", "bytes": 6942464, "sha256": "a34172c541fff1b58c62600905b0c047b9bbd47d8c2318957db9b4ec31408fb6", "download_record_match": true, "index_pointer_match": true, "local_lfs_object_match": true, "workspace_match": true},
+      {"path": "assets/raw/cl-brazier/v001/base_basic_shaded.glb", "bytes": 3758068, "sha256": "5101ee2c37db1ffa5384dd1501b22564b12faa2110e1281be8a1c81f09446318", "download_record_match": true, "index_pointer_match": true, "local_lfs_object_match": true, "workspace_match": true},
+      {"path": "assets/raw/cl-brazier/v001/texture_emissive.png", "bytes": 1153682, "sha256": "a10a451805339670b28656b995cecddd4405b7d25024b80b92621762bdad52f7", "download_record_match": true, "index_pointer_match": true, "local_lfs_object_match": true, "workspace_match": true},
+      {"path": "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_pbr.glb", "bytes": 11979684, "sha256": "783470bcb9d3efeada305f9961144e1afc724db0f430008f083437bef8035c0b", "download_record_match": true, "index_pointer_match": true, "local_lfs_object_match": true, "workspace_match": true},
+      {"path": "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_shaded.glb", "bytes": 4869428, "sha256": "f7c22ad983618192ea2be6cbfc9b0f8d26111f4c4c202a65df79f9343222d046", "download_record_match": true, "index_pointer_match": true, "local_lfs_object_match": true, "workspace_match": true}
+    ]
+  },
+  "limits": {
+    "automatic_natural_language_specification": false,
+    "actual_art_or_dcc_acceptance_performed_this_change": false,
+    "target_environment_runtime_verified": false,
+    "new_delivered_assets": 0,
+    "existing_candidates_status": "needs_revision",
+    "commit_created": false,
+    "remote_git_or_lfs_sync": false,
+    "fresh_clone_restore_verified": false,
+    "background_jobs_running": false
+  }
+}

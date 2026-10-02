@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "scope": "authorized_git_and_lfs_delivery_with_fresh_clone_verification",
+  "status": "pre_sync_verified",
+  "authorization": {
+    "source": "commit and push 建立 git 上的美術工程師可帶著走",
+    "destination": "github.com/monkey1sai/mmo-asset-pipeline main and its Git LFS endpoint",
+    "allowed_operations": ["local_preparation", "commit", "normal_fast_forward_push", "explicit_lfs_upload", "fresh_remote_clone", "offline_verification"],
+    "data_transmitted": "repo skill, workflow, tools, requests, library, QA and five asset objects totaling 28703326 bytes",
+    "forbidden_operations": ["force_push", "history_rewrite", "visibility_or_protection_change", "credential_read", "global_config_change", "hook_installation", "quota_purchase", "paid_generation", "other_repo_write", "deployment", "schedule"],
+    "stop_conditions": ["unexpected_destination", "authentication_or_host_key_error", "remote_ref_drift", "secret_found", "hash_mismatch", "quota_error", "branch_protection_denial"]
+  },
+  "remote_before_sync": {
+    "repository": "https://github.com/monkey1sai/mmo-asset-pipeline",
+    "visibility": "public",
+    "default_branch": "main",
+    "base_commit": "38a4c17cc7c4470f236487f34ff420d19c69edae",
+    "protected": false,
+    "branch_rules": [],
+    "visibility_explained_to_user": true,
+    "visibility_changed": false
+  },
+  "history_preservation": {
+    "prior_local_head": null,
+    "prior_staged_files": 45,
+    "index_backed_up_before_alignment": true,
+    "index_tree_unchanged_by_soft_alignment": true,
+    "remote_only_files_restored": 55,
+    "unexpected_staged_deletions": [],
+    "legacy_tests_preserved_as": "tests/test_legacy_pipeline.py",
+    "legacy_skill_scope": "explicit legacy Unity briefs only"
+  },
+  "local_verification": {
+    "unittest": {"tests": 62, "result": "pass", "legacy_tests": 11, "workbench_tests": 51},
+    "catalog_validation": {"assets": 39, "result": "pass"},
+    "skill_format": "Skill is valid!",
+    "vendor_lock": "PASS: offline verify-vendor",
+    "vendor_bytes_preserved": true,
+    "all_60_prior_remote_paths_in_index": true,
+    "legacy_test_bytes_match_original": true,
+    "staged_whitespace_check": "pass",
+    "independent_final_index_review": "accept; read-only review, not remote approval",
+    "runtime_skill_catalog_contains_art_engineer": true,
+    "execution_context": "bounded approved original-user commands; normal sandbox startup failed",
+    "sandbox_restored": false,
+    "safe_directory_acl_global_config_or_hook_changes": false,
+    "text_secret_pattern_scan": "no matches across the 38 originally staged text files; not a complete secret absence proof",
+    "two_preview_images_inspected": "no credentials or signed URLs observed",
+    "four_glb_external_dependencies": "none declared in buffers/images"
+  },
+  "storage": {
+    "git_lfs_version": "3.4.0",
+    "asset_count": 5,
+    "asset_bytes": 28703326,
+    "expected_asset_hashes": "runs/qa/workbench-and-lfs-20261002.json#storage_verification/files",
+    "workspace_pointer_local_object_match": true,
+    "art_engineer_relative_links_in_index": 9,
+    "asset_acceptance_status": "needs_revision; not_delivered",
+    "lfs_upload": "not_run",
+    "git_push": "not_run",
+    "fresh_clone_restore": "not_run"
+  },
+  "limits": {
+    "new_paid_generations": 0,
+    "new_delivered_assets": 0,
+    "blender_or_unity_runtime_verified": false,
+    "new_machine_client_ui_discovery_verified": false,
+    "account_remaining_lfs_quota_verified": false,
+    "background_jobs_running": false,
+    "historical_qa_snapshots_rewritten": false
+  }
+}

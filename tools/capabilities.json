@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "mode": "capability_registry_only",
+  "note": "描述工具能力，不是可執行插件、授權來源或本輪連線測試。核心計畫只要求能力；協調者核對當下可用工具。",
+  "tools": [
+    {"id": "hyper3d-mcp", "capabilities": ["candidate_generation"], "execution": "external_mcp", "effect": "consumes_credits", "availability": "requires_current_probe", "constraints": ["付費前核對即時餘額及授權", "未知提交不重送", "不保存秘密或 signed URL"]},
+    {"id": "blender", "capabilities": ["mesh_edit", "part_design", "format_export", "asset_inspection"], "execution": "external_tool", "effect": "local_asset_write", "availability": "unverified", "constraints": ["本輪沒有 Blender 執行或後製證據", "保留原始 master，以新版本修訂"]},
+    {"id": "glb-inventory", "capabilities": ["asset_inspection"], "execution": "scripts/pipeline.py inspect", "effect": "read_only", "availability": "implemented", "constraints": ["局部結構清點，不驗外觀、UV、法線、尺度、rig 或引擎可用"]},
+    {"id": "workbench", "capabilities": ["library_search", "request_planning", "evidence_integrity"], "execution": "scripts/workbench.py", "effect": "read_only", "availability": "implemented", "constraints": ["需求原文由協調者整理；CLI 不做自然語言語義解析", "不生成、不付費、不自動交付"]}
+  ]
+}

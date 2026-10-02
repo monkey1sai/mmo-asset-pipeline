@@ -1,0 +1,1428 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "evoloot.weapon.iron_sword_neutral",
+      "project": "evoloot",
+      "name": "生鏽鐵劍／中性活體劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy rusty iron sword, silent dormant living weapon, simple readable iron blade and worn leather grip, subtle cracks without overt eyes, isolated full object, separate blade and hilt, straight vertical blade along positive Y, no character, no background, no logos. Match the common grip and scale of the EvoLoot sword family.",
+      "target_triangles": 1800,
+      "texture_px": 1024,
+      "size_m": [
+        0.22,
+        1.05,
+        0.08
+      ],
+      "pivot": "握柄中心為原點；主刃沿局部 +Y，批次五人格共用；遊戲 adapter 另校準軸向",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 貼圖",
+        "依共同握柄與長度校準五人格變體",
+        "分離刃部、握柄與可替換飾件",
+        "建立低細節版本並檢查輪廓",
+        "Unity 匯入及握點驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\domain\\entities.py",
+          "line": 519,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "基礎鐵劍資料，現有遊戲武器需求"
+        },
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\config.py",
+          "line": 244,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "Neutral 人格已定義；3D 外觀由本次提案制定"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.weapon.iron_sword_greedy",
+      "project": "evoloot",
+      "name": "貪婪活體劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy greedy living iron sword, restrained gold inlay and treasure shaped ornament suggesting hunger for loot, readable curved blade details, worn leather grip, separate blade hilt and ornaments, isolated full object, positive Y blade axis, no character or background. Preserve the same grip and overall length as the EvoLoot neutral sword.",
+      "target_triangles": 2200,
+      "texture_px": 1024,
+      "size_m": [
+        0.25,
+        1.05,
+        0.09
+      ],
+      "pivot": "握柄中心為原點；主刃沿局部 +Y，批次五人格共用；遊戲 adapter 另校準軸向",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 貼圖",
+        "依共同握柄與長度校準五人格變體",
+        "分離刃部、握柄與可替換飾件",
+        "建立低細節版本並檢查輪廓",
+        "Unity 匯入及握點驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\config.py",
+          "line": 250,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "Greedy 人格與觸發條件已定義，造型為本次候選"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.weapon.iron_sword_bloodthirsty",
+      "project": "evoloot",
+      "name": "嗜血活體劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy bloodthirsty living iron sword, jagged red edged steel blade and restrained dark crimson organic inlay, threatening readable silhouette, no gore, separate blade and hilt, isolated full object, positive Y blade axis, no character or background. Preserve the EvoLoot sword family grip and overall length.",
+      "target_triangles": 2400,
+      "texture_px": 1024,
+      "size_m": [
+        0.25,
+        1.05,
+        0.09
+      ],
+      "pivot": "握柄中心為原點；主刃沿局部 +Y，批次五人格共用；遊戲 adapter 另校準軸向",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 貼圖",
+        "依共同握柄與長度校準五人格變體",
+        "分離刃部、握柄與可替換飾件",
+        "建立低細節版本並檢查輪廓",
+        "Unity 匯入及握點驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\config.py",
+          "line": 256,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "Bloodthirsty 人格已定義；無已驗證 3D 模型"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.weapon.iron_sword_loyal",
+      "project": "evoloot",
+      "name": "忠誠活體劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy loyal living iron sword, protective symmetric crossguard, silver steel blade and subdued warm blue inset, sturdy readable silhouette, separate blade and hilt, isolated full object, positive Y blade axis, no character or background. Preserve the EvoLoot sword family grip and overall length.",
+      "target_triangles": 2200,
+      "texture_px": 1024,
+      "size_m": [
+        0.27,
+        1.05,
+        0.09
+      ],
+      "pivot": "握柄中心為原點；主刃沿局部 +Y，批次五人格共用；遊戲 adapter 另校準軸向",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 貼圖",
+        "依共同握柄與長度校準五人格變體",
+        "分離刃部、握柄與可替換飾件",
+        "建立低細節版本並檢查輪廓",
+        "Unity 匯入及握點驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\config.py",
+          "line": 262,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "Loyal 人格已定義；3D 候選需要產製驗收"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.weapon.iron_sword_chaotic",
+      "project": "evoloot",
+      "name": "混沌活體劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy chaotic living iron sword, asymmetric warped blade with controlled violet cracks and small mutation ornaments, readable weapon silhouette with a usable grip, separate blade hilt and ornaments, isolated full object, positive Y blade axis, no character or background. Preserve the EvoLoot sword family grip and overall length.",
+      "target_triangles": 2600,
+      "texture_px": 1024,
+      "size_m": [
+        0.28,
+        1.05,
+        0.1
+      ],
+      "pivot": "握柄中心為原點；主刃沿局部 +Y，批次五人格共用；遊戲 adapter 另校準軸向",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 貼圖",
+        "依共同握柄與長度校準五人格變體",
+        "分離刃部、握柄與可替換飾件",
+        "建立低細節版本並檢查輪廓",
+        "Unity 匯入及握點驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\config.py",
+          "line": 268,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "Chaotic 人格與突變已定義，造型尚未實作"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.slime_normal",
+      "project": "evoloot",
+      "name": "普通史萊姆",
+      "category": "creature",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy dungeon slime creature, rounded translucent moss green body with two simple readable eyes, compact silhouette, neutral rest pose, isolated full creature on no environment, no platform, no weapons, no logos. Provide a reusable base body suitable for ice, frenzy and king variants.",
+      "target_triangles": 2200,
+      "texture_px": 1024,
+      "size_m": [
+        0.9,
+        0.65,
+        0.9
+      ],
+      "pivot": "貼地中心，局部 +Y 為上，面向局部 +Z",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 3,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "slime_normal，起始等級範圍且高選取權重"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.slime_ice",
+      "project": "evoloot",
+      "name": "冰霜史萊姆",
+      "category": "creature",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy ice slime creature using the same compact rounded body proportions as a green dungeon slime, pale cyan translucent body with removable ice crystal shell pieces, two readable eyes, neutral rest pose, isolated full creature, no environment or platform. Reuse the base slime topology where possible.",
+      "target_triangles": 2400,
+      "texture_px": 1024,
+      "size_m": [
+        0.95,
+        0.75,
+        0.95
+      ],
+      "pivot": "貼地中心，與普通史萊姆共用軸向及底部基準",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 22,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "slime_ice 與 Ice_Armor 已定義"
+        },
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\world_service.py",
+          "line": 96,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "低溫世界導演選擇冰霜遭遇"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.slime_elite",
+      "project": "evoloot",
+      "name": "暴走史萊姆",
+      "category": "creature",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy frenzy slime creature, compact rounded body matching the common slime family, deep red orange body with small separate jagged growths, fierce readable eyes, neutral rest pose, isolated full creature, no environment or platform. Preserve base slime proportions for shared animation.",
+      "target_triangles": 2400,
+      "texture_px": 1024,
+      "size_m": [
+        1.05,
+        0.8,
+        1.05
+      ],
+      "pivot": "貼地中心，與普通史萊姆共用軸向",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 41,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "slime_elite 與 Frenzy 已定義"
+        },
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\world_service.py",
+          "line": 102,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "混亂世界導演選擇暴走遭遇"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.slime_boss",
+      "project": "evoloot",
+      "name": "史萊姆王與冠冕",
+      "category": "creature",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy king slime, broad rounded translucent green body with a separate battered metal crown, readable boss silhouette and two simple eyes, neutral rest pose, isolated full creature, no environment or platform. Crown must be a separate removable object; reuse the common slime body proportions rather than adding a fused pedestal.",
+      "target_triangles": 3200,
+      "texture_px": 1024,
+      "size_m": [
+        1.8,
+        1.4,
+        1.8
+      ],
+      "pivot": "貼地中心；冠冕另有中心 pivot，與主體分離",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 60,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "slime_boss、Crown 與 boss 等級已定義"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.goblin_raider",
+      "project": "evoloot",
+      "name": "哥布林掠奪者",
+      "category": "creature",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy goblin raider, small wiry green humanoid with pointed ears, worn leather armor and cloth, readable hostile silhouette, neutral A pose, empty separated hands, no fused weapon, isolated full body, no base or background, no franchise likeness.",
+      "target_triangles": 5500,
+      "texture_px": 1024,
+      "size_m": [
+        0.65,
+        1.25,
+        0.4
+      ],
+      "pivot": "雙足中點地面為原點，面向 +Z；手部留獨立武器 socket",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 79,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "goblin_raider 種子資料"
+        },
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\api\\realtime.py",
+          "line": 168,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "目前 dirty realtime 初始敵人為 Realtime Goblin；HEAD 僅作基準"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.goblin_elite",
+      "project": "evoloot",
+      "name": "菁英哥布林",
+      "category": "creature",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy elite goblin sharpshooter, match the goblin raider body proportions and shared armor palette, stronger shoulder silhouette and distinct hood ornament, neutral A pose, empty separated hands, no fused weapon, isolated full body, no base or background, no franchise likeness.",
+      "target_triangles": 6000,
+      "texture_px": 1024,
+      "size_m": [
+        0.7,
+        1.3,
+        0.45
+      ],
+      "pivot": "雙足中點地面為原點，與普通哥布林共用尺寸及軸向",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 98,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "goblin_elite、Sharpshot 與 elite 資料已定義"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.lich_boss",
+      "project": "evoloot",
+      "name": "巫妖首領",
+      "category": "creature",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy skeletal lich boss, torn layered dark robes and angular crown, pale bone face with cool blue accents, distinct readable caster silhouette, neutral A pose with empty separated hands, no fused staff, isolated full body, no base or environment, no copied franchise design.",
+      "target_triangles": 9000,
+      "texture_px": 2048,
+      "size_m": [
+        0.9,
+        2.1,
+        0.65
+      ],
+      "pivot": "雙足或長袍接地中心為原點，面向 +Z",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 117,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "lich_boss 與 Necromancy，Lv20 以上資料候選"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.dragon_legendary",
+      "project": "evoloot",
+      "name": "古代火焰巨龍",
+      "category": "creature",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy ancient fire dragon, quadruped body, folded wings clearly separated from torso, dark bronze scales and restrained glowing ember accents, strong readable silhouette, neutral symmetric rest pose, isolated full creature, no terrain or base, no copied franchise design.",
+      "target_triangles": 15000,
+      "texture_px": 2048,
+      "size_m": [
+        4.5,
+        3.2,
+        6
+      ],
+      "pivot": "四足接地中心；主體面向 +Z；翼、顎及尾需可綁骨",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 136,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "dragon_legendary、Ancient_Flame 與 Lv50 以上資料候選"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.enemy.mirror_unique",
+      "project": "evoloot",
+      "name": "鏡像獵手",
+      "category": "creature",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy mirror hunter, lean humanoid armored silhouette with angular reflective silver plates and restrained violet seams, neutral A pose with empty separated hands, no fused weapon, isolated full body, no environment or base. This is a proposed visual interpretation, avoid any franchise likeness.",
+      "target_triangles": 8000,
+      "texture_px": 2048,
+      "size_m": [
+        0.8,
+        1.85,
+        0.5
+      ],
+      "pivot": "雙足中點地面為原點，面向 +Z",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查輪廓、UV、法線與材質",
+        "依角色高度校準尺寸",
+        "骨架與蒙皮製作",
+        "待機、移動、攻擊、受擊、死亡動作驗證",
+        "建立 LOD 與實際遊戲效能驗證",
+        "Unity 材質及 Generic rig 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\data\\monsters_seed.json",
+          "line": 155,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "mirror_unique 與 Mirror 資料已定義；造型是本次提案"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.character.human_warrior",
+      "project": "evoloot",
+      "name": "人類戰士基礎體",
+      "category": "character",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy human warrior adventurer, practical weathered iron armor over brown cloth, readable grounded proportions, neutral symmetric A pose with palms open and fingers separated, empty hands, removable shoulder and belt accessories, isolated full body, no base, weapon or background, no franchise likeness.",
+      "target_triangles": 10000,
+      "texture_px": 2048,
+      "size_m": [
+        0.85,
+        1.8,
+        0.5
+      ],
+      "pivot": "雙足中點地面為原點，面向 +Z；雙手留武器 socket",
+      "requires_rig": true,
+      "postprocess": [
+        "標準 A pose 與手指／關節拓樸檢查",
+        "骨架、權重、bind pose 與 socket 製作",
+        "衣甲與飾件分離並檢查穿模",
+        "待機、跑步、攻擊、受擊及死亡動畫驗證",
+        "建立 LOD、共享材質與效能驗證",
+        "Unity rig、材質、動畫與 prefab 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\game_service.py",
+          "line": 80,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "MVP 戰鬥預設為人類戰士；不是九職業八種族全角色完成"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.npc.blacksmith",
+      "project": "evoloot",
+      "name": "老鐵匠",
+      "category": "character",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized dark fantasy elderly human blacksmith, sturdy build, gray beard, worn leather apron over plain cloth, practical gloves and boots, neutral A pose, open empty hands, no fused hammer or anvil, isolated full body, no base or background, readable friendly silhouette.",
+      "target_triangles": 7000,
+      "texture_px": 1024,
+      "size_m": [
+        0.85,
+        1.7,
+        0.55
+      ],
+      "pivot": "雙足中點地面為原點，面向 +Z；工具獨立 socket",
+      "requires_rig": true,
+      "postprocess": [
+        "標準 A pose 與手指／關節拓樸檢查",
+        "骨架、權重、bind pose 與 socket 製作",
+        "衣甲與飾件分離並檢查穿模",
+        "待機、跑步、攻擊、受擊及死亡動畫驗證",
+        "建立 LOD、共享材質與效能驗證",
+        "Unity rig、材質、動畫與 prefab 匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\app.py",
+          "line": 553,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "目前 dirty Streamlit 老鐵匠互動區；HEAD 僅作基準"
+        },
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\npc_service.py",
+          "line": 17,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "鐵匠對話及 repair_weapon 現有流程"
+        }
+      ]
+    },
+    {
+      "id": "shared.environment.dungeon_stone_wall",
+      "project": "shared",
+      "name": "潮濕石壁模組",
+      "category": "environment",
+      "priority": 0,
+      "demand": "inferred",
+      "prompt": "Original stylized dark fantasy modular damp dungeon stone wall, large readable uneven stones with subtle moss and water stains, flat snapping edges, no ground or surrounding scene, single freestanding wall module, no doors, no baked lights. Match a 2 meter wide modular dungeon kit.",
+      "target_triangles": 1800,
+      "texture_px": 1024,
+      "size_m": [
+        2,
+        2.5,
+        0.3
+      ],
+      "pivot": "底邊中點；±X 接合，+Y 朝上，正面 +Z",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\world_service.py",
+          "line": 164,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "已有陰森潮濕石壁氛圍文字；模組幾何及尺寸為本次推導"
+        }
+      ]
+    },
+    {
+      "id": "shared.environment.dungeon_floor",
+      "project": "shared",
+      "name": "地牢石地板模組",
+      "category": "environment",
+      "priority": 0,
+      "demand": "inferred",
+      "prompt": "Original stylized dark fantasy square dungeon floor tile module, broad worn stone slabs with subtle cracks, clean square snapping borders, shallow thickness, no surrounding room or props, no baked lights. Allow dry damp and frost material variants using the same mesh.",
+      "target_triangles": 1200,
+      "texture_px": 1024,
+      "size_m": [
+        2,
+        0.12,
+        2
+      ],
+      "pivot": "上表面中心；±X／±Z 接合，地表基準 y=0",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\world_service.py",
+          "line": 168,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "環境描述有結冰地面；可拼接地板是本次需求推導"
+        }
+      ]
+    },
+    {
+      "id": "shared.environment.dungeon_archway",
+      "project": "shared",
+      "name": "地牢石拱門模組",
+      "category": "environment",
+      "priority": 0,
+      "demand": "inferred",
+      "prompt": "Original stylized dark fantasy freestanding modular stone dungeon archway, open clear passage, heavy readable stone blocks, damp worn edges, no door leaf, no floor or surrounding room, no baked lights. Single isolated arch matching a 2 meter dungeon kit with unobstructed central opening.",
+      "target_triangles": 2200,
+      "texture_px": 1024,
+      "size_m": [
+        2.8,
+        3,
+        0.5
+      ],
+      "pivot": "門洞地面中心，通行方向局部 Z；門洞留空",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\world_service.py",
+          "line": 119,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "地牢場景已有文字；拱門形式和門洞規格由本次推導"
+        }
+      ]
+    },
+    {
+      "id": "evoloot.prop.blacksmith_anvil",
+      "project": "evoloot",
+      "name": "鐵匠鐵砧",
+      "category": "prop",
+      "priority": 1,
+      "demand": "inferred",
+      "prompt": "Original stylized dark fantasy blacksmith iron anvil on a short battered wood stump, clear readable horn and flat working face, worn steel with subtle hammer marks, no person or tools fused to it, isolated full prop, no environment or baked lights.",
+      "target_triangles": 1600,
+      "texture_px": 1024,
+      "size_m": [
+        0.9,
+        0.75,
+        0.45
+      ],
+      "pivot": "底座接地中心，砧角沿局部 +X",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\EvoLoot\\EvoLoot\\services\\npc_service.py",
+          "line": 49,
+          "head": "718c6d38bc2de86458988c212472ce16cd418c5c",
+          "note": "武器修復已存在；鐵砧道具是本次用途推導"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-spearman",
+      "project": "changshan-longdan",
+      "name": "魏軍槍兵基礎體",
+      "category": "character",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Wei army infantry spearman body, blue gray lamellar armor over dark cloth, simple helmet and plain readable face, neutral A pose, open empty hands and separated fingers, no fused spear or shield, isolated full body, no base or environment. Match the sword infantry body for a shared skeleton and atlas.",
+      "target_triangles": 4000,
+      "texture_px": 1024,
+      "size_m": [
+        0.6,
+        1.75,
+        0.4
+      ],
+      "pivot": "雙足中點地面為原點，+Y 為上，面向 +Z；槍獨立",
+      "requires_rig": true,
+      "postprocess": [
+        "標準 A pose 與手指／關節拓樸檢查",
+        "骨架、權重、bind pose 與 socket 製作",
+        "衣甲與飾件分離並檢查穿模",
+        "待機、跑步、攻擊、受擊及死亡動畫驗證",
+        "建立 LOD、共享材質與效能驗證",
+        "Unity rig、材質、動畫與 prefab 匯入驗證",
+        "300 兵場景需共享骨架／圖集與實例化或骨架批次方案"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 20,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "普通兵共享色盤及程序部位"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 165,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "現有八類 InstancedMesh；不能直接等同蒙皮候選可替換"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-swordman",
+      "project": "changshan-longdan",
+      "name": "魏軍劍盾兵基礎體",
+      "category": "character",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Wei army sword and shield infantry body matching the spearman body height, armor palette and joint proportions, slightly distinct shoulder detail, neutral A pose, open empty hands, no fused sword or shield, isolated full body, no base or environment. Prepare for a shared infantry skeleton and texture atlas.",
+      "target_triangles": 4000,
+      "texture_px": 1024,
+      "size_m": [
+        0.6,
+        1.75,
+        0.4
+      ],
+      "pivot": "雙足中點地面為原點，與槍兵同軸向；武器盾牌分離",
+      "requires_rig": true,
+      "postprocess": [
+        "標準 A pose 與手指／關節拓樸檢查",
+        "骨架、權重、bind pose 與 socket 製作",
+        "衣甲與飾件分離並檢查穿模",
+        "待機、跑步、攻擊、受擊及死亡動畫驗證",
+        "建立 LOD、共享材質與效能驗證",
+        "Unity rig、材質、動畫與 prefab 匯入驗證",
+        "300 兵場景共用圖集與骨架批次方案"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 91,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "現有 swordGeometry"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 298,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "程序劍盾兵動作及差異"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-captain",
+      "project": "changshan-longdan",
+      "name": "魏軍隊長",
+      "category": "character",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Wei infantry captain, dark indigo armor with restrained gold trim and a distinctive separate three-pronged long red helmet plume, stronger silhouette matching the base infantry proportions, neutral A pose, empty separated hands, no fused weapon, isolated full body, no base or background.",
+      "target_triangles": 5500,
+      "texture_px": 1024,
+      "size_m": [
+        0.75,
+        2.13,
+        0.5
+      ],
+      "pivot": "雙足中點地面為原點；翎獨立，1.22 倍級別依遊戲校準",
+      "requires_rig": true,
+      "postprocess": [
+        "標準 A pose 與手指／關節拓樸檢查",
+        "骨架、權重、bind pose 與 socket 製作",
+        "衣甲與飾件分離並檢查穿模",
+        "待機、跑步、攻擊、受擊及死亡動畫驗證",
+        "建立 LOD、共享材質與效能驗證",
+        "Unity rig、材質、動畫與 prefab 匯入驗證",
+        "保留遠距三叉紅長翎識別",
+        "共享敵兵骨架與材質方案"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 110,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "三叉紅長翎只給 Captain 啟用"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 314,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "隊長顯示及動作來源"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-spear",
+      "project": "changshan-longdan",
+      "name": "魏軍紅纓長槍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Single infantry spear with long straight worn wooden shaft, small red tassel below narrow steel spearhead, simple readable design, isolated full weapon, no hand or character, long shaft along positive Y, separate tassel where possible.",
+      "target_triangles": 1600,
+      "texture_px": 1024,
+      "size_m": [
+        0.18,
+        3.1,
+        0.12
+      ],
+      "pivot": "槍桿握點原點，主軸 +Y；實際左右手握點由 adapter 校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "握點與槍尖對齊現有視覺；不改命中判定"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 82,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "程序槍桿、紅纓和鋼頭的尺寸來源"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-sword",
+      "project": "changshan-longdan",
+      "name": "魏軍單手劍",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Single Chinese infantry straight single hand sword with modest steel blade and wooden grip, compact dark metal guard, isolated full weapon, no hand or character, blade along positive Y, separate blade and handle, no excessive fantasy ornament.",
+      "target_triangles": 1200,
+      "texture_px": 1024,
+      "size_m": [
+        0.18,
+        1.05,
+        0.06
+      ],
+      "pivot": "握柄中心原點，劍刃 +Y；與既有程序持劍軸校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 91,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "程序單手劍幾何"
+        }
+      ]
+    },
+    {
+      "id": "cl-wei-shield",
+      "project": "changshan-longdan",
+      "name": "魏軍藍底金屬邊盾",
+      "category": "weapon",
+      "priority": 0,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Small rectangular Chinese infantry shield, blue painted wood center, metal rim and restrained red center detail, separate rear grip, isolated full shield, no arm or character, front face along positive Z, no logos.",
+      "target_triangles": 1400,
+      "texture_px": 1024,
+      "size_m": [
+        0.52,
+        0.65,
+        0.12
+      ],
+      "pivot": "背面握點原點，正面 +Z；盾與手腕 socket 分離",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\view\\soldier-view.ts",
+          "line": 100,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "程序盾牌與外緣配色及尺寸"
+        }
+      ]
+    },
+    {
+      "id": "cl-wall-module",
+      "project": "changshan-longdan",
+      "name": "石城牆與城垛模組",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Single modular fortified Chinese stone city wall segment with readable broad stones and parapet battlements, clean flat snapping ends, six meter segment length and six meter wall thickness, nine meter core wall height, no surrounding castle or ground, no baked lights.",
+      "target_triangles": 5000,
+      "texture_px": 1024,
+      "size_m": [
+        6,
+        11.1,
+        6
+      ],
+      "pivot": "底邊中心，±X 接合，+Z 指向城外；核心高度 9 m，城垛外觀另校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "接合位置對齊 layout.ts；不可改動牆體碰撞"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 109,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "現有城牆、女牆與城垛視覺"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\layout.ts",
+          "line": 10,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "INNER=56、厚6、高9公尺；視覺與碰撞共同配置"
+        }
+      ]
+    },
+    {
+      "id": "cl-gatehouse",
+      "project": "changshan-longdan",
+      "name": "南門門樓",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Fortified Chinese southern gatehouse with red timber posts, plaster panels and dark tiled roof, readable heroic silhouette, separate roof posts and optional door leaf, isolated building module without surrounding walls or terrain, no baked lights. The gatehouse sits above an existing nine meter city wall; do not generate a fused new collision foundation.",
+      "target_triangles": 8000,
+      "texture_px": 2048,
+      "size_m": [
+        23,
+        10.1,
+        8.2
+      ],
+      "pivot": "門樓底面中心；放置基準 y=9 m，由 layout 決定；門葉另分離",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "門洞及南門 +Z 對齊既有配置",
+        "門樓高度與屋頂沿實際導入再校準"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 158,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildGatehouse，現有門樓從 WALL_HEIGHT 起建"
+        }
+      ]
+    },
+    {
+      "id": "cl-watchtower",
+      "project": "changshan-longdan",
+      "name": "四角烽火塔模板",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Chinese fortress corner watchtower, broad stone base, open red timber lookout and dark tiled roof, clear battlement silhouette, separate roof and flag pole, isolated full building without terrain or neighboring walls, no baked fire or lights. One reusable template for four corners.",
+      "target_triangles": 8000,
+      "texture_px": 2048,
+      "size_m": [
+        11.5,
+        22,
+        11.5
+      ],
+      "pivot": "地面中心；+Y 朝上；四角旋轉重用，外接平台另校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "火焰與旗幟來源點獨立保存"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 185,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildTower，四角視覺模板與烽火位置"
+        }
+      ]
+    },
+    {
+      "id": "cl-keep-hall",
+      "project": "changshan-longdan",
+      "name": "城池主殿外觀",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Large Chinese fortress main hall exterior on a broad stone platform, red columns, pale plaster and dark gray tiled sweeping roof with restrained gold trim, separate platform stairs roof and pillars, isolated building exterior, no entire city, terrain, baked fire or lights. Preserve space for a centered existing approach staircase.",
+      "target_triangles": 14000,
+      "texture_px": 2048,
+      "size_m": [
+        40,
+        18,
+        24
+      ],
+      "pivot": "台基地面中心；入口面向 +Z；KEEP 與 STAIRS 配置保留",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "主殿體積、入口與台階依 layout 校準；外飾不改碰撞"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 204,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildKeep，主殿與台基"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\layout.ts",
+          "line": 16,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "KEEP 40×24 m 台基與 STAIRS 設定，候選總高度另驗"
+        }
+      ]
+    },
+    {
+      "id": "cl-barracks-intact",
+      "project": "changshan-longdan",
+      "name": "完整魏軍兵營",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Reusable Chinese fortress barracks exterior, pale plaster walls with visible timber frame, dark tiled gable roof and simple wooden doors, isolated single building, separate roof walls and doors, no terrain or occupants, no baked lights. Build a thirteen by fifteen meter nominal module that can be adapted to the existing three footprint lengths.",
+      "target_triangles": 6500,
+      "texture_px": 2048,
+      "size_m": [
+        13,
+        8.75,
+        15
+      ],
+      "pivot": "地面底部中心；長邊局部 Z，門側可鏡像校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "現有六棟 footprint 有13/14/15 m變體；不得直接統一碰撞"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 267,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildBarracks 使用同一建築樣式"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\layout.ts",
+          "line": 19,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "六棟兵營 13 m 寬，深度13/14/15 m"
+        }
+      ]
+    },
+    {
+      "id": "cl-barracks-burned",
+      "project": "changshan-longdan",
+      "name": "焦黑魏軍兵營變體",
+      "category": "building",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Burned version of the same Chinese fortress barracks, charred timber and ash darkened plaster and roof, preserve the intact barracks footprint and attachment points, separate damaged roof pieces, isolated single building, no baked flames smoke lights or terrain. Reuse base geometry where possible.",
+      "target_triangles": 6500,
+      "texture_px": 2048,
+      "size_m": [
+        13,
+        8.75,
+        15
+      ],
+      "pivot": "與完整兵營共用地面中心及轴向；屋頂火源點另記",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "沿用既有 BIG_FIRES 動態火源，不烘焙固定火焰"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 267,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "idx2/3 使用 burning 配色與屋頂變體"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\layout.ts",
+          "line": 38,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "BIG_FIRES 屋頂火源及殘骸來源點"
+        }
+      ]
+    },
+    {
+      "id": "cl-brazier",
+      "project": "changshan-longdan",
+      "name": "戰場火盆",
+      "category": "prop",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Single freestanding Chinese battlefield brazier, square dark stone pedestal with a shallow square iron basin holding separate dark coals, broad readable stylized forms, full object isolated, no flame smoke or background, no baked lighting. Approximate one point one five meter width and one point three two meter total height, base centered at ground origin.",
+      "target_triangles": 2500,
+      "texture_px": 1024,
+      "size_m": [
+        1.15,
+        1.32,
+        1.15
+      ],
+      "pivot": "石座接地中心；炭與鐵盆分離，炭面高度參考1.28 m",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "炭 emissive 與動態火焰分離",
+        "16次重用需實例化與共享材質"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 287,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "現有 buildBraziers 尺寸，石座0.8×1.0、鐵盆1.15×0.26、炭面y1.28"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\layout.ts",
+          "line": 28,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "BRAZIERS 16 個擺放來源"
+        }
+      ]
+    },
+    {
+      "id": "cl-lantern",
+      "project": "changshan-longdan",
+      "name": "門樓吊燈",
+      "category": "prop",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Small hanging Chinese fortress lantern with dark simple square wood frame, separate warm translucent inner panel and small hanging stem, readable broad forms, full isolated object, no flames or baked glow, no environment. Match a compact roughly half meter square lantern.",
+      "target_triangles": 1400,
+      "texture_px": 512,
+      "size_m": [
+        0.52,
+        0.94,
+        0.52
+      ],
+      "pivot": "吊桿頂端 pivot；框架與發光面材質分離",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "發光材質與光源由引擎配置；不得烘焙燈光"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 178,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "lantern 框架與 glow 材質"
+        }
+      ]
+    },
+    {
+      "id": "cl-supply-crate",
+      "project": "changshan-longdan",
+      "name": "城垛補給木箱",
+      "category": "prop",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Single compact wooden fortress supply crate, broad worn planks with restrained dark corner braces and simple straps, clean reusable silhouette, full isolated object, no contents weapons ground or background, no baked lights.",
+      "target_triangles": 1800,
+      "texture_px": 1024,
+      "size_m": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "pivot": "底面中心；±X／±Z 可旋轉重用",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 142,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "城牆 walkway 附近的0.9m 木箱；角鐵／束帶造型屬本次提案"
+        }
+      ]
+    },
+    {
+      "id": "cl-burned-rubble",
+      "project": "changshan-longdan",
+      "name": "焦木斷梁殘骸套件",
+      "category": "prop",
+      "priority": 1,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Small modular set of separate charred wooden beams, broken boards and a few roof tile fragments, three to five independent pieces with readable coarse forms, isolated objects spaced apart, no fire smoke ground or fused rubble platform, no baked lights. Individual pieces must remain reusable.",
+      "target_triangles": 2200,
+      "texture_px": 1024,
+      "size_m": [
+        3.4,
+        1.1,
+        3.4
+      ],
+      "pivot": "每件底面中心，整套布局僅供整理，不以套件包圍盒建立碰撞",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "拆成3至5個可重複部件",
+        "擺放來源保持既有 WRECKS/BIG_FIRES"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 295,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildWrecks 程序斷梁與焦木來源"
+        }
+      ]
+    },
+    {
+      "id": "cl-mountain-cluster",
+      "project": "changshan-longdan",
+      "name": "低細節遠山岩峰模板",
+      "category": "environment",
+      "priority": 2,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Low detail distant mountain rock cluster with broad angular layered peaks, muted blue gray low contrast palette, strong simple skyline silhouette, single reusable cluster, isolated without sky fog or ground plane, no high frequency surface detail, no baked lights. Designed for distant background only.",
+      "target_triangles": 1800,
+      "texture_px": 1024,
+      "size_m": [
+        40,
+        35,
+        30
+      ],
+      "pivot": "底部中心；背景模板尺寸為提案，依既有遠山環帶再校準",
+      "requires_rig": false,
+      "postprocess": [
+        "核對 UV、法線與 PBR 材質",
+        "公尺尺寸、朝向與 pivot 校準",
+        "拆分可替換部件",
+        "建立低細節版本",
+        "Unity 匯入、材質與 prefab 檢查",
+        "碰撞由遊戲另行驗證，不從視覺自動改寫",
+        "遠景專用，保持低對比與少量 draw calls",
+        "不增加可通行場景或碰撞"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\world\\castle.ts",
+          "line": 333,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "buildMountains 現有程序遠景，候選模板尺寸非原場景承諾"
+        }
+      ]
+    },
+    {
+      "id": "cl-dragon-head",
+      "project": "changshan-longdan",
+      "name": "青龍頭部候選",
+      "category": "creature",
+      "priority": 2,
+      "demand": "source_backed",
+      "prompt": "Original stylized Three Kingdoms Chinese battlefield aesthetic, readable heroic proportions, desaturated wood stone and blue gray metal palette, no real-world logo, no franchise likeness. Original stylized Chinese azure dragon head only, readable antler horns, separate lower jaw and flowing whiskers, turquoise blue scales with restrained gold accents, isolated head with clean neck attachment, no whole dragon body, flames, clouds or scene. Preserve modular attachment for a procedurally driven segmented body.",
+      "target_triangles": 5000,
+      "texture_px": 2048,
+      "size_m": [
+        1.8,
+        1.7,
+        2.6
+      ],
+      "pivot": "頸部接合中心，龍頭向 +Z；顎與鬚分離",
+      "requires_rig": true,
+      "postprocess": [
+        "檢查頸部接合、UV、法線與材質",
+        "下顎與龍鬚的必要骨架／部位化",
+        "保留44段程序龍身路徑，校準頭部 attach transform",
+        "建立 LOD 與特效遊戲效能檢查",
+        "Unity Generic rig 與材質匯入驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\src\\fx\\dragon.ts",
+          "line": 36,
+          "head": "a42c9294c32ac8ff566bc019dc5465b9dc7ad1d9",
+          "note": "現有青龍頭部與程序分段身體；不能以僵硬整龍直接替換"
+        }
+      ]
+    },
+    {
+      "id": "cl-zhaoyun-reuse",
+      "project": "changshan-longdan",
+      "name": "既有趙雲 GLB 優先重用",
+      "category": "character",
+      "priority": 0,
+      "demand": "reuse",
+      "prompt": "Reuse the existing user supplied Zhao Yun GLB from the verified e00 worktree; do not submit a new generation request. Preserve original silver armor, green cloth, separated spear, twenty one bone adapter contract, existing UVs and textures. Inspect and adapt the existing asset for any future Unity import while keeping gameplay unchanged.",
+      "target_triangles": 29569,
+      "texture_px": 2048,
+      "size_m": [
+        0.95,
+        1.85,
+        0.65
+      ],
+      "pivot": "沿用既有 ZhaoYunAdapter；此 size_m 只為需求估值，禁止盲目縮放既有 GLB",
+      "requires_rig": true,
+      "postprocess": [
+        "不重新生成；先核對現有模型來源與 hash",
+        "檢查21骨、SM_ZhaoYun 和 SM_ZhaoYunSpear adapter 契約",
+        "既有專用權重／握點不當成通用自動綁骨",
+        "確認既有實際尺寸，保留程序動作與槍尖",
+        "新增 LOD 的需求另驗收",
+        "Unity 材質、rig、動畫與 prefab 仍需獨立驗證"
+      ],
+      "sources": [
+        {
+          "path": "C:\\Repos\\changshan-longdan\\.worktrees\\e00-recoverable-baseline\\docs\\art\\zhaoyun-integration.md",
+          "line": 11,
+          "head": "af771bd2a1ca2d1968c3e46f1d2fe2608ebcbb3e",
+          "note": "獨立工作樹文件記錄29569 tris、21骨、三張2K貼圖、無動畫clip、僅LOD0；未合入主main，數值本次未重驗GLB"
+        },
+        {
+          "path": "C:\\Repos\\changshan-longdan\\.worktrees\\e00-recoverable-baseline\\src\\view\\zhaoyun-adapter.ts",
+          "line": 5,
+          "head": "af771bd2a1ca2d1968c3e46f1d2fe2608ebcbb3e",
+          "note": "本次已查 source 的專用21骨 adapter；不是任意生成角色通用綁骨"
+        }
+      ]
+    }
+  ]
+}

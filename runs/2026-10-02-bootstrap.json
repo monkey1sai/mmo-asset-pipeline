@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "timezone": "Asia/Taipei",
+  "authorization": {
+    "source": "使用者要求以本 repo 產製兩個遊戲需要的模型並使用每月 Hyper3D 額度",
+    "destination": "目前連接的 Hyper3D 帳戶",
+    "purpose": "首批原創遊戲素材生成及本 repo 保存",
+    "allowed_operations": ["generate", "status", "download", "local_qa"],
+    "data_transmitted": "原創素材英文描述及非敏感生成參數；不傳整個 repo",
+    "forbidden_operations": ["top_up", "upgrade", "spend_regular_credits", "publish_gallery", "push", "deploy", "schedule"],
+    "stop_conditions": ["扣到普通點數", "unknown_submission", "費用超過批次上限", "遇到憑證或新權限要求"],
+    "monthly_credit_ceiling": 205,
+    "bootstrap_batch_credit_ceiling": 4,
+    "conservative_default": "先驗證首批成本及下載品質；後續僅對仍有遊戲需求的清單擴大"
+  },
+  "balance_before": {
+    "api_total": 230,
+    "web_subscription": 205,
+    "web_regular": 25,
+    "web_frozen": 0,
+    "last_refill_date_display": "10/01/2026",
+    "next_reset_at": null
+  },
+  "operations": [
+    {
+      "operation_id": "bootstrap-20261002-cl-brazier-v001",
+      "asset_id": "cl-brazier",
+      "status": "downloaded",
+      "generation_id": "c4fead7e-d088-4c2b-bc68-4efe5216a58b",
+      "consumed_credits": 0.5,
+      "credit_evidence": "VERIFIED: API 230 -> 229.5；首件生成後網頁月訂 205 -> 204.5、普通 25 不變、凍結 0",
+      "display_url": "https://hyper3d.ai/workspace/rodin/c4fead7e-d088-4c2b-bc68-4efe5216a58b",
+      "download_method": "official Chrome export ZIP; extracted only the three expected flat entries without overwrite",
+      "download_recovery": "hyper3d_api connector PATH_OUTSIDE_AUTHORIZED_ROOTS；未改全域工具設定，改用已授權官方網頁下載。瀏覽器等待逾時後先核對既存 ZIP，未重送生成。",
+      "prompt": "A single freestanding Three Kingdoms Chinese military brazier, stylized PS2 action game prop. Wide dark cast-iron bowl on a sturdy stone pedestal, chunky readable silhouette, soot and worn edges, a few charcoal pieces in the bowl. No fire, smoke, sparks, text, people, terrain or surrounding scene. Entire object isolated, all sides complete, base flat, about 1.2 meters high and 1.2 meters wide. PBR game asset, restrained dark iron and warm gray stone palette.",
+      "parameters": {"tier": "Gen-2.5-High", "mesh_mode": "Raw", "quality_override": 2500, "geometry_file_format": "glb"},
+      "output_directory": "assets/raw/cl-brazier/v001",
+      "qa_status": "needs_revision",
+      "qa_report": "runs/qa/cl-brazier-v001.md",
+      "inventory_report": "runs/qa/cl-brazier-v001-inventory.json",
+      "visibility": "private_verified",
+      "visibility_evidence": "新頁讀回 Set asset public 控制及閉合鎖頭；runs/evidence/20261002-cl-brazier-private.jpg",
+      "visibility_incident": "誤判控制標籤而短暫切為公開；隨即點選 Set asset private，重新開頁讀回確認私有。未觀察公開期間第三方存取。",
+      "files": [
+        {"path": "assets/raw/cl-brazier/v001/base_basic_pbr.glb", "bytes": 6942464, "sha256": "a34172c541fff1b58c62600905b0c047b9bbd47d8c2318957db9b4ec31408fb6"},
+        {"path": "assets/raw/cl-brazier/v001/base_basic_shaded.glb", "bytes": 3758068, "sha256": "5101ee2c37db1ffa5384dd1501b22564b12faa2110e1281be8a1c81f09446318"},
+        {"path": "assets/raw/cl-brazier/v001/texture_emissive.png", "bytes": 1153682, "sha256": "a10a451805339670b28656b995cecddd4405b7d25024b80b92621762bdad52f7"}
+      ]
+    },
+    {
+      "operation_id": "bootstrap-20261002-evoloot-iron-sword-neutral-v001",
+      "asset_id": "evoloot.weapon.iron_sword_neutral",
+      "status": "downloaded",
+      "generation_id": "4574e81b-b870-4b71-a066-9b557b36ab9d",
+      "display_url": "https://hyper3d.ai/workspace/rodin/4574e81b-b870-4b71-a066-9b557b36ab9d",
+      "consumed_credits": 0.5,
+      "balance_after": {"api_total": 229, "web_subscription": 204, "web_regular": 25, "web_frozen": 0},
+      "credit_evidence": "VERIFIED: API 229.5 -> 229；成品頁 wallet DOM 204 月訂／25 普通／0 凍結",
+      "authorized_credit_limit": 0.5,
+      "balance_before": {"api_total": 229.5, "web_subscription": 204.5, "web_regular": 25, "web_frozen": 0},
+      "balance_evidence": "同次生成前 API 229.5；官方頁面 wallet DOM 讀回月訂 204.5／普通 25／凍結 0",
+      "prompt": "Original stylized dark fantasy rusty iron sword, silent dormant living weapon, simple readable iron blade and worn leather grip, subtle cracks without overt eyes, isolated full object, straight vertical blade along positive Y, no character, no background, no logos. Single sword with a clear separate-looking blade, guard and hilt, suitable for later mesh-part separation. Restrained dark iron and brown leather. Common grip and total length about 1.05 meters for the EvoLoot sword family.",
+      "prompt_adjustment": "以具體握柄長度代替服務未知的 Match family；生成後仍須實測尺寸與部件分離",
+      "parameters": {"tier": "Gen-2.5-High", "mesh_mode": "Raw", "quality_override": 1800, "geometry_file_format": "glb"},
+      "output_directory": "assets/raw/evoloot.weapon.iron_sword_neutral/v001",
+      "qa_status": "needs_revision",
+      "download_method": "official Chrome export ZIP; extracted only the two expected flat GLB entries without overwrite",
+      "visibility": "private_verified",
+      "visibility_evidence": "Set asset public 控制及閉合鎖頭；runs/evidence/20261002-evoloot-iron-sword-private.jpg",
+      "qa_report": "runs/qa/evoloot-iron-sword-neutral-v001.md",
+      "inventory_report": "runs/qa/evoloot-iron-sword-neutral-v001-inventory.json",
+      "files": [
+        {"path": "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_pbr.glb", "bytes": 11979684, "sha256": "783470bcb9d3efeada305f9961144e1afc724db0f430008f083437bef8035c0b"},
+        {"path": "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_shaded.glb", "bytes": 4869428, "sha256": "f7c22ad983618192ea2be6cbfc9b0f8d26111f4c4c202a65df79f9343222d046"}
+      ]
+    }
+    ,{
+      "operation_id": "bootstrap-20261002-evoloot-slime-normal-v001",
+      "asset_id": "evoloot.enemy.slime_normal",
+      "status": "prepared",
+      "authorized_credit_limit": 0.5,
+      "balance_before": {"api_total": 229, "web_subscription": 204, "web_regular": 25, "web_frozen": 0},
+      "prompt": "A single original stylized dungeon slime creature for a fantasy game. One compact rounded moss-green jelly blob resting on its flat soft underside, two simple clearly visible small dark eyes on the front, smooth clean continuous body. Entire creature isolated with no platform or scenery. Neutral rest pose, roughly 0.9 meters wide and 0.65 meters tall. Slight translucent-looking green surface but a solid complete mesh. No limbs, no weapons, no crown, no spikes, no rocks, no ground, no text or logo. Restrained dark fantasy game palette, reusable base body for later ice and king variants.",
+      "method_hypothesis": "前兩項帶細部的文字生成偏離需求；這次改驗單一低複雜度主體，不重試前兩項，也不假定品質通過",
+      "parameters": {"tier": "Gen-2.5-High", "mesh_mode": "Raw", "quality_override": 2200, "geometry_file_format": "glb"},
+      "output_directory": "assets/raw/evoloot.enemy.slime_normal/v001",
+      "qa_status": "not_started"
+    }
+  ],
+  "balance_after": {"api_total": 229, "web_subscription": 204, "web_regular": 25, "web_frozen": 0, "next_reset_at": null},
+  "credits_spent_total": 1,
+  "first_batch_result": "兩件已下載候選皆需要造型修訂；先改善視覺參考與後製方法，不擴大同一文字生成方法的付費批次",
+  "monthly_goal_status": "incomplete_environment_failure_demand_gap_and_quality_method",
+  "environment_failure": {
+    "classification": "ENVIRONMENT_FAILURE",
+    "observed_error": "sandbox provisioning failed",
+    "affected_step": "第三件普通史萊姆提交前的本機檢查，以及後續正常沙箱下載驗收",
+    "normal_sandbox_failed_attempts_this_stage": 2,
+    "read_only_owner_context": "成功讀回非敏感 runs JSON；這不證明正常沙箱已恢復",
+    "submission_effect": "史萊姆 prepared 未送服務，無 generation ID、無新增扣點",
+    "resume_condition": "新的無害正常沙箱操作成功，再核對即時月訂餘額及同一 prepared operation；未知提交不重送",
+    "security_changes": "沒有修改 safe.directory、ACL、憑證、全域工具設定或 hooks"
+  },
+  "continuation": "先恢復正常本機驗收環境，再完成同一普通史萊姆草稿；後續依選定的擴充素材庫／現有清單／角色優先方向及品質方法接續。原有月訂範圍仍適用，排程尚未授權。",
+  "background_jobs_running": false
+}

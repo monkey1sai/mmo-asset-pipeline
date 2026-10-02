@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "timezone": "Asia/Taipei",
+  "scope": "repo_skill_creation_and_offline_workflow_evaluation",
+  "skill_name": "art-engineer",
+  "authorization": {
+    "source": "使用者要求建立本 repo 美術工程師 skill，對應目前 workflow",
+    "destination": "C:/Repos/mmo-asset-pipeline 本機工作區與 Git index",
+    "allowed_operations": [
+      "repo_skill_edit",
+      "offline_validation",
+      "isolated_forward_testing",
+      "local_git_add"
+    ],
+    "data_transmitted": "無對外傳送 repo 或資產；只查閱官方 skill 目錄說明",
+    "forbidden_operations": [
+      "paid_generation",
+      "model_edit",
+      "other_repo_write",
+      "commit",
+      "push",
+      "publish",
+      "schedule",
+      "global_config_change",
+      "credential_read"
+    ],
+    "stop_conditions": [
+      "檔案路徑跳出工作區",
+      "新付費或外部操作需求",
+      "既有變更可能覆寫",
+      "驗證不符"
+    ]
+  },
+  "verification": {
+    "skill_format": "Skill is valid!",
+    "local_reference_count": 9,
+    "ui_yaml_valid": true,
+    "implicit_invocation_default": true,
+    "utf8_without_bom_and_lf": true,
+    "repo_tool_baseline": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "tests": 51,
+      "result": "pass",
+      "execution_context": "normal_sandbox"
+    },
+    "source_of_truth": "既有 workflow、schema 與 scripts/workbench.py，未修改核心程式",
+    "discovery_location": ".agents/skills/art-engineer",
+    "discovery_source": "https://learn.chatgpt.com/docs/build-skills",
+    "automatic_client_discovery_observed": false
+  },
+  "forward_evaluation": {
+    "method": "獨立代理以 skill 處理三份模擬需求，僅在 tmp 產生資料；協調者讀取產物並用現有 workbench 重新核對後保存快照",
+    "initial_entrypoint_sha256": "6d9596209ea9ab51628876c460c480c294169932d8d23c2c3eb22b8898ac443e",
+    "cases": [
+      {
+        "name": "gray-rock",
+        "request_id": "forward-gray-rock",
+        "request_sha256": "da2744a5580e1df2028128684ad8391f708a56b55853f4220da81af1533a5e31",
+        "route": "generate",
+        "validate": "valid_request",
+        "pending": [],
+        "empty_evidence_decision": "not_ready",
+        "empty_evidence_blocker_count": 7
+      },
+      {
+        "name": "wood-gate",
+        "request_id": "forward-wood-gate",
+        "request_sha256": "93a0c6b37690e9d83104b4264ccc2d96832483e4351d88481880d4bac0992d1a",
+        "route": "split_then_generate",
+        "validate": "valid_request",
+        "pending": [],
+        "empty_evidence_decision": "not_ready",
+        "empty_evidence_blocker_count": 11
+      }
+    ],
+    "brazier_case": {
+      "input": "現有素材庫火盆能否按無靜態火焰／石座條件直接交付；不生成",
+      "observed_library_status": "needs_revision",
+      "observed_delivery_status": "not_delivered",
+      "result": "不能以現有下載檔直接算交付；保留候選及未驗項目，石座語義在實際修訂委託前需明確",
+      "artifact": "runs/qa/art-engineer-skill-20261002/brazier-response.md",
+      "basis": [
+        "library/index.json",
+        "runs/qa/cl-brazier-v001.md",
+        "runs/qa/cl-brazier-v001-inventory.json",
+        "historical_preview"
+      ],
+      "new_art_or_runtime_acceptance": false
+    },
+    "clarifications_applied": [
+      "size_m 的 X/Y/Z、整件／部件與面數／貼圖預算語義",
+      "有符號角度範例及完整活動範圍、多部件操作與需求指定掛點",
+      "本機新建能力登記缺口不強制付費、不宣稱 Blender 已可用"
+    ],
+    "independent_followup": "澄清與現有實作及試用行為一致；將掛點門檻收窄為需求指定項目",
+    "limitations": "三案只驗離線流程，沒有 baseline-versus-skill 效能比較、模型後製、美術通過或環境實測",
+    "evaluation_inputs_only": true,
+    "production_operations_created": 0
+  },
+  "files": [
+    {
+      "path": ".agents/skills/art-engineer/SKILL.md",
+      "bytes": 9178,
+      "sha256": "b5b11a216dffec206f8df69d3cae8b370c3a4d7e6fd2bbd8d703a86eecb52287"
+    },
+    {
+      "path": ".agents/skills/art-engineer/agents/openai.yaml",
+      "bytes": 322,
+      "sha256": "1998f2af254b1bb8c58aa1806dc7b9823e277c8c91a0f9ee8db048a1071eb446"
+    },
+    {
+      "path": "runs/qa/art-engineer-skill-20261002/gray-rock.request.json",
+      "bytes": 2342,
+      "sha256": "80a24cb5db5e3699d3fdea6812d6ede1246c50c137f01312b447dd4ea85b87ed"
+    },
+    {
+      "path": "runs/qa/art-engineer-skill-20261002/gray-rock.plan.json",
+      "bytes": 1838,
+      "sha256": "f28b42dcd4cf808fd6f772e8b18bbbffd45b0c427c02d251c2dd9444f531ad88"
+    },
+    {
+      "path": "runs/qa/art-engineer-skill-20261002/wood-gate.request.json",
+      "bytes": 3961,
+      "sha256": "8097a10bf359f4c2fe70f4464bf1441880a9eb0012a7088bb4d67118f8d59c42"
+    },
+    {
+      "path": "runs/qa/art-engineer-skill-20261002/wood-gate.plan.json",
+      "bytes": 2685,
+      "sha256": "d2dc00b66c8c2afedb4b2ccbb6727900ea0f96917bbf37589a7850997727caa3"
+    },
+    {
+      "path": "runs/qa/art-engineer-skill-20261002/brazier-response.md",
+      "bytes": 2683,
+      "sha256": "3bd204eeb3ce0376fb93091b84cbb6acfc6c5ee2da19ae5cb0301384504ccbb4"
+    }
+  ],
+  "execution_context": {
+    "sandbox_file_reads_edits_and_tests": "pass",
+    "sandbox_git": "ENVIRONMENT_FAILURE: fatal: detected dubious ownership in repository at 'C:/Repos/mmo-asset-pipeline'",
+    "bounded_original_user_git": "成功核對原 37 檔暫存及尚無 HEAD；只做明確範圍本機 add",
+    "safe_directory_acl_or_hook_changes": false
+  },
+  "limits": {
+    "new_paid_generations": 0,
+    "new_delivered_models": 0,
+    "commit_created": false,
+    "remote_push": false,
+    "global_skill_installation": false,
+    "background_jobs_running": false
+  }
+}

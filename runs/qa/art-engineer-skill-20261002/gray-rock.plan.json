@@ -1,0 +1,53 @@
+{
+  "mode": "offline_plan_only",
+  "request_id": "forward-gray-rock",
+  "request_sha256": "da2744a5580e1df2028128684ad8391f708a56b55853f4220da81af1533a5e31",
+  "project": null,
+  "route": "generate",
+  "reason": "已查 library/index.json 並以岩石／rock 搜尋，均無候選；需要新做獨立灰色岩石。具體製作工具待本輪以外核對，本計畫不授權 Hyper3D、Blender 或任何生成。",
+  "pending": [],
+  "reuse_candidates": [],
+  "steps": [
+    "理解需求與交付承諾",
+    "制定設計、參考與可修訂預設",
+    "建立原創視覺參考及工具輸入；依已記錄的資源授權產生候選",
+    "製作與需求指定的後製",
+    "逐項記錄美術／技術／必要目標環境證據",
+    "核對交付檔案並歸檔"
+  ],
+  "needed_capabilities": [
+    "reference_design",
+    "candidate_generation",
+    "mesh_edit",
+    "format_export"
+  ],
+  "required_checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全"
+    },
+    {
+      "id": "no-textures",
+      "area": "technical",
+      "description": "GLB 不含貼圖圖像、不引用外部貼圖；灰色由材質基本色提供"
+    }
+  ],
+  "paid_submission_authorized_by_this_plan": false,
+  "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。"
+}
