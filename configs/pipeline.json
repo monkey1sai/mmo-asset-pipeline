@@ -1,0 +1,12 @@
+{
+  "contract_version": "0.1.0",
+  "engine": "Unity",
+  "asset_types": ["character", "outfit", "weapon", "building", "landscape", "scene"],
+  "delivery_modes": ["preview", "production"],
+  "profiles": {
+    "pc-character-start": {"lod_max_triangles": [45000, 22000, 8000], "max_influences": 4, "max_material_slots": 6, "texture_resolution": 2048},
+    "pc-building-start": {"lod_max_triangles": [12000, 6000, 2000], "max_material_slots": 4, "texture_resolution": 2048},
+    "pc-landscape-start": {"lod_max_triangles": [8000, 3000, 800], "max_material_slots": 3, "texture_resolution": 2048}
+  },
+  "notes": "Starting budgets only. Measure target hardware and concurrent characters before locking production budgets. Material slots are not measured draw calls."
+}

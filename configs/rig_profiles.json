@@ -1,0 +1,15 @@
+{
+  "humanoid-v1": {
+    "family": "humanoid",
+    "bind_pose": "T",
+    "bones": {
+      "root": null, "pelvis": "root", "spine_01": "pelvis", "spine_02": "spine_01", "spine_03": "spine_02", "neck": "spine_03", "head": "neck",
+      "clavicle_l": "spine_03", "upperarm_l": "clavicle_l", "lowerarm_l": "upperarm_l", "hand_l": "lowerarm_l",
+      "clavicle_r": "spine_03", "upperarm_r": "clavicle_r", "lowerarm_r": "upperarm_r", "hand_r": "lowerarm_r",
+      "thigh_l": "pelvis", "calf_l": "thigh_l", "foot_l": "calf_l", "toe_l": "foot_l",
+      "thigh_r": "pelvis", "calf_r": "thigh_r", "foot_r": "calf_r", "toe_r": "foot_r"
+    },
+    "sockets": {"socket_hand_r": "hand_r", "socket_hand_l": "hand_l", "socket_spine_back": "spine_03", "socket_hip_l": "pelvis", "socket_head_helmet": "head"},
+    "extra_bones": "Allowed, version and test them. Keep control bones out of the deform-only export."
+  }
+}

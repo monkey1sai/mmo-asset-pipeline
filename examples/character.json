@@ -1,0 +1,15 @@
+{
+  "asset_id": "human-warrior-01", "asset_type": "character", "engine": "Unity", "delivery_mode": "preview",
+  "description": "第三人稱 MMORPG 戰士，肩甲形成寬闊輪廓，青銅、布料與皮革有不同材質反應。",
+  "style": "stylized-fantasy", "scale_meters": 1.85, "budget_profile": "pc-character-start",
+  "rig_profile": "humanoid-v1", "body_variant": "human-athletic-v1",
+  "required_actions": ["idle", "walk", "run", "attack", "cast", "jump"],
+  "parts": [
+    {"id": "body", "deformation": "skin", "slot": "body"},
+    {"id": "tunic", "deformation": "skin", "slot": "chest"},
+    {"id": "pauldron-r", "deformation": "rigid", "slot": "shoulder-r", "parent_bone": "upperarm_r"},
+    {"id": "cape", "deformation": "secondary", "slot": "back", "motion_solution": "secondary-bones"}
+  ],
+  "variants": [{"id": "silhouette-wide", "reason": "寬肩甲保留設計剪影", "impacts": ["clipping", "rig", "performance"]}],
+  "references": {"orthographic_views": [], "part_boundaries": "pending", "clearance_notes": "pending"}
+}
