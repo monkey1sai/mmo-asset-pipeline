@@ -1,0 +1,33 @@
+{
+ "recorded_utc": "2026-10-05T03:37:19.145165+00:00",
+ "destination": "registry.npmjs.org (npm public registry) via the installed npm CLI",
+ "purpose": "User chose runtime A (repo-local Three.js 0.186.0 QA scene) and told the agent to start P1; option A was presented as requiring this download.",
+ "allowed_operations": [
+  "npm install --ignore-scripts of exactly three@0.186.0 into tools/runtime-qa/three/node_modules (git-ignored)"
+ ],
+ "data_transmitted": [
+  "package name and version request only; no repository content, no credentials"
+ ],
+ "expected": {
+  "tarball": "https://registry.npmjs.org/three/-/three-0.186.0.tgz",
+  "unpacked_bytes": 20443175,
+  "file_count": 1263,
+  "license": "MIT",
+  "dependencies": 0,
+  "integrity": "sha512-cr/fIM2ddMSVbYVgkfD4jLJv7Fh/8ZTjvo+7gQeSVGUZHxpx9FDwoL5iC7hUz/LiRA8wMbqfnb90xKfm1/HHkQ=="
+ },
+ "forbidden_operations": [
+  "any other package or version",
+  "install scripts",
+  "global install",
+  "publishing",
+  "writes outside tools/runtime-qa/three",
+  "client repository writes"
+ ],
+ "stop_conditions": [
+  "integrity mismatch",
+  "unexpected extra packages in the lockfile",
+  "registry or TLS failure (NETWORK_FAILURE, no workaround)"
+ ],
+ "user_text": "runtime 選 A，預算同意，保護區 A、B 授權，開始 P1"
+}

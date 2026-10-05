@@ -1,0 +1,22 @@
+{
+ "observed_utc": "2026-10-05T03:42:41.719640+00:00",
+ "attempt": 1,
+ "classification": "TEST_FAILURE",
+ "result_file": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-results.json",
+ "result_preserved": true,
+ "observed": "Wiring gate failed: max 32.319 mm; runtime-owner and baked-owner errors identical; frame 1 max 0.83 um; driver difference exactly 1/60 at every non-rest sample; only right-arm chain meshes affected.",
+ "cause": "Harness assumed frame f at (f-1)/fps. The exported clip keys frame f at f/fps (accessor min 1/60 s, max 61/60 s, 61 keys, LINEAR), so every sample was posed one frame early.",
+ "evidence": "GLB animation input accessor min/max read directly; exporter option export_anim_slide_to_zero left at default.",
+ "not_changed": [
+  "pre-registered samples, gates and rules",
+  "GLB files",
+  "Blender reference positions (indexed by frame)",
+  "product assets"
+ ],
+ "known_wrong_label": "blender-reference.json fields time_s and frame_to_time use (frame-1)/fps; they are labels only, never read by the harness, and are left as written.",
+ "fix": "p1.js maps frame -> frame/fps and refuses to run if the clip key times do not match that rule.",
+ "p1_js_sha256_before": "51bc13905a7f81699de4d7a8a7b3ee13897ed9f569059891c64608b31e02aa2d",
+ "p1_js_sha256_after": "1b0c7fddbd1ba1fa46cbc52fd906be195c63cf7cc987bfe62f4ae8a46eb487bd",
+ "attempt_1_negative_controls": "Not meaningful: the baseline comparison itself was failing.",
+ "contract_finding": "Game-facing clips need an explicit time-origin rule (slide to zero or documented lead-in), otherwise loops carry a 1/fps hold at the start."
+}

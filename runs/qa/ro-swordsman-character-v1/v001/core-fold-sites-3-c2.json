@@ -1,0 +1,77 @@
+{
+ "note": "Core triangles that fold flat in a contract pose: six found on build a04-carrier, the seventh in the two-hand grip pose (a29-pose). Variant c2 for site 7.",
+ "sites": [
+  {
+   "centre": [
+    -0.2203,
+    0.047,
+    1.1532
+   ],
+   "motion": "spine-twist",
+   "level": "typical",
+   "driver_bone": "spine_02"
+  },
+  {
+   "centre": [
+    0.1919,
+    -0.0079,
+    1.2832
+   ],
+   "motion": "shoulder-flexion.L",
+   "level": "typical",
+   "driver_bone": "upper_arm.L"
+  },
+  {
+   "centre": [
+    0.1983,
+    -0.0034,
+    1.3309
+   ],
+   "motion": "shoulder-abduction.L",
+   "level": "extreme",
+   "driver_bone": "upper_arm.L"
+  },
+  {
+   "centre": [
+    -0.2176,
+    0.021,
+    1.3458
+   ],
+   "motion": "shoulder-flexion.R",
+   "level": "extreme",
+   "driver_bone": "upper_arm.R"
+  },
+  {
+   "centre": [
+    0.0431,
+    -0.0394,
+    0.7912
+   ],
+   "motion": "combo-deep-squat",
+   "level": "typical",
+   "driver_bone": "upper_leg.L"
+  },
+  {
+   "centre": [
+    0.1826,
+    -0.0103,
+    1.2786
+   ],
+   "motion": "combo-cast-open-palm.L",
+   "level": "extreme",
+   "driver_bone": "upper_arm.L"
+  },
+  {
+   "centre": [
+    -0.1945,
+    -0.0069,
+    1.3187
+   ],
+   "motion": "combo-two-hand-chop",
+   "level": "typical",
+   "driver_bone": "upper_arm.R",
+   "area_ratio": 0.055,
+   "move_corner": 2
+  }
+ ]
+}

@@ -1,0 +1,7866 @@
+{
+ "observed_utc": "2026-10-05T08:43:23.921828+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "8a32c65884e3cf99ce7add6dababf4245ff2b8d7b4695d2312af1c6700049bab",
+ "subject": {
+  "foundation": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+   "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+   "saved": false
+  },
+  "clip_blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01/AN_RO_Run_Sword.blend",
+   "sha256": "b9b4dd05da6fbd73d44e2f3401337ffcee681aa4fd3b08691ef3074a7da1f82f"
+  },
+  "action": "AN_RO_Run_Sword",
+  "keyed_bones": [
+   "finger1.L_01",
+   "finger1.L_02",
+   "finger1.R_01",
+   "finger1.R_02",
+   "finger1.R_03",
+   "finger2.L_01",
+   "finger2.L_02",
+   "finger2.R_01",
+   "finger2.R_02",
+   "finger2.R_03",
+   "finger3.L_01",
+   "finger3.L_02",
+   "finger3.R_01",
+   "finger3.R_02",
+   "finger3.R_03",
+   "finger4.L_01",
+   "finger4.L_02",
+   "finger4.R_01",
+   "finger4.R_02",
+   "finger4.R_03",
+   "foot.L",
+   "foot.R",
+   "hand.R",
+   "head",
+   "lower_arm.L",
+   "lower_arm.R",
+   "lower_leg.L",
+   "lower_leg.R",
+   "pelvis",
+   "spine_01",
+   "spine_02",
+   "thumb.L_01",
+   "thumb.R_01",
+   "thumb.R_02",
+   "thumb.R_03",
+   "upper_arm.L",
+   "upper_arm.R",
+   "upper_leg.L",
+   "upper_leg.R"
+  ],
+  "first_key_frame": 0.0
+ },
+ "interaction": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/interaction.json",
+  "sha256": "3169327e396f2991b168a78b393f0ddaa8e6dfd99c7750cb5039e0161100ad00",
+  "registry_entry": {
+   "clip": "AN_RO_Run_Sword",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/interaction.json",
+   "sha256": "3169327e396f2991b168a78b393f0ddaa8e6dfd99c7750cb5039e0161100ad00",
+   "registered_utc": "2026-10-05T08:42:58Z",
+   "reason": "before first measurement",
+   "supersedes": null
+  }
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+ },
+ "fixtures": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/contact-fixtures.json",
+  "sha256": "13f57882e6b6f0316f64276f14261fcd09b3efdf5304ea98293854613a03c05c"
+ },
+ "grasp_gate": {
+  "source": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+  "functional_gate_verbatim": "Original5pads each>=3pointswithin2mm; unknowninside0; actualself/swordtransverse0; degenerates0; sampledmaxpenetration<=1mm; independentgrayshapeacceptance.",
+  "method": "scripts/ro_certified_grasp_gate.py (world coordinates, certified solid-angle fallback)",
+  "pads": {
+   "finger1": 31,
+   "finger2": 44,
+   "finger3": 54,
+   "finger4": 40,
+   "thumb": 77
+  },
+  "independent_gray_acceptance": "required, not decided by this tool"
+ },
+ "thresholds": {
+  "foot_stance_slide_m": 0.005,
+  "foot_floor_penetration_m": 0.002,
+  "foot_float_m": 0.003,
+  "weapon_body_penetration_m": 0.001,
+  "loop_seam_deg": 1.0,
+  "loop_seam_m": 0.001,
+  "source": "request support_envelope.contact_thresholds_proposed and transition_matrix.gates"
+ },
+ "sample_count": 97,
+ "sample_rule": "whole and half frames; quarter frames within one frame of each boundary",
+ "feet": {
+  "L": [
+   {
+    "window": [
+     20,
+     29
+    ],
+    "slide_m": 0.0003234789651015752,
+    "penetration_m": 0.001219521975144744,
+    "float_m": 0.0
+   }
+  ],
+  "R": [
+   {
+    "window": [
+     0,
+     9
+    ],
+    "slide_m": 0.0003236639563745408,
+    "penetration_m": 0.0013003596104681492,
+    "float_m": 0.0
+   }
+  ]
+ },
+ "loop_seam": {
+  "from_frame": 40,
+  "to_frame": 0,
+  "max_bone_deg": 0.0,
+  "max_point_m": 0.0,
+  "pass": true
+ },
+ "report_only": {
+  "other_new_pairs_max": 3100,
+  "other_new_by_mesh_pair_at_worst": {
+   "SM_RO_coat|SM_RO_core": 1267,
+   "SM_RO_core|SM_RO_cuirass": 655,
+   "SM_RO_core|SM_RO_pauldron.L": 426,
+   "SM_RO_core|SM_RO_pauldron.R": 273,
+   "SM_RO_core|SM_RO_core": 184,
+   "SM_RO_bracer.L|SM_RO_pauldron.L": 145,
+   "SM_RO_bracer.L|SM_RO_core": 141,
+   "SM_RO_bracer.R|SM_RO_core": 9
+  },
+  "min_triangle_area_ratio": 0.007340756593351725,
+  "hand_edge_ratio_range": [
+   0.3579901961066223,
+   1.492407629259191
+  ],
+  "note": "No frozen ceiling exists for body intersections in clips; reported for the art review."
+ },
+ "gates": {
+  "clip_time_origin_zero": true,
+  "helper_bones_not_keyed": true,
+  "no_collapse": false,
+  "hand_self_intersection_zero": true,
+  "hand_other_new_intersection_zero": true,
+  "feet_slide": true,
+  "feet_penetration": true,
+  "feet_float": true,
+  "weapon_body_penetration": true,
+  "grasp_functional": true,
+  "loop_seam": true
+ },
+ "pass_numeric": false,
+ "failures": [
+  {
+   "t": 0.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 0.25,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 0.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 0.75,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 1.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 1.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 2.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 2.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 3.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 3.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 4.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 4.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 5.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 5.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 6.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 6.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 7.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 10.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 10.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 11.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 11.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 15.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 16.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 16.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 17.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 19.75,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 20.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 20.75,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 21.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 21.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 22.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 22.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 23.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 23.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 24.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 29.75,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 30.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 30.5,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 31.0,
+   "failed": [
+    "collapse"
+   ]
+  },
+  {
+   "t": 33.0,
+   "failed": [
+    "collapse"
+   ]
+  }
+ ],
+ "previews": {
+  "0": [
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f000-front.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f000-right.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f000-three-quarter.png"
+  ],
+  "10": [
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f010-front.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f010-right.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f010-three-quarter.png"
+  ],
+  "20": [
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f020-front.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f020-right.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f020-three-quarter.png"
+  ],
+  "30": [
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f030-front.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f030-right.png",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a01-check/preview/f030-three-quarter.png"
+  ]
+ },
+ "scope": "Measured sample times only; numeric gates are not art acceptance; grasp gray acceptance pending independent review.",
+ "samples": [
+  {
+   "t": 0.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.03588728232623367,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5730,
+   "other_new_pairs": 2881,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1052,
+    "SM_RO_core|SM_RO_cuirass": 675,
+    "SM_RO_core|SM_RO_pauldron.L": 432,
+    "SM_RO_core|SM_RO_pauldron.R": 270,
+    "SM_RO_core|SM_RO_core": 164,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_bracer.L|SM_RO_core": 139,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35800199477035755,
+    1.4923914958301676
+   ],
+   "other_edge_ratio": [
+    0.14655837569933913,
+    8.708799260658742
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465227127075195,
+      0.10551303625106812
+     ],
+     "min_z": 0.12826630473136902
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250245094299316,
+      -0.3869667053222656
+     ],
+     "min_z": 2.894081490012468e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39281678199768066,
+    -0.022509675472974777,
+    0.8139346241950989
+   ]
+  },
+  {
+   "t": 0.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.03101901411898345,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5779,
+   "other_new_pairs": 2934,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1108,
+    "SM_RO_core|SM_RO_cuirass": 675,
+    "SM_RO_core|SM_RO_pauldron.L": 434,
+    "SM_RO_core|SM_RO_pauldron.R": 270,
+    "SM_RO_core|SM_RO_core": 159,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_bracer.L|SM_RO_core": 139,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580099482020877,
+    1.492399815130096
+   ],
+   "other_edge_ratio": [
+    0.14721103489083762,
+    8.847284364409102
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446890026330948,
+      0.09644068777561188
+     ],
+     "min_z": 0.1314285546541214
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2424997240304947,
+      -0.37239986658096313
+     ],
+     "min_z": -0.0009739476954564452
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3931832015514374,
+    -0.022628681734204292,
+    0.8128940463066101
+   ]
+  },
+  {
+   "t": 0.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.027235795896516642,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5796,
+   "other_new_pairs": 2952,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1128,
+    "SM_RO_core|SM_RO_cuirass": 675,
+    "SM_RO_core|SM_RO_pauldron.L": 430,
+    "SM_RO_core|SM_RO_pauldron.R": 271,
+    "SM_RO_core|SM_RO_core": 158,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580033970102202,
+    1.4923951454146958
+   ],
+   "other_edge_ratio": [
+    0.14765307788090537,
+    8.985817240214418
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24470114707946777,
+      0.08745421469211578
+     ],
+     "min_z": 0.13473936915397644
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24249747395515442,
+      -0.35779207944869995
+     ],
+     "min_z": -0.0013003596104681492
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3935488164424896,
+    -0.022747326642274857,
+    0.8118541836738586
+   ]
+  },
+  {
+   "t": 0.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.02437123697829664,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5835,
+   "other_new_pairs": 2987,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1158,
+    "SM_RO_core|SM_RO_cuirass": 672,
+    "SM_RO_core|SM_RO_pauldron.L": 430,
+    "SM_RO_core|SM_RO_pauldron.R": 272,
+    "SM_RO_core|SM_RO_core": 163,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 142,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35801790145713097,
+    1.492400562441365
+   ],
+   "other_edge_ratio": [
+    0.14832889872622623,
+    9.1243679959784
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24468883872032166,
+      0.07855748385190964
+     ],
+     "min_z": 0.13808730244636536
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2424975484609604,
+      -0.34318822622299194
+     ],
+     "min_z": -0.0009755515493452549
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3939135670661926,
+    -0.02286556363105774,
+    0.810814619064331
+   ]
+  },
+  {
+   "t": 1.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 4,
+   "min_triangle_area_ratio": 0.022771130599531654,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5877,
+   "other_new_pairs": 3032,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1195,
+    "SM_RO_core|SM_RO_cuirass": 670,
+    "SM_RO_core|SM_RO_pauldron.L": 432,
+    "SM_RO_core|SM_RO_pauldron.R": 276,
+    "SM_RO_core|SM_RO_core": 168,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 141,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35800487216062765,
+    1.4923928164825875
+   ],
+   "other_edge_ratio": [
+    0.14956562147225788,
+    9.262900617007471
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465225636959076,
+      0.06975448876619339
+     ],
+     "min_z": 0.1415703296661377
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250194430351257,
+      -0.32863330841064453
+     ],
+     "min_z": 3.0405681172851473e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39427754282951355,
+    -0.022983400151133537,
+    0.8097753524780273
+   ]
+  },
+  {
+   "t": 1.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 4,
+   "min_triangle_area_ratio": 0.02332829074234174,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5872,
+   "other_new_pairs": 3024,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1197,
+    "SM_RO_core|SM_RO_cuirass": 668,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 274,
+    "SM_RO_core|SM_RO_core": 167,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 142,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580052731985659,
+    1.492403741475598
+   ],
+   "other_edge_ratio": [
+    0.1513555559563468,
+    9.5294471806489
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24470840394496918,
+      0.05042698234319687
+     ],
+     "min_z": 0.1465587317943573
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425786405801773,
+      -0.2993243932723999
+     ],
+     "min_z": -0.0008884947746992111
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39483901858329773,
+    -0.023588931187987328,
+    0.8077595829963684
+   ]
+  },
+  {
+   "t": 2.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.025603421978881727,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5925,
+   "other_new_pairs": 3076,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1254,
+    "SM_RO_core|SM_RO_cuirass": 663,
+    "SM_RO_core|SM_RO_pauldron.L": 418,
+    "SM_RO_core|SM_RO_pauldron.R": 275,
+    "SM_RO_core|SM_RO_core": 171,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 145,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3579901961066223,
+    1.4923981465289804
+   ],
+   "other_edge_ratio": [
+    0.15357576714460192,
+    9.79599530082864
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465227127075195,
+      0.03141843155026436
+     ],
+     "min_z": 0.15216773748397827
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250157177448273,
+      -0.27029967308044434
+     ],
+     "min_z": 3.7670886854357377e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3953987956047058,
+    -0.024193931370973587,
+    0.8057457208633423
+   ]
+  },
+  {
+   "t": 2.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.02462582123327347,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5955,
+   "other_new_pairs": 3100,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1267,
+    "SM_RO_core|SM_RO_cuirass": 655,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 273,
+    "SM_RO_core|SM_RO_core": 184,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 145,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35800948266758126,
+    1.4923902423955027
+   ],
+   "other_edge_ratio": [
+    0.1532365056339561,
+    10.025631216132783
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24472996592521667,
+      0.011031168513000011
+     ],
+     "min_z": 0.15566731989383698
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24264362454414368,
+      -0.24098451435565948
+     ],
+     "min_z": -0.0007003687787801027
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39577916264533997,
+    -0.025151923298835754,
+    0.8040512204170227
+   ]
+  },
+  {
+   "t": 3.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.023873612507890826,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5921,
+   "other_new_pairs": 3056,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1247,
+    "SM_RO_core|SM_RO_cuirass": 653,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 263,
+    "SM_RO_core|SM_RO_core": 177,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580129741616242,
+    1.4924000405097242
+   ],
+   "other_edge_ratio": [
+    0.15296350065389994,
+    10.255174677642119
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465230107307434,
+      -0.009139444679021835
+     ],
+     "min_z": 0.159845769405365
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425011545419693,
+      -0.21196621656417847
+     ],
+     "min_z": 2.165082264582452e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39615869522094727,
+    -0.026109984144568443,
+    0.8023588061332703
+   ]
+  },
+  {
+   "t": 3.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.023612175565890257,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5952,
+   "other_new_pairs": 3076,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1269,
+    "SM_RO_core|SM_RO_cuirass": 645,
+    "SM_RO_core|SM_RO_pauldron.L": 431,
+    "SM_RO_core|SM_RO_pauldron.R": 253,
+    "SM_RO_core|SM_RO_core": 180,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 144,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35800422432916307,
+    1.4923948844479509
+   ],
+   "other_edge_ratio": [
+    0.15094916555359,
+    10.425441043588037
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24476628005504608,
+      -0.030362363904714584
+     ],
+     "min_z": 0.16119596362113953
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24269922077655792,
+      -0.18270307779312134
+     ],
+     "min_z": -0.0006033266545273364
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3963506519794464,
+    -0.027398373931646347,
+    0.801193356513977
+   ]
+  },
+  {
+   "t": 4.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.028270818726181226,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5845,
+   "other_new_pairs": 2962,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1160,
+    "SM_RO_core|SM_RO_cuirass": 638,
+    "SM_RO_core|SM_RO_pauldron.L": 419,
+    "SM_RO_core|SM_RO_pauldron.R": 253,
+    "SM_RO_core|SM_RO_core": 185,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 153,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.358015901942429,
+    1.492405829195888
+   ],
+   "other_edge_ratio": [
+    0.15045891829616154,
+    10.595524227986482
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465236067771912,
+      -0.05152798816561699
+     ],
+     "min_z": 0.1627049744129181
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250081181526184,
+      -0.15363283455371857
+     ],
+     "min_z": 2.0832328573305858e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3965418338775635,
+    -0.02868693694472313,
+    0.8000311851501465
+   ]
+  },
+  {
+   "t": 4.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.03163808354231391,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5749,
+   "other_new_pairs": 2835,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1046,
+    "SM_RO_core|SM_RO_cuirass": 638,
+    "SM_RO_core|SM_RO_pauldron.L": 422,
+    "SM_RO_core|SM_RO_pauldron.R": 236,
+    "SM_RO_core|SM_RO_core": 188,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 151,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580005083901065,
+    1.4923989808297713
+   ],
+   "other_edge_ratio": [
+    0.15305489700182764,
+    10.688943959462488
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448115348815918,
+      -0.07333291321992874
+     ],
+     "min_z": 0.16097380220890045
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24274428188800812,
+      -0.12445048242807388
+     ],
+     "min_z": -0.0005663582123816013
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39654067158699036,
+    -0.030277330428361893,
+    0.7995324730873108
+   ]
+  },
+  {
+   "t": 5.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.03175181759284113,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5758,
+   "other_new_pairs": 2830,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1011,
+    "SM_RO_core|SM_RO_cuirass": 648,
+    "SM_RO_core|SM_RO_pauldron.L": 424,
+    "SM_RO_core|SM_RO_pauldron.R": 231,
+    "SM_RO_core|SM_RO_core": 195,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 168,
+    "SM_RO_bracer.L|SM_RO_core": 144,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35802902898712374,
+    1.4924000009694411
+   ],
+   "other_edge_ratio": [
+    0.14584141037597112,
+    10.782082257842559
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465259909629822,
+      -0.09526697546243668
+     ],
+     "min_z": 0.160081148147583
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250057339668274,
+      -0.09529939293861389
+     ],
+     "min_z": 1.686237709463967e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39653852581977844,
+    -0.03186747431755066,
+    0.7990391850471497
+   ]
+  },
+  {
+   "t": 5.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.03324116001539755,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5670,
+   "other_new_pairs": 2710,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 912,
+    "SM_RO_core|SM_RO_cuirass": 653,
+    "SM_RO_core|SM_RO_pauldron.L": 413,
+    "SM_RO_core|SM_RO_pauldron.R": 223,
+    "SM_RO_core|SM_RO_core": 200,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 155,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35800595468158447,
+    1.4924031286026098
+   ],
+   "other_edge_ratio": [
+    0.10781798835585778,
+    10.494191840363024
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24484394490718842,
+      -0.11740098148584366
+     ],
+     "min_z": 0.1622598022222519
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24277612566947937,
+      -0.0662010908126831
+     ],
+     "min_z": -0.0005832820315845311
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3963428735733032,
+    -0.033725805580616,
+    0.7992618680000305
+   ]
+  },
+  {
+   "t": 6.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.020581064763170103,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5610,
+   "other_new_pairs": 2620,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 856,
+    "SM_RO_core|SM_RO_cuirass": 647,
+    "SM_RO_core|SM_RO_pauldron.L": 408,
+    "SM_RO_core|SM_RO_pauldron.R": 207,
+    "SM_RO_core|SM_RO_core": 196,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 152,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35799989981377023,
+    1.4923980753563793
+   ],
+   "other_edge_ratio": [
+    0.12350494378830319,
+    10.204668585114378
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465252459049225,
+      -0.1395433247089386
+     ],
+     "min_z": 0.1651727557182312
+    },
+    "R": {
+     "centroid_xy": [
+      -0.242500439286232,
+      -0.036965928971767426
+     ],
+     "min_z": 2.930601539219424e-08
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39614543318748474,
+    -0.03558323532342911,
+    0.7994922995567322
+   ]
+  },
+  {
+   "t": 6.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.0247771868827625,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5534,
+   "other_new_pairs": 2515,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 810,
+    "SM_RO_core|SM_RO_cuirass": 630,
+    "SM_RO_core|SM_RO_pauldron.L": 384,
+    "SM_RO_core|SM_RO_pauldron.R": 196,
+    "SM_RO_core|SM_RO_core": 186,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 153,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3580027800253573,
+    1.4924011970625457
+   ],
+   "other_edge_ratio": [
+    0.05505454499503648,
+    9.842636859599795
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24486471712589264,
+      -0.16112439334392548
+     ],
+     "min_z": 0.16545242071151733
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2427930384874344,
+      -0.007929443381726742
+     ],
+     "min_z": -0.0006603664951398969
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39575719833374023,
+    -0.03766929730772972,
+    0.8004026412963867
+   ]
+  },
+  {
+   "t": 7.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.037521797356645924,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5501,
+   "other_new_pairs": 2435,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 787,
+    "SM_RO_core|SM_RO_cuirass": 625,
+    "SM_RO_core|SM_RO_pauldron.L": 366,
+    "SM_RO_core|SM_RO_pauldron.R": 177,
+    "SM_RO_core|SM_RO_core": 175,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 149,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.35801584585489904,
+    1.492394918057307
+   ],
+   "other_edge_ratio": [
+    0.06763725608468188,
+    9.478360512438822
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446526736021042,
+      -0.1829519420862198
+     ],
+     "min_z": 0.16626274585723877
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250046908855438,
+      0.021367382258176804
+     ],
+     "min_z": -1.6637073940728442e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39536598324775696,
+    -0.03975347429513931,
+    0.8013235926628113
+   ]
+  },
+  {
+   "t": 7.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.051830159978174806,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5465,
+   "other_new_pairs": 2340,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 768,
+    "SM_RO_core|SM_RO_cuirass": 620,
+    "SM_RO_core|SM_RO_pauldron.L": 322,
+    "SM_RO_core|SM_RO_core": 172,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 154,
+    "SM_RO_bracer.L|SM_RO_core": 148,
+    "SM_RO_core|SM_RO_pauldron.R": 147,
+    "SM_RO_bracer.R|SM_RO_core": 9
+   },
+   "hand_edge_ratio": [
+    0.3579989603044917,
+    1.4923983007362707
+   ],
+   "other_edge_ratio": [
+    0.14571382153012905,
+    9.058807510255015
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24487824738025665,
+      -0.20370987057685852
+     ],
+     "min_z": 0.16448743641376495
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2427949607372284,
+      0.05039474368095398
+     ],
+     "min_z": -0.0008263626368716359
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3947906792163849,
+    -0.04202243313193321,
+    0.8028031587600708
+   ]
+  },
+  {
+   "t": 8.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.058675425130002005,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5441,
+   "other_new_pairs": 2261,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 782,
+    "SM_RO_core|SM_RO_cuirass": 595,
+    "SM_RO_core|SM_RO_pauldron.L": 301,
+    "SM_RO_core|SM_RO_core": 164,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 150,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_pauldron.R": 118,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580114513696141,
+    1.4923875358429266
+   ],
+   "other_edge_ratio": [
+    0.14652730214158005,
+    8.636725632204659
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446536272764206,
+      -0.2248634397983551
+     ],
+     "min_z": 0.1633640080690384
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250054359436035,
+      0.07970066368579865
+     ],
+     "min_z": -2.3705814555796678e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3942110240459442,
+    -0.04428843408823013,
+    0.80429607629776
+   ]
+  },
+  {
+   "t": 8.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05944792408896104,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5409,
+   "other_new_pairs": 2208,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 780,
+    "SM_RO_core|SM_RO_cuirass": 586,
+    "SM_RO_core|SM_RO_pauldron.L": 275,
+    "SM_RO_core|SM_RO_core": 167,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 146,
+    "SM_RO_core|SM_RO_pauldron.R": 101,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580234848955771,
+    1.492394856769657
+   ],
+   "other_edge_ratio": [
+    0.14866380928531067,
+    8.404874269247049
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24482297897338867,
+      -0.23465165495872498
+     ],
+     "min_z": 0.1612859070301056
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24271075427532196,
+      0.09424427151679993
+     ],
+     "min_z": -0.0008982477593235672
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39383524656295776,
+    -0.045489802956581116,
+    0.8052234649658203
+   ]
+  },
+  {
+   "t": 8.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06116640906368123,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5378,
+   "other_new_pairs": 2148,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 783,
+    "SM_RO_core|SM_RO_cuirass": 568,
+    "SM_RO_core|SM_RO_pauldron.L": 266,
+    "SM_RO_core|SM_RO_core": 165,
+    "SM_RO_bracer.L|SM_RO_core": 148,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 128,
+    "SM_RO_core|SM_RO_pauldron.R": 84,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580100912276278,
+    1.4923944435722103
+   ],
+   "other_edge_ratio": [
+    0.15136132420256776,
+    8.172320307411344
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24488072097301483,
+      -0.24455465376377106
+     ],
+     "min_z": 0.15939608216285706
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24278473854064941,
+      0.1088348999619484
+     ],
+     "min_z": -0.0011986143654212356
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3934580385684967,
+    -0.04669024795293808,
+    0.8061546683311462
+   ]
+  },
+  {
+   "t": 8.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06502668276867152,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5372,
+   "other_new_pairs": 2114,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 783,
+    "SM_RO_core|SM_RO_cuirass": 566,
+    "SM_RO_core|SM_RO_pauldron.L": 277,
+    "SM_RO_core|SM_RO_core": 155,
+    "SM_RO_bracer.L|SM_RO_core": 146,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 108,
+    "SM_RO_core|SM_RO_pauldron.R": 73,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801870630772276,
+    1.49240068303918
+   ],
+   "other_edge_ratio": [
+    0.15458728703171196,
+    7.939149306349008
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24482488632202148,
+      -0.2545652985572815
+     ],
+     "min_z": 0.15769807994365692
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24271658062934875,
+      0.123441681265831
+     ],
+     "min_z": -0.0008992047514766455
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39307931065559387,
+    -0.047889720648527145,
+    0.8070902228355408
+   ]
+  },
+  {
+   "t": 9.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06393373691202879,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5379,
+   "other_new_pairs": 2094,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 778,
+    "SM_RO_core|SM_RO_cuirass": 558,
+    "SM_RO_core|SM_RO_pauldron.L": 285,
+    "SM_RO_core|SM_RO_core": 148,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 106,
+    "SM_RO_core|SM_RO_pauldron.R": 68,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580123656064782,
+    1.4923869842512592
+   ],
+   "other_edge_ratio": [
+    0.15831566374054176,
+    7.705455115275029
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465374648571014,
+      -0.26467594504356384
+     ],
+     "min_z": 0.15619586408138275
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250073730945587,
+      0.1380339413881302
+     ],
+     "min_z": -4.348360675976437e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3926992118358612,
+    -0.049088217318058014,
+    0.8080296516418457
+   ]
+  },
+  {
+   "t": 9.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.062099686952989015,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5364,
+   "other_new_pairs": 2070,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 776,
+    "SM_RO_core|SM_RO_cuirass": 556,
+    "SM_RO_core|SM_RO_pauldron.L": 290,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 143,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 105,
+    "SM_RO_core|SM_RO_pauldron.R": 49,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801433709704644,
+    1.4924002184409861
+   ],
+   "other_edge_ratio": [
+    0.1648628988778091,
+    7.454974624753528
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24481575191020966,
+      -0.27381688356399536
+     ],
+     "min_z": 0.15330728888511658
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2426963597536087,
+      0.15308430790901184
+     ],
+     "min_z": -0.0020923239644616842
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39224138855934143,
+    -0.050329048186540604,
+    0.8090255260467529
+   ]
+  },
+  {
+   "t": 9.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.0574404683271439,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5334,
+   "other_new_pairs": 2023,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 787,
+    "SM_RO_core|SM_RO_cuirass": 548,
+    "SM_RO_core|SM_RO_pauldron.L": 276,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 121,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 98,
+    "SM_RO_core|SM_RO_pauldron.R": 40,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35800798229622727,
+    1.4924005426712303
+   ],
+   "other_edge_ratio": [
+    0.17218561112436997,
+    7.203855484835082
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24487069249153137,
+      -0.2830580472946167
+     ],
+     "min_z": 0.15061765909194946
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24277465045452118,
+      0.16784271597862244
+     ],
+     "min_z": -0.0027861082926392555
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3917818069458008,
+    -0.051568709313869476,
+    0.8100258708000183
+   ]
+  },
+  {
+   "t": 9.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.0509730397103523,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5336,
+   "other_new_pairs": 2008,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 814,
+    "SM_RO_core|SM_RO_cuirass": 536,
+    "SM_RO_core|SM_RO_pauldron.L": 264,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 132,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 86,
+    "SM_RO_core|SM_RO_pauldron.R": 24,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.35799242012978894,
+    1.492395963901008
+   ],
+   "other_edge_ratio": [
+    0.18018046406635801,
+    6.952216304551499
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24481700360774994,
+      -0.29238975048065186
+     ],
+     "min_z": 0.1481306552886963
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24271610379219055,
+      0.1822788417339325
+     ],
+     "min_z": -0.0020825916435569525
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39132049679756165,
+    -0.05280723422765732,
+    0.8110309839248657
+   ]
+  },
+  {
+   "t": 10.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04870316395608788,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5324,
+   "other_new_pairs": 2009,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 805,
+    "SM_RO_core|SM_RO_cuirass": 536,
+    "SM_RO_core|SM_RO_pauldron.L": 272,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 133,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 82,
+    "SM_RO_core|SM_RO_pauldron.R": 27,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580095752136458,
+    1.4923922886171646
+   ],
+   "other_edge_ratio": [
+    0.18875643246864612,
+    6.700177031731004
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465376138687134,
+      -0.30180180072784424
+     ],
+     "min_z": 0.14584942162036896
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425011247396469,
+      0.1963672935962677
+     ],
+     "min_z": -2.9424535341604496e-07
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39085742831230164,
+    -0.054044630378484726,
+    0.8120407462120056
+   ]
+  },
+  {
+   "t": 10.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.03629796005200805,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5260,
+   "other_new_pairs": 2002,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 806,
+    "SM_RO_core|SM_RO_cuirass": 553,
+    "SM_RO_core|SM_RO_pauldron.L": 276,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 80,
+    "SM_RO_core|SM_RO_pauldron.R": 80,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 53,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580123768240939,
+    1.4923978282292665
+   ],
+   "other_edge_ratio": [
+    0.18685867368843082,
+    6.523905989622428
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448495626449585,
+      -0.3186163306236267
+     ],
+     "min_z": 0.138884499669075
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24263310432434082,
+      0.2089018076658249
+     ],
+     "min_z": 0.0022924793884158134
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38979360461235046,
+    -0.05654650926589966,
+    0.8139057159423828
+   ]
+  },
+  {
+   "t": 11.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.030099758007906475,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5196,
+   "other_new_pairs": 1983,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 800,
+    "SM_RO_core|SM_RO_cuirass": 571,
+    "SM_RO_core|SM_RO_pauldron.L": 263,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_pauldron.R": 113,
+    "SM_RO_core|SM_RO_core": 74,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 10,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580074466481086,
+    1.4923933720261453
+   ],
+   "other_edge_ratio": [
+    0.1804106041771153,
+    6.448390781616284
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465379118919373,
+      -0.33565565943717957
+     ],
+     "min_z": 0.13277463614940643
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250085651874542,
+      0.22092361748218536
+     ],
+     "min_z": 0.006721680052578449
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38872209191322327,
+    -0.05904341861605644,
+    0.8157914280891418
+   ]
+  },
+  {
+   "t": 11.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.035013843273761586,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5181,
+   "other_new_pairs": 2001,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 808,
+    "SM_RO_core|SM_RO_cuirass": 570,
+    "SM_RO_core|SM_RO_pauldron.L": 267,
+    "SM_RO_core|SM_RO_pauldron.R": 154,
+    "SM_RO_bracer.L|SM_RO_core": 143,
+    "SM_RO_core|SM_RO_core": 52,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580169031033601,
+    1.4923974249177303
+   ],
+   "other_edge_ratio": [
+    0.18541550362665343,
+    6.32736881769262
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24481944739818573,
+      -0.35061898827552795
+     ],
+     "min_z": 0.12470872700214386
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2426144778728485,
+      0.22848518192768097
+     ],
+     "min_z": 0.00936631578952074
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.387533962726593,
+    -0.061507076025009155,
+    0.8172579407691956
+   ]
+  },
+  {
+   "t": 12.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05055806590967693,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5166,
+   "other_new_pairs": 2042,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 804,
+    "SM_RO_core|SM_RO_cuirass": 599,
+    "SM_RO_core|SM_RO_pauldron.L": 266,
+    "SM_RO_core|SM_RO_pauldron.R": 183,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 40,
+    "SM_RO_bracer.R|SM_RO_core": 5
+   },
+   "hand_edge_ratio": [
+    0.35801168974448155,
+    1.4923952857831533
+   ],
+   "other_edge_ratio": [
+    0.2043549518476561,
+    6.205696089139324
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446538358926773,
+      -0.3656395375728607
+     ],
+     "min_z": 0.1175423264503479
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250057339668274,
+      0.23568469285964966
+     ],
+     "min_z": 0.013896040618419647
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38633766770362854,
+    -0.06396568566560745,
+    0.8187463283538818
+   ]
+  },
+  {
+   "t": 12.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07116677662970546,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5192,
+   "other_new_pairs": 2131,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 840,
+    "SM_RO_core|SM_RO_cuirass": 605,
+    "SM_RO_core|SM_RO_pauldron.L": 267,
+    "SM_RO_core|SM_RO_pauldron.R": 236,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 33,
+    "SM_RO_bracer.R|SM_RO_core": 5
+   },
+   "hand_edge_ratio": [
+    0.3580127554184189,
+    1.4923925278370984
+   ],
+   "other_edge_ratio": [
+    0.2359532021104749,
+    6.046753139005756
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24478287994861603,
+      -0.37844154238700867
+     ],
+     "min_z": 0.10871222615242004
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425992786884308,
+      0.23870642483234406
+     ],
+     "min_z": 0.01817229762673378
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38505175709724426,
+    -0.06633052229881287,
+    0.8195751309394836
+   ]
+  },
+  {
+   "t": 13.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07842457091402036,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5181,
+   "other_new_pairs": 2171,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 829,
+    "SM_RO_core|SM_RO_cuirass": 631,
+    "SM_RO_core|SM_RO_pauldron.L": 280,
+    "SM_RO_core|SM_RO_pauldron.R": 266,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 20,
+    "SM_RO_bracer.R|SM_RO_core": 5
+   },
+   "hand_edge_ratio": [
+    0.35801322235086835,
+    1.492402084740941
+   ],
+   "other_edge_ratio": [
+    0.2760506505781057,
+    5.886835581445068
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446538507938385,
+      -0.39113345742225647
+     ],
+     "min_z": 0.10081763565540314
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250030517578125,
+      0.24146896600723267
+     ],
+     "min_z": 0.02378968894481659
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38375765085220337,
+    -0.0686904788017273,
+    0.8204264044761658
+   ]
+  },
+  {
+   "t": 13.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.08299230385693453,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5189,
+   "other_new_pairs": 2229,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 825,
+    "SM_RO_core|SM_RO_cuirass": 648,
+    "SM_RO_core|SM_RO_pauldron.L": 295,
+    "SM_RO_core|SM_RO_pauldron.R": 294,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 20,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580153172294977,
+    1.4923928402068718
+   ],
+   "other_edge_ratio": [
+    0.291610287573029,
+    5.699173827772515
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2447424829006195,
+      -0.40143680572509766
+     ],
+     "min_z": 0.09160252660512924
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24258749186992645,
+      0.24040460586547852
+     ],
+     "min_z": 0.02899404615163803
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3824043869972229,
+    -0.07089658081531525,
+    0.8204333186149597
+   ]
+  },
+  {
+   "t": 14.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.08789651393698684,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5172,
+   "other_new_pairs": 2244,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 800,
+    "SM_RO_core|SM_RO_cuirass": 658,
+    "SM_RO_core|SM_RO_pauldron.L": 312,
+    "SM_RO_core|SM_RO_pauldron.R": 307,
+    "SM_RO_bracer.L|SM_RO_core": 142,
+    "SM_RO_core|SM_RO_core": 19,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580059602904928,
+    1.4924067643196541
+   ],
+   "other_edge_ratio": [
+    0.2224563948363269,
+    5.510457423044
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465380609035492,
+      -0.41148900985717773
+     ],
+     "min_z": 0.0833318680524826
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250012636184692,
+      0.23918528854846954
+     ],
+     "min_z": 0.03550108149647713
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38104310631752014,
+    -0.07309825718402863,
+    0.8204615712165833
+   ]
+  },
+  {
+   "t": 14.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.09252345827096456,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5158,
+   "other_new_pairs": 2262,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 801,
+    "SM_RO_core|SM_RO_cuirass": 663,
+    "SM_RO_core|SM_RO_pauldron.L": 322,
+    "SM_RO_core|SM_RO_pauldron.R": 311,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 19,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801668296037026,
+    1.4923969108930655
+   ],
+   "other_edge_ratio": [
+    0.1592783142446723,
+    5.305995387533216
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24470195174217224,
+      -0.4189300239086151
+     ],
+     "min_z": 0.07414241135120392
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24257905781269073,
+      0.23450694978237152
+     ],
+     "min_z": 0.04164586588740349
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.379656046628952,
+    -0.07508835196495056,
+    0.8195359110832214
+   ]
+  },
+  {
+   "t": 15.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.09574747610081669,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5170,
+   "other_new_pairs": 2304,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 844,
+    "SM_RO_core|SM_RO_cuirass": 662,
+    "SM_RO_core|SM_RO_pauldron.R": 318,
+    "SM_RO_core|SM_RO_pauldron.L": 311,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 25,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3579996796603247,
+    1.4923936923038321
+   ],
+   "other_edge_ratio": [
+    0.09990059209684678,
+    5.100670196165922
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446538507938385,
+      -0.4260302484035492
+     ],
+     "min_z": 0.06584933400154114
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24249999225139618,
+      0.22978046536445618
+     ],
+     "min_z": 0.049031730741262436
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3782614469528198,
+    -0.07707466930150986,
+    0.8186295628547668
+   ]
+  },
+  {
+   "t": 15.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.048132547559675255,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5137,
+   "other_new_pairs": 2293,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 834,
+    "SM_RO_core|SM_RO_cuirass": 678,
+    "SM_RO_core|SM_RO_pauldron.R": 324,
+    "SM_RO_core|SM_RO_pauldron.L": 288,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 25,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801087085603756,
+    1.4923926256997877
+   ],
+   "other_edge_ratio": [
+    0.06012910646104289,
+    4.897095207243465
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24466627836227417,
+      -0.43021976947784424
+     ],
+     "min_z": 0.057120516896247864
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24257342517375946,
+      0.2219533920288086
+     ],
+     "min_z": 0.056151993572711945
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37687647342681885,
+    -0.07879536598920822,
+    0.8167484998703003
+   ]
+  },
+  {
+   "t": 16.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.012277530897004688,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5074,
+   "other_new_pairs": 2245,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 755,
+    "SM_RO_core|SM_RO_cuirass": 676,
+    "SM_RO_core|SM_RO_pauldron.R": 319,
+    "SM_RO_core|SM_RO_pauldron.L": 288,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 63,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35802314837739335,
+    1.4923930062768511
+   ],
+   "other_edge_ratio": [
+    0.06862205165802604,
+    5.1093058693216165
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446538507938385,
+      -0.4340587556362152
+     ],
+     "min_z": 0.0491347499191761
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24249982833862305,
+      0.21418292820453644
+     ],
+     "min_z": 0.06431036442518234
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3754846453666687,
+    -0.08051305264234543,
+    0.8148834705352783
+   ]
+  },
+  {
+   "t": 16.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.02449387932215038,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5075,
+   "other_new_pairs": 2266,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 743,
+    "SM_RO_core|SM_RO_cuirass": 682,
+    "SM_RO_core|SM_RO_pauldron.R": 325,
+    "SM_RO_core|SM_RO_pauldron.L": 286,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 86,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801546866603196,
+    1.4924038245099833
+   ],
+   "other_edge_ratio": [
+    0.10993359470576794,
+    5.318318765862301
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24464207887649536,
+      -0.4345901608467102
+     ],
+     "min_z": 0.04130648076534271
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425689399242401,
+      0.2036423236131668
+     ],
+     "min_z": 0.07206223905086517
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37413883209228516,
+    -0.08191721886396408,
+    0.8121164441108704
+   ]
+  },
+  {
+   "t": 17.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.046245942669487006,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5109,
+   "other_new_pairs": 2322,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 770,
+    "SM_RO_core|SM_RO_cuirass": 687,
+    "SM_RO_core|SM_RO_pauldron.R": 329,
+    "SM_RO_core|SM_RO_pauldron.L": 282,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 110,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580137061090701,
+    1.492405856873978
+   ],
+   "other_edge_ratio": [
+    0.15966138689740925,
+    5.529259340525678
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446538358926773,
+      -0.43486350774765015
+     ],
+     "min_z": 0.03392111137509346
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24249979853630066,
+      0.1932554841041565
+     ],
+     "min_z": 0.08066955953836441
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37278690934181213,
+    -0.08331914991140366,
+    0.8093615770339966
+   ]
+  },
+  {
+   "t": 17.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05906453570854991,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5168,
+   "other_new_pairs": 2390,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 803,
+    "SM_RO_core|SM_RO_cuirass": 686,
+    "SM_RO_core|SM_RO_pauldron.R": 344,
+    "SM_RO_core|SM_RO_pauldron.L": 296,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 113,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580027421648879,
+    1.492395308518888
+   ],
+   "other_edge_ratio": [
+    0.14956163709311382,
+    5.684872253012828
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24463345110416412,
+      -0.4313543140888214
+     ],
+     "min_z": 0.026994595304131508
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24256399273872375,
+      0.18038944900035858
+     ],
+     "min_z": 0.08867588639259338
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37151724100112915,
+    -0.0843672901391983,
+    0.805866003036499
+   ]
+  },
+  {
+   "t": 18.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.09102193330529124,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5282,
+   "other_new_pairs": 2517,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 900,
+    "SM_RO_core|SM_RO_cuirass": 689,
+    "SM_RO_core|SM_RO_pauldron.R": 347,
+    "SM_RO_core|SM_RO_pauldron.L": 313,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 120,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580167530696174,
+    1.4923944060088004
+   ],
+   "other_edge_ratio": [
+    0.12750769048387953,
+    5.841349789774029
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465376138687134,
+      -0.4277361333370209
+     ],
+     "min_z": 0.020095450803637505
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2424999326467514,
+      0.16776157915592194
+     ],
+     "min_z": 0.09739413112401962
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37024226784706116,
+    -0.08541390299797058,
+    0.8023788332939148
+   ]
+  },
+  {
+   "t": 18.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.09664662734700802,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5330,
+   "other_new_pairs": 2570,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 953,
+    "SM_RO_core|SM_RO_cuirass": 691,
+    "SM_RO_core|SM_RO_pauldron.R": 347,
+    "SM_RO_core|SM_RO_pauldron.L": 310,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 121,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.357998016585973,
+    1.49239878510522
+   ],
+   "other_edge_ratio": [
+    0.1148111645646256,
+    5.937180425019304
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24463164806365967,
+      -0.41989046335220337
+     ],
+     "min_z": 0.014407397247850895
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24255827069282532,
+      0.15290266275405884
+     ],
+     "min_z": 0.10526403784751892
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3690844774246216,
+    -0.08607517927885056,
+    0.7983886003494263
+   ]
+  },
+  {
+   "t": 19.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.09618385479425434,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5320,
+   "other_new_pairs": 2564,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 940,
+    "SM_RO_core|SM_RO_cuirass": 693,
+    "SM_RO_core|SM_RO_pauldron.R": 352,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 119,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580134467025794,
+    1.492390698100183
+   ],
+   "other_edge_ratio": [
+    0.10937802204303668,
+    6.033281240780235
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465355277061462,
+      -0.41198185086250305
+     ],
+     "min_z": 0.008669005706906319
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250133335590363,
+      0.13834936916828156
+     ],
+     "min_z": 0.11375315487384796
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.367922306060791,
+    -0.08673547953367233,
+    0.794403076171875
+   ]
+  },
+  {
+   "t": 19.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.08806174657216172,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5400,
+   "other_new_pairs": 2643,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1010,
+    "SM_RO_core|SM_RO_cuirass": 692,
+    "SM_RO_core|SM_RO_pauldron.R": 348,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 133,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580158738986651,
+    1.4923905606968342
+   ],
+   "other_edge_ratio": [
+    0.10951068492904606,
+    6.04946112770486
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24463678896427155,
+      -0.40576595067977905
+     ],
+     "min_z": 0.006312271114438772
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24253956973552704,
+      0.13002102077007294
+     ],
+     "min_z": 0.11735457181930542
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36741629242897034,
+    -0.08686256408691406,
+    0.7923057675361633
+   ]
+  },
+  {
+   "t": 19.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06978694493635396,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5415,
+   "other_new_pairs": 2661,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1032,
+    "SM_RO_core|SM_RO_cuirass": 694,
+    "SM_RO_core|SM_RO_pauldron.R": 350,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 125,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3579949540409843,
+    1.4923937298672598
+   ],
+   "other_edge_ratio": [
+    0.10245516463824701,
+    6.065637904280996
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24463070929050446,
+      -0.3995160758495331
+     ],
+     "min_z": 0.004093450959771872
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425524890422821,
+      0.12177596986293793
+     ],
+     "min_z": 0.12110300362110138
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3669094145298004,
+    -0.08698946982622147,
+    0.7902089357376099
+   ]
+  },
+  {
+   "t": 19.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.0326911137691936,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5430,
+   "other_new_pairs": 2676,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1049,
+    "SM_RO_core|SM_RO_cuirass": 694,
+    "SM_RO_core|SM_RO_pauldron.R": 350,
+    "SM_RO_core|SM_RO_pauldron.L": 315,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 122,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580036606307011,
+    1.4923940669495575
+   ],
+   "other_edge_ratio": [
+    0.09391475111895646,
+    6.081827386510728
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24463610351085663,
+      -0.39323675632476807
+     ],
+     "min_z": 0.0020158810075372458
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24253977835178375,
+      0.11361837387084961
+     ],
+     "min_z": 0.12499638646841049
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36640164256095886,
+    -0.08711624145507812,
+    0.7881125211715698
+   ]
+  },
+  {
+   "t": 20.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.029988802907431954,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5470,
+   "other_new_pairs": 2716,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1074,
+    "SM_RO_core|SM_RO_cuirass": 694,
+    "SM_RO_core|SM_RO_pauldron.R": 348,
+    "SM_RO_core|SM_RO_pauldron.L": 317,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 137,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801785097863636,
+    1.492398968967678
+   ],
+   "other_edge_ratio": [
+    0.08600961284572685,
+    6.098027059396262
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446533739566803,
+      -0.3869335651397705
+     ],
+     "min_z": 8.117799734463915e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250122904777527,
+      0.10555174201726913
+     ],
+     "min_z": 0.12903200089931488
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36589306592941284,
+    -0.08724282681941986,
+    0.7860164046287537
+   ]
+  },
+  {
+   "t": 20.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05745192955277221,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5521,
+   "other_new_pairs": 2769,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1133,
+    "SM_RO_core|SM_RO_cuirass": 694,
+    "SM_RO_core|SM_RO_pauldron.R": 348,
+    "SM_RO_core|SM_RO_pauldron.L": 315,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 133,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801957705867726,
+    1.4923889415110934
+   ],
+   "other_edge_ratio": [
+    0.0809736627629473,
+    6.081823474937158
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465078115463257,
+      -0.3723670244216919
+     ],
+     "min_z": -0.0008932867203839123
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24253793060779572,
+      0.0964820608496666
+     ],
+     "min_z": 0.1321946233510971
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36547404527664185,
+    -0.0871613621711731,
+    0.7839776277542114
+   ]
+  },
+  {
+   "t": 20.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05119216372790862,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5534,
+   "other_new_pairs": 2785,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1146,
+    "SM_RO_core|SM_RO_cuirass": 692,
+    "SM_RO_core|SM_RO_pauldron.R": 350,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 137,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580228959885479,
+    1.4924012366027974
+   ],
+   "other_edge_ratio": [
+    0.07639802135283053,
+    6.065631410313487
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446485012769699,
+      -0.35775935649871826
+     ],
+     "min_z": -0.001219521975144744
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24255003035068512,
+      0.08749788254499435
+     ],
+     "min_z": 0.13550543785095215
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3650544583797455,
+    -0.08707980811595917,
+    0.7819389700889587
+   ]
+  },
+  {
+   "t": 20.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04503618627900857,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5498,
+   "other_new_pairs": 2749,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1118,
+    "SM_RO_core|SM_RO_cuirass": 688,
+    "SM_RO_core|SM_RO_pauldron.R": 347,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 136,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580011646417707,
+    1.4923966548691763
+   ],
+   "other_edge_ratio": [
+    0.07237848081770298,
+    6.049450820946967
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446485310792923,
+      -0.34315547347068787
+     ],
+     "min_z": -0.0008945049485191703
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425377070903778,
+      0.07860347628593445
+     ],
+     "min_z": 0.13896213471889496
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36463412642478943,
+    -0.08699818700551987,
+    0.7799004912376404
+   ]
+  },
+  {
+   "t": 21.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 3,
+   "min_triangle_area_ratio": 0.039043703843727094,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5539,
+   "other_new_pairs": 2790,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1145,
+    "SM_RO_core|SM_RO_cuirass": 690,
+    "SM_RO_core|SM_RO_pauldron.R": 347,
+    "SM_RO_core|SM_RO_pauldron.L": 314,
+    "SM_RO_core|SM_RO_core": 148,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35800642582957953,
+    1.4923966934210386
+   ],
+   "other_edge_ratio": [
+    0.06900798372455647,
+    6.033270760342911
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446528822183609,
+      -0.32860028743743896
+     ],
+     "min_z": 8.119060657918453e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250122904777527,
+      0.06980205327272415
+     ],
+     "min_z": 0.14256246387958527
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3642131984233856,
+    -0.08691644668579102,
+    0.7778620719909668
+   ]
+  },
+  {
+   "t": 21.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.040959182158389486,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5586,
+   "other_new_pairs": 2835,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1192,
+    "SM_RO_core|SM_RO_cuirass": 688,
+    "SM_RO_core|SM_RO_pauldron.R": 350,
+    "SM_RO_core|SM_RO_pauldron.L": 310,
+    "SM_RO_core|SM_RO_core": 147,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580023551465266,
+    1.492396880249282
+   ],
+   "other_edge_ratio": [
+    0.06603392125947471,
+    5.9371754317069705
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.244729682803154,
+      -0.29929155111312866
+     ],
+     "min_z": -0.0008087507449090481
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425573617219925,
+      0.05047709494829178
+     ],
+     "min_z": 0.1476602852344513
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.363573282957077,
+    -0.0863378643989563,
+    0.7742246389389038
+   ]
+  },
+  {
+   "t": 22.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.03673461707149777,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5587,
+   "other_new_pairs": 2843,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1199,
+    "SM_RO_core|SM_RO_cuirass": 691,
+    "SM_RO_core|SM_RO_pauldron.R": 352,
+    "SM_RO_core|SM_RO_pauldron.L": 313,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 140,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580150115518537,
+    1.4923969079275383
+   ],
+   "other_edge_ratio": [
+    0.06389921684269433,
+    5.841348654058495
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465252459049225,
+      -0.27026665210723877
+     ],
+     "min_z": 8.126171451294795e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250125885009766,
+      0.031468551605939865
+     ],
+     "min_z": 0.15323284268379211
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36293160915374756,
+    -0.08575902879238129,
+    0.7705880403518677
+   ]
+  },
+  {
+   "t": 22.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.03679733790137563,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5614,
+   "other_new_pairs": 2865,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1236,
+    "SM_RO_core|SM_RO_cuirass": 691,
+    "SM_RO_core|SM_RO_pauldron.R": 355,
+    "SM_RO_core|SM_RO_pauldron.L": 296,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 139,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3579958585041123,
+    1.4923967210992986
+   ],
+   "other_edge_ratio": [
+    0.06319556792499996,
+    5.684885317661911
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24479460716247559,
+      -0.24095141887664795
+     ],
+     "min_z": -0.0006212423322722316
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24257928133010864,
+      0.01107796560972929
+     ],
+     "min_z": 0.1564660221338272
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3625090420246124,
+    -0.0847778394818306,
+    0.7676866054534912
+   ]
+  },
+  {
+   "t": 23.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.03686759261503684,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5531,
+   "other_new_pairs": 2779,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1162,
+    "SM_RO_core|SM_RO_cuirass": 694,
+    "SM_RO_core|SM_RO_pauldron.R": 355,
+    "SM_RO_core|SM_RO_pauldron.L": 282,
+    "SM_RO_core|SM_RO_core": 140,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35800856281448756,
+    1.4923877720980767
+   ],
+   "other_edge_ratio": [
+    0.06250321025210864,
+    5.529259035884096
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446521818637848,
+      -0.2119331955909729
+     ],
+     "min_z": 8.109904592856765e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425013929605484,
+      -0.009099742397665977
+     ],
+     "min_z": 0.16006383299827576
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36208561062812805,
+    -0.08379638195037842,
+    0.764787495136261
+   ]
+  },
+  {
+   "t": 23.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.041776632529086144,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5489,
+   "other_new_pairs": 2726,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1115,
+    "SM_RO_core|SM_RO_cuirass": 687,
+    "SM_RO_core|SM_RO_pauldron.R": 352,
+    "SM_RO_core|SM_RO_pauldron.L": 286,
+    "SM_RO_core|SM_RO_core": 140,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580191269606222,
+    1.492407629259191
+   ],
+   "other_edge_ratio": [
+    0.06382679978222508,
+    5.318310204546468
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448502480983734,
+      -0.18266989290714264
+     ],
+     "min_z": -0.0005246285581961274
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24261583387851715,
+      -0.030333224684000015
+     ],
+     "min_z": 0.16126275062561035
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3618924915790558,
+    -0.08243709057569504,
+    0.7628624439239502
+   ]
+  },
+  {
+   "t": 24.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.0474754077296264,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5417,
+   "other_new_pairs": 2647,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1043,
+    "SM_RO_core|SM_RO_cuirass": 684,
+    "SM_RO_core|SM_RO_pauldron.R": 355,
+    "SM_RO_core|SM_RO_pauldron.L": 288,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 131,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580097659145519,
+    1.492393891983096
+   ],
+   "other_edge_ratio": [
+    0.06655742881369014,
+    5.809181794960546
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465177953243256,
+      -0.1535998284816742
+     ],
+     "min_z": 8.109346526907757e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250149726867676,
+      -0.05151527002453804
+     ],
+     "min_z": 0.163225919008255
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3616992235183716,
+    -0.08107732236385345,
+    0.7609433531761169
+   ]
+  },
+  {
+   "t": 24.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06061750400787057,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5414,
+   "other_new_pairs": 2626,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1008,
+    "SM_RO_core|SM_RO_cuirass": 684,
+    "SM_RO_core|SM_RO_pauldron.R": 365,
+    "SM_RO_core|SM_RO_pauldron.L": 288,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 135,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580101739580611,
+    1.4923892430079608
+   ],
+   "other_edge_ratio": [
+    0.0762616276262439,
+    6.335353547073237
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24489523470401764,
+      -0.12441717088222504
+     ],
+     "min_z": -0.0004879848856944591
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24266137182712555,
+      -0.07333966344594955
+     ],
+     "min_z": 0.1612478643655777
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36174073815345764,
+    -0.07937510311603546,
+    0.7601578831672668
+   ]
+  },
+  {
+   "t": 25.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.0749404469532129,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5398,
+   "other_new_pairs": 2591,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 970,
+    "SM_RO_core|SM_RO_cuirass": 677,
+    "SM_RO_core|SM_RO_pauldron.R": 365,
+    "SM_RO_core|SM_RO_pauldron.L": 311,
+    "SM_RO_bracer.L|SM_RO_core": 138,
+    "SM_RO_core|SM_RO_core": 122,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3579974669003401,
+    1.4923927789191365
+   ],
+   "other_edge_ratio": [
+    0.08912132851781042,
+    6.860231632067847
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465157091617584,
+      -0.09526639431715012
+     ],
+     "min_z": 8.105887536657974e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250160157680511,
+      -0.09530000388622284
+     ],
+     "min_z": 0.1600002646446228
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3617824912071228,
+    -0.07767219841480255,
+    0.7593826651573181
+   ]
+  },
+  {
+   "t": 25.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07324012895526634,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5339,
+   "other_new_pairs": 2518,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 872,
+    "SM_RO_core|SM_RO_cuirass": 684,
+    "SM_RO_core|SM_RO_pauldron.R": 373,
+    "SM_RO_core|SM_RO_pauldron.L": 322,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 119,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580016848746069,
+    1.4923972736758762
+   ],
+   "other_edge_ratio": [
+    0.08634703408897325,
+    7.262139601188957
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24492712318897247,
+      -0.06616762280464172
+     ],
+     "min_z": -0.0005050935433246195
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24269182980060577,
+      -0.11733826249837875
+     ],
+     "min_z": 0.16249831020832062
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36205679178237915,
+    -0.07567194104194641,
+    0.7598069906234741
+   ]
+  },
+  {
+   "t": 26.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07153054073691718,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5262,
+   "other_new_pairs": 2421,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 769,
+    "SM_RO_core|SM_RO_cuirass": 683,
+    "SM_RO_core|SM_RO_pauldron.R": 372,
+    "SM_RO_core|SM_RO_pauldron.L": 312,
+    "SM_RO_bracer.L|SM_RO_core": 142,
+    "SM_RO_core|SM_RO_core": 135,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580138673616587,
+    1.4924005970390999
+   ],
+   "other_edge_ratio": [
+    0.08362316221035222,
+    7.662943555771962
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465136229991913,
+      -0.03693292289972305
+     ],
+     "min_z": 8.091369818430394e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250160157680511,
+      -0.1393837183713913
+     ],
+     "min_z": 0.16527704894542694
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.362331360578537,
+    -0.07367078959941864,
+    0.7602460980415344
+   ]
+  },
+  {
+   "t": 26.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07656303827622266,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5221,
+   "other_new_pairs": 2366,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 752,
+    "SM_RO_core|SM_RO_cuirass": 673,
+    "SM_RO_core|SM_RO_pauldron.R": 372,
+    "SM_RO_core|SM_RO_pauldron.L": 295,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 126,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580052647851872,
+    1.492392026661408
+   ],
+   "other_edge_ratio": [
+    0.08792317010325813,
+    7.92642132763634
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2449440211057663,
+      -0.007895821705460548
+     ],
+     "min_z": -0.0005821710801683366
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24271263182163239,
+      -0.16087372601032257
+     ],
+     "min_z": 0.16546107828617096
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3628292679786682,
+    -0.07142651081085205,
+    0.7618495225906372
+   ]
+  },
+  {
+   "t": 27.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07843773669905658,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5239,
+   "other_new_pairs": 2359,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 757,
+    "SM_RO_core|SM_RO_cuirass": 659,
+    "SM_RO_core|SM_RO_pauldron.R": 384,
+    "SM_RO_core|SM_RO_pauldron.L": 280,
+    "SM_RO_bracer.L|SM_RO_core": 140,
+    "SM_RO_core|SM_RO_core": 131,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801513774907784,
+    1.4923901277279255
+   ],
+   "other_edge_ratio": [
+    0.09272000121798167,
+    8.18938938469102
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446514070034027,
+      0.021400384604930878
+     ],
+     "min_z": 8.072576019912958e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425016611814499,
+      -0.18260793387889862
+     ],
+     "min_z": 0.1662973165512085
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3633272647857666,
+    -0.06918121129274368,
+    0.7634720206260681
+   ]
+  },
+  {
+   "t": 27.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07396217749598608,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5214,
+   "other_new_pairs": 2312,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 706,
+    "SM_RO_core|SM_RO_cuirass": 649,
+    "SM_RO_core|SM_RO_pauldron.R": 405,
+    "SM_RO_core|SM_RO_pauldron.L": 267,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 132,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3579955934756185,
+    1.4923947381483924
+   ],
+   "other_edge_ratio": [
+    0.10549462339845297,
+    8.291218148164253
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24494600296020508,
+      0.05042856186628342
+     ],
+     "min_z": -0.0007478722254745662
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24272611737251282,
+      -0.20328326523303986
+     ],
+     "min_z": 0.1645163893699646
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3640333414077759,
+    -0.06675359606742859,
+    0.7661256790161133
+   ]
+  },
+  {
+   "t": 28.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.07006815353596482,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5196,
+   "other_new_pairs": 2268,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 688,
+    "SM_RO_core|SM_RO_cuirass": 646,
+    "SM_RO_core|SM_RO_pauldron.R": 386,
+    "SM_RO_core|SM_RO_pauldron.L": 266,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 129,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580016428072897,
+    1.4923944158939084
+   ],
+   "other_edge_ratio": [
+    0.1148976231038155,
+    8.393050447024509
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465146660804749,
+      0.07973366975784302
+     ],
+     "min_z": 8.064754365477711e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250264465808868,
+      -0.2243519425392151
+     ],
+     "min_z": 0.1634625494480133
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3647385239601135,
+    -0.06432490050792694,
+    0.7688018679618835
+   ]
+  },
+  {
+   "t": 28.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06827092347305137,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5186,
+   "other_new_pairs": 2240,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 682,
+    "SM_RO_core|SM_RO_cuirass": 630,
+    "SM_RO_core|SM_RO_pauldron.R": 386,
+    "SM_RO_core|SM_RO_pauldron.L": 255,
+    "SM_RO_bracer.L|SM_RO_core": 143,
+    "SM_RO_core|SM_RO_core": 136,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801850579633343,
+    1.4923955072094255
+   ],
+   "other_edge_ratio": [
+    0.11684332328156738,
+    8.335128086256201
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448616921901703,
+      0.09427811205387115
+     ],
+     "min_z": -0.0008182926685549319
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24267128109931946,
+      -0.23410503566265106
+     ],
+     "min_z": 0.16156697273254395
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.365185022354126,
+    -0.06305249780416489,
+    0.7705426812171936
+   ]
+  },
+  {
+   "t": 28.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06668144440434225,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5205,
+   "other_new_pairs": 2245,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 677,
+    "SM_RO_core|SM_RO_cuirass": 627,
+    "SM_RO_core|SM_RO_pauldron.R": 375,
+    "SM_RO_core|SM_RO_pauldron.L": 267,
+    "SM_RO_core|SM_RO_core": 148,
+    "SM_RO_bracer.L|SM_RO_core": 143,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580136780651342,
+    1.4923945068368987
+   ],
+   "other_edge_ratio": [
+    0.11998063782361194,
+    8.27716278413113
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24493567645549774,
+      0.1088690236210823
+     ],
+     "min_z": -0.0011193716200068593
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24272876977920532,
+      -0.24397249519824982
+     ],
+     "min_z": 0.15985853970050812
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36563095450401306,
+    -0.061779800802469254,
+    0.772290050983429
+   ]
+  },
+  {
+   "t": 28.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06529437772971335,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5204,
+   "other_new_pairs": 2235,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 668,
+    "SM_RO_core|SM_RO_cuirass": 628,
+    "SM_RO_core|SM_RO_pauldron.R": 368,
+    "SM_RO_core|SM_RO_pauldron.L": 268,
+    "SM_RO_core|SM_RO_core": 152,
+    "SM_RO_bracer.L|SM_RO_core": 143,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580195055478091,
+    1.4923873193580492
+   ],
+   "other_edge_ratio": [
+    0.12421730822244645,
+    8.219151820064537
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448675036430359,
+      0.12347551435232162
+     ],
+     "min_z": -0.000819852517452091
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24267321825027466,
+      -0.25394710898399353
+     ],
+     "min_z": 0.15834082663059235
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36607638001441956,
+    -0.06050679832696915,
+    0.7740436792373657
+   ]
+  },
+  {
+   "t": 29.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.0641316388588161,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5194,
+   "other_new_pairs": 2196,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 653,
+    "SM_RO_core|SM_RO_cuirass": 630,
+    "SM_RO_core|SM_RO_pauldron.R": 359,
+    "SM_RO_core|SM_RO_pauldron.L": 263,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 128,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 10,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801408750637986,
+    1.4923930468058313
+   ],
+   "other_edge_ratio": [
+    0.1294440444669603,
+    8.161116804035801
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465176463127136,
+      0.13806693255901337
+     ],
+     "min_z": 8.045021240832284e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250276386737823,
+      -0.26402074098587036
+     ],
+     "min_z": 0.1570173054933548
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36652126908302307,
+    -0.059233520179986954,
+    0.7758030891418457
+   ]
+  },
+  {
+   "t": 29.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.06318750867718131,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5203,
+   "other_new_pairs": 2189,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 662,
+    "SM_RO_core|SM_RO_cuirass": 632,
+    "SM_RO_core|SM_RO_pauldron.R": 348,
+    "SM_RO_core|SM_RO_pauldron.L": 252,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 107,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 35,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801623566305046,
+    1.4923990035654497
+   ],
+   "other_edge_ratio": [
+    0.13744480474129536,
+    7.858475679588661
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24484723806381226,
+      0.1531188189983368
+     ],
+     "min_z": -0.0020084609277546406
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24266420304775238,
+      -0.27313390374183655
+     ],
+     "min_z": 0.1540963500738144
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36704784631729126,
+    -0.0579368993639946,
+    0.7778199911117554
+   ]
+  },
+  {
+   "t": 29.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05315844077911587,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5253,
+   "other_new_pairs": 2222,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 672,
+    "SM_RO_core|SM_RO_cuirass": 613,
+    "SM_RO_core|SM_RO_pauldron.R": 342,
+    "SM_RO_core|SM_RO_pauldron.L": 276,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 111,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 53,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580196373521432,
+    1.4923937446949285
+   ],
+   "other_edge_ratio": [
+    0.14672220469466882,
+    7.554595334971806
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24492555856704712,
+      0.1678776741027832
+     ],
+     "min_z": -0.002704469719901681
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24271896481513977,
+      -0.2823467552661896
+     ],
+     "min_z": 0.15135230123996735
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3675733208656311,
+    -0.05663982033729553,
+    0.7798431515693665
+   ]
+  },
+  {
+   "t": 29.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04300156068608495,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5276,
+   "other_new_pairs": 2230,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 681,
+    "SM_RO_core|SM_RO_cuirass": 610,
+    "SM_RO_core|SM_RO_pauldron.R": 338,
+    "SM_RO_core|SM_RO_pauldron.L": 266,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 111,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 69,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580187539817429,
+    1.4923940560759361
+   ],
+   "other_edge_ratio": [
+    0.15456505286680966,
+    7.249633594068475
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2448669970035553,
+      0.18231329321861267
+     ],
+     "min_z": -0.0020035544876009226
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24266549944877625,
+      -0.2916499674320221
+     ],
+     "min_z": 0.14880990982055664
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3680979013442993,
+    -0.0553424209356308,
+    0.7818728685379028
+   ]
+  },
+  {
+   "t": 30.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.0395611205096558,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5322,
+   "other_new_pairs": 2268,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 704,
+    "SM_RO_core|SM_RO_cuirass": 607,
+    "SM_RO_core|SM_RO_pauldron.R": 335,
+    "SM_RO_core|SM_RO_pauldron.L": 272,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 113,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 82,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580058915813594,
+    1.4923970097439763
+   ],
+   "other_edge_ratio": [
+    0.1351542830793111,
+    6.94374226712687
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2446521818637848,
+      0.19640028476715088
+     ],
+     "min_z": 8.059057290665805e-05
+    },
+    "R": {
+     "centroid_xy": [
+      -0.242502823472023,
+      -0.30103355646133423
+     ],
+     "min_z": 0.14647242426872253
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36862149834632874,
+    -0.05404466390609741,
+    0.7839089632034302
+   ]
+  },
+  {
+   "t": 30.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.007340756593351725,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5297,
+   "other_new_pairs": 2218,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 693,
+    "SM_RO_core|SM_RO_cuirass": 608,
+    "SM_RO_core|SM_RO_pauldron.R": 301,
+    "SM_RO_core|SM_RO_pauldron.L": 276,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 98,
+    "SM_RO_core|SM_RO_core": 87,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801353504102706,
+    1.4923983808054342
+   ],
+   "other_edge_ratio": [
+    0.095034997563776,
+    7.062202759970236
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24478311836719513,
+      0.20890428125858307
+     ],
+     "min_z": 0.002028153743594885
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2426980584859848,
+      -0.3178086280822754
+     ],
+     "min_z": 0.13943225145339966
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.36980247497558594,
+    -0.051471319049596786,
+    0.788177490234375
+   ]
+  },
+  {
+   "t": 31.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.034839045976070376,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5300,
+   "other_new_pairs": 2206,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 705,
+    "SM_RO_core|SM_RO_cuirass": 602,
+    "SM_RO_core|SM_RO_pauldron.L": 285,
+    "SM_RO_core|SM_RO_pauldron.R": 283,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 106,
+    "SM_RO_core|SM_RO_core": 72,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.3580016007399676,
+    1.4923981821152794
+   ],
+   "other_edge_ratio": [
+    0.07296961499937311,
+    7.1807136107451015
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465183913707733,
+      0.22091086208820343
+     ],
+     "min_z": 0.006200553849339485
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425028532743454,
+      -0.33480921387672424
+     ],
+     "min_z": 0.13324442505836487
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37097781896591187,
+    -0.04889602214097977,
+    0.7924712300300598
+   ]
+  },
+  {
+   "t": 31.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.058296030798432076,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5309,
+   "other_new_pairs": 2191,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 760,
+    "SM_RO_core|SM_RO_cuirass": 583,
+    "SM_RO_core|SM_RO_pauldron.L": 266,
+    "SM_RO_core|SM_RO_pauldron.R": 260,
+    "SM_RO_bracer.L|SM_RO_core": 148,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 128,
+    "SM_RO_core|SM_RO_core": 38,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35800594486599463,
+    1.4924001294753577
+   ],
+   "other_edge_ratio": [
+    0.08655116121349768,
+    7.19984002796995
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24476458132266998,
+      0.2284545749425888
+     ],
+     "min_z": 0.00930357538163662
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2426682561635971,
+      -0.34975171089172363
+     ],
+     "min_z": 0.12513989210128784
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37225431203842163,
+    -0.046410128474235535,
+    0.7966344356536865
+   ]
+  },
+  {
+   "t": 32.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.05868297697788132,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5326,
+   "other_new_pairs": 2207,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 737,
+    "SM_RO_core|SM_RO_cuirass": 593,
+    "SM_RO_core|SM_RO_pauldron.L": 301,
+    "SM_RO_core|SM_RO_pauldron.R": 243,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 150,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 30,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35802142371673684,
+    1.4923954182435164
+   ],
+   "other_edge_ratio": [
+    0.12796648855540788,
+    7.219307764964217
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465152621269226,
+      0.23564490675926208
+     ],
+     "min_z": 0.01367785781621933
+    },
+    "R": {
+     "centroid_xy": [
+      -0.242502823472023,
+      -0.36475294828414917
+     ],
+     "min_z": 0.1179332584142685
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37352341413497925,
+    -0.04392154514789581,
+    0.8008206486701965
+   ]
+  },
+  {
+   "t": 32.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 0,
+   "min_triangle_area_ratio": 0.051829691647016576,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5365,
+   "other_new_pairs": 2255,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 753,
+    "SM_RO_core|SM_RO_cuirass": 614,
+    "SM_RO_core|SM_RO_pauldron.L": 322,
+    "SM_RO_core|SM_RO_pauldron.R": 224,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 154,
+    "SM_RO_bracer.L|SM_RO_core": 148,
+    "SM_RO_core|SM_RO_core": 32,
+    "SM_RO_bracer.R|SM_RO_core": 8
+   },
+   "hand_edge_ratio": [
+    0.35801184538916236,
+    1.492397454572994
+   ],
+   "other_edge_ratio": [
+    0.15093603905394087,
+    7.1986202584105055
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24474945664405823,
+      0.23865841329097748
+     ],
+     "min_z": 0.01737523078918457
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24263188242912292,
+      -0.3775535821914673
+     ],
+     "min_z": 0.10910403728485107
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3748607337474823,
+    -0.04158609360456467,
+    0.804564356803894
+   ]
+  },
+  {
+   "t": 33.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.0375225220132966,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5401,
+   "other_new_pairs": 2289,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 777,
+    "SM_RO_core|SM_RO_cuirass": 602,
+    "SM_RO_core|SM_RO_pauldron.L": 366,
+    "SM_RO_core|SM_RO_pauldron.R": 217,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 149,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 25,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35800783646540524,
+    1.4923856952262087
+   ],
+   "other_edge_ratio": [
+    0.06763607787319993,
+    7.178328830364438
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465130269527435,
+      0.2414189726114273
+     ],
+     "min_z": 0.022724535316228867
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425028532743454,
+      -0.39024707674980164
+     ],
+     "min_z": 0.10120858252048492
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3761889636516571,
+    -0.039247073233127594,
+    0.8083289265632629
+   ]
+  },
+  {
+   "t": 33.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 2,
+   "min_triangle_area_ratio": 0.04028621460129413,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5431,
+   "other_new_pairs": 2335,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 817,
+    "SM_RO_core|SM_RO_cuirass": 596,
+    "SM_RO_core|SM_RO_pauldron.L": 384,
+    "SM_RO_core|SM_RO_pauldron.R": 202,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 153,
+    "SM_RO_bracer.L|SM_RO_core": 147,
+    "SM_RO_core|SM_RO_core": 30,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35800707646150587,
+    1.4923944692734903
+   ],
+   "other_edge_ratio": [
+    0.05505599123659586,
+    7.153286352434632
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24473780393600464,
+      0.24035362899303436
+     ],
+     "min_z": 0.02789219468832016
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24259182810783386,
+      -0.4005683660507202
+     ],
+     "min_z": 0.09203364700078964
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3775521218776703,
+    -0.03711922466754913,
+    0.811389148235321
+   ]
+  },
+  {
+   "t": 34.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.03600295254160707,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5456,
+   "other_new_pairs": 2377,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 818,
+    "SM_RO_core|SM_RO_cuirass": 608,
+    "SM_RO_core|SM_RO_pauldron.L": 408,
+    "SM_RO_core|SM_RO_pauldron.R": 209,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 152,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 31,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35800603601074693,
+    1.492400524878109
+   ],
+   "other_edge_ratio": [
+    0.12350464527874461,
+    7.1285653445472645
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465109407901764,
+      0.23913761973381042
+     ],
+     "min_z": 0.03450896218419075
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425028532743454,
+      -0.41064268350601196
+     ],
+     "min_z": 0.08380159735679626
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.37890514731407166,
+    -0.03498687222599983,
+    0.8144669532775879
+   ]
+  },
+  {
+   "t": 34.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.033239162968768846,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5472,
+   "other_new_pairs": 2408,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 819,
+    "SM_RO_core|SM_RO_cuirass": 614,
+    "SM_RO_core|SM_RO_pauldron.L": 413,
+    "SM_RO_core|SM_RO_pauldron.R": 220,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 155,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 36,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.35801190007511524,
+    1.492396774478798
+   ],
+   "other_edge_ratio": [
+    0.10781866931448918,
+    7.127249101302721
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24472950398921967,
+      0.23446233570575714
+     ],
+     "min_z": 0.04087905213236809
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24255143105983734,
+      -0.4181206524372101
+     ],
+     "min_z": 0.07468941807746887
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3802602291107178,
+    -0.033116016536951065,
+    0.8166523575782776
+   ]
+  },
+  {
+   "t": 35.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.031757551043566395,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5456,
+   "other_new_pairs": 2433,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 803,
+    "SM_RO_core|SM_RO_cuirass": 613,
+    "SM_RO_core|SM_RO_pauldron.L": 424,
+    "SM_RO_core|SM_RO_pauldron.R": 239,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 168,
+    "SM_RO_bracer.L|SM_RO_core": 144,
+    "SM_RO_core|SM_RO_core": 36,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580028080701469,
+    1.492398893841085
+   ],
+   "other_edge_ratio": [
+    0.15016491829791667,
+    7.12606880148382
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465088546276093,
+      0.22974181175231934
+     ],
+     "min_z": 0.048266053199768066
+    },
+    "R": {
+     "centroid_xy": [
+      -0.242502823472023,
+      -0.42526209354400635
+     ],
+     "min_z": 0.06647238880395889
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38160476088523865,
+    -0.0312398262321949,
+    0.8188521862030029
+   ]
+  },
+  {
+   "t": 35.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.03164114724313916,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5359,
+   "other_new_pairs": 2356,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 741,
+    "SM_RO_core|SM_RO_cuirass": 609,
+    "SM_RO_core|SM_RO_pauldron.L": 422,
+    "SM_RO_core|SM_RO_pauldron.R": 245,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 151,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 36,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.35801254228388524,
+    1.4923931525765797
+   ],
+   "other_edge_ratio": [
+    0.1584922231704323,
+    7.169913125682127
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24472394585609436,
+      0.22191867232322693
+     ],
+     "min_z": 0.0553852915763855
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24251580238342285,
+      -0.429506778717041
+     ],
+     "min_z": 0.057853832840919495
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3829196095466614,
+    -0.029667671769857407,
+    0.820061206817627
+   ]
+  },
+  {
+   "t": 36.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.032602610441718416,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5317,
+   "other_new_pairs": 2338,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 711,
+    "SM_RO_core|SM_RO_cuirass": 611,
+    "SM_RO_core|SM_RO_pauldron.L": 419,
+    "SM_RO_core|SM_RO_pauldron.R": 241,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 153,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_core|SM_RO_core": 53,
+    "SM_RO_bracer.R|SM_RO_core": 5
+   },
+   "hand_edge_ratio": [
+    0.3580243261896528,
+    1.4923997222104144
+   ],
+   "other_edge_ratio": [
+    0.14044883024731775,
+    7.2136791167526155
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465082585811615,
+      0.21415428817272186
+     ],
+     "min_z": 0.06354472041130066
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425028532743454,
+      -0.4334035813808441
+     ],
+     "min_z": 0.049956128001213074
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38422396779060364,
+    -0.028089724481105804,
+    0.8212817311286926
+   ]
+  },
+  {
+   "t": 36.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.03410116594428422,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5346,
+   "other_new_pairs": 2390,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 716,
+    "SM_RO_core|SM_RO_cuirass": 625,
+    "SM_RO_core|SM_RO_pauldron.L": 431,
+    "SM_RO_core|SM_RO_pauldron.R": 244,
+    "SM_RO_bracer.L|SM_RO_core": 145,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 144,
+    "SM_RO_core|SM_RO_core": 80,
+    "SM_RO_bracer.R|SM_RO_core": 5
+   },
+   "hand_edge_ratio": [
+    0.3580172396274141,
+    1.4923963830290912
+   ],
+   "other_edge_ratio": [
+    0.14152059580123208,
+    7.3159836554646365
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2447197288274765,
+      0.203616201877594
+     ],
+     "min_z": 0.07129561901092529
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24249158799648285,
+      -0.4340061843395233
+     ],
+     "min_z": 0.04176618158817291
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38546907901763916,
+    -0.02684871107339859,
+    0.8215101957321167
+   ]
+  },
+  {
+   "t": 37.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.0361655992792405,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5380,
+   "other_new_pairs": 2446,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 722,
+    "SM_RO_core|SM_RO_cuirass": 638,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 250,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_core|SM_RO_core": 122,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.35801944665649527,
+    1.4923961319476593
+   ],
+   "other_edge_ratio": [
+    0.15893655380300029,
+    7.418093378587129
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465082585811615,
+      0.19323299825191498
+     ],
+     "min_z": 0.07990384101867676
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425028532743454,
+      -0.4343520998954773
+     ],
+     "min_z": 0.03401970490813255
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3867044448852539,
+    -0.025601975619792938,
+    0.8217466473579407
+   ]
+  },
+  {
+   "t": 37.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.03798128281410247,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5391,
+   "other_new_pairs": 2479,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 720,
+    "SM_RO_core|SM_RO_cuirass": 649,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 254,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 145,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_core|SM_RO_core": 137,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.35802391956442975,
+    1.4923925614465077
+   ],
+   "other_edge_ratio": [
+    0.17430953460121917,
+    7.582648656917285
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.2447148710489273,
+      0.18036651611328125
+     ],
+     "min_z": 0.08790944516658783
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2424827665090561,
+      -0.4309265613555908
+     ],
+     "min_z": 0.027020258828997612
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38785311579704285,
+    -0.02471591904759407,
+    0.8210836052894592
+   ]
+  },
+  {
+   "t": 38.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.040007617050715975,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5418,
+   "other_new_pairs": 2520,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 755,
+    "SM_RO_core|SM_RO_cuirass": 660,
+    "SM_RO_core|SM_RO_pauldron.L": 418,
+    "SM_RO_core|SM_RO_pauldron.R": 244,
+    "SM_RO_core|SM_RO_core": 150,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 145,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.35800461134550365,
+    1.4923984964608854
+   ],
+   "other_edge_ratio": [
+    0.15437154967731015,
+    7.747047391393718
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465090036392212,
+      0.1677391678094864
+     ],
+     "min_z": 0.09662850201129913
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24250276386737823,
+      -0.42739203572273254
+     ],
+     "min_z": 0.020130008459091187
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3889933228492737,
+    -0.023824773728847504,
+    0.8204264640808105
+   ]
+  },
+  {
+   "t": 38.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04067115438049533,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5473,
+   "other_new_pairs": 2577,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 813,
+    "SM_RO_core|SM_RO_cuirass": 664,
+    "SM_RO_core|SM_RO_pauldron.L": 420,
+    "SM_RO_core|SM_RO_pauldron.R": 239,
+    "SM_RO_core|SM_RO_core": 150,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 143,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 7
+   },
+   "hand_edge_ratio": [
+    0.3580178397611921,
+    1.4924005663953919
+   ],
+   "other_edge_ratio": [
+    0.14836778255096547,
+    7.857267144049017
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24469409883022308,
+      0.16027140617370605
+     ],
+     "min_z": 0.10048414766788483
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2424864023923874,
+      -0.42352309823036194
+     ],
+     "min_z": 0.017267532646656036
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.38950857520103455,
+    -0.023567428812384605,
+    0.8197346925735474
+   ]
+  },
+  {
+   "t": 38.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.041341960489974273,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5558,
+   "other_new_pairs": 2674,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 881,
+    "SM_RO_core|SM_RO_cuirass": 666,
+    "SM_RO_core|SM_RO_pauldron.L": 426,
+    "SM_RO_core|SM_RO_pauldron.R": 254,
+    "SM_RO_core|SM_RO_core": 158,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 142,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580051834558495,
+    1.4923957484058632
+   ],
+   "other_edge_ratio": [
+    0.14411251242932524,
+    7.9674994208144545
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24470928311347961,
+      0.1528768539428711
+     ],
+     "min_z": 0.10449784994125366
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24248099327087402,
+      -0.4196382164955139
+     ],
+     "min_z": 0.014421152882277966
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3900220990180969,
+    -0.02330907993018627,
+    0.8190439343452454
+   ]
+  },
+  {
+   "t": 38.75,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04202958399502652,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5651,
+   "other_new_pairs": 2772,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 963,
+    "SM_RO_core|SM_RO_cuirass": 667,
+    "SM_RO_core|SM_RO_pauldron.L": 427,
+    "SM_RO_core|SM_RO_pauldron.R": 261,
+    "SM_RO_core|SM_RO_core": 165,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 142,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.358012444129781,
+    1.4923892499275604
+   ],
+   "other_edge_ratio": [
+    0.14175940829449918,
+    8.077717896010665
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24469564855098724,
+      0.14555872976779938
+     ],
+     "min_z": 0.10866674780845642
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24248634278774261,
+      -0.41573765873908997
+     ],
+     "min_z": 0.01159475278109312
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.3905339539051056,
+    -0.023049727082252502,
+    0.8183543682098389
+   ]
+  },
+  {
+   "t": 39.0,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04274532497689741,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5714,
+   "other_new_pairs": 2842,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1016,
+    "SM_RO_core|SM_RO_cuirass": 667,
+    "SM_RO_core|SM_RO_pauldron.L": 432,
+    "SM_RO_core|SM_RO_pauldron.R": 265,
+    "SM_RO_core|SM_RO_core": 174,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 141,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580210451315783,
+    1.4923929924376869
+   ],
+   "other_edge_ratio": [
+    0.14142669295159926,
+    8.187920580433973
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24465227127075195,
+      0.13832087814807892
+     ],
+     "min_z": 0.11298766732215881
+    },
+    "R": {
+     "centroid_xy": [
+      -0.2425026148557663,
+      -0.4118219017982483
+     ],
+     "min_z": 0.0087734404951334
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": true,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.39104413986206055,
+    -0.02278933674097061,
+    0.8176658749580383
+   ]
+  },
+  {
+   "t": 39.25,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.04297851066673516,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5716,
+   "other_new_pairs": 2849,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1019,
+    "SM_RO_core|SM_RO_cuirass": 672,
+    "SM_RO_core|SM_RO_pauldron.L": 430,
+    "SM_RO_core|SM_RO_pauldron.R": 265,
+    "SM_RO_core|SM_RO_core": 174,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 142,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.358003932664398,
+    1.4923941529500142
+   ],
+   "other_edge_ratio": [
+    0.1425785705219188,
+    8.318100381698141
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24469077587127686,
+      0.1299896538257599
+     ],
+     "min_z": 0.11658856272697449
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24248595535755157,
+      -0.4056538939476013
+     ],
+     "min_z": 0.006483809091150761
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": false,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.391489177942276,
+    -0.022720452398061752,
+    0.8167321085929871
+   ]
+  },
+  {
+   "t": 39.5,
+   "states": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "collapsed_triangles": 1,
+   "min_triangle_area_ratio": 0.043220959534713554,
+   "hand_self_pairs": 0,
+   "hand_other_pairs": 248,
+   "hand_other_new_pairs": 0,
+   "other_pairs": 5708,
+   "other_new_pairs": 2848,
+   "armor_pairs": 0,
+   "armor_depth_max_m": 0.0,
+   "armor_depth_violations": 0,
+   "armor_excess_max_m": 0.0,
+   "other_new_by_mesh_pair": {
+    "SM_RO_coat|SM_RO_core": 1024,
+    "SM_RO_core|SM_RO_cuirass": 673,
+    "SM_RO_core|SM_RO_pauldron.L": 430,
+    "SM_RO_core|SM_RO_pauldron.R": 265,
+    "SM_RO_core|SM_RO_core": 169,
+    "SM_RO_bracer.L|SM_RO_core": 141,
+    "SM_RO_bracer.L|SM_RO_pauldron.L": 140,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "hand_edge_ratio": [
+    0.3580084141794671,
+    1.4923987178866813
+   ],
+   "other_edge_ratio": [
+    0.14495697390396325,
+    8.44832863056057
+   ],
+   "hand_examples": [],
+   "feet": {
+    "L": {
+     "centroid_xy": [
+      0.24470365047454834,
+      0.12174206972122192
+     ],
+     "min_z": 0.12033692002296448
+    },
+    "R": {
+     "centroid_xy": [
+      -0.24248000979423523,
+      -0.39945194125175476
+     ],
+     "min_z": 0.004332164768129587
+    }
+   },
+   "weapon_body": {
+    "pairs": 0,
+    "max_depth_m": 0.0
+   },
+   "grasp": {
+    "in_window": false,
+    "pads_within_2mm": {
+     "finger1": 3,
+     "finger2": 3,
+     "finger3": 3,
+     "finger4": 3,
+     "thumb": 3
+    },
+    "unknown_inside": 0,
+    "transverse_crossings": 0,
+    "max_penetration_m": 0,
+    "surface_gate_pass": true,
+    "pass": true
+   },
+   "sword_grip_point": [
+    -0.391932874917984,
+    -0.02265092171728611,
+    0.8157989978790283
+   ]
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "seed": 20261005,
+ "first": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+ "second": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+ "key": {
+  "spine-flexion": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "spine-extension": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "spine-lateral": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "spine-twist": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "neck-yaw": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "neck-pitch": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "neck-roll": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "shoulder-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "shoulder-extension.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-abduction.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-axial-plus.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-axial-minus.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "elbow-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "forearm-pronation.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "forearm-supination.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-extension.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-radial.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-ulnar.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "fingers-mcp-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "fingers-pip-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "fingers-dip-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "fingers-spread.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "thumb-cmc-opposition.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "thumb-mcp-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "thumb-ip-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "combo-empty-fist.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "combo-empty-fist.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-arms-overhead": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "combo-two-hand-chop": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-deep-squat": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-cast-open-palm.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-grasp-wrist-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "combo-grasp-wrist-extension.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-grasp-wrist-radial.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "combo-grasp-wrist-ulnar.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "hip-extension.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "hip-abduction.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-axial-plus.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-axial-minus.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "knee-flexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "ankle-dorsiflexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "ankle-plantarflexion.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "toe-extension.L": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-extension.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "shoulder-abduction.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "shoulder-axial-plus.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "shoulder-axial-minus.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "elbow-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "forearm-pronation.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "forearm-supination.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "wrist-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "wrist-extension.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-radial.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "wrist-ulnar.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "fingers-mcp-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "fingers-pip-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "fingers-dip-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "fingers-spread.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "thumb-cmc-opposition.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "thumb-mcp-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "thumb-ip-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "hip-extension.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-abduction.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json"
+  },
+  "hip-axial-plus.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "hip-axial-minus.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "knee-flexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "ankle-dorsiflexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "ankle-plantarflexion.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  },
+  "toe-extension.R": {
+   "A": "runs\\qa\\ro-swordsman-character-v1\\v001\\a34-hands\\joint-range\\joint-range-result.json",
+   "B": "runs\\qa\\ro-swordsman-character-v1-r4\\baseline-joint-range-v5\\joint-range-result.json"
+  }
+ }
+}

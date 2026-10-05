@@ -1,0 +1,25 @@
+{
+ "observed_utc": "2026-10-05T04:16:48.590726+00:00",
+ "classification": "TOOL_FAILURE with side effect outside the repository (caused by this session's script)",
+ "cause": "scripts/cv1_verify_glb_roundtrip.py called bpy.ops.wm.read_factory_settings(use_empty=True). With no extensions enabled in that state, Blender synchronised its extension wheel cache and removed the installed wheels.",
+ "runs": 2,
+ "local_time": "2026-10-05 12:15",
+ "affected_path": "C:/Users/IOT/AppData/Roaming/Blender Foundation/Blender/4.5/extensions/.local/lib/python3.11/site-packages",
+ "observed_after": {
+  "top_level_entries": 19,
+  "files_remaining": 79,
+  "remaining_are": "binary files that were locked by the running Blender GUI (PID 6668), moved by Blender into .~stale~NNNN folders",
+  "removal_errors_printed": 102
+ },
+ "intact": {
+  "wheel_sources": "C:/Users/IOT/AppData/Roaming/Blender Foundation/Blender/4.5/extensions/blender_org/bonsai/wheels (98 .whl files present)",
+  "extension_folder": "blender_org/bonsai present",
+  "user_default_repo": "empty before and after"
+ },
+ "not_touched_by_this_session_otherwise": "No other Blender user file was written by this session; earlier runs used --factory-startup without this operator and printed no removal messages.",
+ "expected_recovery": "INFERRED, not verified: Blender reinstalls an enabled extension's wheels from its wheels folder at the next normal startup.",
+ "risk_now": "The running Blender GUI has an unsaved scene; modules of the Bonsai extension that were not yet imported may fail to import until Blender is restarted.",
+ "fix_in_repo": "Operator call removed from the script; tests/test_cv1_blender_safety.py rejects it in cv1 scripts.",
+ "repair_performed": false,
+ "repair_requires": "user decision; any repair writes outside the repository"
+}

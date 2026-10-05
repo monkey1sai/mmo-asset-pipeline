@@ -1,0 +1,55 @@
+{
+ "id": "v001",
+ "paused_utc": "2026-10-05T05:03:07Z",
+ "trial_clock_started_utc": "2026-10-05T04:57:13Z",
+ "active_seconds_this_interval": 354,
+ "active_seconds_total": 354,
+ "trial_seconds_cap": 21600,
+ "status": "paused_waiting_for_user (not recorded in the ledger; no completion or failure claimed)",
+ "built": {
+  "foundation": "assets/processed/ro-swordsman-character-v1/v001/a02-rigid/ro_character_v001_a02-rigid.blend",
+  "sha256": "f4c8a3307571c445458bd8831313ebb75e4fad00fe2a20f0c524d97490d6d2be",
+  "report": "runs/qa/ro-swordsman-character-v1/v001/a02-rigid/assemble-report.json",
+  "joint_range": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/a02-rigid/joint-range/joint-range-result.json",
+   "sha256": "bdd4aa6ed14fd1f57bd632ab3d130f11cb0c96425d6a963e481d30e02e4dc4be"
+  },
+  "earlier_failed_build": "runs/qa/ro-swordsman-character-v1/v001/a01-rigid/build-failure.json"
+ },
+ "observed": {
+  "bones": 58,
+  "triangles": 56575,
+  "r010_hand_protected": "904 of 904 vertex weights identical, polygons and UVs identical, largest edge-length change 8.4e-8 m",
+  "left_right_symmetric_results": true,
+  "finger_and_thumb_sweeps_typical_level": "0 hand self-intersections on both hands",
+  "full_fist": "poses on both hands (baseline could not pose it); 6 self-intersection pairs at the typical level, 312 at the extreme",
+  "joint_range": "38 of 73 motions fail"
+ },
+ "blockers": [
+  {
+   "kind": "protected zone",
+   "detail": "118 cuff vertices of the r010 hand behind the wrist joint are 100% hand-weighted; every wrist and forearm-twist motion drives the cuff through the bracer and forearm stump (83 to 277 new hand-region pairs at the typical level). Reweighting them toward the forearm changes protected r010 weights. None of the 118 is in the 203 thumb set or in any pad.",
+   "needs": "user authorization",
+   "evidence": "runs/qa/ro-swordsman-character-v1/p2-prep/hand-cuff-probe.json"
+  },
+  {
+   "kind": "frozen contract defect",
+   "detail": "Shoulder motions are defined as a swing toward a direction. Past 90 degrees that carries the arm across the midline, so combo-arms-overhead at the extreme crosses the arms behind the head and the two hands intersect each other (284 pairs); combo-two-hand-chop puts both hands in the same place (775 pairs). The hand-region rule is zero at the extreme for these combos, so no candidate can pass them as written.",
+   "needs": "new request version and baseline; user authorization",
+   "evidence": "runs/qa/ro-swordsman-character-v1/v001/a02-rigid/joint-range/joint-range-result.json"
+  },
+  {
+   "kind": "frozen contract, feasibility unknown",
+   "detail": "elbow-flexion at 135 degrees brings the 184 mm hand into the pauldron and upper body (171 and 242 pairs). It may be a real armor limit rather than a rig fault; to be re-measured after the shoulder definitions are corrected.",
+   "needs": "decision after re-measurement",
+   "evidence": "runs/qa/ro-swordsman-character-v1/v001/a02-rigid/joint-range/joint-range-result.json"
+  }
+ ],
+ "not_blocked_but_open": [
+  "hand edge-ratio guard fails at extreme finger, thumb and fist flexion (minimum 0.06 to 0.21 against 0.25): needs pose-driven correctives",
+  "toes carry no weights",
+  "shoulder, elbow and spine-twist triangle collapse inherited from the core",
+  "hands still use the gray review material"
+ ],
+ "new_paid_submissions": 0
+}

@@ -1,0 +1,46 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T09:06:05Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "status": "paused_waiting_for_user (foundation repair direction; not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602,
+  1277,
+  2213,
+  1835
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z",
+  "2026-10-05T07:16:26Z",
+  "2026-10-05T07:54:20Z",
+  "2026-10-05T08:35:30Z"
+ ],
+ "interval_note": "includes the 608 s independent foundation review (r4/r6 clock rule counts reviews)",
+ "active_seconds_total": 9376,
+ "trial_seconds_cap": 64800,
+ "current_best_foundation": "b05-twist (b06 rejected; b07 fails the deep-squat ratchet by one pair and leaves walk/run collapses)",
+ "clips": {
+  "AN_RO_Idle_Sword": "a03 passed on b05 under the old seam rule; must be re-verified on the final foundation",
+  "AN_RO_Walk_Sword": "a01-a05 fail only on triangle collapse (groin, armpit, back of knee)",
+  "AN_RO_Run_Sword": "a01-a02 fail only on triangle collapse"
+ },
+ "finding": "crease regions fold at intermediate and combined poses; flip diagnostic shows up to 19 (shoulder), 12-13 (hips), 9 (knee), 33 (deep squat) folded-through triangles on b05 that the area-based gate cannot see",
+ "review": "runs/qa/ro-swordsman-character-v1/v001/foundation-review-02.md (verdict: stop and ask the user)",
+ "new_paid_submissions": 0
+}

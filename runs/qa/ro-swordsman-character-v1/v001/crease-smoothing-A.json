@@ -1,0 +1,107 @@
+{
+ "mesh": "SM_RO_core",
+ "drop_shape_key_prefix": "SKC_core_fold_",
+ "regions": [
+  {
+   "name": "groin.L",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.L"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "armpit.L",
+   "parent": [
+    "spine_01",
+    "spine_02",
+    "clavicle.L"
+   ],
+   "child": [
+    "upper_arm.L"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "knee.L",
+   "parent": [
+    "upper_leg.L"
+   ],
+   "child": [
+    "lower_leg.L"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "elbow.L",
+   "parent": [
+    "upper_arm.L"
+   ],
+   "child": [
+    "lower_arm.L"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "groin.R",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.R"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "armpit.R",
+   "parent": [
+    "spine_01",
+    "spine_02",
+    "clavicle.R"
+   ],
+   "child": [
+    "upper_arm.R"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "knee.R",
+   "parent": [
+    "upper_leg.R"
+   ],
+   "child": [
+    "lower_leg.R"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "elbow.R",
+   "parent": [
+    "upper_arm.R"
+   ],
+   "child": [
+    "lower_arm.R"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  }
+ ],
+ "note": "Variant A: crease transitions of the groin, armpit, back of knee and elbow smoothed over 2 rings, 10 iterations, factor 0.5 (authorization entry 12)."
+}

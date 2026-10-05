@@ -1,0 +1,45 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T08:48:56Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "status": "in_progress (interval open since 2026-10-05T08:35:30Z; not in the ledger)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602,
+  1277,
+  2213
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z",
+  "2026-10-05T07:16:26Z",
+  "2026-10-05T07:54:20Z"
+ ],
+ "active_seconds_total": 7541,
+ "open_interval_start_utc": "2026-10-05T08:35:30Z",
+ "trial_seconds_cap": 64800,
+ "authorization": "entry 11 (Idle option 1; continue Walk/Run)",
+ "done_this_interval": [
+  "loop convention: loop clips close with a key at frame N equal to frame 0; seam gate compares N with 0; export includes N (scripts/cv1_clip_check.py, scripts/cv1_export_clip.py)",
+  "gait math (scripts/cv1_gait.py, tests), leg IK (scripts/cv1_arm_ik.py LegIK), locomotion authoring (scripts/cv1_author_locomotion.py), clip closed-loop driver (scripts/cv1_clip_pipeline.py)",
+  "Walk a01/a02/a03 and Run a01: every gate passes except triangle collapse",
+  "finding: left-groin core triangles fold flat around 33-38 deg of pure hip flexion (area ratio 0.036 at 36 deg) and recover by 45-55 deg; the contract samples only 50% and 100% levels, so the sweep never saw it; also left armpit (arm extension), back of knee (deep swing flexion), left elbow crease (run arm)"
+ ],
+ "in_progress": "intermediate-level diagnostic sweep of 41 body motions on b05 (runs/qa/ro-swordsman-character-v1/v001/b05-twist/midrange-sweep, contract copy midrange-contract-diagnostic.json, never a gate)",
+ "plan": "add one-vertex pose-driven micro-correctives for every mid-range fold with scripts/cv1_core_microcorrectives.py (as b02 did), build b06, re-verify the frozen joint range, the closed loop and readback, then re-check Idle/Walk/Run on b06",
+ "new_paid_submissions": 0
+}

@@ -1,0 +1,84 @@
+{
+ "id": "ro-swordsman-character-v1",
+ "phase": "P1 closed-loop preparation (not a candidate)",
+ "registered_utc": "2026-10-05T03:34:23.261312+00:00",
+ "p1_clock_started_utc": "2026-10-05T03:32:29+00:00",
+ "clock_source": "First UTC observed after user P1 authorization; planning text before it unmeasured.",
+ "time_cap_seconds": 14400,
+ "counts_as_candidate": false,
+ "authority": "runtime 選 A，預算同意，保護區 A、B 授權，開始 P1",
+ "request_before_authorization_sha256": "0014fafce33353af706f56e054cfa29df1ef6edcd6d925046d00a7f767fb64f2",
+ "request_file_sha256": "7d0359d84737cc780478ad176eb501c3d8244238449b0e6b6cdcd2b3c6a75be7",
+ "source": {
+  "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+  "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+  "role": "real whole character, NO_SHIP baseline; opened read-only, never saved"
+ },
+ "question": "Can the selected runtime display and measure pose-driven and state-driven corrective morphs on the real character, evaluated after animation blending, with one owner per morph channel?",
+ "not_in_scope": [
+  "any art improvement",
+  "new skeleton/left hand (P2)",
+  "new clips (P3)",
+  "full QA scene (P4)",
+  "r010 reopening"
+ ],
+ "preregistered": {
+  "probe_data": "Existing authored data only: 61-frame bone action RO_WristGrip_Prototype_61f, WristLoft.R in-between keys WristVolume_025/050/075/100, glove.R key GripContact_R. No mesh, weight, bone or shape edits.",
+  "rule_body": "p = clamp(1 - angle(q_rel(hand.R), q_target)/angle(identity, q_target), 0, 1), q_rel = rest-relative local rotation, q_target = authored frame-61 value; in-between hat weights at p=0.25/0.5/0.75/1.0 for WristVolume_*. Probe rule for wiring only, not an accepted general corrective.",
+  "rule_contact": "GripContact_R weight = interaction state grasp.R in [0,1], set per sample independently of pose.",
+  "rule_fidelity_check": "Rule weights at integer frames 1..61 compared with authored time-curve values; max abs difference <= 1e-3.",
+  "samples": [
+   {
+    "frame": 1,
+    "grasp": 0
+   },
+   {
+    "frame": 8.5,
+    "grasp": 0
+   },
+   {
+    "frame": 16,
+    "grasp": 0.5
+   },
+   {
+    "frame": 23.5,
+    "grasp": 0.5
+   },
+   {
+    "frame": 31,
+    "grasp": 1
+   },
+   {
+    "frame": 46,
+    "grasp": 1
+   },
+   {
+    "frame": 53.5,
+    "grasp": 0
+   },
+   {
+    "frame": 61,
+    "grasp": 1
+   }
+  ],
+  "blend_sample": "Two paused actions (frame 1 and frame 61) at weights 0.5/0.5; reference pose = per-bone slerp/lerp at 0.5; expected p~0.5. Proves evaluator reads the blended final pose.",
+  "measured_quantity": "World position of every exported vertex of all skinned meshes after runtime morph+skin (CPU), mapped to Blender vertex via exported original-ID attribute, versus Blender depsgraph-evaluated position of the same ID.",
+  "wiring_gate_max_error_m": 0.0001,
+  "wiring_gate_rationale": "Wiring faults (wrong channel, order, bone, axis) give mm-cm errors; Blender exporter drops skin weights <=1e-4 (observed in r010, up to 7.895um on a hand), so um-level residue is expected and is not a wiring fault.",
+  "precision_tier_m": 1e-06,
+  "precision_tier_rule": "Reported only. The 1um same-version readback tolerance stays unchanged for later delivery gates and is not claimed by P1 unless actually met.",
+  "half_frames": "Reported separately from integer frames; same gate.",
+  "channel_ownership": "runtime-owner GLB must contain no weights animation channel; baked-owner GLB contains them and is evaluated with the runtime evaluator off against the authored time-curve reference.",
+  "negative_controls": [
+   "NC1 evaluator off at frame 61 must exceed the gate",
+   "NC2 evaluator fed stale pose (previous sample) must exceed the gate",
+   "NC3 baked-owner GLB loaded in runtime-owner mode must fail the ownership check",
+   "NC4 rule naming a bone absent from the skeleton must raise, not evaluate to 0"
+  ],
+  "images": "Blender and runtime renders from the same orthographic camera at p=0, partial, 1; qualitative only, CPU points are not GPU-frame evidence.",
+  "thresholds_frozen_before_measurement": true
+ },
+ "new_paid_submissions": 0,
+ "stage_commit_push": "held_by_user",
+ "r010_reopened": false
+}

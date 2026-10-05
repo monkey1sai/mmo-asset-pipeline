@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>角色 V1 runtime QA（Three.js）</title>
+<style>
+  :root { color-scheme: dark; --bg: #1c1d21; --panel: #26282e; --line: #3a3d46; --text: #e6e7ea; --muted: #9a9eaa; --ok: #6fcf97; --bad: #ff7a7a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 "Segoe UI", "Microsoft JhengHei", sans-serif; display: flex; flex-wrap: wrap; }
+  #view { flex: 1 1 520px; min-width: 320px; display: flex; align-items: flex-start; justify-content: center; padding: 12px; }
+  canvas { width: min(100%, 960px); height: auto; aspect-ratio: 1; background: #77797f; border: 1px solid var(--line); }
+  #panel { flex: 0 1 380px; padding: 12px 16px; background: var(--panel); border-left: 1px solid var(--line); min-height: 100vh; }
+  h1 { font-size: 16px; margin: 0 0 4px; }
+  h2 { font-size: 13px; margin: 16px 0 6px; color: var(--muted); font-weight: 600; }
+  p.note { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+  label { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+  label span.name { flex: 0 0 96px; color: var(--muted); }
+  input[type=range] { flex: 1; }
+  select, button { background: #32353d; color: var(--text); border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; font: inherit; }
+  button { cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  output { font-variant-numeric: tabular-nums; min-width: 52px; text-align: right; }
+  table { border-collapse: collapse; width: 100%; font-size: 12px; font-variant-numeric: tabular-nums; }
+  td, th { padding: 2px 4px; border-bottom: 1px solid var(--line); text-align: right; }
+  td:first-child, th:first-child { text-align: left; }
+  #status { white-space: pre-wrap; font-size: 12px; color: var(--muted); }
+  .ok { color: var(--ok); } .bad { color: var(--bad); }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="view"><canvas id="canvas" width="960" height="960"></canvas></div>
+<div id="panel">
+  <h1>角色 V1 runtime QA</h1>
+  <p class="note">P1 閉環：動畫混合 → 取得最終姿勢 → 規則求值 → 引擎 morph＋skin。探針規則只驗接線，不是已接受的修形。</p>
+
+  <h2>資產</h2>
+  <label><span class="name">通道 owner</span>
+    <select id="mode">
+      <option value="runtime_owner">runtime 求值器（clip 只有骨骼）</option>
+      <option value="baked_owner">烘焙 clip（求值器關閉）</option>
+    </select>
+  </label>
+
+  <h2>播放</h2>
+  <label><span class="name">frame</span><input id="frame" type="range" min="1" max="61" step="0.5" value="1"><output id="frameOut">1</output></label>
+  <label><span class="name">速度</span>
+    <select id="speed"><option>0.25</option><option>0.5</option><option selected>1</option><option>1.5</option></select>
+    <button id="play">播放</button>
+  </label>
+
+  <h2>修形</h2>
+  <label><span class="name">求值器</span><input id="evaluator" type="checkbox" checked><span>依最終姿勢計算</span></label>
+  <label><span class="name">grasp.R 狀態</span><input id="grasp" type="range" min="0" max="1" step="0.05" value="0"><output id="graspOut">0.00</output></label>
+  <table id="weights"><tbody></tbody></table>
+
+  <h2>檢視</h2>
+  <label><span class="name">鏡頭</span>
+    <select id="camera"><option value="wrist">右腕（對齊 Blender 參考）</option><option value="whole">全身</option></select>
+  </label>
+  <label><span class="name">材質</span>
+    <select id="shading"><option value="gray">灰模</option><option value="textured">貼圖</option></select>
+  </label>
+  <label><span class="name">參考點</span><input id="overlay" type="checkbox"><span>疊上 Blender 求值點（僅取樣 frame）</span></label>
+
+  <h2>量測</h2>
+  <button id="run">執行 P1 量測並存檔</button>
+  <div id="status">載入中…</div>
+</div>
+<script type="module" src="./src/p1.js"></script>
+</body>
+</html>

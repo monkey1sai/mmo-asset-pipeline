@@ -1,0 +1,309 @@
+{
+ "request_id": "ro-swordsman-character-v1",
+ "note": "授權逐筆追加，不改寫舊紀錄。此檔不在需求雜湊範圍內；需求只凍結授權當時已生效的內容。",
+ "entries": [
+  {
+   "utc_date": "2026-10-05",
+   "text": "runtime 選 A，預算同意，保護區 A、B 授權，開始 P1",
+   "covers": [
+    "runtime A（Three.js 0.186.0，repo內隔離QA場景）",
+    "budget_proposal",
+    "protected zone A、B",
+    "開始P1"
+   ],
+   "not_covered": [
+    "保護區C、D",
+    "holdout指定",
+    "commit／push",
+    "新付費生成以外的加購或升級"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "holdout 用做法 1，我已選好；開始 P2",
+   "covers": [
+    "holdout做法1（使用者私下保管，凍結後揭示）",
+    "開始P2"
+   ],
+   "not_covered": [
+    "保護區C、D",
+    "commit／push",
+    "Unity或其他目標環境"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "時鐘口徑同意；回讀門檻 5 µm 同意；holdout 不提供雜湊。凍結並開始第一個候選",
+   "covers": [
+    "單一時鐘口徑（協調者實際工作時間，等待使用者回覆不計入）",
+    "完整角色世界座標回讀門檻5µm、runtime 10µm",
+    "holdout不提供承諾雜湊",
+    "凍結需求",
+    "開始第一個候選"
+   ],
+   "not_covered": [
+    "保護區C、D",
+    "commit／push",
+    "Unity或其他目標環境",
+    "新付費生成的加購或升級"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "袖口權重授權；契約用做法 1。繼續第一個候選",
+   "covers": [
+    "保護區：r010右手腕關節後118個頂點的權重改為在30mm內由手掌漸變到前臂，左手同樣處理；其餘786個頂點維持凍結",
+    "契約做法1：另立需求版本 ro-swordsman-character-v1-r2，只修正姿勢定義，門檻不變，重新登記baseline",
+    "第一個候選延續，次數與時間照算"
+   ],
+   "not_covered": [
+    "保護區C（輔助骨）",
+    "r010右手其餘頂點的權重、Basis、拓樸",
+    "手肘135度門檻的任何放寬",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "契約用做法 1。繼續第一個候選",
+   "covers": [
+    "契約做法1：另立 ro-swordsman-character-v1-r3 並重新登記baseline",
+    "腳趾改用一般上限（不得新增交叉、邊長比不超過3）",
+    "脊椎側彎極端角度的手區交叉改為只報告、交美術審查；典型角度仍須為0",
+    "第一個候選延續"
+   ],
+   "not_covered": [
+    "其他門檻的任何放寬",
+    "保護區C",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "雙手下劈用做法 1。繼續第一個候選",
+   "covers": [
+    "雙手下劈做法1：另立 ro-swordsman-character-v1-r4 並重新登記baseline",
+    "雙手握劍姿勢的手臂旋轉以雜湊凍結，基準以同姿勢量出身體上限",
+    "第一個候選延續"
+   ],
+   "not_covered": [
+    "其他門檻的任何放寬",
+    "契約修正先做後報的常設授權（使用者未回覆，維持每次先問）",
+    "保護區C",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "text": "肩甲用做法 1，另立 r5 改量穿入深度。繼續第一個候選",
+   "covers": [
+    "肩甲做法1：綁定身體網格上的重複肩甲、肩甲上緣轉軸、輔助骨跟隨",
+    "另立 ro-swordsman-character-v1-r5：盔甲接觸改量穿入深度（靜止深度＋2mm），重新登記baseline",
+    "第一個候選延續"
+   ],
+   "interpretation": "盔甲接觸包含盔甲件之間（肩甲邊緣與胸甲）及被盔甲骨帶動的身體部位；這是上一則回報所述『肩甲邊緣嵌進胸甲』與『綁過去的那層盔甲』兩類接觸。",
+   "not_covered": [
+    "其他門檻的任何放寬",
+    "衣擺等非盔甲部位的門檻",
+    "保護區C",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T07:11:47Z",
+   "text": "肩甲不動、補授權扭轉骨",
+   "retroactive": true,
+   "covers": [
+    "肩甲維持靜態：b03-hands 維持目前最佳；r5 維持撤回；不再做肩甲綁定、轉軸或跟隨實驗",
+    "保護區C之前臂扭轉骨（事後補授權）：wrist_transition.R_twist、wrist_transition.L_twist（母骨 lower_arm.R／L，軸沿前臂）",
+    "袖口權重中交給扭轉骨的部分：每側118點中59點帶扭轉骨權重；手掌權重在腕後30mm內歸零，30–42mm由扭轉骨漸變到靜態載體",
+    "two_hand_chop 姿勢中兩根扭轉骨的旋轉（右15.7°、左18.4°，繞骨軸）"
+   ],
+   "disclosure": "兩根扭轉骨於 b01-base 組裝時即已加入，早於本筆授權，也未在先前回報中標示；依 r4 第803行規則，候選自 b01 起不合規。本筆為事後補授權，不改寫該事實。證據：runs/qa/ro-swordsman-character-v1/v001/v001-compliance-check-01.json",
+   "not_covered": [
+    "wrist_transition.L（左側靜態載體，非扭轉骨，不在保護區A所列6骨內）：待使用者決定",
+    "既有 wrist_transition.R 的 rest 方向與 roll 改變（y軸轉155.1°，改沿前臂）：待使用者決定",
+    "保護區C其餘項目（上臂twist、肩肘膝輔助骨）",
+    "保護區D其餘項目",
+    "其他門檻的任何放寬",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T07:16:26Z",
+   "text": "採用作法1",
+   "retroactive": true,
+   "covers": [
+    "做法1：wrist_transition.L（左側靜態載體，母骨 lower_arm.L，從不旋轉）事後補授權，b03 不重建",
+    "做法1：既有 wrist_transition.R 的 rest 方向與 roll 改變（y軸轉155.1°改沿前臂，roll 同前臂）事後補授權",
+    "骨架以 b03 的62骨為準：原53骨＋保護區A的6骨＋前臂扭轉骨2根＋左側靜態載體1根"
+   ],
+   "interpretation": "使用者引用上一則回覆中做法1的建議與可直接回覆的文字後回答『採用作法1』；依該文字視為同時繼續第一個候選（先以目前工具重跑 b03 的關節範圍與閉環，再做其餘工作）。回覆未包含『清掉肩甲實驗中間檔』，因此不清理。",
+   "disclosure": "兩項變更都在 b01-base 組裝時做成，早於授權且先前未回報；證據 runs/qa/ro-swordsman-character-v1/v001/v001-compliance-check-01.json",
+   "not_covered": [
+    "清掉肩甲實驗中間檔",
+    "保護區C其餘項目（上臂twist、肩肘膝輔助骨）",
+    "保護區D其餘項目",
+    "其他門檻的任何放寬",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T07:54:13Z",
+   "text": "預算用做法 1（另立 r6，每候選 18 小時）；扭轉骨用做法 1",
+   "covers": [
+    "預算做法1：另立 ro-swordsman-character-v1-r6，只把每候選 trial 上限由21,600秒改為64,800秒；候選數4、總上限172,800秒不變；已用時間延續；凍結並重新登記baseline",
+    "扭轉骨做法1：helper 規則加『只跟隨扭轉』模式（Python 與 JS 同步並加測試）；wrist_transition.R_twist／L_twist 各跟隨同側 hand 繞前臂軸扭轉的50%；移除 two_hand_chop 候選姿勢中手打的扭轉 key（凍結的四根手臂旋轉不變）；重跑關節範圍與閉環；雙手下劈若50%不過，最多再試2個比例",
+    "第一個候選 v001 延續"
+   ],
+   "interpretation": "r4／r6 的 frozen_poses 只凍結 upper_arm／lower_arm 四根旋轉，註記『手與手指的旋轉屬候選資料』；扭轉骨不在凍結值內，因此新的候選姿勢檔不需要再升需求版本。",
+   "not_covered": [
+    "其他門檻或驗收的任何放寬",
+    "清掉肩甲實驗中間檔",
+    "保護區C其餘項目",
+    "保護區D其餘項目",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T08:35:30Z",
+   "text": "Idle 用做法 1，繼續 Walk／Run",
+   "covers": [
+    "片段美術方向做法1：上臂貼近靜止方向（肩甲不動），Idle a03 的備戰握劍風格沿用到其他片段；美術審查後可再調整",
+    "繼續第一個候選：Walk／Run（腳部 IK、踩地時窗、名義速度扣除），完成後回報第二個里程碑"
+   ],
+   "not_covered": [
+    "握劍關卡量測方法的變更（雙射線誤判改用 winding 確認）：待實際卡住時另提選項",
+    "其他門檻或驗收的任何放寬",
+    "清掉肩甲實驗中間檔",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T09:13:01Z",
+   "text": "基礎用做法 1",
+   "covers": [
+    "只重刷身體網格（SM_RO_core）鼠蹊、腋下、膝窩、肘窩四區的權重過渡（每點最多4骨、總和1）；r010 手部權重與其他網格不動",
+    "身體上的單點修形（b02 的7個及之後新增者）丟掉後依新權重重算，僅處理剩餘的零星三角形",
+    "凍結契約、中段與翻面診斷、閉環、讀回全部重跑；Idle／Walk／Run 依新基礎重做，完成後回報第二個里程碑",
+    "契約不變；是否另立 r7 把中段角度納入凍結關卡，看重刷結果再決定"
+   ],
+   "not_covered": [
+    "另立 r7（中段角度入關卡）",
+    "其他門檻或驗收的任何放寬",
+    "r010 右手 Basis／權重／203拇指點",
+    "清掉肩甲實驗中間檔",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T09:30:06Z",
+   "text": "基礎用混合修正",
+   "covers": [
+    "只保留左鼠蹊局部權重平滑（B版的 groin.L 區，45 mm 半徑）；其他區不平滑",
+    "以改良工具（計入既有修形）重算受影響的 b02 修形；中段角度修形用凍結角度不作用的帽形曲線",
+    "跑步膝窩以只對膝屈曲生效的單點修形處理；處理深蹲多出的交叉",
+    "翻面只報告、交美術審查；契約不變；接著完成 Walk／Run 完整檢查與閉環，回報第二個里程碑"
+   ],
+   "not_covered": [
+    "關節區重拓樸",
+    "另立 r7",
+    "其他門檻或驗收的任何放寬",
+    "r010 右手 Basis／權重",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T10:03:32Z",
+   "text": "繼續下一個里程碑",
+   "covers": [
+    "第三個里程碑：Cast_OpenPalm、LieDown、Sleep_Loop、GetUp（床面代理、放劍／取劍事件與劍的掛點切換），以 b18 為基礎；完成後回報"
+   ],
+   "not_covered": [
+    "清掉中間版本（使用者這次未選）",
+    "其他門檻或驗收的任何放寬",
+    "Unity或其他目標環境",
+    "commit／push"
+   ]
+  },
+  {
+   "utc_date": "2026-10-05",
+   "recorded_utc": "2026-10-05T10:16:56Z",
+   "text": "先commit , push; 再繼續下一個里程碑",
+   "covers": [
+    "在工作目錄分支 codex/art-quality-loop 建立本機提交（依主題分批，只暫存核對過的檔案，不用 git add .）",
+    "git lfs push 與 git push 到 origin 的新分支 refs/heads/codex/art-quality-loop（快轉，不覆寫歷史）",
+    "push 完成後繼續第三個里程碑（第 14 筆）"
+   ],
+   "authorization_envelope": {
+    "destination": "git@github.com:monkey1sai/mmo-asset-pipeline.git（公開 repo；遠端目前只有 main@e077e22）",
+    "purpose": "把工作目錄 tmp/art-quality-loop 的現況（連段 r001–r010、角色 V1 r1–r6 與 v001 第一、二里程碑、工作台／文件／工具）提交並同步到遠端",
+    "allowed_operations": [
+     "git add（依路徑分批）",
+     "git commit",
+     "git lfs push origin <commit>",
+     "git push origin <commit>:refs/heads/codex/art-quality-loop（新分支、快轉）",
+     "唯讀 ls-remote 核對"
+    ],
+    "data_transmitted": "約 8,300 個檔案：LFS 約 3.9 GB（模型、Blender 源檔、assets 貼圖），一般 Git 約 3.1 GB（主要是 runs/qa 證據截圖）；推送前已做密鑰樣式掃描，未發現密鑰、cookie 或簽名網址",
+    "forbidden_operations": [
+     "push 到 main",
+     "force push 或改寫遠端歷史",
+     "建立／合併 PR",
+     "變更 repo 可見性",
+     "購買或升級 LFS 額度",
+     "變更 gh 權杖範圍或憑證",
+     "修改全域 Git 設定或安裝 hook",
+     "刪除遠端物件"
+    ],
+    "stop_conditions": [
+     "LFS 回報配額不足或拒收",
+     "單次推送超過大小上限被拒（改成更小批次，不改內容）",
+     "驗證失敗或主機金鑰不符",
+     "遠端出現同名分支且不是本機祖先"
+    ]
+   },
+   "conservative_defaults": [
+    "沿用現行 .gitattributes：模型與 Blender 源檔走 LFS，runs 證據截圖照規範走一般 Git",
+    "Blender 備份 .blend1 屬於 Blender 源檔，補進 LFS 規則",
+    "在 Windows 以 CRLF 寫出、且原位元組雜湊被紀錄引用的證據區，加 -text 照原位元組保存，不改內容也不重算雜湊",
+    "一般 Git 物件超過單次推送上限，所以分批推送"
+   ],
+   "not_covered": [
+    "PR、合併或部署",
+    "變更 repo 可見性",
+    "購買 LFS 額度",
+    "Unity 或其他目標環境"
+   ]
+  }
+ ],
+ "protected_zone": {
+  "A": "authorized",
+  "A_wrist_carriers": "authorized_retroactive",
+  "B": "authorized",
+  "C": "not_requested",
+  "C_forearm_twist": "authorized_retroactive",
+  "D": "not_requested",
+  "D_cuff_weights": "authorized"
+ },
+ "applies_to": [
+  "ro-swordsman-character-v1",
+  "ro-swordsman-character-v1-r2",
+  "ro-swordsman-character-v1-r3",
+  "ro-swordsman-character-v1-r4",
+  "ro-swordsman-character-v1-r5",
+  "ro-swordsman-character-v1-r6"
+ ]
+}

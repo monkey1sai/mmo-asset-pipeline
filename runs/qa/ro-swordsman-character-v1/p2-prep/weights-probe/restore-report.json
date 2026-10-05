@@ -1,0 +1,80 @@
+{
+ "id_attribute": "_CV1_ID",
+ "meshes": [
+  {
+   "mesh": "SM_RO_bracer.L",
+   "export_vertices": 1767,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_bracer.R",
+   "export_vertices": 1560,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_coat",
+   "export_vertices": 6888,
+   "vertices_with_restored_influence": 1,
+   "max_l1_before": 0.00016005833776672483
+  },
+  {
+   "mesh": "SM_RO_core",
+   "export_vertices": 8569,
+   "vertices_with_restored_influence": 362,
+   "max_l1_before": 0.00032081192741298197
+  },
+  {
+   "mesh": "SM_RO_cuirass",
+   "export_vertices": 6221,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_glove.R",
+   "export_vertices": 1319,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 5.960464477539063e-08
+  },
+  {
+   "mesh": "SM_RO_pauldron.L",
+   "export_vertices": 2611,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_pauldron.R",
+   "export_vertices": 2611,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_sword",
+   "export_vertices": 1493,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_WristLoft.R",
+   "export_vertices": 548,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 2.9802322443206464e-08
+  }
+ ],
+ "changed_bytes": 4099,
+ "all_other_bytes_identical": true,
+ "input": {
+  "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/ro_character_p1_baked_owner.glb",
+  "sha256": "29cea78e28eda0817881369415b836cfa9fceea612954e4c02d94bd9e8964581"
+ },
+ "output": {
+  "path": "runs/qa/ro-swordsman-character-v1/p2-prep/weights-probe/ro_character_p1_baked_owner_exact_weights.glb",
+  "sha256": "5d579fa4b9ead297268bef53da439638dd692e91c0c2031717120fd5176049e3",
+  "bytes": 2459148
+ },
+ "snapshot": {
+  "path": "runs/qa/ro-swordsman-character-v1/p2-prep/weights-probe/baseline-weights.json",
+  "sha256": "2c107d60e82f7b95a56619f51a9cd1e671ed7518a639dc5a434ee76876aa74a3"
+ }
+}

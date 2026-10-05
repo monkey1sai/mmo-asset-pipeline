@@ -1,0 +1,73 @@
+{
+ "id": "v001-compliance-check-01",
+ "observed_utc": "2026-10-05T07:11:47Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "question": "Skeleton of the current best build against the protected zone rule (r4 line 803)",
+ "read_only": true,
+ "build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "baseline": {
+  "blend": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+  "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+  "inspect": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+  "opened": "blender -b --factory-startup --disable-autoexec, not saved; r010 folders have no working-tree change"
+ },
+ "request_file": {
+  "path": "requests/ro-swordsman-character-v1-r4.json",
+  "file_sha256": "529dd2ef6c1dfcd0598c12cbcaf8f0c48db4a0cba364009682a0057a9d2eda2d",
+  "matches_freeze_record": true
+ },
+ "bones": {
+  "baseline": 53,
+  "build": 62,
+  "removed": [],
+  "added_listed_in_zone_A": ["thumb.R_03", "thumb.L_03", "finger1.L_03", "finger2.L_03", "finger3.L_03", "finger4.L_03"],
+  "added_beyond_zone_A": {
+   "wrist_transition.R_twist": "forearm twist carrier (zone C kind), parent lower_arm.R",
+   "wrist_transition.L_twist": "forearm twist carrier (zone C kind), parent lower_arm.L",
+   "wrist_transition.L": "static cuff carrier, parent lower_arm.L, never rotated; left counterpart of the existing wrist_transition.R; not a twist or shoulder/elbow/knee helper"
+  }
+ },
+ "existing_bone_rest_changed": {
+  "wrist_transition.R": {
+   "head_and_parent": "unchanged (head [-0.4137, -0.0122, 0.9479], parent lower_arm.R)",
+   "y_axis_baseline": [-0.0067, -0.442, -0.897],
+   "y_axis_build": [0.423, 0.3522, 0.8349],
+   "x_axis_baseline": [0.9999, 0.0067, -0.0108],
+   "x_axis_build": [0.8677, -0.423, -0.2611],
+   "y_axis_turn_deg": 155.1,
+   "cause": "scripts/cv1_v001_assemble.py lines 124-133 reuse the existing bone, point its tail 4 cm back along the forearm and copy the forearm roll",
+   "baseline_role": "deformed SM_RO_WristLoft.R (288 vertices); keyed (location, rotation, scale) by the baseline action RO_WristGrip_Prototype_61f_ARM_RO_Swordsman",
+   "build_role": "static cuff carrier of 72 SM_RO_hand.R vertices; SM_RO_WristLoft.R was replaced in b01 (runs/qa/ro-swordsman-character-v1/v001/b01-base/assemble-report.json, replaced_right_parts_triangles); the build has no actions",
+   "previously_reported": false
+  }
+ },
+ "cuff_weights_per_side": {
+  "vertices": 118,
+  "with_static_carrier": 72,
+  "with_twist_carrier": 59,
+  "with_both": 13,
+  "on_lower_arm": 0,
+  "split": "hand weight fades to 0 within 30 mm behind the wrist and the released share goes to the twist carrier; from 30 to 42 mm it fades from the twist carrier to the static carrier (scripts/cv1_v001_assemble.py lines 374-397)"
+ },
+ "who_rotates_the_carriers": {
+  "poses": "only two_hand_chop keys wrist_transition.R_twist (15.7 deg about the bone axis) and wrist_transition.L_twist (18.4 deg); no pose keys wrist_transition.R or wrist_transition.L",
+  "corrective_rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json has no wrist_transition reference; the twist carriers are clip-keyed, not rule-driven",
+  "joint_range_contract_v5": "mentions wrist_transition only through the hand region definition; no _twist bone",
+  "request_r4": "no _twist bone; line 581 counts wrist_transition weights toward the hand region"
+ },
+ "rule": {
+  "path": "requests/ro-swordsman-character-v1-r4.json",
+  "line": 803,
+  "text": "A、B已授權。C、D與任何其他保護區變更須先在授權紀錄檔新增一筆使用者授權才可動工；未授權的保護區變更使候選失敗。"
+ },
+ "authorization_record_before": {
+  "path": "runs/qa/ro-swordsman-character-v1/authorizations.json",
+  "sha256": "40f48a31cb60759f49d9bdd9092b0000abba9257ebe78d1ce7156426691a4e19",
+  "entries": 7,
+  "C": "not_requested"
+ },
+ "finding": "The three bones beyond zone A were added in b01-base before any authorization entry existed, and the rest of the existing wrist_transition.R was redirected; none of this was flagged in earlier reports. Under the rule as written the candidate was out of compliance from b01 on. The user retro-authorized the two twist carriers on 2026-10-05 (entry 8 of the authorization record); wrist_transition.L and the wrist_transition.R rest change remain open."
+}

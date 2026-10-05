@@ -1,0 +1,59 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/blender-reference.json",
+  "bytes": 187067,
+  "sha256": "1a870362f9065475db211be674c57f501cfd5626766eecbf66db4aa590de7e72"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/blender-reference.f64.bin",
+  "bytes": 30016320,
+  "sha256": "807291eca8c15b261fb60d9cf81052c576ff1ea9140da1ec7a3b89b03c5c5089"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "bytes": 21606,
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/export/b05_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 27370464,
+   "sha256": "0fde43b2a1c20ac097765ba54a2b152c356de48172db72b23b7944173804c71e"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/export/b05_baked_owner_exact_weights.glb",
+   "bytes": 2707224,
+   "sha256": "3b8954d35458345aea73853efa11decfbd6adc107c331aba59b20ded63b713ce"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   16,
+   "hands"
+  ],
+  [
+   37,
+   "whole"
+  ],
+  [
+   37,
+   "hands"
+  ],
+  [
+   34,
+   "whole"
+  ]
+ ],
+ "note": "Exact-weight GLBs (scripts/cv1_restore_glb_weights.py) as required by runtime_contract.tolerances_m.requires. b05: twist helper bones are evaluator-owned; their channels were stripped from the runtime-owner GLB (scripts/cv1_strip_bone_channels.py) and stay keyed in the baked-owner GLB."
+}

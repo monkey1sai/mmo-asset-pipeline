@@ -1,0 +1,1680 @@
+{
+ "observed_utc": "2026-10-05T06:21:27.211084+00:00",
+ "blender": "4.5.5 LTS",
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/c03-bind/ro_character_v001_c03-bind.blend",
+  "sha256": "752af17d0c4f196a3ce1227581dcaded9875a615c119fd95acb627192a6c8063",
+  "saved": false
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7",
+  "bound_to_request": true
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/helper-trials/c03-h2-rules.json",
+  "sha256": "6580accd61d0328bf4a23392ca302b037ab8e4b8114f55a2c7e385b06846fce3"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/poses.json",
+  "sha256": "28375c9c83812b83eadc76fae805dfb0c7d4a4ac0c6eb18486a2825c87f690bd"
+ },
+ "armature": "ARM_RO_Swordsman",
+ "bones": 62,
+ "measured_meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R"
+ ],
+ "excluded_meshes": [
+  "SM_RO_sword"
+ ],
+ "soup": {
+  "vertices": 29774,
+  "triangles": 53883,
+  "hand_region_triangles": 3576
+ },
+ "rest_pairs": {
+  "hand_self": 0,
+  "hand_other": 248,
+  "other": 4534
+ },
+ "rest_gate": {
+  "hand_self_intersection_zero": true,
+  "other_pairs_within_ceiling": true
+ },
+ "hand_frames": {
+  "L": {
+   "palmar": [
+    -0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    -0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  },
+  "R": {
+   "palmar": [
+    0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    -0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    -0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  }
+ },
+ "calibration_run": false,
+ "partial_run": [
+  "combo-arms-overhead",
+  "combo-cast-open-palm.L",
+  "elbow-flexion.L",
+  "shoulder-abduction.L",
+  "shoulder-abduction.R",
+  "shoulder-axial-plus.L",
+  "shoulder-extension.L",
+  "shoulder-flexion.L",
+  "shoulder-flexion.R"
+ ],
+ "motions": 9,
+ "measured": 9,
+ "missing": 0,
+ "numeric_gate_pass": false,
+ "failed_motions": [
+  "shoulder-flexion.L",
+  "shoulder-extension.L",
+  "shoulder-abduction.L",
+  "shoulder-flexion.R",
+  "shoulder-abduction.R",
+  "combo-arms-overhead",
+  "combo-cast-open-palm.L"
+ ],
+ "scope": "Numeric guards only, at finite poses: direction, real deformation of every stepped bone, triangle collapse, hand-region self and new cross-mesh intersections, hand edge-ratio guard, and a no-worse-than-baseline ratchet for the rest of the body (overlap at rest, pose-induced pairs and stretch). Weapon meshes are excluded here and judged by the grasp and clip gates. Not a continuous-range or art acceptance.",
+ "results": [
+  {
+   "id": "shoulder-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.17947769165039062,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.09031327510893569,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4451,
+     "other_new_pairs": 1102,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1913,
+        0.1093,
+        1.2867
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1856,
+        0.1102,
+        1.2896
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1791,
+        0.1083,
+        1.3737
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1414,
+        0.0793,
+        1.254
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521069600809,
+      1.000058341584215
+     ],
+     "other_edge_ratio": [
+      0.1823761861332628,
+      25.40383694798799
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09420249611139297,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.07241066336630003,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5117,
+     "other_new_pairs": 1848,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2319,
+        -0.0101,
+        1.3908
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2362,
+        0.0008,
+        1.37
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2047,
+        0.1016,
+        1.3645
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2148,
+        0.1293,
+        1.3068
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999367962936451,
+      1.000078996299152
+     ],
+     "other_edge_ratio": [
+      0.10228037495221587,
+      40.03539585908757
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-extension.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.06326781958341599,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.0568990510792455,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4655,
+     "other_new_pairs": 929,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1761,
+        0.114,
+        1.2613
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2459,
+        0.0246,
+        1.2351
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1934,
+        0.1213,
+        1.2549
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2023,
+        0.1352,
+        1.2981
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999764062327233,
+      1.0000315704518576
+     ],
+     "other_edge_ratio": [
+      0.6875594194757401,
+      6.9987709097713795
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-extension.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.11879902333021164,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.1291477395604491,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4793,
+     "other_new_pairs": 1298,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2243,
+        0.1713,
+        1.2566
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2289,
+        0.1241,
+        1.2611
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2085,
+        0.1302,
+        1.2381
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2798,
+        0.0611,
+        1.1971
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999556910096244,
+      1.000040920158988
+     ],
+     "other_edge_ratio": [
+      0.40445970381605895,
+      13.941824211213234
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-extension.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-abduction.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10589033365249634,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2263410270239337,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5016,
+     "other_new_pairs": 1575,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3521,
+        0.014,
+        1.2892
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3283,
+        0.0425,
+        1.2171
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.339,
+        -0.0021,
+        1.2802
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3897,
+        0.0301,
+        1.2695
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999313722224371,
+      1.0000580724727048
+     ],
+     "other_edge_ratio": [
+      0.35641160047912396,
+      21.575552180699038
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.002995818853378296,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.1972191390134425,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5190,
+     "other_new_pairs": 1870,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2604,
+        0.0309,
+        1.2278
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2257,
+        0.1001,
+        1.2763
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2645,
+        0.0367,
+        1.2386
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3178,
+        0.0472,
+        1.3506
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999508148546014,
+      1.0000612561255102
+     ],
+     "other_edge_ratio": [
+      0.1615463376358513,
+      36.562282005633385
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-axial-plus.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.30133739641680657,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4600,
+     "other_new_pairs": 589,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1458,
+        0.0865,
+        1.239
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1418,
+        0.1176,
+        1.2646
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1505,
+        0.1065,
+        1.2618
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.201,
+        0.0301,
+        1.1864
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999526439555729,
+      1.0000447888906963
+     ],
+     "other_edge_ratio": [
+      0.401687674400083,
+      4.895692615512059
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-axial-plus.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2971595631429291,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4720,
+     "other_new_pairs": 803,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2014,
+        0.0533,
+        1.1901
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.156,
+        0.099,
+        1.2451
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2163,
+        0.0873,
+        1.3635
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2014,
+        0.0533,
+        1.1901
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999554174613347,
+      1.0000411164076934
+     ],
+     "other_edge_ratio": [
+      0.28871655985254613,
+      9.101522885053036
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-axial-plus.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-axial-plus.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "elbow-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.3139,
+     0.0709,
+     1.1449
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.8
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.1306653618812561,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.07023776816430868,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4608,
+     "other_new_pairs": 205,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.333,
+        0.0309,
+        1.1795
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3171,
+        -0.0113,
+        1.1767
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3466,
+        -0.0067,
+        1.0856
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3161,
+        0.03,
+        1.179
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9998846306327875,
+      1.0000827624626736
+     ],
+     "other_edge_ratio": [
+      0.466513053245277,
+      1.6462558442457254
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/elbow-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.0025687534362077713,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08257553871712037,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5260,
+     "other_new_pairs": 886,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3384,
+        0.0928,
+        1.189
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3505,
+        0.0426,
+        1.1453
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3073,
+        0.0315,
+        1.1354
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3339,
+        -0.0092,
+        1.1934
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999908333681411,
+      1.0000536917028287
+     ],
+     "other_edge_ratio": [
+      0.22544084973079104,
+      1.9407211247352418
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/elbow-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/elbow-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-flexion.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     -0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.17947769165039062,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.10250324895476617,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4642,
+     "other_new_pairs": 1360,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.2024,
+        0.0128,
+        1.2667
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1814,
+        -0.0141,
+        1.3049
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2347,
+        -0.0184,
+        1.2024
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1756,
+        -0.019,
+        1.3081
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521069600809,
+      1.000058341584215
+     ],
+     "other_edge_ratio": [
+      0.19335946027807135,
+      19.84625842783241
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09420249611139297,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.0452326029778875,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5241,
+     "other_new_pairs": 2093,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2303,
+        0.038,
+        1.2394
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.2115,
+        0.0547,
+        1.355
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999367962936451,
+      1.000078996299152
+     ],
+     "other_edge_ratio": [
+      0.21467775783979587,
+      31.00248942985042
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 20973,
+       "rest_at": [
+        -0.2025,
+        0.0424,
+        1.3879
+       ],
+       "rest_area_mm2": 119.7222
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": false,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-abduction.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10589033365249634,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.09421766976122888,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5000,
+     "other_new_pairs": 1635,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.2057,
+        0.0301,
+        1.2651
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.3576,
+        0.0974,
+        1.2643
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.3194,
+        0.1189,
+        1.3052
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.3315,
+        0.05,
+        1.3293
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999313722224371,
+      1.0000580724727048
+     ],
+     "other_edge_ratio": [
+      0.26082975196819885,
+      15.561964017026359
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.002995818853378296,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.1218875549407501,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5055,
+     "other_new_pairs": 1810,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.3186,
+        0.0757,
+        1.3769
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.2662,
+        0.0427,
+        1.2391
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1964,
+        0.0285,
+        1.2557
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.2599,
+        0.0443,
+        1.2244
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999508148546014,
+      1.0000612561255102
+     ],
+     "other_edge_ratio": [
+      0.1845197717527874,
+      26.22648265706133
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/shoulder-abduction.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "combo-arms-overhead",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.16
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.09031327510893569,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4552,
+     "other_new_pairs": 2517,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1913,
+        0.1093,
+        1.2867
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.2024,
+        0.0128,
+        1.2667
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1856,
+        0.1102,
+        1.2896
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1814,
+        -0.0141,
+        1.3049
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999149069179162,
+      1.0000886113059053
+     ],
+     "other_edge_ratio": [
+      0.1823761861332628,
+      25.448952856891314
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-arms-overhead--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.0452326029778875,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5821,
+     "other_new_pairs": 4046,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2319,
+        -0.0101,
+        1.3908
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2362,
+        0.0023,
+        1.3703
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2303,
+        0.038,
+        1.2394
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2047,
+        0.1016,
+        1.3645
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999110687709554,
+      1.0000872857872374
+     ],
+     "other_edge_ratio": [
+      0.10228037495221587,
+      39.874776954171196
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 20973,
+       "rest_at": [
+        -0.2025,
+        0.0424,
+        1.3879
+       ],
+       "rest_area_mm2": 119.7222
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-arms-overhead--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-arms-overhead--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": false,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "combo-cast-open-palm.L",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 1.2
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.259899662433292,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4473,
+     "other_new_pairs": 1048,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2308,
+        0.121,
+        1.2616
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3142,
+        -0.0251,
+        1.2195
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1797,
+        0.0837,
+        1.3666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1858,
+        0.1031,
+        1.3403
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.7331212425939735,
+      1.3628929804191903
+     ],
+     "other_edge_ratio": [
+      0.3187766304306763,
+      16.21528921624919
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-cast-open-palm.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.06307418894020257,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4555,
+     "other_new_pairs": 1312,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1939,
+        0.1067,
+        1.2857
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2519,
+        -0.0075,
+        1.2877
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_cuirass",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1791,
+        0.1083,
+        1.3737
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2984,
+        -0.0449,
+        1.3065
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.5166830372449968,
+      1.7366528376018897
+     ],
+     "other_edge_ratio": [
+      0.25454700748360815,
+      29.427065896892955
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-cast-open-palm.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/tiles/combo-cast-open-palm.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  }
+ ]
+}

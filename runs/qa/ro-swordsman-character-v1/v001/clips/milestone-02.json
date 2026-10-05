@@ -1,0 +1,202 @@
+{
+ "id": "v001-milestone-02-locomotion",
+ "recorded_utc": "2026-10-05T09:56:34Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "foundation": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/build-record.json",
+ "clips": {
+  "AN_RO_Idle_Sword": {
+   "attempt": "a03",
+   "action": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/AN_RO_Idle_Sword.blend",
+    "sha256": "f366021aaa5318c961fe5e80ef00bbbd3a1ee5b3cd7285f121ada7f716578db5"
+   },
+   "clip_check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-check-b18/clip-check.json",
+    "samples": 245,
+    "pass_numeric": true,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        0,
+        119
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 0.0,
+       "float_m": 8.089747279882431e-05
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        119
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 2.2882289396619626e-09,
+       "float_m": 0.0
+      }
+     ]
+    },
+    "loop_seam": {
+     "from_frame": 120,
+     "to_frame": 0,
+     "max_bone_deg": 0.0,
+     "max_point_m": 0.0,
+     "pass": true
+    },
+    "min_triangle_area_ratio": 0.22186433774386916,
+    "other_new_pairs_max_report_only": 1400
+   },
+   "runtime": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t095341z-runtime-results.json",
+    "pass": true,
+    "summary": {
+     "runtime_owner_max_error_m": 8.48217545784342e-07,
+     "blend_max_error_m": 8.27108137307137e-07,
+     "baked_owner_max_error_m": 8.48217545784342e-07,
+     "frames": 25,
+     "max_rule_weight_difference": 1.4386313584857646e-07
+    }
+   },
+   "readback": {
+    "pass": true,
+    "max_um": 1.018
+   }
+  },
+  "AN_RO_Walk_Sword": {
+   "attempt": "a04",
+   "action": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/AN_RO_Walk_Sword.blend",
+    "sha256": "e96f0292034f5102caa380e3bf4e70ca4af08919b48dbed632db66be0759bc07"
+   },
+   "clip_check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-check-b18/clip-check.json",
+    "samples": 137,
+    "pass_numeric": true,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        30,
+        54
+       ],
+       "slide_m": 5.021655064177428e-05,
+       "penetration_m": 0.00015086913481354713,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        24
+       ],
+       "slide_m": 5.0097739391552635e-05,
+       "penetration_m": 0.00023152751964516938,
+       "float_m": 0.0
+      }
+     ]
+    },
+    "loop_seam": {
+     "from_frame": 60,
+     "to_frame": 0,
+     "max_bone_deg": 0.0,
+     "max_point_m": 0.0,
+     "pass": true
+    },
+    "min_triangle_area_ratio": 0.0548501989646333,
+    "other_new_pairs_max_report_only": 1579
+   },
+   "runtime": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t095432z-runtime-results.json",
+    "pass": true,
+    "summary": {
+     "runtime_owner_max_error_m": 1.976658994280639e-06,
+     "blend_max_error_m": 9.155538393146405e-07,
+     "baked_owner_max_error_m": 1.976658994280639e-06,
+     "frames": 25,
+     "max_rule_weight_difference": 7.773014614742557e-06
+    }
+   },
+   "readback": {
+    "pass": true,
+    "max_um": 1.436
+   }
+  },
+  "AN_RO_Run_Sword": {
+   "attempt": "a02",
+   "action": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "sha256": "406387ab766dda36b173da900fd7f1ff9a550c392436615defdd75b7f755a7e1"
+   },
+   "clip_check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02-check-b18/clip-check.json",
+    "samples": 97,
+    "pass_numeric": true,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        20,
+        29
+       ],
+       "slide_m": 0.0002505390047856237,
+       "penetration_m": 0.0013147235149517655,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        9
+       ],
+       "slide_m": 0.00025088590501141857,
+       "penetration_m": 0.0013952332083135843,
+       "float_m": 0.0
+      }
+     ]
+    },
+    "loop_seam": {
+     "from_frame": 40,
+     "to_frame": 0,
+     "max_bone_deg": 0.0,
+     "max_point_m": 0.0,
+     "pass": true
+    },
+    "min_triangle_area_ratio": 0.0531696486183847,
+    "other_new_pairs_max_report_only": 2874
+   },
+   "runtime": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t095530z-runtime-results.json",
+    "pass": true,
+    "summary": {
+     "runtime_owner_max_error_m": 2.1698602643351955e-06,
+     "blend_max_error_m": 1.2531733437193685e-06,
+     "baked_owner_max_error_m": 2.1698602643351955e-06,
+     "frames": 25,
+     "max_rule_weight_difference": 1.2247886518879092e-05
+    }
+   },
+   "readback": {
+    "pass": true,
+    "max_um": 1.778
+   }
+  }
+ },
+ "attempt_history": {
+  "AN_RO_Walk_Sword": "a01-a03 failed collapse on b05; a04 forward-only left arm; a05 step-out and a06 toe-out not better; a04 passes on b18",
+  "AN_RO_Run_Sword": "a01 failed collapse on b05; a02 spine lean on spine_01, smaller arm swing; a03 toe-out and a04/a05 lower swing or shorter stance not better; a02 passes on b18 (interaction config unchanged; a05 window change reverted before any re-registration)"
+ },
+ "loop_convention": "loop clips carry a closing key at frame N equal to frame 0; the seam gate compares N with 0 (Idle re-verified on b18 under this rule)",
+ "open": [
+  "independent gray acceptance of the grasp and art-motion review (batched)",
+  "flipped triangles are report-only (b18 diagnostic sum 322)",
+  "3 intermediate-level diagnostic collapses and the deferred two-hand-chop 15% site",
+  "thin margins: walk min area 0.0549, run 0.0532",
+  "clip-pose fixes do not generalise to the holdout"
+ ],
+ "preview_sheet": "runs/qa/ro-swordsman-character-v1/v001/clips/milestone-02-sheet.png",
+ "new_paid_submissions": 0
+}

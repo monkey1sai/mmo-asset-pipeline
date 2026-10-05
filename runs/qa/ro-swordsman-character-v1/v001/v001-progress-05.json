@@ -1,0 +1,142 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T06:06:23Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "in progress (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z"
+ ],
+ "note_on_interval_4": "ended at the progress-04 record; the cleanup the user asked for between the turns is not candidate work and is not counted",
+ "active_seconds_total": 2271,
+ "trial_seconds_cap": 21600,
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "bytes": 32271376,
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "export": {
+  "qa_clip": "39 integer frames: rest plus 19 contract motions at the typical and extreme levels; first key at t=0",
+  "reference": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/blender-reference.json",
+   "bytes": 186816,
+   "sha256": "5a12eb50ea4ecb4d942091720570e61d05ed890f5728eeffb2e4fa828ac0949b"
+  },
+  "glb_exact_weights": {
+   "runtime_owner": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/export/b03_runtime_owner_exact_weights.glb",
+    "bytes": 27371108,
+    "sha256": "e59fea3036d1b233f2da0f1a7ee45afa692c75436fe2ff3ce9ecf07d4c4588d4"
+   },
+   "baked_owner": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/export/b03_baked_owner_exact_weights.glb",
+    "bytes": 2707224,
+    "sha256": "e36b907f87423551be26c565cba8afe1a78077d1cbc23d562f3b58c268d86798"
+   }
+  },
+  "restore": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/restore-runtime_owner.json",
+   "bytes": 2116,
+   "sha256": "44ca4b9612d5985ebf2f1f78f4c127adc3a1d59c2f99c4ecaa46f78ae89bd251"
+  }
+ },
+ "fresh_blender_readback": {
+  "tolerance_m": 5e-06,
+  "as_exported": {
+   "max_m": 4.08560554191249e-05,
+   "pass": false
+  },
+  "exact_weights": {
+   "max_m": 4.205930287720827e-06,
+   "pass": true,
+   "record": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/roundtrip-b03_baked_owner_exact_weights.json",
+    "bytes": 13402,
+    "sha256": "241721f0f1e7eef80a9881a3961ca168d6b3940874ee7a58dbe2573fe7e74f47"
+   }
+  }
+ },
+ "runtime_closed_loop": {
+  "record": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/runtime\\20261005t060401z-runtime-results.json",
+   "bytes": 206198,
+   "sha256": "0c0c5cfb8351d5597076e18b68e5d8d21b5cf2f19c4c42d04e5223cae1f99b26"
+  },
+  "gate_m": 1e-05,
+  "pass": true,
+  "verdicts": {
+   "runtime_owner_gate": true,
+   "blend_gate": true,
+   "baked_owner_gate": true,
+   "all_blender_vertices_covered": true,
+   "rule_weights_match_blender": true,
+   "runtime_owner_clip_has_no_owned_morph_channel": true,
+   "negative_controls_all_detected": true
+  },
+  "summary": {
+   "runtime_owner_max_error_m": 4.641708524806419e-06,
+   "blend_max_error_m": 8.27108137307137e-07,
+   "baked_owner_max_error_m": 4.641708524806419e-06,
+   "frames": 39,
+   "max_rule_weight_difference": 2.564278636874029e-06
+  },
+  "negative_controls": {
+   "NC1_evaluator_off": {
+    "detected": true,
+    "max_error_m": 0.006962148137546944
+   },
+   "NC2_stale_pose": {
+    "detected": true,
+    "max_error_m": 0.004075704312844194
+   },
+   "NC3_baked_clip_in_runtime_owner_mode": {
+    "detected": true,
+    "conflicting_channels": 47
+   },
+   "NC4_missing_bone": {
+    "detected": true,
+    "message": "MISSING_BONE:spine_02_not_in_skeleton"
+   },
+   "NC5_missing_interaction_state": {
+    "detected": true,
+    "message": "MISSING_STATE:grasp.L"
+   }
+  }
+ },
+ "foundation_signature": {
+  "record": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/signature/foundation.json",
+   "bytes": 1191,
+   "sha256": "f7f693d78a624d846fac75ca27c5fff6a0736497fe306296113be3fa3bf1d20f"
+  },
+  "selftest_changed_categories": {
+   "added-clip": [],
+   "changed-weight": [
+    "weights"
+   ],
+   "changed-morph": [
+    "morphs"
+   ]
+  },
+  "selftest_expectation": "added clip: none; changed weight: weights only; changed corrective vertex: morphs only",
+  "selftest_pass": true
+ },
+ "scope_limits": [
+  "QA pose clip, not gameplay clips; integer frames only",
+  "rotation_difference drivers peak at their target pose; the seven core fold fixes are therefore off at the extreme level and only sampled at two levels",
+  "CPU-evaluated vertices; no GPU pixel comparison",
+  "textures: left hand shows the mirrored texture; 16 cross-UV-island faces remain and changing hand UVs is a protected-zone change"
+ ],
+ "gray_review": "independent blind A/B review still running at record time",
+ "new_paid_submissions": 0
+}

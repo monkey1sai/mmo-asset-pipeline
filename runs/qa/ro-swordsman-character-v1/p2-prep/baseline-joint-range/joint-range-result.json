@@ -1,0 +1,6579 @@
+{
+ "observed_utc": "2026-10-05T04:11:38.402843+00:00",
+ "blender": "4.5.5 LTS",
+ "subject": {
+  "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+  "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+  "saved": false
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1/p2-prep/joint-range-contract.json",
+  "sha256": "85a7840bc0969275aaf7f4edbf296026eb3e342e182aa623755a126ad2c5e995"
+ },
+ "rules": null,
+ "armature": "ARM_RO_Swordsman",
+ "bones": 53,
+ "deforming_meshes": [
+  "SM_RO_WristLoft.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_glove.R"
+ ],
+ "rest_self_intersection_pairs": {
+  "SM_RO_WristLoft.R": 0,
+  "SM_RO_coat": 9,
+  "SM_RO_core": 11,
+  "SM_RO_glove.R": 0
+ },
+ "hand_frames": {
+  "L": {
+   "palmar": [
+    -0.5344,
+    -0.8084,
+    -0.2468
+   ],
+   "dorsal": [
+    0.5344,
+    0.8084,
+    0.2468
+   ],
+   "radial": [
+    0.721,
+    -0.5884,
+    0.3661
+   ],
+   "ulnar": [
+    -0.721,
+    0.5884,
+    -0.3661
+   ],
+   "index_finger": 4
+  },
+  "R": {
+   "palmar": [
+    0.2024,
+    -0.9668,
+    0.1556
+   ],
+   "dorsal": [
+    -0.2024,
+    0.9668,
+    -0.1556
+   ],
+   "radial": [
+    -0.9773,
+    -0.2095,
+    -0.0304
+   ],
+   "ulnar": [
+    0.9773,
+    0.2095,
+    0.0304
+   ],
+   "index_finger": 4
+  }
+ },
+ "motions": 61,
+ "measured": 56,
+ "missing": 5,
+ "numeric_gate_pass": false,
+ "failed_motions": [
+  "spine-twist",
+  "shoulder-flexion.L",
+  "shoulder-abduction.L",
+  "elbow-flexion.L",
+  "fingers-dip-flexion.L",
+  "thumb-ip-flexion.L",
+  "combo-empty-fist.L",
+  "shoulder-flexion.R",
+  "forearm-supination.R",
+  "wrist-extension.R",
+  "fingers-mcp-flexion.R",
+  "fingers-pip-flexion.R",
+  "thumb-ip-flexion.R",
+  "combo-empty-fist.R",
+  "combo-arms-overhead",
+  "combo-two-hand-chop",
+  "combo-cast-open-palm.L"
+ ],
+ "scope": "Numeric guards only: direction, triangle collapse, typical-level self-intersections (zero on exposed meshes, baseline ceiling elsewhere). Extreme-level intersections and edge ratios are reported for art review. Finite poses; not a continuous-range or art acceptance.",
+ "results": [
+  {
+   "id": "spine-flexion",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.9439,
+     -0.3304,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10161992907524109,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.3814214988743998,
+     "min_edge_ratio": 0.5796807892257833,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-flexion--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.1943664252758026,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.0599160928378515,
+     "min_edge_ratio": 0.4544329156531346,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-flexion--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-flexion--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "spine-extension",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.9439,
+     -0.3304,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.04489775374531746,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.1574433312408627,
+     "min_edge_ratio": 0.8472093870091776,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-extension--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.08814118802547455,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.3485067158608715,
+     "min_edge_ratio": 0.716983289783405,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-extension--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-flexion--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "spine-lateral",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.05649776756763458,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 1,
+     "max_edge_ratio": 2.8768330326488405,
+     "min_edge_ratio": 0.6591874287689012,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.6400682222314202,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.8768330326488405,
+       "min_edge_ratio": 0.6591874287689012,
+       "new_self_intersection_pairs": 1,
+       "examples": [
+        {
+         "triangles": [
+          11734,
+          11743
+         ],
+         "at": [
+          -0.2243,
+          0.0942,
+          1.1888
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-lateral--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.11093568801879883,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 22,
+     "max_edge_ratio": 5.0028830778750155,
+     "min_edge_ratio": 0.44429307912131727,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.30498417541749845,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 5.0028830778750155,
+       "min_edge_ratio": 0.44429307912131727,
+       "new_self_intersection_pairs": 22,
+       "examples": [
+        {
+         "triangles": [
+          320,
+          4339
+         ],
+         "at": [
+          0.2292,
+          0.0315,
+          1.0687
+         ]
+        },
+        {
+         "triangles": [
+          320,
+          4342
+         ],
+         "at": [
+          0.2292,
+          0.0315,
+          1.0687
+         ]
+        },
+        {
+         "triangles": [
+          321,
+          4342
+         ],
+         "at": [
+          0.2284,
+          0.0387,
+          1.072
+         ]
+        },
+        {
+         "triangles": [
+          3735,
+          11739
+         ],
+         "at": [
+          -0.1897,
+          0.0724,
+          1.2152
+         ]
+        },
+        {
+         "triangles": [
+          3735,
+          12302
+         ],
+         "at": [
+          -0.1897,
+          0.0724,
+          1.2152
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-lateral--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-lateral--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "spine-twist",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.2873,
+     -0.9578,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.2812976335054445,
+     "min_edge_ratio": 0.14906846555422062,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.04042229311270733,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 3.2812976335054445,
+       "min_edge_ratio": 0.14906846555422062,
+       "new_self_intersection_pairs": 0,
+       "examples": []
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-twist--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 8,
+     "max_edge_ratio": 6.169160406337261,
+     "min_edge_ratio": 0.5048109895227416,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.5700371937423824,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 6.169160406337261,
+       "min_edge_ratio": 0.5048109895227416,
+       "new_self_intersection_pairs": 8,
+       "examples": [
+        {
+         "triangles": [
+          261,
+          274
+         ],
+         "at": [
+          0.2208,
+          0.1535,
+          1.1591
+         ]
+        },
+        {
+         "triangles": [
+          272,
+          4334
+         ],
+         "at": [
+          0.211,
+          0.1148,
+          1.1474
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4330
+         ],
+         "at": [
+          0.2112,
+          0.1462,
+          1.151
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4331
+         ],
+         "at": [
+          0.2112,
+          0.1462,
+          1.151
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4334
+         ],
+         "at": [
+          0.2112,
+          0.1462,
+          1.151
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-twist--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/spine-twist--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "neck-yaw",
+   "region": "head",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.05,
+     1.4
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 0.7
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9037058793951076,
+     "min_edge_ratio": 0.5231296097392927,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-yaw--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.8202899133963255,
+     "min_edge_ratio": 0.4723431244268862,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-yaw--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-yaw--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "neck-pitch",
+   "region": "head",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.05,
+     1.4
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.7
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.07502040266990662,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.476814898343481,
+     "min_edge_ratio": 0.800511283247829,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-pitch--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.1453767865896225,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9525171979769789,
+     "min_edge_ratio": 0.6370737692113969,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-pitch--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-pitch--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "neck-roll",
+   "region": "head",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.05,
+     1.4
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 0.7
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.05027031525969505,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.3148705451538418,
+     "min_edge_ratio": 0.5819497733984962,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-roll--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09925466030836105,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.636814505389649,
+     "min_edge_ratio": 0.19477359073493133,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-roll--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/neck-yaw--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.2081139087677002,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 113,
+     "max_edge_ratio": 23.85454252193152,
+     "min_edge_ratio": 0.1986872421573361,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.047432316699580916,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 23.85454252193152,
+       "min_edge_ratio": 0.1986872421573361,
+       "new_self_intersection_pairs": 113,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          296
+         ],
+         "at": [
+          0.2029,
+          -0.0169,
+          1.1985
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          297
+         ],
+         "at": [
+          0.2029,
+          -0.0169,
+          1.1985
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4346
+         ],
+         "at": [
+          0.2029,
+          -0.0169,
+          1.1985
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4348
+         ],
+         "at": [
+          0.2029,
+          -0.0169,
+          1.1985
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4349
+         ],
+         "at": [
+          0.2029,
+          -0.0169,
+          1.1985
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.10902567952871323,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 597,
+     "max_edge_ratio": 37.60446127888092,
+     "min_edge_ratio": 0.21340182794966434,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.04526961390981117,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 37.60446127888092,
+       "min_edge_ratio": 0.21340182794966434,
+       "new_self_intersection_pairs": 597,
+       "examples": [
+        {
+         "triangles": [
+          230,
+          1654
+         ],
+         "at": [
+          -0.0355,
+          -0.0544,
+          1.6863
+         ]
+        },
+        {
+         "triangles": [
+          230,
+          13479
+         ],
+         "at": [
+          -0.0355,
+          -0.0544,
+          1.6863
+         ]
+        },
+        {
+         "triangles": [
+          230,
+          13480
+         ],
+         "at": [
+          -0.0355,
+          -0.0544,
+          1.6863
+         ]
+        },
+        {
+         "triangles": [
+          233,
+          1654
+         ],
+         "at": [
+          -0.0398,
+          -0.0607,
+          1.683
+         ]
+        },
+        {
+         "triangles": [
+          233,
+          1656
+         ],
+         "at": [
+          -0.0398,
+          -0.0607,
+          1.683
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-extension.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.07340749353170395,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 25,
+     "max_edge_ratio": 6.5964795426995035,
+     "min_edge_ratio": 0.773668894842148,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.46243568199464274,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 6.5964795426995035,
+       "min_edge_ratio": 0.773668894842148,
+       "new_self_intersection_pairs": 25,
+       "examples": [
+        {
+         "triangles": [
+          272,
+          4335
+         ],
+         "at": [
+          0.2298,
+          0.034,
+          1.1474
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4328
+         ],
+         "at": [
+          0.2411,
+          0.0623,
+          1.1479
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4331
+         ],
+         "at": [
+          0.2411,
+          0.0623,
+          1.1479
+         ]
+        },
+        {
+         "triangles": [
+          275,
+          4328
+         ],
+         "at": [
+          0.2368,
+          0.0483,
+          1.1484
+         ]
+        },
+        {
+         "triangles": [
+          292,
+          4328
+         ],
+         "at": [
+          0.2355,
+          0.0554,
+          1.1465
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-extension.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.13785535097122192,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 50,
+     "max_edge_ratio": 13.113093485062313,
+     "min_edge_ratio": 0.5816320903372959,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.11216418241356449,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 13.113093485062313,
+       "min_edge_ratio": 0.5816320903372959,
+       "new_self_intersection_pairs": 50,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          292
+         ],
+         "at": [
+          0.232,
+          0.0598,
+          1.149
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          293
+         ],
+         "at": [
+          0.232,
+          0.0598,
+          1.149
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          4328
+         ],
+         "at": [
+          0.2358,
+          0.096,
+          1.1525
+         ]
+        },
+        {
+         "triangles": [
+          272,
+          4334
+         ],
+         "at": [
+          0.2298,
+          0.034,
+          1.1474
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4328
+         ],
+         "at": [
+          0.2362,
+          0.0995,
+          1.1562
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-extension.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-abduction.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10589215159416199,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 19,
+     "max_edge_ratio": 21.569102447403694,
+     "min_edge_ratio": 0.5736054864676426,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.4093986572052326,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 21.569102447403694,
+       "min_edge_ratio": 0.5736054864676426,
+       "new_self_intersection_pairs": 19,
+       "examples": [
+        {
+         "triangles": [
+          271,
+          4332
+         ],
+         "at": [
+          0.324,
+          0.018,
+          1.2251
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          4333
+         ],
+         "at": [
+          0.324,
+          0.018,
+          1.2251
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          4335
+         ],
+         "at": [
+          0.324,
+          0.018,
+          1.2251
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4333
+         ],
+         "at": [
+          0.3233,
+          0.0236,
+          1.226
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4335
+         ],
+         "at": [
+          0.3233,
+          0.0236,
+          1.226
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.002994030714035034,
+     "direction_ok": false,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 87,
+     "max_edge_ratio": 36.55093652892242,
+     "min_edge_ratio": 0.19189445513887066,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.02529595825503608,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 36.55093652892242,
+       "min_edge_ratio": 0.19189445513887066,
+       "new_self_intersection_pairs": 87,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          5061
+         ],
+         "at": [
+          0.2664,
+          0.0205,
+          1.2416
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          4335
+         ],
+         "at": [
+          0.3027,
+          0.0175,
+          1.3377
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          5061
+         ],
+         "at": [
+          0.3027,
+          0.0175,
+          1.3377
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          5064
+         ],
+         "at": [
+          0.3027,
+          0.0175,
+          1.3377
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          5065
+         ],
+         "at": [
+          0.3027,
+          0.0175,
+          1.3377
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "elbow-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.3139,
+     0.0709,
+     1.1449
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.8
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.15268149971961975,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 5,
+     "max_edge_ratio": 1.6081217952693263,
+     "min_edge_ratio": 0.24044379204877844,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.18720683888999812,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.6081217952693263,
+       "min_edge_ratio": 0.24044379204877844,
+       "new_self_intersection_pairs": 5,
+       "examples": [
+        {
+         "triangles": [
+          4750,
+          4755
+         ],
+         "at": [
+          0.3033,
+          0.0407,
+          1.1741
+         ]
+        },
+        {
+         "triangles": [
+          4750,
+          4758
+         ],
+         "at": [
+          0.3033,
+          0.0407,
+          1.1741
+         ]
+        },
+        {
+         "triangles": [
+          4751,
+          4755
+         ],
+         "at": [
+          0.3074,
+          0.0442,
+          1.1754
+         ]
+        },
+        {
+         "triangles": [
+          4751,
+          4758
+         ],
+         "at": [
+          0.3074,
+          0.0442,
+          1.1754
+         ]
+        },
+        {
+         "triangles": [
+          4758,
+          4985
+         ],
+         "at": [
+          0.2948,
+          0.0383,
+          1.1715
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.014281680807471275,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 164,
+     "max_edge_ratio": 2.3905011108126257,
+     "min_edge_ratio": 0.22765735370272377,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.04520020792040844,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 2.3905011108126257,
+       "min_edge_ratio": 0.22765735370272377,
+       "new_self_intersection_pairs": 164,
+       "examples": [
+        {
+         "triangles": [
+          260,
+          4789
+         ],
+         "at": [
+          0.2442,
+          0.027,
+          1.1517
+         ]
+        },
+        {
+         "triangles": [
+          261,
+          4788
+         ],
+         "at": [
+          0.2473,
+          0.0209,
+          1.1565
+         ]
+        },
+        {
+         "triangles": [
+          261,
+          4789
+         ],
+         "at": [
+          0.2473,
+          0.0209,
+          1.1565
+         ]
+        },
+        {
+         "triangles": [
+          271,
+          4789
+         ],
+         "at": [
+          0.2381,
+          0.0276,
+          1.1484
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          4784
+         ],
+         "at": [
+          0.2406,
+          0.0339,
+          1.1483
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "forearm-pronation.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 0.45
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.8624302868070182,
+     "min_edge_ratio": 0.2802466054150606,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 6,
+     "max_edge_ratio": 2.658143988856148,
+     "min_edge_ratio": 0.3635554310685802,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.30981890785899774,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.658143988856148,
+       "min_edge_ratio": 0.3635554310685802,
+       "new_self_intersection_pairs": 6,
+       "examples": [
+        {
+         "triangles": [
+          4563,
+          4574
+         ],
+         "at": [
+          0.441,
+          -0.1022,
+          0.8782
+         ]
+        },
+        {
+         "triangles": [
+          4566,
+          4572
+         ],
+         "at": [
+          0.4408,
+          -0.0877,
+          0.8968
+         ]
+        },
+        {
+         "triangles": [
+          4566,
+          4573
+         ],
+         "at": [
+          0.4408,
+          -0.0877,
+          0.8968
+         ]
+        },
+        {
+         "triangles": [
+          4567,
+          4572
+         ],
+         "at": [
+          0.4415,
+          -0.0929,
+          0.8894
+         ]
+        },
+        {
+         "triangles": [
+          4567,
+          4574
+         ],
+         "at": [
+          0.4415,
+          -0.0929,
+          0.8894
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "forearm-supination.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 0.45
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9363997633647392,
+     "min_edge_ratio": 0.6699474194091762,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-supination.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 9,
+     "max_edge_ratio": 2.7079453961757434,
+     "min_edge_ratio": 0.3630435030001791,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.23575630076032028,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.7079453961757434,
+       "min_edge_ratio": 0.3630435030001791,
+       "new_self_intersection_pairs": 9,
+       "examples": [
+        {
+         "triangles": [
+          4536,
+          4572
+         ],
+         "at": [
+          0.4971,
+          -0.0384,
+          0.8994
+         ]
+        },
+        {
+         "triangles": [
+          4536,
+          4597
+         ],
+         "at": [
+          0.4971,
+          -0.0384,
+          0.8994
+         ]
+        },
+        {
+         "triangles": [
+          4537,
+          4572
+         ],
+         "at": [
+          0.4908,
+          -0.0368,
+          0.9025
+         ]
+        },
+        {
+         "triangles": [
+          4540,
+          4572
+         ],
+         "at": [
+          0.4955,
+          -0.033,
+          0.8918
+         ]
+        },
+        {
+         "triangles": [
+          4540,
+          4575
+         ],
+         "at": [
+          0.4955,
+          -0.033,
+          0.8918
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-supination.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-flexion.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.721,
+     -0.5884,
+     0.3661
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.041000013290613424,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9366901898940616,
+     "min_edge_ratio": 0.6500101223328995,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.0710140592418611,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.177646102154163,
+     "min_edge_ratio": 0.5046417569575127,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-extension.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.721,
+     -0.5884,
+     0.3661
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.04099998250603676,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.1109687449539405,
+     "min_edge_ratio": 0.5126116780699654,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-extension.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07101405132561922,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 5,
+     "max_edge_ratio": 3.140853582792715,
+     "min_edge_ratio": 0.21830539951710057,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.137165623112415,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 3.140853582792715,
+       "min_edge_ratio": 0.21830539951710057,
+       "new_self_intersection_pairs": 5,
+       "examples": [
+        {
+         "triangles": [
+          204,
+          4502
+         ],
+         "at": [
+          0.4452,
+          0.0014,
+          0.9615
+         ]
+        },
+        {
+         "triangles": [
+          205,
+          4502
+         ],
+         "at": [
+          0.4486,
+          0.0093,
+          0.9609
+         ]
+        },
+        {
+         "triangles": [
+          4494,
+          4502
+         ],
+         "at": [
+          0.4397,
+          0.0172,
+          0.9576
+         ]
+        },
+        {
+         "triangles": [
+          4495,
+          4502
+         ],
+         "at": [
+          0.4308,
+          0.0165,
+          0.9548
+         ]
+        },
+        {
+         "triangles": [
+          4495,
+          4505
+         ],
+         "at": [
+          0.4308,
+          0.0165,
+          0.9548
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-extension.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-radial.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.5344,
+     0.8084,
+     0.2468
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.014239109819754958,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.1569529938386605,
+     "min_edge_ratio": 0.6130634853803907,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.028045620769262314,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.3068263916449123,
+     "min_edge_ratio": 0.3500736031213604,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-ulnar.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.5344,
+     0.8084,
+     0.2468
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.014239179668948054,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.4978723445767368,
+     "min_edge_ratio": 0.8381594654727278,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-ulnar.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.028045660350471735,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.0171784696750517,
+     "min_edge_ratio": 0.6745881847448674,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-ulnar.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "fingers-mcp-flexion.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4515,
+     -0.0137,
+     0.867
+    ],
+    "view": [
+     0.5698,
+     -0.7669,
+     0.2953
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.020726557821035385,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.5274357939211325,
+     "min_edge_ratio": 0.4909002058167347,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.016607451252639294,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 57,
+     "max_edge_ratio": 1.8919899964642162,
+     "min_edge_ratio": 0.193370861226376,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.07245645554358422,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.8919899964642162,
+       "min_edge_ratio": 0.193370861226376,
+       "new_self_intersection_pairs": 57,
+       "examples": [
+        {
+         "triangles": [
+          34,
+          131
+         ],
+         "at": [
+          0.3958,
+          -0.0896,
+          0.8997
+         ]
+        },
+        {
+         "triangles": [
+          35,
+          128
+         ],
+         "at": [
+          0.4002,
+          -0.0867,
+          0.8991
+         ]
+        },
+        {
+         "triangles": [
+          35,
+          131
+         ],
+         "at": [
+          0.4002,
+          -0.0867,
+          0.8991
+         ]
+        },
+        {
+         "triangles": [
+          35,
+          141
+         ],
+         "at": [
+          0.4002,
+          -0.0867,
+          0.8991
+         ]
+        },
+        {
+         "triangles": [
+          39,
+          135
+         ],
+         "at": [
+          0.3921,
+          -0.0853,
+          0.8903
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "fingers-pip-flexion.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4515,
+     -0.0137,
+     0.867
+    ],
+    "view": [
+     0.5698,
+     -0.7669,
+     0.2953
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.017322334926575422,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.3075799816662186,
+     "min_edge_ratio": 0.5623792214530605,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-pip-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.0004463356453925371,
+     "direction_ok": false,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 1,
+     "max_edge_ratio": 1.438982032361211,
+     "min_edge_ratio": 0.18288014794939042,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.13096264283007342,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.438982032361211,
+       "min_edge_ratio": 0.18288014794939042,
+       "new_self_intersection_pairs": 1,
+       "examples": [
+        {
+         "triangles": [
+          5033,
+          13928
+         ],
+         "at": [
+          0.4147,
+          -0.0178,
+          0.84
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-pip-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "fingers-dip-flexion.L",
+   "region": "hand.L",
+   "status": "missing_bones",
+   "missing": [
+    "finger1.L_03",
+    "finger2.L_03",
+    "finger3.L_03",
+    "finger4.L_03"
+   ],
+   "pass": false
+  },
+  {
+   "id": "fingers-spread.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4515,
+     -0.0137,
+     0.867
+    ],
+    "view": [
+     0.5344,
+     0.8084,
+     0.2468
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.2733028751983653,
+     "min_edge_ratio": 0.9558297995352945,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.5974235489174842,
+     "min_edge_ratio": 0.9111552141541737,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-cmc-opposition.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.455,
+     -0.037,
+     0.914
+    ],
+    "view": [
+     -0.2284,
+     -0.9691,
+     -0.0932
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.01675923547009006,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.3599010589692337,
+     "min_edge_ratio": 0.5840455396366344,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.02834884321782738,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 4,
+     "max_edge_ratio": 5.852855490412732,
+     "min_edge_ratio": 0.49239195187564644,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.48706413033115614,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 5.852855490412732,
+       "min_edge_ratio": 0.49239195187564644,
+       "new_self_intersection_pairs": 4,
+       "examples": [
+        {
+         "triangles": [
+          4536,
+          4575
+         ],
+         "at": [
+          0.4582,
+          -0.0861,
+          0.91
+         ]
+        },
+        {
+         "triangles": [
+          4536,
+          4597
+         ],
+         "at": [
+          0.4582,
+          -0.0861,
+          0.91
+         ]
+        },
+        {
+         "triangles": [
+          4538,
+          4575
+         ],
+         "at": [
+          0.4472,
+          -0.0955,
+          0.905
+         ]
+        },
+        {
+         "triangles": [
+          4588,
+          4593
+         ],
+         "at": [
+          0.4371,
+          -0.0586,
+          0.9085
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-mcp-flexion.L",
+   "region": "hand.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.455,
+     -0.037,
+     0.914
+    ],
+    "view": [
+     -0.2284,
+     -0.9691,
+     -0.0932
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.012007205048575997,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.519110368695822,
+     "min_edge_ratio": 0.8963522363368296,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-mcp-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.026438698172569275,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.978813660087703,
+     "min_edge_ratio": 0.8174747974449665,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-mcp-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-ip-flexion.L",
+   "region": "hand.L",
+   "status": "missing_bones",
+   "missing": [
+    "thumb.L_03"
+   ],
+   "pass": false
+  },
+  {
+   "id": "combo-empty-fist.L",
+   "region": "combo",
+   "status": "missing_bones",
+   "missing": [
+    "finger1.L_03",
+    "finger2.L_03",
+    "finger3.L_03",
+    "finger4.L_03",
+    "thumb.L_03"
+   ],
+   "pass": false
+  },
+  {
+   "id": "hip-flexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.32480770349502563,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 34,
+     "max_edge_ratio": 6.139759845626188,
+     "min_edge_ratio": 0.5944209970605178,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.2035727124526025,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 6.139759845626188,
+       "min_edge_ratio": 0.5944209970605178,
+       "new_self_intersection_pairs": 34,
+       "examples": [
+        {
+         "triangles": [
+          5387,
+          5393
+         ],
+         "at": [
+          0.1826,
+          0.008,
+          0.8582
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9016
+         ],
+         "at": [
+          0.1852,
+          -0.0092,
+          0.828
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9017
+         ],
+         "at": [
+          0.1852,
+          -0.0092,
+          0.828
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9032
+         ],
+         "at": [
+          0.1852,
+          -0.0092,
+          0.828
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9059
+         ],
+         "at": [
+          0.1852,
+          -0.0092,
+          0.828
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.38113266229629517,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 208,
+     "max_edge_ratio": 10.77519172686937,
+     "min_edge_ratio": 0.1668509448400928,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.2110173042691355,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 10.77519172686937,
+       "min_edge_ratio": 0.1668509448400928,
+       "new_self_intersection_pairs": 208,
+       "examples": [
+        {
+         "triangles": [
+          1236,
+          5926
+         ],
+         "at": [
+          0.0819,
+          -0.0735,
+          0.8753
+         ]
+        },
+        {
+         "triangles": [
+          1236,
+          5934
+         ],
+         "at": [
+          0.0819,
+          -0.0735,
+          0.8753
+         ]
+        },
+        {
+         "triangles": [
+          1266,
+          5972
+         ],
+         "at": [
+          0.0094,
+          -0.0651,
+          0.9326
+         ]
+        },
+        {
+         "triangles": [
+          1266,
+          5982
+         ],
+         "at": [
+          0.0094,
+          -0.0651,
+          0.9326
+         ]
+        },
+        {
+         "triangles": [
+          1266,
+          5983
+         ],
+         "at": [
+          0.0094,
+          -0.0651,
+          0.9326
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-extension.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.06779855489730835,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.667603918624723,
+     "min_edge_ratio": 0.8666511991688235,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-extension.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.13323326408863068,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.561205629123164,
+     "min_edge_ratio": 0.7920169028196943,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-extension.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-abduction.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.1315033882856369,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9607583689764805,
+     "min_edge_ratio": 0.7507874817526653,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.2432858794927597,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 5,
+     "max_edge_ratio": 3.6560418981230676,
+     "min_edge_ratio": 0.6495762944021326,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.4356569920341069,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 3.6560418981230676,
+       "min_edge_ratio": 0.6495762944021326,
+       "new_self_intersection_pairs": 5,
+       "examples": [
+        {
+         "triangles": [
+          5403,
+          5930
+         ],
+         "at": [
+          0.1093,
+          0.1008,
+          0.8179
+         ]
+        },
+        {
+         "triangles": [
+          5403,
+          5933
+         ],
+         "at": [
+          0.1093,
+          0.1008,
+          0.8179
+         ]
+        },
+        {
+         "triangles": [
+          5406,
+          5930
+         ],
+         "at": [
+          0.1502,
+          0.1003,
+          0.7937
+         ]
+        },
+        {
+         "triangles": [
+          5408,
+          5930
+         ],
+         "at": [
+          0.1596,
+          0.1048,
+          0.7877
+         ]
+        },
+        {
+         "triangles": [
+          5408,
+          5933
+         ],
+         "at": [
+          0.1596,
+          0.1048,
+          0.7877
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "knee-flexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.177,
+     0.06,
+     0.5
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3497028946876526,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.6547643549677737,
+     "min_edge_ratio": 0.20012464261640414,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.2782602310180664,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 148,
+     "max_edge_ratio": 2.1327498864234173,
+     "min_edge_ratio": 0.27409975313921425,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.06574206703510947,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.1327498864234173,
+       "min_edge_ratio": 0.27409975313921425,
+       "new_self_intersection_pairs": 148,
+       "examples": [
+        {
+         "triangles": [
+          1024,
+          1220
+         ],
+         "at": [
+          0.1067,
+          0.0934,
+          0.61
+         ]
+        },
+        {
+         "triangles": [
+          1025,
+          1220
+         ],
+         "at": [
+          0.1031,
+          0.0973,
+          0.6055
+         ]
+        },
+        {
+         "triangles": [
+          1026,
+          1220
+         ],
+         "at": [
+          0.1048,
+          0.0997,
+          0.6108
+         ]
+        },
+        {
+         "triangles": [
+          1026,
+          5916
+         ],
+         "at": [
+          0.1048,
+          0.0997,
+          0.6108
+         ]
+        },
+        {
+         "triangles": [
+          1027,
+          5916
+         ],
+         "at": [
+          0.1098,
+          0.099,
+          0.6214
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "ankle-dorsiflexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.195,
+     0.075,
+     0.105
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.041273731738328934,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.199237476733057,
+     "min_edge_ratio": 0.8175404982347095,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.08305612206459045,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 5.995233852478191,
+     "min_edge_ratio": 0.6516459650258404,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "ankle-plantarflexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.195,
+     0.075,
+     0.105
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.060137826949357986,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 4.612933200294238,
+     "min_edge_ratio": 0.543984403758252,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-plantarflexion.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.10675005614757538,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 7,
+     "max_edge_ratio": 9.062864747785087,
+     "min_edge_ratio": 0.40142983379511055,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.42452808661957175,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 9.062864747785087,
+       "min_edge_ratio": 0.40142983379511055,
+       "new_self_intersection_pairs": 7,
+       "examples": [
+        {
+         "triangles": [
+          10002,
+          10128
+         ],
+         "at": [
+          0.1201,
+          0.0121,
+          0.2767
+         ]
+        },
+        {
+         "triangles": [
+          10002,
+          10130
+         ],
+         "at": [
+          0.1201,
+          0.0121,
+          0.2767
+         ]
+        },
+        {
+         "triangles": [
+          10002,
+          10131
+         ],
+         "at": [
+          0.1201,
+          0.0121,
+          0.2767
+         ]
+        },
+        {
+         "triangles": [
+          10004,
+          10128
+         ],
+         "at": [
+          0.1308,
+          -0.0075,
+          0.2455
+         ]
+        },
+        {
+         "triangles": [
+          10004,
+          10130
+         ],
+         "at": [
+          0.1308,
+          -0.0075,
+          0.2455
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-plantarflexion.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "toe-extension.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.195,
+     -0.11,
+     0.053
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.042094964534044266,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.0,
+     "min_edge_ratio": 1.0,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07778149843215942,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.0,
+     "min_edge_ratio": 1.0,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-flexion.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     -0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.2081139087677002,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 122,
+     "max_edge_ratio": 18.73626452410032,
+     "min_edge_ratio": 0.33205307280991614,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.036215542699505394,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 18.73626452410032,
+       "min_edge_ratio": 0.33205307280991614,
+       "new_self_intersection_pairs": 122,
+       "examples": [
+        {
+         "triangles": [
+          3636,
+          12317
+         ],
+         "at": [
+          -0.1343,
+          0.0176,
+          1.2723
+         ]
+        },
+        {
+         "triangles": [
+          3636,
+          12320
+         ],
+         "at": [
+          -0.1343,
+          0.0176,
+          1.2723
+         ]
+        },
+        {
+         "triangles": [
+          3637,
+          12320
+         ],
+         "at": [
+          -0.1344,
+          0.0159,
+          1.276
+         ]
+        },
+        {
+         "triangles": [
+          3648,
+          3676
+         ],
+         "at": [
+          -0.1824,
+          0.0173,
+          1.3531
+         ]
+        },
+        {
+         "triangles": [
+          3649,
+          12265
+         ],
+         "at": [
+          -0.1785,
+          0.0151,
+          1.3512
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.10902567952871323,
+     "direction_ok": true,
+     "collapsed_triangles": 3,
+     "new_self_intersection_pairs": 529,
+     "max_edge_ratio": 29.08881711061849,
+     "min_edge_ratio": 0.11419526204612351,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.035351090087563944,
+       "collapsed_triangles": 3,
+       "max_edge_ratio": 29.08881711061849,
+       "min_edge_ratio": 0.11419526204612351,
+       "new_self_intersection_pairs": 529,
+       "examples": [
+        {
+         "triangles": [
+          1492,
+          12055
+         ],
+         "at": [
+          -0.0273,
+          -0.0668,
+          1.6794
+         ]
+        },
+        {
+         "triangles": [
+          1493,
+          12054
+         ],
+         "at": [
+          -0.0237,
+          -0.0661,
+          1.6819
+         ]
+        },
+        {
+         "triangles": [
+          1493,
+          12055
+         ],
+         "at": [
+          -0.0237,
+          -0.0661,
+          1.6819
+         ]
+        },
+        {
+         "triangles": [
+          1497,
+          12055
+         ],
+         "at": [
+          -0.0262,
+          -0.069,
+          1.6757
+         ]
+        },
+        {
+         "triangles": [
+          1497,
+          12086
+         ],
+         "at": [
+          -0.0262,
+          -0.069,
+          1.6757
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "shoulder-extension.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     -0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.07340749353170395,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 14,
+     "max_edge_ratio": 5.7184252323851945,
+     "min_edge_ratio": 0.7755896923993957,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.3256487163014223,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 5.7184252323851945,
+       "min_edge_ratio": 0.7755896923993957,
+       "new_self_intersection_pairs": 14,
+       "examples": [
+        {
+         "triangles": [
+          3734,
+          12181
+         ],
+         "at": [
+          -0.2228,
+          0.0921,
+          1.1543
+         ]
+        },
+        {
+         "triangles": [
+          3734,
+          12183
+         ],
+         "at": [
+          -0.2228,
+          0.0921,
+          1.1543
+         ]
+        },
+        {
+         "triangles": [
+          3734,
+          12184
+         ],
+         "at": [
+          -0.2228,
+          0.0921,
+          1.1543
+         ]
+        },
+        {
+         "triangles": [
+          3735,
+          12177
+         ],
+         "at": [
+          -0.2282,
+          0.0848,
+          1.1523
+         ]
+        },
+        {
+         "triangles": [
+          3735,
+          12178
+         ],
+         "at": [
+          -0.2282,
+          0.0848,
+          1.1523
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-extension.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.13785535097122192,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 59,
+     "max_edge_ratio": 10.612432934457143,
+     "min_edge_ratio": 0.5459506938321996,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.3931918714678544,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 10.612432934457143,
+       "min_edge_ratio": 0.5459506938321996,
+       "new_self_intersection_pairs": 59,
+       "examples": [
+        {
+         "triangles": [
+          3683,
+          3734
+         ],
+         "at": [
+          -0.2065,
+          0.1384,
+          1.1751
+         ]
+        },
+        {
+         "triangles": [
+          3694,
+          3734
+         ],
+         "at": [
+          -0.2106,
+          0.1264,
+          1.1718
+         ]
+        },
+        {
+         "triangles": [
+          3694,
+          12305
+         ],
+         "at": [
+          -0.2106,
+          0.1264,
+          1.1718
+         ]
+        },
+        {
+         "triangles": [
+          3694,
+          12306
+         ],
+         "at": [
+          -0.2106,
+          0.1264,
+          1.1718
+         ]
+        },
+        {
+         "triangles": [
+          3695,
+          3734
+         ],
+         "at": [
+          -0.2183,
+          0.1214,
+          1.1709
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-extension.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-abduction.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10589215159416199,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 23,
+     "max_edge_ratio": 15.759410198913306,
+     "min_edge_ratio": 0.3388336790990826,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.25111415623616595,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 15.759410198913306,
+       "min_edge_ratio": 0.3388336790990826,
+       "new_self_intersection_pairs": 23,
+       "examples": [
+        {
+         "triangles": [
+          3641,
+          4108
+         ],
+         "at": [
+          -0.2242,
+          0.1254,
+          1.3063
+         ]
+        },
+        {
+         "triangles": [
+          3641,
+          4109
+         ],
+         "at": [
+          -0.2242,
+          0.1254,
+          1.3063
+         ]
+        },
+        {
+         "triangles": [
+          3683,
+          3741
+         ],
+         "at": [
+          -0.3461,
+          0.0422,
+          1.2471
+         ]
+        },
+        {
+         "triangles": [
+          3694,
+          12303
+         ],
+         "at": [
+          -0.3465,
+          0.0253,
+          1.2536
+         ]
+        },
+        {
+         "triangles": [
+          3695,
+          12303
+         ],
+         "at": [
+          -0.3472,
+          0.0182,
+          1.2599
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.002994030714035034,
+     "direction_ok": false,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 70,
+     "max_edge_ratio": 26.45012449853748,
+     "min_edge_ratio": 0.19839304270690367,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.12805185233165337,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 26.45012449853748,
+       "min_edge_ratio": 0.19839304270690367,
+       "new_self_intersection_pairs": 70,
+       "examples": [
+        {
+         "triangles": [
+          3641,
+          4108
+         ],
+         "at": [
+          -0.2264,
+          0.1253,
+          1.3312
+         ]
+        },
+        {
+         "triangles": [
+          3641,
+          4109
+         ],
+         "at": [
+          -0.2264,
+          0.1253,
+          1.3312
+         ]
+        },
+        {
+         "triangles": [
+          3680,
+          12181
+         ],
+         "at": [
+          -0.3353,
+          0.0292,
+          1.4014
+         ]
+        },
+        {
+         "triangles": [
+          3681,
+          12181
+         ],
+         "at": [
+          -0.3343,
+          0.0341,
+          1.3949
+         ]
+        },
+        {
+         "triangles": [
+          3682,
+          12300
+         ],
+         "at": [
+          -0.339,
+          0.0486,
+          1.4088
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/shoulder-abduction.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "elbow-flexion.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.3139,
+     0.0709,
+     1.1449
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.8
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.15268149971961975,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 12,
+     "max_edge_ratio": 1.6391490412755811,
+     "min_edge_ratio": 0.20686936819536933,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.09768283964356751,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.6391490412755811,
+       "min_edge_ratio": 0.20686936819536933,
+       "new_self_intersection_pairs": 12,
+       "examples": [
+        {
+         "triangles": [
+          11807,
+          11810
+         ],
+         "at": [
+          -0.2795,
+          0.0354,
+          1.1635
+         ]
+        },
+        {
+         "triangles": [
+          11807,
+          11884
+         ],
+         "at": [
+          -0.2795,
+          0.0354,
+          1.1635
+         ]
+        },
+        {
+         "triangles": [
+          11860,
+          11876
+         ],
+         "at": [
+          -0.311,
+          0.0506,
+          1.1749
+         ]
+        },
+        {
+         "triangles": [
+          11860,
+          11879
+         ],
+         "at": [
+          -0.311,
+          0.0506,
+          1.1749
+         ]
+        },
+        {
+         "triangles": [
+          11861,
+          11876
+         ],
+         "at": [
+          -0.3164,
+          0.0561,
+          1.1742
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.014281680807471275,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 141,
+     "max_edge_ratio": 2.2300989886257163,
+     "min_edge_ratio": 0.27882237080342936,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.1046863365655855,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.2300989886257163,
+       "min_edge_ratio": 0.27882237080342936,
+       "new_self_intersection_pairs": 141,
+       "examples": [
+        {
+         "triangles": [
+          3644,
+          12069
+         ],
+         "at": [
+          -0.2261,
+          0.0271,
+          1.3168
+         ]
+        },
+        {
+         "triangles": [
+          3645,
+          12064
+         ],
+         "at": [
+          -0.2227,
+          0.0231,
+          1.3234
+         ]
+        },
+        {
+         "triangles": [
+          3645,
+          12065
+         ],
+         "at": [
+          -0.2227,
+          0.0231,
+          1.3234
+         ]
+        },
+        {
+         "triangles": [
+          3645,
+          12069
+         ],
+         "at": [
+          -0.2227,
+          0.0231,
+          1.3234
+         ]
+        },
+        {
+         "triangles": [
+          3646,
+          12065
+         ],
+         "at": [
+          -0.2166,
+          0.0125,
+          1.327
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/elbow-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "forearm-pronation.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 0.45
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.4470688450893892,
+     "min_edge_ratio": 0.7184491899277523,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 145,
+     "max_edge_ratio": 2.002229743645867,
+     "min_edge_ratio": 0.611691345616082,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_WristLoft.R",
+       "min_triangle_area_ratio": 0.06155561390452964,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.002229743645867,
+       "min_edge_ratio": 0.7500197249859454,
+       "new_self_intersection_pairs": 136,
+       "examples": [
+        {
+         "triangles": [
+          247,
+          251
+         ],
+         "at": [
+          -0.4042,
+          -0.032,
+          0.952
+         ]
+        },
+        {
+         "triangles": [
+          247,
+          252
+         ],
+         "at": [
+          -0.4042,
+          -0.032,
+          0.952
+         ]
+        },
+        {
+         "triangles": [
+          247,
+          626
+         ],
+         "at": [
+          -0.4042,
+          -0.032,
+          0.952
+         ]
+        },
+        {
+         "triangles": [
+          247,
+          627
+         ],
+         "at": [
+          -0.4042,
+          -0.032,
+          0.952
+         ]
+        },
+        {
+         "triangles": [
+          247,
+          628
+         ],
+         "at": [
+          -0.4042,
+          -0.032,
+          0.952
+         ]
+        }
+       ]
+      },
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.5510274516198086,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.933877219603553,
+       "min_edge_ratio": 0.611691345616082,
+       "new_self_intersection_pairs": 9,
+       "examples": [
+        {
+         "triangles": [
+          164,
+          274
+         ],
+         "at": [
+          -0.4299,
+          -0.0129,
+          0.9027
+         ]
+        },
+        {
+         "triangles": [
+          169,
+          274
+         ],
+         "at": [
+          -0.4268,
+          -0.0121,
+          0.9088
+         ]
+        },
+        {
+         "triangles": [
+          169,
+          275
+         ],
+         "at": [
+          -0.4268,
+          -0.0121,
+          0.9088
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          878
+         ],
+         "at": [
+          -0.4299,
+          -0.0092,
+          0.9077
+         ]
+        },
+        {
+         "triangles": [
+          274,
+          879
+         ],
+         "at": [
+          -0.4299,
+          -0.0092,
+          0.9077
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "forearm-supination.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 0.45
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 8,
+     "max_edge_ratio": 1.5522048949897906,
+     "min_edge_ratio": 0.5412097321746405,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.5655924851513261,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.3423038951353476,
+       "min_edge_ratio": 0.5412097321746405,
+       "new_self_intersection_pairs": 8,
+       "examples": [
+        {
+         "triangles": [
+          794,
+          801
+         ],
+         "at": [
+          -0.4167,
+          0.0132,
+          0.917
+         ]
+        },
+        {
+         "triangles": [
+          794,
+          802
+         ],
+         "at": [
+          -0.4167,
+          0.0132,
+          0.917
+         ]
+        },
+        {
+         "triangles": [
+          794,
+          803
+         ],
+         "at": [
+          -0.4167,
+          0.0132,
+          0.917
+         ]
+        },
+        {
+         "triangles": [
+          794,
+          806
+         ],
+         "at": [
+          -0.4167,
+          0.0132,
+          0.917
+         ]
+        },
+        {
+         "triangles": [
+          794,
+          1158
+         ],
+         "at": [
+          -0.4167,
+          0.0132,
+          0.917
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-supination.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 68,
+     "max_edge_ratio": 2.30367192511193,
+     "min_edge_ratio": 0.22935623550475387,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_WristLoft.R",
+       "min_triangle_area_ratio": 0.3210029710648875,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.30367192511193,
+       "min_edge_ratio": 0.22935623550475387,
+       "new_self_intersection_pairs": 38,
+       "examples": [
+        {
+         "triangles": [
+          293,
+          669
+         ],
+         "at": [
+          -0.4375,
+          -0.0077,
+          0.9337
+         ]
+        },
+        {
+         "triangles": [
+          294,
+          669
+         ],
+         "at": [
+          -0.434,
+          -0.0036,
+          0.9367
+         ]
+        },
+        {
+         "triangles": [
+          294,
+          670
+         ],
+         "at": [
+          -0.434,
+          -0.0036,
+          0.9367
+         ]
+        },
+        {
+         "triangles": [
+          294,
+          671
+         ],
+         "at": [
+          -0.434,
+          -0.0036,
+          0.9367
+         ]
+        },
+        {
+         "triangles": [
+          294,
+          672
+         ],
+         "at": [
+          -0.434,
+          -0.0036,
+          0.9367
+         ]
+        }
+       ]
+      },
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.2373053579794233,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.79955256437453,
+       "min_edge_ratio": 0.22935623550475387,
+       "new_self_intersection_pairs": 30,
+       "examples": [
+        {
+         "triangles": [
+          172,
+          273
+         ],
+         "at": [
+          -0.4482,
+          -0.0149,
+          0.92
+         ]
+        },
+        {
+         "triangles": [
+          172,
+          793
+         ],
+         "at": [
+          -0.4482,
+          -0.0149,
+          0.92
+         ]
+        },
+        {
+         "triangles": [
+          173,
+          271
+         ],
+         "at": [
+          -0.4444,
+          -0.0189,
+          0.9256
+         ]
+        },
+        {
+         "triangles": [
+          173,
+          272
+         ],
+         "at": [
+          -0.4444,
+          -0.0189,
+          0.9256
+         ]
+        },
+        {
+         "triangles": [
+          173,
+          273
+         ],
+         "at": [
+          -0.4444,
+          -0.0189,
+          0.9256
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-supination.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/forearm-pronation.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": false
+   },
+   "pass": false
+  },
+  {
+   "id": "wrist-flexion.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.9773,
+     -0.2095,
+     -0.0304
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.0422693524742499,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.438254715894313,
+     "min_edge_ratio": 0.17932635724586793,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07693985104560852,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 197,
+     "max_edge_ratio": 1.931139232591399,
+     "min_edge_ratio": 0.21014108089189765,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_WristLoft.R",
+       "min_triangle_area_ratio": 0.17900777615794583,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.7402750335956962,
+       "min_edge_ratio": 0.21014108089189765,
+       "new_self_intersection_pairs": 197,
+       "examples": [
+        {
+         "triangles": [
+          67,
+          351
+         ],
+         "at": [
+          -0.4095,
+          -0.0344,
+          0.9644
+         ]
+        },
+        {
+         "triangles": [
+          68,
+          351
+         ],
+         "at": [
+          -0.4109,
+          -0.0349,
+          0.9618
+         ]
+        },
+        {
+         "triangles": [
+          161,
+          351
+         ],
+         "at": [
+          -0.4104,
+          -0.0355,
+          0.9576
+         ]
+        },
+        {
+         "triangles": [
+          161,
+          352
+         ],
+         "at": [
+          -0.4104,
+          -0.0355,
+          0.9576
+         ]
+        },
+        {
+         "triangles": [
+          161,
+          353
+         ],
+         "at": [
+          -0.4104,
+          -0.0355,
+          0.9576
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-extension.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.9773,
+     -0.2095,
+     -0.0304
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.038542183974641375,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 16,
+     "max_edge_ratio": 1.8219503864841302,
+     "min_edge_ratio": 0.5474864220629744,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.8264108521095267,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.3393476095690047,
+       "min_edge_ratio": 0.7831011512895819,
+       "new_self_intersection_pairs": 16,
+       "examples": [
+        {
+         "triangles": [
+          164,
+          274
+         ],
+         "at": [
+          -0.4468,
+          0.0054,
+          0.918
+         ]
+        },
+        {
+         "triangles": [
+          169,
+          274
+         ],
+         "at": [
+          -0.4423,
+          0.004,
+          0.9229
+         ]
+        },
+        {
+         "triangles": [
+          172,
+          273
+         ],
+         "at": [
+          -0.4278,
+          0.015,
+          0.9156
+         ]
+        },
+        {
+         "triangles": [
+          172,
+          793
+         ],
+         "at": [
+          -0.4278,
+          0.015,
+          0.9156
+         ]
+        },
+        {
+         "triangles": [
+          173,
+          273
+         ],
+         "at": [
+          -0.4308,
+          0.0108,
+          0.9222
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-extension.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.06302983989007771,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 74,
+     "max_edge_ratio": 2.5242058783426957,
+     "min_edge_ratio": 0.14061361365523734,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_WristLoft.R",
+       "min_triangle_area_ratio": 0.13646402543340672,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.5242058783426957,
+       "min_edge_ratio": 0.14061361365523734,
+       "new_self_intersection_pairs": 38,
+       "examples": [
+        {
+         "triangles": [
+          284,
+          656
+         ],
+         "at": [
+          -0.4403,
+          0.0038,
+          0.941
+         ]
+        },
+        {
+         "triangles": [
+          285,
+          656
+         ],
+         "at": [
+          -0.4377,
+          0.0016,
+          0.9425
+         ]
+        },
+        {
+         "triangles": [
+          286,
+          656
+         ],
+         "at": [
+          -0.4358,
+          0.0031,
+          0.9425
+         ]
+        },
+        {
+         "triangles": [
+          286,
+          657
+         ],
+         "at": [
+          -0.4358,
+          0.0031,
+          0.9425
+         ]
+        },
+        {
+         "triangles": [
+          287,
+          657
+         ],
+         "at": [
+          -0.4351,
+          0.0067,
+          0.9408
+         ]
+        }
+       ]
+      },
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.774482552204095,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.7005287966949798,
+       "min_edge_ratio": 0.7500909463603355,
+       "new_self_intersection_pairs": 36,
+       "examples": [
+        {
+         "triangles": [
+          164,
+          274
+         ],
+         "at": [
+          -0.4424,
+          0.0231,
+          0.9328
+         ]
+        },
+        {
+         "triangles": [
+          166,
+          271
+         ],
+         "at": [
+          -0.4317,
+          0.0184,
+          0.9369
+         ]
+        },
+        {
+         "triangles": [
+          167,
+          271
+         ],
+         "at": [
+          -0.4345,
+          0.0157,
+          0.9364
+         ]
+        },
+        {
+         "triangles": [
+          168,
+          276
+         ],
+         "at": [
+          -0.4365,
+          0.0146,
+          0.9362
+         ]
+        },
+        {
+         "triangles": [
+          169,
+          274
+         ],
+         "at": [
+          -0.4382,
+          0.0181,
+          0.9359
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-extension.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": false
+   },
+   "pass": false
+  },
+  {
+   "id": "wrist-radial.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.2024,
+     0.9668,
+     -0.1556
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.012223148747580126,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.2364731590899807,
+     "min_edge_ratio": 0.7530547202533381,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.022974022780545056,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.469368046941296,
+     "min_edge_ratio": 0.522560141915519,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "wrist-ulnar.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     -0.2024,
+     0.9668,
+     -0.1556
+    ],
+    "ortho_scale": 0.4
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.01332415034994483,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.2484739421949198,
+     "min_edge_ratio": 0.7663985749296063,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-ulnar.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.027344346948666498,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.4920213479491513,
+     "min_edge_ratio": 0.5509187170882069,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-ulnar.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/wrist-radial.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "fingers-mcp-flexion.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4092,
+     -0.024,
+     0.8612
+    ],
+    "view": [
+     -0.899,
+     -0.4378,
+     0.0083
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.015994169400073588,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 30,
+     "max_edge_ratio": 2.3312932892732463,
+     "min_edge_ratio": 0.23618932105492965,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.2329104158670116,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.3312932892732463,
+       "min_edge_ratio": 0.23618932105492965,
+       "new_self_intersection_pairs": 30,
+       "examples": [
+        {
+         "triangles": [
+          124,
+          255
+         ],
+         "at": [
+          -0.4263,
+          -0.0398,
+          0.8745
+         ]
+        },
+        {
+         "triangles": [
+          124,
+          1590
+         ],
+         "at": [
+          -0.4263,
+          -0.0398,
+          0.8745
+         ]
+        },
+        {
+         "triangles": [
+          127,
+          255
+         ],
+         "at": [
+          -0.4228,
+          -0.0375,
+          0.8724
+         ]
+        },
+        {
+         "triangles": [
+          127,
+          1590
+         ],
+         "at": [
+          -0.4228,
+          -0.0375,
+          0.8724
+         ]
+        },
+        {
+         "triangles": [
+          351,
+          1060
+         ],
+         "at": [
+          -0.4211,
+          -0.0419,
+          0.8656
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.0183182725450024,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 370,
+     "max_edge_ratio": 4.378243139199007,
+     "min_edge_ratio": 0.11592375588673842,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.06590801781907502,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 4.378243139199007,
+       "min_edge_ratio": 0.11592375588673842,
+       "new_self_intersection_pairs": 370,
+       "examples": [
+        {
+         "triangles": [
+          74,
+          221
+         ],
+         "at": [
+          -0.4415,
+          -0.0453,
+          0.8756
+         ]
+        },
+        {
+         "triangles": [
+          74,
+          1902
+         ],
+         "at": [
+          -0.4415,
+          -0.0453,
+          0.8756
+         ]
+        },
+        {
+         "triangles": [
+          74,
+          1903
+         ],
+         "at": [
+          -0.4415,
+          -0.0453,
+          0.8756
+         ]
+        },
+        {
+         "triangles": [
+          75,
+          221
+         ],
+         "at": [
+          -0.4421,
+          -0.0447,
+          0.8774
+         ]
+        },
+        {
+         "triangles": [
+          75,
+          1902
+         ],
+         "at": [
+          -0.4421,
+          -0.0447,
+          0.8774
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": false
+   },
+   "pass": false
+  },
+  {
+   "id": "fingers-pip-flexion.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4092,
+     -0.024,
+     0.8612
+    ],
+    "view": [
+     -0.899,
+     -0.4378,
+     0.0083
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.014032942475751042,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.848159459082124,
+     "min_edge_ratio": 0.36260843557744504,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-pip-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.012312441162066534,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 56,
+     "max_edge_ratio": 7.2619654109040495,
+     "min_edge_ratio": 0.08441243841495513,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.02900145232631071,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 7.2619654109040495,
+       "min_edge_ratio": 0.08441243841495513,
+       "new_self_intersection_pairs": 56,
+       "examples": [
+        {
+         "triangles": [
+          383,
+          1231
+         ],
+         "at": [
+          -0.3877,
+          -0.0383,
+          0.8447
+         ]
+        },
+        {
+         "triangles": [
+          383,
+          1643
+         ],
+         "at": [
+          -0.3877,
+          -0.0383,
+          0.8447
+         ]
+        },
+        {
+         "triangles": [
+          383,
+          1912
+         ],
+         "at": [
+          -0.3877,
+          -0.0383,
+          0.8447
+         ]
+        },
+        {
+         "triangles": [
+          384,
+          1643
+         ],
+         "at": [
+          -0.3879,
+          -0.0423,
+          0.8486
+         ]
+        },
+        {
+         "triangles": [
+          388,
+          1748
+         ],
+         "at": [
+          -0.4027,
+          -0.0416,
+          0.8364
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-pip-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "fingers-dip-flexion.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4092,
+     -0.024,
+     0.8612
+    ],
+    "view": [
+     -0.899,
+     -0.4378,
+     0.0083
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.00980142506887205,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.155017283448708,
+     "min_edge_ratio": 0.5695067807201946,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-dip-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.013520282809622586,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 18,
+     "max_edge_ratio": 5.439271949016824,
+     "min_edge_ratio": 0.2649316750997598,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.2613882589281694,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 5.439271949016824,
+       "min_edge_ratio": 0.2649316750997598,
+       "new_self_intersection_pairs": 18,
+       "examples": [
+        {
+         "triangles": [
+          377,
+          1685
+         ],
+         "at": [
+          -0.3857,
+          -0.063,
+          0.8174
+         ]
+        },
+        {
+         "triangles": [
+          378,
+          1685
+         ],
+         "at": [
+          -0.3854,
+          -0.0607,
+          0.8177
+         ]
+        },
+        {
+         "triangles": [
+          378,
+          1687
+         ],
+         "at": [
+          -0.3854,
+          -0.0607,
+          0.8177
+         ]
+        },
+        {
+         "triangles": [
+          385,
+          1716
+         ],
+         "at": [
+          -0.3871,
+          -0.0465,
+          0.8203
+         ]
+        },
+        {
+         "triangles": [
+          385,
+          1720
+         ],
+         "at": [
+          -0.3871,
+          -0.0465,
+          0.8203
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-dip-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-mcp-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "fingers-spread.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4092,
+     -0.024,
+     0.8612
+    ],
+    "view": [
+     -0.2024,
+     0.9668,
+     -0.1556
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 3.2292037697251863,
+     "min_edge_ratio": 0.8930405391907648,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 5.645378774027667,
+     "min_edge_ratio": 0.7908032835187156,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/fingers-spread.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-cmc-opposition.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4434,
+     -0.0385,
+     0.9232
+    ],
+    "view": [
+     -0.175,
+     -0.9755,
+     0.1332
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.014142188942059875,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.9653945859830864,
+     "min_edge_ratio": 0.842018490555452,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.024434790946543217,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 18,
+     "max_edge_ratio": 2.9568800765275998,
+     "min_edge_ratio": 0.7070098258062849,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_glove.R",
+       "min_triangle_area_ratio": 0.635030738723627,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.9568800765275998,
+       "min_edge_ratio": 0.7070098258062849,
+       "new_self_intersection_pairs": 18,
+       "examples": [
+        {
+         "triangles": [
+          118,
+          208
+         ],
+         "at": [
+          -0.4327,
+          -0.0605,
+          0.9032
+         ]
+        },
+        {
+         "triangles": [
+          118,
+          209
+         ],
+         "at": [
+          -0.4327,
+          -0.0605,
+          0.9032
+         ]
+        },
+        {
+         "triangles": [
+          119,
+          209
+         ],
+         "at": [
+          -0.4323,
+          -0.0564,
+          0.8993
+         ]
+        },
+        {
+         "triangles": [
+          138,
+          208
+         ],
+         "at": [
+          -0.4331,
+          -0.0623,
+          0.9101
+         ]
+        },
+        {
+         "triangles": [
+          138,
+          209
+         ],
+         "at": [
+          -0.4331,
+          -0.0623,
+          0.9101
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-mcp-flexion.R",
+   "region": "hand.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.4434,
+     -0.0385,
+     0.9232
+    ],
+    "view": [
+     -0.175,
+     -0.9755,
+     0.1332
+    ],
+    "ortho_scale": 0.32
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.01516030869242968,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.1556895451305274,
+     "min_edge_ratio": 0.7791472687110592,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-mcp-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.03140015199460322,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.283808801897735,
+     "min_edge_ratio": 0.604900942992472,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-mcp-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/thumb-cmc-opposition.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "thumb-ip-flexion.R",
+   "region": "hand.R",
+   "status": "missing_bones",
+   "missing": [
+    "thumb.R_03"
+   ],
+   "pass": false
+  },
+  {
+   "id": "combo-empty-fist.R",
+   "region": "combo",
+   "status": "missing_bones",
+   "missing": [
+    "thumb.R_03"
+   ],
+   "pass": false
+  },
+  {
+   "id": "hip-flexion.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.32480770349502563,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 10,
+     "max_edge_ratio": 4.519807989374664,
+     "min_edge_ratio": 0.4788673096550687,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.21513936152617955,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 4.519807989374664,
+       "min_edge_ratio": 0.4788673096550687,
+       "new_self_intersection_pairs": 10,
+       "examples": [
+        {
+         "triangles": [
+          6446,
+          6659
+         ],
+         "at": [
+          -0.0449,
+          -0.0488,
+          0.831
+         ]
+        },
+        {
+         "triangles": [
+          6666,
+          6701
+         ],
+         "at": [
+          -0.03,
+          -0.0375,
+          0.815
+         ]
+        },
+        {
+         "triangles": [
+          6667,
+          6701
+         ],
+         "at": [
+          -0.0277,
+          -0.0514,
+          0.8261
+         ]
+        },
+        {
+         "triangles": [
+          6668,
+          6701
+         ],
+         "at": [
+          -0.0217,
+          -0.0344,
+          0.8245
+         ]
+        },
+        {
+         "triangles": [
+          6669,
+          6701
+         ],
+         "at": [
+          -0.0248,
+          -0.0473,
+          0.8222
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.38113266229629517,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 211,
+     "max_edge_ratio": 7.433313190140822,
+     "min_edge_ratio": 0.27515277989254566,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.2679718508979166,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 7.433313190140822,
+       "min_edge_ratio": 0.27515277989254566,
+       "new_self_intersection_pairs": 211,
+       "examples": [
+        {
+         "triangles": [
+          1252,
+          6702
+         ],
+         "at": [
+          -0.0233,
+          -0.0342,
+          0.8742
+         ]
+        },
+        {
+         "triangles": [
+          1252,
+          6703
+         ],
+         "at": [
+          -0.0233,
+          -0.0342,
+          0.8742
+         ]
+        },
+        {
+         "triangles": [
+          1253,
+          6703
+         ],
+         "at": [
+          -0.0217,
+          -0.0334,
+          0.8766
+         ]
+        },
+        {
+         "triangles": [
+          1258,
+          6703
+         ],
+         "at": [
+          -0.0244,
+          -0.0382,
+          0.8792
+         ]
+        },
+        {
+         "triangles": [
+          1259,
+          6703
+         ],
+         "at": [
+          -0.0209,
+          -0.0385,
+          0.8819
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-extension.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.06779855489730835,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.758693026631032,
+     "min_edge_ratio": 0.5343264761722597,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-extension.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.13323326408863068,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 5,
+     "max_edge_ratio": 2.5537230705610834,
+     "min_edge_ratio": 0.7000192369756876,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.10225003710953531,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 2.5537230705610834,
+       "min_edge_ratio": 0.7000192369756876,
+       "new_self_intersection_pairs": 5,
+       "examples": [
+        {
+         "triangles": [
+          6674,
+          6692
+         ],
+         "at": [
+          -0.0154,
+          0.007,
+          0.8165
+         ]
+        },
+        {
+         "triangles": [
+          6674,
+          6693
+         ],
+         "at": [
+          -0.0154,
+          0.007,
+          0.8165
+         ]
+        },
+        {
+         "triangles": [
+          6674,
+          6699
+         ],
+         "at": [
+          -0.0154,
+          0.007,
+          0.8165
+         ]
+        },
+        {
+         "triangles": [
+          6674,
+          6755
+         ],
+         "at": [
+          -0.0154,
+          0.007,
+          0.8165
+         ]
+        },
+        {
+         "triangles": [
+          6675,
+          6755
+         ],
+         "at": [
+          -0.019,
+          0.0103,
+          0.8045
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-extension.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-abduction.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.1315033882856369,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.8400860263317824,
+     "min_edge_ratio": 0.8287413297883951,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.2432858794927597,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 5.217501980946356,
+     "min_edge_ratio": 0.704768982162774,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/hip-abduction.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "knee-flexion.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.177,
+     0.06,
+     0.5
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3497028946876526,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 3,
+     "max_edge_ratio": 1.6743758321134734,
+     "min_edge_ratio": 0.11187212700240189,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.10842755080573409,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.6743758321134734,
+       "min_edge_ratio": 0.11187212700240189,
+       "new_self_intersection_pairs": 3,
+       "examples": [
+        {
+         "triangles": [
+          6971,
+          7192
+         ],
+         "at": [
+          -0.1776,
+          0.102,
+          0.526
+         ]
+        },
+        {
+         "triangles": [
+          6971,
+          7193
+         ],
+         "at": [
+          -0.1776,
+          0.102,
+          0.526
+         ]
+        },
+        {
+         "triangles": [
+          7658,
+          14338
+         ],
+         "at": [
+          -0.0944,
+          0.1417,
+          0.4322
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.2782602310180664,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 154,
+     "max_edge_ratio": 1.8634022370546917,
+     "min_edge_ratio": 0.2390004481835438,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.08043645141062636,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 1.8634022370546917,
+       "min_edge_ratio": 0.2390004481835438,
+       "new_self_intersection_pairs": 154,
+       "examples": [
+        {
+         "triangles": [
+          504,
+          741
+         ],
+         "at": [
+          -0.1084,
+          0.0983,
+          0.621
+         ]
+        },
+        {
+         "triangles": [
+          505,
+          741
+         ],
+         "at": [
+          -0.1037,
+          0.0998,
+          0.612
+         ]
+        },
+        {
+         "triangles": [
+          505,
+          742
+         ],
+         "at": [
+          -0.1037,
+          0.0998,
+          0.612
+         ]
+        },
+        {
+         "triangles": [
+          505,
+          743
+         ],
+         "at": [
+          -0.1037,
+          0.0998,
+          0.612
+         ]
+        },
+        {
+         "triangles": [
+          506,
+          743
+         ],
+         "at": [
+          -0.1031,
+          0.0978,
+          0.6077
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/knee-flexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "ankle-dorsiflexion.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.195,
+     0.075,
+     0.105
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.041273731738328934,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.4500920231277243,
+     "min_edge_ratio": 0.9104901272111253,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.08305612206459045,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 2.0558278319016745,
+     "min_edge_ratio": 0.8198581128648449,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "ankle-plantarflexion.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.195,
+     0.075,
+     0.105
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.060137826949357986,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.8786549171603941,
+     "min_edge_ratio": 0.8469816448174119,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-plantarflexion.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.10675005614757538,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 2,
+     "max_edge_ratio": 3.210629998445021,
+     "min_edge_ratio": 0.7182376423118659,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.5404890639096793,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 3.210629998445021,
+       "min_edge_ratio": 0.7182376423118659,
+       "new_self_intersection_pairs": 2,
+       "examples": [
+        {
+         "triangles": [
+          7808,
+          7810
+         ],
+         "at": [
+          -0.1264,
+          0.0262,
+          0.2611
+         ]
+        },
+        {
+         "triangles": [
+          7808,
+          7813
+         ],
+         "at": [
+          -0.1264,
+          0.0262,
+          0.2611
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-plantarflexion.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/ankle-dorsiflexion.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "toe-extension.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.195,
+     -0.11,
+     0.053
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.042094964534044266,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.0,
+     "min_edge_ratio": 1.0,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.R--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07778149843215942,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 0,
+     "max_edge_ratio": 1.0,
+     "min_edge_ratio": 1.0,
+     "per_mesh": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.R--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/toe-extension.R--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "combo-arms-overhead",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.16
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 2,
+     "new_self_intersection_pairs": 239,
+     "max_edge_ratio": 23.719370384572528,
+     "min_edge_ratio": 0.1986872421573361,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.036215542699505394,
+       "collapsed_triangles": 2,
+       "max_edge_ratio": 23.719370384572528,
+       "min_edge_ratio": 0.1986872421573361,
+       "new_self_intersection_pairs": 239,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          296
+         ],
+         "at": [
+          0.203,
+          -0.0165,
+          1.1983
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          297
+         ],
+         "at": [
+          0.203,
+          -0.0165,
+          1.1983
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4275
+         ],
+         "at": [
+          0.203,
+          -0.0165,
+          1.1983
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4346
+         ],
+         "at": [
+          0.203,
+          -0.0165,
+          1.1983
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4348
+         ],
+         "at": [
+          0.203,
+          -0.0165,
+          1.1983
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-arms-overhead--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 4,
+     "new_self_intersection_pairs": 1088,
+     "max_edge_ratio": 37.37355023812861,
+     "min_edge_ratio": 0.11419526204612351,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.035351090087563944,
+       "collapsed_triangles": 4,
+       "max_edge_ratio": 37.37355023812861,
+       "min_edge_ratio": 0.11419526204612351,
+       "new_self_intersection_pairs": 1088,
+       "examples": [
+        {
+         "triangles": [
+          200,
+          13614
+         ],
+         "at": [
+          -0.0031,
+          0.0087,
+          1.7252
+         ]
+        },
+        {
+         "triangles": [
+          201,
+          13614
+         ],
+         "at": [
+          -0.0029,
+          0.0033,
+          1.7193
+         ]
+        },
+        {
+         "triangles": [
+          204,
+          1603
+         ],
+         "at": [
+          -0.0076,
+          -0.004,
+          1.72
+         ]
+        },
+        {
+         "triangles": [
+          204,
+          13614
+         ],
+         "at": [
+          -0.0076,
+          -0.004,
+          1.72
+         ]
+        },
+        {
+         "triangles": [
+          205,
+          1603
+         ],
+         "at": [
+          -0.0138,
+          -0.0072,
+          1.7261
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-arms-overhead--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-arms-overhead--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "combo-two-hand-chop",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.16
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 1,
+     "new_self_intersection_pairs": 97,
+     "max_edge_ratio": 11.803143712340026,
+     "min_edge_ratio": 0.30185679008405497,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.005235153229577754,
+       "collapsed_triangles": 1,
+       "max_edge_ratio": 11.803143712340026,
+       "min_edge_ratio": 0.30185679008405497,
+       "new_self_intersection_pairs": 97,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          306
+         ],
+         "at": [
+          0.2101,
+          -0.0209,
+          1.1533
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          307
+         ],
+         "at": [
+          0.2101,
+          -0.0209,
+          1.1533
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4350
+         ],
+         "at": [
+          0.2101,
+          -0.0209,
+          1.1533
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          13777
+         ],
+         "at": [
+          0.2101,
+          -0.0209,
+          1.1533
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          13780
+         ],
+         "at": [
+          0.2101,
+          -0.0209,
+          1.1533
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-two-hand-chop--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 2,
+     "new_self_intersection_pairs": 256,
+     "max_edge_ratio": 21.01824997285913,
+     "min_edge_ratio": 0.07046525179873196,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.035552583040036036,
+       "collapsed_triangles": 2,
+       "max_edge_ratio": 21.01824997285913,
+       "min_edge_ratio": 0.07046525179873196,
+       "new_self_intersection_pairs": 256,
+       "examples": [
+        {
+         "triangles": [
+          260,
+          10733
+         ],
+         "at": [
+          0.104,
+          -0.1451,
+          1.1953
+         ]
+        },
+        {
+         "triangles": [
+          261,
+          10733
+         ],
+         "at": [
+          0.1034,
+          -0.1531,
+          1.202
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          292
+         ],
+         "at": [
+          0.1865,
+          -0.0484,
+          1.1581
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4278
+         ],
+         "at": [
+          0.1865,
+          -0.0484,
+          1.1581
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          10733
+         ],
+         "at": [
+          0.1865,
+          -0.0484,
+          1.1581
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-two-hand-chop--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-arms-overhead--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  },
+  {
+   "id": "combo-deep-squat",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     0.89
+    ],
+    "view": [
+     0.8575,
+     -0.5145,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 25,
+     "max_edge_ratio": 5.637442466823223,
+     "min_edge_ratio": 0.18008046855146684,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.08018303681129862,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 5.637442466823223,
+       "min_edge_ratio": 0.18008046855146684,
+       "new_self_intersection_pairs": 25,
+       "examples": [
+        {
+         "triangles": [
+          5387,
+          5393
+         ],
+         "at": [
+          0.1826,
+          0.0115,
+          0.8578
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9016
+         ],
+         "at": [
+          0.1856,
+          -0.0039,
+          0.8232
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9017
+         ],
+         "at": [
+          0.1856,
+          -0.0039,
+          0.8232
+         ]
+        },
+        {
+         "triangles": [
+          5392,
+          9059
+         ],
+         "at": [
+          0.1856,
+          -0.0039,
+          0.8232
+         ]
+        },
+        {
+         "triangles": [
+          5393,
+          9017
+         ],
+         "at": [
+          0.1871,
+          0.0151,
+          0.8274
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-deep-squat--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 754,
+     "max_edge_ratio": 10.08772189107072,
+     "min_edge_ratio": 0.20737401867255412,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.05520439120378343,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 10.08772189107072,
+       "min_edge_ratio": 0.20737401867255412,
+       "new_self_intersection_pairs": 754,
+       "examples": [
+        {
+         "triangles": [
+          504,
+          6735
+         ],
+         "at": [
+          -0.0881,
+          -0.2313,
+          0.8639
+         ]
+        },
+        {
+         "triangles": [
+          505,
+          6735
+         ],
+         "at": [
+          -0.0826,
+          -0.2398,
+          0.8648
+         ]
+        },
+        {
+         "triangles": [
+          506,
+          6735
+         ],
+         "at": [
+          -0.0814,
+          -0.243,
+          0.8679
+         ]
+        },
+        {
+         "triangles": [
+          507,
+          6735
+         ],
+         "at": [
+          -0.0877,
+          -0.2362,
+          0.8702
+         ]
+        },
+        {
+         "triangles": [
+          508,
+          6728
+         ],
+         "at": [
+          -0.0971,
+          -0.2223,
+          0.8673
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-deep-squat--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-deep-squat--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": true,
+    "typical_self_intersection": true
+   },
+   "pass": true
+  },
+  {
+   "id": "combo-cast-open-palm.L",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 1.2
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 0,
+     "new_self_intersection_pairs": 44,
+     "max_edge_ratio": 14.919009942785017,
+     "min_edge_ratio": 0.37945616144554023,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.33080953426645926,
+       "collapsed_triangles": 0,
+       "max_edge_ratio": 14.919009942785017,
+       "min_edge_ratio": 0.37945616144554023,
+       "new_self_intersection_pairs": 44,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          296
+         ],
+         "at": [
+          0.2175,
+          -0.0109,
+          1.1736
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          297
+         ],
+         "at": [
+          0.2175,
+          -0.0109,
+          1.1736
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4346
+         ],
+         "at": [
+          0.2175,
+          -0.0109,
+          1.1736
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4347
+         ],
+         "at": [
+          0.2175,
+          -0.0109,
+          1.1736
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4349
+         ],
+         "at": [
+          0.2175,
+          -0.0109,
+          1.1736
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-cast-open-palm.L--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "direction_ok": true,
+     "collapsed_triangles": 3,
+     "new_self_intersection_pairs": 149,
+     "max_edge_ratio": 27.25077678769373,
+     "min_edge_ratio": 0.10330128262188895,
+     "per_mesh": [
+      {
+       "mesh": "SM_RO_core",
+       "min_triangle_area_ratio": 0.014993611596425272,
+       "collapsed_triangles": 3,
+       "max_edge_ratio": 27.25077678769373,
+       "min_edge_ratio": 0.10330128262188895,
+       "new_self_intersection_pairs": 149,
+       "examples": [
+        {
+         "triangles": [
+          270,
+          296
+         ],
+         "at": [
+          0.196,
+          -0.0131,
+          1.2102
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          297
+         ],
+         "at": [
+          0.196,
+          -0.0131,
+          1.2102
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4272
+         ],
+         "at": [
+          0.196,
+          -0.0131,
+          1.2102
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4274
+         ],
+         "at": [
+          0.196,
+          -0.0131,
+          1.2102
+         ]
+        },
+        {
+         "triangles": [
+          270,
+          4346
+         ],
+         "at": [
+          0.196,
+          -0.0131,
+          1.2102
+         ]
+        }
+       ]
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-cast-open-palm.L--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/p2-prep/baseline-joint-range/tiles/combo-cast-open-palm.L--neutral.png",
+   "gate": {
+    "direction": true,
+    "no_collapse": false,
+    "typical_self_intersection": true
+   },
+   "pass": false
+  }
+ ]
+}

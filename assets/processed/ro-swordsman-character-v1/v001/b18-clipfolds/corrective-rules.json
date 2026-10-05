@@ -1,0 +1,1663 @@
+{
+ "schema_version": 1,
+ "id": "ro-swordsman-character-v1-v001-b18-clipfolds",
+ "status": "candidate",
+ "quaternion_convention": "wxyz; rest-relative local rotation of the bone",
+ "drivers": {
+  "grasp.R": {
+   "type": "state",
+   "key": "grasp.R"
+  },
+  "grasp.L": {
+   "type": "state",
+   "key": "grasp.L"
+  },
+  "fold.01": {
+   "type": "rotation_difference",
+   "bone": "spine_02",
+   "target_quaternion_wxyz": [
+    0.9970861077308655,
+    -2.9188883948760846e-11,
+    0.07581745833158493,
+    0.008424158208072186
+   ],
+   "target_source": "spine_02 in spine-twist at the typical level"
+  },
+  "fold.02": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.7933533787727356,
+    -0.4529437720775604,
+    -0.30861377716064453,
+    -0.2649337947368622
+   ],
+   "target_source": "upper_arm.L in shoulder-flexion.L at the typical level"
+  },
+  "fold.03": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.5000001192092896,
+    0.439034640789032,
+    -0.0035304503981024027,
+    -0.7464824914932251
+   ],
+   "target_source": "upper_arm.L in shoulder-abduction.L at the extreme level"
+  },
+  "fold.04": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.2588191628456116,
+    -0.7186889052391052,
+    0.48967957496643066,
+    0.4203721582889557
+   ],
+   "target_source": "upper_arm.R in shoulder-flexion.R at the extreme level"
+  },
+  "fold.06": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.7071067690849304,
+    -0.5261167287826538,
+    -0.3584703207015991,
+    -0.30773383378982544
+   ],
+   "target_source": "upper_arm.L in combo-cast-open-palm.L at the extreme level"
+  },
+  "fold.07": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.7648067474365234,
+    -0.5918562412261963,
+    9.741781781258396e-08,
+    0.2545129656791687
+   ],
+   "target_source": "upper_arm.R in combo-two-hand-chop at the typical level"
+  },
+  "flex.finger1.R_01": {
+   "type": "rotation_difference",
+   "bone": "finger1.R_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6670486330986023,
+    5.033539807186571e-08,
+    -0.10709001123905182
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger1.R_02": {
+   "type": "rotation_difference",
+   "bone": "finger1.R_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.7084089517593384,
+    9.702709036218948e-08,
+    -0.2915145754814148
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger1.R_03": {
+   "type": "rotation_difference",
+   "bone": "finger1.R_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5358818769454956,
+    1.0470022004938073e-07,
+    -0.20450085401535034
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger2.R_01": {
+   "type": "rotation_difference",
+   "bone": "finger2.R_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6636691093444824,
+    4.530184938289494e-08,
+    -0.12635423243045807
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger2.R_02": {
+   "type": "rotation_difference",
+   "bone": "finger2.R_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.7134900093078613,
+    8.561212183622047e-08,
+    -0.2788476049900055
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger2.R_03": {
+   "type": "rotation_difference",
+   "bone": "finger2.R_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5346787571907043,
+    1.260676043557396e-07,
+    -0.20762620866298676
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger3.R_01": {
+   "type": "rotation_difference",
+   "bone": "finger3.R_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6478714942932129,
+    1.1577142089436165e-07,
+    -0.19153235852718353
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger3.R_02": {
+   "type": "rotation_difference",
+   "bone": "finger3.R_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.714428186416626,
+    1.0844204467730378e-07,
+    -0.2764351963996887
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger3.R_03": {
+   "type": "rotation_difference",
+   "bone": "finger3.R_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5349380373954773,
+    9.615327911660643e-08,
+    -0.20695731043815613
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger4.R_01": {
+   "type": "rotation_difference",
+   "bone": "finger4.R_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.615177571773529,
+    1.9253288030540716e-07,
+    -0.2792467474937439
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger4.R_02": {
+   "type": "rotation_difference",
+   "bone": "finger4.R_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.6976315379142761,
+    1.2556445483369316e-07,
+    -0.31644001603126526
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger4.R_03": {
+   "type": "rotation_difference",
+   "bone": "finger4.R_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5314942598342896,
+    1.0897369406848156e-07,
+    -0.21564747393131256
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.hand.R": {
+   "type": "rotation_difference",
+   "bone": "hand.R",
+   "target_quaternion_wxyz": [
+    0.8660253882408142,
+    0.4771471917629242,
+    8.47503613954359e-08,
+    -0.14943426847457886
+   ],
+   "target_source": "contract step palmar 60 degrees"
+  },
+  "flex.thumb.R_01": {
+   "type": "rotation_difference",
+   "bone": "thumb.R_01",
+   "target_quaternion_wxyz": [
+    0.9238795042037964,
+    0.27780967950820923,
+    1.2117659764498967e-07,
+    -0.263188898563385
+   ],
+   "target_source": "contract step palmar 45 degrees"
+  },
+  "flex.thumb.R_02": {
+   "type": "rotation_difference",
+   "bone": "thumb.R_02",
+   "target_quaternion_wxyz": [
+    0.9063077569007874,
+    0.3801579773426056,
+    1.2595005216553545e-07,
+    0.18462428450584412
+   ],
+   "target_source": "contract step ulnar 50 degrees"
+  },
+  "flex.thumb.R_03": {
+   "type": "rotation_difference",
+   "bone": "thumb.R_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.3850807249546051,
+    6.83756340436048e-08,
+    0.4250915050506592
+   ],
+   "target_source": "contract step ulnar 70 degrees"
+  },
+  "both.34_j1.R": {
+   "type": "product",
+   "of": [
+    "flex.finger3.R_01",
+    "flex.finger4.R_01"
+   ]
+  },
+  "both.23_j2.R": {
+   "type": "product",
+   "of": [
+    "flex.finger2.R_02",
+    "flex.finger3.R_02"
+   ]
+  },
+  "both.fist.R": {
+   "type": "product",
+   "of": [
+    "flex.finger3.R_01",
+    "flex.finger3.R_02"
+   ]
+  },
+  "flex.finger1.L_01": {
+   "type": "rotation_difference",
+   "bone": "finger1.L_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6670486330986023,
+    -5.033539807186571e-08,
+    0.10709001123905182
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger1.L_02": {
+   "type": "rotation_difference",
+   "bone": "finger1.L_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.7084089517593384,
+    -9.702709036218948e-08,
+    0.2915145754814148
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger1.L_03": {
+   "type": "rotation_difference",
+   "bone": "finger1.L_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5358818769454956,
+    -1.0470022004938073e-07,
+    0.20450085401535034
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger2.L_01": {
+   "type": "rotation_difference",
+   "bone": "finger2.L_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6636691093444824,
+    -4.530184938289494e-08,
+    0.12635423243045807
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger2.L_02": {
+   "type": "rotation_difference",
+   "bone": "finger2.L_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.7134900093078613,
+    -8.561212183622047e-08,
+    0.2788476049900055
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger2.L_03": {
+   "type": "rotation_difference",
+   "bone": "finger2.L_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5346787571907043,
+    -1.260676043557396e-07,
+    0.20762620866298676
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger3.L_01": {
+   "type": "rotation_difference",
+   "bone": "finger3.L_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.6478714942932129,
+    -1.1577142089436165e-07,
+    0.19153235852718353
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger3.L_02": {
+   "type": "rotation_difference",
+   "bone": "finger3.L_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.714428186416626,
+    -1.0844204467730378e-07,
+    0.2764351963996887
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger3.L_03": {
+   "type": "rotation_difference",
+   "bone": "finger3.L_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5349380373954773,
+    -9.615327911660643e-08,
+    0.20695731043815613
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.finger4.L_01": {
+   "type": "rotation_difference",
+   "bone": "finger4.L_01",
+   "target_quaternion_wxyz": [
+    0.7372773289680481,
+    0.615177571773529,
+    -1.9253288030540716e-07,
+    0.2792467474937439
+   ],
+   "target_source": "contract step palmar 85 degrees"
+  },
+  "flex.finger4.L_02": {
+   "type": "rotation_difference",
+   "bone": "finger4.L_02",
+   "target_quaternion_wxyz": [
+    0.6427876353263855,
+    0.6976315379142761,
+    -1.2556445483369316e-07,
+    0.31644001603126526
+   ],
+   "target_source": "contract step palmar 100 degrees"
+  },
+  "flex.finger4.L_03": {
+   "type": "rotation_difference",
+   "bone": "finger4.L_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.5314942598342896,
+    -1.0897369406848156e-07,
+    0.21564747393131256
+   ],
+   "target_source": "contract step palmar 70 degrees"
+  },
+  "flex.hand.L": {
+   "type": "rotation_difference",
+   "bone": "hand.L",
+   "target_quaternion_wxyz": [
+    0.8660253882408142,
+    0.4771471917629242,
+    -8.47503613954359e-08,
+    0.14943426847457886
+   ],
+   "target_source": "contract step palmar 60 degrees"
+  },
+  "flex.thumb.L_01": {
+   "type": "rotation_difference",
+   "bone": "thumb.L_01",
+   "target_quaternion_wxyz": [
+    0.9238795042037964,
+    0.27780967950820923,
+    -1.2117659764498967e-07,
+    0.263188898563385
+   ],
+   "target_source": "contract step palmar 45 degrees"
+  },
+  "flex.thumb.L_02": {
+   "type": "rotation_difference",
+   "bone": "thumb.L_02",
+   "target_quaternion_wxyz": [
+    0.9063077569007874,
+    0.3801579773426056,
+    -1.2595005216553545e-07,
+    -0.18462428450584412
+   ],
+   "target_source": "contract step ulnar 50 degrees"
+  },
+  "flex.thumb.L_03": {
+   "type": "rotation_difference",
+   "bone": "thumb.L_03",
+   "target_quaternion_wxyz": [
+    0.8191520571708679,
+    0.3850807249546051,
+    -6.83756340436048e-08,
+    -0.4250915050506592
+   ],
+   "target_source": "contract step ulnar 70 degrees"
+  },
+  "both.34_j1.L": {
+   "type": "product",
+   "of": [
+    "flex.finger3.L_01",
+    "flex.finger4.L_01"
+   ]
+  },
+  "both.23_j2.L": {
+   "type": "product",
+   "of": [
+    "flex.finger2.L_02",
+    "flex.finger3.L_02"
+   ]
+  },
+  "both.fist.L": {
+   "type": "product",
+   "of": [
+    "flex.finger3.L_01",
+    "flex.finger3.L_02"
+   ]
+  },
+  "fold.08": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.5555701851844788,
+    -0.6186479926109314,
+    -0.4215165674686432,
+    -0.36185672879219055
+   ],
+   "target_source": "upper_arm.L in shoulder-flexion.L at the l75 level"
+  },
+  "fold.09": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.4422886371612549,
+    -0.6673105359077454,
+    -0.4546729624271393,
+    -0.3903202414512634
+   ],
+   "target_source": "upper_arm.L in shoulder-flexion.L at the l85 level"
+  },
+  "fold.10": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.5555701851844788,
+    -0.6186479926109314,
+    0.4215165674686432,
+    0.36185672879219055
+   ],
+   "target_source": "upper_arm.R in shoulder-flexion.R at the l75 level"
+  },
+  "fold.11": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.4422886371612549,
+    -0.6673105359077454,
+    0.4546729624271393,
+    0.3903202414512634
+   ],
+   "target_source": "upper_arm.R in shoulder-flexion.R at the l85 level"
+  },
+  "fold.12": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.9969173073768616,
+    2.7558973769714612e-08,
+    0.07845916599035263,
+    -1.891759815464411e-08
+   ],
+   "target_source": "upper_arm.L in shoulder-axial-plus.L at the l15 level"
+  },
+  "fold.13": {
+   "type": "rotation_difference",
+   "bone": "lower_arm.L",
+   "target_quaternion_wxyz": [
+    0.6343932747840881,
+    -0.5595388412475586,
+    -0.32694998383522034,
+    -0.4213848412036896
+   ],
+   "target_source": "lower_arm.L in elbow-flexion.L at the l75 level"
+  },
+  "fold.14": {
+   "type": "rotation_difference",
+   "bone": "lower_arm.L",
+   "target_quaternion_wxyz": [
+    0.5391382575035095,
+    -0.60963374376297,
+    -0.356221467256546,
+    -0.45911094546318054
+   ],
+   "target_source": "lower_arm.L in elbow-flexion.L at the l85 level"
+  },
+  "fold.17": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.9781476259231567,
+    2.285109168553845e-08,
+    -0.20791170001029968,
+    1.809045002687526e-08
+   ],
+   "target_source": "upper_arm.R in shoulder-axial-minus.R at the l40 level"
+  },
+  "fold.18": {
+   "type": "rotation_difference",
+   "bone": "lower_arm.R",
+   "target_quaternion_wxyz": [
+    0.6343932747840881,
+    -0.5595388412475586,
+    0.32694998383522034,
+    0.4213848412036896
+   ],
+   "target_source": "lower_arm.R in elbow-flexion.R at the l75 level"
+  },
+  "fold.19": {
+   "type": "rotation_difference",
+   "bone": "lower_arm.R",
+   "target_quaternion_wxyz": [
+    0.5391382575035095,
+    -0.60963374376297,
+    0.356221467256546,
+    0.45911094546318054
+   ],
+   "target_source": "lower_arm.R in elbow-flexion.R at the l85 level"
+  },
+  "fold.20": {
+   "type": "rotation_difference",
+   "bone": "lower_arm.R",
+   "target_quaternion_wxyz": [
+    0.5391382575035095,
+    -0.60963374376297,
+    0.356221467256546,
+    0.45911094546318054
+   ],
+   "target_source": "lower_arm.R in elbow-flexion.R at the l85 level"
+  },
+  "fold.21": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9914448857307434,
+    0.1296755075454712,
+    -0.010670747607946396,
+    -0.01036757044494152
+   ],
+   "target_source": "upper_leg.R in hip-extension.R at the l75 level"
+  },
+  "fold.22": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.7402181029319763,
+    0.6710259914398193,
+    -0.03058740869164467,
+    -0.029422562569379807
+   ],
+   "target_source": "lower_leg.R in knee-flexion.R at the l65 level"
+  },
+  "fold.23": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.L",
+   "target_quaternion_wxyz": [
+    0.6293202042579651,
+    0.7755963206291199,
+    0.03535404056310654,
+    0.03400765731930733
+   ],
+   "target_source": "lower_leg.L in combo-deep-squat at the l85 level"
+  },
+  "fold.24": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.L",
+   "target_quaternion_wxyz": [
+    0.6293202042579651,
+    0.7755963206291199,
+    0.03535404056310654,
+    0.03400765731930733
+   ],
+   "target_source": "lower_leg.L in combo-deep-squat at the l85 level"
+  },
+  "fold.25": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.6293202042579651,
+    0.7755963206291199,
+    -0.03535404056310654,
+    -0.03400765731930733
+   ],
+   "target_source": "lower_leg.R in combo-deep-squat at the l85 level"
+  },
+  "fold.27": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9571807980537415,
+    -0.2837829291820526,
+    6.548189048771746e-07,
+    0.05720330774784088
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Walk_Sword@44.25 at the clip level"
+  },
+  "fold.28": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.956426739692688,
+    -0.28569144010543823,
+    6.679939019704761e-07,
+    0.06023533269762993
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@20.5 at the clip level"
+  },
+  "fold.29.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.8911436200141907,
+    -0.447210431098938,
+    1.5007448155301972e-06,
+    0.07658909261226654
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@29.25"
+  },
+  "fold.29.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.7862409353256226,
+    0.6125662922859192,
+    4.117411208426347e-06,
+    -0.08116500824689865
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@29.25"
+  },
+  "fold.29": {
+   "type": "product",
+   "of": [
+    "fold.29.0",
+    "fold.29.1"
+   ]
+  },
+  "fold.30.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9880027770996094,
+    -0.14800046384334564,
+    2.2717419767559477e-07,
+    0.044118624180555344
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@16.75"
+  },
+  "fold.30.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.7935326099395752,
+    0.6070845127105713,
+    2.9223665478639305e-06,
+    -0.04188542813062668
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@16.75"
+  },
+  "fold.30": {
+   "type": "product",
+   "of": [
+    "fold.30.0",
+    "fold.30.1"
+   ]
+  },
+  "fold.31.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.8918673992156982,
+    -0.4456373453140259,
+    1.4890845250192797e-06,
+    0.0773298442363739
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@30.0"
+  },
+  "fold.31.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.8085507154464722,
+    0.5825690627098083,
+    3.8287221286736894e-06,
+    -0.08281918615102768
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@30.0"
+  },
+  "fold.31": {
+   "type": "product",
+   "of": [
+    "fold.31.0",
+    "fold.31.1"
+   ]
+  },
+  "fold.32.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.L",
+   "target_quaternion_wxyz": [
+    0.8923199772834778,
+    -0.44508203864097595,
+    -1.4758048791918554e-06,
+    -0.07528012245893478
+   ],
+   "target_source": "upper_leg.L in clip:AN_RO_Run_Sword@8.5"
+  },
+  "fold.32.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.L",
+   "target_quaternion_wxyz": [
+    0.7662132978439331,
+    0.6377964615821838,
+    -4.361168521427317e-06,
+    0.07831310480833054
+   ],
+   "target_source": "lower_leg.L in clip:AN_RO_Run_Sword@8.5"
+  },
+  "fold.32": {
+   "type": "product",
+   "of": [
+    "fold.32.0",
+    "fold.32.1"
+   ]
+  },
+  "fold.33.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9910699725151062,
+    -0.126862570643425,
+    1.8089498610152077e-07,
+    0.041063450276851654
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@16.25"
+  },
+  "fold.33.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.8111191987991333,
+    0.5834134221076965,
+    2.582289198471699e-06,
+    -0.0414062961935997
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@16.25"
+  },
+  "fold.33": {
+   "type": "product",
+   "of": [
+    "fold.33.0",
+    "fold.33.1"
+   ]
+  },
+  "fold.34.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9910699725151062,
+    -0.126862570643425,
+    1.8089498610152077e-07,
+    0.041063450276851654
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@16.25"
+  },
+  "fold.34.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.8111191987991333,
+    0.5834134221076965,
+    2.582289198471699e-06,
+    -0.0414062961935997
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@16.25"
+  },
+  "fold.34": {
+   "type": "product",
+   "of": [
+    "fold.34.0",
+    "fold.34.1"
+   ]
+  },
+  "fold.35.0": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.R",
+   "target_quaternion_wxyz": [
+    0.9895939826965332,
+    -0.13743950426578522,
+    2.0233990483120579e-07,
+    0.042593516409397125
+   ],
+   "target_source": "upper_leg.R in clip:AN_RO_Run_Sword@16.5"
+  },
+  "fold.35.1": {
+   "type": "rotation_difference",
+   "bone": "lower_leg.R",
+   "target_quaternion_wxyz": [
+    0.8024131059646606,
+    0.5953137874603271,
+    2.762352323770756e-06,
+    -0.04165039584040642
+   ],
+   "target_source": "lower_leg.R in clip:AN_RO_Run_Sword@16.5"
+  },
+  "fold.35": {
+   "type": "product",
+   "of": [
+    "fold.35.0",
+    "fold.35.1"
+   ]
+  }
+ },
+ "channels": [
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_04",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.04",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_06",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.06",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_07",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.07",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger1.R_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.R_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger1.R_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.R_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger1.R_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.R_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger2.R_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.R_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger2.R_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.R_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger2.R_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.R_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger3.R_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.R_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger3.R_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.R_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger3.R_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.R_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger4.R_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.R_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger4.R_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.R_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_finger4.R_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.R_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_hand.R",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.hand.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_thumb.R_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.R_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_thumb.R_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.R_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_thumb.R_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.R_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_clear_34_j1.R",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.34_j1.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_clear_23_j2.R",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.23_j2.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SKC_fist.R",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.fist.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger1.L_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.L_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger1.L_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.L_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger1.L_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger1.L_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger2.L_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.L_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger2.L_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.L_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger2.L_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger2.L_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger3.L_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.L_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger3.L_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.L_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger3.L_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger3.L_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger4.L_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.L_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger4.L_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.L_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_finger4.L_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.finger4.L_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_hand.L",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.hand.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_thumb.L_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.L_01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_thumb.L_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.L_02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_thumb.L_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "flex.thumb.L_03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_clear_34_j1.L",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.34_j1.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_clear_23_j2.L",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.23_j2.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SKC_fist.L",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "both.fist.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_08",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.08",
+   "curve": {
+    "type": "hat",
+    "prev": 0.6867,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_09",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.09",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_10",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.10",
+   "curve": {
+    "type": "hat",
+    "prev": 0.6867,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_11",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.11",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_12",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.12",
+   "curve": {
+    "type": "hat",
+    "prev": 0.02,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_13",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.13",
+   "curve": {
+    "type": "hat",
+    "prev": 0.6867,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_14",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.14",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_17",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.17",
+   "curve": {
+    "type": "hat",
+    "prev": 0.77,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_18",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.18",
+   "curve": {
+    "type": "hat",
+    "prev": 0.6867,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_19",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.19",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_20",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.20",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_21",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.21",
+   "curve": {
+    "type": "hat",
+    "prev": 0.6867,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_22",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.22",
+   "curve": {
+    "type": "hat",
+    "prev": 0.7892,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_23",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.23",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_24",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.24",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_25",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.25",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8435,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_27",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.27",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_28",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.28",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_29",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.29",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_30",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.30",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_31",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.31",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_32",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.32",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_33",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.33",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_34",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.34",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_35",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.35",
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0
+   }
+  }
+ ],
+ "helpers": [
+  {
+   "bone": "wrist_transition.R_twist",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "hand.R",
+     "share": 0.5,
+     "twist_only": true
+    }
+   ]
+  },
+  {
+   "bone": "wrist_transition.L_twist",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "hand.L",
+     "share": 0.5,
+     "twist_only": true
+    }
+   ]
+  }
+ ]
+}

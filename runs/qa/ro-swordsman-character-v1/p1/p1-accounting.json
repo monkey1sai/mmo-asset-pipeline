@@ -1,0 +1,253 @@
+{
+ "observed_utc": "2026-10-05T03:45:37.764508+00:00",
+ "phase": "P1 closed loop",
+ "p1_clock_started_utc": "2026-10-05T03:32:29+00:00",
+ "elapsed_seconds_at_record": 788.8,
+ "time_cap_seconds": 14400,
+ "within_cap": true,
+ "counts_as_candidate": false,
+ "candidates_used": 0,
+ "candidate_limit": 4,
+ "attempts": [
+  {
+   "run": "p1-20261005t034147z",
+   "result": "FAIL",
+   "classification": "TEST_FAILURE",
+   "record": "runs/qa/ro-swordsman-character-v1/p1/runtime-attempt1-failure.json"
+  },
+  {
+   "run": "p1-20261005t034255z",
+   "result": "PASS wiring gate",
+   "note": "frame->time mapping fixed; harness later changed only in shading/overlay and source-hash recording"
+  },
+  {
+   "run": "p1-20261005t034404z",
+   "result": "PASS wiring gate",
+   "note": "final harness; identical error figures; results carry harness source hashes"
+  }
+ ],
+ "final_result": {
+  "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+  "bytes": 67473,
+  "sha256": "fc14a370ff92c3a5e03629cc557e8c1927e72ee1a72d626a1d72d16a1dfae87c"
+ },
+ "r010_history_entries_rechecked": 311,
+ "r010_history_mismatch_or_missing": 0,
+ "source_blend_unchanged": true,
+ "new_API_submissions": 0,
+ "new_service_credits": 0,
+ "downloads": [
+  "three@0.186.0 from registry.npmjs.org, lockfile integrity verified"
+ ],
+ "git_head": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+ "staged_paths": [],
+ "writes_outside_worktree": [
+  "C:/Repos/mmo-asset-pipeline/.claude/launch.json (preview launch configuration in the main checkout, new untracked file)"
+ ],
+ "unit_tests": {
+  "ran": 140,
+  "result": "OK",
+  "log": {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/unit-tests.log",
+   "bytes": 19695,
+   "sha256": "3368b1adbe1c0e711f10d07ac2fc4bf65c048e34a20942ddd09891da5440476e"
+  }
+ },
+ "files": [
+  {
+   "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/p1-probe-rules.json",
+   "bytes": 1808,
+   "sha256": "dd8c987840f675017175eaa62a86d8a135f33c47faa9ca4addb4a0e2bda7d4c9"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/ro_character_p1_baked_owner.glb",
+   "bytes": 2459148,
+   "sha256": "29cea78e28eda0817881369415b836cfa9fceea612954e4c02d94bd9e8964581"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/ro_character_p1_runtime_owner.glb",
+   "bytes": 35162952,
+   "sha256": "936aceb2e3fd5e1553d5770f4714a480793b0d926b41b60426cd72b726b5f7ea"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/authorization-envelope-npm-three.json",
+   "bytes": 1278,
+   "sha256": "8010b25a8fb0a43526a5c098abcd6400ca947dc481facbaf30ba2dce4ce0999d"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-export-attempt1.log",
+   "bytes": 3480,
+   "sha256": "c667eee73646686bc14439a15c46f3ba421d11593b0f1d718067916af58e064d"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-reference.f64.bin",
+   "bytes": 12908712,
+   "sha256": "31edd58a639e7958c75d330c75b653d30b8be005289a3c7af0153828f5a2a9d8"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-reference.json",
+   "bytes": 15839,
+   "sha256": "06618cd1218c3dca0150751c00c24885630fc1cc7b3b91a1bec6e17047434265"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-001.png",
+   "bytes": 940861,
+   "sha256": "87673144a13fb17cca56daab1d7972836fb5725a2eabac196aef7f441bedad5e"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-031.png",
+   "bytes": 916591,
+   "sha256": "34f948e61949399b189718b0fc4bbdeee8cb756a093a4c9dc8907c5630f12ac8"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-061.png",
+   "bytes": 912278,
+   "sha256": "de6ec1acf246bdeae58d6753768b6005192f76ce9800b95940e3a3761c38ac7c"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/phase-start.json",
+   "bytes": 4243,
+   "sha256": "d9602865b9b26b6db082da8242153d8045d948ec370d7a1baaf0e8ad46f4c5c1"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime-attempt1-failure.json",
+   "bytes": 1640,
+   "sha256": "3b2ecee043c331bade145915847c7b5e8af9e1e04998e941d3e3ad2bb233b0b2"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/unit-tests.log",
+   "bytes": 19695,
+   "sha256": "3368b1adbe1c0e711f10d07ac2fc4bf65c048e34a20942ddd09891da5440476e"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-results.json",
+   "bytes": 66524,
+   "sha256": "e89ce3d40e8f08563797eca2cf5a00f1b4cef7b127a6a223d2821378d052460c"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-wrist-frame-001.png",
+   "bytes": 519984,
+   "sha256": "a66bcc4d10834973ce91312a35e513f3f34c8a8921a3f7f3823707c1c9efa3fb"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-wrist-frame-031.png",
+   "bytes": 483932,
+   "sha256": "5ad2eab7211712fbab0d1385f04e970d973973aa3f492d4941243d2096067197"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-wrist-frame-061-textured.png",
+   "bytes": 831230,
+   "sha256": "bd77d9414e68a9380f05a1077da4c9b71ecf5fb9128e777504e4ec3ff1afc13e"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034147z-runtime-wrist-frame-061.png",
+   "bytes": 475153,
+   "sha256": "9168e15727e38e45855e384e3db084ba9a16fb7a4da1a1cc01cdabea7d0b77f1"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034255z-runtime-results.json",
+   "bytes": 66911,
+   "sha256": "583c0e7bc5fb8c234b729f09c1eaddda88e1a2436db7a6c4b843569039e5f2d6"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034255z-runtime-wrist-frame-001.png",
+   "bytes": 520136,
+   "sha256": "71f4493680d21d6e22197bd370097ca969281d252643fa3ed90769db1a998c78"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034255z-runtime-wrist-frame-031.png",
+   "bytes": 484386,
+   "sha256": "c9afd42a66fa4fa9de5868a3e7039c1665131886ac456c8bb43711092b6945ce"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034255z-runtime-wrist-frame-061-textured.png",
+   "bytes": 830972,
+   "sha256": "5b71e8703b63d36dffcbae6d74c2e97401ce3869a8c0b611f4180e83e34989cb"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034255z-runtime-wrist-frame-061.png",
+   "bytes": 475027,
+   "sha256": "991f8416ef4ca29b5d5f7b0593b5078902bcbffb7c149944d8fe670736ed3af1"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+   "bytes": 67473,
+   "sha256": "fc14a370ff92c3a5e03629cc557e8c1927e72ee1a72d626a1d72d16a1dfae87c"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-wrist-frame-001.png",
+   "bytes": 520189,
+   "sha256": "04ebb3ad357c99a7d5ac5412e8e523c549eeb9e3fbbc8de227ede3ef2f81329c"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-wrist-frame-031.png",
+   "bytes": 484489,
+   "sha256": "89bbb72b775b6cc46f975c2ae683d388dc61946240cf9299777b310a3b835d9e"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-wrist-frame-061-textured.png",
+   "bytes": 830972,
+   "sha256": "5b71e8703b63d36dffcbae6d74c2e97401ce3869a8c0b611f4180e83e34989cb"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-wrist-frame-061.png",
+   "bytes": 475196,
+   "sha256": "193dff6434c76a5ba2d0c19a81b88834ebb806ed6603e63d36753cf582191074"
+  },
+  {
+   "path": "scripts/cv1_pose_rules.py",
+   "bytes": 4834,
+   "sha256": "d4246f7ccb8b0d4746ce022ac036505085c023e48645be3dabf22d9b320462de"
+  },
+  {
+   "path": "scripts/cv1_p1_export_reference.py",
+   "bytes": 12622,
+   "sha256": "26641819be5feca9ffa144a5b6593be3fad5047930558e9f9181086ee94bfd4f"
+  },
+  {
+   "path": "tests/test_cv1_pose_rules.py",
+   "bytes": 6810,
+   "sha256": "81a7f7c23da1cdd6730ff9b8f7cb4d03f984d557e6006ab4d65bb84a9a4bf87c"
+  },
+  {
+   "path": "tools/runtime-qa/three/index.html",
+   "bytes": 4167,
+   "sha256": "c8cad7a45f4f503f3c99f3df8f4da15903ba4fe016cf9cdc1db1cdfab8474d4e"
+  },
+  {
+   "path": "tools/runtime-qa/three/src/p1.js",
+   "bytes": 26844,
+   "sha256": "f21a821109d67ecf1cdf2830e74cf4f2cd902edc3d432f1139fcbf7e0721aa61"
+  },
+  {
+   "path": "tools/runtime-qa/three/src/cv1-pose-rules.js",
+   "bytes": 4490,
+   "sha256": "bfa4487a6132b16cf836792e2083126ab9fe351ef35202bfc68b81df6f07f8bc"
+  },
+  {
+   "path": "tools/runtime-qa/three/serve.py",
+   "bytes": 4068,
+   "sha256": "314c242569a793dd16b891942add6c5594e729cb72aea918ef13a7312165f773"
+  },
+  {
+   "path": "tools/runtime-qa/three/package.json",
+   "bytes": 252,
+   "sha256": "029ff6815189e437ab67c1fa3d013a0c51acb53090e54c82e4f1d06bfc524cbb"
+  },
+  {
+   "path": "tools/runtime-qa/three/package-lock.json",
+   "bytes": 541,
+   "sha256": "7c51c8ceb666472e6f9e286040065838aff1f858aee12ad8aede3924e78a12e9"
+  },
+  {
+   "path": "tools/runtime-qa/three/.gitignore",
+   "bytes": 14,
+   "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+  },
+  {
+   "path": "requests/ro-swordsman-character-v1.json",
+   "bytes": 34194,
+   "sha256": "f86a1edd4a1792e67ce2a204a87fd92cb6dba153eee055e4ff5ba8a79b5f0c6a"
+  }
+ ]
+}

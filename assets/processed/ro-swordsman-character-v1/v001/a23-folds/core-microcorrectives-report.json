@@ -1,0 +1,107 @@
+{
+ "observed_utc": "2026-10-05T05:44:24.192780+00:00",
+ "script_sha256": "9684fdbd89d10a81b419aa591039fe8045e185d067a2c09b222d379641350b3a",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a22-base/ro_character_v001_a22-base.blend",
+  "sha256": "f8f5acfc0cdab2804bd35e6e4bddaa7925cd3191d2dae4020786bbd529deffed"
+ },
+ "source_sha256_after": "f8f5acfc0cdab2804bd35e6e4bddaa7925cd3191d2dae4020786bbd529deffed",
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a23-folds/ro_character_v001_a23-folds.blend",
+  "sha256": "4fe71a341361d4434ea330070ce4d5959dfafc2304a35e15bbb7cb63b4466227"
+ },
+ "area_ratio_target": 0.08,
+ "sites": [
+  {
+   "site": 1,
+   "motion": "spine-twist",
+   "level": "typical",
+   "driver_bone": "spine_02",
+   "triangle_vertices": [
+    3005,
+    3053,
+    3056
+   ],
+   "apex": 3056,
+   "area_ratio_before": 0.0404,
+   "area_ratio_after": 0.0809,
+   "posed_offset_mm": 0.65
+  },
+  {
+   "site": 2,
+   "motion": "shoulder-flexion.L",
+   "level": "typical",
+   "driver_bone": "upper_arm.L",
+   "triangle_vertices": [
+    132,
+    3359,
+    3356
+   ],
+   "apex": 3356,
+   "area_ratio_before": 0.0468,
+   "area_ratio_after": 0.0821,
+   "posed_offset_mm": 0.5
+  },
+  {
+   "site": 3,
+   "motion": "shoulder-abduction.L",
+   "level": "extreme",
+   "driver_bone": "upper_arm.L",
+   "triangle_vertices": [
+    108,
+    107,
+    3351
+   ],
+   "apex": 107,
+   "area_ratio_before": 0.0252,
+   "area_ratio_after": 0.0815,
+   "posed_offset_mm": 0.55
+  },
+  {
+   "site": 4,
+   "motion": "shoulder-flexion.R",
+   "level": "extreme",
+   "driver_bone": "upper_arm.R",
+   "triangle_vertices": [
+    2939,
+    2936,
+    2935
+   ],
+   "apex": 2936,
+   "area_ratio_before": 0.0461,
+   "area_ratio_after": 0.0824,
+   "posed_offset_mm": 0.7
+  },
+  {
+   "site": 5,
+   "motion": "combo-deep-squat",
+   "level": "typical",
+   "driver_bone": "upper_leg.L",
+   "triangle_vertices": [
+    4037,
+    4040,
+    4084
+   ],
+   "apex": 4037,
+   "area_ratio_before": 0.0271,
+   "area_ratio_after": 0.0833,
+   "posed_offset_mm": 0.6
+  },
+  {
+   "site": 6,
+   "motion": "combo-cast-open-palm.L",
+   "level": "extreme",
+   "driver_bone": "upper_arm.L",
+   "triangle_vertices": [
+    132,
+    3356,
+    3358
+   ],
+   "apex": 132,
+   "area_ratio_before": 0.0316,
+   "area_ratio_after": 0.0803,
+   "posed_offset_mm": 0.55
+  }
+ ],
+ "scope": "One vertex per site, moved only as far as the triangle needs to keep a share of its rest area in that pose. Not a shoulder or hip deformation fix."
+}

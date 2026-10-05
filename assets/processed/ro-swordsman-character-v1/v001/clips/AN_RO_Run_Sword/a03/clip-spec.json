@@ -1,0 +1,205 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Run_Sword",
+ "fps": 60,
+ "frames": 40,
+ "loop": true,
+ "mode": "locomotion",
+ "intent": "In-place run at 3.5 m/s with a flight phase, holding the sword in the Idle ready grip (upper arms near rest, static pauldrons): feet flat for 10 of 40 frames, pelvis lowest at mid-stance, forward lean, left arm bent and swinging.",
+ "poses": [
+  "grasp.R"
+ ],
+ "gait": {
+  "nominal_speed_m_s": 3.5,
+  "stance": 0.25,
+  "phase_offsets": {
+   "R": 0.0,
+   "L": 0.5
+  },
+  "swing_height_m": 0.13,
+  "tangent_scale": 0.5,
+  "toe_off_pitch_deg": 30,
+  "landing_pitch_deg": -8,
+  "pelvis": {
+   "bob_m": -0.02,
+   "sway_m": 0.015,
+   "yaw_deg": 4,
+   "roll_deg": 0.0,
+   "margin_m": 0.003,
+   "max_drop_m": 0.16
+  },
+  "toe_out_deg": 8.0
+ },
+ "steps": [
+  {
+   "bone": "spine_01",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": 12.0
+  },
+  {
+   "bone": "spine_01",
+   "kind": "twist",
+   "about": "up",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      -4.0,
+      1,
+      0.25
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 7.0
+  },
+  {
+   "bone": "head",
+   "kind": "twist",
+   "about": "up",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      -1.5,
+      1,
+      0.25
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "forward",
+   "degrees": 0.0,
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "base": 7.0,
+    "waves": [
+     [
+      7.0,
+      1,
+      0.25
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "lower_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "base": 55.0,
+    "waves": [
+     [
+      8.0,
+      1,
+      0.25
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 15,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 21,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 24,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 22,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 25,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 28,
+   "side": "L"
+  },
+  {
+   "bone": "thumb.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 10,
+   "side": "L"
+  }
+ ],
+ "sword": {
+  "grip": [
+   -0.38,
+   -0.1,
+   0.9
+  ],
+  "blade": [
+   -0.587,
+   -0.492,
+   0.643
+  ],
+  "roll_deg": 170,
+  "swivel_deg": -10,
+  "follow_bone": "spine_02",
+  "swing_deg": {
+   "base": 0.0,
+   "waves": [
+    [
+     5.0,
+     1,
+     0.25
+    ]
+   ]
+  }
+ },
+ "revision_note": "a03 (foundation b07): feet turned out 8 deg with the knees following (external hip rotation against the groin folds); other values as a02."
+}

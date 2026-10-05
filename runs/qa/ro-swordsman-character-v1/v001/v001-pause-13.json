@@ -1,0 +1,60 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T09:22:00Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "status": "paused_waiting_for_user (foundation direction after re-weighting variants; not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602,
+  1277,
+  2213,
+  1835,
+  539
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z",
+  "2026-10-05T07:16:26Z",
+  "2026-10-05T07:54:20Z",
+  "2026-10-05T08:35:30Z",
+  "2026-10-05T09:13:01Z"
+ ],
+ "active_seconds_total": 9915,
+ "trial_seconds_cap": 64800,
+ "authorization": "entry 12 (foundation option 1: re-weight crease regions)",
+ "results": {
+  "b08-smoothA (global crease smoothing, b02 folds dropped)": {
+   "walk_a05": "0 collapse in 120 samples",
+   "run_a02": "8 of 80 samples collapse (backs of knees)",
+   "frozen_sweep": "28 motions fail: body-armour/coat intersections above the baseline ceilings, knee stretch, collapses at dropped b02 fold sites",
+   "midrange": "38 collapsing triangles, flips 213"
+  },
+  "b09-smoothB (local smoothing within 45 mm of crease points)": {
+   "walk_a05": "0 collapse",
+   "run_a02": "16 of 80 collapse (knees, right groin)",
+   "frozen_sweep": "16 motions fail: mostly the dropped b02 fold sites (expected, not yet recomputed); side effects: knee stretch, a right-groin collapse at the typical level, +1 to +4 intersection pairs in spine and elbow motions",
+   "midrange": "32 collapsing triangles, flips 265"
+  },
+  "toe-out 8 deg on b07": {
+   "walk_a06": "20 of 120 collapse (worse than 11 without)",
+   "run_a03": "33 of 80 (worse than 24)"
+  }
+ },
+ "constraint_found": "b05 sits exactly at the baseline ceilings in many motions (e.g. spine-flexion typical 526/526), so any crease change that adds a single body-armour or body-coat intersection fails the frozen ratchet",
+ "current_best_foundation": "b05-twist (frozen sweep 73/73); b07 fails one gate by one pair",
+ "new_paid_submissions": 0
+}
