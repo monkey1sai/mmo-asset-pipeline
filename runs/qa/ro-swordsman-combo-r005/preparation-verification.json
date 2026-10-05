@@ -1,0 +1,80 @@
+{
+  "verified_utc": "2026-10-03T00:46:30.780357+00:00",
+  "status": "preparation_verified_not_generated",
+  "requests_valid": [
+    "ro-swordsman-combo-r005",
+    "ro-swordsman-combo-r005-preflight"
+  ],
+  "parent_quality_targets_spec_budget_unchanged": true,
+  "clock_reset": false,
+  "r004_clock_elapsed_seconds": 2376.542746,
+  "source_binding": {
+    "fixture_kind": "actual previous downloaded GLB and downloader journal",
+    "fixture_operation": "ro-swordsman-apose-20261002-001",
+    "valid_path_contract_pass": true,
+    "rejected_cases": [
+      "outside_expected_raw",
+      "hash_mismatch"
+    ],
+    "fixture_hash_unchanged": true
+  },
+  "batch_blender_execution": "not_run_no_batch_download",
+  "batch_3d_generated": false,
+  "batch_semantic_parts_accepted": false,
+  "rig_animation_or_delivery_accepted": false,
+  "global_state_files_written": 0,
+  "new_hyper3d_paid_submissions": 0,
+  "existing_six_plans_preserved_not_submitted": true,
+  "connectivity": {
+    "source": "mcp__hyper3d_api__rodin_balance observed this turn",
+    "authenticated": true,
+    "balance": 229,
+    "charged": false,
+    "pool_breakdown": "not_returned"
+  },
+  "required_checks": {
+    "unittest": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "passed": 116,
+      "seconds": 1.946
+    },
+    "pipeline": {
+      "command": "python -B scripts/pipeline.py validate",
+      "valid_schema_assets": 39
+    },
+    "scripts_syntax": "AST parse passed",
+    "diff_check": "passed; existing library CRLF warning"
+  },
+  "preflight_text_correction": {
+    "before": "6cc912743a5109dd474a1bb34161e60cb725c19415183458db8dfff7875f33c7",
+    "after": "e80aa47bfa4fe8d64ed77210f04a1264d0a676b0ecc8962312086c68014a90d4",
+    "quality_spec_unchanged": true
+  },
+  "artifacts": [
+    {
+      "path": "requests/ro-swordsman-combo-r005.json",
+      "sha256": "452b480ef2d5b01ecdfed4b639378717d6068651f3da1c52268e53745131f7c2"
+    },
+    {
+      "path": "requests/ro-swordsman-combo-r005-preflight.json",
+      "sha256": "e80aa47bfa4fe8d64ed77210f04a1264d0a676b0ecc8962312086c68014a90d4"
+    },
+    {
+      "path": "scripts/inspect_ro_batch_source.py",
+      "sha256": "d4dcf6f7e7d722dc1f02f73897a56848ecb370e37515a9007896e1ac39b887e6"
+    },
+    {
+      "path": "scripts/prepare_ro_batch_source.py",
+      "sha256": "9a2d2320c677e22bd9e2ced7cbb679de2f571b1fad670b13b9faa219236a5212"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r005/api-spec-batch.json",
+      "sha256": "12091af77e76b5aaedee92218e6ed5b262c52e66867c336df45f1307f217ac3b"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r005/generation-prepared.json",
+      "sha256": "caae8dac2f07119e77d4de60a06c4a1030859c51ba69d0169dbe85379c01fca2"
+    }
+  ],
+  "held": "Exact new global state-file authority pending; spending already authorized. Stage/commit/push await user validation."
+}

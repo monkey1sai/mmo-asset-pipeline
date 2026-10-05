@@ -1,0 +1,155 @@
+{
+  "observed_utc": "2026-10-03T02:17:04.499372+00:00",
+  "integrity_verified": [
+    "all3raw_downloads",
+    "source_parts",
+    "frozen_baseline",
+    "current_rig_preflight",
+    "API provider/old authorization unchanged"
+  ],
+  "syntax_checked": [
+    "extract_ro_batch_parts.py",
+    "assemble_ro_batch_baseline.py",
+    "record_ro_batch_baseline.py",
+    "fit_ro_batch_candidate.py",
+    "probe_ro_equipment_fit.py",
+    "tailor_ro_batch_fit.py",
+    "rig_ro_batch_preflight.py",
+    "check_ro_batch_roundtrip.py",
+    "finish_ro_batch_experiment.py",
+    "record_ro_batch_verification.py"
+  ],
+  "library_entry": "needs_revision/not_delivered",
+  "quality_comparison": {
+    "mode": "declared_quality_comparison_only",
+    "request_id": "ro-swordsman-combo-r005",
+    "request_sha256": "1cab68721f293152a7067936e351caa27ce0c7a9c7035785816f3816f945cf62",
+    "protocol_sha256": "eb8126821671e1eed442705b115998cc18057da17f951bc1ca5a5521ce8f14b4",
+    "trials": [
+      {
+        "id": "baseline",
+        "decision": "baseline",
+        "issues": [],
+        "failed_gates": [
+          "scale_pivot",
+          "geometry_materials",
+          "package_complete",
+          "rig_mapping",
+          "deformation",
+          "animation",
+          "export-roundtrip"
+        ]
+      },
+      {
+        "id": "v001",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      }
+    ],
+    "blockers": [],
+    "best_trial_id": "baseline",
+    "best_content_artifacts": [
+      {
+        "path": "assets/processed/ro-swordsman-combo-r005/baseline/ro_batch_assembly_baseline.blend",
+        "sha256": "b5bc06eadb42d5a33b573448a90442cc24382a7875fa923aefa716c22987b57f"
+      },
+      {
+        "path": "assets/processed/ro-swordsman-combo-r005/baseline/ro_batch_assembly_baseline.glb",
+        "sha256": "698205c623b4d198d459a4f6fd2a350f1ce445fef02ec7a60bbf28092a1c1c65"
+      }
+    ],
+    "quality_target_met": false,
+    "elapsed_seconds": 7326.178948000001,
+    "candidate_trials_used": 1,
+    "next_action": "revise_current_best",
+    "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。"
+  },
+  "unit_test_run": "116 tests passed in1.885s, actual current-turn command",
+  "existing_pipeline_validation": "valid39assets; schema only",
+  "git_diff_check": "passed actual current-turn command",
+  "fallback_plan_sha256": "2a33237e7a7c1b41626536f1547a63c1f50e386f2f31d86f0b8c6c71df93317b",
+  "fallback_state": "prepared_not_submitted, exact global file authority pending",
+  "static_roundtrip": {
+    "subject": {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-seams/ro_rig_preflight.glb",
+      "sha256": "17c0163cde80e1d6afa38a2dce268f62177b35ca4cbe70bf63fbe26a8b6f7ba8"
+    },
+    "fresh_scene_import": true,
+    "meshes": 8,
+    "bones": 48,
+    "triangles": 55488,
+    "skins": 1,
+    "skin_joint_counts": [
+      48
+    ],
+    "images": [
+      {
+        "name": "Render Result",
+        "size": [
+          0,
+          0
+        ],
+        "packed": false
+      },
+      {
+        "name": "texture_diffuse",
+        "size": [
+          2048,
+          2048
+        ],
+        "packed": true
+      },
+      {
+        "name": "texture_metallic-texture_roughness",
+        "size": [
+          2048,
+          2048
+        ],
+        "packed": true
+      },
+      {
+        "name": "texture_normal",
+        "size": [
+          2048,
+          2048
+        ],
+        "packed": true
+      },
+      {
+        "name": "Viewer Node",
+        "size": [
+          256,
+          256
+        ],
+        "packed": false
+      }
+    ],
+    "embedded_textures": true,
+    "animation_channels": 0,
+    "material_count": 1,
+    "bone_custom_shape_disabled": true,
+    "prior_inventory_mismatch": "Built-in importer adds an icosphere control display when disable_bone_shape=False; 80 diagnostic triangles are not exported source geometry.",
+    "verified_scope": "Static rest geometry, skin/joint inventory and material image presence. Actual five views retained.",
+    "animation_acceptance": false,
+    "art_acceptance": false,
+    "no_full_motion_roundtrip_performed": true
+  },
+  "art_verdict": "NO_SHIP",
+  "full_animation_verified": false,
+  "effects_verified": false,
+  "environment_event": "Unexpected global extension cleanup observed; partial change extent unverified; no repair.",
+  "environment_readonly_observation": {
+    "evidence": "extension-readonly-observation.json",
+    "currently_absent_directories_and_init_py": [
+      "aiohttp",
+      "yarl",
+      "multidict"
+    ],
+    "before_inventory_available": false,
+    "causal_attribution": "Unverified: absence timing and attribution to this cleanup cannot be established without a prior inventory.",
+    "global_repair_performed": false
+  },
+  "stage_commit_push": "held by user",
+  "task_owned_background_work": "none"
+}

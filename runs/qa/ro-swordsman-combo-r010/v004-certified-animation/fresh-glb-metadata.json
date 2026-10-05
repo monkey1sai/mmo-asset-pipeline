@@ -1,0 +1,162 @@
+{
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_combined.glb",
+    "sha256": "834110e859b88a06e06921e8ea5794501ad22056dee00779454451dd9a4f9ea2"
+  },
+  "objects": [
+    {
+      "name": "ARM_RO_HandDiagnostic",
+      "type": "ARMATURE",
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "action_range": [
+        1.0,
+        61.0
+      ]
+    },
+    {
+      "name": "SM_RO_LocalActualSword",
+      "type": "MESH",
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "vertices": 7634,
+      "attributes": [
+        {
+          "name": "_R010_WEAPON_ID",
+          "type": "FLOAT",
+          "domain": "POINT"
+        },
+        {
+          "name": "position",
+          "type": "FLOAT_VECTOR",
+          "domain": "POINT"
+        },
+        {
+          "name": ".select_vert",
+          "type": "BOOLEAN",
+          "domain": "POINT"
+        },
+        {
+          "name": ".edge_verts",
+          "type": "INT32_2D",
+          "domain": "EDGE"
+        },
+        {
+          "name": "sharp_edge",
+          "type": "BOOLEAN",
+          "domain": "EDGE"
+        },
+        {
+          "name": "material_index",
+          "type": "INT",
+          "domain": "FACE"
+        },
+        {
+          "name": ".select_poly",
+          "type": "BOOLEAN",
+          "domain": "FACE"
+        },
+        {
+          "name": "sharp_face",
+          "type": "BOOLEAN",
+          "domain": "FACE"
+        },
+        {
+          "name": ".corner_vert",
+          "type": "INT",
+          "domain": "CORNER"
+        },
+        {
+          "name": ".corner_edge",
+          "type": "INT",
+          "domain": "CORNER"
+        },
+        {
+          "name": "custom_normal",
+          "type": "INT16_2D",
+          "domain": "CORNER"
+        }
+      ],
+      "keys": []
+    },
+    {
+      "name": "SM_RO_RightHand_Exterior",
+      "type": "EMPTY",
+      "world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "scene_fps": 60
+}

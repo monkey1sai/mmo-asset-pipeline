@@ -1,0 +1,46 @@
+{
+  "trial": "v003",
+  "stage": "right hand prototype, manual view gate pending",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v002-digit-weights/ro_digit_weights.blend",
+    "sha256": "4f165cd331e9c3e8dcaad66d954238db2f58aeb39bdbe91ff2592d968adcd60e"
+  },
+  "source_preserved": true,
+  "method": "Source-guided palm front/back quad cage, four independent eight-sided joint-loop fingers, finite webs, two-joint thumb port and unequal wrist seam bridge. Nearest original triangle UV barycentric transfer; no body/head edits.",
+  "right_wrist_cut_z": 0.923,
+  "wrist_seam_edges": 40,
+  "new_region_triangles": 724,
+  "whole_character_triangles": 59120,
+  "nonmanifold_edges": 0,
+  "protected_geometry_and_uv_unchanged": true,
+  "bones": 52,
+  "right_finger_joints": 3,
+  "source_grip_search_count": 100,
+  "new_numerical_search_evaluations": 0,
+  "single_pose": {
+    "requested_grip": [
+      -0.08,
+      -0.29,
+      1.12
+    ],
+    "feasible_grip": [
+      -0.07999999821186066,
+      -0.28999999165534973,
+      1.1200000047683716
+    ],
+    "grip_adjustment_m": 0.0,
+    "bone_target_residual_m": {
+      "R": 0.0,
+      "foot.R": 0.0008552074059396952,
+      "foot.L": 0.0008552074059396952,
+      "thumb.R": 0.0
+    },
+    "surface_contact_accepted": false
+  },
+  "art_accepted": false,
+  "rig_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-prototype/ro_hand_prototype.blend",
+    "sha256": "1e1798efd7eec24591bc9bca2a743822dd21410cecf5ae4e2a09c4c83c9e4400"
+  }
+}

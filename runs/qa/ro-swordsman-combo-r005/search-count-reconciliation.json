@@ -1,0 +1,18 @@
+{
+  "reported_prior_evaluations": 100,
+  "logged_prior_candidates": 94,
+  "logged_by_side": {
+    "R": 47,
+    "L": 47
+  },
+  "difference_without_per_call_events": 6,
+  "source_derived_explanation": "The saved optimizer source calls evaluate(side) three additional times per hand: baseline before the search; readback after selected grip; final readback.47 logged +3 =50 per side. These six events lack individual log rows, so per-side50/80 is source-derived, not a complete event trace.",
+  "source": {
+    "path": "scripts/optimize_ro_core_contact.py",
+    "sha256": "3953d97febc8de0b5b59e9ca6b797ce7a374319d031e2b01c9d92690dc9a66ba"
+  },
+  "new_logged_searches": 30,
+  "reported_accumulated_evaluations": 130,
+  "count_gap_releases_budget": false,
+  "new_search_authorized_by_gap": false
+}

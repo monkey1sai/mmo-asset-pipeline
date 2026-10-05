@@ -1,0 +1,57 @@
+Codex Doctor v0.160.0 · windows-x86_64
+
+Notes
+   [up] desktop      build 26.930.3930.0 available
+   [!!] rollouts     574 active files · 2.19 GB on disk
+   [!!] sandbox      filesystem restricted · network enabled
+   [!!] security     Microsoft Defender can interfere with Codex. Verify Codex exclusions.
+   [!!] git          this worktree is not on a Windows Dev Drive; moving it to a trusted Dev Drive can significantly improve repository and filesystem performance - create a trusted Windows Dev Drive for source repositories: https://learn.microsoft.com/en-us/windows/dev-drive/
+   [!!] config       config loaded
+   [!!] mcp          MCP configuration has optional issues - Set the missing MCP env vars or disable the affected server.
+   [XX] sandbox      elevated Windows sandbox provisioning recorded a structured failure
+   [!!] terminal     TERM=dumb - colors and cursor control are disabled in this non-interactive run
+   [!!] threads      4 issues - rollout files are missing from the state DB; state DB rows point at missing or unusable rollout files
+-------------------------------------------------------------
+
+Environment
+  [ok] system       zh-TW
+  [ok] disk         sufficient free disk space (249.6 GiB)
+  [!!] security     Microsoft Defender can interfere with Codex. Verify Codex exclusions.
+  [ok] runtime      npm (package C:\Users\IOT\AppData\Roaming\npm\node_modules\@openai\codex\node_modules\@openai\codex-win32-x64\vendor\x86_64-pc-windows-msvc, bin C:\Users\IOT\AppData\Roaming\npm\node_modules\@openai\codex\node_modules\@openai\codex-win32-x64\vendor\x86_64-pc-windows-msvc\bin, resources C:\Users\IOT\AppData\Roaming\npm\node_modules\@openai\codex\node_modules\@openai\codex-win32-x64\vendor\x86_64-pc-windows-msvc\codex-resources, path C:\Users\IOT\AppData\Roaming\npm\node_modules\@openai\codex\node_modules\@openai\codex-win32-x64\vendor\x86_64-pc-windows-msvc\codex-path)
+  [ok] install      consistent
+  [ok] search       file exists (bundled, `C:\Users\IOT\AppData\Roaming\npm\node_modules\@openai\codex\node_modules\@openai\codex-win32-x64\vendor\x86_64-pc-windows-msvc\codex-path\rg.exe`)
+  [!!] git          this worktree is not on a Windows Dev Drive; moving it to a trusted Dev Drive can significantly improve repository and filesystem performance - create a trusted Windows Dev Drive for source repositories: https://learn.microsoft.com/en-us/windows/dev-drive/
+  [ok] git          git executable found; execution not verified
+  [!!] terminal     TERM=dumb - colors and cursor control are disabled in this non-interactive run
+  [ok] title        default | project art-quality-loop
+  [ok] state        databases healthy
+  [!!] threads      4 issues - rollout files are missing from the state DB; state DB rows point at missing or unusable rollout files
+
+Configuration
+  [!!] config       config loaded
+  [ok] auth         auth is configured
+  [!!] mcp          MCP configuration has optional issues - Set the missing MCP env vars or disable the affected server.
+  [XX] sandbox      elevated Windows sandbox provisioning recorded a structured failure
+  [ok] sandbox      no explicit filesystem paths to probe
+
+Desktop App
+  [ok] desktop      the desktop application is installed
+  [ok] desktop      no desktop app-server handshake was recorded
+  [ok] desktop      no locally visible recent Codex security enforcement was found
+
+Updates
+  [ok] updates      update configuration is locally consistent
+
+Connectivity
+  [ok] network      no proxy env vars
+  [ok] websocket    connected (HTTP 101 Switching Protocols) · 15s timeout
+  [ok] reachability active provider endpoints are reachable over HTTP
+
+Background Server
+  [ok] app-server   running (ephemeral mode)
+
+-------------------------------------------------------------
+18 ok | 10 notes | 6 warn | 1 fail failed
+
+Run codex doctor without --summary for detailed diagnostics.
+--all expand truncated lists       --json redacted report

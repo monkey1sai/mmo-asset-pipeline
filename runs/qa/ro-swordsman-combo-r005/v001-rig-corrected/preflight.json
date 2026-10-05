@@ -1,0 +1,82 @@
+{
+  "candidate": "v001",
+  "stage": "rig preflight; not full continuous animation",
+  "known_failure_repaired": "Gear bones excluded from core bone heat and all core assignment; downslash grip moved to shared reachable volume. Actual visual acceptance remains separate.",
+  "source_sha256": "eaf01613d30cddbf44a951236aabdbfd3931f309da8e0791ef5924b309993a66",
+  "source_preserved": true,
+  "bone_heat_warning": null,
+  "bones": 48,
+  "triangles": 55488,
+  "invalid_weights": [],
+  "weight_validation_pass": true,
+  "linear_skinning": true,
+  "fk_editable": true,
+  "ik_fk_switch": false,
+  "real_stress_poses": [
+    {
+      "pose": "overhead",
+      "hip_height_m": 0.89,
+      "requested_grip": [
+        0,
+        -0.16,
+        1.5
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 0.00177494032291525,
+        "L": 0.0,
+        "foot.L": 0.00177494032291525
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "deep-crouch",
+      "hip_height_m": 0.7,
+      "requested_grip": [
+        0,
+        -0.22,
+        1.02
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 1.666000468656264e-08,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "downslash",
+      "hip_height_m": 0.82,
+      "requested_grip": [
+        -0.08,
+        -0.2,
+        1.0
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.053354191540541045,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 0.041554136594384464,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    }
+  ],
+  "animation_channels": 0,
+  "effects": false,
+  "elapsed_trial_seconds": 1496.613722,
+  "elapsed_phase_seconds": 6193.719546,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-corrected/ro_rig_preflight.blend",
+      "sha256": "1a0e3f2e5ba1710dcb41724aff0d63f75f45c27263560116d1ff4ea2f9b365d7",
+      "bytes": 17265143
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-corrected/ro_rig_preflight.glb",
+      "sha256": "9e8d568bc750102fd3b48fa42d9c08f142bda59e481aa69036fbbfdfee57b2c2",
+      "bytes": 12278716
+    }
+  ],
+  "acceptance": "Pending actual views/grip/deformation and fresh GLB reimport; no art/technical PASS"
+}

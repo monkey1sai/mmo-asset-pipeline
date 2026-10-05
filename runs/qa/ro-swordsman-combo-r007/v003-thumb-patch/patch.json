@@ -1,0 +1,847 @@
+{
+  "observed_utc": "2026-10-03T13:06:03.513458+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+    "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599"
+  },
+  "boundary_record": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/boundary.json",
+    "sha256": "da000a50fa881c01f88c516b364837946329104ed1537c79904bb50f247c8048"
+  },
+  "method": "Preserved16vertex native loop; quad tubular rings and4x4grid cap on measured original surface",
+  "removed_native_faces": 51,
+  "actual_variants": 1,
+  "maximum_variants": 12,
+  "selected_heights_m": [
+    -0.002,
+    0.004,
+    0.009,
+    0.0105
+  ],
+  "geometry": {
+    "primary_band_poles": [],
+    "new_cap_poles": [
+      {
+        "vertex": 879,
+        "valence": 3,
+        "IP_axial_m": 0.010499997616534529
+      },
+      {
+        "vertex": 883,
+        "valence": 3,
+        "IP_axial_m": 0.010499992080440279
+      },
+      {
+        "vertex": 887,
+        "valence": 3,
+        "IP_axial_m": 0.010499988414267136
+      },
+      {
+        "vertex": 891,
+        "valence": 3,
+        "IP_axial_m": 0.010499988331048371
+      }
+    ],
+    "pole_wrong_destination": [],
+    "sampled_bidirectional_surface_max_m": 0.0011676788562908769,
+    "surface_samples": 1834,
+    "neutral_transverse_pairs": 0,
+    "crossing_pairs": [],
+    "degenerate_triangles": 0,
+    "new_triangle_wrong_normals": 0,
+    "manifold_except_cuff": true,
+    "boundary_degree2": true,
+    "boundary_edges": 18,
+    "protected_positions_pass": true,
+    "protected_corner_UV_pass": true,
+    "protected_faces": 814,
+    "triangles": 1788,
+    "quads": 894,
+    "source_gate": true
+  },
+  "events": [
+    {
+      "heights_m": [
+        -0.002,
+        0.004,
+        0.009,
+        0.0105
+      ],
+      "geometry": {
+        "primary_band_poles": [],
+        "new_cap_poles": [
+          {
+            "vertex": 879,
+            "valence": 3,
+            "IP_axial_m": 0.010499997616534529
+          },
+          {
+            "vertex": 883,
+            "valence": 3,
+            "IP_axial_m": 0.010499992080440279
+          },
+          {
+            "vertex": 887,
+            "valence": 3,
+            "IP_axial_m": 0.010499988414267136
+          },
+          {
+            "vertex": 891,
+            "valence": 3,
+            "IP_axial_m": 0.010499988331048371
+          }
+        ],
+        "pole_wrong_destination": [],
+        "sampled_bidirectional_surface_max_m": 0.0011676788562908769,
+        "surface_samples": 1834,
+        "neutral_transverse_pairs": 0,
+        "crossing_pairs": [],
+        "degenerate_triangles": 0,
+        "new_triangle_wrong_normals": 0,
+        "manifold_except_cuff": true,
+        "boundary_degree2": true,
+        "boundary_edges": 18,
+        "protected_positions_pass": true,
+        "protected_corner_UV_pass": true,
+        "protected_faces": 814,
+        "triangles": 1788,
+        "quads": 894,
+        "source_gate": true
+      }
+    }
+  ],
+  "UV_transfer": [
+    {
+      "face": 814,
+      "nearest_original_triangle_per_corner": [
+        1144,
+        1203,
+        1190,
+        1202
+      ]
+    },
+    {
+      "face": 815,
+      "nearest_original_triangle_per_corner": [
+        1203,
+        1191,
+        1190,
+        1190
+      ]
+    },
+    {
+      "face": 816,
+      "nearest_original_triangle_per_corner": [
+        1191,
+        1154,
+        1154,
+        1190
+      ]
+    },
+    {
+      "face": 817,
+      "nearest_original_triangle_per_corner": [
+        1154,
+        1156,
+        1161,
+        1154
+      ]
+    },
+    {
+      "face": 818,
+      "nearest_original_triangle_per_corner": [
+        1156,
+        1160,
+        1161,
+        1161
+      ]
+    },
+    {
+      "face": 819,
+      "nearest_original_triangle_per_corner": [
+        1160,
+        1182,
+        1167,
+        1161
+      ]
+    },
+    {
+      "face": 820,
+      "nearest_original_triangle_per_corner": [
+        1182,
+        1110,
+        1111,
+        1167
+      ]
+    },
+    {
+      "face": 821,
+      "nearest_original_triangle_per_corner": [
+        1110,
+        1116,
+        1117,
+        1111
+      ]
+    },
+    {
+      "face": 822,
+      "nearest_original_triangle_per_corner": [
+        1116,
+        1021,
+        1117,
+        1117
+      ]
+    },
+    {
+      "face": 823,
+      "nearest_original_triangle_per_corner": [
+        1021,
+        1022,
+        1023,
+        1117
+      ]
+    },
+    {
+      "face": 824,
+      "nearest_original_triangle_per_corner": [
+        1022,
+        1026,
+        1028,
+        1023
+      ]
+    },
+    {
+      "face": 825,
+      "nearest_original_triangle_per_corner": [
+        1026,
+        1030,
+        1033,
+        1028
+      ]
+    },
+    {
+      "face": 826,
+      "nearest_original_triangle_per_corner": [
+        1030,
+        1031,
+        1036,
+        1033
+      ]
+    },
+    {
+      "face": 827,
+      "nearest_original_triangle_per_corner": [
+        1031,
+        1138,
+        1143,
+        1036
+      ]
+    },
+    {
+      "face": 828,
+      "nearest_original_triangle_per_corner": [
+        1138,
+        1142,
+        1142,
+        1143
+      ]
+    },
+    {
+      "face": 829,
+      "nearest_original_triangle_per_corner": [
+        1142,
+        1144,
+        1202,
+        1142
+      ]
+    },
+    {
+      "face": 830,
+      "nearest_original_triangle_per_corner": [
+        1144,
+        56,
+        1203,
+        1144
+      ]
+    },
+    {
+      "face": 831,
+      "nearest_original_triangle_per_corner": [
+        56,
+        55,
+        1191,
+        1203
+      ]
+    },
+    {
+      "face": 832,
+      "nearest_original_triangle_per_corner": [
+        55,
+        1151,
+        1154,
+        1191
+      ]
+    },
+    {
+      "face": 833,
+      "nearest_original_triangle_per_corner": [
+        1151,
+        1152,
+        1156,
+        1154
+      ]
+    },
+    {
+      "face": 834,
+      "nearest_original_triangle_per_corner": [
+        1152,
+        51,
+        1160,
+        1156
+      ]
+    },
+    {
+      "face": 835,
+      "nearest_original_triangle_per_corner": [
+        51,
+        1195,
+        1182,
+        1160
+      ]
+    },
+    {
+      "face": 836,
+      "nearest_original_triangle_per_corner": [
+        1195,
+        1113,
+        1110,
+        1182
+      ]
+    },
+    {
+      "face": 837,
+      "nearest_original_triangle_per_corner": [
+        1113,
+        1115,
+        1116,
+        1110
+      ]
+    },
+    {
+      "face": 838,
+      "nearest_original_triangle_per_corner": [
+        1115,
+        69,
+        1021,
+        1116
+      ]
+    },
+    {
+      "face": 839,
+      "nearest_original_triangle_per_corner": [
+        69,
+        68,
+        1022,
+        1021
+      ]
+    },
+    {
+      "face": 840,
+      "nearest_original_triangle_per_corner": [
+        68,
+        1026,
+        1026,
+        1022
+      ]
+    },
+    {
+      "face": 841,
+      "nearest_original_triangle_per_corner": [
+        1026,
+        1030,
+        1030,
+        1026
+      ]
+    },
+    {
+      "face": 842,
+      "nearest_original_triangle_per_corner": [
+        1030,
+        1031,
+        1031,
+        1030
+      ]
+    },
+    {
+      "face": 843,
+      "nearest_original_triangle_per_corner": [
+        1031,
+        1139,
+        1138,
+        1031
+      ]
+    },
+    {
+      "face": 844,
+      "nearest_original_triangle_per_corner": [
+        1139,
+        1142,
+        1142,
+        1138
+      ]
+    },
+    {
+      "face": 845,
+      "nearest_original_triangle_per_corner": [
+        1142,
+        1144,
+        1144,
+        1142
+      ]
+    },
+    {
+      "face": 846,
+      "nearest_original_triangle_per_corner": [
+        1134,
+        1136,
+        56,
+        1144
+      ]
+    },
+    {
+      "face": 847,
+      "nearest_original_triangle_per_corner": [
+        1136,
+        58,
+        55,
+        56
+      ]
+    },
+    {
+      "face": 848,
+      "nearest_original_triangle_per_corner": [
+        58,
+        1149,
+        1151,
+        55
+      ]
+    },
+    {
+      "face": 849,
+      "nearest_original_triangle_per_corner": [
+        1149,
+        1147,
+        1152,
+        1151
+      ]
+    },
+    {
+      "face": 850,
+      "nearest_original_triangle_per_corner": [
+        1147,
+        1193,
+        51,
+        1152
+      ]
+    },
+    {
+      "face": 851,
+      "nearest_original_triangle_per_corner": [
+        1193,
+        1118,
+        1195,
+        51
+      ]
+    },
+    {
+      "face": 852,
+      "nearest_original_triangle_per_corner": [
+        1118,
+        66,
+        1113,
+        1195
+      ]
+    },
+    {
+      "face": 853,
+      "nearest_original_triangle_per_corner": [
+        66,
+        1727,
+        1115,
+        1113
+      ]
+    },
+    {
+      "face": 854,
+      "nearest_original_triangle_per_corner": [
+        1727,
+        1689,
+        69,
+        1115
+      ]
+    },
+    {
+      "face": 855,
+      "nearest_original_triangle_per_corner": [
+        1689,
+        1207,
+        68,
+        69
+      ]
+    },
+    {
+      "face": 856,
+      "nearest_original_triangle_per_corner": [
+        1207,
+        1207,
+        1026,
+        68
+      ]
+    },
+    {
+      "face": 857,
+      "nearest_original_triangle_per_corner": [
+        1207,
+        1204,
+        1030,
+        1026
+      ]
+    },
+    {
+      "face": 858,
+      "nearest_original_triangle_per_corner": [
+        1204,
+        1205,
+        1031,
+        1030
+      ]
+    },
+    {
+      "face": 859,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1140,
+        1139,
+        1031
+      ]
+    },
+    {
+      "face": 860,
+      "nearest_original_triangle_per_corner": [
+        1140,
+        1141,
+        1142,
+        1139
+      ]
+    },
+    {
+      "face": 861,
+      "nearest_original_triangle_per_corner": [
+        1141,
+        1134,
+        1144,
+        1142
+      ]
+    },
+    {
+      "face": 862,
+      "nearest_original_triangle_per_corner": [
+        1135,
+        1136,
+        1136,
+        1134
+      ]
+    },
+    {
+      "face": 863,
+      "nearest_original_triangle_per_corner": [
+        1136,
+        1130,
+        58,
+        1136
+      ]
+    },
+    {
+      "face": 864,
+      "nearest_original_triangle_per_corner": [
+        1130,
+        1149,
+        1149,
+        58
+      ]
+    },
+    {
+      "face": 865,
+      "nearest_original_triangle_per_corner": [
+        1149,
+        1146,
+        1147,
+        1149
+      ]
+    },
+    {
+      "face": 866,
+      "nearest_original_triangle_per_corner": [
+        1146,
+        1124,
+        1193,
+        1147
+      ]
+    },
+    {
+      "face": 867,
+      "nearest_original_triangle_per_corner": [
+        1124,
+        1119,
+        1118,
+        1193
+      ]
+    },
+    {
+      "face": 868,
+      "nearest_original_triangle_per_corner": [
+        1119,
+        1727,
+        66,
+        1118
+      ]
+    },
+    {
+      "face": 869,
+      "nearest_original_triangle_per_corner": [
+        1727,
+        1688,
+        1727,
+        66
+      ]
+    },
+    {
+      "face": 870,
+      "nearest_original_triangle_per_corner": [
+        1688,
+        1689,
+        1689,
+        1727
+      ]
+    },
+    {
+      "face": 871,
+      "nearest_original_triangle_per_corner": [
+        1689,
+        1689,
+        1207,
+        1689
+      ]
+    },
+    {
+      "face": 872,
+      "nearest_original_triangle_per_corner": [
+        1689,
+        1205,
+        1207,
+        1207
+      ]
+    },
+    {
+      "face": 873,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1205,
+        1204,
+        1207
+      ]
+    },
+    {
+      "face": 874,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1205,
+        1205,
+        1204
+      ]
+    },
+    {
+      "face": 875,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1140,
+        1140,
+        1205
+      ]
+    },
+    {
+      "face": 876,
+      "nearest_original_triangle_per_corner": [
+        1140,
+        1141,
+        1141,
+        1140
+      ]
+    },
+    {
+      "face": 877,
+      "nearest_original_triangle_per_corner": [
+        1141,
+        1135,
+        1134,
+        1141
+      ]
+    },
+    {
+      "face": 878,
+      "nearest_original_triangle_per_corner": [
+        1141,
+        1133,
+        1136,
+        1135
+      ]
+    },
+    {
+      "face": 879,
+      "nearest_original_triangle_per_corner": [
+        1133,
+        1128,
+        1130,
+        1136
+      ]
+    },
+    {
+      "face": 880,
+      "nearest_original_triangle_per_corner": [
+        1128,
+        1129,
+        1149,
+        1130
+      ]
+    },
+    {
+      "face": 881,
+      "nearest_original_triangle_per_corner": [
+        1129,
+        1124,
+        1146,
+        1149
+      ]
+    },
+    {
+      "face": 882,
+      "nearest_original_triangle_per_corner": [
+        1140,
+        63,
+        1133,
+        1141
+      ]
+    },
+    {
+      "face": 883,
+      "nearest_original_triangle_per_corner": [
+        63,
+        60,
+        1128,
+        1133
+      ]
+    },
+    {
+      "face": 884,
+      "nearest_original_triangle_per_corner": [
+        60,
+        1121,
+        1129,
+        1128
+      ]
+    },
+    {
+      "face": 885,
+      "nearest_original_triangle_per_corner": [
+        1121,
+        1119,
+        1124,
+        1129
+      ]
+    },
+    {
+      "face": 886,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        64,
+        63,
+        1140
+      ]
+    },
+    {
+      "face": 887,
+      "nearest_original_triangle_per_corner": [
+        64,
+        65,
+        60,
+        63
+      ]
+    },
+    {
+      "face": 888,
+      "nearest_original_triangle_per_corner": [
+        65,
+        1688,
+        1121,
+        60
+      ]
+    },
+    {
+      "face": 889,
+      "nearest_original_triangle_per_corner": [
+        1688,
+        1727,
+        1119,
+        1121
+      ]
+    },
+    {
+      "face": 890,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1205,
+        64,
+        1205
+      ]
+    },
+    {
+      "face": 891,
+      "nearest_original_triangle_per_corner": [
+        1205,
+        1689,
+        65,
+        64
+      ]
+    },
+    {
+      "face": 892,
+      "nearest_original_triangle_per_corner": [
+        1689,
+        1689,
+        1688,
+        65
+      ]
+    },
+    {
+      "face": 893,
+      "nearest_original_triangle_per_corner": [
+        1689,
+        1688,
+        1727,
+        1688
+      ]
+    }
+  ],
+  "joint_centers_and_bands_unchanged": true,
+  "rig_created": false,
+  "animation_topology_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+    "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458"
+  },
+  "limitations": [
+    "Bidirectional finite surface samples are not a continuous equivalence proof",
+    "Nearest source triangle per changed corner may cross UV seams; actual texture views required",
+    "No posed-skin acceptance yet"
+  ]
+}

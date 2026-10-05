@@ -1,0 +1,21 @@
+{
+  "classification": "ENVIRONMENT_FAILURE",
+  "affected_command": "check_ro_batch_roundtrip.py original bpy.ops.wm.read_factory_settings(use_empty=True)",
+  "observed": "Blender attempted global extension site-packages cleanup and printed Failed to remove with PermissionError(13). GLB import then completed, but the expected inventory assertion failed. No PASS was recorded.",
+  "affected_directory": "C:\\Users\\IOT\\AppData\\Roaming\\Blender Foundation\\Blender\\4.5\\extensions\\.local\\lib\\python3.11\\site-packages",
+  "global_change_scope": "Unexpected Blender internal side effect, outside this task authorization. DLL removal errors do not prove other files unchanged. Partial removal remains unverified.",
+  "subsequent_readonly_observation": {
+    "evidence": "extension-readonly-observation.json",
+    "currently_absent_directories_and_init_py": [
+      "aiohttp",
+      "yarl",
+      "multidict"
+    ],
+    "before_inventory_available": false,
+    "causal_attribution": "Unverified: absence timing and attribution to this cleanup cannot be established without a prior inventory.",
+    "global_repair_performed": false
+  },
+  "response": "Stop the preferences-reset method. Do not change ACLs, kill user Blender, repair global extensions or retry the denied removals. A fresh CLI factory-startup plus local scene-object deletion avoids a second preferences reset.",
+  "source_model_modified": false,
+  "commit_push": "held"
+}

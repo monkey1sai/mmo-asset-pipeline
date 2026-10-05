@@ -1,0 +1,276 @@
+{
+  "trial": "v002",
+  "hypothesis": "sibling digit weights and a shared axis contribute to folding; local isolated branch weights and per-bone axes tested without further search",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v002-contact-calibrated/ro_contact_calibrated.blend",
+    "sha256": "2eb0877d9038cb577182286833e2a6e01e8837c77872af69db8cd5df1b399d42"
+  },
+  "source_preserved": true,
+  "actual_distal_branch_vertices": {
+    "R": [
+      19,
+      34,
+      33,
+      18
+    ],
+    "L": [
+      19,
+      40,
+      35,
+      26
+    ]
+  },
+  "modified_weight_vertices": 493,
+  "before_vertices_with_illegal_branch_weights": 493,
+  "before_bad_examples": [
+    {
+      "vertex": 0,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.00631109531968832,
+        "finger2.R_01": 0.00031405597110278904
+      }
+    },
+    {
+      "vertex": 1,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.008596096187829971,
+        "finger2.R_01": 0.0005589138017967343
+      }
+    },
+    {
+      "vertex": 2,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.004072406329214573,
+        "finger4.R_02": 0.00016752397641539574
+      }
+    },
+    {
+      "vertex": 3,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.00267775054089725,
+        "finger4.R_02": 0.0006304260459728539
+      }
+    },
+    {
+      "vertex": 4,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0015985480276867747,
+        "finger4.R_02": 0.001032103318721056
+      }
+    },
+    {
+      "vertex": 5,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0027089642826467752,
+        "finger4.R_02": 0.000640352547634393
+      }
+    },
+    {
+      "vertex": 6,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0067133852280676365,
+        "finger2.R_01": 0.0002430575550533831
+      }
+    },
+    {
+      "vertex": 7,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0052294060587882996,
+        "finger4.R_02": 0.0009455056278966367
+      }
+    },
+    {
+      "vertex": 8,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0023070662282407284,
+        "finger4.R_02": 0.0015817030798643827
+      }
+    },
+    {
+      "vertex": 9,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.0022179887164384127,
+        "finger2.R_02": 0.0011344029335305095
+      }
+    },
+    {
+      "vertex": 10,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.008324150927364826,
+        "finger2.R_02": 0.0009045953047461808
+      }
+    },
+    {
+      "vertex": 11,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.003993947524577379,
+        "finger2.R_02": 0.0010024196235463023
+      }
+    },
+    {
+      "vertex": 12,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.002210644306614995,
+        "finger2.R_02": 0.001047738827764988
+      }
+    },
+    {
+      "vertex": 13,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.012483839876949787,
+        "finger2.R_02": 0.00017857404600363225
+      }
+    },
+    {
+      "vertex": 14,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger4.R_02": 0.008250866085290909,
+        "finger2.R_02": 0.0005092860665172338
+      }
+    },
+    {
+      "vertex": 15,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.00390355521813035,
+        "finger4.R_02": 0.0018980138702318072
+      }
+    },
+    {
+      "vertex": 16,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_02": 0.0019362174207344651,
+        "finger4.R_02": 0.0014865914126858115
+      }
+    },
+    {
+      "vertex": 17,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_01": 0.14071810245513916,
+        "finger4.R_01": 0.004379752557724714
+      }
+    },
+    {
+      "vertex": 18,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_01": 0.16882890462875366,
+        "finger4.R_01": 0.004707597196102142
+      }
+    },
+    {
+      "vertex": 19,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger3.R_01": 0.14969809353351593,
+        "finger1.R_01": 0.03918739780783653
+      }
+    },
+    {
+      "vertex": 20,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger3.R_01": 0.29332566261291504
+      }
+    },
+    {
+      "vertex": 21,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger3.R_01": 0.06655634194612503
+      }
+    },
+    {
+      "vertex": 22,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger3.R_01": 0.045937154442071915
+      }
+    },
+    {
+      "vertex": 23,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger1.R_01": 0.11215901374816895
+      }
+    },
+    {
+      "vertex": 24,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger1.R_01": 0.2579067051410675,
+        "finger3.R_01": 0.012696448713541031
+      }
+    },
+    {
+      "vertex": 25,
+      "branch": "finger1",
+      "illegal_weights": {
+        "finger2.R_01": 0.3928268551826477,
+        "finger3.R_01": 0.007802510634064674
+      }
+    },
+    {
+      "vertex": 26,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger1.R_01": 0.12144298851490021,
+        "finger3.R_01": 0.02922396920621395
+      }
+    },
+    {
+      "vertex": 27,
+      "branch": "finger2",
+      "illegal_weights": {
+        "finger3.R_01": 0.2665359377861023,
+        "finger1.R_01": 0.00964871421456337
+      }
+    },
+    {
+      "vertex": 28,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_01": 0.36028140783309937,
+        "finger2.R_02": 0.03308524936437607
+      }
+    },
+    {
+      "vertex": 29,
+      "branch": "finger3",
+      "illegal_weights": {
+        "finger2.R_01": 0.20976418256759644,
+        "finger2.R_02": 0.028839098289608955
+      }
+    }
+  ],
+  "after_illegal_branch_weights": [],
+  "invalid_weights": [],
+  "geometry_and_uv_unchanged": true,
+  "search_evaluations_prior_and_after": [
+    100,
+    100
+  ],
+  "rig_accepted": false,
+  "art_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v002-digit-weights/ro_digit_weights.blend",
+    "sha256": "4f165cd331e9c3e8dcaad66d954238db2f58aeb39bdbe91ff2592d968adcd60e"
+  }
+}

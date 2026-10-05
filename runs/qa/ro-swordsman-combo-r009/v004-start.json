@@ -1,0 +1,188 @@
+{
+  "id": "v004",
+  "started_utc": "2026-10-04T01:54:22.545253+00:00",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r009/v003-moving-target/right_hand_moving_target_contact.blend",
+    "sha256": "c14387584994e8b0f6e7930615a05e9c1210e54066284251ff128287a3bb75e6"
+  },
+  "hypothesis": "Actual vertex/edge/face-centroid nearcontact halfspaces constrain coupledstep tofind collisionfree tangentialgrasp adjustment.",
+  "change": "Onlycontrol solvingmethod: Hmetric cyclic projection on frozen-periteration collisionproxys andparameterbox. Same sourceskeleton/weights/mesh/UV/fixedpads andactualsworddimension.",
+  "bounds": {
+    "finger1:0": [
+      0.15,
+      0.9
+    ],
+    "finger1:1": [
+      0.6,
+      1.4
+    ],
+    "finger1:2": [
+      0.3,
+      1.05
+    ],
+    "finger2:0": [
+      0.25,
+      1.25
+    ],
+    "finger2:1": [
+      0.6,
+      1.6
+    ],
+    "finger2:2": [
+      0.4,
+      1.1
+    ],
+    "finger3:0": [
+      0.25,
+      1.25
+    ],
+    "finger3:1": [
+      0.6,
+      1.6
+    ],
+    "finger3:2": [
+      0.4,
+      1.1
+    ],
+    "finger4:0": [
+      0.25,
+      1.25
+    ],
+    "finger4:1": [
+      0.6,
+      1.6
+    ],
+    "finger4:2": [
+      0.4,
+      1.1
+    ],
+    "thumb:0": [
+      0.1,
+      0.45
+    ],
+    "thumb:1": [
+      0.3,
+      1.1
+    ],
+    "thumb:2": [
+      0.1,
+      0.65
+    ],
+    "splay:finger1": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger2": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger3": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger4": [
+      -0.15,
+      0.15
+    ],
+    "pronation": [
+      0.2,
+      0.9
+    ],
+    "shift:0": [
+      -0.012,
+      0.012
+    ],
+    "shift:1": [
+      -0.045,
+      -0.018
+    ],
+    "shift:2": [
+      -0.035,
+      0.005
+    ]
+  },
+  "initial_controls": {
+    "finger1": [
+      0.4982864283638655,
+      1.1014340604613109,
+      0.3253604649234338
+    ],
+    "finger2": [
+      0.5584405433622608,
+      0.8761006716212156,
+      0.4
+    ],
+    "finger3": [
+      0.6042713391792208,
+      0.899347871933872,
+      0.6215604557217085
+    ],
+    "finger4": [
+      0.8788993738212576,
+      0.8588663780311578,
+      0.4
+    ],
+    "thumb": [
+      0.14971655573277914,
+      0.6453983740032114,
+      0.20167054881843485
+    ],
+    "pronation": 0.40242208279595065
+  },
+  "initial_splays": {
+    "finger1": 0.08233831982137445,
+    "finger2": 0.022901945670322027,
+    "finger3": -0.1489152359194353,
+    "finger4": -0.14814337374565428
+  },
+  "initial_shift": [
+    -0.00375,
+    -0.043,
+    -0.034
+  ],
+  "weapon": {
+    "path": "runs/qa/ro-swordsman-combo-r008/weapon-probe/actual-weapon.json",
+    "sha256": "08ef39378705e956916bc0a149ae4ff7484ee4f36e1ebbb7e580e85e6a64eaae"
+  },
+  "pads_source": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/frozen-masks-and-weights.json",
+  "maximum_evaluations": 700,
+  "max_solver_seconds": 1800,
+  "maximum_iterations": 24,
+  "finite_steps": {
+    "curl": 0.002,
+    "shift": 0.0002
+  },
+  "damping": 0.0001,
+  "max_normalized_step": 0.15,
+  "line_search_factors": [
+    1,
+    0.5,
+    0.25,
+    0.125
+  ],
+  "point_target_distance_m": 0.0012,
+  "parameter_scales": {
+    "curl": 1,
+    "shift": 0.03
+  },
+  "derivative_collision_checks": "not_run; explicitlylogged diagnostic probes only",
+  "hard_admissibility": "Onlyfull lineproposal testedself/swordcross0,unknown0,depth<=1mm,no degenerate,minedge>=.25,maxedge<=3 canreplacebest; finalgrayreview separately required.",
+  "objective": "Three closestpoints from each fixed full semanticmask update byiteration as IKguides; acceptancealwaysuses entire original frozenmask>=3 per digit, no gate resampling.",
+  "new_credits": 0,
+  "candidate_limit": 4,
+  "previous_candidates_used": 3,
+  "original_failed_v002_preserved": true,
+  "solver_derivation": {
+    "path": "runs/qa/ro-swordsman-combo-r009/v004-solver-derivation.json",
+    "sha256": "7acccf25b125f4c0445b583a8fdd5d7c910c73f329bacb53b847e51e325a8e3f"
+  },
+  "maximum_proxy_samples": 96,
+  "proxy_neighborhood_m": 0.004,
+  "proxy_clearance_m": 5e-05,
+  "proxy_projection_sweeps": 400,
+  "proxy_limitations": "Localsignednearest surface approximation excludesunselectedsamples/tangency/curvature; allaccepted proposals still actual triangle/sample tests."
+}

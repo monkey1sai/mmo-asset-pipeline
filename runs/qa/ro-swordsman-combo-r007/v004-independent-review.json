@@ -1,0 +1,60 @@
+{
+  "observed_utc": "2026-10-03T13:27:55.558388+00:00",
+  "reviewer": "existing hand_phase_review / required Astra architecture advisory",
+  "scope": "weight script/reports/frozenweights + actual .30palm/back/side and .30+.15opposition side views",
+  "verdict": "NO_SHIP; do not expand to grip; close originalfourcandidatephase",
+  "verified_problem": "All vertices with any thumb02/03 weight were frozen; solver changed only thumb01 scalar, allowing hand->thumb02 adjacency jumps",
+  "actual_examples": [
+    {
+      "edge": [
+        56,
+        580
+      ],
+      "adjustable_weights": {
+        "hand": 0.9442,
+        "thumb_01": 0.0558
+      },
+      "fixed_weights": {
+        "thumb_02": 0.985,
+        "thumb_01": 0.015
+      }
+    },
+    {
+      "edge": [
+        57,
+        582
+      ],
+      "adjustable_weights": {
+        "hand": 0.9617,
+        "thumb_01": 0.0383
+      },
+      "fixed_weights": {
+        "thumb_02": 1.0
+      }
+    },
+    {
+      "edge": [
+        59,
+        578
+      ],
+      "adjustable_weights": {
+        "hand": 0.9226,
+        "thumb_01": 0.0774
+      },
+      "fixed_weights": {
+        "thumb_02": 0.9449,
+        "thumb_01": 0.0551
+      }
+    }
+  ],
+  "values_scope": "Rounded reviewer examples; exact frozen-weights.json retained",
+  "inference": "Chain-incompatible neighboring weights plausibly contribute to observed root fold; not proven sole cause",
+  "unverified": [
+    "CMC pivot necessarilywrong",
+    "Fullpalm topology necessarilyunusable",
+    "Wholehand regeneration necessary"
+  ],
+  "recommended_new_method": "Distinguish truly rigid distalcap from CMC/MCP transition; constrain complete hand/thumb01/thumb02 vectors, singlebone CMC/MCP/IP diagnosis, then decide topology/axis work",
+  "not_authorization": "Advisory does not extend fourcandidatebudget or paid/global/Git scope",
+  "background_work": "none"
+}

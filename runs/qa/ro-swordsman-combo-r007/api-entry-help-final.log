@@ -1,0 +1,14 @@
+usage: hyper3d_api.py [-h] [--workspace WORKSPACE]
+                      {balance,capabilities,prepare,submit,status,download}
+                      ...
+
+Workspace-scoped Hyper3D client using the installed Windows DPAPI provider. No
+credentials, subscription keys, or signed URLs are persisted in the repo. CLI
+consent flags record existing human authority; they do not grant it.
+
+positional arguments:
+  {balance,capabilities,prepare,submit,status,download}
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE

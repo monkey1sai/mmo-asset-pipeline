@@ -1,0 +1,70 @@
+{
+  "observed_utc": "2026-10-04T01:59:35.115223+00:00",
+  "id": "ro-swordsman-combo-r009",
+  "phase_started_utc": "2026-10-04T01:28:58+00:00",
+  "phase_closed_utc": "2026-10-04T01:59:35.115223+00:00",
+  "phase_wall_seconds_at_close": 1837.115223,
+  "clock_source": "First observed UTC of current turn; preparatory reads before observation were not precisely timed and are explicitly unmeasured.",
+  "preclock_preparation_unmeasured": true,
+  "baseline_and_preparation_seconds": 658.142657,
+  "candidate_seconds": [
+    {
+      "id": "v001",
+      "seconds": 257.914356
+    },
+    {
+      "id": "v002",
+      "seconds": 366.235136
+    },
+    {
+      "id": "v003",
+      "seconds": 242.253104
+    },
+    {
+      "id": "v004",
+      "seconds": 312.56997
+    }
+  ],
+  "candidate_used": 4,
+  "candidate_limit": 4,
+  "contact_solver_counts": [
+    {
+      "id": "v002",
+      "actual_evaluations": 83,
+      "full_function_proposals": 11,
+      "derivative_base_preflight_not_functionchecked": 72,
+      "solver_seconds": 3.514999999984866,
+      "stop": "bounded_line_search_stalled"
+    },
+    {
+      "id": "v003",
+      "actual_evaluations": 36,
+      "full_function_proposals": 5,
+      "derivative_base_preflight_not_functionchecked": 31,
+      "solver_seconds": 2.484000000025844,
+      "stop": "bounded_line_search_stalled"
+    },
+    {
+      "id": "v004",
+      "actual_evaluations": 86,
+      "full_function_proposals": 7,
+      "derivative_base_preflight_not_functionchecked": 79,
+      "solver_seconds": 3.6570000000065193,
+      "stop": "bounded_line_search_stalled"
+    }
+  ],
+  "total_contact_solver_probes": 205,
+  "total_full_function_proposals": 23,
+  "total_derivative_base_preflight_not_functionchecked": 182,
+  "isolated_positive_joint_poses": 24,
+  "additional_isolated_MCP_PIP_verification_poses": 8,
+  "r009_paid_submissions": 0,
+  "r009_new_service_credits": 0,
+  "API_balance_query_thisphase": false,
+  "repo_external_writes": "none",
+  "old183historyfiles_unchanged": true,
+  "old_phase_reopened": false,
+  "quality_targets_lowered": false,
+  "stage_commit_push": "held_by_user",
+  "background": "No API/Blender jobs running at close; later readonly review recorded separately."
+}

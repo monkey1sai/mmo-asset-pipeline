@@ -1,0 +1,100 @@
+{
+  "observed_utc": "2026-10-03T15:13:53.152122+00:00",
+  "scope": "closed r008 local phase; no candidate, API, generation or Git mutation",
+  "status": "verified_closed_NO_SHIP",
+  "comparison": {
+    "candidate_trials_used": 4,
+    "next_action": "stop_budget",
+    "quality_target_met": false
+  },
+  "assessment_decision": "not_ready",
+  "artifact_references_checked": 145,
+  "hash_failures": [],
+  "qa_json_parsed": 42,
+  "python_sources_syntax_checked": 178,
+  "protected_history_unchanged": [
+    {
+      "path": "requests/ro-swordsman-combo-r007.json",
+      "sha256": "49bacbf20a6e501787fb195c81f3183124076902590f108da4db4ef5abe522a4"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "sha256": "f999aa115a62cdf33772cc9b0d3d615566e9a392af53768410c2bbbd905eed01"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/comparison-final.json",
+      "sha256": "4a071650e26a75f9b217bee4dccab8a747ada79da815e7ed90af405bc362e63f"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/phase-accounting-final.json",
+      "sha256": "aff8a5208798a793c4b233fa449aa598ebf2b3b3fb7929fcdf59280f7976cfe0"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+      "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+      "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e"
+    }
+  ],
+  "library_entry": "ro-swordsman-combo-r008-v004",
+  "library_entry_delivery": "not_delivered",
+  "actual_evaluations": 383,
+  "fixed_schedule_stop": "fixedschedule_completed",
+  "fresh_function_failure_reproduced": true,
+  "pad_contacts": {
+    "finger1": 3,
+    "finger2": 1,
+    "finger3": 3,
+    "finger4": 0,
+    "thumb": 4
+  },
+  "fresh_posed_points_bit_identical": false,
+  "fresh_vs_original_actual_basis_max_component_difference": 1.4901161193847656e-07,
+  "fresh_vs_original_reported_metric_differences": {
+    "maximum_edge_stretch": 5.552364763961037e-06,
+    "minimum_edge_ratio": 8.840543419541547e-08,
+    "maximum_absolute_edge_change_m": 6.227545600728801e-09
+  },
+  "posed_points_limit": "No archived raw original posed point array. Unequal exact fingerprints do not establish bit-identical posed geometry; only recorded tested failure outcomes reproduce.",
+  "phase_wall_seconds_at_close": 3968.465451,
+  "postclose_documentation_verification_wall_seconds": 1170.686671,
+  "r008_paid_submissions": 0,
+  "r008_new_service_credits": 0,
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "stage_commit_push": "held_by_user",
+  "unit_test_evidence": {
+    "path": "runs/qa/ro-swordsman-combo-r008/unit-tests.log",
+    "sha256": "07a3a5379174fb1eb3de3ce4d044c84540919d730a250ab0946b28426e8dfd27",
+    "tests": 119,
+    "note": "Earlier completed test log, not rerun by this verifier."
+  },
+  "pipeline_schema": {
+    "assets": 39,
+    "status": "valid",
+    "note": "Re-run after library/docs archive; freshness/runtime excluded."
+  },
+  "files": [
+    {
+      "path": "library/index.json",
+      "sha256": "4cbf5d6693134532e5ec8eb29491f82aa765922d9f03be99bc80c1c3de9e495b"
+    },
+    {
+      "path": "docs/art-quality-loop.md",
+      "sha256": "4d244b9bdc0abde75ed17cceead8d37ab0d79f306493666e1ef26a071e894035"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r008/README.md",
+      "sha256": "1b9bdfe6d4caf7d77ada51136fea5f6ff4a43b7c1a9330c16a41e1d1b270d4d6"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r008/README.md",
+      "sha256": "2b1e603bfdb05a2c5f8d55c2a264ca00269f52265a7f610a8cdaae17f1dcb411"
+    }
+  ]
+}

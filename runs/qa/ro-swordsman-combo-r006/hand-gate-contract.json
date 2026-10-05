@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo-r006",
+  "status": "frozen_before_first_hand_candidate",
+  "purpose": "Supplement the unchanged full-character quality contract with reproducible local hand gates; never replace the whole-character, animation or delivery checks.",
+  "scale": "Character1.74m; all local distances in metres. Glove fitted to the actual measured wrist and palm before comparison.",
+  "poses": {
+    "open": "Identity FK matrices, neutral palm and digits, no hand-specific shape hiding",
+    "small-curl": ".30rad proximal curl; per-bone front.cross(direction) axis with negative angle verified by actual vertex displacement",
+    "single-grip": "hip=.89; right grip=(-.08,-.29,1.12), left=(.08,-.29,1.12); sword axis=(0,-.1,.995); initial curl=.85. Authoring corrections must be logged and all poses replayed without changing the fixture.",
+    "later-stress": ["two-handed downslash", "arms overhead", "deep crouch/landing"]
+  },
+  "local_views": {
+    "resolution": [1280, 1280],
+    "lighting": "Same r006 frozen Eevee studio; no VFX",
+    "camera_target": "Evaluated wrist-to-hand-bone point at60percent, same geometric rule for all candidates",
+    "orthographic_scale_m": 0.29,
+    "offsets_from_target": {
+      "palm": [0.25, -1, 0.12],
+      "side": [1, 0.1, 0.1],
+      "back": [-0.25, 1, 0.1],
+      "wrist": [0, -0.2, 0.9]
+    },
+    "additional_views": "Unoccluded gray glove and wireframe views of palm root, finger webs, wrist inner cuff; diagnostic only, not replacements for textured assembled views. Use camera matching the anatomical surface if original world camera misses it and label this as an added diagnostic view."
+  },
+  "anatomy_topology": {
+    "required": ["four identifiable finger branches plus opposable thumb", "substantial palm/thenar volume", "continuous finger webs", "joint loops and smooth root transitions", "no poles or fan patch in thumb flexion zone"],
+    "boundary_policy": "No unplanned nonmanifold edges. A documented cuff opening is permitted; an opening is not automatically a broken mesh. No generic center-fan capping to claim closure.",
+    "generated_quad_mode_is_topology_pass": false
+  },
+  "rig": {
+    "maximum_vertex_influences": 4,
+    "weight_normalization_tolerance": 0.00001,
+    "allowed_digit_influences": "Hand plus own finger/own thumb bones; smooth adjacent-joint blending. No sibling-digit weights.",
+    "required_checks": ["actual per-bone curl direction", "joint centers within actual glove volume", "continuous wrist/thenar transition", "open/small-curl/grip without flattening, spikes or folded palm-root flaps"],
+    "stretch_ratios": "Record edge compression/stretch and worst locations as diagnostics; numerical improvement cannot replace visible shape acceptance."
+  },
+  "surface_contact": {
+    "mask": "Freeze finger1..4 and thumb palmar pad masks in rest mesh before any grip search, using named anatomy and palmar-side normals; archive actual vertex/face IDs for each changed topology. Do not select nearest vertices after posing.",
+    "target": "Actual complete sword triangles; handle surface mask axial range(-.112,.085)m relative to actual sword root, as in baseline; assert handle mask nonempty and audit orientation.",
+    "each_digit_required_contact_vertices": 3,
+    "maximum_contact_gap_m": 0.002,
+    "maximum_sample_penetration_m": 0.001,
+    "inside_method": "Two odd/even rays against actual welded closed sword; verify closedness first. Disagreement, unknown or nonclosed solid invalidates inside evidence.",
+    "sampling": "All glove vertices plus face centers and edge midpoints, including palm/root, not just the contact pads",
+    "triangle_intersection": "Check actual evaluated glove triangles against handle/guard triangles for transverse crossings, retain locations and numerical tolerance; sample-only zero penetration never constitutes collision PASS.",
+    "visual_required": "Finger pads wrap the handle and thumb opposes them in palm/side/back views; no finger-to-finger fusion or weapon cutting through hand."
+  },
+  "fitting_materials": {
+    "required": ["hand and rigid bracer remain independent", "cuff clears wrist through all tested poses", "no exposed wrist seam or torso/armor clipping", "brown leather style consistent with original reference", "new UV islands packed deliberately, no cross-island interpolation", "source textures/materials archived; rebake only after functional prototype passes"],
+    "preserve": "All protected core geometry/UVs and raw equipment sources; dependent simplification saved as a new derived version and compared at the same five full-character views."
+  },
+  "budget": {
+    "whole_character_triangles_maximum": 60000,
+    "measured_before": 58868,
+    "planning_removed_right": 492,
+    "planning_removed_left": 537,
+    "seam_reserve": 256,
+    "per_hand_without_other_reduction": 952,
+    "equation": "whole_before - measured_removed_old_hands + measured_new_right + measured_new_left + measured_seam_delta <=60000",
+    "strategy": "Measure generated glove first. Keep needed finger-loop density; if source exceeds available budget, document small rigid shoulder/bracer simplification and validate silhouette, materials and all poses. Do not lower the60k whole-character limit."
+  },
+  "search_protocol": {
+    "events": "Every candidate and every baseline/final readback gets its own event kind, timestamp, parameters, contact/deformation result and subject SHA or in-memory candidate fingerprint; no counter-only gap.",
+    "maximum_searched_candidates_per_hand_hypothesis": 40,
+    "stop": "No repeat on the same known failure after two attempts without new evidence/method. API pending/unknown stops new submissions. A failed local gate is saved and counts in the phase revision budget."
+  },
+  "acceptance": "All local gates and actual visual review must pass before extending the hand to the other side and the full stress poses. All full r006 quality dimensions,300frames/60fps, independent VFX, fresh GLB animation roundtrip and package checks remain required for delivery."
+}

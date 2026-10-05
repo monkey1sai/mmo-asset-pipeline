@@ -1,0 +1,1369 @@
+{
+  "observed_utc": "2026-10-03T08:07:32.871688+00:00",
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.glb",
+    "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+  },
+  "fresh_process": true,
+  "factory_reset_function_called": false,
+  "bone_custom_shape_disabled": true,
+  "source_frames": [
+    1,
+    61
+  ],
+  "fps": 60,
+  "clip_seconds": 0.9999999999999999,
+  "glb_time_range_seconds": [
+    0.016666666666666666,
+    1.0166666666666666
+  ],
+  "imported_action_ranges": {
+    "Scene": [
+      1.0,
+      61.0
+    ]
+  },
+  "frame_mapping": "source1..61 maps to actual GLB time range and imported action first..last frames; importer preserves time origin",
+  "first_check_failure": "TEST_FAILURE: verifier assumed GLB0start; exporter preserves actual frame1 time. Original verifier/log retained; no asset regeneration.",
+  "second_check_failure": "TOOL_FAILURE: verifier assumed source-name import object is MESH; glTF imports named container plus actual mesh child. Resolve exact unique descendant and retain mapping; no asset change.",
+  "third_check_failure": "TOOL_FAILURE: skin importer reparents mesh outside named node container. Exact GLB node.mesh index to mesh datablock name replaces hierarchy guess; original attempts retained.",
+  "source_to_import_mesh_mapping": {
+    "SM_RO_glove.R": "RO_RightGlove_ProtectedCut",
+    "SM_RO_WristLoft.R": "RO_WristLoft_R",
+    "SM_RO_bracer.R": "SM_RO_bracer.R",
+    "SM_RO_core": "SM_RO_core",
+    "SM_RO_sword": "SM_RO_sword"
+  },
+  "meshes": 10,
+  "bones": 53,
+  "triangles": 57039,
+  "skins": 1,
+  "animation_count": 1,
+  "animation_channels": 161,
+  "embedded_images": 11,
+  "images": [
+    {
+      "name": "texture_diffuse",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_diffuse.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_diffuse.002",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness.002",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal.002",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "wrist_leather_basecolor",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "wrist_leather_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "skeletal_and_morph_playback_samples": [
+    {
+      "source_frame": 1,
+      "imported_frame": 1.0,
+      "objects": {
+        "SM_RO_glove.R": {
+          "sampled_surface_bidirectional_max_error_m": 3.805635344633629e-07,
+          "source_vertices": 1007,
+          "imported_vertices": 1319,
+          "pass_0_1mm": true
+        },
+        "SM_RO_WristLoft.R": {
+          "sampled_surface_bidirectional_max_error_m": 1.51608332998876e-07,
+          "source_vertices": 458,
+          "imported_vertices": 548,
+          "pass_0_1mm": true
+        },
+        "SM_RO_bracer.R": {
+          "sampled_surface_bidirectional_max_error_m": 1.399836975224389e-07,
+          "source_vertices": 1364,
+          "imported_vertices": 1560,
+          "pass_0_1mm": true
+        },
+        "SM_RO_core": {
+          "sampled_surface_bidirectional_max_error_m": 8.505601272190688e-07,
+          "source_vertices": 7219,
+          "imported_vertices": 8569,
+          "pass_0_1mm": true
+        },
+        "SM_RO_sword": {
+          "sampled_surface_bidirectional_max_error_m": 2.4575624024691933e-07,
+          "source_vertices": 1493,
+          "imported_vertices": 1493,
+          "pass_0_1mm": true
+        }
+      }
+    },
+    {
+      "source_frame": 16,
+      "imported_frame": 16.0,
+      "objects": {
+        "SM_RO_glove.R": {
+          "sampled_surface_bidirectional_max_error_m": 3.6256091107134125e-07,
+          "source_vertices": 1007,
+          "imported_vertices": 1319,
+          "pass_0_1mm": true
+        },
+        "SM_RO_WristLoft.R": {
+          "sampled_surface_bidirectional_max_error_m": 3.111453850124235e-07,
+          "source_vertices": 458,
+          "imported_vertices": 548,
+          "pass_0_1mm": true
+        },
+        "SM_RO_bracer.R": {
+          "sampled_surface_bidirectional_max_error_m": 2.6969146915689635e-07,
+          "source_vertices": 1364,
+          "imported_vertices": 1560,
+          "pass_0_1mm": true
+        },
+        "SM_RO_core": {
+          "sampled_surface_bidirectional_max_error_m": 3.448097686487017e-06,
+          "source_vertices": 7219,
+          "imported_vertices": 8569,
+          "pass_0_1mm": true
+        },
+        "SM_RO_sword": {
+          "sampled_surface_bidirectional_max_error_m": 4.2981520209650625e-07,
+          "source_vertices": 1493,
+          "imported_vertices": 1493,
+          "pass_0_1mm": true
+        }
+      }
+    },
+    {
+      "source_frame": 31,
+      "imported_frame": 31.0,
+      "objects": {
+        "SM_RO_glove.R": {
+          "sampled_surface_bidirectional_max_error_m": 6.314999154710677e-07,
+          "source_vertices": 1007,
+          "imported_vertices": 1319,
+          "pass_0_1mm": true
+        },
+        "SM_RO_WristLoft.R": {
+          "sampled_surface_bidirectional_max_error_m": 4.995779363525799e-07,
+          "source_vertices": 458,
+          "imported_vertices": 548,
+          "pass_0_1mm": true
+        },
+        "SM_RO_bracer.R": {
+          "sampled_surface_bidirectional_max_error_m": 5.024586471336079e-07,
+          "source_vertices": 1364,
+          "imported_vertices": 1560,
+          "pass_0_1mm": true
+        },
+        "SM_RO_core": {
+          "sampled_surface_bidirectional_max_error_m": 7.2091143010766245e-06,
+          "source_vertices": 7219,
+          "imported_vertices": 8569,
+          "pass_0_1mm": true
+        },
+        "SM_RO_sword": {
+          "sampled_surface_bidirectional_max_error_m": 5.127385520609096e-07,
+          "source_vertices": 1493,
+          "imported_vertices": 1493,
+          "pass_0_1mm": true
+        }
+      }
+    },
+    {
+      "source_frame": 46,
+      "imported_frame": 46.0,
+      "objects": {
+        "SM_RO_glove.R": {
+          "sampled_surface_bidirectional_max_error_m": 8.936970630202268e-07,
+          "source_vertices": 1007,
+          "imported_vertices": 1319,
+          "pass_0_1mm": true
+        },
+        "SM_RO_WristLoft.R": {
+          "sampled_surface_bidirectional_max_error_m": 8.361928394151619e-07,
+          "source_vertices": 458,
+          "imported_vertices": 548,
+          "pass_0_1mm": true
+        },
+        "SM_RO_bracer.R": {
+          "sampled_surface_bidirectional_max_error_m": 4.6265645892162865e-07,
+          "source_vertices": 1364,
+          "imported_vertices": 1560,
+          "pass_0_1mm": true
+        },
+        "SM_RO_core": {
+          "sampled_surface_bidirectional_max_error_m": 1.060671729646856e-05,
+          "source_vertices": 7219,
+          "imported_vertices": 8569,
+          "pass_0_1mm": true
+        },
+        "SM_RO_sword": {
+          "sampled_surface_bidirectional_max_error_m": 7.907449912636366e-07,
+          "source_vertices": 1493,
+          "imported_vertices": 1493,
+          "pass_0_1mm": true
+        }
+      }
+    },
+    {
+      "source_frame": 61,
+      "imported_frame": 61.0,
+      "objects": {
+        "SM_RO_glove.R": {
+          "sampled_surface_bidirectional_max_error_m": 5.529515760827053e-07,
+          "source_vertices": 1007,
+          "imported_vertices": 1319,
+          "pass_0_1mm": true
+        },
+        "SM_RO_WristLoft.R": {
+          "sampled_surface_bidirectional_max_error_m": 4.773025921167573e-07,
+          "source_vertices": 458,
+          "imported_vertices": 548,
+          "pass_0_1mm": true
+        },
+        "SM_RO_bracer.R": {
+          "sampled_surface_bidirectional_max_error_m": 5.672235943166015e-07,
+          "source_vertices": 1364,
+          "imported_vertices": 1560,
+          "pass_0_1mm": true
+        },
+        "SM_RO_core": {
+          "sampled_surface_bidirectional_max_error_m": 1.4141235624265391e-05,
+          "source_vertices": 7219,
+          "imported_vertices": 8569,
+          "pass_0_1mm": true
+        },
+        "SM_RO_sword": {
+          "sampled_surface_bidirectional_max_error_m": 5.097117536934093e-07,
+          "source_vertices": 1493,
+          "imported_vertices": 1493,
+          "pass_0_1mm": true
+        }
+      }
+    }
+  ],
+  "motion_max_vertex_displacement_m": {
+    "SM_RO_glove.R": 0.5693478722082069,
+    "SM_RO_WristLoft.R": 0.4626142183592018,
+    "SM_RO_bracer.R": 0.3636184148082343,
+    "SM_RO_core": 0.4102518606010056,
+    "SM_RO_sword": 1.5839937176146663
+  },
+  "all61frames_evaluated": true,
+  "morph_readback": [
+    {
+      "imported_frame": 1,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.0
+      }
+    },
+    {
+      "imported_frame": 1,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 2,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.01666666753590107
+      }
+    },
+    {
+      "imported_frame": 2,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.06666667014360428,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 3,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.03333333507180214
+      }
+    },
+    {
+      "imported_frame": 3,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.13333334028720856,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 4,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.05000000074505806
+      }
+    },
+    {
+      "imported_frame": 4,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.20000000298023224,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 5,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.06666667014360428
+      }
+    },
+    {
+      "imported_frame": 5,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.2666666805744171,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 6,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.0833333358168602
+      }
+    },
+    {
+      "imported_frame": 6,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.3333333432674408,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 7,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.10000000149011612
+      }
+    },
+    {
+      "imported_frame": 7,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.4000000059604645,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 8,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.11666666716337204
+      }
+    },
+    {
+      "imported_frame": 8,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.46666666865348816,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 9,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.13333334028720856
+      }
+    },
+    {
+      "imported_frame": 9,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.5333333611488342,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 10,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.15000000596046448
+      }
+    },
+    {
+      "imported_frame": 10,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.6000000238418579,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 11,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.1666666716337204
+      }
+    },
+    {
+      "imported_frame": 11,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.6666666865348816,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 12,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.18333333730697632
+      }
+    },
+    {
+      "imported_frame": 12,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.7333333492279053,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 13,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.20000000298023224
+      }
+    },
+    {
+      "imported_frame": 13,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.800000011920929,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 14,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.21666666865348816
+      }
+    },
+    {
+      "imported_frame": 14,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.8666666746139526,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 15,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.23333333432674408
+      }
+    },
+    {
+      "imported_frame": 15,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.9333333373069763,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 16,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.25
+      }
+    },
+    {
+      "imported_frame": 16,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 1.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 17,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.2666666805744171
+      }
+    },
+    {
+      "imported_frame": 17,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.9333333373069763,
+        "WristVolume_050": 0.06666667014360428,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 18,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.28333333134651184
+      }
+    },
+    {
+      "imported_frame": 18,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.8666666746139526,
+        "WristVolume_050": 0.13333334028720856,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 19,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.30000001192092896
+      }
+    },
+    {
+      "imported_frame": 19,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.800000011920929,
+        "WristVolume_050": 0.20000000298023224,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 20,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.3166666626930237
+      }
+    },
+    {
+      "imported_frame": 20,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.7333333492279053,
+        "WristVolume_050": 0.2666666805744171,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 21,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.3333333432674408
+      }
+    },
+    {
+      "imported_frame": 21,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.6666666865348816,
+        "WristVolume_050": 0.3333333432674408,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 22,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.3499999940395355
+      }
+    },
+    {
+      "imported_frame": 22,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.6000000238418579,
+        "WristVolume_050": 0.4000000059604645,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 23,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.36666667461395264
+      }
+    },
+    {
+      "imported_frame": 23,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.5333333611488342,
+        "WristVolume_050": 0.46666666865348816,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 24,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.38333332538604736
+      }
+    },
+    {
+      "imported_frame": 24,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.46666666865348816,
+        "WristVolume_050": 0.5333333611488342,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 25,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.4000000059604645
+      }
+    },
+    {
+      "imported_frame": 25,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.4000000059604645,
+        "WristVolume_050": 0.6000000238418579,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 26,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.4166666567325592
+      }
+    },
+    {
+      "imported_frame": 26,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.3333333432674408,
+        "WristVolume_050": 0.6666666865348816,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 27,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.4333333373069763
+      }
+    },
+    {
+      "imported_frame": 27,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.2666666805744171,
+        "WristVolume_050": 0.7333333492279053,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 28,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.44999998807907104
+      }
+    },
+    {
+      "imported_frame": 28,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.20000000298023224,
+        "WristVolume_050": 0.800000011920929,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 29,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.46666666865348816
+      }
+    },
+    {
+      "imported_frame": 29,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.13333334028720856,
+        "WristVolume_050": 0.8666666746139526,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 30,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.4833333194255829
+      }
+    },
+    {
+      "imported_frame": 30,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.06666667014360428,
+        "WristVolume_050": 0.9333333373069763,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 31,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.5
+      }
+    },
+    {
+      "imported_frame": 31,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 1.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 32,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.5166666507720947
+      }
+    },
+    {
+      "imported_frame": 32,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.9333333373069763,
+        "WristVolume_075": 0.06666667014360428,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 33,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.5333333611488342
+      }
+    },
+    {
+      "imported_frame": 33,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.8666666746139526,
+        "WristVolume_075": 0.13333334028720856,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 34,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.550000011920929
+      }
+    },
+    {
+      "imported_frame": 34,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.800000011920929,
+        "WristVolume_075": 0.20000000298023224,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 35,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.5666666626930237
+      }
+    },
+    {
+      "imported_frame": 35,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.7333333492279053,
+        "WristVolume_075": 0.2666666805744171,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 36,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.5833333134651184
+      }
+    },
+    {
+      "imported_frame": 36,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.6666666865348816,
+        "WristVolume_075": 0.3333333432674408,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 37,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6000000238418579
+      }
+    },
+    {
+      "imported_frame": 37,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.6000000238418579,
+        "WristVolume_075": 0.4000000059604645,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 38,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6166666746139526
+      }
+    },
+    {
+      "imported_frame": 38,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.5333333611488342,
+        "WristVolume_075": 0.46666666865348816,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 39,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6333333253860474
+      }
+    },
+    {
+      "imported_frame": 39,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.46666666865348816,
+        "WristVolume_075": 0.5333333611488342,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 40,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6499999761581421
+      }
+    },
+    {
+      "imported_frame": 40,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.4000000059604645,
+        "WristVolume_075": 0.6000000238418579,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 41,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6666666865348816
+      }
+    },
+    {
+      "imported_frame": 41,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.3333333432674408,
+        "WristVolume_075": 0.6666666865348816,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 42,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.6833333373069763
+      }
+    },
+    {
+      "imported_frame": 42,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.2666666805744171,
+        "WristVolume_075": 0.7333333492279053,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 43,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.699999988079071
+      }
+    },
+    {
+      "imported_frame": 43,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.20000000298023224,
+        "WristVolume_075": 0.800000011920929,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 44,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.7166666388511658
+      }
+    },
+    {
+      "imported_frame": 44,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.13333334028720856,
+        "WristVolume_075": 0.8666666746139526,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 45,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.7333333492279053
+      }
+    },
+    {
+      "imported_frame": 45,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.06666667014360428,
+        "WristVolume_075": 0.9333333373069763,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 46,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.75
+      }
+    },
+    {
+      "imported_frame": 46,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 1.0,
+        "WristVolume_100": 0.0
+      }
+    },
+    {
+      "imported_frame": 47,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.7666666507720947
+      }
+    },
+    {
+      "imported_frame": 47,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.9333333373069763,
+        "WristVolume_100": 0.06666667014360428
+      }
+    },
+    {
+      "imported_frame": 48,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.7833333611488342
+      }
+    },
+    {
+      "imported_frame": 48,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.8666666746139526,
+        "WristVolume_100": 0.13333334028720856
+      }
+    },
+    {
+      "imported_frame": 49,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.800000011920929
+      }
+    },
+    {
+      "imported_frame": 49,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.800000011920929,
+        "WristVolume_100": 0.20000000298023224
+      }
+    },
+    {
+      "imported_frame": 50,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8166666626930237
+      }
+    },
+    {
+      "imported_frame": 50,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.7333333492279053,
+        "WristVolume_100": 0.2666666805744171
+      }
+    },
+    {
+      "imported_frame": 51,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8333333134651184
+      }
+    },
+    {
+      "imported_frame": 51,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.6666666865348816,
+        "WristVolume_100": 0.3333333432674408
+      }
+    },
+    {
+      "imported_frame": 52,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8500000238418579
+      }
+    },
+    {
+      "imported_frame": 52,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.6000000238418579,
+        "WristVolume_100": 0.4000000059604645
+      }
+    },
+    {
+      "imported_frame": 53,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8666666746139526
+      }
+    },
+    {
+      "imported_frame": 53,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.5333333611488342,
+        "WristVolume_100": 0.46666666865348816
+      }
+    },
+    {
+      "imported_frame": 54,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8833333253860474
+      }
+    },
+    {
+      "imported_frame": 54,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.46666666865348816,
+        "WristVolume_100": 0.5333333611488342
+      }
+    },
+    {
+      "imported_frame": 55,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.8999999761581421
+      }
+    },
+    {
+      "imported_frame": 55,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.4000000059604645,
+        "WristVolume_100": 0.6000000238418579
+      }
+    },
+    {
+      "imported_frame": 56,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.9166666865348816
+      }
+    },
+    {
+      "imported_frame": 56,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.3333333432674408,
+        "WristVolume_100": 0.6666666865348816
+      }
+    },
+    {
+      "imported_frame": 57,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.9333333373069763
+      }
+    },
+    {
+      "imported_frame": 57,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.2666666805744171,
+        "WristVolume_100": 0.7333333492279053
+      }
+    },
+    {
+      "imported_frame": 58,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.949999988079071
+      }
+    },
+    {
+      "imported_frame": 58,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.20000000298023224,
+        "WristVolume_100": 0.800000011920929
+      }
+    },
+    {
+      "imported_frame": 59,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.9666666388511658
+      }
+    },
+    {
+      "imported_frame": 59,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.13333334028720856,
+        "WristVolume_100": 0.8666666746139526
+      }
+    },
+    {
+      "imported_frame": 60,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 0.9833333492279053
+      }
+    },
+    {
+      "imported_frame": 60,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.06666667014360428,
+        "WristVolume_100": 0.9333333373069763
+      }
+    },
+    {
+      "imported_frame": 61,
+      "mesh": "RO_RightGlove_ProtectedCut",
+      "morph_weights": {
+        "GripContact_R": 1.0
+      }
+    },
+    {
+      "imported_frame": 61,
+      "mesh": "RO_WristLoft_R",
+      "morph_weights": {
+        "WristVolume_025": 0.0,
+        "WristVolume_050": 0.0,
+        "WristVolume_075": 0.0,
+        "WristVolume_100": 1.0
+      }
+    }
+  ],
+  "prototype_geometry_playback_pass": true,
+  "verified_scope": "actual local open-to-grip skeletal/morph playback and5samplegeometry; failing source shapes reproduced, not full asset art/animation acceptance",
+  "material_sampler_warning": "More than one shader node tex image used for a texture; unresolved, no material equivalence pass",
+  "full300frame_skill_combo_accepted": false,
+  "art_accepted": false,
+  "delivered": false
+}

@@ -1,0 +1,14 @@
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Read blend: "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\assets\processed\ro-swordsman-combo-r006\v005-thumb-wrist\ro_thumb_contact_checkpoint.blend"
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\rebuild_ro_wrist_interface.py", line 89, in <module>
+    gp,gw,gi=ordered_loop(glove,True); cp,cw,ci=ordered_loop(core)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\rebuild_ro_wrist_interface.py", line 82, in ordered_loop
+    assert len(path)==len(adjacency),'Multiple boundary components need independent diagnosis'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Multiple boundary components need independent diagnosis
+
+Error: script failed, file: 'scripts/rebuild_ro_wrist_interface.py', exiting.
+
+Blender quit

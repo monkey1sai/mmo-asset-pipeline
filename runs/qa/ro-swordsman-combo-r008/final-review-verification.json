@@ -1,0 +1,58 @@
+{
+  "observed_utc": "2026-10-03T15:18:12.355449+00:00",
+  "status": "closed_NO_SHIP_review_complete",
+  "reviewer": "/root/hand_phase_review",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "high",
+  "review_is_advisory": true,
+  "jev_final_route_observation": "92e5ad07-d6ba-4d6b-8b6d-0f0fa1ae6934",
+  "provider_called": false,
+  "request_schema_valid": true,
+  "candidate_trials_used": 4,
+  "next_action": "stop_budget",
+  "assessment": "not_ready",
+  "prior_document_and_history_hashes_preserved": true,
+  "local_failure_contacts": [
+    3,
+    1,
+    3,
+    0,
+    4
+  ],
+  "additional_shape_issue": {
+    "edge": [
+      277,
+      278
+    ],
+    "rest_m": 0.008917424265382716,
+    "posed_m": 0.0005935934899060276,
+    "delta_m": -0.008323830775476689,
+    "ratio": 0.0665655768123927,
+    "weight_L1": 2.0,
+    "weight_L2": 1.4142135623730951
+  },
+  "posed_point_bit_equivalence": false,
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "r008_new_API_submissions": 0,
+  "r008_new_service_credits": 0,
+  "stage_commit_push": "held_by_user",
+  "review_report_and_followup": [
+    {
+      "path": "runs/qa/ro-swordsman-combo-r008/independent-final-review.md",
+      "sha256": "5031915eb31b14ef0c668eb1688bc952dea18255d21441d859ca8175ba671226"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r008/review-followup.md",
+      "sha256": "dd07e36a0dac66e1b5e86ea12c282a05de906c0a9fbf63dada0b41b26b18e0d1"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r008/final-verification.json",
+      "sha256": "891ba03a9d015062e9d391546a5cb035b72c68392c98c87eb45be660b912f396"
+    }
+  ],
+  "no_fifth_candidate": true
+}

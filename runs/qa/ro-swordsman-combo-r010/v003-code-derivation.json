@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "scripts/build_ro_grasp_corrective.py",
+    "sha256": "2e0a90a3db1ba301108e76a1482ea5475886214f4629058f1f689d2e9e6d7ce0"
+  },
+  "derived": {
+    "path": "scripts/build_ro_index_pulp.py",
+    "sha256": "0aae88fcf7fa19d5f72e090f387e4570ffd50b3da595b96954b1f6a6d6e26f55"
+  },
+  "replacements": {
+    "v002-start.json": "v003-start.json",
+    "v002-pulp-corrective": "v003-index-pulp",
+    "R010_V002": "R010_V003",
+    "amount=start['maximum_requested_posed_m']*smoothstep": "amount=start['maximum_requested_by_branch_m'][branch]*smoothstep"
+  },
+  "old_code_preserved": true
+}

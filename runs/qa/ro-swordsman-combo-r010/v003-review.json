@@ -1,0 +1,34 @@
+{
+  "verdict": "NO_SHIP",
+  "classification": "TEST_FAILURE: two-ray parity leaves wrist edge unknown at46.5 despite distance65.56mm and complete oriented-solid winding~0; originalintervalfailed remains.",
+  "static_corrective_numeric_pass": true,
+  "original_interval_samples": 121,
+  "original_interval_failures": 1,
+  "original_first_failure": {
+    "frame": 46.5,
+    "contact_required": true,
+    "key_value": 1.0,
+    "surface_ok": false,
+    "pass": false,
+    "self": 0,
+    "sword": 0,
+    "depth_m": 0,
+    "unknown": 1,
+    "minratio": 0.3784011444161538,
+    "maxratio": 1.8061576545909452,
+    "contacts": {
+      "finger1": 3,
+      "finger2": 3,
+      "finger3": 3,
+      "finger4": 3,
+      "thumb": 3
+    },
+    "weapon_rigid_max_error_m": 6.188917057900187e-08
+  },
+  "diagnosis": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/ray-ambiguity-diagnosis.json",
+    "sha256": "05cecaec87dd6c4cbf13f40f9b703b05d89059053f6b971333d81ec6a3ffd653"
+  },
+  "whole_scores_changed": false,
+  "shape_not_rebuilt": "nextmethod keeps byteidentical animatedsource andallthresholds; supplement unknown classification only, no geometry/curve improvement claim."
+}

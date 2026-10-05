@@ -1,0 +1,46 @@
+{
+  "scope": "Evidence-backed art-engineer workflow learning from real RO pressure-test attempts",
+  "current_phase": "ro-swordsman-combo-r006",
+  "phase_status": "Real baseline prepared; new source submission awaits exact-file authority",
+  "rules": [
+    {
+      "topic": "Causal diagnosis before replacement",
+      "evidence_class": "VERIFIED",
+      "evidence": ["runs/qa/ro-swordsman-combo-r005/v002-axis-review-correction.json", "runs/qa/ro-swordsman-combo-r006/baseline/baseline.json"],
+      "observed": "A wrong individual finger axis occurred in the old method. Corrected-axis baseline still has measured penetration/gap and visible folding.",
+      "practice": "Separate rig-method errors from source anatomy, topology, weights and fitting; do not attribute old deformations solely to generated topology."
+    },
+    {
+      "topic": "Independent deforming glove and rigid bracer",
+      "evidence_class": "INFERRED_HYPOTHESIS_PENDING_3D_TEST",
+      "evidence": ["assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png", "runs/qa/ro-swordsman-combo-r006/hand-gate-contract.json"],
+      "observed": "A neutral five-digit glove reference is available. No new glove model has been generated or validated.",
+      "practice": "Try one replaceable right-hand component; inspect true 3D palm/thenar/web/cuff and grip before extending to left hand or animation."
+    },
+    {
+      "topic": "Freeze function and evaluation, adapt the construction method",
+      "evidence_class": "IMPLEMENTED_PROTOCOL_NOT_ASSET_PASS",
+      "evidence": ["runs/qa/ro-swordsman-combo-r006/hand-gate-contract.json", "runs/qa/ro-swordsman-combo-r006/baseline-binding.json"],
+      "observed": "Local camera/poses/pad masks/contact/penetration/mesh crossing/UV/fitting gates are bound by SHA; whole-character targets stay unchanged.",
+      "practice": "Do not average away a failed function, change the contact mask after search, or use VFX/diagnostic isolation to conceal defects."
+    },
+    {
+      "topic": "Topology and component budgets before detail",
+      "evidence_class": "VERIFIED_PLANNING_MEASUREMENT",
+      "evidence": ["runs/qa/ro-swordsman-combo-r006/hand-budget-scout.json"],
+      "observed": "Whole baseline58868tri; hypothetical old-hand removal492+537; seam reserve256 gives952tri per hand if other parts unchanged. No cut or decimation performed.",
+      "practice": "Measure actual download count, retain necessary finger-loop density and document any rigid-gear simplification with same-view checks."
+    },
+    {
+      "topic": "Account for total production effort",
+      "evidence_class": "IMPLEMENTED_BOOKKEEPING_WITH_EXPLICIT_GAPS",
+      "evidence": ["runs/qa/ro-swordsman-combo-r006/phase-start.json", "runs/qa/ro-swordsman-combo-r005/phase-accounting-final.json"],
+      "observed": "Old failed phase and1.0service-reported credits preserved. New image tool elapsed19.6s saved; earlier planning wall time and built-in image-generation monetary cost are not returned/measured. New Hyper3D generation has not been submitted.",
+      "practice": "Compare generation, DCC repair/retopology, rework, QA and reuse benefits; state missing costs/time explicitly and never reset old history."
+    }
+  ],
+  "updated_workflow_files": ["docs/art-workflow.md", ".agents/skills/art-engineer/SKILL.md"],
+  "best_workflow_proven": false,
+  "final_character_delivered": false,
+  "commit_push": "held by user"
+}

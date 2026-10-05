@@ -1,0 +1,21 @@
+{
+  "reviewer": "Independent batch_review; actual bind five views, three stress poses and grip closeups",
+  "verdict": "NO_SHIP",
+  "verified_progress": [
+    "One real batch generation consumed service-reported0.5 credits; six parts separated with geometry/UV/materials preserved.",
+    "8-object assembly with mirrored armor uses55488tri.",
+    "Gear-bone core contamination repaired; gross pants-to-sword spikes visibly removed.",
+    "269 coincident seam groups with different weights diagnosed; position weld6651->5820 preserves UV loops; nonmanifold0.",
+    "48 editable FK bones, normalized max4 influences; 3 real poses have reachable wrist targets.",
+    "Fresh static GLB import preserves8meshes,48joints,55488tri and3embedded2k maps. No animation exists."
+  ],
+  "remaining_failures": [
+    "Face/eyes/brows/nose/mouth/hairline blurred in bind, source-quality defect.",
+    "Palm/wrist collapse, hanging unposed thumb and hand overlap; zero bone residual does not prove grip.",
+    "Shoulder/underarm cloth stretched; current bone/weight/topology cause not fully separated.",
+    "Waist/hip and crouch pants/coat intersections.",
+    "No full300frame sequence, separate skill effects or animated GLB roundtrip."
+  ],
+  "fallback": "Only core merits source-quality generation comparison now. Reuse armor/coat/sword; rig defects require separate local tests and are not proven source failures.",
+  "source_regeneration_guarantees_animation": false
+}

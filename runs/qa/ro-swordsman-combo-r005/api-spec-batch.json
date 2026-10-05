@@ -1,0 +1,30 @@
+{
+  "operation_id": "ro-split-batch-20261003-001",
+  "request": "requests/ro-swordsman-combo-r005.json",
+  "images": [
+    "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png"
+  ],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v004/batch",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Quad",
+    "quality_override": 22000,
+    "quad_normal": true,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "texture_mode": "high",
+    "texture_delight": true,
+    "TAPose": false,
+    "is_symmetric": "unknown",
+    "image_label": [
+      "?"
+    ],
+    "seed": 4500,
+    "preview_render": true
+  },
+  "authorization": {
+    "spending_scope": "Existing demand-driven monthly/regular credit authority, now one six-object image first; no top-up/upgrade. Exact global state filename remains separately subject to human authorization.",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

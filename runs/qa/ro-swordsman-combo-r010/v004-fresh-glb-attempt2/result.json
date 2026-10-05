@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-04T05:52:45.473569+00:00",
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_combined.glb",
+    "sha256": "834110e859b88a06e06921e8ea5794501ad22056dee00779454451dd9a4f9ea2"
+  },
+  "fresh_process_import": true,
+  "samples": 121,
+  "numeric_interval_pass": false,
+  "first_failure": {
+    "frame": 7.5,
+    "pass": false,
+    "contact_required": false,
+    "hand_max_m": 1.0521158998430318e-06,
+    "weapon_max_m": 8.503133215392624e-08,
+    "weapon_bone_follow_m": 8.688795409866125e-08,
+    "self": 0,
+    "sword": 0,
+    "depth_m": 0,
+    "original_ray_unknown": 0,
+    "remaining_unknown": 0,
+    "supplemental": [],
+    "contacts": {
+      "finger1": 0,
+      "finger2": 0,
+      "finger3": 0,
+      "finger4": 0,
+      "thumb": 0
+    }
+  },
+  "maximum_hand_point_difference_m": 7.89534127245901e-06,
+  "hand_RMS_difference_m": 8.68689196407155e-07,
+  "maximum_weapon_point_difference_m": 1.9082797281243946e-07,
+  "maximum_actual_bone_follow_error_m": 1.5359765386647212e-07,
+  "maximum_split_duplicate_difference_m": 0.0,
+  "point_tolerance_m": 1e-06,
+  "skin_morph_same_active_clip_verified": true,
+  "source_identity": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v004-fresh-glb-attempt2/identity-mapping.json",
+    "sha256": "8eec3ae2634098a53cb04d0a61b16b6be9e441c1902294e273eab151fa25dcfe"
+  },
+  "original_pad_masks_unchanged": true,
+  "supplemental_samples": 1,
+  "no_target_engine_or_full300_claim": true
+}

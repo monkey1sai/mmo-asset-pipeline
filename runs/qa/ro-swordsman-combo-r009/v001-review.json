@@ -1,0 +1,72 @@
+{
+  "observed_utc": "2026-10-04T01:44:14.057013+00:00",
+  "verdict": "NO_SHIP",
+  "classification": "PRODUCT_FAILURE: static grip remains missing ring/indexcontact",
+  "local_improvement": [
+    {
+      "edge": [
+        277,
+        278
+      ],
+      "rest_m": 0.008917424265382716,
+      "posed_m": 0.005178676417246883,
+      "ratio": 0.580736798332049,
+      "weights": [
+        {
+          "finger1_01": 0.657627522945404,
+          "hand": 0.30298861861228943,
+          "finger1_02": 0.0351640023291111,
+          "finger1_03": 0.004219864495098591
+        },
+        {
+          "hand": 0.7672632336616516,
+          "finger1_01": 0.23273679614067078
+        }
+      ],
+      "full_bone_L1": 0.9285492086783051
+    },
+    {
+      "edge": [
+        372,
+        388
+      ],
+      "rest_m": 0.013760541417949076,
+      "posed_m": 0.006078933427650223,
+      "ratio": 0.4417655703372935,
+      "weights": [
+        {
+          "finger1_02": 0.6649367213249207,
+          "finger1_01": 0.22174891829490662,
+          "finger1_03": 0.0987028032541275,
+          "hand": 0.0146115617826581
+        },
+        {
+          "finger1_01": 0.7371535301208496,
+          "finger1_02": 0.17141130566596985,
+          "hand": 0.07119429856538773,
+          "finger1_03": 0.02024085260927677
+        }
+      ],
+      "full_bone_L1": 1.1439747149124742
+    }
+  ],
+  "same_grip_contacts": {
+    "finger1": 3,
+    "finger2": 1,
+    "finger3": 3,
+    "finger4": 0,
+    "thumb": 4
+  },
+  "fixed_condition_comparison": true,
+  "self": 0,
+  "sword": 0,
+  "min_edge_ratio": 0.34475004895417677,
+  "max_edge_ratio": 1.8095347323987723,
+  "visual": "Actualside/palm retain fingershape in samegrip, root compression reduced; no completegrasp or volumePASS.",
+  "shape_gate_scope": "metrics cross conservative stop only; still requirethumb/wholegrip visible plus isolated MCP/PIPimages.",
+  "cap_domain_fixed": true,
+  "thumb203_preserved": true,
+  "geometry_UV_bones_weapon_controls_fixed": true,
+  "whole_scores_changed": false,
+  "new_credits": 0
+}

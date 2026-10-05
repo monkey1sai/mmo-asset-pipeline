@@ -1,0 +1,33 @@
+{
+  "id": "v003",
+  "started_utc": "2026-10-04T05:23:13.828137+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r009/v004-collision-constraints/right_hand_collision_constrained_contact.blend",
+    "sha256": "5dae70010e743d1f10ecb546fbb8e699a79527d0bbdd01652ec601f20afc6ef3"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+    "sha256": "09773ab0b04439b2cc362946c5086aade223ce520807ef9c70172264ce487749"
+  },
+  "hypothesis": "Index fullpulp needs slightlylargerboundednormalfield; ring already meetsfixedcontact, leaveunchanged. Actualsurfaceguard decides, not assumptions.",
+  "change": "Same fullanatomicalsurfacefield andsafeCwrap, ring2.2mm/index2.8mm maxima, inverseLBS andunchanged0.8mmclearance; no nearestpoint selection ormaskchange.",
+  "maximum_requested_posed_m": 0.0022,
+  "minimum_clearance_m": 0.0008,
+  "branches": [
+    "finger2",
+    "finger4"
+  ],
+  "prior_candidates_used": 2,
+  "new_credits": 0,
+  "field": "All original semantic-body points; axial smoothstep(.20,.65) and rest normal palmar smoothstep(0,.5); no nearest-three guide selection.",
+  "shape_key_name": "SK_RO_GraspPulp_Corrective",
+  "basis_source_unchanged": true,
+  "maximum_requested_by_branch_m": {
+    "finger2": 0.0022,
+    "finger4": 0.0028
+  },
+  "derivation": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-code-derivation.json",
+    "sha256": "ba5178c71fdef48f7e9136ff9d82bcfbaf7c920df2d94c9a85b68abae48ab2c0"
+  }
+}

@@ -1,0 +1,27 @@
+16:02:49 | INFO: Data are loaded, start creating Blender stuff
+16:02:49 | INFO: Blender create Mesh node model.008
+16:02:49 | INFO: Blender create Mesh node model.006
+16:02:49 | INFO: Blender create Mesh node model.002
+16:02:49 | INFO: Blender create Mesh node model
+16:02:49 | INFO: Blender create Mesh node model.004
+16:02:49 | INFO: Blender create Mesh node model.001
+16:02:49 | INFO: Blender create Mesh node model.005
+16:02:49 | INFO: Blender create Mesh node model.007
+16:02:49 | INFO: Blender create Mesh node RO_RightGlove_ProtectedCut
+16:02:49 | INFO: Blender create Mesh node RO_WristLoft_R
+16:02:49 | INFO: glTF import finished in 0.17s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Error: Object does not have geometry data
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\check_ro_wrist_animation_roundtrip.py", line 36, in <module>
+    ob=bpy.data.objects[name]; points,triangles,_=evaluated(ob); error=distances(ref['positions'],ref['triangles'],points,triangles)
+                                                  ^^^^^^^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\ro_hand_gate.py", line 13, in evaluated
+    mesh = ev.to_mesh()
+           ^^^^^^^^^^^^
+RuntimeError: Error: Object does not have geometry data
+
+
+Error: script failed, file: 'scripts/check_ro_wrist_animation_roundtrip.py', exiting.
+
+Blender quit

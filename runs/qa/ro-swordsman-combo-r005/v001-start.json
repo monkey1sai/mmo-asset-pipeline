@@ -1,0 +1,15 @@
+{
+  "id": "v001",
+  "parent_id": "baseline",
+  "started_utc": "2026-10-03T01:25:11.343435+00:00",
+  "hypothesis": "Independent generated equipment can be fitted to measured body surfaces while preserving source geometry/UVs; rigid equipment and separate cloth then permit source-preserving functional validation.",
+  "dependency_order": [
+    "body-surface volume fit",
+    "rig/weights and functional stress poses",
+    "only after passing preflight, full sequence/export"
+  ],
+  "stage_outputs": "Intermediate diagnostic masters preserve all steps; no keep or delivery decision until required candidate evidence is complete.",
+  "revision_count_reserved": 1,
+  "max_revisions": 3,
+  "clock_reset": false
+}

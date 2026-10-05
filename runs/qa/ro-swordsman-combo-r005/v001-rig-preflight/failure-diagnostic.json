@@ -1,0 +1,11 @@
+{
+  "classification": "TEST_FAILURE",
+  "observed": "Real pose renders have stretched core geometry. Read-only core weights include non-anatomy gear controls. Downslash right wrist target was unreachable.",
+  "illegal_core_weight_vertex_counts": {"sword": 251, "coat.R": 357, "coat.L": 460, "pauldron.R": 149, "pauldron.L": 175, "tabard": 22},
+  "downslash_right_wrist_target_residual_m": 0.08794265107943805,
+  "report_name_correction": "Initial report pose labels mistakenly all head because local name variable was reused. Render folders are correct: overhead, deep-crouch, downslash. Original report remains preserved.",
+  "method_change": "Disable equipment bones for native core heat, then restrict each body region to legal anatomy bones. Move unreachable downslash grip into the common reachable volume.",
+  "candidate_id": "v001",
+  "clock_reset": false,
+  "source_regeneration_justified": false
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "independent batch_review",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "high",
+  "scope": "Read-only batch preparation and source consumer contract",
+  "initial_findings": [
+    {
+      "priority": "P1",
+      "file": "scripts/inspect_ro_batch_source.py",
+      "finding": "Downloader writes path/bytes/sha256, inspector wrongly read name; would fail before Blender import."
+    },
+    {
+      "priority": "P2",
+      "file": "requests/ro-swordsman-combo-r005-preflight.json",
+      "finding": "Copied preflight retained six initial generations despite one-batch-first strategy."
+    }
+  ],
+  "corrections": [
+    "Use bound_source() with workspace-relative path, exact raw boundary and SHA256; final raw hash recheck preserved.",
+    "Update stage strategy and preparation helper; original preflight saved, entire quality/spec/additional_checks/purpose/revision count unchanged."
+  ],
+  "followup_result": "Both findings fixed; no additional blocking issue found in specified source/document scope.",
+  "limitations": [
+    "No new API submission/download or Blender execution by reviewer.",
+    "Review does not confer new global state-file authority or art/rig/animation acceptance."
+  ],
+  "coordinator_verification": "Actual historical downloaded journal/GLB accepted; wrong raw directory and wrong hash rejected.",
+  "background_review_finished": true
+}

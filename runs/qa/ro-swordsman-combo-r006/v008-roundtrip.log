@@ -1,0 +1,10 @@
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\check_ro_wrist_animation_roundtrip.py", line 20, in <module>
+    assert min(a for a,b in times)==0 and abs(max(b for a,b in times)-1)<1e-6
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'scripts/check_ro_wrist_animation_roundtrip.py', exiting.
+
+Blender quit

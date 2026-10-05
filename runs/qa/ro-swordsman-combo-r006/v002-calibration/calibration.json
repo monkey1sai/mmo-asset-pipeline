@@ -1,0 +1,71 @@
+{
+  "trial": "v002",
+  "finished_utc": "2026-10-03T06:37:48.625358+00:00",
+  "changed_old_cuff_weights": 77,
+  "cuff_cut_world_z_m": 0.97,
+  "thumb_blended_vertices": 244,
+  "search_candidate_count": 34,
+  "readback_count": 2,
+  "total_events": 36,
+  "maximum_search_candidates": 40,
+  "all_events_logged": true,
+  "best_parameters": {
+    "front": 0.054,
+    "down": 0.032,
+    "angles": [
+      0.85,
+      0.85,
+      1.15,
+      0.85
+    ],
+    "thumb": [
+      -0.02,
+      -0.02,
+      0.012
+    ]
+  },
+  "whole_triangles": 60543,
+  "surface_gate_pass": false,
+  "maximum_penetration_m": 0,
+  "crossings": 0,
+  "pad_contacts": {
+    "finger1": {
+      "vertices": 30,
+      "minimum_gap_m": 0.017663797363638878,
+      "mean_gap_m": 0.030874240833024185,
+      "within_2mm": 0
+    },
+    "finger2": {
+      "vertices": 33,
+      "minimum_gap_m": 0.010274464264512062,
+      "mean_gap_m": 0.021043727230845077,
+      "within_2mm": 0
+    },
+    "finger3": {
+      "vertices": 41,
+      "minimum_gap_m": 0.01607004553079605,
+      "mean_gap_m": 0.029985209699811007,
+      "within_2mm": 0
+    },
+    "finger4": {
+      "vertices": 34,
+      "minimum_gap_m": 0.012140126898884773,
+      "mean_gap_m": 0.021771003656527576,
+      "within_2mm": 0
+    },
+    "thumb": {
+      "vertices": 54,
+      "minimum_gap_m": 0.001650391612201929,
+      "mean_gap_m": 0.02525242502990834,
+      "within_2mm": 1
+    }
+  },
+  "art_acceptance": "pending",
+  "full_animation_accepted": false,
+  "delivered": false,
+  "source_preserved": true,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v002-calibration/ro_glove_calibration.blend",
+    "sha256": "70c81e54b248052dcef026b50f8b9f21073d95b538447b51faa82a9e7a0291bb"
+  }
+}

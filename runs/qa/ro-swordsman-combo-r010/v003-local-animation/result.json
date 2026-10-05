@@ -1,0 +1,98 @@
+{
+  "observed_utc": "2026-10-04T05:33:40.838797+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v003-index-pulp/right_hand_grasp_corrective.blend",
+    "sha256": "5a775e0e8201cf8cbab5a8a0f9008a2f1434f6b76836697f5ffbe859abd84e55"
+  },
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v003-local-animation/right_hand_grasp_61f.blend",
+    "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  },
+  "glb": null,
+  "interval_samples": 121,
+  "integer_frames": 61,
+  "half_frames": 60,
+  "required_grasp_samples": 61,
+  "interval_numeric_pass": false,
+  "first_failure": {
+    "frame": 46.5,
+    "contact_required": true,
+    "key_value": 1.0,
+    "surface_ok": false,
+    "pass": false,
+    "self": 0,
+    "sword": 0,
+    "depth_m": 0,
+    "unknown": 1,
+    "minratio": 0.3784011444161538,
+    "maxratio": 1.8061576545909452,
+    "contacts": {
+      "finger1": 3,
+      "finger2": 3,
+      "finger3": 3,
+      "finger4": 3,
+      "thumb": 3
+    },
+    "weapon_rigid_max_error_m": 6.188917057900187e-08
+  },
+  "failures": 1,
+  "minimum_ratio": 0.3783918786019062,
+  "maximum_ratio": 1.806165763532681,
+  "expected_points": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/expected-animation-points.npz",
+    "sha256": "56c6107ee8c9c651628bb610205aa1cfbf8e368e26ee9d58158a90fcff18107d"
+  },
+  "frame_coordinate_checks": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/weapon-world-frame-verification.json",
+    "sha256": "11e0e4d2e77f4ab49e9bc61dfda80a69189630d1b020eaffd4f5bc7c7015728b"
+  },
+  "key_value_checks": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/key-value-verification.json",
+    "sha256": "ef178a88440a91aadf4baef5faaaf05bc2177e759e9751c80de4b5cb0f7c4293"
+  },
+  "views": [
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-1-palm.png",
+      "sha256": "093ec5580939f435eb6400b77af3e5135cb45932c5a79d0562c0fe6d1f6efccc"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-1-side.png",
+      "sha256": "ff4bd51c17bca8ce56a90cac0f5bc57677499ae40e55ddcc193b6e483a7a4ae7"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-16-palm.png",
+      "sha256": "4740d0e6b46a1ea2716eb5d9fcdedcfe507a68b1d24937452af84522ea110dc8"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-16-side.png",
+      "sha256": "8ec2df3f6a110a22e00317ca9723cc16e102c2d50186a21a13aca5509348515f"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-31-palm.png",
+      "sha256": "720b000b6fba531df6a8447819866fbc1e69840dceccffbd09cec42228c04b84"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-31-side.png",
+      "sha256": "1615fbd25ae25c43b3d767d69375c87b7fd7974b108460280cb411ad1bce3673"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-46-palm.png",
+      "sha256": "48022d008d37fdb1fcbef72d77a9d2fb27ff1e32eb9730ad94c68dd3b3a40875"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-46-side.png",
+      "sha256": "919201ae232a198d56edce01bab20d8b6f34b42a4b07f2848e8d22c271e6997a"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-61-palm.png",
+      "sha256": "3bfb9ccd3a6025efd216f3428cfe153810ad6bb375affcbe726e5442bffecf5e"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/frame-61-side.png",
+      "sha256": "8a3451245c0b2758c1a5a304dfe711b0a08dee0837a25ad9bd68bbd4907b6ee7"
+    }
+  ],
+  "fresh_blend_glb": "pending",
+  "full300_and_art_acceptance": false,
+  "new_credits": 0
+}

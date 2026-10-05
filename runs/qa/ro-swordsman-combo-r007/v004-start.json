@@ -1,0 +1,29 @@
+{
+  "id": "v004",
+  "started_utc": "2026-10-03T13:15:49.883196+00:00",
+  "phase_started_utc": "2026-10-03T10:45:41.431021+00:00",
+  "planning_gap_since_v003_seconds": 0.486605,
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "previous_candidates_used": 3,
+  "candidate_limit": 4,
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v003-skin-diagnostic/right_hand_small_motion.blend",
+    "sha256": "c02e72908f6699d025cea8483556894a9d5f136ad710b6b333634547a1e56c38"
+  },
+  "frozen_masks": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/frozen-masks-and-weights.json",
+    "sha256": "e4dfbbb88d816c1bbe3e353079812aa581f1cdaaa87da84fce8e01028979b294"
+  },
+  "hypothesis": "Bounded mesh-neighbor harmonic hand/thumb-root transition removes observed binary edge jumps while keeping joints, distal cap and fourfinger weights fixed",
+  "maximum_weight_variants": 3,
+  "iterations_per_variant": 100,
+  "relaxation": 0.7,
+  "protected": "All original geometry/UV, all fixed bone positions, fourfinger weights and distal thumb/cap weights",
+  "stop": "Visible thenar/web/root collapse or self-cross; no grip expansion on small-motion failure",
+  "known_material_gate": "16mixedUVfaces unchanged; solve only after functional pass",
+  "new_paid_generation": false,
+  "phase_clock_reset": false
+}

@@ -1,0 +1,50 @@
+{
+  "recorded_utc": "2026-10-03T00:58:07.625Z",
+  "human_authorization": "授權這一個任務",
+  "context": "Reply to exact single DPAPI task-file authorization request for the user-approved batch-first generation.",
+  "operation_id": "ro-split-batch-20261003-001",
+  "authorized_global_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-batch-20261003-001.dpapi",
+  "plan_sha256": "1351953e072cfc7e1d86ddff9a00b206e2a8bc1c598eba7b94efb7d17c45bcd7",
+  "input_sha256": "195d226c017fd3675ebebcb49b03e1cb0ece7928aeba79e634188fa1b67fabb6",
+  "spending": "Existing demand-driven monthly/regular credits authorized; one initial batch submission. No top-up or upgrade.",
+  "maintenance": {
+    "target_existed": false,
+    "backup": "Not applicable to absent target; no existing global file replaced. Public candidate/authorization manifest saved in workspace.",
+    "provider_sha256": "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a",
+    "old_authorization_sha256": "431e94888757628d6d7e6dcc42938bb5f0e2a2b1920a9fd9b7fd9cbf80e4ca10",
+    "doctor_before": "19ok,9notes,6warn,0fail; degraded. No unrelated configuration/security changes authorized."
+  },
+  "envelope": {
+    "destination": [
+      "https://api.hyper3d.com/api/v2/rodin",
+      "exact authorized DPAPI task file"
+    ],
+    "purpose": "One six-object batch candidate and resumable status for RO swordsman stress test",
+    "allowed_operations": [
+      "reserve/update only exact DPAPI file",
+      "one charged Rodin submission",
+      "same-task status",
+      "download completed outputs into prepared workspace raw directory"
+    ],
+    "data_transmitted": [
+      "single prepared six-object image",
+      "validated nonsecret parameters",
+      "credential only through existing supported provider"
+    ],
+    "forbidden_operations": [
+      "secret output/storage in repo",
+      "old state/authorization overwrite",
+      "topup/upgrade",
+      "automatic charged retry",
+      "stage/commit/push"
+    ],
+    "stop_conditions": [
+      "unknown/pending charge ambiguity",
+      "unexpected destination/provider hash",
+      "input/plan drift",
+      "file collision"
+    ]
+  },
+  "accounting": "Original r004 clock and budgets retained; no reset.",
+  "conservative_default": "Only one initial batch submit; any uncertain submission is reconciled, never resent."
+}
