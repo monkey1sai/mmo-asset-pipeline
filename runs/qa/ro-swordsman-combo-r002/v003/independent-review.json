@@ -1,0 +1,26 @@
+{
+  "reviewer": "Independent read-only quality_review; actual five fixed and five roundtrip images, 300 master thumbnails and selected640 frames",
+  "decision": "NO_SHIP",
+  "subjects": {
+    "master_sha256": "1c47aa35ab5e0b6647f874d92c3093c1139625ae0aa4edf3bcf60b862e25638c",
+    "character_glb_sha256": "8132df5c46574b24a50c4f6cbf9682e52dff6d2d4138d0baa470f9ecc44aa53d"
+  },
+  "scores": {
+    "design-intent": {"value": 3, "reason": "Required hair/armor/navy-ivory cloth/leather/sword present; face language and mechanical joints/new-old surface style differ from references."},
+    "silhouette": {"value": 3, "reason": "Recognizable swordsman, but side chest-waist join, rigid rear skirts and boot interfaces unnatural."},
+    "form-proportion": {"value": 2, "reason": "Tubular limbs, spherical elbow plates, thick waist and thin skirts disagree with detailed source chest; face volume remains angular. Regression from baseline3."},
+    "materials": {"value": 3, "reason": "Ivory panel and main zones improved, but source armor/hair/boots and rebuilt clean materials have inconsistent detail/roughness/seams."},
+    "craft": {"value": 2, "reason": "Large cap fans and fused waist-hand/scabbard improved; joints/eye/transition and roundtrip plate differences still critical."},
+    "use-readability": {"value": 2, "reason": "Continuous actual bone animation exists, but skill differentiation, jump weight and reference poses insufficient; standing floating, support sliding and hand reversal remain."}
+  },
+  "checks": {"art_match":"fail","scale_pivot":"not_run","geometry_materials":"fail","package_complete":"not_run","rig_mapping":"pass","deformation":"fail","animation":"fail","export-roundtrip":"fail","skill-effects":"fail"},
+  "hard_findings": [
+    "Frames255..300 standing left/right boots float19.244/21.593mm, in master and GLB.",
+    "Frames120..170 support sole centroid moves55.6mm left/12.1mm right while soles remain near ground without clear steps.",
+    "Frames111..113 show hand/guard orientation change; right hand origin step134.45mm/frame at112.",
+    "Fresh GLB front/back elbow plate protrudes/rotates differently from master; numeric weights/times alone not roundtrip pass.",
+    "Form-proportion3→2; other score gains cannot compensate regression."
+  ],
+  "visual_scope": {"fixed_views":["front","side","back","three-quarter","detail"],"roundtrip_fixed_views":5,"master_thumbnails":300,"master_full640_frames":[75,110,111,112,113,114,120,170,211,300],"effect_images":[120,211,240],"video_playback":"not_performed","all300_fullsize_inspection":"not_performed"},
+  "limitations": ["Closest20 finger points do not rule out finger penetration.","Blade/head BVH zero does not rule out other garment/body/guard collisions.","Only full asset1.84m bounds exist, no body-only/pivot proof yet.","New A-pose input is promising2D design, not verified3D topology or animation."]
+}

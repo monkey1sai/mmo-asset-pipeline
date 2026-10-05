@@ -1,0 +1,150 @@
+{
+  "subject_sha256": "f642aeaec9348f4bb0e6d49a6174627ac8e5879e3e9be9eef0638f2ee23b7d6d",
+  "saved_master": false,
+  "changed_weights": false,
+  "thumb_grid": [
+    {
+      "thumb_radians": 0,
+      "actual_surface_distances": {
+        "thumb": {
+          "selected_vertices": 64,
+          "min_m": 0.03070356883108616,
+          "p10_m": 0.034659165889024734,
+          "p25_m": 0.03888004273176193
+        },
+        "finger1": {
+          "selected_vertices": 60,
+          "min_m": 0.00607268325984478,
+          "p10_m": 0.01177058182656765,
+          "p25_m": 0.018186058849096298
+        },
+        "finger2": {
+          "selected_vertices": 41,
+          "min_m": 0.000990195432677865,
+          "p10_m": 0.0036335133481770754,
+          "p25_m": 0.008658533915877342
+        },
+        "finger3": {
+          "selected_vertices": 7,
+          "min_m": 0.0057135033421218395,
+          "p10_m": 0.0057135033421218395,
+          "p25_m": 0.0067883627489209175
+        },
+        "finger4": {
+          "selected_vertices": 78,
+          "min_m": 0.0001726163027342409,
+          "p10_m": 0.0025538483168929815,
+          "p25_m": 0.004972328897565603
+        }
+      }
+    },
+    {
+      "thumb_radians": 0.5,
+      "actual_surface_distances": {
+        "thumb": {
+          "selected_vertices": 64,
+          "min_m": 0.021082624793052673,
+          "p10_m": 0.02492535673081875,
+          "p25_m": 0.02900725230574608
+        },
+        "finger1": {
+          "selected_vertices": 60,
+          "min_m": 0.00607268325984478,
+          "p10_m": 0.01177058182656765,
+          "p25_m": 0.018186058849096298
+        },
+        "finger2": {
+          "selected_vertices": 41,
+          "min_m": 0.000990195432677865,
+          "p10_m": 0.0036335133481770754,
+          "p25_m": 0.008658533915877342
+        },
+        "finger3": {
+          "selected_vertices": 7,
+          "min_m": 0.0057135033421218395,
+          "p10_m": 0.0057135033421218395,
+          "p25_m": 0.0067883627489209175
+        },
+        "finger4": {
+          "selected_vertices": 78,
+          "min_m": 0.0001726163027342409,
+          "p10_m": 0.002467038109898567,
+          "p25_m": 0.004972328897565603
+        }
+      }
+    },
+    {
+      "thumb_radians": 1.0,
+      "actual_surface_distances": {
+        "thumb": {
+          "selected_vertices": 64,
+          "min_m": 0.009765581227838993,
+          "p10_m": 0.013670889660716057,
+          "p25_m": 0.017047353088855743
+        },
+        "finger1": {
+          "selected_vertices": 60,
+          "min_m": 0.00607268325984478,
+          "p10_m": 0.01177058182656765,
+          "p25_m": 0.018186058849096298
+        },
+        "finger2": {
+          "selected_vertices": 41,
+          "min_m": 0.000990195432677865,
+          "p10_m": 0.0036335133481770754,
+          "p25_m": 0.008658533915877342
+        },
+        "finger3": {
+          "selected_vertices": 7,
+          "min_m": 0.0057135033421218395,
+          "p10_m": 0.0057135033421218395,
+          "p25_m": 0.0067883627489209175
+        },
+        "finger4": {
+          "selected_vertices": 78,
+          "min_m": 0.0001726163027342409,
+          "p10_m": 0.002467038109898567,
+          "p25_m": 0.004972328897565603
+        }
+      }
+    },
+    {
+      "thumb_radians": 1.4,
+      "actual_surface_distances": {
+        "thumb": {
+          "selected_vertices": 64,
+          "min_m": 0.0043668001890182495,
+          "p10_m": 0.006369681563228369,
+          "p25_m": 0.010868445038795471
+        },
+        "finger1": {
+          "selected_vertices": 60,
+          "min_m": 0.00607268325984478,
+          "p10_m": 0.01177058182656765,
+          "p25_m": 0.018186058849096298
+        },
+        "finger2": {
+          "selected_vertices": 41,
+          "min_m": 0.000990195432677865,
+          "p10_m": 0.0036335133481770754,
+          "p25_m": 0.008658533915877342
+        },
+        "finger3": {
+          "selected_vertices": 7,
+          "min_m": 0.0057135033421218395,
+          "p10_m": 0.0057135033421218395,
+          "p25_m": 0.0067883627489209175
+        },
+        "finger4": {
+          "selected_vertices": 78,
+          "min_m": 0.0001726163027342409,
+          "p10_m": 0.002467038109898567,
+          "p25_m": 0.004972328897565603
+        }
+      }
+    }
+  ],
+  "selected_thumb_radians": 1.4,
+  "method": "Evaluated body mesh vertices with >50% digit influence to actual evaluated grip triangles via BVH. Percentiles of multiple vertices, no bone-origin contact assertion.",
+  "limits": "Distances alone do not prove opposed grasp, no penetration, or all skill poses. Actual close views and other poses required."
+}

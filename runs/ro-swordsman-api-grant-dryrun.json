@@ -1,0 +1,52 @@
+{
+  "status": "prepared_not_applied",
+  "policy_path": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\authorization.json",
+  "policy_sha256": "a91449b05270d02b0e750814b64e4fc2b4c2e8b1605ed011588ab835896149f8",
+  "implementation_sha256": "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a",
+  "journal_sha256": {
+    "zhaoyun-20261001-api-1.json": "895131222a17b6900627171a5bd52ccc46a4d8bb909beec2d1fa761602f06821"
+  },
+  "input_sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3",
+  "source_sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3",
+  "old": {
+    "operation_id": "zhaoyun-20261001-api-1",
+    "total_credit_limit": 2.0,
+    "external_credits_reserved": 1.5,
+    "max_api_submissions": 1,
+    "input_roots": [
+      "C:/Users/IOT/.codex/visualizations/2026/10/01/01a0f6f7-7e1e-7600-a5c4-bc90e2df6230/zhaoyun"
+    ],
+    "output_roots": [
+      "C:/Users/IOT/.codex/visualizations/2026/10/01/01a0f6f7-7e1e-7600-a5c4-bc90e2df6230/zhaoyun"
+    ],
+    "download_hosts": [
+      "file.hyper3d.com"
+    ]
+  },
+  "new": {
+    "operation_id": "ro-swordsman-reference-20261002-001",
+    "total_credit_limit": 2.5,
+    "external_credits_reserved": 1.5,
+    "max_api_submissions": 2,
+    "input_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png"
+    ],
+    "output_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/rodin-v001"
+    ],
+    "download_hosts": [
+      "file.hyper3d.com"
+    ]
+  },
+  "arithmetic": {
+    "external_reserved": 1.5,
+    "journal_reserved": 0.5,
+    "new_allowed": 0.5,
+    "submission_records": 1,
+    "new_submission_count": 1
+  },
+  "prior_terminal_proof_sha256": "a3c7a98cbc76328f61f285e9cd178bbca6c71cbbabfe8676017bc16a81030e69",
+  "backup_directory": "tmp/ro-swordsman-api-grant-backup",
+  "authority": "User approved one0.5 existing-credit character task and clarified the API is an art-engineer workflow permission, after the exact narrow repair was presented.",
+  "forbidden": "No credentials/env/ACL/global Codex or MCP config/tool code/journal changes; no counter reset; no extra spend."
+}

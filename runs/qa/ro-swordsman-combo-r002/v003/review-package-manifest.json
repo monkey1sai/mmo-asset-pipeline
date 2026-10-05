@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo-r002",
+  "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+  "status": "local_review_package_failed_not_delivered",
+  "files": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_master.blend",
+      "sha256": "1c47aa35ab5e0b6647f874d92c3093c1139625ae0aa4edf3bcf60b862e25638c"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_combo.glb",
+      "sha256": "8132df5c46574b24a50c4f6cbf9682e52dff6d2d4138d0baa470f9ecc44aa53d"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_skill_effects.glb",
+      "sha256": "f748438d9979d7495438413436c12796701675949d3c21c3746339902fd75a3a"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/README.md",
+      "sha256": "1652e7ccfa7fd537bbd6be539c80384b34651a15ce7de23facdcb2b48cf18631"
+    }
+  ],
+  "embedded_dependencies": [
+    {
+      "file": "ro_swordsman_combo.glb",
+      "external_dependencies": [],
+      "skin_count": 1,
+      "animation_count": 1
+    },
+    {
+      "file": "ro_skill_effects.glb",
+      "external_dependencies": [],
+      "skin_count": 0,
+      "animation_count": 23
+    }
+  ],
+  "videos": [
+    {
+      "file": {
+        "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/ro_swordsman_neutral.mp4",
+        "sha256": "06242d1c9317584fc7c9b6b75fcae35023f4ce4f57305acc7fd2a49fdf462683"
+      },
+      "ffprobe": {
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "60/1",
+        "duration": "5.000000",
+        "nb_frames": "300"
+      }
+    },
+    {
+      "file": {
+        "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/ro_swordsman_roundtrip.mp4",
+        "sha256": "cae21f8fa7e437978f1406e722a7638370d07af433495140069074e5ef4db75a"
+      },
+      "ffprobe": {
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "60/1",
+        "duration": "5.000000",
+        "nb_frames": "300"
+      }
+    },
+    {
+      "file": {
+        "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/ro_swordsman_effects.mp4",
+        "sha256": "c5bc796abe25dc767957f9b86da1ab5ae8d678db0e3e1500a9ea7fdffb1bd85a"
+      },
+      "ffprobe": {
+        "width": 640,
+        "height": 640,
+        "r_frame_rate": "60/1",
+        "duration": "5.000000",
+        "nb_frames": "300"
+      }
+    }
+  ],
+  "known_limitations": [
+    "Frames255..300 standing left/right boots float19.244/21.593mm, in master and GLB.",
+    "Frames120..170 support sole centroid moves55.6mm left/12.1mm right while soles remain near ground without clear steps.",
+    "Frames111..113 show hand/guard orientation change; right hand origin step134.45mm/frame at112.",
+    "Fresh GLB front/back elbow plate protrudes/rotates differently from master; numeric weights/times alone not roundtrip pass.",
+    "Form-proportion3→2; other score gains cannot compensate regression."
+  ],
+  "git": "not_staged_not_committed_not_pushed",
+  "source": "assets/raw/ro-swordsman-combo/rodin-v001/base_basic_pbr.glb"
+}

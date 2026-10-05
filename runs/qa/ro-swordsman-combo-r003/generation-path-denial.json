@@ -1,0 +1,21 @@
+{
+  "operation_id": "ro-swordsman-apose-20261002-001",
+  "classification": "AUTHORIZATION_DENIAL",
+  "execution_state": "input_rejected_before_new_journal_and_network_submit",
+  "exact_error": "PATH_OUTSIDE_AUTHORIZED_ROOTS",
+  "balance_before": 228.5,
+  "balance_after": 228.5,
+  "new_charged_task": false,
+  "proof": "Inspected adapter: multipart allowed_path runs before journal creation and API request; supported balance unchanged, state file names still only old two known operations.",
+  "task_state_contents_read": false,
+  "automatic_review_rejections": [
+    "All state JSON parsing rejected as potential sensitive task/signedURL access; removed.",
+    "State byte hashes also rejected; removed. Replacement only file names/size/mtime, supported status for terminal tasks.",
+    "Single global authorization.json apply rejected: API spending authorization does not explicitly authorize this global file write. No write occurred, pending specific user answer."
+  ],
+  "independent_review": "Read-only risk review found no hard defect in exact registration proposal; does not substitute platform permission approval.",
+  "known_environment_issue": "codex doctor --summary exit1, existing sandbox provisioning failure. No ACL/security/config changes.",
+  "current_resume_condition": "Specific authorization for this global metadata file update, or user supplies redesigned supported API entrypoint.",
+  "old_spend_preserved": true,
+  "git": "not_staged_not_committed_not_pushed"
+}

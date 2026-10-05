@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation_id": "ro-swordsman-reference-20261002-001",
+  "request_id": "ro-swordsman-combo",
+  "status": "prepared_not_submitted",
+  "preflight_attempts": [{"input_location": "user source folder", "result": "PATH_OUTSIDE_AUTHORIZED_ROOTS", "task_uuid": null, "classification": "AUTHORIZATION_DENIAL: connector input-root validation", "note": "No successful submission observed; next attempt uses identical bytes within this authorized repository and same operation ID."}],
+  "tool": "hyper3d_api.rodin_generate",
+  "expected_consumed_credits": 0.5,
+  "paid_authorization": "user explicitly authorizes this one generation up to 0.5 existing monthly or regular credits; no top-up/upgrade",
+  "authorized_credit_limit": 0.5,
+  "submitted_source_path": "C:\\.llmcode\\ro_swordsman_animation\\transparent_frames\\sprite_12.png",
+  "input": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png",
+  "prompt": "One young male anime fantasy swordsman matching the supplied character reference: chestnut spiky hair, youthful angular male face, silver segmented breastplate and layered rounded pauldrons, navy blue short tunic with separate split coat tails, ivory front tabard, brown leather gloves, belt and knee-high boots, dark trousers. Preserve facial identity, costume structure, colors and proportions. Full character only, complete on all sides. Neutral symmetrical relaxed A-pose suitable for humanoid rigging if possible: arms away from torso, open space between limbs and coat tails, feet shoulder-width apart. Do not fuse hands to torso, arms to armor, legs together or cloth to legs. No sword in the hands: weapon will be authored separately and attached to a grip bone. No scene, floor, text, fire, aura, motion trail, battle pose, pedestal or toy joints. Clean continuous anatomical body and tailored clothing; crisp bevelled plate layering; high-quality anime hero craftsmanship.",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Raw",
+    "triangles": 30000,
+    "format": "GLB",
+    "material": "PBR",
+    "texture_px": 2048
+  },
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v001",
+  "preflight": {
+    "authenticated": true,
+    "api_total": 229,
+    "chrome_wallet_total": 0,
+    "subscription_breakdown": "not_verified_for_api_account",
+    "next_reset": "not_verified",
+    "expected_price_source": "current tool contract and official web generation control"
+  },
+  "authorization_envelope": {
+    "destination": "existing Hyper3D API credential account; official Rodin API",
+    "purpose": "one reference-derived character candidate for the authorized rig and animation task",
+    "allowed_operations": [
+      "after concrete credit authorization: one generation",
+      "poll same task",
+      "download completed task",
+      "local QA and postprocess"
+    ],
+    "data_transmitted": "one supplied transparent character reference and the recorded design prompt; no private source tree",
+    "forbidden_operations": [
+      "credential printing",
+      "top-up",
+      "upgrade",
+      "public gallery publishing",
+      "duplicate pending generation",
+      "paid rigging or other added charges",
+      "other repo writes"
+    ],
+    "stop_conditions": [
+      "missing spending authority",
+      "unverified permitted credit bucket",
+      "unexpected fee",
+      "unknown submission",
+      "failed task",
+      "account mismatch"
+    ],
+    "conservative_default": "one generation only; existing monthly or regular credits now explicitly authorized; keep generated candidate private"
+  },
+  "limits": [
+    "This fixed tool produces a static candidate; rigging, deformation, continuous skills and export acceptance remain separate.",
+    "A-pose and separated geometry are requests, not guaranteed tool capabilities.",
+    "Reference rights beyond the user's supplied-task permission remain unverified."
+  ],
+  "input_sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3",
+  "request_sha256": "9e3ea59bc4ef1a556135f79413233df75ed2d165a810b5f4a56998346e48d2cc"
+}

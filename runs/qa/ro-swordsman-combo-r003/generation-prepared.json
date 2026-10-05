@@ -1,0 +1,52 @@
+{
+  "operation_id": "ro-swordsman-apose-20261002-001",
+  "execution_state": "prepared",
+  "request_sha256": "b291ee870b983043361c3f1ce47c6b16f5b9b310a71126174ac9040bf1991ef6",
+  "protocol_sha256": "c1aa578571937b0e735a9d9f515556720d7bcf3e271e1421360863a92f09e948",
+  "prepared_utc": "2026-10-02T14:49:27.333812+00:00",
+  "input": {
+    "path": "assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png",
+    "sha256": "b00dc0e01da4d223b17be84a108bf2218a4eba08100b0ca296e404c8316ac5db"
+  },
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v002",
+  "tool": "mcp__hyper3d_api__rodin_generate",
+  "parameters": {
+    "authorized_credit_limit": 0.5,
+    "prompt": "Single anime swordsman exactly matching the input design. Symmetric A-pose, empty open hands completely separated from waist and torso, five distinct gloved fingers, arms45degrees down, legs apart, feet flat. No sword, no scabbard, no effects. Preserve chestnut spiky hair, open brown eyes, silver layered armor, navy split coat, ivory white tabard and brown leather boots. Clean closed 3D surfaces, natural joints; avoid fused cloth or body parts.",
+    "fixed_settings": "Gen-2.5 High/Raw30k/GLB/PBR2K"
+  },
+  "authorization": {
+    "source": "User answer: 不限制點數使用；這是壓力測試，可以用api所有介面與功能，請依照建模的需求來",
+    "pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true,
+    "initial_job_count": 1
+  },
+  "envelope": {
+    "destination": "Hyper3D authenticated user API account",
+    "purpose": "New neutral-pose character candidate for directed art stress test",
+    "allowed_operations": [
+      "upload one generated design reference",
+      "one initial0.5-credit generation",
+      "read same task status",
+      "download completed task to new raw version"
+    ],
+    "data_transmitted": [
+      "generated A-pose design image",
+      "nonsecret character prompt"
+    ],
+    "forbidden_operations": [
+      "topup",
+      "upgrade",
+      "expose secrets",
+      "publish",
+      "commit",
+      "push"
+    ],
+    "stop_conditions": [
+      "unknown/pending submission without same-task reconciliation",
+      "unexpected account/destination",
+      "failed input",
+      "download collision"
+    ]
+  }
+}

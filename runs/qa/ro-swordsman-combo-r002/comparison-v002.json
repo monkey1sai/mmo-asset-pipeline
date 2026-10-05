@@ -1,0 +1,49 @@
+{
+  "mode": "declared_quality_comparison_only",
+  "request_id": "ro-swordsman-combo-r002",
+  "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+  "protocol_sha256": "464fb0b3e748684e54108b5939a77c17721a25a31ef1d8bc361e6bf05ccf5025",
+  "trials": [
+    {
+      "id": "baseline",
+      "decision": "baseline",
+      "issues": [],
+      "failed_gates": [
+        "geometry_materials",
+        "rig_mapping",
+        "deformation",
+        "animation",
+        "export-roundtrip"
+      ]
+    },
+    {
+      "id": "v001",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    },
+    {
+      "id": "v002",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    }
+  ],
+  "blockers": [],
+  "best_trial_id": "baseline",
+  "best_content_artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/baseline/ro_source_baseline.blend",
+      "sha256": "fb3edee5a4b736cf547bcb2664137fa9cd09146b826dfa1814797fbdeed0f102"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/baseline/ro_source_baseline.glb",
+      "sha256": "38e37aa985f179080769d65137d64b5f2d5535ebe0b5340538bcfe18f054d759"
+    }
+  ],
+  "quality_target_met": false,
+  "elapsed_seconds": 1465.4160969999998,
+  "candidate_trials_used": 2,
+  "next_action": "revise_current_best",
+  "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。"
+}

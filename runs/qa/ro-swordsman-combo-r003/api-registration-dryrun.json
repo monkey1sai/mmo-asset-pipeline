@@ -1,0 +1,48 @@
+{
+  "policy_sha256": "431e94888757628d6d7e6dcc42938bb5f0e2a2b1920a9fd9b7fd9cbf80e4ca10",
+  "implementation_sha256": "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a",
+  "journal_metadata": {
+    "ro-swordsman-reference-20261002-001.json": {
+      "size": 272,
+      "mtime_ns": 1790944995600661000
+    },
+    "zhaoyun-20261001-api-1.json": {
+      "size": 259,
+      "mtime_ns": 1790853622978353100
+    }
+  },
+  "proof_sha256": "b5cbdcd42def89f9cd233c2d5fe130057c2fa9a1e344ad3f36abf24d72d5abc2",
+  "input_sha256": "b00dc0e01da4d223b17be84a108bf2218a4eba08100b0ca296e404c8316ac5db",
+  "old": {
+    "operation_id": "ro-swordsman-reference-20261002-001",
+    "total_credit_limit": 2.5,
+    "external_credits_reserved": 1.5,
+    "max_api_submissions": 2,
+    "input_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png"
+    ],
+    "output_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/rodin-v001"
+    ],
+    "download_hosts": [
+      "file.hyper3d.com"
+    ]
+  },
+  "new": {
+    "operation_id": "ro-swordsman-apose-20261002-001",
+    "total_credit_limit": 3.0,
+    "external_credits_reserved": 1.5,
+    "max_api_submissions": 3,
+    "input_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png"
+    ],
+    "output_roots": [
+      "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/rodin-v002"
+    ],
+    "download_hosts": [
+      "file.hyper3d.com"
+    ]
+  },
+  "authority": "Latest human explicitly authorizes all available APIs and existing monthly/regular credits according to modeling needs; no total point limit. This registers one actual0.5-cost operation, not a user budget cap. Preserve prior counters and repeat only for separately recorded needed jobs.",
+  "scope": "Only authorization.json metadata; exact new design input/output/operation. No key/env/DPAPI/journal read, tool code/MCP/config/ACL changes, broad filesystem root, counter reset or purchase."
+}

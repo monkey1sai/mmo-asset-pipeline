@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo",
+  "operation_id": "ro-swordsman-reference-20261002-001",
+  "task_uuid": "7120b25b-c2af-4393-b0b0-0bbc809fc11a",
+  "state": "downloaded",
+  "jobs": ["Done", "Done", "Done", "Done", "Done", "Done", "Done"],
+  "consumed_credits": 0.5,
+  "balance_before": 229,
+  "balance_after": 228.5,
+  "authority": "runs/ro-swordsman-api-submission-authority-20261002.json",
+  "input_sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3",
+  "tool": "hyper3d_api.rodin_generate / rodin_status / rodin_download",
+  "parameters": {"tier":"Gen-2.5-High","mesh_mode":"Raw","triangles":30000,"format":"GLB","material":"PBR","texture_px":2048},
+  "files": [
+    {"path":"base_basic_pbr.glb","bytes":13558900,"sha256":"9350ee0a6cbe9af02bedabcc7ccee01153b7af90edc7f604dae67d205999e4c1"},
+    {"path":"preview.webp","bytes":4438,"sha256":"46e8e3085fd12b0c33937a1df8f043165a4f9d2f8bb6c8eb8ed47c8dbb0c5954"},
+    {"path":"render.jpg","bytes":11857,"sha256":"a08cd8920f7b6af488aee566f8e433225c40535fb8623a072441a272d6943db5"}
+  ],
+  "acceptance": {"art":"not_run","rig":"not_run","animation":"not_run","delivery":"not_run"},
+  "limits": "Static raw generated master; preserved unchanged. A-pose and separated limbs are requested but unverified. No target game acceptance."
+}

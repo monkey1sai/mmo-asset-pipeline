@@ -1,0 +1,8 @@
+{
+  "classification": "TEST_FAILURE",
+  "observed_error": "SPEC_FIELDS_INVALID",
+  "cause": "Preparation helper passed a spec path instead of the required parsed dictionary.",
+  "charged_calls": 0,
+  "fix": "Pass parsed spec; finish only missing public plans, preserve design/request/clock.",
+  "old_history_modified": false
+}

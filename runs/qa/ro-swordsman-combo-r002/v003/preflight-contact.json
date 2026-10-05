@@ -1,0 +1,67 @@
+{
+  "master_sha256": "3f76ca2df609e2e41489ac0ff8c1cd88fb9e2f9cee6eeb5e5db7519007ed4b83",
+  "evaluated_mesh_checks": [
+    {
+      "pose": "overhead",
+      "frame": 50,
+      "finger_to_actual_grip": {
+        "L": {
+          "closest_m": 0.00048464658902958035,
+          "closest_20_mean_m": 0.0007074308625306003,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        },
+        "R": {
+          "closest_m": 0.00048539129784330726,
+          "closest_20_mean_m": 0.000618866438162513,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        }
+      },
+      "actual_boot_min_z": {
+        "L": 5.776223588327412e-07,
+        "R": 0.002350134076550603
+      }
+    },
+    {
+      "pose": "downslash",
+      "frame": 120,
+      "finger_to_actual_grip": {
+        "L": {
+          "closest_m": 6.15404496784322e-05,
+          "closest_20_mean_m": 0.0013852087260602275,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        },
+        "R": {
+          "closest_m": 0.00048539749695919454,
+          "closest_20_mean_m": 0.0006188080093124882,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        }
+      },
+      "actual_boot_min_z": {
+        "L": 1.583629369861228e-07,
+        "R": 0.0023509107995778322
+      }
+    },
+    {
+      "pose": "landing",
+      "frame": 170,
+      "finger_to_actual_grip": {
+        "L": {
+          "closest_m": 0.03144532069563866,
+          "closest_20_mean_m": 0.033504628017544745,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        },
+        "R": {
+          "closest_m": 0.00048533984227105975,
+          "closest_20_mean_m": 0.0006188679006299935,
+          "method": "actual skinned glove finger surface vertices to actual evaluated sword grip triangle BVH; not target position identity"
+        }
+      },
+      "actual_boot_min_z": {
+        "L": 1.0567896424618084e-07,
+        "R": 0.0023506900761276484
+      }
+    }
+  ],
+  "master_unchanged": true,
+  "art_or_deformation_acceptance": "requires visual review"
+}

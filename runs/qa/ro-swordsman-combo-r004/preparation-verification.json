@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "prepared_waiting_exact_new_task_file_authority",
+  "recorded_utc": "2026-10-03 00:15:30 UTC",
+  "request_id": "ro-swordsman-combo-r004",
+  "completed": {
+    "design_images": 6,
+    "assembled_concept": true,
+    "prepared_unique_operations": 6,
+    "authentication": {
+      "tool": "mcp__hyper3d_api__rodin_balance",
+      "authenticated": true,
+      "balance": 229,
+      "charged": false,
+      "pool_breakdown": "not_returned"
+    },
+    "full_request_schema": "valid_request/pending_empty",
+    "preflight_request_schema": "valid_request/pending_empty",
+    "design_and_plan_hashes": "verified",
+    "api_fault_tests": 23,
+    "isolated_full_tests": {
+      "tests": 116,
+      "seconds": 1.99,
+      "exit_code": 0
+    },
+    "new_script_syntax": "three scripts parsed",
+    "git_diff_check": "passed"
+  },
+  "not_run": [
+    "new paid generation",
+    "new task global state writes",
+    "new source Blender import",
+    "new source rig/animation/GLB roundtrip",
+    "new art acceptance"
+  ],
+  "current_new_charged_calls": 0,
+  "new_public_journals": 0,
+  "new_private_files": 0,
+  "issues": [
+    {
+      "classification": "TEST_FAILURE",
+      "error": "SPEC_FIELDS_INVALID",
+      "cause": "Preparation helper passed spec path instead of parsed dict.",
+      "resolution": "Corrected caller; preserved images, frozen request and phase clock, completed all six bound plans."
+    },
+    {
+      "classification": "TOOL_FAILURE",
+      "error": "referenced_image_paths must contain at most5 paths",
+      "resolution": "Concept render used five selected design references plus bracer description. Initial request rejected before image generation."
+    }
+  ],
+  "authorization": {
+    "credits": "Existing demand-driven monthly/regular credits already authorized; no reauthorization asked",
+    "outside_workspace_writes": "Async question lists the exact six absent DPAPI task files; answer pending",
+    "no_topup_or_upgrade": true,
+    "old_task_state": "preserved",
+    "git": "stage/commit/push held"
+  },
+  "background": {
+    "task_owned_generation_running": false,
+    "task_owned_blender_running": false,
+    "note": "Existing Blender process observed; ownership not attributed and process not operated."
+  },
+  "next": "Upon exact-file human authorization and execution approval, submit each specified part once, record cost/status, download completed parts, inspect actual source then assemble/refine in Blender."
+}

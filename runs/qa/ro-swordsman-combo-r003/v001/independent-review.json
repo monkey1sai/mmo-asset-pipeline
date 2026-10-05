@@ -1,0 +1,23 @@
+{
+  "reviewer": "Existing independent quality_review agent; read-only actual image and artifact review",
+  "decision": "NO_SHIP",
+  "full_animation_gate": "blocked_by_actual_wrist_hand_armor_deformation",
+  "viewed": {"final_fixed_views": ["front", "side", "back", "three-quarter", "detail"], "stress_poses": ["overhead", "deep-crouch", "downslash"], "per_stress_pose": ["front", "side", "back", "three-quarter", "grip-palm", "grip-back"], "roundtrip_fixed_views": ["front", "side", "back", "three-quarter", "detail"], "total_images": 28},
+  "scores": {
+    "design-intent": {"value": 3, "reason": "角色、服裝與髮型保留且加入獨立劍；臉部線條模糊，圓柱護手與簡略劍材質未與角色細節一致。"},
+    "silhouette": {"value": 3, "reason": "人物武器輪廓清楚；後衣仍鐘形，蹲姿側衣硬折角；過頭手劍聚集臉前，未證明完整舉劍範圍。"},
+    "form-proportion": {"value": 2, "reason": "實際姿勢有腕部扭折、掌面與拇指根部塌折，肩甲／上臂甲被拉成軟質折面；相對靜態baseline的3是結構退步。"},
+    "materials": {"value": 3, "reason": "布、皮、金屬分區保留；臉眼、髮束與甲邊貼圖瑕疵、斑駁高光及簡略新劍材質仍在。"},
+    "craft": {"value": 2, "reason": "手部長刺、靴腿大幅拉伸及深蹲前襟已有改善；腕掌、甲片接合和握持未過，原8條非流形邊未修。"},
+    "use-readability": {"value": 0, "reason": "骨架與壓力姿勢是工程進展；指定連段、銜接、重心／支撐與必要效果未製作，不能提高連段用途分數。"}
+  },
+  "hard_findings": [
+    "Overhead grip close views show palm/thumb-base angular collapse and incomplete grasp; left finger1 minimum about19.0mm, finger3 about13.6mm from actual grip.",
+    "Downslash wrist/palm unnatural and fingers open; back close view is occluded and cannot prove rear grip.",
+    "Shoulder and layered upper-arm armor deform into soft folds; normalized weights are not hard-plate preservation.",
+    "Tabard swing improves deep crouch, but side cloth angular folds and rear waist depressions remain.",
+    "Eight source nonmanifold edges remain; full300frames and VFX absent."
+  ],
+  "verified_technical_scope": {"character_glb_sha256": "ca36d44de038dfc681736059d5a1254d275a7eccff07f5ce94fda9be433400ca", "bones": 46, "skins": 1, "triangles": 39946, "embedded_2048_textures": 3, "normalized_finite_weights": true, "animations": 0},
+  "limits": "Fresh import is rest pose of a static rig export; it neither proves pose/animation roundtrip nor indicates a lost animation. Standing/half-crouch extra close views were not reviewed. No new Blender run, edits, secrets, network or paid action by reviewer."
+}
