@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "request_id": "replace-with-request-id",
+  "request_sha256": "replace-with-plan-request-sha256",
+  "protocol_sha256": "replace-with-plan-quality-loop-protocol-sha256",
+  "trials": [],
+  "note": "未填紀錄不可通過。第一筆為實際 baseline；每筆含 id、parent_id、status、elapsed_seconds、protocol_sha256、reviewer。候選另含 hypothesis／change；completed 含 previews（protocol 每視角的 path／SHA-256）、scores（每維度 value 0..5／reason）及 evidence（acceptance-evidence 格式，加 subject_artifacts 為所有模型與相依素材 deliverables 的 path／SHA-256）。failed／blocked／pending／unknown 填 failure_reason；保留每次嘗試，不改寫舊分數或 keep 結論。"
+}

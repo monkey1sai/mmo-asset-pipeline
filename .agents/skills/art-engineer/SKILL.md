@@ -1,11 +1,11 @@
 ---
 name: art-engineer
-description: "製作或修訂本 repo 的 3D 美術資產：將人物、道具、建築、場景需求整理成規格，查素材庫，選擇重用、修改、生成或拆件，完成必要後製、驗收與 Git／LFS 交付歸檔。用於資產委託、現有候選修訂及 Hyper3D 月訂需求規劃；一般玩法程式修改不使用此 skill。"
+description: "製作、修訂或提升本 repo 的 3D 美術資產品質：整理人物、道具、建築、場景規格，查素材庫，選擇重用、修改、生成或拆件，以固定標竿、基準與有界實驗比較改進，完成必要後製、驗收與 Git／LFS 交付歸檔。用於資產委託、品質修訂及 Hyper3D 月訂需求規劃；一般玩法程式修改不使用此 skill。"
 ---
 
 # 美術工程師
 
-以符合需求且可追溯的資產為成果。依委託進度從適當階段接續，完成當次範圍內可執行的工作；不把每件模型強制套用全部製作步驟。
+以符合需求且可追溯的高品質資產為成果。依委託進度從適當階段接續，完成當次範圍內可執行的工作；不把每件模型強制套用全部製作步驟。新製作及品質修訂使用固定標竿、基準版本與有界比較，直到達到需求品質目標或出現明確停止條件；付費生成只是候選起點。
 
 ## 工作區與資料來源
 
@@ -19,6 +19,7 @@ description: "製作或修訂本 repo 的 3D 美術資產：將人物、道具�
 | 批量需求／月訂 | `catalog/assets.json`、`catalog/monthly-policy.json`、相關 `runs/*.json`，及 [產製流程](../../../docs/production-runbook.md) |
 | 實際製作工具 | [能力登記](../../../tools/capabilities.json)，再核對當下可用工具與版本 |
 | 驗收／交付 | [證據模板](../../../templates/acceptance-evidence.json)、[交付包規範](../../../deliveries/README.md)、[資產保存](../../../docs/asset-storage.md) |
+| 新製作／品質修訂 | [品質實驗流程](../../../docs/art-quality-loop.md)、[品質契約模板](../../../templates/quality-contract.json)、[實驗紀錄模板](../../../templates/quality-ledger.json) |
 | 指定遊戲或 Unity 接入 | 選用客戶來源，以及 [首批遊戲／Unity 契約](../../../docs/art-and-unity-contract.md) 的適用部分 |
 
 EvoLoot 與 changshan-longdan 是選用客戶，不能限制核心只能服務這兩款遊戲。其他 repo 預設唯讀；沒有指定引擎時採獨立資產交付。
@@ -28,10 +29,10 @@ EvoLoot 與 changshan-longdan 是選用客戶，不能限制核心只能服務�
 保留委託原文，查已有需求 ID 與版本，避免覆寫。新需求可先取得草稿：
 
 ```powershell
-python -B scripts/workbench.py intake --id wood-gate --brief "木製城門，兩扇門可開關，獨立交付" --type interactive_prop
+python -B scripts/workbench.py intake --id wood-gate --brief "木製城門，兩扇門可開關，獨立交付" --type interactive_prop --quality
 ```
 
-有客戶設定時加 `--profile <id>`。`intake` 只輸出 JSON，協調者以檔案工具保存到 `requests/<id>.json`；它不自動理解尺寸或製作模型。命令中的城門是操作示例，不代表已授權生成。
+有客戶設定時加 `--profile <id>`。`--quality` 附上待整理的品質草稿；`intake` 只輸出 JSON，協調者以檔案工具保存到 `requests/<id>.json`，它不自動理解尺寸或製作模型。命令中的城門是操作示例，不代表已授權生成。
 
 整理 `purpose`、風格／參考、必須與禁止元素、尺寸／軸向／pivot、面數與貼圖預算、部件與功能、必要骨架／動作、輸出格式、交付範圍及來源。把設計決定和低風險預設寫入 `assumptions`，真正影響製作或交付且無法推定的缺項寫入 `open_questions`；只詢問這些缺項，同時完成不依賴回答的準備。
 
@@ -76,6 +77,16 @@ Hyper3D API 是需求整理後由美術工程師操作的創作工具。選 `gen
 
 ## 製作與後製
 
+新製作或品質修訂先讀品質實驗流程。將按用途修訂的模板放入需求 `quality`，固定參考、各維度評分錨點與目標、比較視角／光照／觀看尺度、工具版本及時間上限；候選次數沿用 `production.max_revisions`。整理完整後改 `quality.status: frozen`，凍結需求及 `quality_loop.protocol_sha256`，先建立真實 baseline，再從當前最佳版本提出一個可驗證的假設，製作新版本並比較。
+
+每輪先處理最影響用途的差距：輪廓／比例／結構，再到材質與收邊；功能部件、骨架和動作依需求插入檢查。保留 master、全部候選、固定視角預覽、實際檢查及失敗紀錄。`compare` 不平均分數：任一維度退步即不保留；所有維度不退步且至少一項提升才是 `keep_for_iteration`。若視覺平手但修復最佳版本原本失敗的必要技術／交付門檻，可 `keep_for_gate_repair`，不宣稱美術改善。保留版本仍可能未達品質目標，不能交付。評分相同或滿分不代表提升；已知驗收失敗的候選只淘汰選用，保留紀錄後可在剩餘預算內從最佳版本修訂。
+
+```powershell
+python -B scripts/workbench.py compare requests/wood-gate.json --ledger runs/qa/wood-gate-quality.json
+```
+
+查看 `next_action`：未達標且有預算時修訂最佳版本；達標後進入交付審查；耗盡預算、證據失效或操作未知時停止相關輪次並報告差距。評估契約要修改時建立新需求版本與 baseline，不能降低門檻讓舊候選過關。這不是無限生成、背景排程或自動付費授權。
+
 `plan` 列出能力需求，不執行工具也不授權花費。選目前可用的 Hyper3D、Blender 或其他合適工具；實際模型編輯時才讀適用的建模／拆件／骨架／匯出 skill，不預載整個美術技能庫。能力登記為 `unverified` 時先做範圍內的能力核對，未執行就保持未驗，不能承諾自動骨架、LOD 或 Unity 匯入。
 
 新製作也可採已核實可用的本機新建／程序建模工具，記錄工具選擇與理由。目前 `generate` 計畫列出 `candidate_generation`，能力登記只有 Hyper3D 對應該項，未證明本機新建能力；這個登記缺口不能迫使委託付費，也不能當成 Blender 已可用的證據。
@@ -89,6 +100,8 @@ Hyper3D API 是需求整理後由美術工程師操作的創作工具。選 `gen
 ## 驗收與交付
 
 分開執行美術、技術、交付完整性與需求指定的環境檢查。參考 `plan.required_checks` 逐項記錄 `pass`／`fail`／`not_run`、實際方法、證據路徑及 SHA-256；證據綁定當前 `request_sha256`，需求或檔案變更後重新核對。
+
+有 `quality` 的需求，在交付證據加 `quality_ledger: {path, sha256}`，指向 repo 內實際品質紀錄。`assess` 會重算最佳版本、檢查每維度目標與適用門檻，核對交付模型與已登記的相依素材是否為同一批已評估內容。實際美術判斷仍需查看所有固定視角、灰模／線框／UV、近看與用途情境；分數與雜湊不能代替實測，也不能保證「頂尖」。
 
 ```powershell
 python -B scripts/pipeline.py inspect assets/processed/wood-gate/v001/gate.glb
