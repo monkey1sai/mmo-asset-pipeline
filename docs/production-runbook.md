@@ -16,6 +16,7 @@ Authorization Envelope 記 Destination、Purpose、Allowed operations、Data、F
 
 - 已接觸的 `hyper3d.rodin_generate` 可文字生成；首批使用 `Gen-2.5-High`、`Raw`、按資產 `quality_override`、GLB，每件實際扣 0.5 點。這是首批事實，不保證任何後續模型、工具或設定同價。
 - 另一整合 `hyper3d_api.rodin_generate` 的固定圖生設定與輸出根目錄限制不同，不能照搬首批低面數需求；製作前核對目前工具能力。能力紀錄見 `tools/capabilities.json`，未經驗證的能力不能當成可用。
+- 2026-10-02 的 RO 劍士壓力測試發現：該介面仍綁定前一趙雲任務的 input/output roots、operation ID 和一次提交上限。這是任務授權未更新的入口問題，不是密鑰失效或使用者只允許趙雲建模。API 應依每件美術委託登記當前已授權的圖片、輸出、operation 與預算。修復先形成 hash 綁定的精確 dry-run，保留舊 journal／reservations、查舊任務實際終態，只改所需任務授權 metadata；不得刪紀錄或以餘額代替授權。此處記錄診斷，不代表一般 CLI 已自動配置 API。
 - 回傳後立即保存 generation ID，改為 `submitted`，查同一 ID。`pending`／`queued`／`processing` 是等待；服務 `completed` 才記 `generated`。
 - 提交逾時或結果不明記 `unknown`，先查同一 ID／帳戶 Mine，不自動重送。未知或缺少狀態使離線計畫停止；失敗／取消仍保留舊操作，先分類、查成本與新證據，再規劃新修訂。
 - 完成時只保留永久展示頁等非秘密來源。臨時 `files[].url` 僅供授權下載，不進 repo、log 或回覆。每筆實際扣點及下載結果分開登記。
@@ -36,7 +37,7 @@ python -B -m unittest discover -s tests -v
 
 `inspect` 只清點 GLB 容器、基本 buffer 範圍與報告列出的結構，不是完整 glTF 驗證，不驗 UV／法線品質、實際尺寸、pivot、權重、動畫、LOD 或引擎呈現。美術與技術證據分開保存。造型偏離需求標 `needs_revision`，不要因下載成功而標成已交付。
 
-後製依需求執行：普通石頭無需綁骨；可開城門需分件及鉸鏈測試；角色需指定骨架／變形；火盆如需可點燃，盆體與動態火焰分開。此 repo 尚未驗證 Blender 執行、通用骨架／LOD 自動產製或 Unity importer。
+後製依需求執行：普通石頭無需綁骨；可開城門需分件及鉸鏈測試；角色需指定骨架／變形；火盆如需可點燃，盆體與動態火焰分開。本次 RO 劍士已實際執行 Blender 4.5.5 本機程序新建與 GLB 數值重匯入；美術相似度及完整動作仍有缺口，不能宣稱通用自動骨架、LOD 或 Unity importer 已驗證。證據在 `runs/qa/ro-swordsman-combo/`。
 
 官方可見性標籤是下一個動作：`Set asset public` 表示目前私有，`Set asset private` 表示目前公開。核對鎖頭及重新開頁讀回；不由 checkbox pressed 推定。預設不改公開、不點外部發布。
 
