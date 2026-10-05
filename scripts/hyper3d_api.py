@@ -18,12 +18,14 @@ import sys
 import urllib.parse
 import uuid
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import identity  # noqa: E402
+
 PROVIDER = Path.home() / ".codex/tools/hyper3d-api/rodin_api.py"
 PROVIDER_SHA256 = "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a"
 STATE_ROOT = PROVIDER.parent / "state"
 MAX_IMAGE = 20 * 1024 * 1024
 MAX_FILE = 1024 * 1024 * 1024
-ID = re.compile(r"[a-z0-9][a-z0-9_-]{0,95}\Z")
 ENUMS = {
     "tier": {"Gen-2.5-Extreme-Low", "Gen-2.5-Low", "Gen-2.5-Medium", "Gen-2.5-High", "Gen-2.5-Extreme-High"},
     "mesh_mode": {"Raw", "Quad"},
@@ -34,6 +36,7 @@ ENUMS = {
     "is_symmetric": {"symmetric", "balanced", "asymmetric", "unknown"},
 }
 BOOLS = {"TAPose", "quad_normal", "texture_delight", "preview_render", "uhd_texture"}
+PLAN_SCHEMA = 2
 ACTIVE = {"pending", "unknown", "submitted", "processing", "complete", "download_partial", "downloaded"}
 EXTENSIONS = {".glb", ".gltf", ".bin", ".obj", ".mtl", ".fbx", ".usdz", ".stl", ".png", ".jpg", ".jpeg", ".webp", ".zip"}
 
@@ -46,32 +49,17 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-def canonical(value):
-    return json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode("utf-8")
-
-
-def sha(data):
-    return hashlib.sha256(data).hexdigest()
-
-
-def file_sha(path):
-    h = hashlib.sha256()
-    with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
-            h.update(chunk)
-    return h.hexdigest()
-
-
 def read_json(path):
-    value = json.loads(path.read_text(encoding="utf-8-sig"))
-    if not isinstance(value, dict):
-        raise SafeError("OBJECT_REQUIRED")
-    return value
+    # identity 錯誤在此 seam 轉成 SafeError 代碼；其他例外仍由 main 遮蔽。
+    try:
+        return identity.read_json(path)
+    except identity.IdentityError as exc:
+        raise SafeError(str(exc)) from None
 
 
 def write_json(path, value, exclusive=False):
     path.parent.mkdir(parents=True, exist_ok=True)
-    data = canonical(value) + b"\n"
+    data = identity.canonical_json(value) + b"\n"
     if exclusive:
         with path.open("xb") as stream:
             stream.write(data)
@@ -92,7 +80,7 @@ def write_json(path, value, exclusive=False):
 def load_provider():
     # Importing the supported provider must not create global __pycache__ files.
     sys.dont_write_bytecode = True
-    if not PROVIDER.is_file() or file_sha(PROVIDER) != PROVIDER_SHA256:
+    if not PROVIDER.is_file() or identity.file_digest(PROVIDER) != PROVIDER_SHA256:
         raise SafeError("PROVIDER_VERSION_REQUIRES_REVIEW")
     spec = importlib.util.spec_from_file_location("hyper3d_supported_provider", PROVIDER)
     module = importlib.util.module_from_spec(spec)
@@ -101,7 +89,7 @@ def load_provider():
 
 
 def valid_id(value):
-    if not isinstance(value, str) or not ID.fullmatch(value):
+    if not identity.is_asset_id(value):
         raise SafeError("OPERATION_ID_INVALID")
     return value
 
@@ -156,12 +144,10 @@ class Client:
         self.plans = self.path("runs/hyper3d/plans")
 
     def path(self, relative):
-        if not isinstance(relative, str) or Path(relative).is_absolute() or ".." in Path(relative).parts or "\\" in relative or ":" in relative:
-            raise SafeError("WORKSPACE_PATH_INVALID")
-        path = (self.root / relative).resolve()
-        if not path.is_relative_to(self.root) or path == self.root:
-            raise SafeError("PATH_OUTSIDE_WORKSPACE")
-        return path
+        try:
+            return identity.recorded_path(self.root, relative)
+        except identity.IdentityError as exc:
+            raise SafeError(str(exc)) from None
 
     def transport(self):
         if self.provider is None:
@@ -214,7 +200,7 @@ class Client:
         mime = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp"}.get(suffix)
         if mime is None or not ((suffix == ".png" and data.startswith(b"\x89PNG\r\n\x1a\n")) or (suffix in {".jpg", ".jpeg"} and data.startswith(b"\xff\xd8\xff")) or (suffix == ".webp" and data[:4] == b"RIFF" and data[8:12] == b"WEBP")):
             raise SafeError("IMAGE_TYPE_INVALID")
-        return {"path": relative, "sha256": sha(data), "bytes": len(data), "mime": mime}
+        return {"path": relative, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data), "mime": mime}
 
     def prepare(self, spec):
         if set(spec) != {"operation_id", "request", "images", "output_directory", "parameters", "authorization"}:
@@ -234,14 +220,14 @@ class Client:
             raise SafeError("NEW_RAW_OUTPUT_REQUIRED")
         params, estimate = parameters(spec["parameters"], len(images))
         request_data = read_json(request)
-        plan = {"schema_version": 1, "operation_id": operation, "created_utc": now(),
-                "request": {"path": spec["request"], "sha256": file_sha(request), "quality_sha256": sha(canonical(request_data.get("quality")))},
+        plan = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "created_utc": now(),
+                "request": {"path": spec["request"], "request_sha256": identity.json_digest(request_data), "quality_sha256": identity.json_digest(request_data.get("quality"))},
                 "images": [self.image(x) for x in images], "output_directory": spec["output_directory"],
                 "parameters": params, "authorization": dict(authorization), "estimated_credits": estimate,
                 "provider_sha256": PROVIDER_SHA256, "private_state_file": str(self.private_path(operation)),
                 "submission_ready": False, "required_next_gate": "exact private state file authorization and preflight"}
-        plan["fingerprint"] = sha(canonical({"request": plan["request"], "images": plan["images"], "parameters": params}))
-        plan["plan_sha256"] = sha(canonical(plan))
+        plan["fingerprint"] = identity.json_digest({"request": plan["request"], "images": plan["images"], "parameters": params})
+        plan["plan_sha256"] = identity.json_digest(plan)
         path = self.path("runs/hyper3d/plans/" + operation + ".json")
         write_json(path, plan, exclusive=True)
         return {"plan": str(path), "operation_id": operation, "estimated_credits": estimate, "private_state_file": plan["private_state_file"], "submission_ready": False}
@@ -250,10 +236,13 @@ class Client:
         path = self.path("runs/hyper3d/plans/" + valid_id(operation) + ".json")
         plan = read_json(path)
         expected = plan.pop("plan_sha256")
-        if sha(canonical(plan)) != expected or plan["operation_id"] != operation or plan["provider_sha256"] != PROVIDER_SHA256:
+        if identity.json_digest(plan) != expected or plan["operation_id"] != operation or plan["provider_sha256"] != PROVIDER_SHA256:
             raise SafeError("PLAN_INTEGRITY_INVALID")
         plan["plan_sha256"] = expected
-        if file_sha(self.path(plan["request"]["path"])) != plan["request"]["sha256"] or any(self.image(x["path"]) != x for x in plan["images"]):
+        if plan.get("schema_version") != PLAN_SCHEMA:
+            # v1 以檔案 bytes 綁定需求；須重新 prepare 才能以 Request digest 提交。
+            raise SafeError("PLAN_SCHEMA_OUTDATED")
+        if identity.json_digest(read_json(self.path(plan["request"]["path"]))) != plan["request"]["request_sha256"] or any(self.image(x["path"]) != x for x in plan["images"]):
             raise SafeError("INPUT_CHANGED_AFTER_PREPARATION")
         parameters(plan["parameters"], len(plan["images"]))
         if self.path(plan["output_directory"]).exists():
@@ -271,14 +260,14 @@ class Client:
         for index, item in enumerate(plan["images"]):
             path = self.path(item["path"])
             data = path.read_bytes()
-            if sha(data) != item["sha256"]:
+            if hashlib.sha256(data).hexdigest() != item["sha256"]:
                 raise SafeError("INPUT_CHANGED_AFTER_PREPARATION")
             chunks.append((f'--{boundary}\r\nContent-Disposition: form-data; name="images"; filename="input_{index}{path.suffix.lower()}"\r\nContent-Type: {item["mime"]}\r\n\r\n').encode("ascii") + data + b"\r\n")
         chunks.append(f"--{boundary}--\r\n".encode("ascii"))
         return b"".join(chunks), "multipart/form-data; boundary=" + boundary
 
     def private_write(self, path, value, exclusive):
-        blob = self.transport().protected_bytes(canonical(value))
+        blob = self.transport().protected_bytes(identity.canonical_json(value))
         with path.open("xb" if exclusive else "wb") as stream:
             stream.write(blob)
             stream.flush()
@@ -310,11 +299,11 @@ class Client:
                 raise SafeError("INSUFFICIENT_EXISTING_BALANCE")
             # First prove DPAPI and reserve the ONE authorized filename before charging.
             marker = {"operation_id": operation, "fingerprint": plan["fingerprint"], "state": "reserved"}
-            probe = self.transport().protected_bytes(canonical(marker))
-            if self.transport().protected_bytes(probe, decrypt=True) != canonical(marker):
+            probe = self.transport().protected_bytes(identity.canonical_json(marker))
+            if self.transport().protected_bytes(probe, decrypt=True) != identity.canonical_json(marker):
                 raise SafeError("PRIVATE_STATE_PROTECTION_FAILED")
             self.private_write(private, marker, True)
-            record = {"schema_version": 1, "operation_id": operation, "fingerprint": plan["fingerprint"],
+            record = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "fingerprint": plan["fingerprint"],
                       "plan_sha256": plan["plan_sha256"], "state": "pending", "started_utc": now(),
                       "estimated_credits": plan["estimated_credits"], "consumed_credits": None, "cost_state": "unverified",
                       "balance_before": before, "task_uuid": None, "downloads": [],
@@ -407,7 +396,7 @@ class Client:
             self.private_read(record)
             plan = read_json(self.path("runs/hyper3d/plans/" + valid_id(operation) + ".json"))
             expected = plan.pop("plan_sha256")
-            if sha(canonical(plan)) != expected or expected != record["plan_sha256"]:
+            if identity.json_digest(plan) != expected or expected != record["plan_sha256"]:
                 raise SafeError("PLAN_INTEGRITY_INVALID")
             output = self.path(plan["output_directory"])
             if output.exists() or not plan["output_directory"].startswith("assets/raw/"):

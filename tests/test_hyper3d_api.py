@@ -1,5 +1,6 @@
 import contextlib
 from datetime import datetime, timedelta, timezone
+import hashlib
 import importlib.util
 import io
 import json
@@ -230,6 +231,54 @@ class Hyper3DApiTests(unittest.TestCase):
         with self.assertRaisesRegex(api.SafeError, "PLAN_INTEGRITY"):
             self.submit()
 
+    def test_plan_binds_the_request_digest_that_workbench_evidence_uses(self):
+        from test_workbench import specified, workbench
+        request = specified()
+        (self.root / "requests/character.json").write_text(json.dumps(request, indent=2, ensure_ascii=False), encoding="utf-8-sig")
+        self.prepare()
+        plan = json.loads((self.root / "runs/hyper3d/plans/test-001.json").read_text(encoding="utf-8"))
+        self.assertEqual(plan["schema_version"], 2)
+        self.assertNotIn("sha256", plan["request"])
+        self.assertEqual(plan["request"]["request_sha256"], workbench.production_plan(request)["request_sha256"])
+
+    def test_reformatted_request_is_the_same_request_but_content_change_is_not(self):
+        self.prepare()
+        path = self.root / self.spec["request"]
+        path.write_text(json.dumps(json.loads(path.read_text(encoding="utf-8")), indent=4), encoding="utf-8-sig")
+        self.assertEqual(self.submit()["state"], "submitted")
+        self.spec["operation_id"] = "test-002"
+        self.spec["output_directory"] = "assets/raw/character/v002"
+        self.prepare()
+        path.write_text(json.dumps({"quality": {"dimensions": ["form", "color"]}}), encoding="utf-8")
+        with self.assertRaisesRegex(api.SafeError, "INPUT_CHANGED"):
+            self.submit()
+
+    def test_operation_id_follows_asset_id_grammar(self):
+        self.spec["operation_id"] = "evoloot.weapon.iron_sword-r01"
+        self.assertEqual(self.prepare()["operation_id"], "evoloot.weapon.iron_sword-r01")
+        for value in ("bad..id", "trailing.", "Upper"):
+            self.spec["operation_id"] = value
+            with self.subTest(value=value), self.assertRaisesRegex(api.SafeError, "OPERATION_ID_INVALID"):
+                self.prepare()
+
+    def test_v1_plan_is_refused_before_any_charge(self):
+        self.prepare()
+        path = self.root / "runs/hyper3d/plans/test-001.json"
+        plan = json.loads(path.read_text(encoding="utf-8"))
+        del plan["plan_sha256"]
+        plan["schema_version"] = 1
+        plan["plan_sha256"] = hashlib.sha256(json.dumps(plan, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode()).hexdigest()
+        path.write_text(json.dumps(plan), encoding="utf-8")
+        with self.assertRaisesRegex(api.SafeError, "PLAN_SCHEMA_OUTDATED"):
+            self.submit()
+        self.assertEqual(self.provider.calls, [])
+        self.assertEqual(list(self.state.iterdir()), [])
+
+    def test_unportable_spec_path_reports_identity_code(self):
+        self.spec["request"] = "requests\\character.json"
+        with self.assertRaisesRegex(api.SafeError, r"\ARECORDED_PATH_INVALID\Z"):
+            self.prepare()
+
     def test_parameters_and_cost_are_not_fixed_to_half_credit(self):
         params = {"tier": "Gen-2.5-Extreme-High", "texture_mode": "extreme-high", "mesh_mode": "Quad", "quality_override": 200000}
         self.assertEqual(api.parameters(params, 1)[1], 3.0)
@@ -288,7 +337,7 @@ class Hyper3DApiTests(unittest.TestCase):
         self.assertEqual(self.complete()["state"], "complete")
         result = self.client.download("test-001")
         self.assertEqual(result["state"], "downloaded")
-        self.assertEqual(result["downloads"][0]["sha256"], api.sha(b"glTF model fixture"))
+        self.assertEqual(result["downloads"][0]["sha256"], hashlib.sha256(b"glTF model fixture").hexdigest())
         self.assertEqual(self.provider.request_headers, [{}])
         with self.assertRaises(api.SafeError):
             self.client.download("test-001")
@@ -366,7 +415,7 @@ class Hyper3DApiTests(unittest.TestCase):
             self.assert_no_secret(stream.getvalue())
 
     def test_import_disables_bytecode_before_loading_supported_provider(self):
-        with patch.object(api, "file_sha", return_value=api.PROVIDER_SHA256), patch.object(Path, "is_file", return_value=True), patch.object(api.importlib.util, "spec_from_file_location") as factory:
+        with patch.object(api.identity, "file_digest", return_value=api.PROVIDER_SHA256), patch.object(Path, "is_file", return_value=True), patch.object(api.importlib.util, "spec_from_file_location") as factory:
             factory.side_effect = RuntimeError("stop before import")
             with self.assertRaises(RuntimeError):
                 api.load_provider()

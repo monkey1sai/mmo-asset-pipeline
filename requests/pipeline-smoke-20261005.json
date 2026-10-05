@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "pipeline-smoke-20261005",
+  "title": "付費管線端到端驗收岩石",
+  "brief": "以最低成本產生一塊低面數灰色岩石 GLB，用來驗證 Workspace identity 重構後的 Hyper3D prepare／submit／status／download 路徑。",
+  "purpose": "管線驗收：使用者於 2026-10-05 明確授權以既有月訂或普通點數提交一筆、上限 0.5 點；成果只作技術路徑證據，不是客戶交付或美術驗收。",
+  "task_type": "static_prop",
+  "project": null,
+  "status": "specified",
+  "provenance": {"kind": "user_brief", "reference": "requests/pipeline-smoke-20261005.json#purpose"},
+  "style": {"description": "原創風格化、灰色、乾淨輪廓，無場景與烘焙光", "references": [], "must_have": ["可站立底面"], "must_not_have": ["文字、logo、地面或人物"]},
+  "spec": {"size_m": [1, 0.8, 1], "target_triangles": 1500, "texture_px": null, "units": "m", "up_axis": "+Y", "forward_axis": "+Z", "parts": [{"id": "rock", "pivot": "底面中心", "motion": null}], "requires_rig": false, "animations": []},
+  "delivery": {"scope": "standalone", "formats": ["glb"], "target_environment": null},
+  "production": {"route": "generate", "reason": "驗證付費生成路徑本身；不以剩餘點數決定用途，只提交一筆", "reuse_candidates": [], "max_revisions": 0},
+  "additional_checks": [],
+  "assumptions": ["生成面數不會等於 1500 目標；差距只記錄，不在本次後製", "無貼圖需求，以 PBR 預設材質產出"],
+  "open_questions": []
+}

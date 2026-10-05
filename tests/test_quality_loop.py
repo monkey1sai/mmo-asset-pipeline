@@ -8,6 +8,7 @@ import unittest
 import test_workbench as fixtures
 
 workbench = fixtures.workbench
+identity = fixtures.identity
 
 
 class QualityLoopTests(unittest.TestCase):
@@ -46,15 +47,15 @@ class QualityLoopTests(unittest.TestCase):
             previews[view] = self.artifact(path)
         return {"id": tid, "parent_id": parent, "status": "completed", "elapsed_seconds": 60,
                 "hypothesis": "test one scoped form change", "change": "one shape change",
-                "protocol_sha256": workbench.quality_sha256(request), "reviewer": "unit fixture",
+                "protocol_sha256": identity.json_digest(request["quality"]), "reviewer": "unit fixture",
                 "previews": previews, "evidence": evidence,
                 "scores": {key: {"value": value, "reason": "synthetic observed difference"}
                            for key, value in zip(("silhouette", "materials"), values)}}
 
     def ledger(self, request, *trials):
         return {"schema_version": 1, "request_id": request["id"],
-                "request_sha256": workbench.request_sha256(request),
-                "protocol_sha256": workbench.quality_sha256(request), "trials": list(trials)}
+                "request_sha256": identity.json_digest(request),
+                "protocol_sha256": identity.json_digest(request["quality"]), "trials": list(trials)}
 
     def comparison(self, request, *trials):
         return workbench.compare_quality(request, self.ledger(request, *trials), self.root)
@@ -102,7 +103,7 @@ class QualityLoopTests(unittest.TestCase):
         request["production"]["max_revisions"] = 1
         baseline = self.trial(request, "base", [2, 2])
         failed = {"id": "failed", "parent_id": "base", "status": "failed", "elapsed_seconds": 30,
-                  "protocol_sha256": workbench.quality_sha256(request), "reviewer": "fixture",
+                  "protocol_sha256": identity.json_digest(request["quality"]), "reviewer": "fixture",
                   "hypothesis": "one failed attempt", "change": "shape", "failure_reason": "TEST_FAILURE"}
         result = self.comparison(request, baseline, failed)
         self.assertEqual(result["trials"][1]["decision"], "failed")
@@ -115,7 +116,7 @@ class QualityLoopTests(unittest.TestCase):
             unresolved = {"id": "unresolved", "parent_id": "base", "status": status,
                           "elapsed_seconds": 30, "reviewer": "fixture", "hypothesis": "shape",
                           "change": "shape", "failure_reason": "operation unresolved",
-                          "protocol_sha256": workbench.quality_sha256(request)}
+                          "protocol_sha256": identity.json_digest(request["quality"])}
             later = self.trial(request, "later", [4, 4], "base")
             result = self.comparison(request, baseline, unresolved, later)
             self.assertFalse(result["quality_target_met"])
@@ -131,7 +132,7 @@ class QualityLoopTests(unittest.TestCase):
             elif case == "total":
                 request["quality"]["budget"]["total_seconds"] = 120
                 baseline["elapsed_seconds"] = candidate["elapsed_seconds"] = 100
-                baseline["protocol_sha256"] = candidate["protocol_sha256"] = workbench.quality_sha256(request)
+                baseline["protocol_sha256"] = candidate["protocol_sha256"] = identity.json_digest(request["quality"])
             else:
                 request["production"]["max_revisions"] = 0
             self.assertEqual(self.comparison(request, baseline, candidate)["next_action"], "stop_blocked")

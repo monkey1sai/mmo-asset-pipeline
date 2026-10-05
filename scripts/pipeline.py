@@ -11,8 +11,10 @@ import re
 import struct
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import identity  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
-ASSET_ID = re.compile(r"[a-z0-9][a-z0-9._-]*\Z")
 HEAD = re.compile(r"[a-f0-9]{40}\Z")
 CATEGORIES = {"character", "creature", "weapon", "building", "environment", "prop"}
 DEMANDS = {"source_backed", "inferred", "reuse"}
@@ -20,16 +22,8 @@ RESERVED = {"prepared", "submitted", "pending", "queued", "processing", "unknown
 REQUIRED = {"id", "project", "name", "category", "priority", "demand", "prompt", "target_triangles", "texture_px", "size_m", "pivot", "requires_rig", "postprocess", "sources"}
 
 
-def read_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8-sig"))
-
-
 def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
-
-
-def safe_id(value: object) -> bool:
-    return isinstance(value, str) and bool(ASSET_ID.fullmatch(value)) and ".." not in value
 
 
 def validate_catalog(catalog: dict) -> list[str]:
@@ -50,13 +44,13 @@ def validate_catalog(catalog: dict) -> list[str]:
             errors.append(f"{label}: missing {', '.join(sorted(missing))}")
             continue
         aid = asset["id"]
-        if not isinstance(aid, str) or not ASSET_ID.fullmatch(aid) or ".." in aid:
+        if not identity.is_asset_id(aid):
             errors.append(f"{label}: unsafe id")
         elif aid in seen:
             errors.append(f"{label}: duplicate id {aid}")
         else:
             seen.add(aid)
-        if asset["project"] is not None and not safe_id(asset["project"]):
+        if asset["project"] is not None and not identity.is_asset_id(asset["project"]):
             errors.append(f"{label}: invalid project")
         for field, allowed in (("category", CATEGORIES), ("demand", DEMANDS)):
             if not isinstance(asset[field], str) or asset[field] not in allowed:
@@ -124,7 +118,7 @@ def reserved_assets(runs: list[dict]) -> set[str]:
             operations.add(oid)
             if not isinstance(operation.get("status"), str) or operation["status"] not in RESERVED:
                 raise ValueError("missing or unknown operation status; review required")
-            if not safe_id(operation.get("asset_id")):
+            if not identity.is_asset_id(operation.get("asset_id")):
                 raise ValueError("missing or invalid operation asset_id")
             # failed/cancelled 也保留；重做需人工規劃新修訂，不由離線 plan 自行解除。
             reserved.add(operation["asset_id"])
@@ -140,7 +134,7 @@ def make_plan(catalog: dict, budget: Decimal, cost: Decimal, reserved: set[str],
     if cost == 0:
         raise ValueError("unit cost must be positive")
     projects = {a["project"] or "standalone" for a in catalog["assets"]}
-    if project is not None and (not safe_id(project) or project not in projects):
+    if project is not None and (not identity.is_asset_id(project) or project not in projects):
         raise ValueError("unknown project filter")
     available = sorted((a for a in catalog["assets"] if a["demand"] != "reuse" and a["id"] not in reserved and (project is None or (a["project"] or "standalone") == project)), key=lambda a: (a["priority"], a["id"]))
     slots = int(budget // cost)
@@ -242,14 +236,6 @@ def inspect_glb(data: bytes) -> dict:
     }
 
 
-def workspace_path(value: str) -> Path:
-    path = Path(value)
-    path = (ROOT / path).resolve() if not path.is_absolute() else path.resolve()
-    if not path.is_relative_to(ROOT.resolve()):
-        raise ValueError("path must stay inside this repository")
-    return path
-
-
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="離線模型需求規劃與 GLB 清點（不扣點、不連網）")
     commands = parser.add_subparsers(dest="command", required=True)
@@ -265,16 +251,16 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         if args.command == "inspect":
-            result = inspect_glb(workspace_path(args.path).read_bytes())
+            result = inspect_glb(identity.command_path(ROOT, args.path).read_bytes())
         else:
-            catalog = read_json(workspace_path("catalog/assets.json"))
+            catalog = identity.read_json(identity.command_path(ROOT, "catalog/assets.json"))
             errors = validate_catalog(catalog)
             if errors:
                 raise ValueError("; ".join(errors))
             if args.command == "validate":
                 result = {"status": "valid", "assets": len(catalog["assets"]), "projects": dict(Counter(a["project"] or "standalone" for a in catalog["assets"])), "note": "schema verified; source freshness and runtime not checked"}
             elif args.command == "plan":
-                runs = [read_json(workspace_path(str(p))) for p in sorted(workspace_path("runs").glob("*.json"))]
+                runs = [identity.read_json(identity.command_path(ROOT, str(p))) for p in sorted(identity.command_path(ROOT, "runs").glob("*.json"))]
                 result = make_plan(catalog, credit_amount(args.budget), credit_amount(args.unit_cost), reserved_assets(runs), args.project)
             else:
                 result = next((a for a in catalog["assets"] if a["id"] == args.asset_id), None)

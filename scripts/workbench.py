@@ -3,14 +3,15 @@ from __future__ import annotations
 
 import argparse
 from copy import deepcopy
-import hashlib
 import json
 from pathlib import Path
 import re
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import identity  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
-ID = re.compile(r"[a-z0-9][a-z0-9._-]*\Z")
 TASKS = {"static_prop", "interactive_prop", "modular_environment", "rigged_character"}
 ROUTES = {"review_existing", "reuse", "modify", "generate", "split_then_generate"}
 FORMATS = {"glb", "gltf", "fbx", "obj", "blend", "usd", "usdz"}
@@ -37,10 +38,6 @@ TASK_CHECKS = {
 }
 
 
-def safe_id(value: object) -> bool:
-    return isinstance(value, str) and bool(ID.fullmatch(value)) and ".." not in value
-
-
 def text_value(value: object) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
@@ -49,21 +46,8 @@ def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
 
 
-def read_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8-sig"))
-
-
-def local_path(value: str, root: Path = ROOT) -> Path:
-    root = root.resolve()
-    path = Path(value)
-    path = (root / path).resolve() if not path.is_absolute() else path.resolve()
-    if not path.is_relative_to(root):
-        raise ValueError("path must stay inside this repository")
-    return path
-
-
 def evidence_file(value: str, root: Path = ROOT) -> Path:
-    path = local_path(value, root)
+    path = identity.recorded_path(root, value)
     relative = path.relative_to(root.resolve())
     # 只讀素材及驗收儲存區；需求或參考不能使工具讀取憑證、Git 或全域設定。
     allowed = relative.parts[0:1] in {("assets",), ("deliveries",)} or relative.parts[0:2] in {
@@ -75,15 +59,11 @@ def evidence_file(value: str, root: Path = ROOT) -> Path:
     return path
 
 
-def request_sha256(request: dict) -> str:
-    return hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode()).hexdigest()
-
-
 def validate_request(request: dict) -> list[str]:
     if not isinstance(request, dict) or request.get("schema_version") != 1:
         return ["request schema_version must be 1"]
     errors: list[str] = []
-    if not safe_id(request.get("id")):
+    if not identity.is_asset_id(request.get("id")):
         errors.append("invalid request id")
     for key in ("title", "brief", "purpose"):
         if not text_value(request.get(key)):
@@ -92,7 +72,7 @@ def validate_request(request: dict) -> list[str]:
         errors.append("unknown task_type")
     if not isinstance(request.get("status"), str) or request["status"] not in {"draft", "specified"}:
         errors.append("status must be draft or specified")
-    if request.get("project") is not None and not safe_id(request["project"]):
+    if request.get("project") is not None and not identity.is_asset_id(request["project"]):
         errors.append("invalid optional project")
     style = request.get("style")
     if not isinstance(style, dict) or not text_value(style.get("description")):
@@ -123,7 +103,7 @@ def validate_request(request: dict) -> list[str]:
             errors.append("parts must be a list")
         else:
             for part in parts:
-                if not isinstance(part, dict) or not safe_id(part.get("id")) or part.get("id") in seen or not text_value(part.get("pivot")):
+                if not isinstance(part, dict) or not identity.is_asset_id(part.get("id")) or part.get("id") in seen or not text_value(part.get("pivot")):
                     errors.append("invalid or duplicate part")
                 else:
                     seen.add(part["id"])
@@ -153,7 +133,7 @@ def validate_request(request: dict) -> list[str]:
     production = request.get("production")
     if not isinstance(production, dict) or not isinstance(production.get("route"), str) or production["route"] not in ROUTES or not text_value(production.get("reason")):
         errors.append("invalid production route/reason")
-    elif type(production.get("max_revisions")) is not int or production["max_revisions"] < 0 or not isinstance(production.get("reuse_candidates"), list) or any(not safe_id(v) for v in production["reuse_candidates"]):
+    elif type(production.get("max_revisions")) is not int or production["max_revisions"] < 0 or not isinstance(production.get("reuse_candidates"), list) or any(not identity.is_asset_id(v) for v in production["reuse_candidates"]):
         errors.append("invalid revision budget or reuse candidates")
     for key in ("assumptions", "open_questions"):
         if not isinstance(request.get(key), list) or any(not text_value(v) for v in request[key]):
@@ -167,7 +147,7 @@ def validate_request(request: dict) -> list[str]:
         errors.append("additional_checks must be a list")
     else:
         for check in custom:
-            if not isinstance(check, dict) or not safe_id(check.get("id")) or check["id"] in reserved_ids | seen_checks or not isinstance(check.get("area"), str) or check["area"] not in {"art", "technical", "delivery", "target_environment"} or not text_value(check.get("description")):
+            if not isinstance(check, dict) or not identity.is_asset_id(check.get("id")) or check["id"] in reserved_ids | seen_checks or not isinstance(check.get("area"), str) or check["area"] not in {"art", "technical", "delivery", "target_environment"} or not text_value(check.get("description")):
                 errors.append("invalid, duplicate or overriding additional check")
             else:
                 seen_checks.add(check["id"])
@@ -186,7 +166,7 @@ def validate_quality(quality: object) -> list[str]:
         errors.append("quality protocol missing")
     else:
         views = protocol.get("views")
-        if not isinstance(views, list) or not views or any(not safe_id(v) for v in views) or len(set(views)) != len(views):
+        if not isinstance(views, list) or not views or any(not identity.is_asset_id(v) for v in views) or len(set(views)) != len(views):
             errors.append("quality views must be unique IDs")
         for key in ("lighting", "background", "framing", "tool_version", "inspection_context"):
             if not text_value(protocol.get(key)):
@@ -200,7 +180,7 @@ def validate_quality(quality: object) -> list[str]:
     else:
         seen = set()
         for dimension in dimensions:
-            if not isinstance(dimension, dict) or not safe_id(dimension.get("id")) or dimension["id"] in seen:
+            if not isinstance(dimension, dict) or not identity.is_asset_id(dimension.get("id")) or dimension["id"] in seen:
                 errors.append("invalid or duplicate quality dimension")
                 continue
             seen.add(dimension["id"])
@@ -213,10 +193,6 @@ def validate_quality(quality: object) -> list[str]:
     if not isinstance(budget, dict) or not positive_int(budget.get("trial_seconds")) or not positive_int(budget.get("total_seconds")) or budget["total_seconds"] < budget["trial_seconds"]:
         errors.append("quality needs finite positive trial/total seconds budgets")
     return errors
-
-
-def quality_sha256(request: dict) -> str:
-    return request_sha256(request["quality"])
 
 
 def required_checks(request: dict) -> list[dict]:
@@ -251,9 +227,9 @@ def readiness(request: dict) -> list[str]:
 
 
 def make_draft(aid: str, brief: str, task_type: str, profile: dict | None = None) -> dict:
-    if not safe_id(aid) or not text_value(brief) or task_type not in TASKS:
+    if not identity.is_asset_id(aid) or not text_value(brief) or task_type not in TASKS:
         raise ValueError("invalid intake id, brief or task_type")
-    if profile is not None and (not isinstance(profile, dict) or not safe_id(profile.get("id")) or not isinstance(profile.get("defaults"), dict) or not isinstance(profile.get("constraints"), list) or any(not text_value(v) for v in profile["constraints"])):
+    if profile is not None and (not isinstance(profile, dict) or not identity.is_asset_id(profile.get("id")) or not isinstance(profile.get("defaults"), dict) or not isinstance(profile.get("constraints"), list) or any(not text_value(v) for v in profile["constraints"])):
         raise ValueError("invalid project profile")
     defaults = (profile or {}).get("defaults", {})
     return {
@@ -328,7 +304,7 @@ def production_plan(request: dict) -> dict:
         "split_then_generate": "先制定各部件、pivot 與活動規格，再分別製作及組裝",
     }[route]
     result = {
-        "mode": "offline_plan_only", "request_id": request["id"], "request_sha256": request_sha256(request),
+        "mode": "offline_plan_only", "request_id": request["id"], "request_sha256": identity.json_digest(request),
         "project": request.get("project"), "route": route, "reason": request["production"]["reason"],
         "pending": readiness(request), "reuse_candidates": request["production"]["reuse_candidates"],
         "steps": ["理解需求與交付承諾", "制定設計、參考與可修訂預設", action,
@@ -343,7 +319,7 @@ def production_plan(request: dict) -> dict:
             result["pending"].append("拆件生成前需定義部件")
     if "quality" in request:
         result["quality_loop"] = {
-            "protocol_sha256": quality_sha256(request),
+            "protocol_sha256": identity.json_digest(request["quality"]),
             "max_candidate_trials": request["production"]["max_revisions"],
             "budget": deepcopy(request["quality"]["budget"]),
             "retention_rule": "no_dimension_regression_and_gain_or_required_gate_repair",
@@ -358,7 +334,7 @@ def check_artifact(item: dict, root: Path) -> str | None:
         return "artifact requires path and SHA-256"
     try:
         path = evidence_file(item["path"], root)
-        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+        if identity.file_digest(path) != item["sha256"]:
             return f"artifact hash mismatch: {item['path']}"
     except (OSError, ValueError) as exc:
         return str(exc)
@@ -370,7 +346,7 @@ def _assess_contract(request: dict, evidence: dict, root: Path = ROOT) -> dict:
     if not isinstance(evidence, dict):
         raise ValueError("evidence must be an object")
     blockers = readiness(request)
-    digest = request_sha256(request)
+    digest = identity.json_digest(request)
     if evidence.get("request_id") != request["id"] or evidence.get("request_sha256") != digest:
         blockers.append("evidence does not match current request ID/specification hash")
     registered = evidence.get("checks", {})
@@ -422,8 +398,8 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
     if errors or "quality" not in request:
         raise ValueError("; ".join(errors or ["request has no quality contract"]))
     quality = request["quality"]
-    digest = request_sha256(request)
-    protocol_digest = quality_sha256(request)
+    digest = identity.json_digest(request)
+    protocol_digest = identity.json_digest(request["quality"])
     if not isinstance(ledger, dict) or type(ledger.get("schema_version")) is not int or ledger["schema_version"] != 1:
         raise ValueError("quality ledger schema_version must be 1")
     blockers = readiness(request)
@@ -446,7 +422,7 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
     terminal = False
     dimensions = {d["id"]: d for d in quality["dimensions"]}
     for index, trial in enumerate(trials):
-        if not isinstance(trial, dict) or not safe_id(trial.get("id")) or trial["id"] in seen:
+        if not isinstance(trial, dict) or not identity.is_asset_id(trial.get("id")) or trial["id"] in seen:
             raise ValueError("invalid or duplicate quality trial ID")
         seen.add(trial["id"])
         issues = []
@@ -569,7 +545,7 @@ def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
         elif Path(item["path"]).suffix.lower() != ".json":
             result["blockers"].append("quality ledger must be a JSON artifact")
         else:
-            comparison = compare_quality(request, read_json(evidence_file(item["path"], root)), root)
+            comparison = compare_quality(request, identity.read_json(evidence_file(item["path"], root)), root)
             result["quality_comparison"] = comparison
             result["blockers"].extend(comparison["blockers"])
             if not comparison["quality_target_met"]:
@@ -586,7 +562,7 @@ def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
 def search_library(index: dict, query: str, project: str | None = None) -> list[dict]:
     if not isinstance(index, dict) or index.get("schema_version") != 1 or not isinstance(index.get("entries"), list):
         raise ValueError("invalid library index")
-    if project is not None and not safe_id(project):
+    if project is not None and not identity.is_asset_id(project):
         raise ValueError("invalid project filter")
     words = query.casefold().split()
     matches = []
@@ -621,33 +597,33 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "intake":
             profile = None
             if args.profile:
-                if not safe_id(args.profile):
+                if not identity.is_asset_id(args.profile):
                     raise ValueError("invalid profile id")
-                profile_path = local_path(f"projects/{args.profile}.json")
-                if not profile_path.is_relative_to(local_path("projects")):
+                profile_path = identity.command_path(ROOT, f"projects/{args.profile}.json")
+                if not profile_path.is_relative_to(identity.command_path(ROOT, "projects")):
                     raise ValueError("profile must stay in projects directory")
-                profile = read_json(profile_path)
+                profile = identity.read_json(profile_path)
                 if not isinstance(profile, dict) or profile.get("schema_version") != 1 or profile.get("id") != args.profile:
                     raise ValueError("profile identity mismatch")
             # 只輸出草稿，協調者以一般檔案工具保存；不默默改寫現有需求。
             result = make_draft(args.id, args.brief, args.type, profile)
             if args.quality:
-                result["quality"] = read_json(local_path("templates/quality-contract.json"))
+                result["quality"] = identity.read_json(identity.command_path(ROOT, "templates/quality-contract.json"))
         elif args.command == "search":
-            result = {"mode": "metadata_search_only", "matches": search_library(read_json(local_path("library/index.json")), args.query, args.project)}
+            result = {"mode": "metadata_search_only", "matches": search_library(identity.read_json(identity.command_path(ROOT, "library/index.json")), args.query, args.project)}
         else:
-            request = read_json(local_path(args.request))
+            request = identity.read_json(identity.command_path(ROOT, args.request))
             errors = validate_request(request)
             if errors:
                 raise ValueError("; ".join(errors))
             if args.command == "validate":
-                result = {"status": "valid_request", "request_id": request["id"], "request_sha256": request_sha256(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
+                result = {"status": "valid_request", "request_id": request["id"], "request_sha256": identity.json_digest(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
             elif args.command == "plan":
                 result = production_plan(request)
             elif args.command == "compare":
-                result = compare_quality(request, read_json(local_path(args.ledger)))
+                result = compare_quality(request, identity.read_json(identity.command_path(ROOT, args.ledger)))
             else:
-                result = assess(request, read_json(local_path(args.evidence)))
+                result = assess(request, identity.read_json(identity.command_path(ROOT, args.evidence)))
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except (ValueError, OSError, KeyError, TypeError, IndexError) as exc:

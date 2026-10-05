@@ -38,6 +38,14 @@ authorization 記錄既有的人類授權：`spending_scope` 原意、`credit_po
 時間、task UUID、估算／實際 consumed、提交前後餘額、下載檔案大小及雜湊。
 餘額差可能包含其他任務，不能充當本任務成本。
 
+plan／operation 紀錄為 schema v2：需求以 `request.request_sha256`（Request digest，
+與 workbench 證據的 `request_sha256` 相同算法）綁定，fingerprint 也以它計算；
+重新排版需求檔不改變身分，內容改變則 submit 回報 `INPUT_CHANGED_AFTER_PREPARATION`。
+v1 plan 以檔案 bytes 綁定，submit 在任何扣點前回報 `PLAN_SCHEMA_OUTDATED`，
+須重新 prepare；status／download 仍可讀取既有 v1 紀錄。`operation_id` 採 Asset ID
+文法（可含點分段，不得含 `..` 或以 `.` 結尾）；spec 內路徑須為 repo 相對 POSIX 路徑，
+用語見 [CONTEXT.md](../CONTEXT.md)。
+
 合法任務 UUID 會先獨立保存；缺少或無效 consumed 只將 `cost_state` 標成
 `unverified_missing_or_invalid_consumed`，保留正常狀態查詢能力，不當作零成本。
 若提交後私密狀態寫入失敗，公開 unknown 紀錄仍保留已知 UUID、已核實成本與
