@@ -1,0 +1,14 @@
+feat(art): RO 劍士角色動畫 V1——r1–r6 需求、v001 基礎與第一、二里程碑
+
+- requests：ro-swordsman-character-v1 與 r2–r6（r5 撤回；r6 為現行，只改試作時間上限）
+- runs/handoffs、docs/handoffs：Codex 交接給 Claude Code 的交接文件與回條
+- assets/processed/ro-swordsman-character-v1/v001：基礎 b03 至 b18（現行 b18-clipfolds）、
+  修正規則、Idle／Walk／Run 片段與匯出 GLB
+- runs/qa/ro-swordsman-character-v1*：凍結關節範圍 73/73、片段檢查、閉環與回讀、
+  授權紀錄（第 1–15 筆）、時鐘與暫停紀錄、獨立審查
+- scripts/cv1_*、tools/runtime-qa/three、tests/test_cv1_*：姿勢規則（Python／JS 雙實作）、
+  步態、手臂與腿 IK、片段製作與檢查工具
+
+被拒的中間版本依使用者要求保留，不清理。
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

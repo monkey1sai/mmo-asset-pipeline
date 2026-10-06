@@ -1,0 +1,13 @@
+feat(art): 美術品質迴圈、Hyper3D API 入口與 RO 製作工具
+
+- 品質迴圈：docs/art-quality-loop.md、templates/quality-contract.json 與 quality-ledger.json；
+  scripts/workbench.py 新增 validate_quality、compare_quality、assess、api_creation_plan，測試同步更新
+- Hyper3D API 入口：docs/hyper3d-api-entry.md、docs/api-creation-workflow.md、scripts/hyper3d_api.py 與測試
+- RO 劍士連段與角色動畫使用的 Blender／QA 腳本
+- 參考資料：docs/references 的 MMORPG GitHub 來源報告（PDF）與清單；AGENTS.md、docs/sources.md 加入查閱指引
+- .gitattributes：.blend1 走 LFS；PDF 視為二進位；JS／HTML 固定 LF；
+  以 CRLF 寫出且原位元組雜湊已入紀錄的證據區照原位元組保存，移機後雜湊仍可核對
+
+本批含先前 Codex 工作階段在此工作目錄產出、尚未提交的變更。
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
