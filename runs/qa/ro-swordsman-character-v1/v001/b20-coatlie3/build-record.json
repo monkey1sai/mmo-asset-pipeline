@@ -1,0 +1,150 @@
+{
+ "id": "b20-coatlie3",
+ "recorded_utc": "2026-10-06T04:12:00Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "authority": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 17 (大衣用做法 1（b20）; runs/qa/ro-swordsman-character-v1/v001/clips/coat-bed-decision-20261006.json option 1)",
+ "chain": "b19-crotch + one state-driven coat corrective (SM_RO_coat SKC_coat_lying, rule driver 'lying' of type state, linear); weights, Basis, topology, UVs, other meshes, the r010 hand and every earlier corrective untouched",
+ "why": "the new bed-clearance gate found the coat back panel 169 mm inside the bed proxy when lying supine; rigid coat tails could not leave the bed without moving the coat bed-support vertices (decision record)",
+ "tool": {
+  "path": "scripts/cv1_coat_lying.py",
+  "sha256": "5e3b36bebfe0edbed73eae70d8a8a0cb8493c0d74a2f461fa2a8b26996c3cc2a",
+  "parameters": {
+   "outer_offset_m": 0.002,
+   "inner_offset_m": 0.025,
+   "smooth_iterations": 30,
+   "dilate_m": 0.0,
+   "frozen_region": {
+    "pelvis_weight_at_least": 0.5,
+    "in_front_of_y_m": 0.12,
+    "vertices": 5950,
+    "coat_support_vertices": [
+     1210,
+     1211,
+     1216,
+     6875,
+     6876
+    ]
+   }
+  }
+ },
+ "design_pose": {
+  "clip_blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03/AN_RO_Sleep_Loop.blend",
+   "sha256": "b4bfd82fc7ae939dc89d9746ebf9fc4ee2cb52128c5f9333fb1351d0dff2f5e6"
+  },
+  "frame": 0.0,
+  "interaction": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "sha256": "7cf5ad49eb6c2ed22ed8717df51566896d6eb67b7e6f26126df22619deeea1d4"
+  }
+ },
+ "rejected_candidates": {
+  "b20-coatlie": "bend about a hinge at the back of the waist (runs/qa/ro-swordsman-character-v1/v001/b20-prep/cv1_coat_lying-v1-used.py): 66 deg near the hinge, coat triangles down to 0.022 of rest area and stretched 11.9x",
+  "b20-coatlie2": "lift toward the body with the slab squeezed to 1 cm (inner 12 mm, 6 passes): passes Sleep but min area ratio 0.053 and 54 folded triangles",
+  "parameter_study": "runs/qa/ro-swordsman-character-v1/v001/b20-prep/study-A..O.json (inner offset, smoothing passes, front boundary, need dilation); D = inner 25 mm, 30 passes: min 0.149, 27 folded hem triangles; dilation lowered folds to 10 but the area ratio to 0.07-0.08"
+ },
+ "design_result": {
+  "sunk_before": {
+   "vertices": 515,
+   "lowest_below_top_mm": 168.86
+  },
+  "after_lying_key": {
+   "lowest_over_bed_above_top_mm": 1.0,
+   "vertices_below_top": 0
+  },
+  "lift": {
+   "vertices": 938,
+   "max_rest_offset_mm": 193.91
+  },
+  "support_vertices_offset_mm": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "coat_triangle_area_ratio_in_pose": {
+   "min_without_key": 0.1824,
+   "min_with_key": 0.1485,
+   "max_with_key": 11.8984,
+   "worst_triangle": {
+    "index": 10848,
+    "rest_centre_m": [
+     0.0094,
+     0.1718,
+     0.761
+    ]
+   },
+   "triangles_below_0.05": 0,
+   "triangles_below_0.10": 0,
+   "max_without_key": 11.8984
+  },
+  "flipped_when_key_on": 27,
+  "inner_side_lifted": {
+   "vertices": 311,
+   "max_above_top_mm": 93.76
+  }
+ },
+ "known_art_items": [
+  "27 coat hem triangles fold over on the surface that rests on the bed (seen only from below the bed; runs/qa/ro-swordsman-character-v1/v001/b20-prep/sleep-a03-b20c3-below.png)",
+  "coat-to-core intersections while lying 244 new pairs against 197 on b19 (report-only; the coat pressed under the thighs)"
+ ],
+ "blend": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend",
+  "sha256": "8c75c0540c0ddf35fce2f64aab06f9fcf0b9dddfc0f8b49e3cd5b84d30331e3e"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+  "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21",
+  "note": "copied unchanged from b19"
+ },
+ "contact_fixtures": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/contact-fixtures.json",
+  "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331",
+  "note": "copied unchanged from b19"
+ },
+ "weights_snapshot": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/weights-snapshot.json",
+  "sha256": "60f698527f04d5ab0e53e02a7741d4fade5387c38f5672b0364b712890df1cb5",
+  "note": "meshes and armature identical to the b19 snapshot"
+ },
+ "frozen_joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/joint-range/joint-range-result.json",
+  "numeric_gate_pass": true,
+  "measured": 73,
+  "failed": [],
+  "difference_to_b19": "results identical (73 motions, every level)"
+ },
+ "intermediate_level_diagnostic": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/midrange-sweep/joint-range-result.json",
+  "motions": 73,
+  "difference_to_b19": "results identical"
+ },
+ "closed_loop": {
+  "runtime": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/closed-loop/runtime/20261006t040958z-runtime-results.json",
+   "pass": true,
+   "runtime_owner_max_um": 5.235,
+   "blend_max_um": 1.64,
+   "negative_controls": "all detected"
+  },
+  "readback": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/closed-loop/roundtrip-b20_baked_owner_exact_weights.json",
+   "tolerance_m": 5e-06,
+   "pass": true,
+   "max_um": 4.206
+  },
+  "note": "the QA clip holds frozen-level poses where the lying state is zero; the Sleep and LieDown closed loops exercise the coat corrective"
+ },
+ "sleep_a03_check": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03-check-b20-coatlie3/clip-check.json",
+  "pass_numeric": true,
+  "bed_clearance_worst_mm": 3.0,
+  "min_triangle_area_ratio": 0.1485
+ },
+ "status": "current best foundation (not frozen; clips re-verified separately)"
+}

@@ -1,0 +1,68 @@
+{
+ "observed_utc": "2026-10-06T02:24:32.990104+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "cb568138f26a276e04b707ac5f4bf3b32f2772ffbe980ea3d76b27edd17b06ff",
+ "foundation": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/ro_character_v001_b18-clipfolds.blend",
+  "sha256": "3bd261c386b5f92c652be536696a3fc1a267ede455c8171f9bddaca9bd234ff1",
+  "saved": false
+ },
+ "spec": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-prep/bilateral-hip-poses-spec.json",
+  "sha256": "daf75d758f2577664aa6da1c56b05ecd5868ca4e296e316acf8fbca5166ab793"
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/corrective-rules.json",
+  "sha256": "b909adefeb2d930f083e5b0f8196b3d79042b7cffd35bfaa7d81a4b5101e8188"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-prep/pose-clip/CV1_BilateralHipPoses.blend",
+  "sha256": "70d9570293f810a9991e317e932747ad04a86d4a97dc8fe0df834647784d56c9",
+  "action": "CV1_BilateralHipPoses",
+  "fcurves": 8
+ },
+ "clip": "CV1_BilateralHipPoses",
+ "frames": 6,
+ "mode": "keys",
+ "loop": false,
+ "keyed_frames": [
+  0,
+  5
+ ],
+ "interpolation": "LINEAR",
+ "animated_bones": [
+  "upper_leg.L",
+  "upper_leg.R"
+ ],
+ "helper_bones_not_keyed": [
+  "wrist_transition.L_twist",
+  "wrist_transition.R_twist"
+ ],
+ "sword_solution": null,
+ "ik": {
+  "frames_with_arm_ik": 0,
+  "max_wrist_error_mm": null,
+  "wrist_bend_deg_range": [
+   null,
+   null
+  ],
+  "elbow_angle_deg_range": [
+   null,
+   null
+  ],
+  "frames_with_leg_ik": 0,
+  "max_ankle_error_mm": null,
+  "knee_angle_deg_range": [
+   null,
+   null
+  ]
+ }
+}

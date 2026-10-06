@@ -1,0 +1,201 @@
+{
+ "observed_utc": "2026-10-06T05:10:48.209301+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "5391735cd33c37a34c9db4f09a51899de401445500ac674e229d5678583ff1df",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend",
+  "sha256": "8c75c0540c0ddf35fce2f64aab06f9fcf0b9dddfc0f8b49e3cd5b84d30331e3e"
+ },
+ "inputs": {
+  "contract": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "rules_in": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+   "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+  },
+  "clip_blend": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/draft3/AN_RO_LieDown.blend",
+   "sha256": "5876103a17451c00f9cc4abb08c076c6510795da3e7c9c1c4557c7504ee35782"
+  },
+  "action": "AN_RO_LieDown",
+  "frame": 24.0,
+  "interaction": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "sha256": "96db1720f6a7b532ef3025ab566489c6ed651877097993bc115009d2359266f1"
+  },
+  "states_at_frame": {
+   "grasp.R": 1.0,
+   "grasp.L": 0.0,
+   "lying": 0.0
+  }
+ },
+ "morph": "SKC_coat_seated",
+ "state": "seated",
+ "mode": "fold",
+ "bed_top_z_m": 0.45,
+ "offsets_m": {
+  "outer": 0.002,
+  "inner": 0.025
+ },
+ "smooth_iterations": 6,
+ "dilate_m": 0.0,
+ "frozen_region": {
+  "pelvis_weight_at_least": 0.5,
+  "in_front_of_y_m": 0.12,
+  "vertices": 3014,
+  "coat_support_vertices": [
+   1210,
+   1211,
+   1216,
+   6875,
+   6876
+  ]
+ },
+ "skin_matrix_check_m": 1.884864366154897e-07,
+ "fold_skin_condition_max": 1.0,
+ "sunk_before": {
+  "vertices": 1728,
+  "lowest_below_top_mm": 341.17
+ },
+ "after_lying_key": {
+  "lowest_over_bed_above_top_mm": -4.588,
+  "vertices_below_top": 5
+ },
+ "anchored_below_goal": [
+  {
+   "vertex": 1567,
+   "below_goal_mm": 0.34,
+   "above_top_mm": 1.66
+  },
+  {
+   "vertex": 1569,
+   "below_goal_mm": 0.96,
+   "above_top_mm": 1.04
+  },
+  {
+   "vertex": 1571,
+   "below_goal_mm": 1.6,
+   "above_top_mm": 0.4
+  },
+  {
+   "vertex": 2191,
+   "below_goal_mm": 0.08,
+   "above_top_mm": 1.92
+  },
+  {
+   "vertex": 2192,
+   "below_goal_mm": 1.5,
+   "above_top_mm": 0.5
+  },
+  {
+   "vertex": 4829,
+   "below_goal_mm": 2.22,
+   "above_top_mm": 22.78
+  },
+  {
+   "vertex": 4830,
+   "below_goal_mm": 2.22,
+   "above_top_mm": 22.78
+  },
+  {
+   "vertex": 4833,
+   "below_goal_mm": 2.09,
+   "above_top_mm": 22.91
+  },
+  {
+   "vertex": 5067,
+   "below_goal_mm": 2.16,
+   "above_top_mm": 22.84
+  },
+  {
+   "vertex": 5070,
+   "below_goal_mm": 0.14,
+   "above_top_mm": 24.86
+  },
+  {
+   "vertex": 5071,
+   "below_goal_mm": 0.14,
+   "above_top_mm": 24.86
+  },
+  {
+   "vertex": 5073,
+   "below_goal_mm": 0.78,
+   "above_top_mm": 24.22
+  },
+  {
+   "vertex": 5077,
+   "below_goal_mm": 4.57,
+   "above_top_mm": 20.43
+  },
+  {
+   "vertex": 5180,
+   "below_goal_mm": 1.15,
+   "above_top_mm": 23.85
+  },
+  {
+   "vertex": 5181,
+   "below_goal_mm": 0.87,
+   "above_top_mm": 24.13
+  },
+  {
+   "vertex": 5182,
+   "below_goal_mm": 0.87,
+   "above_top_mm": 24.13
+  },
+  {
+   "vertex": 5187,
+   "below_goal_mm": 3.71,
+   "above_top_mm": 21.29
+  },
+  {
+   "vertex": 5416,
+   "below_goal_mm": 6.21,
+   "above_top_mm": 15.26
+  },
+  {
+   "vertex": 5418,
+   "below_goal_mm": 15.16,
+   "above_top_mm": 9.84
+  },
+  {
+   "vertex": 5422,
+   "below_goal_mm": 22.04,
+   "above_top_mm": 2.96
+  }
+ ],
+ "anchored_below_goal_count": 44,
+ "weak_direction": [],
+ "weak_direction_count": 0,
+ "lift": {
+  "vertices": 2375,
+  "max_rest_offset_mm": 362.39
+ },
+ "support_vertices_offset_mm": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "coat_triangle_area_ratio_in_pose": {
+  "min_without_key": 1.0,
+  "min_with_key": 0.0636,
+  "max_with_key": 26.5456,
+  "worst_triangle": {
+   "index": 10973,
+   "rest_centre_m": [
+    -0.376,
+    0.1109,
+    0.575
+   ]
+  },
+  "triangles_below_0.05": 0,
+  "triangles_below_0.10": 3,
+  "max_without_key": 1.0001
+ },
+ "flipped_when_key_on": 376,
+ "inner_side_lifted": {
+  "vertices": 871,
+  "max_above_top_mm": 27.49
+ },
+ "scope": "Coat only. Zero in every pose whose interaction state is zero (every frozen contract pose and every clip that does not declare the state)."
+}

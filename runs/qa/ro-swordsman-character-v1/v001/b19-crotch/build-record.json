@@ -1,0 +1,70 @@
+{
+ "id": "b19-crotch",
+ "recorded_utc": "2026-10-06T02:36:00Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "authority": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 16 (基礎用做法 1（b19）; hybrid approach of entry 13)",
+ "chain": "b18-clipfolds + three product-driven crotch micro-correctives (sites 36-38); weights, Basis, topology, UVs, other meshes and the r010 hand untouched",
+ "why": "LieDown a01-a05 collapsed crotch triangles under bilateral hip flexion; b19-prep/bilateral-hip-fine-b18.json: 22884 at 65-70 deg (4.01%), 22878 at 75-80 (4.09%), 22873 at 77.5-80 (4.83%); the frozen contract and the b18 mid-range sweep move one leg at a time",
+ "sites": "runs/qa/ro-swordsman-character-v1/v001/core-fold-sites-crotch-b19.json (pose clip assets/processed/ro-swordsman-character-v1/v001/b19-prep/pose-clip/CV1_BilateralHipPoses.blend)",
+ "blend": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/ro_character_v001_b19-crotch.blend",
+  "sha256": "3280f4b186a17d1ce69bdcb5649ea6ba988ffa876078a4ce739c75370feb0963"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+  "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "weights_snapshot": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/weights-snapshot.json",
+  "sha256": "83182af9fe1a64df4fae3c37a480d3405787221a946f1a18884e9602961cfd86",
+  "note": "identical meshes and armature to the b18 snapshot"
+ },
+ "contact_fixtures": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/contact-fixtures.json",
+  "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331"
+ },
+ "frozen_joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/joint-range/joint-range-result.json",
+  "numeric_gate_pass": true,
+  "measured": 73,
+  "failed": [],
+  "difference_to_b18": "0 metric differences over every motion and level"
+ },
+ "intermediate_level_diagnostic": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/midrange-sweep/joint-range-result.json",
+  "motions": 73,
+  "collapses": [
+   "knee-flexion.L l85 (0.0269, as b18)",
+   "combo-two-hand-chop l15 (0.0495, as b18)",
+   "fingers-mcp-flexion.L/R l65 0.0457 and l85 0.0439 (pre-existing: b18 hand subset runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/midrange-sweep-hands gives the same 288 hand-motion level results)"
+  ],
+  "fixed": "combo-deep-squat l75 (b18 0.0495 collapsed)",
+  "note": "the b18 mid-range sweep was a partial run of 41 body motions; this is the first full 73-motion mid-range diagnostic"
+ },
+ "bilateral_hip_sweep": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-prep/bilateral-hip-fine-b19.json",
+  "min_ratio_55_to_90_deg": 0.0796,
+  "triangles_below_7pct": 0
+ },
+ "closed_loop": {
+  "runtime": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/closed-loop/runtime/20261006t023346z-runtime-results.json",
+   "pass": true,
+   "runtime_owner_max_um": 5.235,
+   "blend_max_um": 1.64,
+   "negative_controls": "all detected"
+  },
+  "readback": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/closed-loop/roundtrip-b19_baked_owner_exact_weights.json",
+   "tolerance_m": 5e-06,
+   "pass": true,
+   "max_um": 4.206
+  },
+  "note": "the QA clip holds frozen-level poses only, where the new hats are zero; the LieDown closed loop exercises them"
+ },
+ "status": "current best foundation (not frozen; clips re-verified separately)"
+}

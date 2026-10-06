@@ -1,0 +1,59 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/closed-loop/blender-reference.json",
+  "bytes": 307921,
+  "sha256": "4a1cbc048388b4edf6f9fc6071f35d4ce868240dcd412424aa40e3a4a36cabbe"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/closed-loop/blender-reference.f64.bin",
+  "bytes": 33017952,
+  "sha256": "c6c8d01bb24709799f6aca22a3087b357ad755be0a18bc08275834bb8c5645ea"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+  "bytes": 38968,
+  "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/export/b19_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 27992212,
+   "sha256": "d24277971d1de74564c8b7b31aeb1b870f3d5b3bc12a819aa130b82b553de869"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/export/b19_baked_owner_exact_weights.glb",
+   "bytes": 3334256,
+   "sha256": "6e6b7ce4c280f3196a192d2caa8995b90e8bad7223be510258910ffa02e842b4"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   16,
+   "hands"
+  ],
+  [
+   37,
+   "whole"
+  ],
+  [
+   37,
+   "hands"
+  ],
+  [
+   34,
+   "whole"
+  ]
+ ],
+ "note": "b19 crotch foundation QA clip (the same 21 contract motions as b18): exact-weight GLBs (b19 snapshot, identical weights to b18), twist helper channels stripped from the runtime-owner GLB; rules add three product-driven crotch hats (sites 36-38), zero at every frozen-level pose."
+}

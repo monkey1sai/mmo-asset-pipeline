@@ -1,0 +1,71 @@
+{
+ "note": "b19: crotch fold under bilateral hip flexion (b19-prep/bilateral-hip-fine-b18.json: 22884 at 65-70 deg, 22878 at 75-80, 22873 at 77.5-80). Product driver of both hips, hat narrowed by min_prev 0.8 to about +-7-8 deg around each fold; zero at every frozen-level pose (checked by the tool).",
+ "sites": [
+  {
+   "centre": [
+    0.0377,
+    -0.037,
+    0.8035
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/b19-prep/pose-clip/CV1_BilateralHipPoses.blend",
+    "action": "CV1_BilateralHipPoses",
+    "frame": 1
+   },
+   "driver_bones": [
+    "upper_leg.L",
+    "upper_leg.R"
+   ],
+   "state": {
+    "grasp.R": 0.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1,
+   "min_prev": 0.8
+  },
+  {
+   "centre": [
+    0.0372,
+    -0.0462,
+    0.8403
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/b19-prep/pose-clip/CV1_BilateralHipPoses.blend",
+    "action": "CV1_BilateralHipPoses",
+    "frame": 2
+   },
+   "driver_bones": [
+    "upper_leg.L",
+    "upper_leg.R"
+   ],
+   "state": {
+    "grasp.R": 0.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1,
+   "min_prev": 0.8
+  },
+  {
+   "centre": [
+    0.0471,
+    -0.0503,
+    0.8351
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/b19-prep/pose-clip/CV1_BilateralHipPoses.blend",
+    "action": "CV1_BilateralHipPoses",
+    "frame": 3
+   },
+   "driver_bones": [
+    "upper_leg.L",
+    "upper_leg.R"
+   ],
+   "state": {
+    "grasp.R": 0.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1,
+   "min_prev": 0.8
+  }
+ ]
+}

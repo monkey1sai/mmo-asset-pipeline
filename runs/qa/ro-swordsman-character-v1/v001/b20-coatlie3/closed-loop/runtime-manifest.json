@@ -1,0 +1,59 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/closed-loop/blender-reference.json",
+  "bytes": 312001,
+  "sha256": "a9dde1fafa860bc3da635b3840510b24a2c1c98153674b3bd7b7fed2a336b1bf"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/closed-loop/blender-reference.f64.bin",
+  "bytes": 33017952,
+  "sha256": "c6c8d01bb24709799f6aca22a3087b357ad755be0a18bc08275834bb8c5645ea"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+  "bytes": 39213,
+  "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/export/b20_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 28037720,
+   "sha256": "2739cbc9d6edc85acecf95d942551ceface9818ddd15861deb91afb7f4c7bbb2"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/export/b20_baked_owner_exact_weights.glb",
+   "bytes": 3380152,
+   "sha256": "d6870781787bc338305b879aac24be85db5207feb330d8f32b469026715b4f32"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   16,
+   "hands"
+  ],
+  [
+   37,
+   "whole"
+  ],
+  [
+   37,
+   "hands"
+  ],
+  [
+   34,
+   "whole"
+  ]
+ ],
+ "note": "b20 coat-lying foundation QA clip (the same 21 contract motions as b18/b19): exact-weight GLBs (b20 snapshot, identical weights to b19), twist helper channels stripped from the runtime-owner GLB; rules add the state-driven coat lying corrective (SKC_coat_lying, state 'lying'), zero in every frozen pose of this clip."
+}

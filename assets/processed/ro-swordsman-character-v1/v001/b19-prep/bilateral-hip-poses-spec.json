@@ -1,0 +1,79 @@
+{
+ "schema_version": 1,
+ "clip": "CV1_BilateralHipPoses",
+ "fps": 60,
+ "frames": 6,
+ "loop": false,
+ "mode": "keys",
+ "intent": "Construction poses for b19 crotch micro-correctives (not an animation clip): frame 0 rest, then both hips flexed 67.5, 77.5, 78.75, 70 and 80 deg (contract hip-flexion vocabulary), everything else at rest.",
+ "steps": [
+  {
+   "bone": "upper_leg.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      1,
+      67.5
+     ],
+     [
+      2,
+      77.5
+     ],
+     [
+      3,
+      78.75
+     ],
+     [
+      4,
+      70.0
+     ],
+     [
+      5,
+      80.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      1,
+      67.5
+     ],
+     [
+      2,
+      77.5
+     ],
+     [
+      3,
+      78.75
+     ],
+     [
+      4,
+      70.0
+     ],
+     [
+      5,
+      80.0
+     ]
+    ]
+   },
+   "side": "R"
+  }
+ ]
+}
