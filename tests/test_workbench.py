@@ -299,5 +299,63 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(workbench.assess(request, evidence, self.root)["decision"], "eligible_for_delivery_review")
 
 
+class ContractEvaluationTests(unittest.TestCase):
+    """evaluate_contract 是 assess／compare_quality 共用的評估；gate 以代碼表示，不靠訊息字串。"""
+    setUp = EvidenceTests.setUp
+    cleanup_owned_temporary = EvidenceTests.cleanup_owned_temporary
+    artifact = EvidenceTests.artifact
+    evidence = EvidenceTests.evidence
+
+    def test_satisfied_contract_has_no_blockers_or_gates(self):
+        request = specified()
+        evaluation = workbench.evaluate_contract(request, self.evidence(request), self.root)
+        self.assertTrue(evaluation.spec_matches)
+        self.assertEqual((evaluation.blockers(), evaluation.gate_failures), ([], ()))
+
+    def test_only_non_art_failures_and_delivery_gaps_are_gates(self):
+        request = specified()
+        request["delivery"]["formats"].append("fbx")
+        evidence = self.evidence(request)
+        evidence["checks"]["art_match"]["status"] = "fail"
+        evidence["checks"]["geometry_materials"]["status"] = "fail"
+        self.assertEqual(workbench.evaluate_contract(request, evidence, self.root).gate_failures, ("geometry_materials", "format:fbx"))
+        evidence["deliverables"] = []
+        self.assertEqual(workbench.evaluate_contract(request, evidence, self.root).gate_failures,
+                         ("geometry_materials", "deliverables:none", "format:glb", "format:fbx"))
+
+    def test_gate_codes_do_not_depend_on_message_wording(self):
+        request = specified()
+        request["delivery"]["formats"].append("fbx")
+        evaluation = workbench.evaluate_contract(request, self.evidence(request), self.root)
+        self.assertEqual(evaluation.gate_failures, ("format:fbx",))
+        self.assertEqual(evaluation.failed_gate_labels(), ["missing requested format: fbx"])
+
+    def test_blockers_render_matches_assess_output(self):
+        request = specified()
+        variants = [self.evidence(request) for _ in range(4)]
+        variants[1]["request_sha256"] = "0" * 64
+        variants[2]["checks"]["scale_pivot"] = {"status": "pass", "method": "", "artifacts": []}
+        variants[3]["deliverables"] = []
+        for evidence in variants:
+            with self.subTest(evidence=evidence.get("request_sha256")):
+                self.assertEqual(workbench.evaluate_contract(request, evidence, self.root).blockers(),
+                                 workbench.assess(request, evidence, self.root)["blockers"])
+
+    def test_compare_hashes_each_artifact_once_per_call(self):
+        from unittest.mock import patch
+        import test_quality_loop as loop
+        case = loop.QualityLoopTests()
+        case.root = self.root
+        request = case.request()
+        base = case.trial(request, "baseline", [3, 3])
+        better = case.trial(request, "v001", [4, 3], "baseline")
+        calls = []
+        original = workbench.identity.file_digest
+        with patch.object(workbench.identity, "file_digest", side_effect=lambda path: calls.append(path) or original(path)):
+            result = workbench.compare_quality(request, case.ledger(request, base, better), self.root)
+        self.assertEqual([t["decision"] for t in result["trials"]], ["baseline", "keep_for_iteration"])
+        self.assertEqual(len(calls), len(set(calls)))
+
+
 if __name__ == "__main__":
     unittest.main()
