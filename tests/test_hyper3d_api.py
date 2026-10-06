@@ -279,6 +279,14 @@ class Hyper3DApiTests(unittest.TestCase):
         with self.assertRaisesRegex(api.SafeError, r"\ARECORDED_PATH_INVALID\Z"):
             self.prepare()
 
+    def test_legacy_hash_aliases_match_identity(self):
+        # codex/art-quality-loop 的 RO 腳本仍匯入 file_sha、sha、canonical。
+        path = self.root / self.spec["images"][0]
+        self.assertEqual(api.file_sha(path), api.identity.file_digest(path))
+        value = {"b": [1], "a": "岩"}
+        self.assertEqual(api.canonical(value), api.identity.canonical_json(value))
+        self.assertEqual(api.sha(api.canonical(value)), api.identity.json_digest(value))
+
     def test_parameters_and_cost_are_not_fixed_to_half_credit(self):
         params = {"tier": "Gen-2.5-Extreme-High", "texture_mode": "extreme-high", "mesh_mode": "Quad", "quality_override": 200000}
         self.assertEqual(api.parameters(params, 1)[1], 3.0)

@@ -124,6 +124,22 @@ class RequestTests(unittest.TestCase):
         self.assertEqual(workbench.search_library(index, "sword", "changshan-longdan"), [])
 
 
+class DeprecatedAliasTests(unittest.TestCase):
+    """codex/art-quality-loop 的 RO 腳本仍匯入這些名稱；遷移完成前不得移除。"""
+
+    def test_digest_aliases_match_identity(self):
+        request = specified()
+        request["quality"] = {"schema_version": 1, "status": "draft"}
+        self.assertEqual(workbench.request_sha256(request), identity.json_digest(request))
+        self.assertEqual(workbench.quality_sha256(request), identity.json_digest(request["quality"]))
+
+    def test_read_json_alias_keeps_legacy_leniency(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "events.json"
+            path.write_text('[{"a": 1}]', encoding="utf-8-sig")
+            self.assertEqual(workbench.read_json(path), [{"a": 1}])
+
+
 class EvidenceTests(unittest.TestCase):
     def setUp(self):
         temporary_parent = (REPO / "tmp").resolve()

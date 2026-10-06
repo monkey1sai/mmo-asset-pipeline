@@ -57,6 +57,15 @@ def read_json(path):
         raise SafeError(str(exc)) from None
 
 
+# 已棄用：codex/art-quality-loop 的 RO 腳本仍匯入下列名稱；遷移到 identity 後移除。
+file_sha = identity.file_digest
+canonical = identity.canonical_json
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
 def write_json(path, value, exclusive=False):
     path.parent.mkdir(parents=True, exist_ok=True)
     data = identity.canonical_json(value) + b"\n"

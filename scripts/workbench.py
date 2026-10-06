@@ -46,6 +46,20 @@ def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
 
 
+# 已棄用：codex/art-quality-loop 的 RO 腳本仍匯入下列名稱；遷移到 identity 後移除。
+def request_sha256(request: dict) -> str:
+    return identity.json_digest(request)
+
+
+def quality_sha256(request: dict) -> str:
+    return identity.json_digest(request["quality"])
+
+
+def read_json(path: Path) -> object:
+    # 保留舊的寬鬆行為（含頂層陣列）；新程式改用 identity.read_json。
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
 def evidence_file(value: str, root: Path = ROOT) -> Path:
     path = identity.recorded_path(root, value)
     relative = path.relative_to(root.resolve())
