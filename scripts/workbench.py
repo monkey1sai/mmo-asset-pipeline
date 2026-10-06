@@ -646,6 +646,68 @@ def ledger_view(request_id: str, root: Path = ROOT) -> dict:
             "note": "帳本只讀；pending／unknown／無效紀錄須先核對原操作，不得另造 ID 重送"}
 
 
+RODIN_FORMATS = ("glb", "usdz", "fbx", "obj", "stl")
+FACE_LIMITS = (500, 1_000_000)
+
+
+def _next_free(candidates, taken) -> str | None:
+    return next((value for value in candidates if not taken(value)), None)
+
+
+def prepare_spec_draft(request: dict, request_path: str, part: dict | None, root: Path, entries) -> tuple[dict, list[str]]:
+    """只填可由需求機械推導的欄位；創作輸入、成本取捨與授權留空，hyper3d prepare 會拒絕未補齊的草稿。"""
+    base = request["id"] if part is None else f"{request['id']}.{part['id']}"
+    used = {op.operation_id for op in entries.operations}
+    operation = _next_free((f"{base}-r{n:02d}" for n in range(1, 100)),
+                           lambda value: not identity.is_asset_id(value) or value in used or (root / ledger.PLANS / f"{value}.json").exists())
+    folder = request["id"] if part is None else f"{request['id']}/{part['id']}"
+    output = _next_free((f"assets/raw/{folder}/v{n:03d}" for n in range(1, 1000)), lambda value: (root / value).exists())
+    formats = request["delivery"]["formats"]
+    fmt = "glb" if "glb" in formats else next((f for f in formats if f in RODIN_FORMATS), None)
+    triangles = request["spec"]["target_triangles"]
+    parameters = {"tier": None, "mesh_mode": "Raw", "geometry_file_format": fmt, "material": None, "prompt": None,
+                  "quality_override": None if triangles is None else min(max(triangles, FACE_LIMITS[0]), FACE_LIMITS[1])}
+    notes = ["tier／material／prompt／images 由美術工程師依設計與成本決定；tier 直接影響扣點",
+             "authorization 須記錄使用者實際授權（spending_scope、credit_pool、no_topup_or_upgrade），工具不代填",
+             "operation_id、output_directory 取帳本與檔案系統目前第一個未使用值；prepare 前再確認"]
+    if fmt is None:
+        notes.append(f"交付格式 {formats} 無 Rodin 支援格式 {list(RODIN_FORMATS)}；需另定生成格式並規劃轉換")
+    if triangles is not None and parameters["quality_override"] != triangles:
+        notes.append(f"target_triangles {triangles} 超出 Rodin 範圍 {FACE_LIMITS}，已截斷；差距留給後製")
+    if request["spec"]["requires_rig"]:
+        parameters["TAPose"] = True
+        notes.append("TAPose 只提供 T／A 姿勢，不等於已綁骨架；骨架與權重仍需後製與驗收")
+    return {"operation_id": operation, "request": request_path, "images": None, "output_directory": output,
+            "parameters": parameters, "authorization": None}, notes
+
+
+def evidence_skeleton(request: dict) -> dict:
+    skeleton = {"schema_version": 1, "request_id": request["id"], "request_sha256": identity.json_digest(request),
+                "checks": {c["id"]: {"status": "not_run", "method": "", "artifacts": []} for c in required_checks(request)},
+                "deliverables": [], "note": "plan 產生的骨架；未填 status／method／artifacts 前不得當作通過證據。"}
+    if "quality" in request:
+        skeleton.update(quality_ledger=None, subject_artifacts=[])
+    return skeleton
+
+
+def workspace_plan(request: dict, request_path: str, root: Path = ROOT) -> dict:
+    """plan CLI 的輸出：純 production_plan 加上帳本與工作區推導的草稿；不寫任何檔案。"""
+    entries = ledger.load(root)
+    result = production_plan(request)
+    result["ledger"] = ledger_view(request["id"], root)
+    result["evidence_skeleton"] = evidence_skeleton(request)
+    if "quality" in request:
+        result["quality_ledger_skeleton"] = {
+            "schema_version": 1, "request_id": request["id"], "request_sha256": result["request_sha256"],
+            "protocol_sha256": identity.json_digest(request["quality"]), "trials": [],
+            "note": "plan 產生的骨架；第一筆須為實際 baseline，格式見 templates/quality-ledger.json。"}
+    if "creation_workflow" in result:
+        split = request["production"]["route"] == "split_then_generate"
+        for job, part in zip(result["creation_workflow"]["jobs"], request["spec"]["parts"] if split else [None]):
+            job["prepare_spec_draft"], job["draft_notes"] = prepare_spec_draft(request, request_path, part, root, entries)
+    return result
+
+
 def search_library(index: dict, query: str, project: str | None = None) -> list[dict]:
     if not isinstance(index, dict) or index.get("schema_version") != 1 or not isinstance(index.get("entries"), list):
         raise ValueError("invalid library index")
@@ -706,8 +768,7 @@ def main(argv: list[str] | None = None) -> int:
             if args.command == "validate":
                 result = {"status": "valid_request", "request_id": request["id"], "request_sha256": identity.json_digest(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
             elif args.command == "plan":
-                result = production_plan(request)
-                result["ledger"] = ledger_view(request["id"])
+                result = workspace_plan(request, identity.command_path(ROOT, args.request).relative_to(ROOT.resolve()).as_posix())
             elif args.command == "compare":
                 result = compare_quality(request, identity.read_json(identity.command_path(ROOT, args.ledger)))
             else:
