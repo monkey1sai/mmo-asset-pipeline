@@ -92,7 +92,7 @@ flowchart LR
 
 每件都有造型符合度、尺寸／pivot、幾何／指定材質、交付完整性。LOD 及其他要求明確放入 additional_checks；`target_environment` 需 name、version、verification_context 及該環境證據。
 
-`plan` 回傳 `request_sha256`（Request digest，見 [CONTEXT.md](../CONTEXT.md)），以排序鍵、UTF-8、無多餘空白的 JSON 計算規格雜湊；需求改變後舊證據不再相符。需求、證據與 ledger JSON 不得有重複鍵或 NaN／Infinity；證據內 `path` 須為 repo 相對 POSIX 路徑（不接受絕對路徑或反斜線），重新 clone 後才能核對。證據格式參考 `templates/acceptance-evidence.json`：填入實際 request ID／雜湊；每項 `pass` 必須記方法及至少一份存在的檔案／SHA-256；未做是 `not_run`，失敗是 `fail`。輸出格式必須有相符交付檔。
+`plan` 回傳 `request_sha256`（Request digest，見 [CONTEXT.md](../CONTEXT.md)），以排序鍵、UTF-8、無多餘空白的 JSON 計算規格雜湊；需求改變後舊證據不再相符。需求、證據與 ledger JSON 不得有重複鍵或 NaN／Infinity；證據內 `path` 須為 repo 相對 POSIX 路徑（不接受絕對路徑或反斜線），重新 clone 後才能核對。`plan` CLI 輸出 `evidence_skeleton`（實際 request ID／雜湊、每個 `required_checks` 預設 `not_run`；有 `quality` 時另附 `quality_ledger_skeleton`），可直接存檔後填寫；骨架本身永遠不會通過 `assess`。證據格式參考 `templates/acceptance-evidence.json`：每項 `pass` 必須記方法及至少一份存在的檔案／SHA-256；未做是 `not_run`，失敗是 `fail`。輸出格式必須有相符交付檔。
 
 ```powershell
 python -B scripts/workbench.py plan requests/examples/standalone-stone.json

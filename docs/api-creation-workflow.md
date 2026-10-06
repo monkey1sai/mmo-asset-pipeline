@@ -5,7 +5,7 @@ Hyper3D API 是美術工程師接到需求後的候選製作工具。委託者�
 ## 需求到創作
 
 1. 保存需求原文，查素材庫與 master，補齊用途、風格、必要功能及交付規格；按品質流程固定標竿。低風險選擇由工程師記為 assumptions。
-2. 選 `generate` 或 `split_then_generate` 後執行 `workbench.py plan <request>`。新增 `creation_workflow` 提供工程師交接清單，每件或每部件帶入造型約束、pivot 與整件規格。這是離線設計資料，不是直接傳給 API 的 payload。
+2. 選 `generate` 或 `split_then_generate` 後執行 `workbench.py plan <request>`。新增 `creation_workflow` 提供工程師交接清單，每件或每部件帶入造型約束、pivot 與整件規格。這是離線設計資料，不是直接傳給 API 的 payload。CLI 另在每個 job 附 `prepare_spec_draft`（只填需求路徑、未使用的 operation ID／輸出版本、Rodin 支援格式、截斷後面數與 Raw；需骨架時加 TAPose）與 `draft_notes`；tier、material、prompt、images、authorization 留空，未補齊的草稿會被 `hyper3d_api.py prepare` 拒絕。
 3. 工程師撰寫單件／單部件 prompt，選取原創或已獲准上傳的參考圖。圖生 adapter 需要圖片時，由工程師準備或選用設計圖；準備工具若需付費，沿用該工具的具體授權，不能默認免費。文字生成只選當下確實提供文字接口的工具。
 4. 核對可見工具 schema 與非扣點連線，再將設計轉成該 backend 的參數。不能從歷史工具名稱推定本次可用，也不能把固定 30k 候選說成已符合 1,500 面交付需求；差距進入後製計畫。
 5. 沿用已有的具體預算／候選數／資料上傳授權。只有真正缺少授權才請委託者補上；「API 給美術工程師創作」指定工具用途，沒有自動設定無限花費。月訂限制依 AGENTS 與 production-runbook；API 總額不可當作月訂分項。網站可以補充額度證據，模型仍透過 API 提交。
