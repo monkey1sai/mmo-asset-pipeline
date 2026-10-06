@@ -47,3 +47,13 @@ _Avoid_: 進行中操作、未完成操作
 **Legacy import record**:
 為早於現行 client 的 Operation 補登的帳本紀錄，明寫需求／Catalog asset 並附原始證據雜湊；原始檔案不改寫，也不能用來查詢或下載。
 _Avoid_: 遷移紀錄、補帳
+
+### Contract evaluation
+
+**Contract evaluation**:
+一份證據對目前需求的評估結果：哪些必要檢查已有證據、證據是否對應目前需求，以及哪些 Gate failure 存在；只核對申報與檔案完整性，不判斷美術品質。
+_Avoid_: 驗收、assessment 結果、審查
+
+**Gate failure**:
+使候選版本不能保留的非美術缺口：非美術檢查申報失敗、沒有登記交付檔，或缺少需求指定的交付格式；以代碼識別，不以訊息文字判斷。
+_Avoid_: blocker、技術失敗

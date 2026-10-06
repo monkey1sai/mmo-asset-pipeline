@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from typing import NamedTuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import identity  # noqa: E402
@@ -373,20 +374,63 @@ def check_artifact(item: dict, root: Path) -> str | None:
     return None
 
 
-def _assess_contract(request: dict, evidence: dict, root: Path = ROOT) -> dict:
+class ArtifactCheck:
+    """一次評估呼叫內的 artifact 核對；同一檔案只計算一次雜湊，不跨呼叫保留。"""
+
+    def __init__(self, root: Path):
+        self.root = root
+        self.cache: dict[tuple[str, str], str | None] = {}
+
+    def __call__(self, item: object) -> str | None:
+        if not isinstance(item, dict) or not isinstance(item.get("path"), str) or not isinstance(item.get("sha256"), str):
+            return check_artifact(item, self.root)
+        key = (item["path"], item["sha256"])
+        if key not in self.cache:
+            self.cache[key] = check_artifact(item, self.root)
+        return self.cache[key]
+
+
+GATE_LABELS = {"deliverables:none": "no delivery files registered"}
+
+
+class ContractEvaluation(NamedTuple):
+    """一份證據對目前需求的評估。gate 以代碼表示；字串 blocker 只在輸出時組出。"""
+    digest: str
+    checks: list
+    readiness: list
+    spec_matches: bool
+    check_issues: list
+    has_deliverables: bool
+    deliverable_errors: list
+    missing_formats: list
+
+    @property
+    def gate_failures(self) -> tuple:
+        failed_checks = [c["id"] for c in self.checks if c["area"] != "art" and c["declared_status"] == "fail"]
+        return tuple(failed_checks + ([] if self.has_deliverables else ["deliverables:none"]) + [f"format:{fmt}" for fmt in self.missing_formats])
+
+    def failed_gate_labels(self) -> list[str]:
+        return [GATE_LABELS.get(code, f"missing requested format: {code[7:]}" if code.startswith("format:") else code) for code in self.gate_failures]
+
+    def blockers(self) -> list[str]:
+        return (list(self.readiness) + ([] if self.spec_matches else ["evidence does not match current request ID/specification hash"])
+                + [issue for _, issues in self.check_issues for issue in issues]
+                + ([] if self.has_deliverables else ["no delivery files registered"]) + list(self.deliverable_errors)
+                + [f"missing requested format: {fmt}" for fmt in self.missing_formats])
+
+
+def evaluate_contract(request: dict, evidence: dict, root: Path = ROOT, check: ArtifactCheck | None = None) -> ContractEvaluation:
+    check = check or ArtifactCheck(root)
     checks = required_checks(request)
     if not isinstance(evidence, dict):
         raise ValueError("evidence must be an object")
-    blockers = readiness(request)
     digest = identity.json_digest(request)
-    if evidence.get("request_id") != request["id"] or evidence.get("request_sha256") != digest:
-        blockers.append("evidence does not match current request ID/specification hash")
     registered = evidence.get("checks", {})
     if not isinstance(registered, dict):
         raise ValueError("evidence checks must be an object")
-    results = []
-    for check in checks:
-        record = registered.get(check["id"], {})
+    results, check_issues = [], []
+    for item in checks:
+        record = registered.get(item["id"], {})
         if not isinstance(record, dict):
             raise ValueError("check evidence must be an object")
         status = record.get("status", "not_run")
@@ -394,30 +438,33 @@ def _assess_contract(request: dict, evidence: dict, root: Path = ROOT) -> dict:
             raise ValueError("unknown evidence status")
         issues = []
         if status != "pass":
-            issues.append(f"{check['id']}: {status}")
+            issues.append(f"{item['id']}: {status}")
         else:
             items = record.get("artifacts")
             if not text_value(record.get("method")) or not isinstance(items, list) or not items:
-                issues.append(f"{check['id']}: pass needs method and artifact evidence")
+                issues.append(f"{item['id']}: pass needs method and artifact evidence")
             else:
-                issues.extend(error for item in items if (error := check_artifact(item, root)))
-        blockers.extend(issues)
-        results.append({**check, "declared_status": status, "evidence_integrity": "valid" if status == "pass" and not issues else "not_satisfied"})
+                issues.extend(error for artifact in items if (error := check(artifact)))
+        check_issues.append((item["id"], issues))
+        results.append({**item, "declared_status": status, "evidence_integrity": "valid" if status == "pass" and not issues else "not_satisfied"})
     deliverables = evidence.get("deliverables", [])
-    if not isinstance(deliverables, list) or not deliverables:
-        blockers.append("no delivery files registered")
-        deliverables = []
-    for item in deliverables:
-        error = check_artifact(item, root)
-        if error:
-            blockers.append(error)
+    has_deliverables = isinstance(deliverables, list) and bool(deliverables)
+    deliverables = deliverables if has_deliverables else []
     actual_formats = {Path(item["path"]).suffix.lower().lstrip(".") for item in deliverables if isinstance(item, dict) and text_value(item.get("path"))}
-    for fmt in request["delivery"]["formats"]:
-        if fmt not in actual_formats:
-            blockers.append(f"missing requested format: {fmt}")
+    return ContractEvaluation(
+        digest=digest, checks=results, readiness=readiness(request),
+        spec_matches=evidence.get("request_id") == request["id"] and evidence.get("request_sha256") == digest,
+        check_issues=check_issues, has_deliverables=has_deliverables,
+        deliverable_errors=[error for item in deliverables if (error := check(item))],
+        missing_formats=[fmt for fmt in request["delivery"]["formats"] if fmt not in actual_formats])
+
+
+def _assess_contract(request: dict, evidence: dict, root: Path = ROOT) -> dict:
+    evaluation = evaluate_contract(request, evidence, root)
+    blockers = evaluation.blockers()
     return {
-        "mode": "evidence_contract_check_only", "request_id": request["id"], "request_sha256": digest,
-        "delivery_scope": request["delivery"]["scope"], "checks": results, "blockers": blockers,
+        "mode": "evidence_contract_check_only", "request_id": request["id"], "request_sha256": evaluation.digest,
+        "delivery_scope": request["delivery"]["scope"], "checks": evaluation.checks, "blockers": blockers,
         "decision": "eligible_for_delivery_review" if not blockers else "not_ready",
         "target_environment_claim": "registered_evidence_only" if request["delivery"]["scope"] == "target_environment" else "not_requested",
         "note": "只核對已登記證據及檔案完整性；不自行判斷外觀、骨架或引擎可用，也不宣稱已交付。",
@@ -435,10 +482,12 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
     if not isinstance(ledger, dict) or type(ledger.get("schema_version")) is not int or ledger["schema_version"] != 1:
         raise ValueError("quality ledger schema_version must be 1")
     blockers = readiness(request)
+    check = ArtifactCheck(root)
+    evaluations: dict[str, ContractEvaluation] = {}
     if ledger.get("request_id") != request["id"] or ledger.get("request_sha256") != digest or ledger.get("protocol_sha256") != protocol_digest:
         blockers.append("quality ledger does not match current request/protocol hash")
     for item in quality["reference_artifacts"]:
-        if error := check_artifact(item, root):
+        if error := check(item):
             blockers.append(error)
     trials = ledger.get("trials")
     if not isinstance(trials, list):
@@ -480,31 +529,28 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
         if not text_value(trial.get("reviewer")):
             issues.append("trial reviewer missing")
         evidence = trial.get("evidence")
-        assessment = None
         scores = trial.get("scores")
         if status == "completed":
             if not isinstance(evidence, dict):
                 issues.append("completed trial needs acceptance evidence")
             else:
-                assessment = _assess_contract(request, evidence, root)
+                evaluation = evaluations[trial["id"]] = evaluate_contract(request, evidence, root, check)
                 contents = [item for item in evidence.get("deliverables", []) if isinstance(item, dict) and text_value(item.get("path")) and Path(item["path"]).suffix.lower().lstrip(".") in QUALITY_CONTENT_FORMATS]
                 if not any(Path(v["path"]).suffix.lower().lstrip(".") in FORMATS for v in contents) or evidence.get("subject_artifacts") != contents:
                     issues.append("trial evidence must bind subject_artifacts to model and dependency deliverables")
                 if evidence.get("request_id") != request["id"] or evidence.get("request_sha256") != digest:
                     issues.append("trial evidence specification changed")
                 for item in evidence.get("deliverables", []):
-                    if error := check_artifact(item, root):
+                    if error := check(item):
                         issues.append(error)
-                for check in assessment["checks"]:
-                    record = evidence.get("checks", {}).get(check["id"], {})
+                for required in evaluation.checks:
+                    record = evidence.get("checks", {}).get(required["id"], {})
                     # Baseline may fail gates; all completed trials still need actual review evidence.
                     if record.get("status") not in {"pass", "fail"} or not text_value(record.get("method")) or not isinstance(record.get("artifacts"), list) or not record["artifacts"]:
-                        issues.append(f"{check['id']}: completed trial needs reviewed evidence")
+                        issues.append(f"{required['id']}: completed trial needs reviewed evidence")
                     else:
-                        issues.extend(error for item in record["artifacts"] if (error := check_artifact(item, root)))
-                    if check["area"] != "art" and record.get("status") == "fail":
-                        gate_failures.append(check["id"])
-                gate_failures.extend(issue for issue in assessment["blockers"] if issue.startswith("missing requested format:") or issue == "no delivery files registered")
+                        issues.extend(error for item in record["artifacts"] if (error := check(item)))
+                gate_failures = evaluation.failed_gate_labels()
             previews = trial.get("previews")
             if not isinstance(previews, dict) or set(previews) != set(quality["protocol"]["views"]):
                 issues.append("trial must supply every fixed comparison view")
@@ -512,7 +558,7 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
                 for item in previews.values():
                     if not isinstance(item, dict) or not text_value(item.get("path")) or Path(item["path"]).suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
                         issues.append("comparison previews must be image artifacts")
-                    elif error := check_artifact(item, root):
+                    elif error := check(item):
                         issues.append(error)
             if not isinstance(scores, dict) or set(scores) != set(dimensions):
                 issues.append("trial scores must cover every quality dimension")
@@ -539,8 +585,8 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
             decision = "discard"
         else:
             differences = [scores[key]["value"] - best["scores"][key]["value"] for key in dimensions]
-            previous = _assess_contract(request, best["evidence"], root)
-            repaired_gate = any(c["area"] != "art" and c["declared_status"] == "fail" for c in previous["checks"]) or any(issue.startswith("missing requested format:") for issue in previous["blockers"])
+            # 前一個 best 若有任何 gate 失敗，分數持平但修好 gate 也值得保留。
+            repaired_gate = bool(evaluations[best["id"]].gate_failures)
             if min(differences) >= 0 and max(differences) > 0:
                 best = trial
                 decision = "keep_for_iteration"
@@ -552,7 +598,7 @@ def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
         results.append({"id": trial["id"], "decision": decision, "issues": issues, "failed_gates": gate_failures})
     target_met = bool(best) and not blockers and all(best["scores"][key]["value"] >= dimension["target"] for key, dimension in dimensions.items())
     if target_met:
-        target_met = not _assess_contract(request, best["evidence"], root)["blockers"]
+        target_met = not evaluations[best["id"]].blockers()
     exhausted = bool(trials) and (len(trials) - 1 >= max_trials or elapsed >= budget["total_seconds"])
     return {
         "mode": "declared_quality_comparison_only", "request_id": request["id"],
