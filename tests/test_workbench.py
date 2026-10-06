@@ -145,6 +145,29 @@ class RequestTests(unittest.TestCase):
         self.assertEqual(workbench.search_library(index, "sword", "changshan-longdan"), [])
 
 
+class CatalogLinkAndLedgerTests(unittest.TestCase):
+    def test_catalog_asset_id_is_optional_asset_id(self):
+        request = specified()
+        self.assertEqual(workbench.validate_request(request), [])
+        request["catalog_asset_id"] = "evoloot.weapon.iron_sword_neutral"
+        self.assertEqual(workbench.validate_request(request), [])
+        for value in ("Bad Id", "a..b", 7):
+            request["catalog_asset_id"] = value
+            with self.subTest(value=value):
+                self.assertIn("invalid catalog_asset_id", workbench.validate_request(request))
+
+    def test_ledger_view_lists_request_history_and_blockers(self):
+        from test_ledger import Workspace
+        with tempfile.TemporaryDirectory() as directory:
+            ws = Workspace(Path(directory).resolve())
+            ws.hyper3d("op-old", "downloaded", ws.request("rock-r01"))
+            ws.hyper3d("op-other", "unknown", ws.request("tree-r01"))
+            view = workbench.ledger_view("rock-r01", ws.root)
+        self.assertEqual([op["operation_id"] for op in view["operations_for_request"]], ["op-old"])
+        self.assertEqual([op["operation_id"] for op in view["blocking"]], ["op-other"])
+        self.assertTrue(view["planning_blocked"])
+
+
 class DeprecatedAliasTests(unittest.TestCase):
     """codex/art-quality-loop 的 RO 腳本仍匯入這些名稱；遷移完成前不得移除。"""
 

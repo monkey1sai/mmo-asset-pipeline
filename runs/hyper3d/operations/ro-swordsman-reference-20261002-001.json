@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "source": "legacy_import",
+  "operation_id": "ro-swordsman-reference-20261002-001",
+  "state": "downloaded",
+  "request_id": "ro-swordsman-combo",
+  "catalog_asset_id": null,
+  "task_uuid": "7120b25b-c2af-4393-b0b0-0bbc809fc11a",
+  "consumed_credits": 0.5,
+  "evidence": [
+    {
+      "path": "runs/ro-swordsman-api-prepared-20261002.json",
+      "sha256": "e0eb109b3efcef4b1d7a4e2cc258f865bee42501af9efd8b8da2a36993eb9361"
+    },
+    {
+      "path": "runs/ro-swordsman-api-submitted-20261002.json",
+      "sha256": "24914dbe8fe09902583eaf8613502b3b8eb049bad7c77dc2026481192338d2e7"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r003/prior-live-status.json",
+      "sha256": "b5cbdcd42def89f9cd233c2d5fe130057c2fa9a1e344ad3f36abf24d72d5abc2"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo/status.md",
+      "sha256": "886f9d89b12b6c32785dae3e055769ae41f9e0e6a3fc1f11a0ada1d91e809783"
+    }
+  ],
+  "note": "原帳停在 submitted；服務端 Done（prior-live-status 2026-10-02 14:56:53 UTC）且 status.md 記錄已下載、consumed=0.5，依證據校正為 downloaded。原檔不改寫。",
+  "imported_utc": "2026-10-06T00:00:00+00:00"
+}

@@ -16,7 +16,7 @@ description: "製作、修訂或提升本 repo 的 3D 美術資產品質：整�
 | 情境 | 讀取來源 |
 | --- | --- |
 | 新需求／修訂 | `requests/`、`library/index.json`、相關資產與 QA；有指定客戶才讀 `projects/<id>.json` |
-| 批量需求／月訂 | `catalog/assets.json`、`catalog/monthly-policy.json`、相關 `runs/*.json`，及 [產製流程](../../../docs/production-runbook.md) |
+| 批量需求／月訂 | `catalog/assets.json`、`catalog/monthly-policy.json`、Operation ledger `runs/hyper3d/operations/`，及 [產製流程](../../../docs/production-runbook.md) |
 | 實際製作工具 | [能力登記](../../../tools/capabilities.json)，再核對當下可用工具與版本 |
 | 驗收／交付 | [證據模板](../../../templates/acceptance-evidence.json)、[交付包規範](../../../deliveries/README.md)、[資產保存](../../../docs/asset-storage.md) |
 | 新製作／品質修訂 | [品質實驗流程](../../../docs/art-quality-loop.md)、[品質契約模板](../../../templates/quality-contract.json)、[實驗紀錄模板](../../../templates/quality-ledger.json) |

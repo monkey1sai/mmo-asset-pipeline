@@ -6,7 +6,10 @@ import io
 import json
 from pathlib import Path
 import struct
+import tempfile
 import unittest
+
+from test_ledger import Workspace
 
 spec = importlib.util.spec_from_file_location("pipeline", Path(__file__).resolve().parents[1] / "scripts" / "pipeline.py")
 pipeline = importlib.util.module_from_spec(spec)
@@ -63,15 +66,6 @@ class PlanningTests(unittest.TestCase):
         data["assets"][0]["demand"] = "reuse"
         self.assertEqual(pipeline.make_plan(data, Decimal("1"), Decimal("0.5"), set())["selected_count"], 0)
 
-    def test_unknown_submission_reserved(self):
-        runs = [{"operations": [{"operation_id": "unique", "asset_id": "test-prop", "status": "unknown"}]}]
-        self.assertEqual(pipeline.reserved_assets(runs), {"test-prop"})
-
-    def test_duplicate_operation_fails_closed(self):
-        runs = [{"operations": [{"operation_id": "dup", "asset_id": "one", "status": "submitted"}, {"operation_id": "dup", "asset_id": "two", "status": "submitted"}]}]
-        with self.assertRaises(ValueError):
-            pipeline.reserved_assets(runs)
-
     def test_budget_boundary(self):
         plan = pipeline.make_plan(catalog(), Decimal("0.49"), Decimal("0.5"), set())
         self.assertEqual(plan["selected_count"], 0)
@@ -121,22 +115,58 @@ class PlanningTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unknown project"):
             pipeline.make_plan(catalog(), Decimal("1"), Decimal("0.5"), set(), "missing-customer")
 
-    def test_delivery_and_accepted_states_stay_reserved(self):
-        for status in ("delivered", "art_accepted", "technical_accepted"):
-            runs = [{"operations": [{"operation_id": "one", "asset_id": "test-prop", "status": status}]}]
-            reserved = pipeline.reserved_assets(runs)
-            self.assertEqual(pipeline.make_plan(catalog(), Decimal("1"), Decimal("0.5"), reserved)["selected_count"], 0)
 
-    def test_pending_completed_and_failed_need_review_before_replanning(self):
-        for status in ("pending", "completed", "failed", "cancelled"):
-            runs = [{"operations": [{"operation_id": "one", "asset_id": "test-prop", "status": status}]}]
-            self.assertEqual(pipeline.reserved_assets(runs), {"test-prop"})
 
-    def test_unknown_or_missing_status_fails_closed(self):
-        for status in (None, "unexpected", []):
-            runs = [{"operations": [{"operation_id": "one", "asset_id": "test-prop", "status": status}]}]
-            with self.assertRaisesRegex(ValueError, "status"):
-                pipeline.reserved_assets(runs)
+class WorkspacePlanTests(unittest.TestCase):
+    """plan／validate 經由 Operation ledger 判斷保留與阻擋；合成紀錄，非實際付費操作。"""
+
+    def setUp(self):
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        self.ws = Workspace(Path(directory.name).resolve())
+        self.ws.write("catalog/assets.json", catalog())
+
+    def plan(self):
+        return pipeline.plan_workspace(self.ws.root, Decimal("1"), Decimal("0.5"))
+
+    def test_unreserved_catalog_asset_is_selected(self):
+        self.assertEqual(self.plan()["selected_count"], 1)
+
+    def test_legacy_import_reserves_catalog_asset(self):
+        self.ws.legacy("bootstrap-test-prop", "downloaded", catalog_asset_id="test-prop")
+        self.assertEqual(self.plan()["selected_count"], 0)
+
+    def test_request_linked_operation_reserves_catalog_asset(self):
+        for state in ("downloaded", "failed", "cancelled"):
+            with self.subTest(state=state):
+                self.ws.hyper3d("op-1", state, self.ws.request("prop-r01", "test-prop"))
+                self.assertEqual(self.plan()["selected_count"], 0)
+
+    def test_pending_unknown_or_invalid_operation_stops_planning(self):
+        request = self.ws.request("prop-r01")
+        for name, write in (("op-pending", lambda: self.ws.hyper3d("op-pending", "pending", request)),
+                            ("op-unknown", lambda: self.ws.hyper3d("op-unknown", "unknown", request)),
+                            ("garbled", lambda: self.ws.write("runs/hyper3d/operations/garbled.json", "{"))):
+            with self.subTest(name=name):
+                write()
+                with self.assertRaisesRegex(ValueError, f"operation ledger blocks planning: .*{name}"):
+                    self.plan()
+                (self.ws.root / f"runs/hyper3d/operations/{name}.json").unlink()
+
+    def test_legacy_runs_operations_are_not_a_ledger(self):
+        # Q2：runs/*.json 舊格式已匯入帳本；plan 不再讀取，避免兩本帳。
+        self.ws.write("runs/2026-10-02-bootstrap.json", {"operations": [{"operation_id": "x", "asset_id": "test-prop", "status": "unknown"}]})
+        self.assertEqual(self.plan()["selected_count"], 1)
+
+    def test_validate_cross_checks_catalog_links_and_evidence(self):
+        self.assertEqual(pipeline.validate_workspace(self.ws.root), [])
+        self.ws.request("orphan-r01", "missing.catalog.asset")
+        self.ws.legacy("bootstrap-ghost", "downloaded", catalog_asset_id="ghost.asset")
+        self.ws.write("runs/evidence.json", {"proof": "edited"})
+        issues = pipeline.validate_workspace(self.ws.root)
+        self.assertIn("request orphan-r01: catalog_asset_id not in catalog: missing.catalog.asset", issues)
+        self.assertIn("operation bootstrap-ghost: catalog_asset_id not in catalog: ghost.asset", issues)
+        self.assertIn("bootstrap-ghost: evidence hash mismatch: runs/evidence.json", issues)
 
 
 class GlbTests(unittest.TestCase):

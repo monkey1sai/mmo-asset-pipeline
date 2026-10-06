@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "source": "legacy_import",
+  "operation_id": "legacy-task-94016052",
+  "state": "complete",
+  "request_id": null,
+  "catalog_asset_id": null,
+  "task_uuid": "94016052-d332-482a-adee-5b8bd9a83ea4",
+  "consumed_credits": null,
+  "evidence": [
+    {
+      "path": "runs/ro-swordsman-prior-api-status.json",
+      "sha256": "a3c7a98cbc76328f61f285e9cd178bbca6c71cbbabfe8676017bc16a81030e69"
+    },
+    {
+      "path": "runs/ro-swordsman-api-submission-authority-20261002.json",
+      "sha256": "45194fa4e5337c718b0cd47a5ba28c79c3671fe5408834dad78a6d688c217960"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r003/prior-live-status.json",
+      "sha256": "b5cbdcd42def89f9cd233c2d5fe130057c2fa9a1e344ad3f36abf24d72d5abc2"
+    }
+  ],
+  "note": "原始紀錄沒有 operation ID；此 ID 為匯入時指派。服務端七項 Done、未失敗；無下載與扣點證據，consumed 未知。",
+  "imported_utc": "2026-10-06T00:00:00+00:00"
+}

@@ -46,6 +46,13 @@ v1 plan 以檔案 bytes 綁定，submit 在任何扣點前回報 `PLAN_SCHEMA_OU
 文法（可含點分段，不得含 `..` 或以 `.` 結尾）；spec 內路徑須為 repo 相對 POSIX 路徑，
 用語見 [CONTEXT.md](../CONTEXT.md)。
 
+`runs/hyper3d/operations/` 是唯一的 Operation ledger（`scripts/ledger.py` 只讀判斷，
+client 是唯一寫入者）。prepare 要求需求檔有合法 `id`（Asset ID），選填
+`catalog_asset_id` 亦須合法；帳本經 plan → 需求檔推導兩者。submit 前任何 pending、
+unknown 或無法推導／辨識的紀錄都回報 `UNRESOLVED_OPERATION_NEVER_RESUBMIT`。
+早於本 client 的操作以 `source: legacy_import` 匯入紀錄登記（附原始證據路徑與雜湊，
+原檔不改寫）；這類紀錄的 status／download 回報 `LEGACY_IMPORT_READ_ONLY`。
+
 合法任務 UUID 會先獨立保存；缺少或無效 consumed 只將 `cost_state` 標成
 `unverified_missing_or_invalid_consumed`，保留正常狀態查詢能力，不當作零成本。
 若提交後私密狀態寫入失敗，公開 unknown 紀錄仍保留已知 UUID、已核實成本與

@@ -49,6 +49,6 @@ python -B -m unittest discover -s tests -v
 
 交付包在 `deliveries/<request-id>/<version>/`，包含模型、相依材料／貼圖、說明、manifest、預覽和驗收紀錄。素材庫索引記錄版本、來源、檔案、已驗／未驗與重用條件。指定遊戲接入時才依客戶契約及真實版本測試，不自行改遊戲規則或碰撞。
 
-每次重新開始都核對即時餘額、重置週期、需求、素材庫與 runs。`pipeline plan` 排除重用及保留操作，但不是外部交易鎖。月額度按進行中交付、已規劃需求、有用途的素材庫資產配置；剩餘額度大於需求時回報缺口，補足設計與後製能力，不無用途重做。
+每次重新開始都核對即時餘額、重置週期、需求、素材庫與 runs。`pipeline plan` 排除重用及 Operation ledger（`runs/hyper3d/operations/`）保留的 catalog 資產；帳上任何 pending、unknown 或無效紀錄使整份計畫停止。帳本不是外部交易鎖；`pipeline validate` 另核對需求／帳本的 catalog 連結與匯入紀錄證據雜湊。月額度按進行中交付、已規劃需求、有用途的素材庫資產配置；剩餘額度大於需求時回報缺口，補足設計與後製能力，不無用途重做。
 
 正式排程需另有具體頻率、上限、重置依據及持續扣點授權。目前沒有月排程或背景生成。commit、Git／LFS 同步與全新 clone 還原依當次使用者授權及 `runs/qa/git-portability-20261002.json` 證據判讀；本機 LFS 物件不能當成遠端備份證據。

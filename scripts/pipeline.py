@@ -13,12 +13,12 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import identity  # noqa: E402
+import ledger  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 HEAD = re.compile(r"[a-f0-9]{40}\Z")
 CATEGORIES = {"character", "creature", "weapon", "building", "environment", "prop"}
 DEMANDS = {"source_backed", "inferred", "reuse"}
-RESERVED = {"prepared", "submitted", "pending", "queued", "processing", "unknown", "completed", "generated", "downloaded", "technical_checked", "game_ready", "art_accepted", "technical_accepted", "delivered", "failed", "cancelled"}
 REQUIRED = {"id", "project", "name", "category", "priority", "demand", "prompt", "target_triangles", "texture_px", "size_m", "pivot", "requires_rig", "postprocess", "sources"}
 
 
@@ -101,28 +101,6 @@ def credit_amount(value: str | float | int) -> Decimal:
     if not amount.is_finite() or amount < 0:
         raise ValueError("credits must be a finite nonnegative number")
     return amount
-
-
-def reserved_assets(runs: list[dict]) -> set[str]:
-    reserved: set[str] = set()
-    operations: set[str] = set()
-    for run in runs:
-        if not isinstance(run, dict) or not isinstance(run.get("operations", []), list):
-            raise ValueError("invalid run operations")
-        for operation in run.get("operations", []):
-            if not isinstance(operation, dict):
-                raise ValueError("operation must be an object")
-            oid = operation.get("operation_id")
-            if not isinstance(oid, str) or not oid or oid in operations:
-                raise ValueError("missing or duplicate operation_id in runs")
-            operations.add(oid)
-            if not isinstance(operation.get("status"), str) or operation["status"] not in RESERVED:
-                raise ValueError("missing or unknown operation status; review required")
-            if not identity.is_asset_id(operation.get("asset_id")):
-                raise ValueError("missing or invalid operation asset_id")
-            # failed/cancelled 也保留；重做需人工規劃新修訂，不由離線 plan 自行解除。
-            reserved.add(operation["asset_id"])
-    return reserved
 
 
 def make_plan(catalog: dict, budget: Decimal, cost: Decimal, reserved: set[str], project: str | None = None) -> dict:
@@ -236,6 +214,41 @@ def inspect_glb(data: bytes) -> dict:
     }
 
 
+def read_catalog(root: Path) -> dict:
+    catalog = identity.read_json(identity.recorded_path(root, "catalog/assets.json"))
+    errors = validate_catalog(catalog)
+    if errors:
+        raise ValueError("; ".join(errors))
+    return catalog
+
+
+def plan_workspace(root: Path, budget: Decimal, cost: Decimal, project: str | None = None) -> dict:
+    """以 Operation ledger 決定保留；任何阻擋紀錄使整份離線計畫停止，不產生部分結果。"""
+    catalog = read_catalog(root)
+    entries = ledger.load(root)
+    blocking = entries.blocking()
+    if blocking:
+        raise ValueError("operation ledger blocks planning: " + ", ".join(f"{op.operation_id}={op.problem or op.state}" for op in blocking))
+    return make_plan(catalog, budget, cost, entries.reserved_catalog_assets(), project)
+
+
+def validate_workspace(root: Path) -> list[str]:
+    """交叉核對需求與帳本的 catalog 連結，以及匯入紀錄的證據雜湊。"""
+    known = {asset["id"] for asset in read_catalog(root)["assets"]}
+    issues = []
+    for path in sorted((root / "requests").rglob("*.json")):
+        request = identity.read_json(path)
+        link = request.get("catalog_asset_id")
+        if link is not None and link not in known:
+            issues.append(f"request {request.get('id')}: catalog_asset_id not in catalog: {link}")
+    entries = ledger.load(root)
+    for op in entries.operations:
+        if op.catalog_asset_id is not None and op.catalog_asset_id not in known:
+            issues.append(f"operation {op.operation_id}: catalog_asset_id not in catalog: {op.catalog_asset_id}")
+    issues.extend(f"operation {op.operation_id}: {op.problem}" for op in entries.blocking() if op.problem)
+    return issues + entries.verify_evidence()
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="離線模型需求規劃與 GLB 清點（不扣點、不連網）")
     commands = parser.add_subparsers(dest="command", required=True)
@@ -253,15 +266,15 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "inspect":
             result = inspect_glb(identity.command_path(ROOT, args.path).read_bytes())
         else:
-            catalog = identity.read_json(identity.command_path(ROOT, "catalog/assets.json"))
-            errors = validate_catalog(catalog)
-            if errors:
-                raise ValueError("; ".join(errors))
+            catalog = read_catalog(ROOT)
             if args.command == "validate":
-                result = {"status": "valid", "assets": len(catalog["assets"]), "projects": dict(Counter(a["project"] or "standalone" for a in catalog["assets"])), "note": "schema verified; source freshness and runtime not checked"}
+                issues = validate_workspace(ROOT)
+                if issues:
+                    raise ValueError("; ".join(issues))
+                result = {"status": "valid", "assets": len(catalog["assets"]), "projects": dict(Counter(a["project"] or "standalone" for a in catalog["assets"])),
+                          "operations": len(ledger.load(ROOT).operations), "note": "schema, catalog links and ledger evidence verified; source freshness and runtime not checked"}
             elif args.command == "plan":
-                runs = [identity.read_json(identity.command_path(ROOT, str(p))) for p in sorted(identity.command_path(ROOT, "runs").glob("*.json"))]
-                result = make_plan(catalog, credit_amount(args.budget), credit_amount(args.unit_cost), reserved_assets(runs), args.project)
+                result = plan_workspace(ROOT, credit_amount(args.budget), credit_amount(args.unit_cost), args.project)
             else:
                 result = next((a for a in catalog["assets"] if a["id"] == args.asset_id), None)
                 if result is None:

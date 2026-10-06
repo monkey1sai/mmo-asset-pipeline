@@ -20,6 +20,7 @@ import uuid
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import identity  # noqa: E402
+import ledger  # noqa: E402
 
 PROVIDER = Path.home() / ".codex/tools/hyper3d-api/rodin_api.py"
 PROVIDER_SHA256 = "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a"
@@ -229,6 +230,11 @@ class Client:
             raise SafeError("NEW_RAW_OUTPUT_REQUIRED")
         params, estimate = parameters(spec["parameters"], len(images))
         request_data = read_json(request)
+        # 帳本以 plan → 需求檔推導 request_id／catalog_asset_id；無法推導就不產生操作。
+        if not identity.is_asset_id(request_data.get("id")):
+            raise SafeError("REQUEST_ID_INVALID")
+        if request_data.get("catalog_asset_id") is not None and not identity.is_asset_id(request_data["catalog_asset_id"]):
+            raise SafeError("CATALOG_ASSET_ID_INVALID")
         plan = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "created_utc": now(),
                 "request": {"path": spec["request"], "request_sha256": identity.json_digest(request_data), "quality_sha256": identity.json_digest(request_data.get("quality"))},
                 "images": [self.image(x) for x in images], "output_directory": spec["output_directory"],
@@ -292,12 +298,12 @@ class Client:
             record_path = self.record_path(operation)
             if record_path.exists() or private.exists():
                 raise SafeError("OPERATION_ALREADY_EXISTS_NEVER_RESUBMIT")
-            for path in self.operations.glob("*.json"):
-                other = read_json(path)
-                if other.get("state") in {"pending", "unknown"}:
-                    raise SafeError("UNRESOLVED_OPERATION_NEVER_RESUBMIT")
-                if other.get("fingerprint") == plan["fingerprint"] and other.get("state") in ACTIVE:
-                    raise SafeError("MATCHING_ACTIVE_OPERATION_NEVER_RESUBMIT")
+            entries = ledger.load(self.root)
+            # pending／unknown 及任何無法辨識的紀錄都先由人工核對，絕不自動重送。
+            if entries.blocking():
+                raise SafeError("UNRESOLVED_OPERATION_NEVER_RESUBMIT")
+            if any(op.fingerprint == plan["fingerprint"] and op.state in ACTIVE for op in entries.operations):
+                raise SafeError("MATCHING_ACTIVE_OPERATION_NEVER_RESUBMIT")
             if not private.parent.is_dir():
                 raise SafeError("PRIVATE_STATE_DIRECTORY_UNAVAILABLE")
             body, content_type = self.multipart(plan)
@@ -369,10 +375,17 @@ class Client:
             raise SafeError("PRIVATE_TASK_STATE_BINDING_INVALID")
         return value
 
+    def client_record(self, path):
+        record = read_json(path)
+        if record.get("source") == "legacy_import":
+            # 匯入紀錄沒有 plan 與私密狀態，只供帳本判斷；不得據此查詢或下載。
+            raise SafeError("LEGACY_IMPORT_READ_ONLY")
+        return record
+
     def status(self, operation):
         with self.lock():
             path = self.record_path(operation)
-            record = read_json(path)
+            record = self.client_record(path)
             if record["state"] in {"downloaded", "download_partial"}:
                 # Generation is already known complete at download entry. Never
                 # reset download progress or make a partial attempt retryable.
@@ -399,7 +412,7 @@ class Client:
     def download(self, operation):
         with self.lock():
             path = self.record_path(operation)
-            record = read_json(path)
+            record = self.client_record(path)
             if record["state"] != "complete":
                 raise SafeError("TASK_NOT_COMPLETE_OR_DOWNLOAD_ALREADY_ATTEMPTED")
             self.private_read(record)
