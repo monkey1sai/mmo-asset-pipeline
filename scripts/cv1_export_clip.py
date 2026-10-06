@@ -21,7 +21,7 @@ import math
 import sys
 
 import bpy
-from mathutils import Quaternion
+from mathutils import Matrix, Quaternion, Vector
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -102,24 +102,50 @@ def apply_helpers():
     return pose
 
 
+SOCKET = config.get("sword_socket")
+BED_SOCKET = (Matrix.Translation(Vector(SOCKET["bed_socket"]["head_m"])) @ Quaternion(SOCKET["bed_socket"]["quaternion_wxyz"]).to_matrix().to_4x4()) if SOCKET else None
+SWORD_KEYED = any(c.data_path.startswith('pose.bones["sword"]') for c in clip_action.fcurves)
+if SOCKET and SWORD_KEYED:
+    raise SystemExit("SOCKETED_CLIP_KEYS_SWORD (a socketed clip's sword follows its socket: hand.R's rest attachment or the bed transform; the exporter strips the channel)")
+if SOCKET and arm.pose.bones["sword"].rotation_mode != "QUATERNION":
+    raise SystemExit("SWORD_ROTATION_MODE_NOT_QUATERNION (the hand-socket reset writes rotation_quaternion)")
+
+
+def place_sword(t):
+    """Socket switch (mixer -> sockets -> helpers -> correctives): on the bed socket the sword bone holds its fixed world
+    transform; on the hand socket it returns to its rest attachment to hand.R (a socketed clip does not key the sword,
+    refused above, and frame_set leaves an unkeyed bone alone, so an earlier bed placement would carry over: GetUp
+    samples the bed first)."""
+    if SOCKET and interaction.socket_at(config, t) == "bed":
+        bpy.context.view_layer.update()
+        arm.pose.bones["sword"].matrix = arm.matrix_world.inverted() @ BED_SOCKET
+    elif SOCKET:
+        sword = arm.pose.bones["sword"]
+        sword.location, sword.rotation_quaternion, sword.scale = (0.0, 0.0, 0.0), (1.0, 0.0, 0.0, 0.0), (1.0, 1.0, 1.0)
+
+
 def go(t):
     frame = math.floor(t)
     scene.frame_set(frame, subframe=t - frame)
+    place_sword(t)
     return apply_helpers()
 
 
 # Working action: the clip's keys plus every bone (helpers from their rule) keyed on each integer frame 0..last,
 # so the exporter writes the clip unchanged and the helpers carry their evaluated value in the baked variant.
 arm.animation_data.action = clip_action
-poses = {}
+poses, matrices = {}, {}
 for f in range(last + 1):
-    poses[f] = go(f)
-    poses[f] = {pb.name: tuple(pb.rotation_quaternion) for pb in arm.pose.bones}
+    go(f)
+    # Location and scale travel with the rotation: the pelvis carries the clip's root motion (bob, sway, lying down).
+    poses[f] = {pb.name: (tuple(pb.rotation_quaternion), tuple(pb.location), tuple(pb.scale)) for pb in arm.pose.bones}
+    matrices[f] = {pb.name: pb.matrix.copy() for pb in arm.pose.bones}
 work = bpy.data.actions.new(config["clip"] + "__export")
 arm.animation_data.action = work
 for f in range(last + 1):
     for pb in arm.pose.bones:
-        pb.rotation_quaternion = Quaternion(poses[f][pb.name])
+        rotation, location, scale = poses[f][pb.name]
+        pb.rotation_quaternion, pb.location, pb.scale = Quaternion(rotation), location, scale
         pb.keyframe_insert("rotation_quaternion", frame=f)
         pb.keyframe_insert("location", frame=f)
         pb.keyframe_insert("scale", frame=f)
@@ -131,6 +157,17 @@ for curve in work.fcurves:
 work.name = config["clip"]
 clip_action.name = config["clip"] + "__source"
 scene.frame_start, scene.frame_end = 0, last
+# Self-check: the working action must reproduce every bone of the clip (plus helpers) on every integer frame.
+worst = 0.0
+for f in range(last + 1):
+    scene.frame_set(f)
+    bpy.context.view_layer.update()
+    for pb in arm.pose.bones:
+        if pb.name in HELPERS:
+            continue
+        worst = max(worst, max(abs(a - b) for row_a, row_b in zip(pb.matrix, matrices[f][pb.name]) for a, b in zip(row_a, row_b)))
+if worst > 1e-6:
+    raise SystemExit(f"EXPORT_ACTION_DIFFERS_FROM_CLIP {worst}")
 
 EXPORT = dict(export_format="GLB", use_selection=True, export_yup=True, export_apply=False, export_skins=True, export_all_influences=False,
               export_def_bones=False, export_rest_position_armature=True, export_morph=True, export_morph_normal=True,
@@ -209,10 +246,19 @@ for t in half:
 
 # ---- blend sample: two paused poses of the clip at 0.5 / 0.5, as a mixer combines two paused actions ----
 frame_a, frame_b = 0, (last + 1) // 2
+if SOCKET:
+    # Both blended frames in the same socket, so the runtime places the sword the same way (no blend across a switch).
+    while frame_b > 1 and interaction.socket_at(config, frame_b) != interaction.socket_at(config, frame_a):
+        frame_b -= 1
 arm.animation_data.action = None
 for pb in arm.pose.bones:
     if pb.name not in HELPERS:
-        pb.rotation_quaternion = Quaternion(poses[frame_a][pb.name]).slerp(Quaternion(poses[frame_b][pb.name]), 0.5)
+        (rot_a, loc_a, scale_a), (rot_b, loc_b, scale_b) = poses[frame_a][pb.name], poses[frame_b][pb.name]
+        # A mixer slerps quaternions and blends translation and scale linearly.
+        pb.rotation_quaternion = Quaternion(rot_a).slerp(Quaternion(rot_b), 0.5)
+        pb.location = [(a + b) / 2 for a, b in zip(loc_a, loc_b)]
+        pb.scale = [(a + b) / 2 for a, b in zip(scale_a, scale_b)]
+place_sword(frame_a)
 pose = apply_helpers()
 blend_state = {k: 0.5 * state_at(frame_a)[k] + 0.5 * state_at(frame_b)[k] for k in state_keys}
 info = apply_rules(pose, blend_state)
@@ -236,6 +282,13 @@ reference = {
     "binary": {**artifact(bin_path), "dtype": "float64 little-endian", "values_per_vertex": 3}, "mesh_layout": layout,
     "frames": frames, "blocks": blocks, "helper_bones": HELPERS, "clip": config["clip"], "clip_frames": config["frames"], "loop": config["loop"],
     "helper_channels": "keyed in both GLBs at export; strip them from the runtime-owner GLB with scripts/cv1_strip_bone_channels.py so the evaluator is their only writer",
+    "sword_socket": None if not SOCKET else {
+        "initial": SOCKET["initial"], "bed_socket": SOCKET["bed_socket"],
+        "switches": [dict(s, frame=next(e["frame"] for e in config["events"] if e["name"] == s["event"])) for s in SOCKET["switches"]],
+        "bed_socket_matrix_blender": [list(row) for row in BED_SOCKET],
+        "sword_rest_matrix_blender": [list(row) for row in arm.matrix_world @ arm.data.bones["sword"].matrix_local],
+        "blend_frames": [frame_a, frame_b],
+        "channel": "sword bone keyed in both GLBs at export; strip it from the runtime-owner GLB so the runtime places the sword from the socket events (mixer -> sockets -> helpers -> correctives)"},
     "scope": "Sampled times of one clip (integer frames every --every frames and the listed half frames) and one blend sample; only these times are claimed.",
 }
 (qa_dir / "blender-reference.json").write_text(json.dumps(reference, ensure_ascii=False, indent=1) + chr(10), encoding="utf-8", newline=chr(10))

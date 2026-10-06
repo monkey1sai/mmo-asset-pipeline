@@ -3,7 +3,7 @@
 // Usage: candidate.html?manifest=/runs/qa/.../runtime-manifest.json
 import * as THREE from 'three';
 import { evaluate, ownershipConflicts, helperConflicts } from './cv1-pose-rules.js';
-import { fetchBytes, asJson, describe, save, sha256Of, loadModel, applyCorrectives, clearCorrectives, currentInfluences, maxAbsDifference, measure } from './cv1-runtime.js';
+import { fetchBytes, asJson, describe, save, sha256Of, loadModel, applyCorrectives, clearCorrectives, currentInfluences, maxAbsDifference, measure, prepareSocket, applySocket } from './cv1-runtime.js';
 
 const $ = (id) => document.getElementById(id);
 const canvas = $('canvas');
@@ -44,8 +44,10 @@ async function capture(name) {
 }
 
 async function run(app) {
-  const { manifest, reference, values, rules, inputs, runtime, baked } = app;
+  const { manifest, reference, values, rules, inputs, runtime, baked, socket } = app;
   const gate = manifest.gate_m;
+  // Mixer, then the sword socket from the events (clips without sockets keep the hand attachment), then the evaluator.
+  const play = (frame) => { runtime.setFrame(frame); applySocket(runtime, socket, frame); };
   const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'z').toLowerCase();
   const started = performance.now();
   const frameBlocks = reference.blocks.filter((b) => b.label.startsWith('all/frame-'));
@@ -55,7 +57,7 @@ async function run(app) {
   const runtimeSamples = [];
   const poseByFrame = {};
   for (const block of frameBlocks) {
-    runtime.setFrame(block.frame);
+    play(block.frame);
     poseByFrame[block.frame] = runtime.poseRel();
     const evaluated = applyCorrectives(runtime, rules, block.state);
     runtimeSamples.push({ frame: block.frame, motion: block.motion, level: block.level, state: block.state,
@@ -67,6 +69,7 @@ async function run(app) {
 
   // 2. two paused actions at 0.5 / 0.5: the evaluator must read the blended pose
   runtime.setBlend(blendBlock.frames[0], blendBlock.frames[1], blendBlock.blend);
+  applySocket(runtime, socket, blendBlock.frames[0]); // both blended frames share one socket (export picks them so)
   const blendEvaluated = applyCorrectives(runtime, rules, blendBlock.state);
   const blend = { frames: blendBlock.frames, state: blendBlock.state,
     driver_max_abs_difference_vs_blender: maxAbsDifference(blendEvaluated.drivers, blendBlock.drivers),
@@ -79,12 +82,22 @@ async function run(app) {
   // neighbouring sample can be too close to tell apart, which would test nothing.
   const weightDistance = (a, b) => Object.keys(a.morph_weights).reduce((s, k) => s + Math.abs(a.morph_weights[k] - (b.morph_weights[k] ?? 0)), 0);
   const previous = frameBlocks.filter((b) => b !== heaviest).reduce((a, b) => (weightDistance(b, heaviest) > weightDistance(a, heaviest) ? b : a));
-  runtime.setFrame(heaviest.frame);
+  play(heaviest.frame);
   clearCorrectives(runtime, rules);
   const nc1 = measure(runtime, reference, values, heaviest, gate);
-  runtime.setFrame(heaviest.frame);
+  play(heaviest.frame);
   applyCorrectives(runtime, rules, heaviest.state, poseByFrame[previous.frame]);
-  const nc2 = measure(runtime, reference, values, heaviest, gate);
+  let nc2 = measure(runtime, reference, values, heaviest, gate);
+  let staleSource = previous.frame;
+  if (nc2.max_error_m <= gate && weightDistance(previous, heaviest) < 0.05) {
+    // A near-static clip (e.g. a sleep loop) has no sampled pose different enough to test with; the rest pose is then
+    // the stale input, so the control still shows that a stale pose would be caught.
+    const restPose = Object.fromEntries(Object.keys(runtime.restLocal).map((name) => [name, [1, 0, 0, 0]]));
+    play(heaviest.frame);
+    applyCorrectives(runtime, rules, heaviest.state, restPose);
+    nc2 = measure(runtime, reference, values, heaviest, gate);
+    staleSource = `rest (sampled frames differ by ${weightDistance(previous, heaviest).toExponential(2)} total corrective weight)`;
+  }
   const nc3 = ownershipConflicts(rules, baked.animatedMorphChannels);
   const stateKey = Object.keys(heaviest.state)[0];
   let nc4 = { raised: false, message: null };
@@ -106,7 +119,7 @@ async function run(app) {
   }
   const negativeControls = {
     NC1_evaluator_off: { frame: heaviest.frame, motion: heaviest.motion, level: heaviest.level, detected: nc1.max_error_m > gate, max_error_m: nc1.max_error_m, over_gate: nc1.over_gate, worst: nc1.worst },
-    NC2_stale_pose: { frame: heaviest.frame, stale_pose_from_frame: previous.frame, detected: nc2.max_error_m > gate, max_error_m: nc2.max_error_m, over_gate: nc2.over_gate, worst: nc2.worst },
+    NC2_stale_pose: { frame: heaviest.frame, stale_pose_from_frame: staleSource, detected: nc2.max_error_m > gate, max_error_m: nc2.max_error_m, over_gate: nc2.over_gate, worst: nc2.worst },
     NC3_baked_clip_in_runtime_owner_mode: { detected: nc3.length > 0 || helperConflicts(rules, baked.animatedBones).length > 0, conflicting_channels: nc3.length,
       conflicting_helper_bones: helperConflicts(rules, baked.animatedBones).length },
     NC4_missing_bone: { detected: nc4.raised && /^MISSING_BONE:/.test(nc4.message ?? ''), ...nc4 },
@@ -130,7 +143,7 @@ async function run(app) {
     // Blocks are looked up by frame number: a clip reference samples only some frames.
     const block = frameBlocks.find((b) => b.frame === frame);
     if (!block) throw new Error(`CAPTURE_FRAME_NOT_SAMPLED ${frame}`);
-    runtime.setFrame(frame);
+    play(frame);
     applyCorrectives(runtime, rules, block.state);
     setCamera(view, runtime);
     images.push({ frame, view, image: await capture(`${stamp}-frame-${String(frame).padStart(3, '0')}-${view}.png`) });
@@ -150,11 +163,13 @@ async function run(app) {
     runtime_owner_clip_has_no_owned_morph_channel: ownership.length === 0,
     runtime_owner_clip_has_no_helper_bone_channel: helperOwnership.length === 0,
     negative_controls_all_detected: Object.values(negativeControls).every((c) => c.detected),
+    // With sockets the runtime owns the sword placement: its clip must not animate the sword joint.
+    ...(socket ? { runtime_owner_clip_has_no_sword_channel: !runtime.animatedBones.includes('sword') } : {}),
   };
   const result = {
     observed_utc: new Date().toISOString(), run: stamp, check: 'runtime-closed-loop', gate_m: gate, gate_source: manifest.gate_source,
     runtime: { engine: 'three.js', revision: THREE.REVISION, user_agent: navigator.userAgent, webgl_version: gl.getParameter(gl.VERSION), webgl_renderer: debug ? gl.getParameter(debug.UNMASKED_RENDERER_WEBGL) : null },
-    inputs, evaluation_order: ['AnimationMixer.update', 'helper bones follow their sources (rules.helpers)', 'final bone local rotations, rest-relative', 'rule evaluator writes morphTargetInfluences', 'updateMatrixWorld', 'engine morph then skin'],
+    inputs, evaluation_order: ['AnimationMixer.update', 'sword socket from the clip events (manifest.sword_socket; hand attachment otherwise)', 'helper bones follow their sources (rules.helpers)', 'final bone local rotations, rest-relative', 'rule evaluator writes morphTargetInfluences', 'updateMatrixWorld', 'engine morph then skin'],
     measurement: 'SkinnedMesh.getVertexPosition (morph then skin) x matrixWorld, glTF->Blender axes, against the Blender-evaluated position of the same original vertex ID. CPU values, not GPU-frame evidence.',
     clip_key_times_s: runtime.clipKeyTimes, rest_from_inverse_bind_vs_node_default_max_deg: runtime.restDisagreementDeg,
     verdicts, pass: Object.values(verdicts).every(Boolean),
@@ -189,7 +204,9 @@ async function main() {
   const inputs = { manifest: describe(manifestFile), harness, reference: describe(referenceFile), reference_binary: describe(binFile), rules: describe(rulesFile),
                    glb: { runtime_owner: runtime.file, baked_owner: baked.file } };
   const frames = reference.blocks.filter((b) => b.label.startsWith('all/frame-'));
-  const app = { manifest, reference, values, rules, inputs, runtime, baked, busy: false };
+  // Before any mixer update: the socket calibration reads the sword joint at rest.
+  const socket = prepareSocket(runtime, manifest.sword_socket ?? null);
+  const app = { manifest, reference, values, rules, inputs, runtime, baked, socket, busy: false };
   window.cv1 = app;
   scene.add(runtime.root);
   $('frame').max = frames.length - 1;
@@ -199,6 +216,7 @@ async function main() {
     if (app.busy) return;
     const frame = Number($('frame').value), block = frames[frame];
     runtime.setFrame(frame);
+    applySocket(runtime, socket, frame);
     if ($('evaluator').checked) applyCorrectives(runtime, rules, block.state); else clearCorrectives(runtime, rules);
     setCamera($('camera').value, runtime);
     $('frameOut').textContent = frame;
