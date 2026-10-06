@@ -1,0 +1,25 @@
+{
+  "observed_utc": "2026-10-04T01:50:20.292149+00:00",
+  "verdict": "NO_SHIP",
+  "classification": "TEST_FAILURE: fixed absolute IKtargets omitted movingweapontranslation derivative; savedgrip also remains PRODUCT_FAILURE.",
+  "source_defect": "Residual uses handpoint-fixedabsolute target; derivativeweapontranslation changes weapon only, nothandpoint ortarget, so all3translationcolumns arezero.",
+  "actual_evaluations": 83,
+  "full_function_proposals": 11,
+  "derivative_only": 72,
+  "contacts": {
+    "finger1": 3,
+    "finger2": 1,
+    "finger3": 3,
+    "finger4": 0,
+    "thumb": 4
+  },
+  "minimum_edge_ratio": 0.3331058053654164,
+  "original_budget_preserved": true,
+  "next_method": "Move frozen periterationtarget by actualrigid weapon delta forderivative; assert known -translation normalizedJacobian, preserveotherconstraints.",
+  "new_credits": 0,
+  "whole_scores_changed": false,
+  "code": {
+    "path": "scripts/solve_ro_coupled_hand_contact.py",
+    "sha256": "8b05d7eb8803826cf0473515bacf3357b090bd3c0fa11e78db26df3ee0280532"
+  }
+}

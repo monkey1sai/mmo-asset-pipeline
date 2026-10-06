@@ -1,0 +1,26 @@
+{
+ "recorded_utc": "2026-10-05T06:40:05Z",
+ "request": "requests/ro-swordsman-character-v1-r5.json",
+ "state": "draft withdrawn before freezing; never frozen, no baseline registered",
+ "reason": "Calibration of the drafted depth rule (armour contacts no deeper than rest + 2 mm) showed it is stricter than intended and does not help the shoulder: the baseline violates it in 29 of 64 posable motions and the current best build in 24 of 73, mostly where the body bends under static armour (spine, neck, elbows). Moving the pauldrons made armour contacts deeper (shoulder flexion 309 to 634 violating pairs, deepest excess 8.6 to 15.4 mm), and the renders show twisted shoulder geometry instead of a cleaner shoulder.",
+ "evidence": {
+  "baseline": {
+   "path": "runs/qa/ro-swordsman-character-v1-r5/baseline-joint-range-v6-calibration/joint-range-result.json",
+   "sha256": "a53745a1f589a647475f7f82fced643847a7de16d108eb13dcf2f5ca6466c521"
+  },
+  "current_best_b03": {
+   "path": "runs/qa/ro-swordsman-character-v1-r5/calib-b03-static/joint-range-result.json",
+   "sha256": "41dd7d293f340106d1e2429964790c5edd3c7a549369c3a1f1bbcde8a7f228ea"
+  },
+  "moving_pauldrons_c05": {
+   "path": "runs/qa/ro-swordsman-character-v1-r5/calib-c05-moving/joint-range-result.json",
+   "sha256": "d08aa85825c1422cdc01cd3b664879aeea963b1f1e8a4fd1c6d14595c66de410"
+  },
+  "visual": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/c05-vs-b03-shoulders.png",
+   "sha256": "6de0b64f15e50d21f71bd54b5fc67aa6e1a644942718b42c38b4f6bd504634ae"
+  }
+ },
+ "request_file_sha256_at_withdrawal": "5cfc8cf4c90423ea7966f6b10c9fb59c3ac1a187c7614f375b97a9d224b3e509",
+ "active_contract": "requests/ro-swordsman-character-v1-r4.json (frozen, unchanged)"
+}

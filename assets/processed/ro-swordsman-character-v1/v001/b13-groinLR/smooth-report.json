@@ -1,0 +1,67 @@
+{
+ "observed_utc": "2026-10-05T09:34:39.076263+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "1645fc0d333155f14df534fd49c2dec0c456d4776c5a0c5c8ab7dc0ae45e5ced",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "source_sha256_after": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+ "spec": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/crease-smoothing-D.json",
+  "sha256": "1428c8a106e2cfc233eedb25fde8ba30fe7dd3cd31af8dd400ec7921b363bfda"
+ },
+ "rules_in": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b13-groinLR/ro_character_v001_b13-groinLR.blend",
+  "sha256": "918426ae8d244fc7faa61f5596c7fa3a9789fb5efb010011cc2c96b6e960bae3"
+ },
+ "mesh": "SM_RO_core",
+ "vertices_rewritten": 37,
+ "dropped_shape_keys": [
+  "SKC_core_fold_05"
+ ],
+ "channels_after": 46,
+ "regions": [
+  {
+   "name": "groin.L",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.L"
+   ],
+   "seed_vertices": 55,
+   "zone_vertices": 23,
+   "local_centres": 3,
+   "radius_m": 0.045,
+   "vertices_changed": 23,
+   "max_share_change": 0.3098,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "groin.R",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.R"
+   ],
+   "seed_vertices": 49,
+   "zone_vertices": 7,
+   "local_centres": 1,
+   "radius_m": 0.035,
+   "vertices_changed": 7,
+   "max_share_change": 0.2996,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  }
+ ],
+ "scope": "Skin weights of the body mesh inside the named crease zones only; Basis, topology, UVs, other meshes and the r010 hand untouched."
+}

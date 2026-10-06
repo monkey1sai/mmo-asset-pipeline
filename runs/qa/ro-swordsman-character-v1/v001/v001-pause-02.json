@@ -1,0 +1,89 @@
+{
+ "id": "v001",
+ "paused_utc": "2026-10-05T05:15:16Z",
+ "request": "ro-swordsman-character-v1-r2",
+ "intervals": [
+  {
+   "start": "2026-10-05T04:57:13Z",
+   "end": "2026-10-05T05:03:07Z",
+   "seconds": 354
+  },
+  {
+   "start": "2026-10-05T05:07:10Z",
+   "end": "2026-10-05T05:15:16Z",
+   "seconds": 486
+  }
+ ],
+ "active_seconds_total": 840,
+ "trial_seconds_cap": 21600,
+ "status": "paused_waiting_for_user (not in the ledger; no completion or failure claimed)",
+ "current_build": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a06-creases/ro_character_v001_a06-creases.blend",
+  "sha256": "ff670df224ee54c4cae057bceb97214cbeb2679bd3d47f76b0acab740dfcb0a5",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/a06-creases/corrective-rules.json",
+  "joint_range": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/a06-creases/joint-range/joint-range-result.json",
+   "sha256": "b68d83744818d86b9f4cacf7516c3c66b03eb95e4884228b3dd469ee64ab5ad9"
+  }
+ },
+ "builds": [
+  "a01-rigid (failed build: mirrored parts kept right-side group names)",
+  "a02-rigid",
+  "a03-cuff (authorized cuff reweight)",
+  "a04-carrier (cuff carried by wrist_transition bones, forearm stumps cut at -55 mm, toe weights)",
+  "a05-relax (original left bracer cut, local core weight smoothing at 6 folding triangles)",
+  "a06-creases (15 pose-driven crease correctives per hand)"
+ ],
+ "joint_range": {
+  "motions": 73,
+  "failed": 18,
+  "failed_ids": [
+   "spine-flexion",
+   "spine-lateral",
+   "spine-twist",
+   "shoulder-flexion.L",
+   "shoulder-axial-plus.L",
+   "wrist-flexion.L",
+   "fingers-mcp-flexion.L",
+   "combo-empty-fist.L",
+   "hip-flexion.L",
+   "toe-extension.L",
+   "wrist-flexion.R",
+   "fingers-mcp-flexion.R",
+   "combo-empty-fist.R",
+   "toe-extension.R",
+   "combo-arms-overhead",
+   "combo-two-hand-chop",
+   "combo-deep-squat",
+   "combo-grasp-wrist-flexion.R"
+  ],
+  "baseline_failed": 35
+ },
+ "protected": {
+  "r010_hand_weights_changed_ids": 118,
+  "authorized": "D_cuff_weights",
+  "r010_hand_basis_topology_uv": "unchanged",
+  "other_786_weights": "identical"
+ },
+ "open_work": [
+  "fingers-mcp typical: 1 hand self-intersection pair introduced by the crease corrective",
+  "empty fist typical: 6 pairs; extreme: 2 collapsed triangles and edge ratio 0.23",
+  "wrist flexion extreme: cuff blend zone edge ratio 0.12",
+  "shoulder-flexion.L and arms-overhead: 2 collapsed core triangles after the local smoothing; five body motions 2 to 22 pairs above the baseline ceiling",
+  "two_hand_chop pose not authored",
+  "hands still gray material; no clips, runtime, export or holdout work yet"
+ ],
+ "contract_defects_found": [
+  {
+   "gate": "toe-extension.L/R body ratchet",
+   "detail": "The baseline's toes carry no weights, so its recorded ceiling is stretch 1.0 and 0 new pairs. Any toe that actually bends exceeds 1.0 (candidate 2.06 and 2.21).",
+   "needs": "new request version"
+  },
+  {
+   "gate": "spine-lateral, hand rule at the extreme",
+   "detail": "Leaning 25 degrees with the arms left at rest carries the hand into the coat (97 pairs, hand vs coat). It is a property of sweeping one joint while the arm hangs, not of the rig; the typical level is clean.",
+   "needs": "new request version"
+  }
+ ],
+ "new_paid_submissions": 0
+}

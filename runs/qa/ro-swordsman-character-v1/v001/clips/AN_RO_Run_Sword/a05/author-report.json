@@ -1,0 +1,144 @@
+{
+ "observed_utc": "2026-10-05T09:35:05.095090+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "a0ef80372ff4c3029188fda523be0b87551ff2d57c9b8d201d064d7b588fdac9",
+ "gait_module_sha256": "3e993aae2faf7e12f06a97773c71ee97ea04d2f209248978c7e54593d4081ef2",
+ "ik_module_sha256": "5403ca250d4a463ff97a39bccf762b0da9a02240e65d9beab0d2b8b7e646fbda",
+ "foundation": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b14-hybrid/ro_character_v001_b14-hybrid.blend",
+  "sha256": "c1caf21f541321c151afa538bc0fcfcf34ce771ca3c5918ee4f01cdabe67be8c",
+  "saved": false
+ },
+ "spec": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/clip.json",
+  "sha256": "5c88266585ff19441012130b8ec5d3009e5c057e6b3e3193678a2b1436f86a40"
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b14-hybrid/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b14-hybrid/corrective-rules.json",
+  "sha256": "00e96542f86e6e7a46c65c66c0fd4f2823642627693c439c50ed4d9e2fa80949"
+ },
+ "fixtures": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/contact-fixtures.json",
+  "sha256": "13f57882e6b6f0316f64276f14261fcd09b3efdf5304ea98293854613a03c05c"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a05/AN_RO_Run_Sword.blend",
+  "sha256": "0f2356d7c0ec5b9f9536ae73b35747ea73b293a2e388127c807c6ffea55e26aa",
+  "action": "AN_RO_Run_Sword",
+  "fcurves": 155
+ },
+ "clip": "AN_RO_Run_Sword",
+ "frames": 40,
+ "keyed_frames": [
+  0,
+  40
+ ],
+ "interpolation": "LINEAR",
+ "animated_bones": [
+  "finger1.L_01",
+  "finger1.L_02",
+  "finger1.R_01",
+  "finger1.R_02",
+  "finger1.R_03",
+  "finger2.L_01",
+  "finger2.L_02",
+  "finger2.R_01",
+  "finger2.R_02",
+  "finger2.R_03",
+  "finger3.L_01",
+  "finger3.L_02",
+  "finger3.R_01",
+  "finger3.R_02",
+  "finger3.R_03",
+  "finger4.L_01",
+  "finger4.L_02",
+  "finger4.R_01",
+  "finger4.R_02",
+  "finger4.R_03",
+  "foot.L",
+  "foot.R",
+  "hand.R",
+  "head",
+  "lower_arm.L",
+  "lower_arm.R",
+  "lower_leg.L",
+  "lower_leg.R",
+  "pelvis",
+  "spine_01",
+  "thumb.L_01",
+  "thumb.R_01",
+  "thumb.R_02",
+  "thumb.R_03",
+  "upper_arm.L",
+  "upper_arm.R",
+  "upper_leg.L",
+  "upper_leg.R"
+ ],
+ "helper_bones_not_keyed": [
+  "wrist_transition.L_twist",
+  "wrist_transition.R_twist"
+ ],
+ "stance_windows": {
+  "L": [
+   20,
+   27
+  ],
+  "R": [
+   0,
+   7
+  ]
+ },
+ "pelvis": {
+  "centre_offset_m": -0.04460074961958054,
+  "height_offset_range_m": [
+   -0.06460074961958054,
+   -0.02460074961958054
+  ]
+ },
+ "pivots": {
+  "L": {
+   "toe": [
+    0.2299,
+    -0.1582,
+    0.0083
+   ],
+   "heel": [
+    0.1905,
+    0.1476,
+    0.0293
+   ]
+  },
+  "R": {
+   "toe": [
+    -0.2376,
+    -0.1597,
+    0.009
+   ],
+   "heel": [
+    -0.185,
+    0.1476,
+    0.0229
+   ]
+  }
+ },
+ "ik": {
+  "max_ankle_error_mm": 0.0019187812783800931,
+  "knee_angle_deg_range": [
+   95.65996853380346,
+   164.8848236964748
+  ],
+  "max_wrist_error_mm": 0.0001831464253855028,
+  "wrist_bend_deg_range": [
+   16.049211389028073,
+   20.94178688208222
+  ]
+ }
+}

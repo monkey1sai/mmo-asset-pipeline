@@ -1,0 +1,39 @@
+{
+  "operation_id": "ro-hand-source-20261003-001",
+  "state": "prepared_not_submitted",
+  "plan_sha256": "0d1d8ee2f4d5b0ab7ddaf6876c9c350d66b915d9e501f78d4e9340f5208597aa",
+  "estimated_credits": 0.5,
+  "input": {
+    "path": "assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png",
+    "sha256": "e45720d0d015ac321e9814901b0b813306f33b079ce0b7cea0af588bb039d02a"
+  },
+  "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-hand-source-20261003-001.dpapi",
+  "global_file_exists_before": false,
+  "global_file_authority": "Exact-file authority pending; no global write performed",
+  "envelope": {
+    "destination": "https://api.hyper3d.com/api/v2/rodin",
+    "purpose": "New separate glove source for user-authorized hand/fitting phase",
+    "allowed_operations": [
+      "one generation",
+      "same-operation status",
+      "completed result download"
+    ],
+    "data_transmitted": [
+      "selected glove image",
+      "validated nonsecret generation parameters"
+    ],
+    "forbidden_operations": [
+      "top-up",
+      "upgrade",
+      "old state overwrite",
+      "secret output",
+      "Git mutation"
+    ],
+    "stop_conditions": [
+      "missing exact-file authority",
+      "unknown submission",
+      "collision",
+      "unexpected destination"
+    ]
+  }
+}

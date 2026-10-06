@@ -1,0 +1,172 @@
+{
+  "operation_id": "ro-split-batch-20261003-001",
+  "source": "assets/raw/ro-swordsman-combo/rodin-v004/batch/base_basic_pbr.glb",
+  "source_sha256": "748f891bf04b6671203bbe5901c63bc2c799578ba5726b4d85dece3618c8b7c5",
+  "tool": "4.5.5 LTS",
+  "normalization": {
+    "purpose": "display only; not character height or component fit",
+    "factor": 1.536653214096421,
+    "original_min": [
+      -0.9426829814910889,
+      -0.23909398913383484,
+      -0.5700119733810425
+    ],
+    "original_max": [
+      0.9471359848976135,
+      0.237823948264122,
+      0.5623189806938171
+    ]
+  },
+  "mesh_stats": [
+    {
+      "mesh": "SM_RO_Batch_Source_000",
+      "vertices": 26486,
+      "triangles": 46476,
+      "uv_layers": 1,
+      "materials": [
+        "model"
+      ],
+      "components": [
+        {
+          "id": 0,
+          "vertices": 6888,
+          "triangles": 12542,
+          "min": [
+            -0.44889864325523376,
+            -0.35653430223464966,
+            0.05086011812090874
+          ],
+          "max": [
+            0.5113359093666077,
+            0.3664287030696869,
+            0.8614984154701233
+          ]
+        },
+        {
+          "id": 1,
+          "vertices": 6651,
+          "triangles": 11636,
+          "min": [
+            -1.4519981145858765,
+            -0.2554962933063507,
+            0.0
+          ],
+          "max": [
+            -0.4331909716129303,
+            0.14589600265026093,
+            1.7399998903274536
+          ]
+        },
+        {
+          "id": 2,
+          "vertices": 6221,
+          "triangles": 10734,
+          "min": [
+            -0.3240993618965149,
+            -0.3664287030696869,
+            0.8890982270240784
+          ],
+          "max": [
+            0.3563537001609802,
+            0.2276260405778885,
+            1.6826353073120117
+          ]
+        },
+        {
+          "id": 3,
+          "vertices": 3466,
+          "triangles": 5986,
+          "min": [
+            0.46166977286338806,
+            -0.2479589283466339,
+            1.0013554096221924
+          ],
+          "max": [
+            1.0051532983779907,
+            0.19379505515098572,
+            1.606005311012268
+          ]
+        },
+        {
+          "id": 4,
+          "vertices": 1767,
+          "triangles": 3026,
+          "min": [
+            0.5648897886276245,
+            -0.21335352957248688,
+            0.23188398778438568
+          ],
+          "max": [
+            1.0044986009597778,
+            0.12225461006164551,
+            0.8616352081298828
+          ]
+        },
+        {
+          "id": 5,
+          "vertices": 1493,
+          "triangles": 2552,
+          "min": [
+            1.0794458389282227,
+            -0.11769840121269226,
+            0.015143674798309803
+          ],
+          "max": [
+            1.4519981145858765,
+            0.051805198192596436,
+            1.696996808052063
+          ]
+        }
+      ]
+    }
+  ],
+  "triangle_total": 46476,
+  "diagnostic_component_count": 6,
+  "semantic_asset_count": null,
+  "anatomy_accepted": false,
+  "art_accepted": false,
+  "rig_accepted": false,
+  "animation_accepted": false,
+  "delivered": false,
+  "interpretation": "Connected geometry is diagnostic, not a count of six complete useful assets. Visual/component/fit review required.",
+  "images": [
+    {
+      "name": "texture_diffuse",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "bones": 0,
+  "animations": 0,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/batch-source/batch_source.blend",
+      "bytes": 15039146,
+      "sha256": "515ac7758d1e928c3c4543fbfcaad16227e720e281e8a3885f2694bd9e559fc9"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/batch-source/batch_source.glb",
+      "bytes": 11399832,
+      "sha256": "ebe7b37e2e248a7489291c67206929e029bc154c5f14d79ae95fea8689053996"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "observed_utc": "2026-10-04T06:18:14.342114+00:00",
+  "status": "verified_archived_local_numeric_pass_full_NO_SHIP",
+  "request_schema_valid": true,
+  "candidate_count": 4,
+  "comparison": "stop_budget",
+  "assessment": "not_ready",
+  "local_numeric_and_export_subchecks": "PASS",
+  "entire_local_functional_gate_passed": false,
+  "independent_gray_shape_accepted": false,
+  "whole_quality_scores_unchanged": true,
+  "artifact_references_checked": 386,
+  "QA_json_parsed": 65,
+  "python_sources_syntax_checked": 224,
+  "protected_history_files": 310,
+  "protected_history_unchanged": true,
+  "fresh_GLb_samples": 121,
+  "required_grasp_samples": 61,
+  "fresh_hand_max_m": 1.938583229669584e-07,
+  "fresh_hand_RMS_m": 4.1020052042645994e-08,
+  "frozen_point_tolerance_m": 1e-06,
+  "unit_tests": 131,
+  "unit_tests_log_sha256": "08dd88c31bdfc7f87eafba9ca5015c2a70f469c87eb2e5e2bd2a3bcac864bfdb",
+  "legacy_inventory_assets_schema_valid": 39,
+  "pipeline_log_sha256": "7f80bd86e2448519f4d0eb1da7085e08760da8420a47366bab62b709e8b23a57",
+  "library_entry": "ro-swordsman-combo-r010-v004",
+  "library_delivery": "not_delivered",
+  "phase_wall_seconds_at_close": 4043.495955,
+  "postclose_documentation_verification_seconds": 158.846716,
+  "preclock_preparation_unmeasured": true,
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "new_API_submissions": 0,
+  "new_service_credits": 0,
+  "repo_external_writes": "none",
+  "LFS_attributes_configured": true,
+  "LFS_stage_remote_clone_not_run": true,
+  "target_engine_and_full300_not_verified": true,
+  "document_artifacts": [
+    {
+      "path": "library/index.json",
+      "sha256": "c0489454e4e102c2affb68ca2bef0c2c7e0d7e738a8b656b469d2a9628689619"
+    },
+    {
+      "path": "docs/art-quality-loop.md",
+      "sha256": "07ff865530e68ae948f792380e5fbea431d35cc38795b99d91db224051bb5970"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "a619315197ebc1c69cd9cafdd072767ed3dadabbf73a3d37b808cea7d05813b7"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r010/README.md",
+      "sha256": "098c9bd0fda9753e7dcac2955eac509dd14c98ad59ac6e7e9dec6ab129fd2add"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/README.md",
+      "sha256": "9590b18061b36f805a096655d1209b9c6a9db2bd2837ada4af7c00263dd5975a"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r010/independent-final-review.md",
+      "sha256": "a60082678525f46358182443775b795d40ccc920c8de314d2c687be7907c284a"
+    }
+  ]
+}

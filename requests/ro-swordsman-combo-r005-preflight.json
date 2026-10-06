@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "id": "ro-swordsman-combo-r005-preflight",
+  "title": "RO 同圖分件：組裝／變形預檢",
+  "brief": "我同意，但是你負責設計，給hyper3d產生，並用blender微調，",
+  "purpose": "Stage-only assembled character and functional stress poses. Passing this stage does not satisfy final continuous animation or delivery.",
+  "task_type": "rigged_character",
+  "status": "specified",
+  "project": null,
+  "style": {
+    "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。",
+    "references": [
+      "C:\\.llmcode\\ro_swordsman_animation",
+      "runs/evidence/ro-swordsman-reference-analysis.md"
+    ],
+    "must_have": [
+      "棕色尖髮與動漫男性臉",
+      "分片銀色胸肩臂甲",
+      "深藍分叉衣擺與白前襟",
+      "皮手套／腰帶／長靴",
+      "獨立直劍／武器掛點",
+      "可編輯骨架及真正連續技能動作",
+      "可關閉的斬擊、怒爆火焰、霸體金色光效"
+    ],
+    "must_not_have": [
+      "把場景文字或火光融合進角色幾何",
+      "靜態圖片輪播代替骨骼動畫",
+      "以特效遮住握持或關節缺陷",
+      "自行新增遊戲傷害／碰撞規則"
+    ]
+  },
+  "spec": {
+    "size_m": [
+      1.2,
+      1.74,
+      1.2
+    ],
+    "size_scope": "GLB [X,Y,Z]: character nominal standing height1.74m (+Y up); X/Z are planning envelope only. Weapon and animated envelope measured separately; no claim exact XYZ size.",
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "target_triangles": 60000,
+    "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。",
+    "texture_px": 2048,
+    "requires_rig": true,
+    "animations": [],
+    "parts": [
+      {
+        "id": "character",
+        "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+      },
+      {
+        "id": "sword",
+        "pivot": "握柄中心；掛hand.R武器骨"
+      },
+      {
+        "id": "coat-tails",
+        "pivot": "骨盆左右分叉衣擺獨立活動"
+      },
+      {
+        "id": "effects",
+        "pivot": "分離展示層，角色動作可不含效果檢查"
+      }
+    ]
+  },
+  "production": {
+    "route": "split_then_generate",
+    "reason": "One batch input first; measure completeness, separation and repair effort before individually justified replacement. Rigid armor remains independent. Preserve six unsubmitted plans and the parent clock/budget.",
+    "max_revisions": 3,
+    "reuse_candidates": []
+  },
+  "delivery": {
+    "scope": "standalone",
+    "formats": [
+      "blend",
+      "glb"
+    ],
+    "target_environment": null
+  },
+  "provenance": {
+    "kind": "user_brief",
+    "reference": "requests/ro-swordsman-combo-r005.json#brief"
+  },
+  "additional_checks": [
+    {
+      "id": "rigid-armor",
+      "area": "technical",
+      "description": "甲片保持剛性、接合和遮蔽表面完整；抬臂與下劈實測。"
+    },
+    {
+      "id": "grip-contact",
+      "area": "technical",
+      "description": "單／雙手實際指掌至劍柄接觸及腕掌體积；不得只核對控制器坐標。"
+    },
+    {
+      "id": "cloth-clearance",
+      "area": "technical",
+      "description": "站立、深蹲、下劈時衣片與腿部有足夠活動空間。"
+    },
+    {
+      "id": "stage-export",
+      "area": "technical",
+      "description": "乾淨GLB重匯入及短姿勢測試，與完整連段匯出驗收分開。"
+    }
+  ],
+  "assumptions": [
+    "Standalone BLEND/GLB; no game integration, stage, commit or push.",
+    "Existing monthly/regular credits and demand-driven API use already explicitly authorized; no top-up or upgrade.",
+    "One batch source generation is initially planned; six complete editable parts are a hypothesis. Preserve the six unsubmitted individual plans for evidence-based failures only. Unknown/pending submission is reconciled first.",
+    "Three assembly revisions form the declared evaluation batch; new methods require new evidence and preserved histories.",
+    "Left armor derives from mirrored right source; source topology, hollow interiors and finger anatomy require actual inspection.",
+    "Images guide appearance; API does not guarantee clean topology, automatic rigging or animation.",
+    "Full final quality targets remain four in every dimension and all requested300frames/60fps, skills and effects remain mandatory.",
+    "Batch preparation, generation, assembly and review all carry the original r004 clock; no time or revision budget reset.",
+    "Carries r004 clock and budget; stage validation cannot replace full r005 animation/effects acceptance."
+  ],
+  "open_questions": [],
+  "quality": {
+    "schema_version": 1,
+    "status": "frozen",
+    "protocol": {
+      "views": [
+        "front",
+        "side",
+        "back",
+        "three-quarter",
+        "detail"
+      ],
+      "lighting": "Fixed Eevee studio: Key (3,-4,5)700W 4m; Fill(-3,-2,3)350W 3m; Rim(0,3,4)800W 3m; world(.16,.16,.16). No VFX on evaluation views.",
+      "background": "AgX exposure0; neutral grey floor(.18,.19,.21); 1280x1280 PNG.",
+      "framing": "Frame1; ortho scale2.25; target(0,0,.9); front(0,-4,1.35),side(4,0,1.35),back(0,4,1.35),3Q(2.8,-4,2). Detail(1.2,-4,1.75)target(0,0,1.53)scale.62.",
+      "tool_version": "Blender4.5.5 LTS build836beaaf597a; BLENDER_EEVEE_NEXT; local reproducible construction.",
+      "inspection_context": "Same fixed studio and five views. Actual open/grip/overhead/downslash/deep-crouch stress poses with no effects. This stage does not evaluate or pass full300frames or skill effects."
+    },
+    "reference_artifacts": [
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/01_provoke.jpg",
+        "sha256": "b6bdb93c0ca7ec4307e0641a82b26c58ebac1cdac0c6123e48890322b78cc76d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/02_bash.jpg",
+        "sha256": "8e5cbb73710767e34bf1cf4e2eed1aaa13b8c36fda18408878d410ea5f8af255"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/03_magnum_break.jpg",
+        "sha256": "96cb4d1c088093dde65a3a23e167fc42e71a370538b379e907246038a56f8985"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/04_endure.jpg",
+        "sha256": "e84df1ccf2d7845ce3c55dfc440972b89dc943a2f1759cd101658f4b324c8120"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/05_victory.jpg",
+        "sha256": "c0523c82008c6b542d04138a555484ac69251d8e36ac0532ac1330e3f480bca8"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/ro_swordsman_action_sheet.jpg",
+        "sha256": "45ceb6e3ba9bba29c49647712f4b726cb6ca8e276a34cc3de66e36a1595dde4c"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_01.png",
+        "sha256": "5dba0b7385f952c88899bf2595221e2b52f8bd62bd7e9641faf23d5d03c9c3f5"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_02.png",
+        "sha256": "836520de2b5542ef1f4ca4aeae5f88ae40df1d3917982088f4806a4a00c0f0c2"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_03.png",
+        "sha256": "14e6b2d966abc1529cbd73caab9509ee296398f7dfdfe45a27c0f94b9d69d407"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_04.png",
+        "sha256": "d138ca4823dc8882690b06595d583a3eb55bebdb4fda0c1b8708f2f7b8c9d031"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_05.png",
+        "sha256": "0088ebd1e2602107c6f53630f3899d96e27abdba93744074bb2557a538a4321f"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_06.png",
+        "sha256": "1cc074adaa0c44523ea000189f6b95a07a11dc55a323d2065077df9052176738"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_07.png",
+        "sha256": "e28f25e4317c3086b3ac967225db1d1b64fbe5ca7f604935bec31d6424e83e2d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_08.png",
+        "sha256": "0f9fd24d06049b87d735f6e6fb27c84f3a4c439f62cd72dfb4ff366fdec566a7"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_09.png",
+        "sha256": "30a2936cafff9541f85d20153b5822a31f4e3f759b18181e8894c3fec9ff000b"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_10.png",
+        "sha256": "8edf662a4451dd8c33e56a3a118db26b906553f71beba7bac703badc0b28c3f6"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_11.png",
+        "sha256": "6c96fef0773af51825d003039cbbc18294fddf2775f12ed9e969e47a037d6389"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png",
+        "sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png",
+        "sha256": "b00dc0e01da4d223b17be84a108bf2218a4eba08100b0ca296e404c8316ac5db"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/core.png",
+        "sha256": "bff59da46f2887c0f5ba95e000043c59f09e384cdb50787dfa247d0408b671c3"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/cuirass.png",
+        "sha256": "7f6e16c7476f4ae3fb46e16ab3dc52a4ed18a9ed110d2e3b6e3ec596e0b844fc"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/pauldron.png",
+        "sha256": "7500ff888c838b3b30d98ab92d13aaf520767e149120fe5619165e6e71add354"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/bracer.png",
+        "sha256": "635bd677551e608c6450c525433791ed6f6f29cdda1bc1ab3201f7439bc551f6"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/coat.png",
+        "sha256": "07430f62a29b959c5fd43d419c604c5f1ac608bea69ae6c2aa8a2ce0e788d06d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/sword.png",
+        "sha256": "e5b598bd0f13cd4dbe4be4e6596cfb84b491ac220da947cbf65ad53096cc54c7"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png",
+        "sha256": "195d226c017fd3675ebebcb49b03e1cb0ece7928aeba79e634188fa1b67fabb6"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "design-intent",
+        "criterion": "棕色尖髮男性劍士、銀色分片甲、藍衣擺／白前襟、皮裝、直劍皆符合照片；臉部動漫語言相符。",
+        "target": 4,
+        "anchors": [
+          "用途或主體完全錯誤",
+          "多數核心元素錯誤",
+          "部分符合但關鍵特徵仍偏離",
+          "核心符合但風格或必要細節有可見差距",
+          "所有核心約束符合且設計語言一致",
+          "符合全部約束並達到固定標竿的精緻度與辨識度"
+        ]
+      },
+      {
+        "id": "silhouette",
+        "criterion": "主要輪廓在固定五視角與實際觀看尺度清楚，禁止用貼圖掩蓋形體",
+        "target": 4,
+        "anchors": [
+          "輪廓無法辨識",
+          "主要輪廓錯誤",
+          "可辨識但關鍵輪廓偏離",
+          "正面符合但側面或背面仍不穩定",
+          "各指定視角輪廓符合且清楚",
+          "各視角輪廓達到固定標竿且細節層次清楚"
+        ]
+      },
+      {
+        "id": "form-proportion",
+        "criterion": "比例、體積、結構及需求相關人體／建築／製造邏輯可信",
+        "target": 4,
+        "anchors": [
+          "結構或比例無法成立",
+          "主要比例嚴重錯誤",
+          "多處體積或結構差距",
+          "主要體積成立但關鍵部位仍需修正",
+          "各關鍵部位比例與結構符合設計",
+          "體積轉折與結構細節達到固定標竿"
+        ]
+      },
+      {
+        "id": "materials",
+        "criterion": "依指定風格檢查材質分區、roughness、色彩、貼圖密度與 UV 接縫",
+        "target": 4,
+        "anchors": [
+          "缺少指定材質或貼圖失效",
+          "材質類型與需求相反",
+          "可辨識但多處分區或貼圖缺陷",
+          "主要分區正確但接縫或質感仍不一致",
+          "所有指定材質清楚且無可見接縫缺陷",
+          "材質層次、細節與風格一致性達到固定標竿"
+        ]
+      },
+      {
+        "id": "craft",
+        "criterion": "固定視角與連段中肩肘髖膝變形、甲衣接合、劍手握持皆無關鍵瑕疵；特效不掩蓋缺陷。",
+        "target": 4,
+        "anchors": [
+          "模型破損或必要部件缺失",
+          "大量破面、融合或穿插",
+          "存在多處關鍵瑕疵",
+          "主要部件乾淨但近看仍有需修正缺陷",
+          "指定角度及功能範圍無可見關鍵瑕疵",
+          "細節收邊、接合與所有適用姿勢達到固定標竿"
+        ]
+      },
+      {
+        "id": "use-readability",
+        "criterion": "本階段各壓力姿勢、單／雙手握持、硬甲保形及衣料讓位清楚；只代表變形階段可用，不能替代最終連段。",
+        "target": 4,
+        "anchors": [
+          "壓力姿勢不能成立",
+          "多數功能不能成立",
+          "部分姿勢成立但有關鍵缺陷",
+          "大部分姿勢成立仍有局部差距",
+          "所有階段壓力姿勢與握持可用",
+          "各階段功能精緻且穩定"
+        ]
+      }
+    ],
+    "budget": {
+      "trial_seconds": 21600,
+      "total_seconds": 64800
+    }
+  },
+  "phase_history": {
+    "previous_request": "requests/ro-swordsman-combo-r004.json",
+    "previous_request_sha256": "5d86b3c32065d58ee7c3e477bec1e3e816afc564b576d49283bc7fa2dd226592",
+    "previous_protocol_sha256": "00abcb2be13f1455db2cc8a2e5c3c68c8a3a6d143f389d33e215fceca6f20984",
+    "new_method_authority": "同意你的建議方案",
+    "accounting": "Same phase start and budget; original histories preserved.",
+    "previous_six_operations": "prepared_not_submitted; held for evidence-based failures only"
+  }
+}

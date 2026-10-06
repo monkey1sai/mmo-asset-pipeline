@@ -1,0 +1,35 @@
+{
+ "recorded_utc": "2026-10-05T04:45:30Z",
+ "phase": "P2 preparation (no candidate started; candidates used 0 of 4)",
+ "request": {"path": "requests/ro-swordsman-character-v1.json", "status": "draft", "quality_status": "draft", "request_sha256_at_record": "8a5487460350f58879c9538b17c71790f5c06dc09907e322bc756ff111d82c80"},
+ "clock": {
+  "p2_prep_started_utc": "2026-10-05T04:02:48Z",
+  "turn_1": {"start": "2026-10-05T04:02:48Z", "end": "2026-10-05T04:16:50Z", "ended_because": "Blender extension cache incident"},
+  "turn_2": {"start": "about 2026-10-05T04:33Z (estimated from the reviewer hand-back; not recorded at the time)", "end": "2026-10-05T04:45:30Z"},
+  "note": "Turn start times were not recorded precisely this session; from the next turn on the first command records it."
+ },
+ "done": [
+  "Joint-range tool v2 (cross-mesh soup, hand region by bone weights, deformation check, baseline ratchet) and contract v2 with 73 motions",
+  "Baseline measured with contract v2: 36 of 73 motions fail or cannot be posed; rest gate true",
+  "Independent pre-freeze review received; all nine findings confirmed and handled on the contract or tool side",
+  "Weight restore tool and fresh-Blender readback tool; baseline readback 14.55 um as exported, 1.048 um with exact weights",
+  "Blender extension cache incident recorded and recovery verified after the user restarted Blender"
+ ],
+ "not_done": [
+  "Request not frozen; baseline not registered in the quality ledger",
+  "No candidate work: skeleton extension (A) and left hand replacement (B) not started",
+  "Hand-local 1 um readback for the integrated right hand not measured (no integrated hand exists yet)"
+ ],
+ "waiting_for_user": [
+  "Explicit consent to the single clock rule (coordinator working time; user-wait intervals logged, not counted)",
+  "Acknowledgement of the 5 um whole-character readback tolerance (1 um measured as not guaranteeable)",
+  "Optional: SHA-256 of the user's private holdout description as a commitment"
+ ],
+ "script_run_notes": [
+  "record-review-outcome-used.py stopped at its last step (a text pattern for register-baseline-used.py did not match) after it had updated the request and written the disposition and recovery records; the remaining six text replacements in register-baseline-used.py were then made by hand.",
+  "The first contract and results (joint-range-contract-draft.json, joint-range-contract.json, baseline-joint-range-calibration, baseline-joint-range) are superseded by v2 and kept."
+ ],
+ "checks": {"unit_tests": "141 OK", "request_validate": "valid_request, 19 required checks", "git_diff_check": 0, "git_head": "c990639", "staged_paths": 0},
+ "new_api_submissions": 0,
+ "background": ["Local QA server on port 8765 (started in P1)"]
+}

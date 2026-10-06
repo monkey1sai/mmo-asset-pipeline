@@ -1,0 +1,22 @@
+16:04:41 | INFO: Data are loaded, start creating Blender stuff
+16:04:41 | INFO: Blender create Mesh node model.008
+16:04:41 | INFO: Blender create Mesh node model.006
+16:04:41 | INFO: Blender create Mesh node model.002
+16:04:41 | INFO: Blender create Mesh node model
+16:04:41 | INFO: Blender create Mesh node model.004
+16:04:41 | INFO: Blender create Mesh node model.001
+16:04:41 | INFO: Blender create Mesh node model.005
+16:04:41 | INFO: Blender create Mesh node model.007
+16:04:41 | INFO: Blender create Mesh node RO_RightGlove_ProtectedCut
+16:04:41 | INFO: Blender create Mesh node RO_WristLoft_R
+16:04:42 | INFO: glTF import finished in 0.16s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\check_ro_wrist_animation_roundtrip.py", line 35, in <module>
+    assert len(candidates)==1,'Source object must map to exactly one actual mesh: '+name
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: Source object must map to exactly one actual mesh: SM_RO_glove.R
+
+Error: script failed, file: 'scripts/check_ro_wrist_animation_roundtrip.py', exiting.
+
+Blender quit

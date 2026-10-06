@@ -1,0 +1,12 @@
+{
+ "id": "v001", "parent_id": "baseline", "registered_utc": "2026-10-05T04:57:13Z", "trial_clock_started_utc": "2026-10-05T04:57:13Z",
+ "request_sha256": "bc3191249b7f94bb1ed8ceb6e75a6a0ed8d63650e4bb02dfe160b141d3308aa9",
+ "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+ "trial_seconds_cap": 21600, "candidate_index": 1, "candidate_limit": 4,
+ "hypothesis": "Bringing the r010 right hand into the whole character as a rigid unit (its mesh, 16 bone frames and weapon socket moved together, shape unchanged), extending the skeleton to three segments per digit on both sides and mirroring that hand for the left, gives hands that hold the joint-range hand gates and a full fist, which the baseline cannot pose at all.",
+ "change": "Protected-zone A and B only: replace the right glove and wrist loft with the r010 hand, add thumb.R_03 and the left third phalanges and thumb, mirror the hand for the left, cut the old left hand off the core and mirror the cut right bracer. Body, armor, coat, head and legs are not edited.",
+ "order": "geometry, then bone positions and axes, then weights, then pose-driven correctives; gray joint-range review before clips, runtime and export work",
+ "known_blocker_at_start": "The r010 hand's 118 cuff vertices behind the wrist joint are weighted 100% to the hand bone. Following the forearm needs a weight change on the protected r010 hand, which is not authorized; wrist motions cannot pass until the user decides. Evidence: runs/qa/ro-swordsman-character-v1/p2-prep/hand-cuff-probe.json",
+ "sources": ["assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend", "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend"],
+ "new_paid_submissions_planned": 0, "stage_commit_push": "held_by_user"
+}

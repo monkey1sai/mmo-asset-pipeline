@@ -1,0 +1,29 @@
+{
+  "same_trial": "v001",
+  "started_utc": "2026-10-02T15:59:45.332553+00:00",
+  "source_sha256": "9f773242c9b62d647e9838d2dde89702770841973e24be3a98cfd11f34a32e6c",
+  "changed_vertices": 6682,
+  "source_coordinates_unchanged": true,
+  "UV_unchanged": true,
+  "cloth_mask_unchanged": true,
+  "stress_diagnostics": [
+    {
+      "pose": "overhead",
+      "edges_over8x_and100mm": 0,
+      "largest": []
+    },
+    {
+      "pose": "deep-crouch",
+      "edges_over8x_and100mm": 0,
+      "largest": []
+    },
+    {
+      "pose": "downslash",
+      "edges_over8x_and100mm": 0,
+      "largest": []
+    }
+  ],
+  "diagnostic_threshold_is_not_acceptance": true,
+  "full_animation": false,
+  "acceptance": "Await real preflight; existing cloth/leg intersections and eight nonmanifold edges remain separate checks."
+}

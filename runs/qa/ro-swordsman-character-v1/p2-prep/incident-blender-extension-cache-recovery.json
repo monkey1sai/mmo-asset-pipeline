@@ -1,0 +1,26 @@
+{
+ "observed_utc": "2026-10-05T04:44:08.262932+00:00",
+ "incident": {
+  "path": "runs/qa/ro-swordsman-character-v1/p2-prep/incident-blender-extension-cache.json",
+  "sha256": "3749eeb1ae8a206cd4169c91455bc3cf9cf00865f60019e7b1d0c2d3fdc30a55"
+ },
+ "user_action": "使用者關閉並正常重開Blender（新程序 PID 46236，12:35 啟動）。",
+ "verified_read_only": {
+  "site_packages_top_level_entries": 215,
+  "dist_info_folders": 98,
+  "stale_folders": 0,
+  "files": 11532,
+  "spot_checked_present": [
+   "ifcopenshell",
+   "aiohttp",
+   "pandas",
+   "lxml",
+   "shapely",
+   "PIL",
+   "bonsai"
+  ]
+ },
+ "expected_recovery_confirmed": true,
+ "not_verified": "沒有在Blender內實際操作Bonsai功能。",
+ "recurrence_check": "移除該指令後，本回合其後各次Blender執行未再出現刪除訊息；快取目錄修改時間維持12:35。"
+}

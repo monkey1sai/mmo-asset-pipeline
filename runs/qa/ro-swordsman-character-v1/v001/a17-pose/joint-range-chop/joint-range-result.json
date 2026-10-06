@@ -1,0 +1,617 @@
+{
+ "observed_utc": "2026-10-05T05:34:11.788478+00:00",
+ "blender": "4.5.5 LTS",
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a15-hands/ro_character_v001_a15-hands.blend",
+  "sha256": "8d9ea8933f44c8cacf3e7740baee8a6bb3ce5c86898f9037e0372fa9ca8d18f5",
+  "saved": false
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r3/joint-range-contract-v4.json",
+  "sha256": "63510cc001ee2a23d0a04f95360a1ca9e2e0441826c905632a7c9d79d8d4246b",
+  "bound_to_request": true
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a15-hands/corrective-rules.json",
+  "sha256": "59e2f19ff83dba84e467e8c5758cafb8b954864f9c04d587a1c6c4f6a9e527c0"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a17-pose/poses.json",
+  "sha256": "68ce97ee0b43a40cc8bddcc51803559019f1406f4bb1c680fb440f0b2714b71e"
+ },
+ "armature": "ARM_RO_Swordsman",
+ "bones": 60,
+ "measured_meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R"
+ ],
+ "excluded_meshes": [
+  "SM_RO_sword"
+ ],
+ "soup": {
+  "vertices": 29774,
+  "triangles": 53883,
+  "hand_region_triangles": 3576
+ },
+ "rest_pairs": {
+  "hand_self": 0,
+  "hand_other": 248,
+  "other": 4534
+ },
+ "rest_gate": {
+  "hand_self_intersection_zero": true,
+  "other_pairs_within_ceiling": true
+ },
+ "hand_frames": {
+  "L": {
+   "palmar": [
+    -0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    -0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  },
+  "R": {
+   "palmar": [
+    0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    -0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    -0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  }
+ },
+ "calibration_run": false,
+ "partial_run": [
+  "combo-two-hand-chop"
+ ],
+ "motions": 1,
+ "measured": 1,
+ "missing": 0,
+ "numeric_gate_pass": false,
+ "failed_motions": [
+  "combo-two-hand-chop"
+ ],
+ "scope": "Numeric guards only, at finite poses: direction, real deformation of every stepped bone, triangle collapse, hand-region self and new cross-mesh intersections, hand edge-ratio guard, and a no-worse-than-baseline ratchet for the rest of the body (overlap at rest, pose-induced pairs and stretch). Weapon meshes are excluded here and judged by the grasp and clip gates. Not a continuous-range or art acceptance.",
+ "results": [
+  {
+   "id": "combo-two-hand-chop",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.16
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.054177717267130034,
+     "hand_self_pairs": 39,
+     "hand_other_pairs": 411,
+     "hand_other_new_pairs": 163,
+     "other_pairs": 5413,
+     "other_new_pairs": 3068,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1071,
+        -0.0565,
+        1.1349
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0134,
+        1.032
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.214,
+        0.0185,
+        1.3779
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1776,
+        0.0045,
+        1.1506
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.358002222634709,
+      2.657048292309193
+     ],
+     "other_edge_ratio": [
+      0.06667253694397028,
+      12.59523614107947
+     ],
+     "hand_examples": [
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ],
+        [
+         "hand.R"
+        ]
+       ],
+       "at": [
+        -0.1054,
+        -0.2607,
+        1.0883
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0852,
+        -0.2301,
+        1.0748
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0677,
+        -0.1463,
+        1.0326
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0901,
+        -0.2349,
+        1.0762
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0673,
+        -0.1521,
+        1.0388
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0708,
+        -0.1522,
+        1.0334
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0832,
+        -0.227,
+        1.0782
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0708,
+        -0.1522,
+        1.0334
+       ]
+      }
+     ],
+     "collapsed_examples": [],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/a17-pose/joint-range-chop/tiles/combo-two-hand-chop--typical.png"
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.04379281374934381,
+     "hand_self_pairs": 39,
+     "hand_other_pairs": 686,
+     "hand_other_new_pairs": 438,
+     "other_pairs": 5479,
+     "other_new_pairs": 3245,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1071,
+        -0.0683,
+        1.112
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.214,
+        -0.0588,
+        1.3662
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1319,
+        0.0701,
+        1.0176
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1197,
+        -0.0229,
+        1.0316
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.358003934066633,
+      2.6570496424073773
+     ],
+     "other_edge_ratio": [
+      0.05949284448238302,
+      12.717163326534036
+     ],
+     "hand_examples": [
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ],
+        [
+         "hand.R"
+        ]
+       ],
+       "at": [
+        -0.1054,
+        -0.2535,
+        1.0142
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0852,
+        -0.2205,
+        1.0091
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0677,
+        -0.1285,
+        0.99
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0901,
+        -0.2254,
+        1.0092
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0673,
+        -0.1358,
+        0.9945
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0708,
+        -0.1345,
+        0.9892
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.R",
+        "SM_RO_hand.R"
+       ],
+       "bones": [
+        [
+         "hand.R"
+        ],
+        [
+         "hand.R",
+         "wrist_transition.R"
+        ]
+       ],
+       "at": [
+        -0.0832,
+        -0.2183,
+        1.0132
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_hand.L",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "hand.L",
+         "wrist_transition.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.0708,
+        -0.1345,
+        0.9892
+       ]
+      }
+     ],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 27497,
+       "rest_at": [
+        0.1488,
+        0.0191,
+        1.2494
+       ],
+       "rest_area_mm2": 27.6459
+      }
+     ],
+     "tile": "runs/qa/ro-swordsman-character-v1/v001/a17-pose/joint-range-chop/tiles/combo-two-hand-chop--extreme.png"
+    }
+   },
+   "neutral_tile": "runs/qa/ro-swordsman-character-v1/v001/a17-pose/joint-range-chop/tiles/combo-two-hand-chop--neutral.png",
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": false,
+    "hand_self_intersection_zero": false,
+    "hand_other_new_intersection_zero": false,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": false
+   },
+   "pass": false
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "operation_id": "ro-hand-structure-20261003-001",
+  "state": "prepared_not_submitted",
+  "plan_sha256": "7dab8914d344854126bc1613a7bcd4b47e853d66e975914b231677a9d43a02c8",
+  "estimated_credits": 0.5,
+  "inputs": [
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png",
+      "sha256": "36dd21b2958eeb2f8b35edd09d04d25c530ce82b1056fb8d074df4a85368a487"
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png",
+      "sha256": "319d4a600582cfa1e14343d9ec909332cd04dc057ad3bacc74382c7091532903"
+    }
+  ],
+  "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-hand-structure-20261003-001.dpapi",
+  "global_file_exists_before": false,
+  "global_file_authority": "Exact-file write authority pending; spending already authorized",
+  "envelope": {
+    "destination": "https://api.hyper3d.com/api/v2/rodin",
+    "purpose": "One anatomically fitted right-hand/short-forearm source; native topology inspection before rigging",
+    "allowed_operations": [
+      "one generation",
+      "same-task status",
+      "completed native OBJ/material/texture download"
+    ],
+    "data_transmitted": [
+      "two selected consistent-view design PNGs",
+      "validated nonsecret generation parameters"
+    ],
+    "forbidden_operations": [
+      "top-up",
+      "upgrade",
+      "old state/history overwrite",
+      "credential output",
+      "Git mutation"
+    ],
+    "stop_conditions": [
+      "missing exact-file authority",
+      "pending/unknown operation",
+      "collision",
+      "unexpected destination",
+      "source anatomy/topology/fitting fail"
+    ]
+  }
+}

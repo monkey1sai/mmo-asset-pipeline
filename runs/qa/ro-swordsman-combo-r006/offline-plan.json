@@ -1,0 +1,491 @@
+{
+  "mode": "offline_plan_only",
+  "request_id": "ro-swordsman-combo-r006",
+  "request_sha256": "a54ad708db150f7ba42c19f292f7ec0c3efc02f58c846c4b589089dcd9353b98",
+  "project": null,
+  "route": "split_then_generate",
+  "reason": "User authorizes a new hand/fitting phase. Design one separate glove, generate a source, inspect actual anatomy/topology, refine in Blender, then test grip before full assembly and animation.",
+  "pending": [],
+  "reuse_candidates": [
+    "ro-swordsman-combo-r005-v002"
+  ],
+  "steps": [
+    "理解需求與交付承諾",
+    "制定設計、參考與可修訂預設",
+    "先制定各部件、pivot 與活動規格，再分別製作及組裝",
+    "製作與需求指定的後製",
+    "逐項記錄美術／技術／必要目標環境證據",
+    "核對交付檔案並歸檔"
+  ],
+  "needed_capabilities": [
+    "part_design",
+    "candidate_generation",
+    "mesh_edit",
+    "format_export",
+    "rig_inspection",
+    "deformation_inspection",
+    "rig_authoring",
+    "animation_inspection",
+    "animation_authoring"
+  ],
+  "required_checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全"
+    },
+    {
+      "id": "rig_mapping",
+      "area": "technical",
+      "description": "指定骨架、權重及掛點經檢查"
+    },
+    {
+      "id": "deformation",
+      "area": "technical",
+      "description": "關節變形及指定動作經檢查"
+    },
+    {
+      "id": "animation",
+      "area": "technical",
+      "description": "需求列出的所有動作經檢查"
+    },
+    {
+      "id": "export-roundtrip",
+      "area": "technical",
+      "description": "乾淨場景GLB重匯入，實際skin/joints/channels/材質/採樣與變形保留；以交付hash綁定。"
+    },
+    {
+      "id": "skill-effects",
+      "area": "art",
+      "description": "斬擊／怒爆／霸體效果對應參考且可關閉；無效果全段另外檢查。"
+    }
+  ],
+  "paid_submission_authorized_by_this_plan": false,
+  "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。",
+  "creation_workflow": {
+    "owner": "art_engineer",
+    "preferred_execution": "hyper3d_api_via_available_mcp",
+    "execution_state": "not_submitted",
+    "capability_state": "requires_current_probe",
+    "authorization_state": "requires_existing_scope_check",
+    "credit_pool_state": "requires_monthly_credit_evidence",
+    "input_state": "requires_artist_design_and_backend_mapping",
+    "submission_ready": false,
+    "jobs": [
+      {
+        "subject_id": "character",
+        "design_brief": {
+          "purpose": "獨立可編輯角色與可搬移GLB，驗證固定基準、有界修訂、真實美術／骨架／連段及匯出驗收。",
+          "style": {
+            "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。",
+            "references": [
+              "C:\\.llmcode\\ro_swordsman_animation",
+              "runs/evidence/ro-swordsman-reference-analysis.md"
+            ],
+            "must_have": [
+              "棕色尖髮與動漫男性臉",
+              "分片銀色胸肩臂甲",
+              "深藍分叉衣擺與白前襟",
+              "皮手套／腰帶／長靴",
+              "獨立直劍／武器掛點",
+              "可編輯骨架及真正連續技能動作",
+              "可關閉的斬擊、怒爆火焰、霸體金色光效"
+            ],
+            "must_not_have": [
+              "把場景文字或火光融合進角色幾何",
+              "靜態圖片輪播代替骨骼動畫",
+              "以特效遮住握持或關節缺陷",
+              "自行新增遊戲傷害／碰撞規則"
+            ]
+          },
+          "part": {
+            "id": "character",
+            "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+          },
+          "whole_asset_spec": {
+            "size_m": [
+              1.2,
+              1.74,
+              1.2
+            ],
+            "size_scope": "GLB [X,Y,Z]: character nominal standing height1.74m (+Y up); X/Z are planning envelope only. Weapon and animated envelope measured separately; no claim exact XYZ size.",
+            "units": "m",
+            "up_axis": "+Y",
+            "forward_axis": "+Z",
+            "target_triangles": 60000,
+            "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。",
+            "texture_px": 2048,
+            "requires_rig": true,
+            "animations": [
+              "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory"
+            ],
+            "animation_contract": {
+              "fps": 60,
+              "frames": 300,
+              "sampling_interval_seconds": [
+                0,
+                4.9833333333
+              ],
+              "playback_duration_seconds": 5,
+              "reference_order": [
+                "provoke",
+                "bash",
+                "magnum_break",
+                "endure",
+                "victory"
+              ],
+              "root_motion": "原地表演；跳躍由骨盆位移，不改遊戲位移；動作銜接推定。"
+            },
+            "parts": [
+              {
+                "id": "character",
+                "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+              },
+              {
+                "id": "sword",
+                "pivot": "握柄中心；掛hand.R武器骨"
+              },
+              {
+                "id": "coat-tails",
+                "pivot": "骨盆左右分叉衣擺獨立活動"
+              },
+              {
+                "id": "effects",
+                "pivot": "分離展示層，角色動作可不含效果檢查"
+              }
+            ]
+          }
+        },
+        "prompt": null,
+        "reference_images": [],
+        "operation_id": null
+      },
+      {
+        "subject_id": "sword",
+        "design_brief": {
+          "purpose": "獨立可編輯角色與可搬移GLB，驗證固定基準、有界修訂、真實美術／骨架／連段及匯出驗收。",
+          "style": {
+            "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。",
+            "references": [
+              "C:\\.llmcode\\ro_swordsman_animation",
+              "runs/evidence/ro-swordsman-reference-analysis.md"
+            ],
+            "must_have": [
+              "棕色尖髮與動漫男性臉",
+              "分片銀色胸肩臂甲",
+              "深藍分叉衣擺與白前襟",
+              "皮手套／腰帶／長靴",
+              "獨立直劍／武器掛點",
+              "可編輯骨架及真正連續技能動作",
+              "可關閉的斬擊、怒爆火焰、霸體金色光效"
+            ],
+            "must_not_have": [
+              "把場景文字或火光融合進角色幾何",
+              "靜態圖片輪播代替骨骼動畫",
+              "以特效遮住握持或關節缺陷",
+              "自行新增遊戲傷害／碰撞規則"
+            ]
+          },
+          "part": {
+            "id": "sword",
+            "pivot": "握柄中心；掛hand.R武器骨"
+          },
+          "whole_asset_spec": {
+            "size_m": [
+              1.2,
+              1.74,
+              1.2
+            ],
+            "size_scope": "GLB [X,Y,Z]: character nominal standing height1.74m (+Y up); X/Z are planning envelope only. Weapon and animated envelope measured separately; no claim exact XYZ size.",
+            "units": "m",
+            "up_axis": "+Y",
+            "forward_axis": "+Z",
+            "target_triangles": 60000,
+            "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。",
+            "texture_px": 2048,
+            "requires_rig": true,
+            "animations": [
+              "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory"
+            ],
+            "animation_contract": {
+              "fps": 60,
+              "frames": 300,
+              "sampling_interval_seconds": [
+                0,
+                4.9833333333
+              ],
+              "playback_duration_seconds": 5,
+              "reference_order": [
+                "provoke",
+                "bash",
+                "magnum_break",
+                "endure",
+                "victory"
+              ],
+              "root_motion": "原地表演；跳躍由骨盆位移，不改遊戲位移；動作銜接推定。"
+            },
+            "parts": [
+              {
+                "id": "character",
+                "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+              },
+              {
+                "id": "sword",
+                "pivot": "握柄中心；掛hand.R武器骨"
+              },
+              {
+                "id": "coat-tails",
+                "pivot": "骨盆左右分叉衣擺獨立活動"
+              },
+              {
+                "id": "effects",
+                "pivot": "分離展示層，角色動作可不含效果檢查"
+              }
+            ]
+          }
+        },
+        "prompt": null,
+        "reference_images": [],
+        "operation_id": null
+      },
+      {
+        "subject_id": "coat-tails",
+        "design_brief": {
+          "purpose": "獨立可編輯角色與可搬移GLB，驗證固定基準、有界修訂、真實美術／骨架／連段及匯出驗收。",
+          "style": {
+            "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。",
+            "references": [
+              "C:\\.llmcode\\ro_swordsman_animation",
+              "runs/evidence/ro-swordsman-reference-analysis.md"
+            ],
+            "must_have": [
+              "棕色尖髮與動漫男性臉",
+              "分片銀色胸肩臂甲",
+              "深藍分叉衣擺與白前襟",
+              "皮手套／腰帶／長靴",
+              "獨立直劍／武器掛點",
+              "可編輯骨架及真正連續技能動作",
+              "可關閉的斬擊、怒爆火焰、霸體金色光效"
+            ],
+            "must_not_have": [
+              "把場景文字或火光融合進角色幾何",
+              "靜態圖片輪播代替骨骼動畫",
+              "以特效遮住握持或關節缺陷",
+              "自行新增遊戲傷害／碰撞規則"
+            ]
+          },
+          "part": {
+            "id": "coat-tails",
+            "pivot": "骨盆左右分叉衣擺獨立活動"
+          },
+          "whole_asset_spec": {
+            "size_m": [
+              1.2,
+              1.74,
+              1.2
+            ],
+            "size_scope": "GLB [X,Y,Z]: character nominal standing height1.74m (+Y up); X/Z are planning envelope only. Weapon and animated envelope measured separately; no claim exact XYZ size.",
+            "units": "m",
+            "up_axis": "+Y",
+            "forward_axis": "+Z",
+            "target_triangles": 60000,
+            "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。",
+            "texture_px": 2048,
+            "requires_rig": true,
+            "animations": [
+              "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory"
+            ],
+            "animation_contract": {
+              "fps": 60,
+              "frames": 300,
+              "sampling_interval_seconds": [
+                0,
+                4.9833333333
+              ],
+              "playback_duration_seconds": 5,
+              "reference_order": [
+                "provoke",
+                "bash",
+                "magnum_break",
+                "endure",
+                "victory"
+              ],
+              "root_motion": "原地表演；跳躍由骨盆位移，不改遊戲位移；動作銜接推定。"
+            },
+            "parts": [
+              {
+                "id": "character",
+                "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+              },
+              {
+                "id": "sword",
+                "pivot": "握柄中心；掛hand.R武器骨"
+              },
+              {
+                "id": "coat-tails",
+                "pivot": "骨盆左右分叉衣擺獨立活動"
+              },
+              {
+                "id": "effects",
+                "pivot": "分離展示層，角色動作可不含效果檢查"
+              }
+            ]
+          }
+        },
+        "prompt": null,
+        "reference_images": [],
+        "operation_id": null
+      },
+      {
+        "subject_id": "effects",
+        "design_brief": {
+          "purpose": "獨立可編輯角色與可搬移GLB，驗證固定基準、有界修訂、真實美術／骨架／連段及匯出驗收。",
+          "style": {
+            "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。",
+            "references": [
+              "C:\\.llmcode\\ro_swordsman_animation",
+              "runs/evidence/ro-swordsman-reference-analysis.md"
+            ],
+            "must_have": [
+              "棕色尖髮與動漫男性臉",
+              "分片銀色胸肩臂甲",
+              "深藍分叉衣擺與白前襟",
+              "皮手套／腰帶／長靴",
+              "獨立直劍／武器掛點",
+              "可編輯骨架及真正連續技能動作",
+              "可關閉的斬擊、怒爆火焰、霸體金色光效"
+            ],
+            "must_not_have": [
+              "把場景文字或火光融合進角色幾何",
+              "靜態圖片輪播代替骨骼動畫",
+              "以特效遮住握持或關節缺陷",
+              "自行新增遊戲傷害／碰撞規則"
+            ]
+          },
+          "part": {
+            "id": "effects",
+            "pivot": "分離展示層，角色動作可不含效果檢查"
+          },
+          "whole_asset_spec": {
+            "size_m": [
+              1.2,
+              1.74,
+              1.2
+            ],
+            "size_scope": "GLB [X,Y,Z]: character nominal standing height1.74m (+Y up); X/Z are planning envelope only. Weapon and animated envelope measured separately; no claim exact XYZ size.",
+            "units": "m",
+            "up_axis": "+Y",
+            "forward_axis": "+Z",
+            "target_triangles": 60000,
+            "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。",
+            "texture_px": 2048,
+            "requires_rig": true,
+            "animations": [
+              "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory"
+            ],
+            "animation_contract": {
+              "fps": 60,
+              "frames": 300,
+              "sampling_interval_seconds": [
+                0,
+                4.9833333333
+              ],
+              "playback_duration_seconds": 5,
+              "reference_order": [
+                "provoke",
+                "bash",
+                "magnum_break",
+                "endure",
+                "victory"
+              ],
+              "root_motion": "原地表演；跳躍由骨盆位移，不改遊戲位移；動作銜接推定。"
+            },
+            "parts": [
+              {
+                "id": "character",
+                "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+              },
+              {
+                "id": "sword",
+                "pivot": "握柄中心；掛hand.R武器骨"
+              },
+              {
+                "id": "coat-tails",
+                "pivot": "骨盆左右分叉衣擺獨立活動"
+              },
+              {
+                "id": "effects",
+                "pivot": "分離展示層，角色動作可不含效果檢查"
+              }
+            ]
+          }
+        },
+        "prompt": null,
+        "reference_images": [],
+        "operation_id": null
+      }
+    ],
+    "preparation_pending": [
+      "美術工程師將需求轉成單件／單部件 prompt，逐張確認參考圖與上傳範圍",
+      "核對當前工具 schema；圖生工具缺圖時先準備設計圖，不把需求文字直接當圖片輸入",
+      "生成參數與最終規格分開；固定輸出無法滿足的面數、尺寸、rig、動畫由後製處理",
+      "查既有 runs，保存唯一 operation ID、需求雜湊、輸入雜湊與 Authorization Envelope"
+    ],
+    "execution_steps": [
+      "探測工具及憑證狀態，查即時餘額；分開記錄 API 能力、額度來源與花費授權",
+      "沿用明確授權，核對月訂分項、單次成本、總預算及候選上限",
+      "逐筆保存 prepared 操作後呼叫 API；保存任務 ID 並查同一任務",
+      "完成後下載至 repo 的新 raw 版本，核對檔案與雜湊",
+      "美術工程師後製、品質比較、驗收及交付歸檔"
+    ],
+    "unknown_submission_policy": "reconcile_original_operation_never_resubmit",
+    "reconstruction_policy": {
+      "trigger": "observed_structural_gap_or_postprocess_cost_exceeds_remaining_revision_budget",
+      "steps": [
+        "preserve_failed_candidate_and_evidence",
+        "prepare_clear_reference_design",
+        "select_available_api_by_gap",
+        "check_existing_spending_scope",
+        "save_new_raw_and_baseline",
+        "blender_detail_rig_animation_and_fixed_review"
+      ],
+      "api_choices": {
+        "shape": "reference_to_3d",
+        "fused_parts": "part_split_if_available",
+        "material_only": "texture_only_if_available"
+      },
+      "capabilities": "probe_current_adapter_never_infer_from_vendor_docs",
+      "budget": "preserve_consumed_trials_and_costs_new_phase_requires_user_scope",
+      "animation": "generated_shape_does_not_supply_verified_rig_or_action_sequence",
+      "automatic_paid_retry": false
+    },
+    "website_policy": "credit_evidence_or_documented_fallback_only",
+    "note": "這是待工程師整理的創作交接；不是可直接送出的 API payload、交易鎖或付費許可。"
+  },
+  "quality_loop": {
+    "protocol_sha256": "50d8a70c9493396d6a1c1615768c0873ce27d0018fd722e4ce40cadca1bec85b",
+    "max_candidate_trials": 8,
+    "budget": {
+      "trial_seconds": 21600,
+      "total_seconds": 172800
+    },
+    "retention_rule": "no_dimension_regression_and_gain_or_required_gate_repair",
+    "delivery_rule": "all_dimension_targets_and_required_checks",
+    "automation": "offline_declarations_only"
+  }
+}

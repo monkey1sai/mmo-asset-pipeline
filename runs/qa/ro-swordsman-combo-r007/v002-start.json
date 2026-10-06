@@ -1,0 +1,47 @@
+{
+  "id": "v002",
+  "started_utc": "2026-10-03T12:49:01.898893+00:00",
+  "phase_started_utc": "2026-10-03T10:45:41.431021+00:00",
+  "planning_gap_since_v001_seconds": 89.340445,
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "previous_candidates_used": 1,
+  "candidate_limit": 4,
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+    "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599"
+  },
+  "source_reuse_scope": "Only failed-v001 local exterior/quad edits as guide; baseline remains current-best parent",
+  "joint_probe": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/joint-and-pole-probe.json",
+    "sha256": "b8145fa50d0981bd32bc691374620af99fd89f244aa090640b310d7a855da824"
+  },
+  "hypothesis": "Two independently observed plateau states may permit a legal improving second edge rotation while frozen joint bands stay unchanged",
+  "maximum_second_step_probes": 160,
+  "maximum_sequence_length": 2,
+  "seeds": [
+    {
+      "edge_vertices": [
+        48,
+        49
+      ],
+      "ccw": false
+    },
+    {
+      "edge_vertices": [
+        49,
+        50
+      ],
+      "ccw": true
+    }
+  ],
+  "surface_max_error_m": 0.0015,
+  "cap_margin_m": 0.003,
+  "inverse_and_duplicate_topology_rejected": true,
+  "old_v001_probes_preserved": 160,
+  "phase_clock_reset": false,
+  "new_paid_generation": false,
+  "stop_before_rig": "Any primary-band pole, changed triangle/self-cross/UV/surface failure"
+}

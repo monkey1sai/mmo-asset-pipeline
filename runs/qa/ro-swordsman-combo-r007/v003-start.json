@@ -1,0 +1,31 @@
+{
+  "id": "v003",
+  "started_utc": "2026-10-03T13:00:43.152746+00:00",
+  "phase_started_utc": "2026-10-03T10:45:41.431021+00:00",
+  "planning_gap_since_v002_seconds": 0.477337,
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "previous_candidates_used": 2,
+  "candidate_limit": 4,
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+    "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599"
+  },
+  "joint_probe": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/joint-and-pole-probe.json",
+    "sha256": "b8145fa50d0981bd32bc691374620af99fd89f244aa090640b310d7a855da824"
+  },
+  "hypothesis": "A measured thumb IP-to-tip quad patch can place exceptional vertices in the distal cap while retaining the existing palm, four fingers and proximal thumb boundary",
+  "protected": "Every retained original vertex position, face corner UV and material; frozen joint centers/bands unchanged",
+  "maximum_boundary_probes": 40,
+  "maximum_patch_variants": 12,
+  "surface_max_error_m": 0.0015,
+  "cap_margin_m": 0.003,
+  "patch_surface_method": "Project new ring points onto the archived local source surface; preserve boundary exactly; actual loop triangles and bidirectional sample checks",
+  "UV_method": "Transfer each changed corner from a single nearest original triangle with barycentric interpolation; retain each protected original face corner exactly",
+  "new_paid_generation": false,
+  "phase_clock_reset": false,
+  "stop_before_rig": "No ordered patch boundary, any primary-band pole or incorrect pole destination, crossing/normal/UV/surface failure"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "v001",
+  "started_utc": "2026-10-04T05:16:32.442387+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r009/v004-collision-constraints/right_hand_collision_constrained_contact.blend",
+    "sha256": "5dae70010e743d1f10ecb546fbb8e699a79527d0bbdd01652ec601f20afc6ef3"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+    "sha256": "09773ab0b04439b2cc362946c5086aade223ce520807ef9c70172264ce487749"
+  },
+  "hypothesis": "Authored distal curl distribution increases ring/index pulp wrapping while preserving opposed thumb and rest of safe grasp.",
+  "change": "Only explicit ring/index joint rotation, same original Basis/skin/UV/weapon position; no shape key or automatic search.",
+  "controls": {
+    "finger1": [
+      0.46972099534808925,
+      1.1088633892080078,
+      0.33817294939731307
+    ],
+    "finger2": [
+      0.5461766159498264,
+      0.9101845211591375,
+      0.4414791393380186
+    ],
+    "finger3": [
+      0.5920883276487917,
+      0.8985157643401548,
+      0.6275828653232329
+    ],
+    "finger4": [
+      0.8699806704309736,
+      0.8661235130750671,
+      0.48000000000000004
+    ],
+    "thumb": [
+      0.13961645199180542,
+      0.5831968776187559,
+      0.20474440793468016
+    ],
+    "pronation": 0.43496240930359453
+  },
+  "splays": {
+    "finger1": 0.059155745554240254,
+    "finger2": 0.011096127170782472,
+    "finger3": -0.15,
+    "finger4": -0.1489937093344094
+  },
+  "weapon_shift": [
+    -0.003669341223822895,
+    -0.04295742056248645,
+    -0.03288676802556037
+  ],
+  "previous_candidates_used": 0,
+  "new_credits": 0
+}

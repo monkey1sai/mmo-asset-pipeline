@@ -1,0 +1,21 @@
+{
+  "observed_utc": "2026-10-03T13:15:49.396591+00:00",
+  "verdict": "NO_SHIP",
+  "geometry_gate": "pass_local_patch_only",
+  "material_gate": "fail16mixedsourceUVfaces",
+  "thumb_curl_direction": "pass±.05rad_actual_surface_displacement",
+  "small_motion_numeric": "no detected transverse pairs; not visible shape acceptance",
+  "visible_skin_gate": "fail palm-root angular ridge in actual small0.30 side view",
+  "failure_evidence": "Adjacent root vertices123/133 and488/489 jump hand1 tothumb01_1; max edge ratio2.1923778 at0.30rad",
+  "next_hypothesis": "Mesh-neighbor root weights with bounded anatomical region and fixed distal/fourfinger weights",
+  "full_request_not_run": [
+    "Assembly",
+    "Sword contact",
+    "Left hand",
+    "300frame skills",
+    "VFX",
+    "Fresh animatedGLB"
+  ],
+  "new_service_credits": 0,
+  "phase_clock_reset": false
+}

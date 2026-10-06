@@ -1,0 +1,18 @@
+{
+  "classification": "TEST_FAILURE",
+  "affected_report": "v002-final-review.json and independent review of v002-digit-weights",
+  "correction": "Sibling weight removal remains verified, but the individual axis direction was reversed in that test. v002 shape results cannot isolate source topology as the sole cause. v002 remains failed because actual grip was not accepted.",
+  "old_helper": {
+    "path": "runs/qa/ro-swordsman-combo-r005/v002-digit-weights/rig-helper-used.py",
+    "sha256": "36f895164fa2de32e29581ccb240e059a42572c74e3bfa684e6ca718dba0f652"
+  },
+  "corrected_method_report": {
+    "path": "runs/qa/ro-swordsman-combo-r005/v003-hand-direction/direction.json",
+    "sha256": "51912f04c1e9b31b8d20a8c8aa2b2999c287ca41a9de283182479be405e2e1ab"
+  },
+  "actual_runtime_direction_check": {
+    "path": "runs/qa/ro-swordsman-combo-r005/v003-hand-surface/axis-runtime-check.json",
+    "sha256": "109a4ce3100f3ba2909699a9b445a829f9c8b6bfbf02aa6a042b94536cda53fc"
+  },
+  "previous_files_preserved": true
+}

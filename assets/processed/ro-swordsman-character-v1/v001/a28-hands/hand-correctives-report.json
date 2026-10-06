@@ -1,0 +1,331 @@
+{
+ "observed_utc": "2026-10-05T05:45:12.311861+00:00",
+ "script_sha256": "22f5eb13bb97e49689b0319a7578c8f9b48a76cdb98339d1b476aa21e055d448",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a27-folds/ro_character_v001_a27-folds.blend",
+  "sha256": "6302d878edbbed0b00dddef454c22fe2615944d2fc6eb507e01eb6cfb72ab5c2"
+ },
+ "source_sha256_after": "6302d878edbbed0b00dddef454c22fe2615944d2fc6eb507e01eb6cfb72ab5c2",
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a28-hands/ro_character_v001_a28-hands.blend",
+  "sha256": "d3bab8b436e597527ad259c40f6b587bfc723c3b5c4539f8a645e5aed841471d"
+ },
+ "limits": {
+  "low": 0.45,
+  "high": 2.2,
+  "iterations": 80,
+  "clearance_step_mm": 0.2
+ },
+ "right_basis_unchanged": true,
+ "shape_keys_added_per_hand": 19,
+ "stage1_crease_relief": [
+  {
+   "bone": "finger1.R_01",
+   "blend_zone_vertices": 49,
+   "vertices_moved": 14,
+   "largest_rest_delta_mm": 4.395,
+   "edge_ratio_before": [
+    0.061,
+    3.683
+   ],
+   "edge_ratio_after": [
+    0.45,
+    2.2
+   ]
+  },
+  {
+   "bone": "finger1.R_02",
+   "blend_zone_vertices": 28,
+   "vertices_moved": 12,
+   "largest_rest_delta_mm": 2.2,
+   "edge_ratio_before": [
+    0.203,
+    1.157
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.186
+   ]
+  },
+  {
+   "bone": "finger1.R_03",
+   "blend_zone_vertices": 42,
+   "vertices_moved": 0,
+   "largest_rest_delta_mm": 0.0,
+   "edge_ratio_before": [
+    0.602,
+    1.225
+   ],
+   "edge_ratio_after": [
+    0.602,
+    1.225
+   ]
+  },
+  {
+   "bone": "finger2.R_01",
+   "blend_zone_vertices": 37,
+   "vertices_moved": 19,
+   "largest_rest_delta_mm": 9.407,
+   "edge_ratio_before": [
+    0.439,
+    5.704
+   ],
+   "edge_ratio_after": [
+    0.45,
+    2.2
+   ]
+  },
+  {
+   "bone": "finger2.R_02",
+   "blend_zone_vertices": 37,
+   "vertices_moved": 6,
+   "largest_rest_delta_mm": 1.67,
+   "edge_ratio_before": [
+    0.257,
+    1.271
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.271
+   ]
+  },
+  {
+   "bone": "finger2.R_03",
+   "blend_zone_vertices": 33,
+   "vertices_moved": 0,
+   "largest_rest_delta_mm": 0.0,
+   "edge_ratio_before": [
+    0.617,
+    1.318
+   ],
+   "edge_ratio_after": [
+    0.617,
+    1.318
+   ]
+  },
+  {
+   "bone": "finger3.R_01",
+   "blend_zone_vertices": 31,
+   "vertices_moved": 16,
+   "largest_rest_delta_mm": 7.156,
+   "edge_ratio_before": [
+    0.446,
+    6.408
+   ],
+   "edge_ratio_after": [
+    0.453,
+    2.2
+   ]
+  },
+  {
+   "bone": "finger3.R_02",
+   "blend_zone_vertices": 42,
+   "vertices_moved": 0,
+   "largest_rest_delta_mm": 0.0,
+   "edge_ratio_before": [
+    0.601,
+    1.317
+   ],
+   "edge_ratio_after": [
+    0.601,
+    1.317
+   ]
+  },
+  {
+   "bone": "finger3.R_03",
+   "blend_zone_vertices": 31,
+   "vertices_moved": 0,
+   "largest_rest_delta_mm": 0.0,
+   "edge_ratio_before": [
+    0.5,
+    1.275
+   ],
+   "edge_ratio_after": [
+    0.5,
+    1.275
+   ]
+  },
+  {
+   "bone": "finger4.R_01",
+   "blend_zone_vertices": 34,
+   "vertices_moved": 8,
+   "largest_rest_delta_mm": 3.05,
+   "edge_ratio_before": [
+    0.291,
+    3.547
+   ],
+   "edge_ratio_after": [
+    0.45,
+    2.2
+   ]
+  },
+  {
+   "bone": "finger4.R_02",
+   "blend_zone_vertices": 42,
+   "vertices_moved": 8,
+   "largest_rest_delta_mm": 1.113,
+   "edge_ratio_before": [
+    0.339,
+    1.218
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.218
+   ]
+  },
+  {
+   "bone": "finger4.R_03",
+   "blend_zone_vertices": 42,
+   "vertices_moved": 6,
+   "largest_rest_delta_mm": 0.362,
+   "edge_ratio_before": [
+    0.393,
+    1.346
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.346
+   ]
+  },
+  {
+   "bone": "hand.R",
+   "blend_zone_vertices": 31,
+   "vertices_moved": 8,
+   "largest_rest_delta_mm": 1.423,
+   "edge_ratio_before": [
+    0.118,
+    1.998
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.998
+   ]
+  },
+  {
+   "bone": "thumb.R_01",
+   "blend_zone_vertices": 68,
+   "vertices_moved": 4,
+   "largest_rest_delta_mm": 4.593,
+   "edge_ratio_before": [
+    0.645,
+    3.221
+   ],
+   "edge_ratio_after": [
+    0.645,
+    2.2
+   ]
+  },
+  {
+   "bone": "thumb.R_02",
+   "blend_zone_vertices": 42,
+   "vertices_moved": 0,
+   "largest_rest_delta_mm": 0.0,
+   "edge_ratio_before": [
+    0.81,
+    1.458
+   ],
+   "edge_ratio_after": [
+    0.81,
+    1.458
+   ]
+  },
+  {
+   "bone": "thumb.R_03",
+   "blend_zone_vertices": 48,
+   "vertices_moved": 8,
+   "largest_rest_delta_mm": 0.87,
+   "edge_ratio_before": [
+    0.211,
+    1.71
+   ],
+   "edge_ratio_after": [
+    0.45,
+    1.71
+   ]
+  }
+ ],
+ "stage2_finger_clearance": [
+  {
+   "pose": "fingers-mcp-flexion.R",
+   "level": 0.5,
+   "iterations": 1,
+   "keys": [
+    "SKC_clear_34_j1.R"
+   ],
+   "pairs_before": 1,
+   "finger_pairs_before": 1,
+   "pairs_after": 0,
+   "finger_pairs_after": 0
+  },
+  {
+   "pose": "combo-empty-fist.R",
+   "level": 0.5,
+   "iterations": 1,
+   "keys": [
+    "SKC_clear_23_j2.R"
+   ],
+   "pairs_before": 6,
+   "finger_pairs_before": 6,
+   "pairs_after": 0,
+   "finger_pairs_after": 0
+  }
+ ],
+ "stage3_fist_residual": {
+  "vertices_moved": 25,
+  "flat_triangles_given_area": 4,
+  "driver_value_at_extreme": 0.9999996946712434,
+  "edge_ratio_before": [
+   0.234,
+   2.745
+  ],
+  "edge_ratio_after": [
+   0.45,
+   2.2
+  ]
+ },
+ "contract_pose_check": {
+  "fingers-mcp-flexion.R/typical": {
+   "self_pairs": 0,
+   "edge_ratio": [
+    0.269,
+    1.636
+   ]
+  },
+  "fingers-mcp-flexion.R/extreme": {
+   "self_pairs": 201,
+   "edge_ratio": [
+    0.33,
+    2.179
+   ]
+  },
+  "fingers-pip-flexion.R/typical": {
+   "self_pairs": 0,
+   "edge_ratio": [
+    0.617,
+    1.216
+   ]
+  },
+  "fingers-pip-flexion.R/extreme": {
+   "self_pairs": 0,
+   "edge_ratio": [
+    0.45,
+    1.269
+   ]
+  },
+  "combo-empty-fist.R/typical": {
+   "self_pairs": 0,
+   "edge_ratio": [
+    0.307,
+    1.614
+   ]
+  },
+  "combo-empty-fist.R/extreme": {
+   "self_pairs": 291,
+   "edge_ratio": [
+    0.45,
+    2.2
+   ]
+  }
+ },
+ "scope": "Edge-length relief and side clearance only. No flesh contact or volume model, and not an art acceptance."
+}

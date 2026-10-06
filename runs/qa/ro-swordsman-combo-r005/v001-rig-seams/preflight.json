@@ -1,0 +1,105 @@
+{
+  "candidate": "v001",
+  "stage": "rig preflight; not full continuous animation",
+  "known_failure_repaired": "Gear bones excluded from core bone heat and all core assignment; downslash grip moved to shared reachable volume. Actual visual acceptance remains separate.",
+  "source_seam_vertices_before": 6651,
+  "source_seam_vertices_after": 5820,
+  "uv_loop_values_preserved": true,
+  "nonmanifold_edges_after_position_weld": 0,
+  "seam_failure_evidence": "269 coincident core vertex groups in prior output had different skin weights; source positions welded before heat. Original masters preserved.",
+  "source_sha256": "eaf01613d30cddbf44a951236aabdbfd3931f309da8e0791ef5924b309993a66",
+  "source_preserved": true,
+  "bone_heat_warning": null,
+  "bones": 48,
+  "triangles": 55488,
+  "invalid_weights": [],
+  "weight_validation_pass": true,
+  "linear_skinning": true,
+  "fk_editable": true,
+  "ik_fk_switch": false,
+  "real_stress_poses": [
+    {
+      "pose": "overhead",
+      "hip_height_m": 0.89,
+      "requested_grip": [
+        0,
+        -0.16,
+        1.5
+      ],
+      "feasible_grip": [
+        0.0,
+        -0.1599999964237213,
+        1.5
+      ],
+      "grip_position_adjustment_m": 0.0,
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 0.00177494032291525,
+        "L": 0.0,
+        "foot.L": 0.00177494032291525
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "deep-crouch",
+      "hip_height_m": 0.7,
+      "requested_grip": [
+        0,
+        -0.22,
+        1.02
+      ],
+      "feasible_grip": [
+        0.0,
+        -0.2199999988079071,
+        1.0199999809265137
+      ],
+      "grip_position_adjustment_m": 0.0,
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 1.666000468656264e-08,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "downslash",
+      "hip_height_m": 0.82,
+      "requested_grip": [
+        -0.08,
+        -0.2,
+        1.0
+      ],
+      "feasible_grip": [
+        -0.06830501556396484,
+        -0.1440216302871704,
+        1.0508525371551514
+      ],
+      "grip_position_adjustment_m": 0.07652667131970553,
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 3.003425057343598e-08,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    }
+  ],
+  "animation_channels": 0,
+  "effects": false,
+  "elapsed_trial_seconds": 1709.78288,
+  "elapsed_phase_seconds": 6406.888704,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-seams/ro_rig_preflight.blend",
+      "sha256": "f35a529f6ee91986810d11c4cfbfa6e033ebf6a8dd24fc637346f6362d44f18f",
+      "bytes": 17204777
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-seams/ro_rig_preflight.glb",
+      "sha256": "17c0163cde80e1d6afa38a2dce268f62177b35ca4cbe70bf63fbe26a8b6f7ba8",
+      "bytes": 12278716
+    }
+  ],
+  "acceptance": "Pending actual views/grip/deformation and fresh GLB reimport; no art/technical PASS"
+}

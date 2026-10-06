@@ -1,0 +1,107 @@
+{
+  "trial": "v008",
+  "finished_utc": "2026-10-03T07:55:07.644249+00:00",
+  "source_preserved": true,
+  "surface_gate_pass": true,
+  "pad_contacts": {
+    "finger1": {
+      "vertices": 30,
+      "minimum_gap_m": 0.00016572985623497516,
+      "mean_gap_m": 0.006131587041212091,
+      "within_2mm": 4
+    },
+    "finger2": {
+      "vertices": 33,
+      "minimum_gap_m": 0.0012430362403392792,
+      "mean_gap_m": 0.013879324912770906,
+      "within_2mm": 4
+    },
+    "finger3": {
+      "vertices": 41,
+      "minimum_gap_m": 0.0009332019253633916,
+      "mean_gap_m": 0.016039172044057946,
+      "within_2mm": 5
+    },
+    "finger4": {
+      "vertices": 34,
+      "minimum_gap_m": 0.0002708745887503028,
+      "mean_gap_m": 0.01300685375377618,
+      "within_2mm": 4
+    },
+    "thumb": {
+      "vertices": 54,
+      "minimum_gap_m": 0.0009012446971610188,
+      "mean_gap_m": 0.02105872660521763,
+      "within_2mm": 4
+    }
+  },
+  "maximum_penetration_m": 0,
+  "sword_crossings": 0,
+  "whole_triangles": 57039,
+  "whole_budget_pass": true,
+  "seams_max_m": 0.0,
+  "rigid_prediction_max_error_m": 3.0282737959774696e-07,
+  "armor_crossings_by_sample": [
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 170
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 167
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 165
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 173
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 211
+    }
+  ],
+  "glove_self_crossings_by_sample": [
+    0,
+    0,
+    175,
+    335,
+    491
+  ],
+  "tube_self_crossings_by_sample": [
+    0,
+    0,
+    13,
+    285,
+    138
+  ],
+  "maximum_new_wrist_corrective_m": 0.02077709756143649,
+  "prototype_animation": {
+    "frames": 61,
+    "fps": 60,
+    "seconds": 1,
+    "full_skill_combo": false
+  },
+  "art_acceptance": "pending actual fixed views",
+  "fresh_glb_roundtrip": "not_run_yet",
+  "full_animation_accepted": false,
+  "left_replacement_accepted": false,
+  "delivered": false,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.glb",
+      "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+    }
+  ]
+}

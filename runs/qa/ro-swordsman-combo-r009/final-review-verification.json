@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-04T02:14:20.288578+00:00",
+  "status": "verified_closed_NO_SHIP_with_independent_review",
+  "independent_review": "advisory_completed_not_delivery_approval",
+  "review_artifacts": [
+    {
+      "path": "runs/qa/ro-swordsman-combo-r009/independent-final-review.md",
+      "sha256": "7f3abb885d60a756ff7726e6a5dde964fb3e9bb0f1e1458bf4981c68e7a3383f"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r009/review-followup.md",
+      "sha256": "3f8b6c244392af5fc7abea24a74fc720876cd5c9edf034eccedd23a28b1853ef"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r009/final-verification.json",
+      "sha256": "7ce917780d227f72ab69a0c001795fb9b940e0e29fa3bb228669533da6ce8432"
+    }
+  ],
+  "original_document_bindings_verified": 5,
+  "protected_history_files_verified": 183,
+  "comparison": {
+    "candidates": 4,
+    "next_action": "stop_budget",
+    "quality_target_met": false
+  },
+  "assessment": "not_ready",
+  "diagnostic_semantics_verified": {
+    "predicted_delta": "negative_gradient_not_actual_control_step",
+    "max_halfspace_violation_m": "mixed_distance_and_dimensionless_box_residual_not_physical_penetration",
+    "v004_actual_normalized_step": "collision-constraint-observations.jsonl normalized_delta"
+  },
+  "diagnostic_corrections": "append_only_original_sources_and_logs_preserved",
+  "final_jev_observation_reference": "7b83fc83-dd11-4dd7-8591-71aa3eff59f1",
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "stage_commit_push": "held_by_user",
+  "r009_new_API_submissions": 0,
+  "r009_new_service_credits": 0,
+  "tests_not_repeated_for_document_only_append": true,
+  "next_method": "draft_not_executed_new_phase_required",
+  "background_agent_observation": "batch_review_and_hand_phase_review_completed_no_task_owned_background_process"
+}

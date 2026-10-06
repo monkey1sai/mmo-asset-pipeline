@@ -1,0 +1,13 @@
+{
+  "operation_id": "ro-swordsman-apose-20261002-001",
+  "human_answer": "同意授權",
+  "source": "User answered the exact single-file authorization question in the active conversation.",
+  "path": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-swordsman-apose-20261002-001.dpapi",
+  "allowed": ["exclusive create", "update same newly-created file", "internal same-task read and Windows DPAPI protection/decryption"],
+  "forbidden": ["modify old authorization.json", "modify provider", "modify credentials", "touch other task state", "global temporary files", "print secret", "Git mutation"],
+  "audit": {"target_exists_before": false, "old_target_backup": "not_applicable_new_file", "public_candidate_plan_sha256": "92c517e09fc6ea4f457ace1b8952f5a9c45f83234ba4dc3b11b9186823a83e14"},
+  "stage": "Repo-side public plan and reviewed CLI are staged as a candidate, not git staged; no secret backup needed for nonexistent target.",
+  "health_limits": "Codex doctor has an existing sandbox provisioning failure; no config, ACL or sandbox repair is in scope. This private task file is operational recovery state, not a config change. Global health is not claimed passed.",
+  "post_apply": {"result": "Single task state created and updated; paid roundtrip and recovery status/download succeeded.", "task_uuid": "b51afd35-409d-48e6-b2a0-4c4e0b844904", "consumed_credits": 0.5, "doctor": {"exit_code": 0, "ok": 19, "notes": 8, "warn": 6, "fail": 0, "status": "degraded", "sandbox_helper_execution": "not_verified"}},
+  "rollback": "Before a charged submission only this task's unsubmitted reservation could be removed with specific authority; after submission retain the file to recover the original task, never reset or resubmit. No destructive rollback authorized."
+}

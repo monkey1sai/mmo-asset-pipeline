@@ -1,0 +1,16 @@
+{
+  "observation_window_utc": ["2026-10-03T12:00:34+00:00", "2026-10-03T12:04:31.862329+00:00"],
+  "command": "codex doctor --summary",
+  "cwd": "C:\\Repos\\mmo-asset-pipeline",
+  "exit_code": 1,
+  "summary": "18 ok · 10 notes · 6 warn · 1 fail failed",
+  "failed_gate": "elevated Windows sandbox provisioning recorded a structured failure",
+  "classification": "ENVIRONMENT_FAILURE",
+  "known_before_this_task": true,
+  "global_health_pass": false,
+  "scope": "Baseline health before one human-authorized new encrypted task-state file; no configuration or security maintenance",
+  "execution_policy": "Only individually reviewed exact host commands; preserve sandbox settings, ACL, credentials and old task history",
+  "ACL_parent_owner_observed": "DESKTOP-7VF1E3D\\jacks",
+  "ACL_modified": false,
+  "known_gap": "Existing sandbox provisioning failure remains unresolved; do not count whole global environment as healthy"
+}

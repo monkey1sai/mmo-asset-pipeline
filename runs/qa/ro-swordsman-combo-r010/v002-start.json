@@ -1,0 +1,25 @@
+{
+  "id": "v002",
+  "started_utc": "2026-10-04T05:20:36.083561+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r009/v004-collision-constraints/right_hand_collision_constrained_contact.blend",
+    "sha256": "5dae70010e743d1f10ecb546fbb8e699a79527d0bbdd01652ec601f20afc6ef3"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+    "sha256": "09773ab0b04439b2cc362946c5086aade223ce520807ef9c70172264ce487749"
+  },
+  "hypothesis": "Broad distal pulp inflation in a safe authored C-wrap supplies missing distributed surface contact without extra bone curl or changing fixed measurement IDs.",
+  "change": "Single2.2mmmaximum posed normal field over full ring/index palmar branch, tapered proximally; surface safety clips only toward actual handle at0.8mmclearance. Inverse verified LBS into additive shape key. All otherdigits/palm/thumb/wrist fixed.",
+  "maximum_requested_posed_m": 0.0022,
+  "minimum_clearance_m": 0.0008,
+  "branches": [
+    "finger2",
+    "finger4"
+  ],
+  "prior_candidates_used": 1,
+  "new_credits": 0,
+  "field": "All original semantic-body points; axial smoothstep(.20,.65) and rest normal palmar smoothstep(0,.5); no nearest-three guide selection.",
+  "shape_key_name": "SK_RO_GraspPulp_Corrective",
+  "basis_source_unchanged": true
+}

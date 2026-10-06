@@ -1,0 +1,30 @@
+{
+ "observed_utc": "2026-10-05T09:30:39.488844+00:00",
+ "script_sha256": "d2d669d3c591c52888d18defc212b42b797b2d0448722d22216a1a41d154e32c",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b10-groinL/ro_character_v001_b10-groinL.blend",
+  "sha256": "4837580619b4740487a2f8ac77d3be6a702d599130d76170cd082d11d8d22d7d"
+ },
+ "source_sha256_after": "4837580619b4740487a2f8ac77d3be6a702d599130d76170cd082d11d8d22d7d",
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b11-fold05/ro_character_v001_b11-fold05.blend",
+  "sha256": "0faa610dc333d658a69be82be42eca15ebcc7cb3d62011442fb962b4cbd8eee9"
+ },
+ "area_ratio_target": 0.08,
+ "sites": [
+  {
+   "site": 28,
+   "motion": "combo-deep-squat",
+   "level": "typical",
+   "driver_bone": "upper_leg.L",
+   "triangle_vertices": [
+    4037,
+    4040,
+    4084
+   ],
+   "skipped": "already above the target with the existing correctives",
+   "area_ratio_with_existing": 0.6366
+  }
+ ],
+ "scope": "One vertex per site, moved only as far as the triangle needs to keep a share of its rest area in that pose. Not a shoulder or hip deformation fix."
+}

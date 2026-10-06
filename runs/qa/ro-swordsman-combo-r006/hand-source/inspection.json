@@ -1,0 +1,124 @@
+{
+  "observed_utc": "2026-10-03T06:23:07.609683+00:00",
+  "tool": "4.5.5 LTS",
+  "operation_id": "ro-hand-source-20261003-001",
+  "consumed_credits": 0.5,
+  "source": {
+    "path": "assets/raw/ro-swordsman-combo/rodin-v006/right-glove/base_basic_pbr.glb",
+    "sha256": "8aab564b7f938105eaeab10deb36af33345452b0135859cef030ffd98937a451"
+  },
+  "stats": {
+    "vertices": 1452,
+    "triangles": 2268,
+    "polygon_sides": {
+      "3": 2268,
+      "4": 0
+    },
+    "welded_vertices": 1136,
+    "weld_boundary_edges": 0,
+    "weld_nonmanifold_edges": 0,
+    "components": [
+      {
+        "id": 0,
+        "vertices": 1452,
+        "triangles": 2268,
+        "min": [
+          -0.06407696008682251,
+          -0.0347517654299736,
+          0.0
+        ],
+        "max": [
+          0.06407696008682251,
+          0.0347517654299736,
+          0.19500000774860382
+        ]
+      }
+    ],
+    "uv_layers": [
+      "UVMap"
+    ],
+    "materials": [
+      "model"
+    ],
+    "normalized_height_m": 0.195,
+    "source_min": [
+      -0.622048020362854,
+      -0.33625203371047974,
+      -0.9480429887771606
+    ],
+    "source_max": [
+      0.6214669942855835,
+      0.33816102147102356,
+      0.9440990090370178
+    ],
+    "factor": 0.10305780444874961,
+    "images": [
+      {
+        "name": "texture_diffuse",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "packed": true
+      },
+      {
+        "name": "texture_metallic-texture_roughness",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "packed": true
+      },
+      {
+        "name": "texture_normal",
+        "dimensions": [
+          2048,
+          2048
+        ],
+        "packed": true
+      }
+    ]
+  },
+  "visual_review": "pending",
+  "rig_accepted": false,
+  "deformation_accepted": false,
+  "contact_accepted": false,
+  "topology_note": "GLB stores triangles; generated Quad request alone does not prove production edge flow",
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/hand-source/right_glove_source.blend",
+      "sha256": "2255ad32efc4a39ce79910d90e9409943b5f7bb507d736540e9efcd77c45add3",
+      "bytes": 7942034
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/back.png",
+      "sha256": "11ea8a644d6e774656faef713d88c8afb4662c86e6d472eafa6f27ffd935eee3",
+      "bytes": 1609509
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/cuff.png",
+      "sha256": "98c6b9e95039a641657efcedcf06ffdce602af34879c6becf06aeef5deebef65",
+      "bytes": 1353537
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/front.png",
+      "sha256": "4d538590409a58ed743b23aeaf6ecc59868c8e18296dcc1ff141a65718c35ce4",
+      "bytes": 1699620
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/left.png",
+      "sha256": "a232cf38bb5adb8e7dc5e4a9888363c2ea10d6ada8dcbcad9c76e0ef060bfc76",
+      "bytes": 1575253
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/right.png",
+      "sha256": "1a480e484224394eb31d8232c9f224d22df80996b6706d9933281f1b2eaf0a6b",
+      "bytes": 1567597
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/hand-source/three-quarter.png",
+      "sha256": "8988e6e12491c81ba03a6e76ab0c2db2ba31429c2794f5f48ec68f866b027b7c",
+      "bytes": 1783092
+    }
+  ]
+}

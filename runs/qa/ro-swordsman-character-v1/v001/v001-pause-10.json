@@ -1,0 +1,51 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T07:37:43Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "paused_waiting_for_user (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602,
+  1277
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z",
+  "2026-10-05T07:16:26Z"
+ ],
+ "interval_note": "The last interval starts at the first command of the turn and includes the 560 s independent plan review (r4 line 261 counts waiting for tools and reviews).",
+ "active_seconds_total": 5328,
+ "trial_seconds_cap": 21600,
+ "current_best_build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "joint_range": "73 of 73 numeric gates pass (joint-range-r02, current tool)",
+  "closed_loop": "runtime 4.642 um (gate 10 um), readback 4.206 um (gate 5 um), current harness; rerun-r01.json"
+ },
+ "this_interval": [
+  "authorization entry 9 (wrist carriers, option 1)",
+  "b03 rerun with current tools (rerun-r01.json)",
+  "cv1_joint_range.py: armour gate only when armour meshes are configured",
+  "provisional contact fixtures (b03-hands/contact-fixtures.json)",
+  "independent advisory P3/P4 plan review (p3-plan-review-01.md): verdict re-plan"
+ ],
+ "open_decisions": [
+  "D3 budget: P2-P5 is one candidate lifecycle (r4 line 256) and the remaining trial time does not cover P3-P5",
+  "D1 forearm twist: rule-driven helper versus clip-keyed"
+ ],
+ "new_paid_submissions": 0
+}

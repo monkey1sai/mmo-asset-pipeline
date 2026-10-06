@@ -1,0 +1,20 @@
+{
+  "operation_id": "ro-core-fallback-20261003-001",
+  "human_authorization": "User selected direction 1 by replying 1: authorize this one core task and its exact new DPAPI recovery file.",
+  "authorized_state_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-core-fallback-20261003-001.dpapi",
+  "existing_spending_authority": "Demand-driven existing monthly or regular credits; no topup or upgrade.",
+  "plan_sha256": "2a33237e7a7c1b41626536f1547a63c1f50e386f2f31d86f0b8c6c71df93317b",
+  "input_sha256": "428ce1cceab5cf008302106f98581f803aefa362e69dfca26f107c1cf6646b06",
+  "original_phase_started_utc": "2026-10-03T00:06:54.237611+00:00",
+  "phase_clock_reset": false,
+  "candidate_trials_already_used": 1,
+  "remaining_assembly_revisions_before_submission": 2,
+  "envelope": {
+    "destination": ["https://api.hyper3d.com/api/v2/check_balance", "https://api.hyper3d.com/api/v2/rodin", "https://api.hyper3d.com/api/v2/status", "https://api.hyper3d.com/api/v2/download", "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-core-fallback-20261003-001.dpapi"],
+    "purpose": "One source-quality fallback experiment for the failed RO core, then local Blender comparison and rig stress validation.",
+    "allowed_operations": ["non-consuming balance preflight", "one generation for this operation", "create/update only the exact new DPAPI file", "same-task status and completed-result download to the worktree"],
+    "data_transmitted": ["one background-cleaned core design derivative bound to input_sha256", "validated generation parameters", "provider-managed authentication and same-task query identifiers"],
+    "forbidden_operations": ["old history overwrite", "other global writes", "credential disclosure", "topup/upgrade", "automatic resubmission", "stage/commit/push"],
+    "stop_conditions": ["plan/input/provider drift", "file collision", "unknown or pending prior operation", "unexpected endpoint", "original budget exhausted", "execution approval denial"]
+  }
+}

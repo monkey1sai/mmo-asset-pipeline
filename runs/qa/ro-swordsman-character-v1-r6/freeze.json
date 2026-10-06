@@ -1,0 +1,43 @@
+{
+ "frozen_utc": "2026-10-05T07:54:20.371309+00:00",
+ "turn_start_utc": "2026-10-05T07:51:57Z",
+ "authority": "預算用做法 1（另立 r6，每候選 18 小時）；扭轉骨用做法 1",
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "file_sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae",
+  "request_sha256": "4e48344261912e00dcf9e32fa657cbfbb43124cd639be7d026f081aeb7a93cbb",
+  "protocol_sha256": "8df7c6cb88f08cd8bb0547d019f319da66e1cf43bc75a4a2253d1a3edf8663ce"
+ },
+ "joint_range_contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+ },
+ "max_candidate_trials": 4,
+ "budget": {
+  "trial_seconds": 64800,
+  "total_seconds": 172800
+ },
+ "required_checks": [
+  "art_match",
+  "scale_pivot",
+  "geometry_materials",
+  "package_complete",
+  "rig_mapping",
+  "deformation",
+  "animation",
+  "target_environment",
+  "export-roundtrip",
+  "skill-effects",
+  "grasp-contact-windowed",
+  "joint-range",
+  "clip-set",
+  "transition-interaction",
+  "runtime-closed-loop",
+  "frozen-holdout-reuse",
+  "negative-controls",
+  "performance-report",
+  "art-motion-review"
+ ],
+ "authorization_record": "runs/qa/ro-swordsman-character-v1/authorizations.json",
+ "rule": "The request file must not change after this point; a contract change needs a new request version and baseline."
+}

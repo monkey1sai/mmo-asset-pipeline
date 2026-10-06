@@ -1,0 +1,35 @@
+{
+  "operation_id": "ro-split-batch-20261003-001",
+  "state": "prepared_not_submitted",
+  "plan_sha256": "1351953e072cfc7e1d86ddff9a00b206e2a8bc1c598eba7b94efb7d17c45bcd7",
+  "estimated_credits": 0.5,
+  "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-batch-20261003-001.dpapi",
+  "global_file_exists_before": false,
+  "global_write_authority": "Exact new filename pending; old six filenames not authorized by the cost question.",
+  "envelope": {
+    "destination": "https://api.hyper3d.com/api/v2/rodin",
+    "purpose": "User-approved batch-source stress test",
+    "allowed_operations": [
+      "one generation",
+      "same-task status",
+      "completed download"
+    ],
+    "data_transmitted": [
+      "single six-object design image",
+      "validated nonsecret generation parameters"
+    ],
+    "forbidden_operations": [
+      "topup",
+      "upgrade",
+      "secret output",
+      "old state overwrite",
+      "Git mutation"
+    ],
+    "stop_conditions": [
+      "missing exact-file authority",
+      "pending/unknown submission",
+      "collision",
+      "unexpected destination"
+    ]
+  }
+}

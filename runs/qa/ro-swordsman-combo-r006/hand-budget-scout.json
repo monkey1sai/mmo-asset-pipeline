@@ -1,0 +1,30 @@
+{
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r006/baseline/ro_hand_baseline.blend",
+    "sha256": "9d1cce96b57686f0753bdb11c9a50ba705b3457b3df214d34da458e99ba9b165"
+  },
+  "actual_component_triangles": {
+    "SM_RO_core": 15016,
+    "SM_RO_cuirass": 10734,
+    "SM_RO_coat": 12542,
+    "SM_RO_pauldron.R": 5986,
+    "SM_RO_pauldron.L": 5986,
+    "SM_RO_bracer.R": 3026,
+    "SM_RO_bracer.L": 3026,
+    "SM_RO_sword": 2552
+  },
+  "whole_triangles_before": 58868,
+  "hypothetical_removed_hand_triangles": {
+    "R": 492,
+    "L": 537
+  },
+  "cut_rule": "Planning count only: all triangle vertices in side x>.34m and z<.923m, no actual cut",
+  "whole_triangles_after_hypothetical_removal": 57839,
+  "character_triangle_limit": 60000,
+  "both_hands_and_seams_available_triangles": 2161,
+  "seam_reserve_triangles": 256,
+  "per_hand_triangles_without_gear_reduction": 952,
+  "rigid_gear_budget_strategy": "Measure actual generated hand count first. If needed, source-preserving rigid pauldron/bracer mesh simplification must be a documented dependent change and compare the same five quality views; do not decimate a proven deforming hand to fit.",
+  "source_unchanged": true,
+  "model_modified": false
+}

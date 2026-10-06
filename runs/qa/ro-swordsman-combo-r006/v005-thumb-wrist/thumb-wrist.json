@@ -1,0 +1,75 @@
+{
+  "trial": "v005",
+  "finished_utc": "2026-10-03T07:07:34.740451+00:00",
+  "thumb_surface_gate_pass": true,
+  "final_surface_gate_pass": true,
+  "pad_contacts": {
+    "finger1": {
+      "vertices": 30,
+      "minimum_gap_m": 0.0001656938111409545,
+      "mean_gap_m": 0.0061315958960525075,
+      "within_2mm": 4
+    },
+    "finger2": {
+      "vertices": 33,
+      "minimum_gap_m": 0.0012430241331458092,
+      "mean_gap_m": 0.013879313183045297,
+      "within_2mm": 4
+    },
+    "finger3": {
+      "vertices": 41,
+      "minimum_gap_m": 0.0009332140325568616,
+      "mean_gap_m": 0.016039171953197207,
+      "within_2mm": 5
+    },
+    "finger4": {
+      "vertices": 34,
+      "minimum_gap_m": 0.0002708745887503028,
+      "mean_gap_m": 0.013006877169519773,
+      "within_2mm": 4
+    },
+    "thumb": {
+      "vertices": 54,
+      "minimum_gap_m": 0.000901292369235307,
+      "mean_gap_m": 0.021058769315627782,
+      "within_2mm": 4
+    }
+  },
+  "maximum_penetration_m": 0,
+  "sword_crossings": 0,
+  "cumulative_contact_shape_delta_m": 0.003804178696836872,
+  "max_cuff_source_fitting_delta_m": 0.017256749957654867,
+  "transition_samples": 5,
+  "cuff_armor_transverse_pairs_by_sample": [
+    {
+      "SM_RO_bracer.R": 82,
+      "SM_RO_cuirass": 0
+    },
+    {
+      "SM_RO_bracer.R": 77,
+      "SM_RO_cuirass": 0
+    },
+    {
+      "SM_RO_bracer.R": 69,
+      "SM_RO_cuirass": 0
+    },
+    {
+      "SM_RO_bracer.R": 56,
+      "SM_RO_cuirass": 0
+    },
+    {
+      "SM_RO_bracer.R": 62,
+      "SM_RO_cuirass": 0
+    }
+  ],
+  "whole_triangles": 60543,
+  "whole_budget_pass": false,
+  "full_local_art_acceptance": "pending actual five transition views",
+  "full_animation_accepted": false,
+  "delivered": false,
+  "source_preserved": true,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v005-thumb-wrist/ro_thumb_wrist.blend",
+    "sha256": "c516671c3de1ec4af9ac061d7b811916691324ab23e4e9cc58006736057f5111"
+  }
+}

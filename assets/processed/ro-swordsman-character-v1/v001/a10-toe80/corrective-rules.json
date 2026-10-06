@@ -1,0 +1,38 @@
+{
+ "schema_version": 1,
+ "id": "ro-swordsman-character-v1-v001-a10-toe80",
+ "status": "candidate",
+ "quaternion_convention": "wxyz; rest-relative local rotation of the bone",
+ "drivers": {
+  "grasp.R": {
+   "type": "state",
+   "key": "grasp.R"
+  },
+  "grasp.L": {
+   "type": "state",
+   "key": "grasp.L"
+  }
+ },
+ "channels": [
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.L",
+   "curve": {
+    "type": "linear"
+   }
+  }
+ ]
+}

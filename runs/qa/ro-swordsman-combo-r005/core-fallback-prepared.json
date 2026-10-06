@@ -1,0 +1,54 @@
+{
+  "operation_id": "ro-core-fallback-20261003-001",
+  "state": "prepared_not_submitted",
+  "global_state_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-core-fallback-20261003-001.dpapi",
+  "global_write_authority": "pending_exact_filename",
+  "plan_sha256": "2a33237e7a7c1b41626536f1547a63c1f50e386f2f31d86f0b8c6c71df93317b",
+  "input_sha256": "428ce1cceab5cf008302106f98581f803aefa362e69dfca26f107c1cf6646b06",
+  "estimated_credits": 0.5,
+  "reason": "Static source face detail failure; single core input comparison. No promise of automatic rig/animation repair.",
+  "whole_character_triangle_budget": 60000,
+  "reused_equipment_triangles": 43852,
+  "maximum_replacement_core_triangles": 16148,
+  "quad_quality_override": 7000,
+  "generated_triangle_count_guaranteed": false,
+  "remaining_assembly_revisions": 2,
+  "original_phase_started_utc": "2026-10-03T00:06:54.237611+00:00",
+  "phase_clock_reset": false,
+  "next_checks": [
+    "Inspect source face/material density/hands/shoulder topology before replacing old core.",
+    "Check actual triangles; do not exceed whole character60000.",
+    "Re-measure joints and separate rig errors from source comparison.",
+    "Pass stress poses before300frame animation/effects and actual animated GLB roundtrip."
+  ],
+  "envelope": {
+    "destination": [
+      "https://api.hyper3d.com/api/v2/rodin",
+      "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-core-fallback-20261003-001.dpapi"
+    ],
+    "purpose": "Evidence-based single core fallback comparison",
+    "allowed_operations": [
+      "one unique generation",
+      "same-task status/download",
+      "reserve/update only exact DPAPI file if authorized"
+    ],
+    "data_transmitted": [
+      "one background-cleaned core design derivative bound to input_sha256 428ce1cceab5cf008302106f98581f803aefa362e69dfca26f107c1cf6646b06",
+      "validated nonsecret generation parameters"
+    ],
+    "forbidden_operations": [
+      "old state overwrite",
+      "six-part automatic regeneration",
+      "secret output",
+      "topup/upgrade",
+      "stage/commit/push"
+    ],
+    "stop_conditions": [
+      "missing exact global file authority",
+      "pending/unknown charge",
+      "file collision",
+      "input/provider drift",
+      "original phase budget exhausted"
+    ]
+  }
+}

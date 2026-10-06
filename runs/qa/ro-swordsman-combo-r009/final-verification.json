@@ -1,0 +1,74 @@
+{
+  "observed_utc": "2026-10-04T02:04:40.220234+00:00",
+  "status": "verified_closed_NO_SHIP",
+  "request_schema_valid": true,
+  "comparison": {
+    "candidates": 4,
+    "next_action": "stop_budget",
+    "quality_target_met": false
+  },
+  "assessment": "not_ready",
+  "artifact_references_checked": 270,
+  "hash_failures": [],
+  "qa_json_parsed": 48,
+  "python_sources_syntax_checked": 197,
+  "protected_history_files": 183,
+  "protected_history_unchanged": true,
+  "library_entry": "ro-swordsman-combo-r009-v004",
+  "library_delivery": "not_delivered",
+  "solver_probes": 205,
+  "full_function_proposals": 23,
+  "derivative_base_preflight_not_functionchecked": 182,
+  "fresh_saved_point_count": 904,
+  "max_saved_fresh_point_delta_m": 0.0,
+  "rms_saved_fresh_point_delta_m": 0.0,
+  "fresh_point_tolerance_m": 1e-06,
+  "fresh_function_gate": false,
+  "fresh_fixed_contacts": [
+    3,
+    1,
+    3,
+    0,
+    3
+  ],
+  "unit_tests": 122,
+  "unit_tests_log_sha256": "d5bcce38616ea100275f888ecba3b905ad70bdc2f058a1952e97729f4bd4dc30",
+  "pipeline_assets_schema_valid": 39,
+  "pipeline_log_sha256": "7f80bd86e2448519f4d0eb1da7085e08760da8420a47366bab62b709e8b23a57",
+  "freshness_runtime_not_verified": true,
+  "phase_wall_seconds_at_close": 1837.115223,
+  "postclose_documentation_verification_wall_seconds": 305.105513,
+  "earliest_preclock_preparation_unmeasured": true,
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "stage_commit_push": "held_by_user",
+  "r009_new_API_submissions": 0,
+  "r009_new_service_credits": 0,
+  "no_API_balance_query": true,
+  "repo_external_writes": "none",
+  "document_artifacts": [
+    {
+      "path": "library/index.json",
+      "sha256": "35bde3b0cf138aa1aac0768b4500f83f22ecb1959ff3e892c95049be337922f1"
+    },
+    {
+      "path": "docs/art-quality-loop.md",
+      "sha256": "adf8d538c4ff38b5ad3e0a2dbf2b1a8fd557d5a796b081036e68fbfd74b7f412"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r009/README.md",
+      "sha256": "5ab356b729bc153a8aa4ab26d08333088db3c034f53d62d25fac9e40082009be"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r009/README.md",
+      "sha256": "171d32ec442229ac3d30546263612a06933c243f98455ce50b427e1b2a5a3e31"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r009/planning-review.md",
+      "sha256": "dad4f55546800ccc3f517e3a93d0b29d60b02b9d4a9880b8658b854337765d2d"
+    }
+  ]
+}

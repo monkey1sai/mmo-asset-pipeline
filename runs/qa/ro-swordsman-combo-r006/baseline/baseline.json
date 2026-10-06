@@ -1,0 +1,390 @@
+{
+  "stage": "r006 real baseline with corrected individual finger-axis fixture",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v002-digit-weights/ro_digit_weights.blend",
+    "sha256": "4f165cd331e9c3e8dcaad66d954238db2f58aeb39bdbe91ff2592d968adcd60e"
+  },
+  "source_preserved": true,
+  "baseline_started_utc": "2026-10-03T05:13:33.213408+00:00",
+  "finished_utc": "2026-10-03T05:18:14.272212+00:00",
+  "triangles": 58868,
+  "bones": 48,
+  "geometry_uv_weights_unchanged": true,
+  "axis_method": "individual_centerline_cross_palm",
+  "pose_contract": "Open palm, .30rad small curl, .85rad single grip; actual source dimensions and sword",
+  "grip_measurements": {
+    "R": {
+      "pose": {
+        "requested_grip": [
+          -0.08,
+          -0.29,
+          1.12
+        ],
+        "feasible_grip": [
+          -0.07999999821186066,
+          -0.28999999165534973,
+          1.1200000047683716
+        ],
+        "grip_adjustment_m": 0.0,
+        "bone_target_residual_m": {
+          "R": 0.0,
+          "foot.R": 0.0008552074059396952,
+          "foot.L": 0.0008552074059396952,
+          "thumb.R": 0.0
+        },
+        "surface_contact_accepted": false
+      },
+      "fixed_pad_contact": {
+        "finger1": {
+          "fixed_pad_vertices": 12,
+          "minimum_gap_m": 0.0008722278289496899,
+          "mean_gap_m": 0.005299170181388035,
+          "within2mm": 2,
+          "inside_deeper_than1mm": 3,
+          "maximum_measured_penetration_m": 0.007052317727357149,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger2": {
+          "fixed_pad_vertices": 22,
+          "minimum_gap_m": 0.00036255543818697333,
+          "mean_gap_m": 0.005912023223407397,
+          "within2mm": 6,
+          "inside_deeper_than1mm": 2,
+          "maximum_measured_penetration_m": 0.0016436221776530147,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger3": {
+          "fixed_pad_vertices": 23,
+          "minimum_gap_m": 0.000692984089255333,
+          "mean_gap_m": 0.009185999781197019,
+          "within2mm": 3,
+          "inside_deeper_than1mm": 1,
+          "maximum_measured_penetration_m": 0.001633043633773923,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger4": {
+          "fixed_pad_vertices": 10,
+          "minimum_gap_m": 0.00081451894948259,
+          "mean_gap_m": 0.00766954775317572,
+          "within2mm": 2,
+          "inside_deeper_than1mm": 1,
+          "maximum_measured_penetration_m": 0.0016343352617695928,
+          "ray_disagreements_or_unknown": 0
+        },
+        "thumb": {
+          "fixed_pad_vertices": 22,
+          "minimum_gap_m": 0.0038345716893672943,
+          "mean_gap_m": 0.020616397642615168,
+          "within2mm": 0,
+          "inside_deeper_than1mm": 0,
+          "maximum_measured_penetration_m": 0,
+          "ray_disagreements_or_unknown": 0
+        }
+      }
+    },
+    "L": {
+      "pose": {
+        "requested_grip": [
+          0.08,
+          -0.29,
+          1.12
+        ],
+        "feasible_grip": [
+          0.07999999821186066,
+          -0.28999999165534973,
+          1.1200000047683716
+        ],
+        "grip_adjustment_m": 0.0,
+        "bone_target_residual_m": {
+          "foot.R": 0.0008552074059396952,
+          "L": 0.0,
+          "foot.L": 0.0008552074059396952,
+          "thumb.L": 0.0
+        },
+        "surface_contact_accepted": false
+      },
+      "fixed_pad_contact": {
+        "finger1": {
+          "fixed_pad_vertices": 18,
+          "minimum_gap_m": 0.02088147960603237,
+          "mean_gap_m": 0.03810181924038463,
+          "within2mm": 0,
+          "inside_deeper_than1mm": 0,
+          "maximum_measured_penetration_m": 0,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger2": {
+          "fixed_pad_vertices": 27,
+          "minimum_gap_m": 0.0011010606540367007,
+          "mean_gap_m": 0.024857802726155905,
+          "within2mm": 1,
+          "inside_deeper_than1mm": 0,
+          "maximum_measured_penetration_m": 0,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger3": {
+          "fixed_pad_vertices": 22,
+          "minimum_gap_m": 0.0002881239342968911,
+          "mean_gap_m": 0.029148573012207635,
+          "within2mm": 3,
+          "inside_deeper_than1mm": 1,
+          "maximum_measured_penetration_m": 0.0018032738007605076,
+          "ray_disagreements_or_unknown": 0
+        },
+        "finger4": {
+          "fixed_pad_vertices": 15,
+          "minimum_gap_m": 0.0010902808280661702,
+          "mean_gap_m": 0.029221514030359684,
+          "within2mm": 1,
+          "inside_deeper_than1mm": 0,
+          "maximum_measured_penetration_m": 0,
+          "ray_disagreements_or_unknown": 0
+        },
+        "thumb": {
+          "fixed_pad_vertices": 21,
+          "minimum_gap_m": 0.023684542626142502,
+          "mean_gap_m": 0.03990794390085198,
+          "within2mm": 0,
+          "inside_deeper_than1mm": 0,
+          "maximum_measured_penetration_m": 0,
+          "ray_disagreements_or_unknown": 0
+        }
+      }
+    }
+  },
+  "fixed_pad_indices": {
+    "R": {
+      "finger1": [
+        52,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        3348,
+        3349,
+        3350,
+        3351,
+        3355
+      ],
+      "finger2": [
+        30,
+        31,
+        39,
+        40,
+        41,
+        42,
+        47,
+        48,
+        3354,
+        3357,
+        3371,
+        3372,
+        3373,
+        3374,
+        7157,
+        7158,
+        7159,
+        7160,
+        7161,
+        7162,
+        7163,
+        7172
+      ],
+      "finger3": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        3394,
+        3395,
+        3396,
+        3402,
+        3403,
+        7138,
+        7139,
+        7140,
+        7141,
+        7142,
+        7143,
+        7144,
+        7145,
+        7147,
+        7479
+      ],
+      "finger4": [
+        3382,
+        3383,
+        3390,
+        3391,
+        3392,
+        3393,
+        3399,
+        7130,
+        7132,
+        7133
+      ],
+      "thumb": [
+        3404,
+        3405,
+        3408,
+        3426,
+        3427,
+        3428,
+        3429,
+        3430,
+        3431,
+        3432,
+        3433,
+        3434,
+        3440,
+        3446,
+        7031,
+        7047,
+        7049,
+        7051,
+        7053,
+        7054,
+        7055,
+        7056
+      ]
+    },
+    "L": {
+      "finger1": [
+        224,
+        225,
+        231,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        269,
+        4070,
+        4071,
+        4073,
+        4074,
+        4076
+      ],
+      "finger2": [
+        166,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        209,
+        212,
+        213,
+        220,
+        221,
+        222,
+        223,
+        228,
+        229,
+        7415,
+        7429,
+        7430,
+        7431,
+        7432,
+        7433,
+        7434,
+        7438,
+        7439,
+        7440
+      ],
+      "finger3": [
+        93,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        136,
+        162,
+        163,
+        165,
+        167,
+        168,
+        169,
+        170,
+        7469,
+        7470,
+        7471,
+        7472,
+        7473,
+        7474,
+        7478
+      ],
+      "finger4": [
+        147,
+        148,
+        149,
+        150,
+        152,
+        153,
+        154,
+        157,
+        7448,
+        7449,
+        7450,
+        7451,
+        7452,
+        7453,
+        7454
+      ],
+      "thumb": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        125,
+        127,
+        128,
+        129,
+        132,
+        133,
+        134,
+        158,
+        160,
+        3907,
+        3908,
+        3909,
+        3910,
+        3911,
+        3912
+      ]
+    }
+  },
+  "measurement_limit": "Fixed palm-facing vertices and two solid parity rays, not complete face intersection validation",
+  "full_animation_channels": 0,
+  "effects_present": false,
+  "rig_accepted": false,
+  "art_accepted": false,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/baseline/ro_hand_baseline.blend",
+      "bytes": 26082235,
+      "sha256": "9d1cce96b57686f0753bdb11c9a50ba705b3457b3df214d34da458e99ba9b165"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/baseline/ro_hand_baseline.glb",
+      "bytes": 20843464,
+      "sha256": "3c78ce03ad8477f9b1c67e2ed1d209f28418e9b3f69c6adf539a07a59266f674"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "observed_utc": "2026-10-04T06:15:35.495955+00:00",
+  "id": "ro-swordsman-combo-r010",
+  "phase_started_utc": "2026-10-04T05:08:12+00:00",
+  "phase_closed_utc": "2026-10-04T06:15:35.495955+00:00",
+  "phase_wall_seconds_at_close": 4043.495955,
+  "clock_source": "First UTC observed this turn; prior preparatory reads unmeasured, not backfilled.",
+  "preclock_preparation_unmeasured": true,
+  "baseline_and_preparation_seconds": 500.442387,
+  "candidate_seconds": [
+    {
+      "id": "v001",
+      "seconds": 243.641174
+    },
+    {
+      "id": "v002",
+      "seconds": 157.744576
+    },
+    {
+      "id": "v003",
+      "seconds": 1265.249693
+    },
+    {
+      "id": "v004",
+      "seconds": 1876.418125
+    }
+  ],
+  "candidate_used": 4,
+  "candidate_limit": 4,
+  "old310historyfiles_unchanged": true,
+  "old_phase_reopened": false,
+  "quality_targets_lowered": false,
+  "BLEND_and_finalGLB_121_samples_each": true,
+  "failed_export_and_fresh_attempts_preserved": true,
+  "new_API_submissions": 0,
+  "new_service_credits": 0,
+  "API_balance_query_this_phase": false,
+  "repo_external_writes": "none",
+  "stage_commit_push": "held_by_user",
+  "background": "No API/Blender jobs running at close; documentation/final verification recorded separately."
+}

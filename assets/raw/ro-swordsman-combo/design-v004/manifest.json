@@ -1,0 +1,54 @@
+{
+  "tool": "built-in image_gen",
+  "files": [
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v004/batch-draft-01.png",
+      "sha256": "61159bcac3678220f191cb855e420cec01401759b898c749ea26fa5608ff19bc",
+      "bytes": 2171510,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "decision": "rejected_input_left_margin_and_halo",
+      "source": "C:\\Users\\IOT\\.codex\\generated_images\\01a0fc1d-f673-7ff3-bd4a-0dbfe6096075\\exec-d9bcd212-a34a-4542-94a8-e8549a416879.png",
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v004/batch-draft-02.png",
+      "sha256": "2aabe9ed438f1db8feceaca440f4f566d58d339707ee78aac60f030a8f1d351d",
+      "bytes": 2155220,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "decision": "rejected_input_halo_remains",
+      "source": "C:\\Users\\IOT\\.codex\\generated_images\\01a0fc1d-f673-7ff3-bd4a-0dbfe6096075\\exec-49679137-3caa-4b52-a26e-793a82369d2a.png",
+      "alpha_extrema": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png",
+      "sha256": "195d226c017fd3675ebebcb49b03e1cb0ece7928aeba79e634188fa1b67fabb6",
+      "bytes": 1608941,
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "decision": "selected_white_background_complete_six_silhouettes",
+      "source": "C:\\Users\\IOT\\.codex\\generated_images\\01a0fc1d-f673-7ff3-bd4a-0dbfe6096075\\exec-fc68d520-b76b-4d57-961a-883e6fccb2ca.png",
+      "alpha_extrema": null
+    }
+  ],
+  "pixel_edits_by_script": false,
+  "api_input": "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png",
+  "visual_check": "Six distinct subjects present; open hands and complete edges. White background selected after alpha halo persisted.",
+  "unverified": "3D anatomy, separability, hidden surfaces and output completeness require actual generated-model inspection."
+}

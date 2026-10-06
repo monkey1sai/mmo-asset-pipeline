@@ -1,0 +1,141 @@
+{
+ "id": "v001-milestone-01-idle",
+ "recorded_utc": "2026-10-05T08:31:13Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "clip": "AN_RO_Idle_Sword",
+ "accepted_attempt": "a03",
+ "action": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/AN_RO_Idle_Sword.blend",
+  "sha256": "f366021aaa5318c961fe5e80ef00bbbd3a1ee5b3cd7285f121ada7f716578db5"
+ },
+ "spec": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/clip.json",
+  "sha256": "2c88682d41ee2deef2163e5386c9cf1920a0f1b79cc8324eed35e3d6d6bf33e0"
+ },
+ "interaction": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/interaction.json",
+  "sha256": "cf8a44723c4365d3e21bc824b12661dbc30eed6433b2eed1dce4aae7d96ff7ab"
+ },
+ "foundation": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json"
+ },
+ "design": "Ready stance near the rest grip: upper arms within 1.6 deg of rest (static pauldrons), sword raised forward-out at 40 deg, wrist bend 13 deg, one breath per 120-frame loop; left arm relaxed near rest.",
+ "attempts": [
+  {
+   "id": "a01",
+   "result": "refused by the authoring tool: grip out of reach"
+  },
+  {
+   "id": "a02",
+   "result": "numeric gates failed",
+   "why": "right hand inside the coat (95-113 new hand-to-other pairs), sword 4.5-5.2 mm into the body, upper arms pushed into the static pauldrons and cuirass (1,548-2,198 new body pairs); 7 grasp samples failed on two-ray parity false positives (winding number ~0 at the deepest sample, checked at t=26 and 61.5)",
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a02-check/clip-check.json"
+  },
+  {
+   "id": "a03",
+   "result": "all numeric gates pass"
+  }
+ ],
+ "clip_check": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-check/clip-check.json",
+  "samples": 245,
+  "gates": {
+   "clip_time_origin_zero": true,
+   "helper_bones_not_keyed": true,
+   "no_collapse": true,
+   "hand_self_intersection_zero": true,
+   "hand_other_new_intersection_zero": true,
+   "feet_slide": true,
+   "feet_penetration": true,
+   "feet_float": true,
+   "weapon_body_penetration": true,
+   "grasp_functional": true,
+   "loop_seam": true
+  },
+  "feet": {
+   "L": [
+    {
+     "window": [
+      0,
+      119
+     ],
+     "slide_m": 0.0,
+     "penetration_m": 0.0,
+     "float_m": 8.089747279882431e-05
+    }
+   ],
+   "R": [
+    {
+     "window": [
+      0,
+      119
+     ],
+     "slide_m": 0.0,
+     "penetration_m": 2.2882289396619626e-09,
+     "float_m": 0.0
+    }
+   ]
+  },
+  "loop_seam": {
+   "from_frame": 119,
+   "to_frame": 0,
+   "max_bone_deg": 0.03956468118525214,
+   "max_point_m": 0.00015044212507352633,
+   "pass": true
+  },
+  "report_only": {
+   "other_new_pairs_range": [
+    670,
+    1400
+   ],
+   "worst_by_mesh_pair": {
+    "SM_RO_core|SM_RO_cuirass": 417,
+    "SM_RO_core|SM_RO_pauldron.R": 272,
+    "SM_RO_core|SM_RO_pauldron.L": 250,
+    "SM_RO_cuirass|SM_RO_pauldron.R": 204,
+    "SM_RO_cuirass|SM_RO_pauldron.L": 190,
+    "SM_RO_bracer.L|SM_RO_core": 46,
+    "SM_RO_core|SM_RO_core": 15,
+    "SM_RO_bracer.R|SM_RO_core": 6
+   },
+   "note": "Breathing moves the core and cuirass against the static pauldrons; no frozen ceiling exists for clips; for the art review."
+  }
+ },
+ "runtime_closed_loop": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t082856z-runtime-results.json",
+  "gate_m": 1e-05,
+  "pass": true,
+  "runtime_owner_max_m": 8.48e-07,
+  "samples": "25 (integer frames every 6, half frames 0.5/30.5/60.5/90.5)",
+  "blend_max_m": 8.27e-07,
+  "baked_owner_max_m": 8.48e-07,
+  "first_export": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t082722z-runtime-results.json",
+   "result": "failed at t=0.5 (139.7 um): the export action used Bezier keys; fixed to linear in scripts/cv1_export_clip.py"
+  }
+ },
+ "readback": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-closed-loop2/roundtrip-idle_a03_baked_owner_exact_weights.json",
+  "tolerance_m": 5e-06,
+  "max_m": 1.018e-06,
+  "pass": true,
+  "scope": "baked integer-frame samples"
+ },
+ "preview_sheet": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-check/idle-a03-sheet.png",
+ "harness_changes": {
+  "tools/runtime-qa/three/src/candidate.js": [
+   "stale-pose control uses the sample with the largest corrective-weight difference",
+   "baked samples on integer frames only",
+   "capture frames looked up by frame number",
+   "evaluation order lists the helper step"
+  ],
+  "regression": "b05 QA closed loop rerun with the changed harness passes (runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/runtime/20261005t082416z-runtime-results.json)"
+ },
+ "not_done": [
+  "independent gray acceptance of the grasp and art-motion review (batched later)",
+  "deliverable multi-clip GLB (later)"
+ ],
+ "pending_method_question": "Grasp gate: two-ray parity can mark an outside sample as inside (a02); proposal: confirm samples marked inside deeper than 1 mm with the winding number and report both raw and confirmed results. Not needed for a03 (no false positive).",
+ "new_paid_submissions": 0
+}

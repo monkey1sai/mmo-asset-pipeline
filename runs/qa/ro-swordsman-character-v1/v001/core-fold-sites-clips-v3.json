@@ -1,0 +1,49 @@
+{
+ "note": "Clip-pose fold fixes on b16: the early-swing right-knee fold of Run a02 at t=16.25-16.5, which the 16.75 fix (hat from 0.8) no longer covers.",
+ "sites": [
+  {
+   "centre": [
+    -0.1774,
+    0.1065,
+    0.5235
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 16.25
+   },
+   "driver_bones": [
+    "upper_leg.R",
+    "lower_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1,
+   "min_prev": 0.8
+  },
+  {
+   "centre": [
+    -0.1849,
+    0.1076,
+    0.5161
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 16.25
+   },
+   "driver_bones": [
+    "upper_leg.R",
+    "lower_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1,
+   "min_prev": 0.8
+  }
+ ]
+}

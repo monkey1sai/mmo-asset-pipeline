@@ -1,0 +1,52 @@
+{
+  "meshes": [
+    {
+      "name": "ActualSwordLocal",
+      "attributes": [
+        [
+          "_R010_WEAPON_ID",
+          "POSITION",
+          "NORMAL",
+          "JOINTS_0",
+          "WEIGHTS_0"
+        ]
+      ],
+      "morph_counts": [
+        0
+      ]
+    },
+    {
+      "name": "ThumbPatchCandidate",
+      "attributes": [
+        [
+          "_R010_ID",
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0",
+          "JOINTS_0",
+          "WEIGHTS_0"
+        ]
+      ],
+      "morph_counts": [
+        1
+      ]
+    }
+  ],
+  "skins": 1,
+  "animations": [
+    {
+      "name": "ARM_RO_HandDiagnostic",
+      "target_paths": [
+        "rotation",
+        "scale",
+        "translation"
+      ]
+    },
+    {
+      "name": "SM_RO_RightHand_Exterior",
+      "target_paths": [
+        "weights"
+      ]
+    }
+  ]
+}

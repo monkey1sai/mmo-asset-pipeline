@@ -1,0 +1,166 @@
+{
+  "id": "v003",
+  "started_utc": "2026-10-03T14:36:10.265026+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r008/v002-direction/right_hand_vectors_direction.blend",
+    "sha256": "97521d37054cbd32c05810c1436084452af31a33753739e1c59684691f0e6115"
+  },
+  "weapon": {
+    "path": "runs/qa/ro-swordsman-combo-r008/weapon-probe/actual-weapon.json",
+    "sha256": "08ef39378705e956916bc0a149ae4ff7484ee4f36e1ebbb7e580e85e6a64eaae"
+  },
+  "hypothesis": "Independentdigitcurl andsmallMCPsplay avoidobserveduniformcrossing whileformingactualhandlecontact",
+  "change": "Onlyposecontrols plusboundedfixedrigidweaponplacement; geometry,bones16positions,UV,weights preserved. Addexactweaponboneforcontacts.",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "candidate_limit": 4,
+  "previous_candidates_used": 2,
+  "new_credits": 0,
+  "templates": [
+    {
+      "id": "shallow",
+      "finger1": [
+        0.4,
+        0.75,
+        0.45
+      ],
+      "finger2": [
+        0.65,
+        0.95,
+        0.55
+      ],
+      "finger3": [
+        0.7,
+        1.0,
+        0.55
+      ],
+      "finger4": [
+        0.65,
+        0.95,
+        0.55
+      ],
+      "thumb": [
+        0.25,
+        0.65,
+        0.35
+      ],
+      "pronation": 0.4
+    },
+    {
+      "id": "wrap",
+      "finger1": [
+        0.55,
+        1.0,
+        0.65
+      ],
+      "finger2": [
+        0.8,
+        1.2,
+        0.7
+      ],
+      "finger3": [
+        0.85,
+        1.25,
+        0.75
+      ],
+      "finger4": [
+        0.8,
+        1.2,
+        0.7
+      ],
+      "thumb": [
+        0.3,
+        0.8,
+        0.4
+      ],
+      "pronation": 0.5
+    },
+    {
+      "id": "distalwrap",
+      "finger1": [
+        0.45,
+        1.15,
+        0.8
+      ],
+      "finger2": [
+        0.65,
+        1.35,
+        0.85
+      ],
+      "finger3": [
+        0.7,
+        1.4,
+        0.9
+      ],
+      "finger4": [
+        0.7,
+        1.35,
+        0.85
+      ],
+      "thumb": [
+        0.25,
+        0.95,
+        0.55
+      ],
+      "pronation": 0.6
+    }
+  ],
+  "splay_radians": {
+    "finger1": 0.05,
+    "finger2": 0.02,
+    "finger3": -0.02,
+    "finger4": -0.04
+  },
+  "MCP_splay_axis": "Fixedpalmnormal (0,-1,0), positive spreads littlefinger toward-X; compose splaythenflexion; noPIP/DIPsidebend",
+  "weapon_shifts": [
+    {
+      "id": "palm",
+      "translation": [
+        0,
+        -0.02,
+        -0.024
+      ]
+    },
+    {
+      "id": "distal",
+      "translation": [
+        0,
+        -0.015,
+        -0.014
+      ]
+    }
+  ],
+  "maximum_full_grip_cases": 6,
+  "littlefinger_isolated_cases": [
+    [
+      0.3,
+      0.6,
+      0.4
+    ],
+    [
+      0.4,
+      0.75,
+      0.45
+    ],
+    [
+      0.45,
+      1.15,
+      0.8
+    ],
+    [
+      0.55,
+      1,
+      0.65
+    ],
+    [
+      0.8,
+      1.05,
+      0.6
+    ]
+  ],
+  "fixed_masks": "r007/v003 source five namedpalmar pads unchanged; actualswordhandle andwholetriangle tests",
+  "contact_required": "Eachdigit3distinctfrozenpadpoints<=2mm; whole-surface penetration<=1mm, unknown0, transverse0, selfcross0, visualpadopposition. Openapproachonlycollisiongate.",
+  "stop": "NoUVonfailure; do not alterfourfingerweights orbonecenters; no angle-onlyzerocollision success."
+}

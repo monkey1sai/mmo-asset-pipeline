@@ -1,0 +1,96 @@
+{
+ "id": "b18-clipfolds",
+ "recorded_utc": "2026-10-05T09:52:59Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "authority": "authorization entries 12-13 (foundation option 1, hybrid fix)",
+ "chain": [
+  {
+   "build": "b10-groinL",
+   "what": "local left-groin weight smoothing (23 vertices; runs/qa/ro-swordsman-character-v1/v001/crease-smoothing-C.json); b02 fold key 05 dropped (it sat in that region)"
+  },
+  {
+   "build": "b11-fold05",
+   "what": "b02 site 5 recomputed on top of the existing correctives: not needed any more (skipped)"
+  },
+  {
+   "build": "b12-hybrid",
+   "what": "16 intermediate-level fold fixes (sites v2), offsets on top of existing correctives, hat curves zero at the frozen typical/extreme levels; 3 sites skipped as already above target"
+  },
+  {
+   "build": "b16-clipfolds",
+   "what": "6 clip-pose fold fixes (Walk a04 right groin, Run a02 right groin and knees), product drivers for hip x knee, hat start >= 0.8 and above every frozen-pose value"
+  },
+  {
+   "build": "b17/b18",
+   "what": "3 more clip-pose fixes for the early-swing right knee of Run a02 (t=16.25, 16.5)"
+  }
+ ],
+ "rejected_on_the_way": {
+  "b13/b14 (right-groin smoothing)": "hip-axial-plus.R extreme +1 intersection pair over the ceiling",
+  "b15 (clip fixes with hats from 0.02)": "acted in the walk and pushed a neighbour triangle below 5%"
+ },
+ "blend": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/ro_character_v001_b18-clipfolds.blend",
+  "sha256": "3bd261c386b5f92c652be536696a3fc1a267ede455c8171f9bddaca9bd234ff1"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/corrective-rules.json",
+  "sha256": "b909adefeb2d930f083e5b0f8196b3d79042b7cffd35bfaa7d81a4b5101e8188"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "weights_snapshot": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/weights-snapshot.json",
+  "sha256": "1cb2f3770f167e3c9229be6f4868bfecbd6641e06b3b5d3b725d94ef8cb6f4e7"
+ },
+ "contact_fixtures": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/contact-fixtures.json",
+  "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331",
+  "identical_to_b03": true
+ },
+ "frozen_joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/joint-range/joint-range-result.json",
+  "measured": 73,
+  "numeric_gate_pass": true,
+  "identical_to_b12": true
+ },
+ "intermediate_level_diagnostic": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/midrange-sweep/joint-range-result.json",
+  "collapsing_triangles": 3,
+  "where": {
+   "[0.2142, 0.0757, 0.496]": [
+    "knee-flexion.L@l85"
+   ],
+   "[-0.1648, -0.0009, 1.2561]": [
+    "combo-two-hand-chop@l15"
+   ],
+   "[0.0372, -0.0462, 0.8403]": [
+    "combo-deep-squat@l75"
+   ]
+  },
+  "flipped_triangles_sum_of_motion_maxima": 322,
+  "note": "diagnostic only, not a frozen gate; the two-hand-chop 15% site is deferred (needs an arm x spine product driver)"
+ },
+ "closed_loop": {
+  "runtime": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/closed-loop/runtime/20261005t095136z-runtime-results.json",
+   "pass": true,
+   "summary": {
+    "runtime_owner_max_error_m": 5.234675166980265e-06,
+    "blend_max_error_m": 1.639953776751382e-06,
+    "baked_owner_max_error_m": 5.234675166980265e-06,
+    "frames": 43,
+    "max_rule_weight_difference": 1.6961458275677188e-06
+   }
+  },
+  "readback": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/closed-loop/roundtrip-b18_baked_owner_exact_weights.json",
+   "tolerance_m": 5e-06,
+   "pass": true,
+   "max_um": 4.206
+  }
+ },
+ "status": "current best foundation for v001 (not frozen; signature at freeze)"
+}

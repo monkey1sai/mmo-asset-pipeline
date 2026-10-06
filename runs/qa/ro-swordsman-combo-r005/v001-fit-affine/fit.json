@@ -1,0 +1,128 @@
+{
+  "cuirass": {
+    "scale": [
+      1.1,
+      1.26,
+      1.08
+    ],
+    "center": [
+      0.0,
+      0.014999999664723873,
+      1.1859999895095825
+    ],
+    "translation_m": [
+      0.0,
+      0.03500000014901161,
+      0.02500000037252903
+    ],
+    "determinant": 1.4968800000000002,
+    "thickness_distance_scale_bounds": [
+      1.08,
+      1.26
+    ],
+    "topology_uv_preserved": true,
+    "surface_clearance_accepted": false
+  },
+  "coat": {
+    "scale": [
+      1.18,
+      1.25,
+      1
+    ],
+    "center": [
+      0.0,
+      0.009999999776482582,
+      0.8600000143051147
+    ],
+    "translation_m": [
+      0.0,
+      0.03500000014901161,
+      0.0
+    ],
+    "determinant": 1.4749999999999999,
+    "thickness_distance_scale_bounds": [
+      1,
+      1.25
+    ],
+    "topology_uv_preserved": true,
+    "surface_clearance_accepted": false
+  },
+  "bracer.R": {
+    "translation_m": [
+      -0.006000012159347534,
+      0.09999999403953552,
+      0.014999985694885254
+    ],
+    "rotation": [
+      [
+        0.8176799416542053,
+        0.0,
+        0.5756731033325195
+      ],
+      [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      [
+        -0.5756731033325195,
+        0.0,
+        0.8176799416542053
+      ]
+    ],
+    "uniform_scale": 1.08,
+    "topology_uv_preserved": true,
+    "thickness_scale": 1.08
+  },
+  "bracer.L": {
+    "translation_m": [
+      0.006000012159347534,
+      0.09999999403953552,
+      0.014999985694885254
+    ],
+    "rotation": [
+      [
+        0.8176799416542053,
+        -0.0,
+        -0.5756731033325195
+      ],
+      [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      [
+        0.5756731033325195,
+        0.0,
+        0.8176799416542053
+      ]
+    ],
+    "uniform_scale": 1.08,
+    "topology_uv_preserved": true,
+    "thickness_scale": 1.08
+  },
+  "candidate": "v001",
+  "stage": "affine volume-fit diagnostic, not full candidate acceptance",
+  "method": "Positive determinant whole-object affine transforms; preserves connectivity/openings and prevents local wall inversion. Actual clearance requires visual/function tests.",
+  "supersedes_failed_method_record": "runs/qa/ro-swordsman-combo-r005/v001-fit/failure-diagnostic.json",
+  "source_sha256": "b5bc06eadb42d5a33b573448a90442cc24382a7875fa923aefa716c22987b57f",
+  "triangles": 55488,
+  "bones": 0,
+  "animations": 0,
+  "body_faces_removed": 0,
+  "source_preserved": true,
+  "elapsed_trial_seconds": 736.629826,
+  "elapsed_phase_seconds": 5433.73565,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-fit-affine/ro_equipment_fit.blend",
+      "sha256": "6ae3d5adbcfa861340a1f3bedb8579c7f00b64d787fa72d411af39ef08d76457",
+      "bytes": 15604654
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-fit-affine/ro_equipment_fit.glb",
+      "sha256": "459a5a48d50632e2a7defccc7c3456a7407f018fe9ba2c3c1115cd58d1fc43c0",
+      "bytes": 11627168
+    }
+  ]
+}

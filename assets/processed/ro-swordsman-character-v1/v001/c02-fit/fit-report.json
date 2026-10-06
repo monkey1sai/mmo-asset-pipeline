@@ -1,0 +1,48 @@
+{
+ "observed_utc": "2026-10-05T06:18:22.418662+00:00",
+ "script_sha256": "99b38e5201b7b86e7716d68405bc4e90acdd793ae5d5079bff616d37df47a7b8",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/c01-base/ro_character_v001_c01-base.blend",
+  "sha256": "90c659e384deb10fc9ebd9b6b823f39a05acd314caafe7aef63289164f108b24"
+ },
+ "source_sha256_after": "90c659e384deb10fc9ebd9b6b823f39a05acd314caafe7aef63289164f108b24",
+ "spec": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/fit-spec-shoulders.json",
+  "sha256": "baaf21f4422ea49a077d9cdfa119fb41afa75df6bfda0f427d12349f259f3360"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/c02-fit/ro_character_v001_c02-fit.blend",
+  "sha256": "2aa855971db414fb78616d9d6631a9e51a9ac96c400b89199f539a1b6b8007c3"
+ },
+ "pieces": [
+  {
+   "armor": "SM_RO_pauldron.L",
+   "axis": [
+    "clavicle.L:0.5",
+    "upper_arm.L:head",
+    "upper_arm.L:0.45"
+   ],
+   "clearance_mm": 4,
+   "vertices_pulled": 145,
+   "pull_mm_median": 44.97,
+   "pull_mm_max": 99.92
+  },
+  {
+   "armor": "SM_RO_pauldron.R",
+   "axis": [
+    "clavicle.R:0.5",
+    "upper_arm.R:head",
+    "upper_arm.R:0.45"
+   ],
+   "clearance_mm": 4,
+   "vertices_pulled": 147,
+   "pull_mm_median": 41.24,
+   "pull_mm_max": 103.1
+  }
+ ],
+ "vertices_pulled": 292,
+ "smoothing_band_vertices": 463,
+ "basis_and_keys_moved_together": true,
+ "weights_topology_uv_unchanged": true,
+ "scope": "Geometry under the armour only; whatever the armour exposes when it moves is now a fitted body surface carrying the old texture."
+}

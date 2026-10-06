@@ -1,0 +1,26 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T08:57:31Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "status": "in_progress (interval open since 2026-10-05T08:35:30Z; independent review running; not in the ledger)",
+ "builds": {
+  "b06-midfolds": {
+   "result": "rejected: frozen sweep failed 5 motions (linear curves, pure-skinning offsets, double fixes on b02 triangles)",
+   "midrange_collapsing_triangles": 5
+  },
+  "b07-midfolds": {
+   "result": "frozen sweep fails one gate: combo-deep-squat body-intersection ratchet 2005 vs ceiling (b05 2004); every other motion unchanged",
+   "midrange_collapsing_triangles": 2,
+   "rules": "assets/processed/ro-swordsman-character-v1/v001/b07-midfolds/corrective-rules.json (65 channels, 2 helpers)"
+  }
+ },
+ "clips_on_b07": {
+  "AN_RO_Walk_Sword a04": "collapse in 11 of 120 whole/half samples (left groin triangle near (0.08,-0.07,0.83) not found by single-axis sweeps)",
+  "AN_RO_Run_Sword a02": "collapse in 24 of 80 samples (groin both triangles, back of knees)"
+ },
+ "next_options_under_review": [
+  "clip-pose micro-correctives that are zero at every frozen contract pose",
+  "re-weighting the groin and knee regions"
+ ],
+ "new_paid_submissions": 0
+}

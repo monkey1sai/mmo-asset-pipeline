@@ -1,0 +1,25 @@
+{
+  "operation_id": "ro-swordsman-apose-20261002-001",
+  "request": "requests/ro-swordsman-combo-r003.json",
+  "images": ["assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png"],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v002",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Quad",
+    "quality_override": 18000,
+    "quad_normal": true,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "texture_mode": "high",
+    "TAPose": true,
+    "is_symmetric": "symmetric",
+    "image_label": ["F"],
+    "seed": 3417,
+    "preview_render": true
+  },
+  "authorization": {
+    "spending_scope": "使用者明確授權：不限制點數使用，壓力測試可依建模需求使用所有 API 功能及現有月訂或普通點數。新入口建立於本 repo，外部檔案寫入須另列確切變更。commit、push 等使用者驗證。",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

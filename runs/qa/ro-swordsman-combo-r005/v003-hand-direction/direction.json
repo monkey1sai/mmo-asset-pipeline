@@ -1,0 +1,18 @@
+{
+  "classification": "TEST_FAILURE",
+  "original_axis": "direction.cross(front) = -width; negative angle turns away from palm",
+  "corrected_axis": "front.cross(direction) = width; negative angle turns toward palm",
+  "material_diagnosis": "Source/prototype each have one UVMap and material model. New face corners from different original UV islands interpolate across unrelated atlas regions; nearest-corner transfer is not a valid production rebake.",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-prototype/ro_hand_prototype.blend",
+    "sha256": "1e1798efd7eec24591bc9bca2a743822dd21410cecf5ae4e2a09c4c83c9e4400"
+  },
+  "prototype_clock_reset": false,
+  "contact_search_count": 100,
+  "gray_render_scope": "Additional unoccluded shape diagnostic only; fixed original textured quality views remain required.",
+  "art_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-direction/ro_direction_checked.blend",
+    "sha256": "dba4c1cd0aa6fde352691abe856c0937ac64ef98e6710df18d68fa5a51106312"
+  }
+}

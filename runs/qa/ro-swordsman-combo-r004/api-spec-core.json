@@ -1,0 +1,30 @@
+{
+  "operation_id": "ro-split-core-20261003-001",
+  "request": "requests/ro-swordsman-combo-r004.json",
+  "images": [
+    "assets/raw/ro-swordsman-combo/design-v003/core.png"
+  ],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/core",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Quad",
+    "quality_override": 12000,
+    "quad_normal": true,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "texture_mode": "high",
+    "texture_delight": true,
+    "TAPose": true,
+    "is_symmetric": "symmetric",
+    "image_label": [
+      "F"
+    ],
+    "seed": 4400,
+    "preview_render": true
+  },
+  "authorization": {
+    "spending_scope": "User explicitly permits demand-driven existing monthly/regular API credits and now approves design->Hyper3D->Blender production. Global writes require separate exact-file authority; commit/push held.",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

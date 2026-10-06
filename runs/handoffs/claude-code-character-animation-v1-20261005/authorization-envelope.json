@@ -1,0 +1,49 @@
+{
+  "destination": "Installed Claude Code CLI through its existing supported configured provider/authentication",
+  "purpose": "Human explicitly requested transfer of the referenced conversation and repo TODOs to Claude Code",
+  "allowed_operations": [
+    "One text-only receipt response; no built-in or MCP tools",
+    "Coordinator saves local handoff and receipt in the existing worktree"
+  ],
+  "transmitted_data": [
+    "Complete three-turn referenced conversation text",
+    "Handoff status/TODOs, local asset paths and hashes",
+    "Repository AGENTS instructions"
+  ],
+  "forbidden_operations": [
+    "Model production or paid Hyper3D submission",
+    "Read/expose credentials",
+    "Git mutation, deployment, other-repo writes",
+    "Global settings modification",
+    "Background work or repeated automatic request"
+  ],
+  "stop_conditions": [
+    "CLI/auth/network/provider failure",
+    "180-second timeout",
+    "Git head/index drift",
+    "Missing existing supported auth; no login or credential repair"
+  ],
+  "command_arguments": [
+    "C:\\Users\\IOT\\.local\\bin\\claude.exe",
+    "--print",
+    "--tools",
+    "",
+    "--permission-mode",
+    "plan",
+    "--permission-prompts",
+    "none",
+    "--strict-mcp-config",
+    "--disable-slash-commands",
+    "--no-chrome",
+    "--no-session-persistence",
+    "--output-format",
+    "json",
+    "--settings",
+    "{\"disableAllHooks\":true}"
+  ],
+  "credential_values_read_by_this_script": false,
+  "user_project_hooks_requested_disabled": true,
+  "managed_policy_preserved": true,
+  "session_persistence_requested": false,
+  "production_handoff_not_started": true
+}

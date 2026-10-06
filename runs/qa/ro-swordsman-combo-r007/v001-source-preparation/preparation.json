@@ -1,0 +1,4618 @@
+{
+  "observed_utc": "2026-10-03T12:24:57.730155+00:00",
+  "trial": "v001",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/hand-source/right_hand_native_source.blend",
+    "bytes": 5924379,
+    "sha256": "d515d08954a5d01fca4c53d19578b599fc379474f4d31217f98eeafbc61166f1"
+  },
+  "source_unchanged": true,
+  "material_correction": {
+    "old_diagnostic_base_color": "texture_pbr.png",
+    "new_base_color": {
+      "bytes": 1541770,
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_diffuse.png",
+      "sha256": "d87a47fdfd6578447a3512404adbd5097c8d93a08b99818430b7352cf484da31"
+    },
+    "color_space": "sRGB",
+    "packed": true,
+    "old_diagnostic_retained": true
+  },
+  "actual_source_double_layer_confirmed": true,
+  "cut_source_z": 0.021486486486486475,
+  "component_count_after_cut_before_removal": 2,
+  "removed_lining_vertices": 189,
+  "removed_lining_source_ids": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    1073,
+    1074,
+    1075,
+    1077,
+    1079,
+    1081,
+    1083,
+    1085,
+    1087,
+    1088,
+    1089,
+    1090,
+    1091,
+    1092,
+    1093,
+    1094,
+    1095,
+    1096,
+    1097,
+    1098,
+    1099,
+    1100,
+    1101,
+    1102,
+    1103,
+    1104,
+    1105,
+    1106,
+    1107,
+    1108,
+    1109,
+    1110,
+    1111,
+    1112,
+    1113,
+    1114,
+    1115,
+    1116,
+    1117,
+    1118,
+    1119,
+    1120,
+    1121,
+    1122,
+    1123,
+    1124,
+    1125,
+    1126,
+    1127,
+    1128,
+    1129,
+    1130,
+    1131,
+    1132,
+    1133,
+    1134,
+    1135,
+    1136,
+    1137,
+    1138,
+    1139,
+    1140,
+    1141,
+    1142,
+    1143,
+    1144,
+    1145,
+    1146,
+    1147,
+    1148,
+    1149,
+    1150,
+    1151,
+    1152,
+    1153,
+    1154,
+    1155,
+    1156,
+    1157,
+    1158,
+    1159,
+    1160,
+    1161,
+    1162,
+    1163,
+    1164,
+    1165,
+    1166,
+    1167,
+    1168,
+    1169,
+    1170,
+    1171,
+    1172,
+    1173,
+    1174,
+    1175,
+    1176,
+    1177,
+    1178,
+    1179,
+    1180,
+    1181,
+    1182,
+    1183,
+    1184,
+    1185,
+    1186,
+    1187,
+    1188,
+    1189,
+    1190,
+    1191,
+    1192,
+    1193,
+    1194,
+    1195,
+    1196,
+    1197,
+    1198,
+    1199,
+    1200,
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1207,
+    1208,
+    1209,
+    1210,
+    1211
+  ],
+  "lining_source_max_z": 0.11753975600004196,
+  "single_ordered_boundary_loop": true,
+  "boundary_vertices": [
+    870,
+    868,
+    865,
+    864,
+    858,
+    873,
+    861,
+    874,
+    869,
+    857,
+    872,
+    867,
+    862,
+    859,
+    871,
+    866,
+    863,
+    860
+  ],
+  "boundary_edges": 18,
+  "source_wrist_plane_z": 0.095,
+  "uniform_scale": 1.088235294117647,
+  "planned_wrist_to_top_m": 0.185,
+  "planned_forearm_m": 0.08,
+  "wrist_bone_center_verified": false,
+  "fitted_to_character": false,
+  "original_vertices": 1215,
+  "original_faces": 1213,
+  "actual_vertices": 875,
+  "actual_polygons": 865,
+  "actual_triangles": 1730,
+  "uv_actual_readback": {
+    "unchanged_native_faces": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      651,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      668,
+      669,
+      670,
+      671,
+      672,
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      769,
+      781,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800,
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      810,
+      840,
+      842,
+      843,
+      844,
+      845,
+      848,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161,
+      1162,
+      1163,
+      1164,
+      1165,
+      1166,
+      1167,
+      1168,
+      1169,
+      1170,
+      1171,
+      1172,
+      1173,
+      1174,
+      1175,
+      1176,
+      1177,
+      1178,
+      1179,
+      1180,
+      1181,
+      1182,
+      1183,
+      1184,
+      1185,
+      1186,
+      1187,
+      1188,
+      1189,
+      1190,
+      1191,
+      1192,
+      1193,
+      1194,
+      1195,
+      1196,
+      1197,
+      1198,
+      1199,
+      1200,
+      1201,
+      1202,
+      1205,
+      1206,
+      1207,
+      1208,
+      1209,
+      1210,
+      1211,
+      1212
+    ],
+    "cut_faces": [
+      772,
+      774,
+      776,
+      778,
+      780,
+      813,
+      815,
+      837,
+      839,
+      851,
+      782,
+      808,
+      767,
+      847,
+      809,
+      768,
+      841,
+      846
+    ],
+    "tolerance": 1e-07,
+    "protected_face_corner_UV_pass": true
+  },
+  "vertex_mapping": [
+    {
+      "index": 0,
+      "native_source_id": 0
+    },
+    {
+      "index": 1,
+      "native_source_id": 1
+    },
+    {
+      "index": 2,
+      "native_source_id": 2
+    },
+    {
+      "index": 3,
+      "native_source_id": 3
+    },
+    {
+      "index": 4,
+      "native_source_id": 4
+    },
+    {
+      "index": 5,
+      "native_source_id": 5
+    },
+    {
+      "index": 6,
+      "native_source_id": 6
+    },
+    {
+      "index": 7,
+      "native_source_id": 7
+    },
+    {
+      "index": 8,
+      "native_source_id": 8
+    },
+    {
+      "index": 9,
+      "native_source_id": 9
+    },
+    {
+      "index": 10,
+      "native_source_id": 10
+    },
+    {
+      "index": 11,
+      "native_source_id": 11
+    },
+    {
+      "index": 12,
+      "native_source_id": 12
+    },
+    {
+      "index": 13,
+      "native_source_id": 13
+    },
+    {
+      "index": 14,
+      "native_source_id": 14
+    },
+    {
+      "index": 15,
+      "native_source_id": 15
+    },
+    {
+      "index": 16,
+      "native_source_id": 16
+    },
+    {
+      "index": 17,
+      "native_source_id": 17
+    },
+    {
+      "index": 18,
+      "native_source_id": 18
+    },
+    {
+      "index": 19,
+      "native_source_id": 19
+    },
+    {
+      "index": 20,
+      "native_source_id": 20
+    },
+    {
+      "index": 21,
+      "native_source_id": 21
+    },
+    {
+      "index": 22,
+      "native_source_id": 22
+    },
+    {
+      "index": 23,
+      "native_source_id": 23
+    },
+    {
+      "index": 24,
+      "native_source_id": 24
+    },
+    {
+      "index": 25,
+      "native_source_id": 25
+    },
+    {
+      "index": 26,
+      "native_source_id": 26
+    },
+    {
+      "index": 27,
+      "native_source_id": 27
+    },
+    {
+      "index": 28,
+      "native_source_id": 28
+    },
+    {
+      "index": 29,
+      "native_source_id": 29
+    },
+    {
+      "index": 30,
+      "native_source_id": 30
+    },
+    {
+      "index": 31,
+      "native_source_id": 31
+    },
+    {
+      "index": 32,
+      "native_source_id": 32
+    },
+    {
+      "index": 33,
+      "native_source_id": 33
+    },
+    {
+      "index": 34,
+      "native_source_id": 34
+    },
+    {
+      "index": 35,
+      "native_source_id": 35
+    },
+    {
+      "index": 36,
+      "native_source_id": 36
+    },
+    {
+      "index": 37,
+      "native_source_id": 37
+    },
+    {
+      "index": 38,
+      "native_source_id": 74
+    },
+    {
+      "index": 39,
+      "native_source_id": 75
+    },
+    {
+      "index": 40,
+      "native_source_id": 76
+    },
+    {
+      "index": 41,
+      "native_source_id": 77
+    },
+    {
+      "index": 42,
+      "native_source_id": 78
+    },
+    {
+      "index": 43,
+      "native_source_id": 79
+    },
+    {
+      "index": 44,
+      "native_source_id": 80
+    },
+    {
+      "index": 45,
+      "native_source_id": 81
+    },
+    {
+      "index": 46,
+      "native_source_id": 82
+    },
+    {
+      "index": 47,
+      "native_source_id": 83
+    },
+    {
+      "index": 48,
+      "native_source_id": 84
+    },
+    {
+      "index": 49,
+      "native_source_id": 85
+    },
+    {
+      "index": 50,
+      "native_source_id": 86
+    },
+    {
+      "index": 51,
+      "native_source_id": 87
+    },
+    {
+      "index": 52,
+      "native_source_id": 88
+    },
+    {
+      "index": 53,
+      "native_source_id": 89
+    },
+    {
+      "index": 54,
+      "native_source_id": 90
+    },
+    {
+      "index": 55,
+      "native_source_id": 91
+    },
+    {
+      "index": 56,
+      "native_source_id": 92
+    },
+    {
+      "index": 57,
+      "native_source_id": 93
+    },
+    {
+      "index": 58,
+      "native_source_id": 94
+    },
+    {
+      "index": 59,
+      "native_source_id": 95
+    },
+    {
+      "index": 60,
+      "native_source_id": 96
+    },
+    {
+      "index": 61,
+      "native_source_id": 97
+    },
+    {
+      "index": 62,
+      "native_source_id": 98
+    },
+    {
+      "index": 63,
+      "native_source_id": 99
+    },
+    {
+      "index": 64,
+      "native_source_id": 100
+    },
+    {
+      "index": 65,
+      "native_source_id": 101
+    },
+    {
+      "index": 66,
+      "native_source_id": 102
+    },
+    {
+      "index": 67,
+      "native_source_id": 103
+    },
+    {
+      "index": 68,
+      "native_source_id": 104
+    },
+    {
+      "index": 69,
+      "native_source_id": 105
+    },
+    {
+      "index": 70,
+      "native_source_id": 106
+    },
+    {
+      "index": 71,
+      "native_source_id": 107
+    },
+    {
+      "index": 72,
+      "native_source_id": 108
+    },
+    {
+      "index": 73,
+      "native_source_id": 109
+    },
+    {
+      "index": 74,
+      "native_source_id": 110
+    },
+    {
+      "index": 75,
+      "native_source_id": 111
+    },
+    {
+      "index": 76,
+      "native_source_id": 112
+    },
+    {
+      "index": 77,
+      "native_source_id": 113
+    },
+    {
+      "index": 78,
+      "native_source_id": 114
+    },
+    {
+      "index": 79,
+      "native_source_id": 115
+    },
+    {
+      "index": 80,
+      "native_source_id": 116
+    },
+    {
+      "index": 81,
+      "native_source_id": 117
+    },
+    {
+      "index": 82,
+      "native_source_id": 118
+    },
+    {
+      "index": 83,
+      "native_source_id": 119
+    },
+    {
+      "index": 84,
+      "native_source_id": 120
+    },
+    {
+      "index": 85,
+      "native_source_id": 121
+    },
+    {
+      "index": 86,
+      "native_source_id": 122
+    },
+    {
+      "index": 87,
+      "native_source_id": 123
+    },
+    {
+      "index": 88,
+      "native_source_id": 124
+    },
+    {
+      "index": 89,
+      "native_source_id": 125
+    },
+    {
+      "index": 90,
+      "native_source_id": 126
+    },
+    {
+      "index": 91,
+      "native_source_id": 127
+    },
+    {
+      "index": 92,
+      "native_source_id": 128
+    },
+    {
+      "index": 93,
+      "native_source_id": 129
+    },
+    {
+      "index": 94,
+      "native_source_id": 130
+    },
+    {
+      "index": 95,
+      "native_source_id": 131
+    },
+    {
+      "index": 96,
+      "native_source_id": 132
+    },
+    {
+      "index": 97,
+      "native_source_id": 133
+    },
+    {
+      "index": 98,
+      "native_source_id": 134
+    },
+    {
+      "index": 99,
+      "native_source_id": 135
+    },
+    {
+      "index": 100,
+      "native_source_id": 136
+    },
+    {
+      "index": 101,
+      "native_source_id": 137
+    },
+    {
+      "index": 102,
+      "native_source_id": 138
+    },
+    {
+      "index": 103,
+      "native_source_id": 139
+    },
+    {
+      "index": 104,
+      "native_source_id": 140
+    },
+    {
+      "index": 105,
+      "native_source_id": 141
+    },
+    {
+      "index": 106,
+      "native_source_id": 142
+    },
+    {
+      "index": 107,
+      "native_source_id": 143
+    },
+    {
+      "index": 108,
+      "native_source_id": 144
+    },
+    {
+      "index": 109,
+      "native_source_id": 145
+    },
+    {
+      "index": 110,
+      "native_source_id": 146
+    },
+    {
+      "index": 111,
+      "native_source_id": 147
+    },
+    {
+      "index": 112,
+      "native_source_id": 148
+    },
+    {
+      "index": 113,
+      "native_source_id": 149
+    },
+    {
+      "index": 114,
+      "native_source_id": 150
+    },
+    {
+      "index": 115,
+      "native_source_id": 151
+    },
+    {
+      "index": 116,
+      "native_source_id": 152
+    },
+    {
+      "index": 117,
+      "native_source_id": 153
+    },
+    {
+      "index": 118,
+      "native_source_id": 154
+    },
+    {
+      "index": 119,
+      "native_source_id": 155
+    },
+    {
+      "index": 120,
+      "native_source_id": 156
+    },
+    {
+      "index": 121,
+      "native_source_id": 157
+    },
+    {
+      "index": 122,
+      "native_source_id": 158
+    },
+    {
+      "index": 123,
+      "native_source_id": 159
+    },
+    {
+      "index": 124,
+      "native_source_id": 160
+    },
+    {
+      "index": 125,
+      "native_source_id": 161
+    },
+    {
+      "index": 126,
+      "native_source_id": 162
+    },
+    {
+      "index": 127,
+      "native_source_id": 163
+    },
+    {
+      "index": 128,
+      "native_source_id": 164
+    },
+    {
+      "index": 129,
+      "native_source_id": 165
+    },
+    {
+      "index": 130,
+      "native_source_id": 166
+    },
+    {
+      "index": 131,
+      "native_source_id": 167
+    },
+    {
+      "index": 132,
+      "native_source_id": 168
+    },
+    {
+      "index": 133,
+      "native_source_id": 169
+    },
+    {
+      "index": 134,
+      "native_source_id": 170
+    },
+    {
+      "index": 135,
+      "native_source_id": 171
+    },
+    {
+      "index": 136,
+      "native_source_id": 172
+    },
+    {
+      "index": 137,
+      "native_source_id": 173
+    },
+    {
+      "index": 138,
+      "native_source_id": 174
+    },
+    {
+      "index": 139,
+      "native_source_id": 175
+    },
+    {
+      "index": 140,
+      "native_source_id": 176
+    },
+    {
+      "index": 141,
+      "native_source_id": 177
+    },
+    {
+      "index": 142,
+      "native_source_id": 178
+    },
+    {
+      "index": 143,
+      "native_source_id": 179
+    },
+    {
+      "index": 144,
+      "native_source_id": 180
+    },
+    {
+      "index": 145,
+      "native_source_id": 181
+    },
+    {
+      "index": 146,
+      "native_source_id": 182
+    },
+    {
+      "index": 147,
+      "native_source_id": 183
+    },
+    {
+      "index": 148,
+      "native_source_id": 184
+    },
+    {
+      "index": 149,
+      "native_source_id": 185
+    },
+    {
+      "index": 150,
+      "native_source_id": 186
+    },
+    {
+      "index": 151,
+      "native_source_id": 187
+    },
+    {
+      "index": 152,
+      "native_source_id": 188
+    },
+    {
+      "index": 153,
+      "native_source_id": 189
+    },
+    {
+      "index": 154,
+      "native_source_id": 190
+    },
+    {
+      "index": 155,
+      "native_source_id": 191
+    },
+    {
+      "index": 156,
+      "native_source_id": 192
+    },
+    {
+      "index": 157,
+      "native_source_id": 193
+    },
+    {
+      "index": 158,
+      "native_source_id": 194
+    },
+    {
+      "index": 159,
+      "native_source_id": 195
+    },
+    {
+      "index": 160,
+      "native_source_id": 196
+    },
+    {
+      "index": 161,
+      "native_source_id": 197
+    },
+    {
+      "index": 162,
+      "native_source_id": 198
+    },
+    {
+      "index": 163,
+      "native_source_id": 199
+    },
+    {
+      "index": 164,
+      "native_source_id": 200
+    },
+    {
+      "index": 165,
+      "native_source_id": 201
+    },
+    {
+      "index": 166,
+      "native_source_id": 202
+    },
+    {
+      "index": 167,
+      "native_source_id": 203
+    },
+    {
+      "index": 168,
+      "native_source_id": 204
+    },
+    {
+      "index": 169,
+      "native_source_id": 205
+    },
+    {
+      "index": 170,
+      "native_source_id": 206
+    },
+    {
+      "index": 171,
+      "native_source_id": 207
+    },
+    {
+      "index": 172,
+      "native_source_id": 208
+    },
+    {
+      "index": 173,
+      "native_source_id": 209
+    },
+    {
+      "index": 174,
+      "native_source_id": 210
+    },
+    {
+      "index": 175,
+      "native_source_id": 211
+    },
+    {
+      "index": 176,
+      "native_source_id": 212
+    },
+    {
+      "index": 177,
+      "native_source_id": 213
+    },
+    {
+      "index": 178,
+      "native_source_id": 214
+    },
+    {
+      "index": 179,
+      "native_source_id": 215
+    },
+    {
+      "index": 180,
+      "native_source_id": 216
+    },
+    {
+      "index": 181,
+      "native_source_id": 217
+    },
+    {
+      "index": 182,
+      "native_source_id": 218
+    },
+    {
+      "index": 183,
+      "native_source_id": 219
+    },
+    {
+      "index": 184,
+      "native_source_id": 220
+    },
+    {
+      "index": 185,
+      "native_source_id": 221
+    },
+    {
+      "index": 186,
+      "native_source_id": 222
+    },
+    {
+      "index": 187,
+      "native_source_id": 223
+    },
+    {
+      "index": 188,
+      "native_source_id": 224
+    },
+    {
+      "index": 189,
+      "native_source_id": 225
+    },
+    {
+      "index": 190,
+      "native_source_id": 226
+    },
+    {
+      "index": 191,
+      "native_source_id": 227
+    },
+    {
+      "index": 192,
+      "native_source_id": 228
+    },
+    {
+      "index": 193,
+      "native_source_id": 229
+    },
+    {
+      "index": 194,
+      "native_source_id": 230
+    },
+    {
+      "index": 195,
+      "native_source_id": 231
+    },
+    {
+      "index": 196,
+      "native_source_id": 232
+    },
+    {
+      "index": 197,
+      "native_source_id": 233
+    },
+    {
+      "index": 198,
+      "native_source_id": 234
+    },
+    {
+      "index": 199,
+      "native_source_id": 235
+    },
+    {
+      "index": 200,
+      "native_source_id": 236
+    },
+    {
+      "index": 201,
+      "native_source_id": 237
+    },
+    {
+      "index": 202,
+      "native_source_id": 238
+    },
+    {
+      "index": 203,
+      "native_source_id": 239
+    },
+    {
+      "index": 204,
+      "native_source_id": 240
+    },
+    {
+      "index": 205,
+      "native_source_id": 241
+    },
+    {
+      "index": 206,
+      "native_source_id": 242
+    },
+    {
+      "index": 207,
+      "native_source_id": 243
+    },
+    {
+      "index": 208,
+      "native_source_id": 244
+    },
+    {
+      "index": 209,
+      "native_source_id": 245
+    },
+    {
+      "index": 210,
+      "native_source_id": 246
+    },
+    {
+      "index": 211,
+      "native_source_id": 247
+    },
+    {
+      "index": 212,
+      "native_source_id": 248
+    },
+    {
+      "index": 213,
+      "native_source_id": 249
+    },
+    {
+      "index": 214,
+      "native_source_id": 250
+    },
+    {
+      "index": 215,
+      "native_source_id": 251
+    },
+    {
+      "index": 216,
+      "native_source_id": 252
+    },
+    {
+      "index": 217,
+      "native_source_id": 253
+    },
+    {
+      "index": 218,
+      "native_source_id": 254
+    },
+    {
+      "index": 219,
+      "native_source_id": 255
+    },
+    {
+      "index": 220,
+      "native_source_id": 256
+    },
+    {
+      "index": 221,
+      "native_source_id": 257
+    },
+    {
+      "index": 222,
+      "native_source_id": 258
+    },
+    {
+      "index": 223,
+      "native_source_id": 259
+    },
+    {
+      "index": 224,
+      "native_source_id": 260
+    },
+    {
+      "index": 225,
+      "native_source_id": 261
+    },
+    {
+      "index": 226,
+      "native_source_id": 262
+    },
+    {
+      "index": 227,
+      "native_source_id": 263
+    },
+    {
+      "index": 228,
+      "native_source_id": 264
+    },
+    {
+      "index": 229,
+      "native_source_id": 265
+    },
+    {
+      "index": 230,
+      "native_source_id": 266
+    },
+    {
+      "index": 231,
+      "native_source_id": 267
+    },
+    {
+      "index": 232,
+      "native_source_id": 268
+    },
+    {
+      "index": 233,
+      "native_source_id": 269
+    },
+    {
+      "index": 234,
+      "native_source_id": 270
+    },
+    {
+      "index": 235,
+      "native_source_id": 271
+    },
+    {
+      "index": 236,
+      "native_source_id": 272
+    },
+    {
+      "index": 237,
+      "native_source_id": 273
+    },
+    {
+      "index": 238,
+      "native_source_id": 274
+    },
+    {
+      "index": 239,
+      "native_source_id": 275
+    },
+    {
+      "index": 240,
+      "native_source_id": 276
+    },
+    {
+      "index": 241,
+      "native_source_id": 277
+    },
+    {
+      "index": 242,
+      "native_source_id": 278
+    },
+    {
+      "index": 243,
+      "native_source_id": 279
+    },
+    {
+      "index": 244,
+      "native_source_id": 280
+    },
+    {
+      "index": 245,
+      "native_source_id": 281
+    },
+    {
+      "index": 246,
+      "native_source_id": 282
+    },
+    {
+      "index": 247,
+      "native_source_id": 283
+    },
+    {
+      "index": 248,
+      "native_source_id": 284
+    },
+    {
+      "index": 249,
+      "native_source_id": 285
+    },
+    {
+      "index": 250,
+      "native_source_id": 286
+    },
+    {
+      "index": 251,
+      "native_source_id": 287
+    },
+    {
+      "index": 252,
+      "native_source_id": 288
+    },
+    {
+      "index": 253,
+      "native_source_id": 289
+    },
+    {
+      "index": 254,
+      "native_source_id": 290
+    },
+    {
+      "index": 255,
+      "native_source_id": 291
+    },
+    {
+      "index": 256,
+      "native_source_id": 292
+    },
+    {
+      "index": 257,
+      "native_source_id": 293
+    },
+    {
+      "index": 258,
+      "native_source_id": 294
+    },
+    {
+      "index": 259,
+      "native_source_id": 295
+    },
+    {
+      "index": 260,
+      "native_source_id": 296
+    },
+    {
+      "index": 261,
+      "native_source_id": 297
+    },
+    {
+      "index": 262,
+      "native_source_id": 298
+    },
+    {
+      "index": 263,
+      "native_source_id": 299
+    },
+    {
+      "index": 264,
+      "native_source_id": 300
+    },
+    {
+      "index": 265,
+      "native_source_id": 301
+    },
+    {
+      "index": 266,
+      "native_source_id": 302
+    },
+    {
+      "index": 267,
+      "native_source_id": 303
+    },
+    {
+      "index": 268,
+      "native_source_id": 304
+    },
+    {
+      "index": 269,
+      "native_source_id": 305
+    },
+    {
+      "index": 270,
+      "native_source_id": 306
+    },
+    {
+      "index": 271,
+      "native_source_id": 307
+    },
+    {
+      "index": 272,
+      "native_source_id": 308
+    },
+    {
+      "index": 273,
+      "native_source_id": 309
+    },
+    {
+      "index": 274,
+      "native_source_id": 310
+    },
+    {
+      "index": 275,
+      "native_source_id": 311
+    },
+    {
+      "index": 276,
+      "native_source_id": 312
+    },
+    {
+      "index": 277,
+      "native_source_id": 313
+    },
+    {
+      "index": 278,
+      "native_source_id": 314
+    },
+    {
+      "index": 279,
+      "native_source_id": 315
+    },
+    {
+      "index": 280,
+      "native_source_id": 316
+    },
+    {
+      "index": 281,
+      "native_source_id": 317
+    },
+    {
+      "index": 282,
+      "native_source_id": 318
+    },
+    {
+      "index": 283,
+      "native_source_id": 319
+    },
+    {
+      "index": 284,
+      "native_source_id": 320
+    },
+    {
+      "index": 285,
+      "native_source_id": 321
+    },
+    {
+      "index": 286,
+      "native_source_id": 322
+    },
+    {
+      "index": 287,
+      "native_source_id": 323
+    },
+    {
+      "index": 288,
+      "native_source_id": 324
+    },
+    {
+      "index": 289,
+      "native_source_id": 325
+    },
+    {
+      "index": 290,
+      "native_source_id": 326
+    },
+    {
+      "index": 291,
+      "native_source_id": 327
+    },
+    {
+      "index": 292,
+      "native_source_id": 328
+    },
+    {
+      "index": 293,
+      "native_source_id": 329
+    },
+    {
+      "index": 294,
+      "native_source_id": 330
+    },
+    {
+      "index": 295,
+      "native_source_id": 331
+    },
+    {
+      "index": 296,
+      "native_source_id": 332
+    },
+    {
+      "index": 297,
+      "native_source_id": 333
+    },
+    {
+      "index": 298,
+      "native_source_id": 334
+    },
+    {
+      "index": 299,
+      "native_source_id": 335
+    },
+    {
+      "index": 300,
+      "native_source_id": 336
+    },
+    {
+      "index": 301,
+      "native_source_id": 337
+    },
+    {
+      "index": 302,
+      "native_source_id": 338
+    },
+    {
+      "index": 303,
+      "native_source_id": 339
+    },
+    {
+      "index": 304,
+      "native_source_id": 340
+    },
+    {
+      "index": 305,
+      "native_source_id": 341
+    },
+    {
+      "index": 306,
+      "native_source_id": 342
+    },
+    {
+      "index": 307,
+      "native_source_id": 343
+    },
+    {
+      "index": 308,
+      "native_source_id": 344
+    },
+    {
+      "index": 309,
+      "native_source_id": 345
+    },
+    {
+      "index": 310,
+      "native_source_id": 346
+    },
+    {
+      "index": 311,
+      "native_source_id": 347
+    },
+    {
+      "index": 312,
+      "native_source_id": 348
+    },
+    {
+      "index": 313,
+      "native_source_id": 349
+    },
+    {
+      "index": 314,
+      "native_source_id": 350
+    },
+    {
+      "index": 315,
+      "native_source_id": 351
+    },
+    {
+      "index": 316,
+      "native_source_id": 352
+    },
+    {
+      "index": 317,
+      "native_source_id": 353
+    },
+    {
+      "index": 318,
+      "native_source_id": 354
+    },
+    {
+      "index": 319,
+      "native_source_id": 355
+    },
+    {
+      "index": 320,
+      "native_source_id": 356
+    },
+    {
+      "index": 321,
+      "native_source_id": 357
+    },
+    {
+      "index": 322,
+      "native_source_id": 358
+    },
+    {
+      "index": 323,
+      "native_source_id": 359
+    },
+    {
+      "index": 324,
+      "native_source_id": 360
+    },
+    {
+      "index": 325,
+      "native_source_id": 361
+    },
+    {
+      "index": 326,
+      "native_source_id": 362
+    },
+    {
+      "index": 327,
+      "native_source_id": 363
+    },
+    {
+      "index": 328,
+      "native_source_id": 364
+    },
+    {
+      "index": 329,
+      "native_source_id": 365
+    },
+    {
+      "index": 330,
+      "native_source_id": 366
+    },
+    {
+      "index": 331,
+      "native_source_id": 367
+    },
+    {
+      "index": 332,
+      "native_source_id": 368
+    },
+    {
+      "index": 333,
+      "native_source_id": 369
+    },
+    {
+      "index": 334,
+      "native_source_id": 370
+    },
+    {
+      "index": 335,
+      "native_source_id": 371
+    },
+    {
+      "index": 336,
+      "native_source_id": 372
+    },
+    {
+      "index": 337,
+      "native_source_id": 373
+    },
+    {
+      "index": 338,
+      "native_source_id": 374
+    },
+    {
+      "index": 339,
+      "native_source_id": 375
+    },
+    {
+      "index": 340,
+      "native_source_id": 376
+    },
+    {
+      "index": 341,
+      "native_source_id": 377
+    },
+    {
+      "index": 342,
+      "native_source_id": 378
+    },
+    {
+      "index": 343,
+      "native_source_id": 379
+    },
+    {
+      "index": 344,
+      "native_source_id": 380
+    },
+    {
+      "index": 345,
+      "native_source_id": 381
+    },
+    {
+      "index": 346,
+      "native_source_id": 382
+    },
+    {
+      "index": 347,
+      "native_source_id": 383
+    },
+    {
+      "index": 348,
+      "native_source_id": 384
+    },
+    {
+      "index": 349,
+      "native_source_id": 385
+    },
+    {
+      "index": 350,
+      "native_source_id": 386
+    },
+    {
+      "index": 351,
+      "native_source_id": 387
+    },
+    {
+      "index": 352,
+      "native_source_id": 388
+    },
+    {
+      "index": 353,
+      "native_source_id": 389
+    },
+    {
+      "index": 354,
+      "native_source_id": 390
+    },
+    {
+      "index": 355,
+      "native_source_id": 391
+    },
+    {
+      "index": 356,
+      "native_source_id": 392
+    },
+    {
+      "index": 357,
+      "native_source_id": 393
+    },
+    {
+      "index": 358,
+      "native_source_id": 394
+    },
+    {
+      "index": 359,
+      "native_source_id": 395
+    },
+    {
+      "index": 360,
+      "native_source_id": 396
+    },
+    {
+      "index": 361,
+      "native_source_id": 397
+    },
+    {
+      "index": 362,
+      "native_source_id": 398
+    },
+    {
+      "index": 363,
+      "native_source_id": 399
+    },
+    {
+      "index": 364,
+      "native_source_id": 400
+    },
+    {
+      "index": 365,
+      "native_source_id": 401
+    },
+    {
+      "index": 366,
+      "native_source_id": 402
+    },
+    {
+      "index": 367,
+      "native_source_id": 403
+    },
+    {
+      "index": 368,
+      "native_source_id": 404
+    },
+    {
+      "index": 369,
+      "native_source_id": 405
+    },
+    {
+      "index": 370,
+      "native_source_id": 406
+    },
+    {
+      "index": 371,
+      "native_source_id": 407
+    },
+    {
+      "index": 372,
+      "native_source_id": 408
+    },
+    {
+      "index": 373,
+      "native_source_id": 409
+    },
+    {
+      "index": 374,
+      "native_source_id": 410
+    },
+    {
+      "index": 375,
+      "native_source_id": 411
+    },
+    {
+      "index": 376,
+      "native_source_id": 412
+    },
+    {
+      "index": 377,
+      "native_source_id": 413
+    },
+    {
+      "index": 378,
+      "native_source_id": 414
+    },
+    {
+      "index": 379,
+      "native_source_id": 415
+    },
+    {
+      "index": 380,
+      "native_source_id": 416
+    },
+    {
+      "index": 381,
+      "native_source_id": 417
+    },
+    {
+      "index": 382,
+      "native_source_id": 418
+    },
+    {
+      "index": 383,
+      "native_source_id": 419
+    },
+    {
+      "index": 384,
+      "native_source_id": 420
+    },
+    {
+      "index": 385,
+      "native_source_id": 421
+    },
+    {
+      "index": 386,
+      "native_source_id": 422
+    },
+    {
+      "index": 387,
+      "native_source_id": 423
+    },
+    {
+      "index": 388,
+      "native_source_id": 424
+    },
+    {
+      "index": 389,
+      "native_source_id": 425
+    },
+    {
+      "index": 390,
+      "native_source_id": 426
+    },
+    {
+      "index": 391,
+      "native_source_id": 427
+    },
+    {
+      "index": 392,
+      "native_source_id": 428
+    },
+    {
+      "index": 393,
+      "native_source_id": 429
+    },
+    {
+      "index": 394,
+      "native_source_id": 430
+    },
+    {
+      "index": 395,
+      "native_source_id": 431
+    },
+    {
+      "index": 396,
+      "native_source_id": 432
+    },
+    {
+      "index": 397,
+      "native_source_id": 433
+    },
+    {
+      "index": 398,
+      "native_source_id": 434
+    },
+    {
+      "index": 399,
+      "native_source_id": 435
+    },
+    {
+      "index": 400,
+      "native_source_id": 436
+    },
+    {
+      "index": 401,
+      "native_source_id": 437
+    },
+    {
+      "index": 402,
+      "native_source_id": 438
+    },
+    {
+      "index": 403,
+      "native_source_id": 439
+    },
+    {
+      "index": 404,
+      "native_source_id": 440
+    },
+    {
+      "index": 405,
+      "native_source_id": 441
+    },
+    {
+      "index": 406,
+      "native_source_id": 442
+    },
+    {
+      "index": 407,
+      "native_source_id": 443
+    },
+    {
+      "index": 408,
+      "native_source_id": 444
+    },
+    {
+      "index": 409,
+      "native_source_id": 445
+    },
+    {
+      "index": 410,
+      "native_source_id": 446
+    },
+    {
+      "index": 411,
+      "native_source_id": 447
+    },
+    {
+      "index": 412,
+      "native_source_id": 448
+    },
+    {
+      "index": 413,
+      "native_source_id": 449
+    },
+    {
+      "index": 414,
+      "native_source_id": 450
+    },
+    {
+      "index": 415,
+      "native_source_id": 451
+    },
+    {
+      "index": 416,
+      "native_source_id": 452
+    },
+    {
+      "index": 417,
+      "native_source_id": 453
+    },
+    {
+      "index": 418,
+      "native_source_id": 454
+    },
+    {
+      "index": 419,
+      "native_source_id": 455
+    },
+    {
+      "index": 420,
+      "native_source_id": 456
+    },
+    {
+      "index": 421,
+      "native_source_id": 457
+    },
+    {
+      "index": 422,
+      "native_source_id": 458
+    },
+    {
+      "index": 423,
+      "native_source_id": 459
+    },
+    {
+      "index": 424,
+      "native_source_id": 460
+    },
+    {
+      "index": 425,
+      "native_source_id": 461
+    },
+    {
+      "index": 426,
+      "native_source_id": 462
+    },
+    {
+      "index": 427,
+      "native_source_id": 463
+    },
+    {
+      "index": 428,
+      "native_source_id": 464
+    },
+    {
+      "index": 429,
+      "native_source_id": 465
+    },
+    {
+      "index": 430,
+      "native_source_id": 466
+    },
+    {
+      "index": 431,
+      "native_source_id": 467
+    },
+    {
+      "index": 432,
+      "native_source_id": 468
+    },
+    {
+      "index": 433,
+      "native_source_id": 469
+    },
+    {
+      "index": 434,
+      "native_source_id": 470
+    },
+    {
+      "index": 435,
+      "native_source_id": 471
+    },
+    {
+      "index": 436,
+      "native_source_id": 472
+    },
+    {
+      "index": 437,
+      "native_source_id": 473
+    },
+    {
+      "index": 438,
+      "native_source_id": 474
+    },
+    {
+      "index": 439,
+      "native_source_id": 475
+    },
+    {
+      "index": 440,
+      "native_source_id": 476
+    },
+    {
+      "index": 441,
+      "native_source_id": 477
+    },
+    {
+      "index": 442,
+      "native_source_id": 478
+    },
+    {
+      "index": 443,
+      "native_source_id": 479
+    },
+    {
+      "index": 444,
+      "native_source_id": 480
+    },
+    {
+      "index": 445,
+      "native_source_id": 481
+    },
+    {
+      "index": 446,
+      "native_source_id": 482
+    },
+    {
+      "index": 447,
+      "native_source_id": 483
+    },
+    {
+      "index": 448,
+      "native_source_id": 484
+    },
+    {
+      "index": 449,
+      "native_source_id": 485
+    },
+    {
+      "index": 450,
+      "native_source_id": 486
+    },
+    {
+      "index": 451,
+      "native_source_id": 487
+    },
+    {
+      "index": 452,
+      "native_source_id": 488
+    },
+    {
+      "index": 453,
+      "native_source_id": 489
+    },
+    {
+      "index": 454,
+      "native_source_id": 490
+    },
+    {
+      "index": 455,
+      "native_source_id": 491
+    },
+    {
+      "index": 456,
+      "native_source_id": 492
+    },
+    {
+      "index": 457,
+      "native_source_id": 493
+    },
+    {
+      "index": 458,
+      "native_source_id": 494
+    },
+    {
+      "index": 459,
+      "native_source_id": 495
+    },
+    {
+      "index": 460,
+      "native_source_id": 496
+    },
+    {
+      "index": 461,
+      "native_source_id": 497
+    },
+    {
+      "index": 462,
+      "native_source_id": 498
+    },
+    {
+      "index": 463,
+      "native_source_id": 499
+    },
+    {
+      "index": 464,
+      "native_source_id": 500
+    },
+    {
+      "index": 465,
+      "native_source_id": 501
+    },
+    {
+      "index": 466,
+      "native_source_id": 502
+    },
+    {
+      "index": 467,
+      "native_source_id": 503
+    },
+    {
+      "index": 468,
+      "native_source_id": 504
+    },
+    {
+      "index": 469,
+      "native_source_id": 505
+    },
+    {
+      "index": 470,
+      "native_source_id": 506
+    },
+    {
+      "index": 471,
+      "native_source_id": 507
+    },
+    {
+      "index": 472,
+      "native_source_id": 508
+    },
+    {
+      "index": 473,
+      "native_source_id": 509
+    },
+    {
+      "index": 474,
+      "native_source_id": 510
+    },
+    {
+      "index": 475,
+      "native_source_id": 511
+    },
+    {
+      "index": 476,
+      "native_source_id": 512
+    },
+    {
+      "index": 477,
+      "native_source_id": 513
+    },
+    {
+      "index": 478,
+      "native_source_id": 514
+    },
+    {
+      "index": 479,
+      "native_source_id": 515
+    },
+    {
+      "index": 480,
+      "native_source_id": 516
+    },
+    {
+      "index": 481,
+      "native_source_id": 517
+    },
+    {
+      "index": 482,
+      "native_source_id": 518
+    },
+    {
+      "index": 483,
+      "native_source_id": 519
+    },
+    {
+      "index": 484,
+      "native_source_id": 520
+    },
+    {
+      "index": 485,
+      "native_source_id": 521
+    },
+    {
+      "index": 486,
+      "native_source_id": 522
+    },
+    {
+      "index": 487,
+      "native_source_id": 523
+    },
+    {
+      "index": 488,
+      "native_source_id": 524
+    },
+    {
+      "index": 489,
+      "native_source_id": 525
+    },
+    {
+      "index": 490,
+      "native_source_id": 526
+    },
+    {
+      "index": 491,
+      "native_source_id": 527
+    },
+    {
+      "index": 492,
+      "native_source_id": 528
+    },
+    {
+      "index": 493,
+      "native_source_id": 529
+    },
+    {
+      "index": 494,
+      "native_source_id": 530
+    },
+    {
+      "index": 495,
+      "native_source_id": 531
+    },
+    {
+      "index": 496,
+      "native_source_id": 532
+    },
+    {
+      "index": 497,
+      "native_source_id": 533
+    },
+    {
+      "index": 498,
+      "native_source_id": 534
+    },
+    {
+      "index": 499,
+      "native_source_id": 535
+    },
+    {
+      "index": 500,
+      "native_source_id": 536
+    },
+    {
+      "index": 501,
+      "native_source_id": 537
+    },
+    {
+      "index": 502,
+      "native_source_id": 538
+    },
+    {
+      "index": 503,
+      "native_source_id": 539
+    },
+    {
+      "index": 504,
+      "native_source_id": 540
+    },
+    {
+      "index": 505,
+      "native_source_id": 541
+    },
+    {
+      "index": 506,
+      "native_source_id": 542
+    },
+    {
+      "index": 507,
+      "native_source_id": 543
+    },
+    {
+      "index": 508,
+      "native_source_id": 544
+    },
+    {
+      "index": 509,
+      "native_source_id": 545
+    },
+    {
+      "index": 510,
+      "native_source_id": 546
+    },
+    {
+      "index": 511,
+      "native_source_id": 547
+    },
+    {
+      "index": 512,
+      "native_source_id": 548
+    },
+    {
+      "index": 513,
+      "native_source_id": 549
+    },
+    {
+      "index": 514,
+      "native_source_id": 550
+    },
+    {
+      "index": 515,
+      "native_source_id": 551
+    },
+    {
+      "index": 516,
+      "native_source_id": 552
+    },
+    {
+      "index": 517,
+      "native_source_id": 553
+    },
+    {
+      "index": 518,
+      "native_source_id": 554
+    },
+    {
+      "index": 519,
+      "native_source_id": 555
+    },
+    {
+      "index": 520,
+      "native_source_id": 556
+    },
+    {
+      "index": 521,
+      "native_source_id": 557
+    },
+    {
+      "index": 522,
+      "native_source_id": 558
+    },
+    {
+      "index": 523,
+      "native_source_id": 559
+    },
+    {
+      "index": 524,
+      "native_source_id": 560
+    },
+    {
+      "index": 525,
+      "native_source_id": 561
+    },
+    {
+      "index": 526,
+      "native_source_id": 562
+    },
+    {
+      "index": 527,
+      "native_source_id": 563
+    },
+    {
+      "index": 528,
+      "native_source_id": 564
+    },
+    {
+      "index": 529,
+      "native_source_id": 565
+    },
+    {
+      "index": 530,
+      "native_source_id": 566
+    },
+    {
+      "index": 531,
+      "native_source_id": 567
+    },
+    {
+      "index": 532,
+      "native_source_id": 568
+    },
+    {
+      "index": 533,
+      "native_source_id": 569
+    },
+    {
+      "index": 534,
+      "native_source_id": 570
+    },
+    {
+      "index": 535,
+      "native_source_id": 571
+    },
+    {
+      "index": 536,
+      "native_source_id": 572
+    },
+    {
+      "index": 537,
+      "native_source_id": 573
+    },
+    {
+      "index": 538,
+      "native_source_id": 574
+    },
+    {
+      "index": 539,
+      "native_source_id": 575
+    },
+    {
+      "index": 540,
+      "native_source_id": 576
+    },
+    {
+      "index": 541,
+      "native_source_id": 577
+    },
+    {
+      "index": 542,
+      "native_source_id": 578
+    },
+    {
+      "index": 543,
+      "native_source_id": 579
+    },
+    {
+      "index": 544,
+      "native_source_id": 580
+    },
+    {
+      "index": 545,
+      "native_source_id": 581
+    },
+    {
+      "index": 546,
+      "native_source_id": 582
+    },
+    {
+      "index": 547,
+      "native_source_id": 583
+    },
+    {
+      "index": 548,
+      "native_source_id": 584
+    },
+    {
+      "index": 549,
+      "native_source_id": 585
+    },
+    {
+      "index": 550,
+      "native_source_id": 586
+    },
+    {
+      "index": 551,
+      "native_source_id": 587
+    },
+    {
+      "index": 552,
+      "native_source_id": 588
+    },
+    {
+      "index": 553,
+      "native_source_id": 589
+    },
+    {
+      "index": 554,
+      "native_source_id": 590
+    },
+    {
+      "index": 555,
+      "native_source_id": 591
+    },
+    {
+      "index": 556,
+      "native_source_id": 592
+    },
+    {
+      "index": 557,
+      "native_source_id": 593
+    },
+    {
+      "index": 558,
+      "native_source_id": 594
+    },
+    {
+      "index": 559,
+      "native_source_id": 595
+    },
+    {
+      "index": 560,
+      "native_source_id": 596
+    },
+    {
+      "index": 561,
+      "native_source_id": 597
+    },
+    {
+      "index": 562,
+      "native_source_id": 598
+    },
+    {
+      "index": 563,
+      "native_source_id": 599
+    },
+    {
+      "index": 564,
+      "native_source_id": 600
+    },
+    {
+      "index": 565,
+      "native_source_id": 601
+    },
+    {
+      "index": 566,
+      "native_source_id": 602
+    },
+    {
+      "index": 567,
+      "native_source_id": 603
+    },
+    {
+      "index": 568,
+      "native_source_id": 604
+    },
+    {
+      "index": 569,
+      "native_source_id": 605
+    },
+    {
+      "index": 570,
+      "native_source_id": 606
+    },
+    {
+      "index": 571,
+      "native_source_id": 607
+    },
+    {
+      "index": 572,
+      "native_source_id": 608
+    },
+    {
+      "index": 573,
+      "native_source_id": 609
+    },
+    {
+      "index": 574,
+      "native_source_id": 610
+    },
+    {
+      "index": 575,
+      "native_source_id": 611
+    },
+    {
+      "index": 576,
+      "native_source_id": 612
+    },
+    {
+      "index": 577,
+      "native_source_id": 613
+    },
+    {
+      "index": 578,
+      "native_source_id": 614
+    },
+    {
+      "index": 579,
+      "native_source_id": 615
+    },
+    {
+      "index": 580,
+      "native_source_id": 616
+    },
+    {
+      "index": 581,
+      "native_source_id": 617
+    },
+    {
+      "index": 582,
+      "native_source_id": 618
+    },
+    {
+      "index": 583,
+      "native_source_id": 619
+    },
+    {
+      "index": 584,
+      "native_source_id": 620
+    },
+    {
+      "index": 585,
+      "native_source_id": 621
+    },
+    {
+      "index": 586,
+      "native_source_id": 622
+    },
+    {
+      "index": 587,
+      "native_source_id": 623
+    },
+    {
+      "index": 588,
+      "native_source_id": 624
+    },
+    {
+      "index": 589,
+      "native_source_id": 625
+    },
+    {
+      "index": 590,
+      "native_source_id": 626
+    },
+    {
+      "index": 591,
+      "native_source_id": 627
+    },
+    {
+      "index": 592,
+      "native_source_id": 628
+    },
+    {
+      "index": 593,
+      "native_source_id": 629
+    },
+    {
+      "index": 594,
+      "native_source_id": 630
+    },
+    {
+      "index": 595,
+      "native_source_id": 631
+    },
+    {
+      "index": 596,
+      "native_source_id": 632
+    },
+    {
+      "index": 597,
+      "native_source_id": 633
+    },
+    {
+      "index": 598,
+      "native_source_id": 634
+    },
+    {
+      "index": 599,
+      "native_source_id": 635
+    },
+    {
+      "index": 600,
+      "native_source_id": 636
+    },
+    {
+      "index": 601,
+      "native_source_id": 637
+    },
+    {
+      "index": 602,
+      "native_source_id": 638
+    },
+    {
+      "index": 603,
+      "native_source_id": 639
+    },
+    {
+      "index": 604,
+      "native_source_id": 640
+    },
+    {
+      "index": 605,
+      "native_source_id": 641
+    },
+    {
+      "index": 606,
+      "native_source_id": 642
+    },
+    {
+      "index": 607,
+      "native_source_id": 643
+    },
+    {
+      "index": 608,
+      "native_source_id": 644
+    },
+    {
+      "index": 609,
+      "native_source_id": 645
+    },
+    {
+      "index": 610,
+      "native_source_id": 646
+    },
+    {
+      "index": 611,
+      "native_source_id": 647
+    },
+    {
+      "index": 612,
+      "native_source_id": 648
+    },
+    {
+      "index": 613,
+      "native_source_id": 649
+    },
+    {
+      "index": 614,
+      "native_source_id": 650
+    },
+    {
+      "index": 615,
+      "native_source_id": 651
+    },
+    {
+      "index": 616,
+      "native_source_id": 652
+    },
+    {
+      "index": 617,
+      "native_source_id": 653
+    },
+    {
+      "index": 618,
+      "native_source_id": 654
+    },
+    {
+      "index": 619,
+      "native_source_id": 655
+    },
+    {
+      "index": 620,
+      "native_source_id": 656
+    },
+    {
+      "index": 621,
+      "native_source_id": 657
+    },
+    {
+      "index": 622,
+      "native_source_id": 658
+    },
+    {
+      "index": 623,
+      "native_source_id": 659
+    },
+    {
+      "index": 624,
+      "native_source_id": 660
+    },
+    {
+      "index": 625,
+      "native_source_id": 661
+    },
+    {
+      "index": 626,
+      "native_source_id": 662
+    },
+    {
+      "index": 627,
+      "native_source_id": 663
+    },
+    {
+      "index": 628,
+      "native_source_id": 664
+    },
+    {
+      "index": 629,
+      "native_source_id": 665
+    },
+    {
+      "index": 630,
+      "native_source_id": 666
+    },
+    {
+      "index": 631,
+      "native_source_id": 667
+    },
+    {
+      "index": 632,
+      "native_source_id": 668
+    },
+    {
+      "index": 633,
+      "native_source_id": 669
+    },
+    {
+      "index": 634,
+      "native_source_id": 670
+    },
+    {
+      "index": 635,
+      "native_source_id": 671
+    },
+    {
+      "index": 636,
+      "native_source_id": 672
+    },
+    {
+      "index": 637,
+      "native_source_id": 673
+    },
+    {
+      "index": 638,
+      "native_source_id": 674
+    },
+    {
+      "index": 639,
+      "native_source_id": 675
+    },
+    {
+      "index": 640,
+      "native_source_id": 676
+    },
+    {
+      "index": 641,
+      "native_source_id": 677
+    },
+    {
+      "index": 642,
+      "native_source_id": 678
+    },
+    {
+      "index": 643,
+      "native_source_id": 679
+    },
+    {
+      "index": 644,
+      "native_source_id": 680
+    },
+    {
+      "index": 645,
+      "native_source_id": 681
+    },
+    {
+      "index": 646,
+      "native_source_id": 682
+    },
+    {
+      "index": 647,
+      "native_source_id": 683
+    },
+    {
+      "index": 648,
+      "native_source_id": 684
+    },
+    {
+      "index": 649,
+      "native_source_id": 685
+    },
+    {
+      "index": 650,
+      "native_source_id": 686
+    },
+    {
+      "index": 651,
+      "native_source_id": 687
+    },
+    {
+      "index": 652,
+      "native_source_id": 688
+    },
+    {
+      "index": 653,
+      "native_source_id": 689
+    },
+    {
+      "index": 654,
+      "native_source_id": 690
+    },
+    {
+      "index": 655,
+      "native_source_id": 691
+    },
+    {
+      "index": 656,
+      "native_source_id": 692
+    },
+    {
+      "index": 657,
+      "native_source_id": 693
+    },
+    {
+      "index": 658,
+      "native_source_id": 694
+    },
+    {
+      "index": 659,
+      "native_source_id": 695
+    },
+    {
+      "index": 660,
+      "native_source_id": 696
+    },
+    {
+      "index": 661,
+      "native_source_id": 697
+    },
+    {
+      "index": 662,
+      "native_source_id": 698
+    },
+    {
+      "index": 663,
+      "native_source_id": 699
+    },
+    {
+      "index": 664,
+      "native_source_id": 700
+    },
+    {
+      "index": 665,
+      "native_source_id": 701
+    },
+    {
+      "index": 666,
+      "native_source_id": 702
+    },
+    {
+      "index": 667,
+      "native_source_id": 703
+    },
+    {
+      "index": 668,
+      "native_source_id": 704
+    },
+    {
+      "index": 669,
+      "native_source_id": 705
+    },
+    {
+      "index": 670,
+      "native_source_id": 706
+    },
+    {
+      "index": 671,
+      "native_source_id": 707
+    },
+    {
+      "index": 672,
+      "native_source_id": 708
+    },
+    {
+      "index": 673,
+      "native_source_id": 709
+    },
+    {
+      "index": 674,
+      "native_source_id": 710
+    },
+    {
+      "index": 675,
+      "native_source_id": 711
+    },
+    {
+      "index": 676,
+      "native_source_id": 712
+    },
+    {
+      "index": 677,
+      "native_source_id": 713
+    },
+    {
+      "index": 678,
+      "native_source_id": 714
+    },
+    {
+      "index": 679,
+      "native_source_id": 715
+    },
+    {
+      "index": 680,
+      "native_source_id": 716
+    },
+    {
+      "index": 681,
+      "native_source_id": 717
+    },
+    {
+      "index": 682,
+      "native_source_id": 718
+    },
+    {
+      "index": 683,
+      "native_source_id": 719
+    },
+    {
+      "index": 684,
+      "native_source_id": 720
+    },
+    {
+      "index": 685,
+      "native_source_id": 721
+    },
+    {
+      "index": 686,
+      "native_source_id": 722
+    },
+    {
+      "index": 687,
+      "native_source_id": 723
+    },
+    {
+      "index": 688,
+      "native_source_id": 724
+    },
+    {
+      "index": 689,
+      "native_source_id": 725
+    },
+    {
+      "index": 690,
+      "native_source_id": 726
+    },
+    {
+      "index": 691,
+      "native_source_id": 727
+    },
+    {
+      "index": 692,
+      "native_source_id": 728
+    },
+    {
+      "index": 693,
+      "native_source_id": 729
+    },
+    {
+      "index": 694,
+      "native_source_id": 730
+    },
+    {
+      "index": 695,
+      "native_source_id": 731
+    },
+    {
+      "index": 696,
+      "native_source_id": 732
+    },
+    {
+      "index": 697,
+      "native_source_id": 733
+    },
+    {
+      "index": 698,
+      "native_source_id": 734
+    },
+    {
+      "index": 699,
+      "native_source_id": 735
+    },
+    {
+      "index": 700,
+      "native_source_id": 736
+    },
+    {
+      "index": 701,
+      "native_source_id": 737
+    },
+    {
+      "index": 702,
+      "native_source_id": 738
+    },
+    {
+      "index": 703,
+      "native_source_id": 739
+    },
+    {
+      "index": 704,
+      "native_source_id": 740
+    },
+    {
+      "index": 705,
+      "native_source_id": 741
+    },
+    {
+      "index": 706,
+      "native_source_id": 742
+    },
+    {
+      "index": 707,
+      "native_source_id": 743
+    },
+    {
+      "index": 708,
+      "native_source_id": 744
+    },
+    {
+      "index": 709,
+      "native_source_id": 745
+    },
+    {
+      "index": 710,
+      "native_source_id": 746
+    },
+    {
+      "index": 711,
+      "native_source_id": 747
+    },
+    {
+      "index": 712,
+      "native_source_id": 748
+    },
+    {
+      "index": 713,
+      "native_source_id": 749
+    },
+    {
+      "index": 714,
+      "native_source_id": 750
+    },
+    {
+      "index": 715,
+      "native_source_id": 751
+    },
+    {
+      "index": 716,
+      "native_source_id": 752
+    },
+    {
+      "index": 717,
+      "native_source_id": 753
+    },
+    {
+      "index": 718,
+      "native_source_id": 754
+    },
+    {
+      "index": 719,
+      "native_source_id": 755
+    },
+    {
+      "index": 720,
+      "native_source_id": 756
+    },
+    {
+      "index": 721,
+      "native_source_id": 757
+    },
+    {
+      "index": 722,
+      "native_source_id": 758
+    },
+    {
+      "index": 723,
+      "native_source_id": 759
+    },
+    {
+      "index": 724,
+      "native_source_id": 760
+    },
+    {
+      "index": 725,
+      "native_source_id": 761
+    },
+    {
+      "index": 726,
+      "native_source_id": 762
+    },
+    {
+      "index": 727,
+      "native_source_id": 763
+    },
+    {
+      "index": 728,
+      "native_source_id": 764
+    },
+    {
+      "index": 729,
+      "native_source_id": 765
+    },
+    {
+      "index": 730,
+      "native_source_id": 766
+    },
+    {
+      "index": 731,
+      "native_source_id": 767
+    },
+    {
+      "index": 732,
+      "native_source_id": 768
+    },
+    {
+      "index": 733,
+      "native_source_id": 769
+    },
+    {
+      "index": 734,
+      "native_source_id": 770
+    },
+    {
+      "index": 735,
+      "native_source_id": 771
+    },
+    {
+      "index": 736,
+      "native_source_id": 772
+    },
+    {
+      "index": 737,
+      "native_source_id": 773
+    },
+    {
+      "index": 738,
+      "native_source_id": 774
+    },
+    {
+      "index": 739,
+      "native_source_id": 775
+    },
+    {
+      "index": 740,
+      "native_source_id": 776
+    },
+    {
+      "index": 741,
+      "native_source_id": 777
+    },
+    {
+      "index": 742,
+      "native_source_id": 778
+    },
+    {
+      "index": 743,
+      "native_source_id": 779
+    },
+    {
+      "index": 744,
+      "native_source_id": 780
+    },
+    {
+      "index": 745,
+      "native_source_id": 781
+    },
+    {
+      "index": 746,
+      "native_source_id": 782
+    },
+    {
+      "index": 747,
+      "native_source_id": 783
+    },
+    {
+      "index": 748,
+      "native_source_id": 784
+    },
+    {
+      "index": 749,
+      "native_source_id": 785
+    },
+    {
+      "index": 750,
+      "native_source_id": 786
+    },
+    {
+      "index": 751,
+      "native_source_id": 787
+    },
+    {
+      "index": 752,
+      "native_source_id": 788
+    },
+    {
+      "index": 753,
+      "native_source_id": 789
+    },
+    {
+      "index": 754,
+      "native_source_id": 790
+    },
+    {
+      "index": 755,
+      "native_source_id": 791
+    },
+    {
+      "index": 756,
+      "native_source_id": 792
+    },
+    {
+      "index": 757,
+      "native_source_id": 793
+    },
+    {
+      "index": 758,
+      "native_source_id": 794
+    },
+    {
+      "index": 759,
+      "native_source_id": 795
+    },
+    {
+      "index": 760,
+      "native_source_id": 796
+    },
+    {
+      "index": 761,
+      "native_source_id": 797
+    },
+    {
+      "index": 762,
+      "native_source_id": 798
+    },
+    {
+      "index": 763,
+      "native_source_id": 799
+    },
+    {
+      "index": 764,
+      "native_source_id": 800
+    },
+    {
+      "index": 765,
+      "native_source_id": 801
+    },
+    {
+      "index": 766,
+      "native_source_id": 802
+    },
+    {
+      "index": 767,
+      "native_source_id": 803
+    },
+    {
+      "index": 768,
+      "native_source_id": 804
+    },
+    {
+      "index": 769,
+      "native_source_id": 805
+    },
+    {
+      "index": 770,
+      "native_source_id": 806
+    },
+    {
+      "index": 771,
+      "native_source_id": 807
+    },
+    {
+      "index": 772,
+      "native_source_id": 808
+    },
+    {
+      "index": 773,
+      "native_source_id": 809
+    },
+    {
+      "index": 774,
+      "native_source_id": 810
+    },
+    {
+      "index": 775,
+      "native_source_id": 811
+    },
+    {
+      "index": 776,
+      "native_source_id": 812
+    },
+    {
+      "index": 777,
+      "native_source_id": 813
+    },
+    {
+      "index": 778,
+      "native_source_id": 814
+    },
+    {
+      "index": 779,
+      "native_source_id": 815
+    },
+    {
+      "index": 780,
+      "native_source_id": 816
+    },
+    {
+      "index": 781,
+      "native_source_id": 817
+    },
+    {
+      "index": 782,
+      "native_source_id": 818
+    },
+    {
+      "index": 783,
+      "native_source_id": 819
+    },
+    {
+      "index": 784,
+      "native_source_id": 820
+    },
+    {
+      "index": 785,
+      "native_source_id": 821
+    },
+    {
+      "index": 786,
+      "native_source_id": 822
+    },
+    {
+      "index": 787,
+      "native_source_id": 823
+    },
+    {
+      "index": 788,
+      "native_source_id": 824
+    },
+    {
+      "index": 789,
+      "native_source_id": 825
+    },
+    {
+      "index": 790,
+      "native_source_id": 826
+    },
+    {
+      "index": 791,
+      "native_source_id": 827
+    },
+    {
+      "index": 792,
+      "native_source_id": 828
+    },
+    {
+      "index": 793,
+      "native_source_id": 829
+    },
+    {
+      "index": 794,
+      "native_source_id": 830
+    },
+    {
+      "index": 795,
+      "native_source_id": 831
+    },
+    {
+      "index": 796,
+      "native_source_id": 832
+    },
+    {
+      "index": 797,
+      "native_source_id": 833
+    },
+    {
+      "index": 798,
+      "native_source_id": 834
+    },
+    {
+      "index": 799,
+      "native_source_id": 835
+    },
+    {
+      "index": 800,
+      "native_source_id": 836
+    },
+    {
+      "index": 801,
+      "native_source_id": 837
+    },
+    {
+      "index": 802,
+      "native_source_id": 838
+    },
+    {
+      "index": 803,
+      "native_source_id": 839
+    },
+    {
+      "index": 804,
+      "native_source_id": 840
+    },
+    {
+      "index": 805,
+      "native_source_id": 841
+    },
+    {
+      "index": 806,
+      "native_source_id": 842
+    },
+    {
+      "index": 807,
+      "native_source_id": 843
+    },
+    {
+      "index": 808,
+      "native_source_id": 844
+    },
+    {
+      "index": 809,
+      "native_source_id": 845
+    },
+    {
+      "index": 810,
+      "native_source_id": 846
+    },
+    {
+      "index": 811,
+      "native_source_id": 847
+    },
+    {
+      "index": 812,
+      "native_source_id": 848
+    },
+    {
+      "index": 813,
+      "native_source_id": 849
+    },
+    {
+      "index": 814,
+      "native_source_id": 850
+    },
+    {
+      "index": 815,
+      "native_source_id": 851
+    },
+    {
+      "index": 816,
+      "native_source_id": 852
+    },
+    {
+      "index": 817,
+      "native_source_id": 853
+    },
+    {
+      "index": 818,
+      "native_source_id": 854
+    },
+    {
+      "index": 819,
+      "native_source_id": 855
+    },
+    {
+      "index": 820,
+      "native_source_id": 856
+    },
+    {
+      "index": 821,
+      "native_source_id": 857
+    },
+    {
+      "index": 822,
+      "native_source_id": 858
+    },
+    {
+      "index": 823,
+      "native_source_id": 859
+    },
+    {
+      "index": 824,
+      "native_source_id": 860
+    },
+    {
+      "index": 825,
+      "native_source_id": 861
+    },
+    {
+      "index": 826,
+      "native_source_id": 862
+    },
+    {
+      "index": 827,
+      "native_source_id": 878
+    },
+    {
+      "index": 828,
+      "native_source_id": 880
+    },
+    {
+      "index": 829,
+      "native_source_id": 881
+    },
+    {
+      "index": 830,
+      "native_source_id": 882
+    },
+    {
+      "index": 831,
+      "native_source_id": 883
+    },
+    {
+      "index": 832,
+      "native_source_id": 884
+    },
+    {
+      "index": 833,
+      "native_source_id": 885
+    },
+    {
+      "index": 834,
+      "native_source_id": 886
+    },
+    {
+      "index": 835,
+      "native_source_id": 887
+    },
+    {
+      "index": 836,
+      "native_source_id": 888
+    },
+    {
+      "index": 837,
+      "native_source_id": 889
+    },
+    {
+      "index": 838,
+      "native_source_id": 890
+    },
+    {
+      "index": 839,
+      "native_source_id": 891
+    },
+    {
+      "index": 840,
+      "native_source_id": 892
+    },
+    {
+      "index": 841,
+      "native_source_id": 893
+    },
+    {
+      "index": 842,
+      "native_source_id": 894
+    },
+    {
+      "index": 843,
+      "native_source_id": 895
+    },
+    {
+      "index": 844,
+      "native_source_id": 896
+    },
+    {
+      "index": 845,
+      "native_source_id": 897
+    },
+    {
+      "index": 846,
+      "native_source_id": 898
+    },
+    {
+      "index": 847,
+      "native_source_id": 899
+    },
+    {
+      "index": 848,
+      "native_source_id": 900
+    },
+    {
+      "index": 849,
+      "native_source_id": 901
+    },
+    {
+      "index": 850,
+      "native_source_id": 935
+    },
+    {
+      "index": 851,
+      "native_source_id": 937
+    },
+    {
+      "index": 852,
+      "native_source_id": 938
+    },
+    {
+      "index": 853,
+      "native_source_id": 939
+    },
+    {
+      "index": 854,
+      "native_source_id": 1212
+    },
+    {
+      "index": 855,
+      "native_source_id": 1213
+    },
+    {
+      "index": 856,
+      "native_source_id": 1214
+    },
+    {
+      "index": 857,
+      "native_source_id": null
+    },
+    {
+      "index": 858,
+      "native_source_id": null
+    },
+    {
+      "index": 859,
+      "native_source_id": null
+    },
+    {
+      "index": 860,
+      "native_source_id": null
+    },
+    {
+      "index": 861,
+      "native_source_id": null
+    },
+    {
+      "index": 862,
+      "native_source_id": null
+    },
+    {
+      "index": 863,
+      "native_source_id": null
+    },
+    {
+      "index": 864,
+      "native_source_id": null
+    },
+    {
+      "index": 865,
+      "native_source_id": null
+    },
+    {
+      "index": 866,
+      "native_source_id": null
+    },
+    {
+      "index": 867,
+      "native_source_id": null
+    },
+    {
+      "index": 868,
+      "native_source_id": null
+    },
+    {
+      "index": 869,
+      "native_source_id": null
+    },
+    {
+      "index": 870,
+      "native_source_id": null
+    },
+    {
+      "index": 871,
+      "native_source_id": null
+    },
+    {
+      "index": 872,
+      "native_source_id": null
+    },
+    {
+      "index": 873,
+      "native_source_id": null
+    },
+    {
+      "index": 874,
+      "native_source_id": null
+    }
+  ],
+  "neutral_transverse_self_pairs": 0,
+  "neutral_crossing_pairs": [],
+  "rig_created": false,
+  "art_accepted": false,
+  "limitations": [
+    "Declared wrist plane is based on measured narrow source section; bone center still needs locating",
+    "Transverse self test excludes coplanar/tangential and adjacent folds; inspect actual views",
+    "No wrist/core fitting, thumb opposition or skin deformation acceptance yet"
+  ],
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-source-preparation/right_hand_exterior.blend",
+    "sha256": "cc384612d5a5881530681f68dea96db49f7b8535f6c3ae3f6cfad7c2184e0624"
+  }
+}

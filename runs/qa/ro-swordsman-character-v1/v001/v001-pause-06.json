@@ -1,0 +1,161 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T06:14:46Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "paused_waiting_for_user (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z"
+ ],
+ "active_seconds_total": 2704,
+ "trial_seconds_cap": 21600,
+ "current_best_build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "joint_range": "73 of 73 numeric gates pass",
+  "closed_loop": "runtime 4.64 um, readback 4.21 um"
+ },
+ "gray_review": {
+  "review": "runs/qa/ro-swordsman-character-v1/v001/a34-hands/gray-review/review.md",
+  "disposition": "runs/qa/ro-swordsman-character-v1/v001/a34-hands/gray-review/disposition.json",
+  "summary": "candidate hands preferred and fully posable; body identical to baseline with pauldrons hanging under raised arms, skirt split at hip flexion, rubbery chest armour, elbow and knee collapse at extremes; hands look inflated close up"
+ },
+ "helper_bones": {
+  "tooling": "helper-bone rules in both evaluators, swing-only option, joint-range and export support, GLB channel stripping; tests 13 OK",
+  "first_attempt": {
+   "rules": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/b04-helpers/corrective-rules.json",
+    "sha256": "41651f8d64f910c4c2b6be3fe8df7f1aa81d84fe3f0d1f79678be15292e2a934"
+   },
+   "result": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/b04-helpers/joint-range/joint-range-result.json",
+    "sha256": "13481725295e56539322985588025afef07503bf21d4e7a800e53764e59878cc"
+   },
+   "failed_of_73": 24,
+   "visual": "runs/qa/ro-swordsman-character-v1/v001/b04-helpers/compare-helpers.png",
+   "observation": "hip abduction clearly better; pauldrons expose their hollow underside when turned; coat panels tear away from the belt at hip flexion"
+  },
+  "share_trials_swing_only": {
+   "h1": {
+    "rules": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/helper-trials/h1-rules.json",
+     "sha256": "af0e6475d98a1182055c2e79253e127df25d5971c84be8583d66b2ecfdf48487"
+    },
+    "result": {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/helper-trials/h1/joint-range-result.json",
+     "sha256": "480f406cb0c15de5fc7cef7d34f10058ab29789e9caa7eed217a4317f17ee8db"
+    },
+    "failed_of_14": 10
+   },
+   "h2": {
+    "rules": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/helper-trials/h2-rules.json",
+     "sha256": "5e03c00b96fee716b7e932a1938049fc3e0747d1f7a39a27fd1995bebd8ad830"
+    },
+    "result": {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/helper-trials/h2/joint-range-result.json",
+     "sha256": "7187c8299e6cc87979531a580f91738be5005821467ac195c0a3a621cac22199"
+    },
+    "failed_of_14": 10
+   },
+   "h3": {
+    "rules": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/helper-trials/h3-rules.json",
+     "sha256": "3576e4c25e1b1ed7e73d25dfa6d6cf78f425ca4fd9c23871c9ec4c1ee3a80b56"
+    },
+    "result": {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/helper-trials/h3/joint-range-result.json",
+     "sha256": "561cefc46f97ca1a71ef7a9fbe9701fcf98131f0c25c336bc588802cda3418f3"
+    },
+    "failed_of_14": 10
+   }
+  },
+  "finding": "Any pauldron movement, even at 0.2 share, raises shoulder-motion intersection pairs about 1.8 times over the baseline ceiling."
+ },
+ "root_cause": {
+  "evidence": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/rest-overlaps.json",
+   "sha256": "c951226d9d26884dec3146e3ff1130eac4658079fd245d0d5f713948e10392eb"
+  },
+  "rest_overlaps": [
+   {
+    "meshes": [
+     "SM_RO_core",
+     "SM_RO_cuirass"
+    ],
+    "triangle_pairs": 1645,
+    "depth_mm_p50": 11.99,
+    "depth_mm_max": 49.25
+   },
+   {
+    "meshes": [
+     "SM_RO_cuirass",
+     "SM_RO_pauldron.L"
+    ],
+    "triangle_pairs": 525,
+    "depth_mm_p50": 4.24,
+    "depth_mm_max": 9.66
+   },
+   {
+    "meshes": [
+     "SM_RO_core",
+     "SM_RO_pauldron.R"
+    ],
+    "triangle_pairs": 517,
+    "depth_mm_p50": 18.45,
+    "depth_mm_max": 64.56
+   },
+   {
+    "meshes": [
+     "SM_RO_cuirass",
+     "SM_RO_pauldron.R"
+    ],
+    "triangle_pairs": 512,
+    "depth_mm_p50": 3.83,
+    "depth_mm_max": 13.15
+   },
+   {
+    "meshes": [
+     "SM_RO_core",
+     "SM_RO_pauldron.L"
+    ],
+    "triangle_pairs": 503,
+    "depth_mm_p50": 18.56,
+    "depth_mm_max": 63.68
+   },
+   {
+    "meshes": [
+     "SM_RO_bracer.L",
+     "SM_RO_core"
+    ],
+    "triangle_pairs": 310,
+    "depth_mm_p50": 10.64,
+    "depth_mm_max": 37.44
+   },
+   {
+    "meshes": [
+     "SM_RO_coat",
+     "SM_RO_core"
+    ],
+    "triangle_pairs": 296,
+    "depth_mm_p50": 12.51,
+    "depth_mm_max": 32.89
+   }
+  ],
+  "explanation": "The core mesh still carries its own generated shoulder and chest armour. At rest the separate pauldrons sit 18 mm deep (up to 64 mm) inside it and the cuirass 12 mm (up to 49 mm). Moving an armour piece reshuffles hundreds of these embedded contacts, which the body ratchet counts as new intersections, and the core armour bends with the spine weights, which is the rubber chest the reviewer saw."
+ },
+ "open_decision": "how to handle the armour embedded in the core (see the turn report)",
+ "new_paid_submissions": 0
+}

@@ -1,0 +1,5229 @@
+{
+  "observed_utc": "2026-10-03T11:11:08.520101+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.blend",
+    "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "local_contract": {
+    "path": "runs/qa/ro-swordsman-combo-r007/hand-gate-contract-v2.json",
+    "sha256": "011fa5cfbdb7ea98272a58f970337c62eff9b35e5d11885e884af01d2d013f12"
+  },
+  "frames": 61,
+  "half_frame_diagnostics": 60,
+  "samples": [
+    {
+      "frame": 1.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.007185039576143026,
+      "sword_transverse_pairs": 94,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658438593149185,
+          "mean_gap_m": 0.01696665878407657,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013115406036376953,
+          "mean_gap_m": 0.029673026282001625,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015560931526124477,
+          "mean_gap_m": 0.039366213036928235,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016828885301947594,
+          "mean_gap_m": 0.0328329699113965,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0009257431956939399,
+          "mean_gap_m": 0.015597274795355689,
+          "within_2mm": 2
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "927bcbf376c10c41676ad12276a221e4202c2ca44b1e44c28ebad8413d0cb798"
+    },
+    {
+      "frame": 1.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00734470970928669,
+      "sword_transverse_pairs": 94,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658507511019707,
+          "mean_gap_m": 0.016907810497408114,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013125019147992134,
+          "mean_gap_m": 0.029596102141746967,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01557073462754488,
+          "mean_gap_m": 0.039253475167220685,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016826540231704712,
+          "mean_gap_m": 0.032738037681316626,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00112588529009372,
+          "mean_gap_m": 0.015566717208087168,
+          "within_2mm": 2
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "10f7644a98fb0fd5900d58610814dc89865dc4a611637c82e4c33bf267ee2206"
+    },
+    {
+      "frame": 2.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0070908088237047195,
+      "sword_transverse_pairs": 88,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658478174358606,
+          "mean_gap_m": 0.016794157152374586,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01314370147883892,
+          "mean_gap_m": 0.02944692520594055,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015589709393680096,
+          "mean_gap_m": 0.03903350627004373,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016822420060634613,
+          "mean_gap_m": 0.03255417291074991,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0014808760024607182,
+          "mean_gap_m": 0.015497972561408661,
+          "within_2mm": 2
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "843dcbe37f7bb85fafde882cdbb70febe9e612e3bb40c5e1ddf89df3316ab2c2"
+    },
+    {
+      "frame": 2.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.007185215130448341,
+      "sword_transverse_pairs": 84,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00665851216763258,
+          "mean_gap_m": 0.016700108520065746,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013159062713384628,
+          "mean_gap_m": 0.029323100366375664,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015605143271386623,
+          "mean_gap_m": 0.038849369531906236,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016818981617689133,
+          "mean_gap_m": 0.03240157548776444,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.001617167959921062,
+          "mean_gap_m": 0.015444120034334008,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "7ea082d56b1927a92c44de5a0bb8f4d92f0d9178f8cee4024fcc277cab14446e"
+    },
+    {
+      "frame": 3.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0070039210841059685,
+      "sword_transverse_pairs": 85,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658567581325769,
+          "mean_gap_m": 0.01662072803204258,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01317211426794529,
+          "mean_gap_m": 0.029217946935783733,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015618419274687767,
+          "mean_gap_m": 0.03869216371236778,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016816454008221626,
+          "mean_gap_m": 0.0322723898160107,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0015907126944512129,
+          "mean_gap_m": 0.015400241120476965,
+          "within_2mm": 2
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "4ef8dc2cf0a843316c6f6f910123a237926f2af7e18b5d19cfda01cde87f6a52"
+    },
+    {
+      "frame": 3.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0071756960824131966,
+      "sword_transverse_pairs": 83,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658583413809538,
+          "mean_gap_m": 0.01653577935261031,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013186016120016575,
+          "mean_gap_m": 0.02910502054587458,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015632441267371178,
+          "mean_gap_m": 0.03852252884790665,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016813699156045914,
+          "mean_gap_m": 0.03213351619813372,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.001307882135733962,
+          "mean_gap_m": 0.0153509436834914,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "34404267e754fbd3988cf2cf5ed9aed07471cbc295d0a42ce618fcd02c13abf1"
+    },
+    {
+      "frame": 4.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006872967351227999,
+      "sword_transverse_pairs": 81,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658666767179966,
+          "mean_gap_m": 0.016446696765099963,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013200405985116959,
+          "mean_gap_m": 0.028986181358270573,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01564711704850197,
+          "mean_gap_m": 0.038342954636347,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016810841858386993,
+          "mean_gap_m": 0.031987463781500566,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0010165516287088394,
+          "mean_gap_m": 0.015291831320306907,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "5fdeba39e7bd04cd8427ba84972912c512f05087f3a1a3f20a0efec4f4215ebf"
+    },
+    {
+      "frame": 4.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006579772103577852,
+      "sword_transverse_pairs": 82,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00665876641869545,
+          "mean_gap_m": 0.016359004440406957,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01321481168270111,
+          "mean_gap_m": 0.028868682005188682,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015661627054214478,
+          "mean_gap_m": 0.038164301162085884,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01680830866098404,
+          "mean_gap_m": 0.03184311804087723,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0007346657803282142,
+          "mean_gap_m": 0.015236265631823766,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "97d0cb8ab35ae2d9791be6d59f587be21cf1f4ccb730dc2dddedb8685cf4540d"
+    },
+    {
+      "frame": 5.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0062947035767138,
+      "sword_transverse_pairs": 82,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0066588083282113075,
+          "mean_gap_m": 0.01627207746108373,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013228798285126686,
+          "mean_gap_m": 0.028751816205454594,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015675809234380722,
+          "mean_gap_m": 0.03798582277646879,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01680579036474228,
+          "mean_gap_m": 0.031699627966565246,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00046105001820251346,
+          "mean_gap_m": 0.01518403105890482,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "115f8e9ee77fcd33be2783116b6b1eb9ec5e29b1e0ae9fe9ba2a0ea8f871dd26"
+    },
+    {
+      "frame": 5.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006012772209942341,
+      "sword_transverse_pairs": 84,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006658950820565224,
+          "mean_gap_m": 0.016184796144564948,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013242964632809162,
+          "mean_gap_m": 0.028633825791378815,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01569022610783577,
+          "mean_gap_m": 0.03780482663977437,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016803544014692307,
+          "mean_gap_m": 0.03155490597162176,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00019052549032494426,
+          "mean_gap_m": 0.015128426382068062,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "7ae2a4539a08c123aad2d415e5ec27846ca328136f5e07b83652967a86063dc7"
+    },
+    {
+      "frame": 6.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006105814594775438,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006659090518951416,
+          "mean_gap_m": 0.016097078348199526,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013257263228297234,
+          "mean_gap_m": 0.02851489730969523,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015704626217484474,
+          "mean_gap_m": 0.037621259053305885,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016801467165350914,
+          "mean_gap_m": 0.03140880298965117,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 7.615883077960461e-05,
+          "mean_gap_m": 0.015077338865214389,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "972303a14fa0194bbc10b141904a6b3eb23464e5b13b3c18198466bf0d2ba1ba"
+    },
+    {
+      "frame": 6.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0061142039485275745,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0066591366194188595,
+          "mean_gap_m": 0.016009282103429237,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013271521776914597,
+          "mean_gap_m": 0.028395421041006393,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015718985348939896,
+          "mean_gap_m": 0.037436118667445534,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01679930090904236,
+          "mean_gap_m": 0.03126200995243648,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003376623790245503,
+          "mean_gap_m": 0.015035417668749924,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "532d2e44924fad220b27ba0ed9c850022b6c27850f84a6371f33082abea9e6be"
+    },
+    {
+      "frame": 7.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005874043330550194,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006638292223215103,
+          "mean_gap_m": 0.015921490251397094,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013285670429468155,
+          "mean_gap_m": 0.02827546260122097,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01573343761265278,
+          "mean_gap_m": 0.03724927155346405,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016797402873635292,
+          "mean_gap_m": 0.031114697401576182,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004958280478604138,
+          "mean_gap_m": 0.014995539242927744,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "beba7d1fda8318dbb66478feb4da3b0d703ffd8fc4f28fc7631e8fc780aa4f7a"
+    },
+    {
+      "frame": 7.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0056396182626485825,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006599949207156897,
+          "mean_gap_m": 0.015833433407048386,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013299833983182907,
+          "mean_gap_m": 0.02815473641297131,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0157478004693985,
+          "mean_gap_m": 0.037060496192879794,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016795441508293152,
+          "mean_gap_m": 0.03096651713199475,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002494729997124523,
+          "mean_gap_m": 0.014957140947377344,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "da98b8a7166ba35c7d7eb256d01a7b5ca86de6153dc686cc7a6ca7c55202cc5a"
+    },
+    {
+      "frame": 8.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005435334052890539,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006561878137290478,
+          "mean_gap_m": 0.015745307489608725,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013314041309058666,
+          "mean_gap_m": 0.028033460575071247,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015762116760015488,
+          "mean_gap_m": 0.036869694864967974,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01679367944598198,
+          "mean_gap_m": 0.030817539869424176,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 8.021697794902138e-06,
+          "mean_gap_m": 0.014920730000118999,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "fa999edd7fdf91546e414d82a02909001f133bb9d77e100a4204b98ef74d3a03"
+    },
+    {
+      "frame": 8.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005550357513129711,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006524219177663326,
+          "mean_gap_m": 0.015657255876188478,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013328260742127895,
+          "mean_gap_m": 0.027911641211672264,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015776505693793297,
+          "mean_gap_m": 0.036676958203315735,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016792144626379013,
+          "mean_gap_m": 0.03066796173944193,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00022904157231096178,
+          "mean_gap_m": 0.014894522640571705,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "3968cd471bfbcce05759ef9d339a7c9cbeba3d4ad654ed2e0c48b8ee3243f9f1"
+    },
+    {
+      "frame": 9.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0057184710167348385,
+      "sword_transverse_pairs": 78,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006486737634986639,
+          "mean_gap_m": 0.015569073520600796,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013342540711164474,
+          "mean_gap_m": 0.027789236328592808,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015790969133377075,
+          "mean_gap_m": 0.03648249814059676,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016790688037872314,
+          "mean_gap_m": 0.030517518136869457,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00046147077227942646,
+          "mean_gap_m": 0.014871429458489056,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "0fb9db7e434e7816bf566a268f45d66a8d8b88759dd6172cad1357be93429db9"
+    },
+    {
+      "frame": 9.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00588217144832015,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0064496733248233795,
+          "mean_gap_m": 0.015480842891459663,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013356644660234451,
+          "mean_gap_m": 0.027666169670269344,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01580544374883175,
+          "mean_gap_m": 0.0362860132008791,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0167892687022686,
+          "mean_gap_m": 0.03036617219228955,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0005125919124111533,
+          "mean_gap_m": 0.0148512481213806,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "590e6ff6c54afbc98b5c6f4d433cf19a02952e564a730709b7d7d9079a366edc"
+    },
+    {
+      "frame": 10.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006041208282113075,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006412748713046312,
+          "mean_gap_m": 0.015392498734096685,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013370835222303867,
+          "mean_gap_m": 0.02754244278890617,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01581982895731926,
+          "mean_gap_m": 0.0360876854236533,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678801327943802,
+          "mean_gap_m": 0.0302141674739473,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004273544473107904,
+          "mean_gap_m": 0.014832607233849424,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "4babee461db02da4207fc3ec50aee9cbff47283ab7f2b335e0e86a2bf795e6dc"
+    },
+    {
+      "frame": 10.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.006076236255466938,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006376244127750397,
+          "mean_gap_m": 0.01530406242236495,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013385104015469551,
+          "mean_gap_m": 0.027418218778841423,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015834201127290726,
+          "mean_gap_m": 0.03588746551696847,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016786878928542137,
+          "mean_gap_m": 0.030061305993620085,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00030674185836687684,
+          "mean_gap_m": 0.014814860020932328,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "4333451be2d9d6732597a5982126902c0831356b6a70671866bd909cda06a177"
+    },
+    {
+      "frame": 11.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005872786045074463,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0063398657366633415,
+          "mean_gap_m": 0.015215484006330372,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013399198651313782,
+          "mean_gap_m": 0.02729331651194529,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015848562121391296,
+          "mean_gap_m": 0.03568537624143973,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678580418229103,
+          "mean_gap_m": 0.029907585505176994,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00019104930106550455,
+          "mean_gap_m": 0.014797999032587675,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "c85b2aab8b0320aea96158d1a439166a60f3011ceab824cc2129fbebb97bba7d"
+    },
+    {
+      "frame": 11.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005697846412658691,
+      "sword_transverse_pairs": 75,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006304050795733929,
+          "mean_gap_m": 0.015126994748910268,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013413575477898121,
+          "mean_gap_m": 0.027167979148075436,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015863055363297462,
+          "mean_gap_m": 0.03548162425981789,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678500510752201,
+          "mean_gap_m": 0.02975314126952606,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 2.74690319201909e-05,
+          "mean_gap_m": 0.014781494259363238,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "b031938d9fe719951c29e16fd4952d14376b4c1b0cf1e3f3386567e53589f943"
+    },
+    {
+      "frame": 12.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005534321069717407,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006268506404012442,
+          "mean_gap_m": 0.015038283464188376,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013427728787064552,
+          "mean_gap_m": 0.027041978484979183,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015877481549978256,
+          "mean_gap_m": 0.03527599114288644,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678415574133396,
+          "mean_gap_m": 0.02959785862442325,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 2.5322786314063706e-05,
+          "mean_gap_m": 0.014774485808966684,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "d2075f5da1b08bfe27ec2fa24e4d683e9e5ed9168a00a1961f4383342c418956"
+    },
+    {
+      "frame": 12.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005374341271817684,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006233069580048323,
+          "mean_gap_m": 0.014949485581989089,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013441979885101318,
+          "mean_gap_m": 0.02691525091050249,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015891846269369125,
+          "mean_gap_m": 0.035068611273678336,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016783468425273895,
+          "mean_gap_m": 0.029441711054567027,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00012578412133734673,
+          "mean_gap_m": 0.014779012722202525,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "c900c8a07c20ca1c7ba50f42ef63d9713760bb72406c2ee36f826b1c9e218b98"
+    },
+    {
+      "frame": 13.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0053304280154407024,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006198173388838768,
+          "mean_gap_m": 0.01486064374136428,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013456211425364017,
+          "mean_gap_m": 0.026787989321305897,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01590632274746895,
+          "mean_gap_m": 0.034859702309093826,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016782918944954872,
+          "mean_gap_m": 0.029284707763615775,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002213350380770862,
+          "mean_gap_m": 0.014784911835535982,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "07614249ee43ce23adb3b627c99b60e9d267965ef2d9792fd56260ba5bda2403"
+    },
+    {
+      "frame": 13.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005378424655646086,
+      "sword_transverse_pairs": 76,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006163632031530142,
+          "mean_gap_m": 0.014771761310597261,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013470389880239964,
+          "mean_gap_m": 0.02665999401925188,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015920663252472878,
+          "mean_gap_m": 0.034649115828115765,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016782410442829132,
+          "mean_gap_m": 0.02912682607112562,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003115706786047667,
+          "mean_gap_m": 0.014792263450174316,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "c4494b2edcbd35a663c5975c96b455994f2f3f6e8913351a2ae0d2e317525fbb"
+    },
+    {
+      "frame": 14.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005423140712082386,
+      "sword_transverse_pairs": 72,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0061293356120586395,
+          "mean_gap_m": 0.014682795495415728,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013484611175954342,
+          "mean_gap_m": 0.02653137981101419,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015935087576508522,
+          "mean_gap_m": 0.0344370206499972,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016782056540250778,
+          "mean_gap_m": 0.028968166121665168,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00039707202813588083,
+          "mean_gap_m": 0.014800436535518168,
+          "within_2mm": 9
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "442d156950176b4fd8201bcddb49527bc06af2a3a860e64783b6bf1a67855ebf"
+    },
+    {
+      "frame": 14.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005464137531816959,
+      "sword_transverse_pairs": 72,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0060954163782298565,
+          "mean_gap_m": 0.01459376468944053,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013498922809958458,
+          "mean_gap_m": 0.02640207512586406,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015949539840221405,
+          "mean_gap_m": 0.03422357469070249,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016781890764832497,
+          "mean_gap_m": 0.02880878061713541,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003971472615376115,
+          "mean_gap_m": 0.014809503549865136,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "3286ebe05c0853299ad1dc1027c27cc2c1d2d363c65d4fae663285162031702b"
+    },
+    {
+      "frame": 15.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005422173533588648,
+      "sword_transverse_pairs": 65,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006061804015189409,
+          "mean_gap_m": 0.014504659781232476,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013512943871319294,
+          "mean_gap_m": 0.026271895025715683,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01596399024128914,
+          "mean_gap_m": 0.034008681774139404,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016781646758317947,
+          "mean_gap_m": 0.02864846576224355,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003003394522238523,
+          "mean_gap_m": 0.014819707816867676,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "97bcfb560f99633b2f6157000ced1560400a1d42fe135f82356ca5f2f3a2627b"
+    },
+    {
+      "frame": 15.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005389658734202385,
+      "sword_transverse_pairs": 65,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.006028562784194946,
+          "mean_gap_m": 0.014415461150929332,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01352719310671091,
+          "mean_gap_m": 0.026141129067224083,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015978435054421425,
+          "mean_gap_m": 0.03379253443421387,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016781629994511604,
+          "mean_gap_m": 0.028487386346301612,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00020768624381162226,
+          "mean_gap_m": 0.014830381307142993,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "6786ec5f70525f88e38e4977a17ea4cb59779b727b53912ea265c33716749b26"
+    },
+    {
+      "frame": 16.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005430430639535189,
+      "sword_transverse_pairs": 65,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005995844025164843,
+          "mean_gap_m": 0.0143263497389853,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013541405089199543,
+          "mean_gap_m": 0.026009665773899265,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015992863103747368,
+          "mean_gap_m": 0.033575277184931245,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678176037967205,
+          "mean_gap_m": 0.028325645800899055,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00012029627396259457,
+          "mean_gap_m": 0.014842240648350626,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "a264931d1526c138c16ca4ce6b63c1133082b561e2eb1446df9a8284143daaf4"
+    },
+    {
+      "frame": 16.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005349277518689632,
+      "sword_transverse_pairs": 63,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0059632547199726105,
+          "mean_gap_m": 0.014237023936584593,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013555552810430527,
+          "mean_gap_m": 0.025877433123462128,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016007300466299057,
+          "mean_gap_m": 0.03335667160771242,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678185909986496,
+          "mean_gap_m": 0.028163011295392233,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 3.813171133515425e-05,
+          "mean_gap_m": 0.014855626694918977,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 0,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "cb3a999c88c1f8fa3901fd78a4c7d1fb6f99c1fca9528cb8da16ea1eb73ffea6"
+    },
+    {
+      "frame": 17.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005278878845274448,
+      "sword_transverse_pairs": 61,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005931246560066938,
+          "mean_gap_m": 0.014147748534257213,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013569861650466919,
+          "mean_gap_m": 0.02574462037194859,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0160218458622694,
+          "mean_gap_m": 0.03313726377559871,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016782240942120552,
+          "mean_gap_m": 0.02799978682442623,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 3.909519728040323e-05,
+          "mean_gap_m": 0.014870879910665314,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 4,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "37ef98ef860b4859f95cc59d34d640ef099dfdc1dedea66de2f37b9eb998b04e"
+    },
+    {
+      "frame": 17.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00531417690217495,
+      "sword_transverse_pairs": 59,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005899470765143633,
+          "mean_gap_m": 0.014058383740484714,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013584122061729431,
+          "mean_gap_m": 0.0256110533338153,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016036387532949448,
+          "mean_gap_m": 0.03291663214019159,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016782570630311966,
+          "mean_gap_m": 0.027835738735602182,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 1.1750470548577141e-05,
+          "mean_gap_m": 0.01488814975074867,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 6,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "e3c33d13c1ebbf12a630b03548aa7dc264ee05c2bffecfb78b1f08bb5c9290ae"
+    },
+    {
+      "frame": 18.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005259843543171883,
+      "sword_transverse_pairs": 59,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005865974817425013,
+          "mean_gap_m": 0.013968968562160929,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013598361983895302,
+          "mean_gap_m": 0.025476823589115433,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016050711274147034,
+          "mean_gap_m": 0.03269506127732556,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678302325308323,
+          "mean_gap_m": 0.02767097599366132,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0001446884125471115,
+          "mean_gap_m": 0.014910035416337283,
+          "within_2mm": 10
+        }
+      },
+      "glove_transverse_self_pairs": 8,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "613b18d02643757e5c36297aa73768e2386bd6632b2b40171650513dfb5e54a0"
+    },
+    {
+      "frame": 18.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005181493237614632,
+      "sword_transverse_pairs": 59,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005830218084156513,
+          "mean_gap_m": 0.013879503402858973,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013612557202577591,
+          "mean_gap_m": 0.02534185482584166,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016065189614892006,
+          "mean_gap_m": 0.03247267898263001,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016783656552433968,
+          "mean_gap_m": 0.027505673522896627,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00024012394715100527,
+          "mean_gap_m": 0.014931688540080493,
+          "within_2mm": 9
+        }
+      },
+      "glove_transverse_self_pairs": 8,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "7fe08f31fbb132c6b5da0eca96626136018d042c118b6cfe5816a4c40df834d1"
+    },
+    {
+      "frame": 19.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005103827454149723,
+      "sword_transverse_pairs": 57,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005794715601950884,
+          "mean_gap_m": 0.013789947268863519,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013626746833324432,
+          "mean_gap_m": 0.02520632261241024,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01607971452176571,
+          "mean_gap_m": 0.03224937018097901,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678428426384926,
+          "mean_gap_m": 0.027339603368412044,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00017900942475534976,
+          "mean_gap_m": 0.014953907136697564,
+          "within_2mm": 9
+        }
+      },
+      "glove_transverse_self_pairs": 16,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "26c4003fd23661316a9f754c2b96c555cb8ebf40d4d63aabf64289f117a8bac7"
+    },
+    {
+      "frame": 19.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.005027500446885824,
+      "sword_transverse_pairs": 57,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005759670399129391,
+          "mean_gap_m": 0.013700307331358392,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01364098209887743,
+          "mean_gap_m": 0.02507004395804622,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016094127669930458,
+          "mean_gap_m": 0.032025223688744914,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678507961332798,
+          "mean_gap_m": 0.02717289131353883,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00011248500959482044,
+          "mean_gap_m": 0.014976763202328046,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 24,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "d8fbd341b2721c29eeb02ae4d2a63fad47de7b7249f4c3e258d52aaea730c66c"
+    },
+    {
+      "frame": 20.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004951853305101395,
+      "sword_transverse_pairs": 57,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005724974907934666,
+          "mean_gap_m": 0.013610582239925862,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013655206188559532,
+          "mean_gap_m": 0.024933122295999165,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016108689829707146,
+          "mean_gap_m": 0.031800186670408015,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678600162267685,
+          "mean_gap_m": 0.02700554031659575,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 5.10285135533195e-05,
+          "mean_gap_m": 0.015000206193521822,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 24,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "d7dddad76d9fa2f8a36148d37072242b185b183ef390e849e3f9c4931cc6cea2"
+    },
+    {
+      "frame": 20.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004876854829490185,
+      "sword_transverse_pairs": 56,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0056907101534307,
+          "mean_gap_m": 0.013520879748587808,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013669461943209171,
+          "mean_gap_m": 0.024795764182327373,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016123173758387566,
+          "mean_gap_m": 0.031574456566354124,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016786964610219002,
+          "mean_gap_m": 0.026837537229499397,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 5.396195774665102e-06,
+          "mean_gap_m": 0.01502424651961418,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 35,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "5abad9ca65e2900ef1acc0d569ed7bd112273dabeb71a5c75b3cf1aa524031b2"
+    },
+    {
+      "frame": 21.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0048023397102952,
+      "sword_transverse_pairs": 55,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005656765773892403,
+          "mean_gap_m": 0.013431066181510687,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013683650642633438,
+          "mean_gap_m": 0.02465759689044772,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016137540340423584,
+          "mean_gap_m": 0.031347857651914036,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01678810641169548,
+          "mean_gap_m": 0.026668787440832925,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 4.015952436020598e-05,
+          "mean_gap_m": 0.015051121088685317,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 44,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "e79237f99a87ba79545e8138ad39912f491265e1f6efd92f164a1affa163c559"
+    },
+    {
+      "frame": 21.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0047148484736680984,
+      "sword_transverse_pairs": 55,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0056232307106256485,
+          "mean_gap_m": 0.013341178310414155,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013697931542992592,
+          "mean_gap_m": 0.024519124378760655,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016152122989296913,
+          "mean_gap_m": 0.031120808976815968,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016789177432656288,
+          "mean_gap_m": 0.026499536929323393,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00010304331954102963,
+          "mean_gap_m": 0.015080712060066784,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 45,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "85a06da0a48a16233f521003538791eae3a9a7968b22d7786e25065541525d17"
+    },
+    {
+      "frame": 22.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004624811001121998,
+      "sword_transverse_pairs": 56,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00559026887640357,
+          "mean_gap_m": 0.013251345961665113,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013712204061448574,
+          "mean_gap_m": 0.024380118473235405,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016166597604751587,
+          "mean_gap_m": 0.030892993800523804,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01679048500955105,
+          "mean_gap_m": 0.026329699684591854,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00014409319555852562,
+          "mean_gap_m": 0.015110520049617023,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 53,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "86b262ee8073191fd5468cbc5b4745ef226e42460ca322cfda453ac8ec138283"
+    },
+    {
+      "frame": 22.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0045382860116660595,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005557577591389418,
+          "mean_gap_m": 0.013161369149262707,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013726381585001945,
+          "mean_gap_m": 0.024240542908735348,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016181036829948425,
+          "mean_gap_m": 0.03066462173876239,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01679186150431633,
+          "mean_gap_m": 0.02615935092463213,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 9.404852607985958e-05,
+          "mean_gap_m": 0.015140498049597093,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 54,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "c7be40d62cc5512ede401c7407ac8b55b75565c163cfebbde6bb497703bbe7ba"
+    },
+    {
+      "frame": 23.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004455172922462225,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005525283049792051,
+          "mean_gap_m": 0.013071409923334916,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013740649446845055,
+          "mean_gap_m": 0.024100554824778526,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016195544973015785,
+          "mean_gap_m": 0.030435824721324736,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016793306916952133,
+          "mean_gap_m": 0.025988438933649483,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 2.3827646145946346e-05,
+          "mean_gap_m": 0.01517058177365403,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 61,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "d2b3a83acdc0e07f557e83c617d996218e53ab15e5e5311272da678fc6af2cb5"
+    },
+    {
+      "frame": 23.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004375605843961239,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005493513774126768,
+          "mean_gap_m": 0.012981390828887622,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01375481765717268,
+          "mean_gap_m": 0.02396013582068862,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016210056841373444,
+          "mean_gap_m": 0.030206513250382934,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016794802621006966,
+          "mean_gap_m": 0.025816914461114827,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 4.2508720071054995e-05,
+          "mean_gap_m": 0.01520248910269907,
+          "within_2mm": 8
+        }
+      },
+      "glove_transverse_self_pairs": 72,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "a4d3d26380fd06244442a8bff91da01b915d9bd40235dddb0e751329a006bbee"
+    },
+    {
+      "frame": 24.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004299510736018419,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005462164990603924,
+          "mean_gap_m": 0.012891335381815831,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013769090175628662,
+          "mean_gap_m": 0.023819190054906136,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01622452586889267,
+          "mean_gap_m": 0.029976676876952008,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016796337440609932,
+          "mean_gap_m": 0.025644958074040273,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00010488232510397211,
+          "mean_gap_m": 0.015235267165230148,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 87,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "e20e7610921fb29f5e746707fa735dc8c9f00c7c4436dd453c9047bfcb4ee422"
+    },
+    {
+      "frame": 24.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004226969555020332,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005431397818028927,
+          "mean_gap_m": 0.012801325305675466,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013783309608697891,
+          "mean_gap_m": 0.0236777804340377,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016239063814282417,
+          "mean_gap_m": 0.029746496913636605,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016798220574855804,
+          "mean_gap_m": 0.025472561007036883,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0001633989013498649,
+          "mean_gap_m": 0.015268103920485979,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 93,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "2a771b62304ae92eaf708f578a1bfbbe744d8471fe7e09ade9afe1aa8a308d75"
+    },
+    {
+      "frame": 25.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004156472627073526,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005401003174483776,
+          "mean_gap_m": 0.012711129632468026,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013797595165669918,
+          "mean_gap_m": 0.023536028425124558,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016253605484962463,
+          "mean_gap_m": 0.029515962366287302,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016799980774521828,
+          "mean_gap_m": 0.025299565866589546,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002179155417252332,
+          "mean_gap_m": 0.015301016930068188,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 98,
+      "wrist_transverse_self_pairs": 0,
+      "geometry_fingerprint": "714a53c15eb2e233ac70017b3cad197a2a4726d1dd2b17acf7a24142b3fb4c4c"
+    },
+    {
+      "frame": 25.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004085698164999485,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005370999686419964,
+          "mean_gap_m": 0.012620894564315676,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013811671175062656,
+          "mean_gap_m": 0.023393851704895496,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016268139705061913,
+          "mean_gap_m": 0.02928507446152408,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016801871359348297,
+          "mean_gap_m": 0.025126195622279364,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00023815759050194174,
+          "mean_gap_m": 0.015333984828396718,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 108,
+      "wrist_transverse_self_pairs": 1,
+      "geometry_fingerprint": "c5fdcfef700f60649684cd6ad4e86ec7b469fdc744542c6239c1d3c3912d8d43"
+    },
+    {
+      "frame": 26.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.004018568433821201,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005341561511158943,
+          "mean_gap_m": 0.012530649344747265,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013826077803969383,
+          "mean_gap_m": 0.023251497694714504,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016282590106129646,
+          "mean_gap_m": 0.029053870815692877,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016803862527012825,
+          "mean_gap_m": 0.02495243208592429,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00013737738481722772,
+          "mean_gap_m": 0.015367027365654293,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 111,
+      "wrist_transverse_self_pairs": 1,
+      "geometry_fingerprint": "07bcf6df93182293f8db208a475edee8483ef6449515bae0dfcb69d96812f036"
+    },
+    {
+      "frame": 26.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003955354448407888,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005312449764460325,
+          "mean_gap_m": 0.012440103509773811,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013840087689459324,
+          "mean_gap_m": 0.023108498842427223,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016296952962875366,
+          "mean_gap_m": 0.028822395677973584,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016805820167064667,
+          "mean_gap_m": 0.024778159280471942,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 3.3647538657533005e-05,
+          "mean_gap_m": 0.015400231570984706,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 119,
+      "wrist_transverse_self_pairs": 1,
+      "geometry_fingerprint": "5b7e6994696dd1edf030ac18954928d29234d3dded3c1bc2da9af4463206ef3f"
+    },
+    {
+      "frame": 27.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003895625239238143,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005284138489514589,
+          "mean_gap_m": 0.012349864793941378,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013854519464075565,
+          "mean_gap_m": 0.022965510234688267,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01631172187626362,
+          "mean_gap_m": 0.02859088024351655,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016808129847049713,
+          "mean_gap_m": 0.024603709907216186,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 7.311600347748026e-05,
+          "mean_gap_m": 0.015436478501753838,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 122,
+      "wrist_transverse_self_pairs": 2,
+      "geometry_fingerprint": "81dca96a9c1d669b11f1b4813a56274201486e50e00dc81d90f6797c2d192272"
+    },
+    {
+      "frame": 27.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0038400201592594385,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00525610102340579,
+          "mean_gap_m": 0.012259301977852981,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013868753798305988,
+          "mean_gap_m": 0.022822178194694447,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01632619835436344,
+          "mean_gap_m": 0.0283591143514325,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016810307279229164,
+          "mean_gap_m": 0.0244288573260693,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00018298633222002536,
+          "mean_gap_m": 0.01547453184024629,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 121,
+      "wrist_transverse_self_pairs": 5,
+      "geometry_fingerprint": "cf77ca3ef90889fea72bdeeb0170fa479df30cd92d8ed29f5b3f2df2539b721a"
+    },
+    {
+      "frame": 28.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003787993686273694,
+      "sword_transverse_pairs": 54,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005228767171502113,
+          "mean_gap_m": 0.012168748987217743,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013883030042052269,
+          "mean_gap_m": 0.02267859311717929,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01634076237678528,
+          "mean_gap_m": 0.028127253646167312,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01681269146502018,
+          "mean_gap_m": 0.024253625641850865,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00023851930745877326,
+          "mean_gap_m": 0.01551287792918393,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 123,
+      "wrist_transverse_self_pairs": 8,
+      "geometry_fingerprint": "9cc265f3be5c1cd515980f7f16ffd0929fb562fa2840675b1680cd0e431f8141"
+    },
+    {
+      "frame": 28.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003739731851965189,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 6,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005201720632612705,
+          "mean_gap_m": 0.012078108017643292,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01389722153544426,
+          "mean_gap_m": 0.022534708266682697,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01635514758527279,
+          "mean_gap_m": 0.027895188822251994,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016814976930618286,
+          "mean_gap_m": 0.024078071884372654,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00021117778669577092,
+          "mean_gap_m": 0.015551084178527904,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 118,
+      "wrist_transverse_self_pairs": 8,
+      "geometry_fingerprint": "a65652615a3b1b08d72fb65c48049c88dfe7c126f162162e45f6e766a1edfcbf"
+    },
+    {
+      "frame": 29.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003693214850500226,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00517529621720314,
+          "mean_gap_m": 0.01198737754796942,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013911408372223377,
+          "mean_gap_m": 0.022390602438738853,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016369665041565895,
+          "mean_gap_m": 0.027663246569473568,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01681739278137684,
+          "mean_gap_m": 0.023902194300556883,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0001786800567060709,
+          "mean_gap_m": 0.015589683049323934,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 144,
+      "wrist_transverse_self_pairs": 8,
+      "geometry_fingerprint": "768b784040e09878c1c0f586dfc61ecb5a63148a9ace6610e536f83c3ad6ca8f"
+    },
+    {
+      "frame": 29.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0036294071469455957,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005149506032466888,
+          "mean_gap_m": 0.011896785100301106,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013925712555646896,
+          "mean_gap_m": 0.0222465375043226,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016384389251470566,
+          "mean_gap_m": 0.027431551503335556,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01682005636394024,
+          "mean_gap_m": 0.02372641582041979,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00014118783292360604,
+          "mean_gap_m": 0.015628421197309054,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 146,
+      "wrist_transverse_self_pairs": 8,
+      "geometry_fingerprint": "17d210966824dd5b1b9e8e03918223f419accf1121dc37f9e77b4867398f552e"
+    },
+    {
+      "frame": 30.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0035663906019181013,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005124100483953953,
+          "mean_gap_m": 0.011806004246075948,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013939845375716686,
+          "mean_gap_m": 0.0221021119505167,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016398750245571136,
+          "mean_gap_m": 0.027199721827012736,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016822582110762596,
+          "mean_gap_m": 0.023550033295417532,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 9.856728138402104e-05,
+          "mean_gap_m": 0.015667360783953446,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 157,
+      "wrist_transverse_self_pairs": 13,
+      "geometry_fingerprint": "3b38320e90f00dd4377083ddb96c3575d3eca3ca57d60eb85d1d8e3c8292e2b4"
+    },
+    {
+      "frame": 30.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0034973600413650274,
+      "sword_transverse_pairs": 52,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005099463276565075,
+          "mean_gap_m": 0.011715404301260909,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01395424921065569,
+          "mean_gap_m": 0.021957753451936173,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016413405537605286,
+          "mean_gap_m": 0.026968136248065204,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016825376078486443,
+          "mean_gap_m": 0.023373662603690344,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 5.083543146611191e-05,
+          "mean_gap_m": 0.015706897038264153,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 165,
+      "wrist_transverse_self_pairs": 13,
+      "geometry_fingerprint": "be7e64bb9d323ed649728f36488976c9bfa821a7a7662f8e2a4d68366eb53238"
+    },
+    {
+      "frame": 31.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0034094725269824266,
+      "sword_transverse_pairs": 53,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005075127352029085,
+          "mean_gap_m": 0.011624491292362411,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013968386687338352,
+          "mean_gap_m": 0.021813119733423897,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016427868977189064,
+          "mean_gap_m": 0.026736599325043398,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01682797260582447,
+          "mean_gap_m": 0.023196947048692143,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 2.1936614302831003e-06,
+          "mean_gap_m": 0.015746949227836586,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 175,
+      "wrist_transverse_self_pairs": 18,
+      "geometry_fingerprint": "c314ecd1151accfab968183801cbe308cdbf1dc4d05c86d88f697773793cf9f3"
+    },
+    {
+      "frame": 31.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00332218362018466,
+      "sword_transverse_pairs": 51,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005051659885793924,
+          "mean_gap_m": 0.011533755700414379,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013982686214148998,
+          "mean_gap_m": 0.021668597801842472,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01644251123070717,
+          "mean_gap_m": 0.026505467413765627,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016830936074256897,
+          "mean_gap_m": 0.023020215606426492,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 1.9856064682244323e-05,
+          "mean_gap_m": 0.015790137691476924,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 184,
+      "wrist_transverse_self_pairs": 19,
+      "geometry_fingerprint": "e2269bd19a0f01f4767758c81a3fdb23708d1c3a31117976f3e9de0a34f56182"
+    },
+    {
+      "frame": 32.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003235687967389822,
+      "sword_transverse_pairs": 51,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005028450861573219,
+          "mean_gap_m": 0.01144277905113995,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013996802270412445,
+          "mean_gap_m": 0.021523821054760254,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016456929966807365,
+          "mean_gap_m": 0.026274501414197248,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016833778470754623,
+          "mean_gap_m": 0.022843023323837447,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00010712494986364618,
+          "mean_gap_m": 0.015836435482655092,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 190,
+      "wrist_transverse_self_pairs": 20,
+      "geometry_fingerprint": "be0101d36cccfde28099f10b06873e9abbc929db2ae399fbf29f67365d6ddcec"
+    },
+    {
+      "frame": 32.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.003149785567075014,
+      "sword_transverse_pairs": 53,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.005006040446460247,
+          "mean_gap_m": 0.011351894463102023,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014011068269610405,
+          "mean_gap_m": 0.021379170120891296,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01647154614329338,
+          "mean_gap_m": 0.026044023291366857,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016836820170283318,
+          "mean_gap_m": 0.02266574092209339,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00019137427443638444,
+          "mean_gap_m": 0.015884232858230395,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 192,
+      "wrist_transverse_self_pairs": 20,
+      "geometry_fingerprint": "1b4673fc22644826abd96c1c2070e1fa150fa74f43eec7748fda65c1db96a032"
+    },
+    {
+      "frame": 33.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0030647343955934048,
+      "sword_transverse_pairs": 47,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004983687307685614,
+          "mean_gap_m": 0.011260853490481774,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014025337062776089,
+          "mean_gap_m": 0.02123454311919032,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016486117616295815,
+          "mean_gap_m": 0.025813916470946337,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016839802265167236,
+          "mean_gap_m": 0.022488327423001036,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00026457745116204023,
+          "mean_gap_m": 0.015933189807886567,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 207,
+      "wrist_transverse_self_pairs": 22,
+      "geometry_fingerprint": "a717b7ebfbe55622a9dae0b53160e2cfce7a641354bebcad4a41867d0d05671a"
+    },
+    {
+      "frame": 33.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0029803896322846413,
+      "sword_transverse_pairs": 47,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004961638245731592,
+          "mean_gap_m": 0.011169787434240182,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014039544388651848,
+          "mean_gap_m": 0.02108986331432155,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016500653699040413,
+          "mean_gap_m": 0.025584341594722212,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016842864453792572,
+          "mean_gap_m": 0.022310712648665205,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003429433854762465,
+          "mean_gap_m": 0.015983398415738957,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 214,
+      "wrist_transverse_self_pairs": 24,
+      "geometry_fingerprint": "de57c662bbd95aab0be2ec3ce2f0497a829ca2e8a08673eb494b8d83de7d408e"
+    },
+    {
+      "frame": 34.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0028967270627617836,
+      "sword_transverse_pairs": 47,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004939751233905554,
+          "mean_gap_m": 0.011078597946713368,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014053819701075554,
+          "mean_gap_m": 0.02094522440298037,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01651521399617195,
+          "mean_gap_m": 0.02535532614806803,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01684599742293358,
+          "mean_gap_m": 0.022132973186671734,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00042670153197832406,
+          "mean_gap_m": 0.0160344330226373,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 216,
+      "wrist_transverse_self_pairs": 29,
+      "geometry_fingerprint": "4f12b4581f45f77737f3b5d2fb9a628a40830152b722043aa1f3edca006b8108"
+    },
+    {
+      "frame": 34.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00281385681591928,
+      "sword_transverse_pairs": 43,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004918189719319344,
+          "mean_gap_m": 0.010987422832598289,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01406802237033844,
+          "mean_gap_m": 0.0208006961214723,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01652972586452961,
+          "mean_gap_m": 0.02512686604225054,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016849273815751076,
+          "mean_gap_m": 0.021955122130320352,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0005031981272622943,
+          "mean_gap_m": 0.01608646634095176,
+          "within_2mm": 7
+        }
+      },
+      "glove_transverse_self_pairs": 219,
+      "wrist_transverse_self_pairs": 27,
+      "geometry_fingerprint": "43c5b25394b6bed88fa837b10a08f373e8bb84ccd9431f83936895daa6206e7e"
+    },
+    {
+      "frame": 35.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0027318871580064297,
+      "sword_transverse_pairs": 43,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004896786995232105,
+          "mean_gap_m": 0.010896153810123602,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01408219151198864,
+          "mean_gap_m": 0.0206562118943442,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016544265672564507,
+          "mean_gap_m": 0.024899028423355847,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016751734539866447,
+          "mean_gap_m": 0.02177710387417499,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004785645578522235,
+          "mean_gap_m": 0.01613922020435523,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 221,
+      "wrist_transverse_self_pairs": 40,
+      "geometry_fingerprint": "1f8eba1fd0210735356205cb092bb4e27e95b31d582683adb418905f0732ac3f"
+    },
+    {
+      "frame": 35.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0026504925917834044,
+      "sword_transverse_pairs": 38,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004875647369772196,
+          "mean_gap_m": 0.010804914869368076,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014096374623477459,
+          "mean_gap_m": 0.020511965521357277,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016558827832341194,
+          "mean_gap_m": 0.02467202540577912,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01653468981385231,
+          "mean_gap_m": 0.021599235999233583,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004558699729386717,
+          "mean_gap_m": 0.016192965595918294,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 223,
+      "wrist_transverse_self_pairs": 51,
+      "geometry_fingerprint": "a5df90c07d1af1c97dbdec917d6a1883a4d0d75c3ffed14c98d43a3f594da891"
+    },
+    {
+      "frame": 36.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00257000676356256,
+      "sword_transverse_pairs": 36,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004854635335505009,
+          "mean_gap_m": 0.010713499101499716,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014110599644482136,
+          "mean_gap_m": 0.020367544708829937,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016573378816246986,
+          "mean_gap_m": 0.02444569766521454,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016318410634994507,
+          "mean_gap_m": 0.021421154467936826,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004399818426463753,
+          "mean_gap_m": 0.016248012712350355,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 223,
+      "wrist_transverse_self_pairs": 45,
+      "geometry_fingerprint": "f34b81f62ea91a332e7cac271f6c59ffa7f63ff5dbe2c36795cc16379c3c5547"
+    },
+    {
+      "frame": 36.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0024900503922253847,
+      "sword_transverse_pairs": 34,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0048339166678488255,
+          "mean_gap_m": 0.010621998428056638,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01412497740238905,
+          "mean_gap_m": 0.02022343986865246,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01635938696563244,
+          "mean_gap_m": 0.024220105987496493,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.016102835536003113,
+          "mean_gap_m": 0.02124303376630825,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004202858835924417,
+          "mean_gap_m": 0.016304225581633445,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 238,
+      "wrist_transverse_self_pairs": 50,
+      "geometry_fingerprint": "ad29462413f15241a6a985f1fe0b292e54aa860ad8d3a887589f582ccaf9cc6d"
+    },
+    {
+      "frame": 37.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.002411049325019121,
+      "sword_transverse_pairs": 32,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0048134662210941315,
+          "mean_gap_m": 0.010530604189261794,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014139256440103054,
+          "mean_gap_m": 0.020079593117715733,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.016040924936532974,
+          "mean_gap_m": 0.02399545131114925,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.015888379886746407,
+          "mean_gap_m": 0.021065032547887635,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003965768846683204,
+          "mean_gap_m": 0.01636134915127143,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 246,
+      "wrist_transverse_self_pairs": 50,
+      "geometry_fingerprint": "c7bbe381380113d18111f4886e88e55c556ef09571f700554e2ac8679ec02b8a"
+    },
+    {
+      "frame": 37.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0023328012321144342,
+      "sword_transverse_pairs": 30,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004793196450918913,
+          "mean_gap_m": 0.010439138564591607,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01415352150797844,
+          "mean_gap_m": 0.01993595947031722,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01572573184967041,
+          "mean_gap_m": 0.02377175676023088,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01567491516470909,
+          "mean_gap_m": 0.0208870150587138,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00036910464405082166,
+          "mean_gap_m": 0.01641965625296709,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 254,
+      "wrist_transverse_self_pairs": 52,
+      "geometry_fingerprint": "0f313185d3077fb5373385dccfab6fe46413b5b9270f37540813a8d81db443fb"
+    },
+    {
+      "frame": 38.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.002292853780090809,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004773004911839962,
+          "mean_gap_m": 0.010347327481334408,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014167632907629013,
+          "mean_gap_m": 0.019792315409039005,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015413464978337288,
+          "mean_gap_m": 0.02354875007053701,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.015462079085409641,
+          "mean_gap_m": 0.020708794239908457,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003371289640199393,
+          "mean_gap_m": 0.01647892082487319,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 266,
+      "wrist_transverse_self_pairs": 53,
+      "geometry_fingerprint": "fcf3d88c27adc16fe28cbfb899addcc5902a096ab993863058285d54f744dd24"
+    },
+    {
+      "frame": 38.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0021880276035517454,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004753259941935539,
+          "mean_gap_m": 0.010255743066469829,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.014181908220052719,
+          "mean_gap_m": 0.01964911302043633,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.015104763209819794,
+          "mean_gap_m": 0.02332713134677672,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.015250351279973984,
+          "mean_gap_m": 0.020530732732047054,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003015291295014322,
+          "mean_gap_m": 0.016539161474038673,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 279,
+      "wrist_transverse_self_pairs": 78,
+      "geometry_fingerprint": "2a963cd299fdb9e22966c3a9593aa7356d8d2e14d1b2c25a2a78e887ffc8e605"
+    },
+    {
+      "frame": 39.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0021275640465319157,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00473373755812645,
+          "mean_gap_m": 0.010164121941973766,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013973275199532509,
+          "mean_gap_m": 0.019506301759093098,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01479984913021326,
+          "mean_gap_m": 0.023106817496804204,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.015039719641208649,
+          "mean_gap_m": 0.020352822016267216,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002619930310174823,
+          "mean_gap_m": 0.01660049776762241,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 279,
+      "wrist_transverse_self_pairs": 82,
+      "geometry_fingerprint": "e83edf9c78b32636de09df06dfe61a77f3f21eaf4fca4a3587ff2d356839ea42"
+    },
+    {
+      "frame": 39.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0020886005368083715,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 5,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004714168142527342,
+          "mean_gap_m": 0.010072325604657333,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013721697963774204,
+          "mean_gap_m": 0.019363682463087818,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01450128573924303,
+          "mean_gap_m": 0.022887750324316142,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.014830087311565876,
+          "mean_gap_m": 0.02017489341361558,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00021826934244018048,
+          "mean_gap_m": 0.016663078782181,
+          "within_2mm": 6
+        }
+      },
+      "glove_transverse_self_pairs": 280,
+      "wrist_transverse_self_pairs": 100,
+      "geometry_fingerprint": "a12acce0a501835350af3d67d85793557feb6b4a9585e1f304fc1132a818ea8e"
+    },
+    {
+      "frame": 40.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0020510656759142876,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0046949805691838264,
+          "mean_gap_m": 0.009980578518783053,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.013471254147589207,
+          "mean_gap_m": 0.019221437643423225,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.014210834167897701,
+          "mean_gap_m": 0.022670252748378892,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.014621465466916561,
+          "mean_gap_m": 0.019997031564879066,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00017066486179828644,
+          "mean_gap_m": 0.01672711730632862,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 285,
+      "wrist_transverse_self_pairs": 123,
+      "geometry_fingerprint": "4b358baad3940c068dc70eaadb1196d241606a041e72ee9fdeb5728f0225cf96"
+    },
+    {
+      "frame": 40.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.002015189966186881,
+      "sword_transverse_pairs": 26,
+      "inside_unknown_samples": 5,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004676024429500103,
+          "mean_gap_m": 0.009888746946429213,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0132216801866889,
+          "mean_gap_m": 0.019079488561008915,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.013928387314081192,
+          "mean_gap_m": 0.022454181458891893,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.014413896016776562,
+          "mean_gap_m": 0.019819348694427925,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00011914890637854114,
+          "mean_gap_m": 0.01679215039392282,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 292,
+      "wrist_transverse_self_pairs": 144,
+      "geometry_fingerprint": "f7cfa30f83077d1ee5497460c978fef7b16e1e34f993e804f8fe8525adb16e08"
+    },
+    {
+      "frame": 41.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0019809494260698557,
+      "sword_transverse_pairs": 24,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004657295532524586,
+          "mean_gap_m": 0.009796951664611697,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.012973333708941936,
+          "mean_gap_m": 0.018938066042733914,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.013650658540427685,
+          "mean_gap_m": 0.022239603692801986,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.014207710511982441,
+          "mean_gap_m": 0.01964188925921917,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 6.374839722411707e-05,
+          "mean_gap_m": 0.016857828025590774,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 294,
+      "wrist_transverse_self_pairs": 178,
+      "geometry_fingerprint": "24c98224c76349de087eba2e5031696d4387f8013058a055aa29c4b3fa6254cd"
+    },
+    {
+      "frame": 41.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0019482304342091084,
+      "sword_transverse_pairs": 24,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004638343118131161,
+          "mean_gap_m": 0.009705228622381885,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.012726161628961563,
+          "mean_gap_m": 0.018797034482386978,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.013377245515584946,
+          "mean_gap_m": 0.022026788852200274,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.014002655632793903,
+          "mean_gap_m": 0.019464645425186437,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 4.3057912080257665e-06,
+          "mean_gap_m": 0.01692436645080138,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 294,
+      "wrist_transverse_self_pairs": 195,
+      "geometry_fingerprint": "93a0ee463a694deea216b4e2b0f314bf9c69c305a1ea00b621ec58dc98fb1f9b"
+    },
+    {
+      "frame": 42.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0018128821393474936,
+      "sword_transverse_pairs": 24,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004617131315171719,
+          "mean_gap_m": 0.009613193975140651,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.012480000965297222,
+          "mean_gap_m": 0.018656337097512955,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.013107622973620892,
+          "mean_gap_m": 0.02181540561340204,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.013798526488244534,
+          "mean_gap_m": 0.019287453142597395,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 5.9089499700348824e-05,
+          "mean_gap_m": 0.01699410400477872,
+          "within_2mm": 3
+        }
+      },
+      "glove_transverse_self_pairs": 306,
+      "wrist_transverse_self_pairs": 191,
+      "geometry_fingerprint": "9e2d75591bbb6131c0774c0f16e9f9317d7a3ca0814fef4d9c401b782d11d32b"
+    },
+    {
+      "frame": 42.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001663879258558154,
+      "sword_transverse_pairs": 22,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004596126731485128,
+          "mean_gap_m": 0.009521213624005516,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.012235063128173351,
+          "mean_gap_m": 0.018516235363980133,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.012841562740504742,
+          "mean_gap_m": 0.021605963546146707,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.01359589770436287,
+          "mean_gap_m": 0.019110628047629315,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00013079338532406837,
+          "mean_gap_m": 0.017065400644949276,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 312,
+      "wrist_transverse_self_pairs": 213,
+      "geometry_fingerprint": "ed0975de49fcc7a3df292f27d1b63ecdf6dae1277fe153a6ae76182e8663c79f"
+    },
+    {
+      "frame": 43.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001512302435003221,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0045754145830869675,
+          "mean_gap_m": 0.00942929663384954,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.011991512961685658,
+          "mean_gap_m": 0.018376597033982926,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.012401883490383625,
+          "mean_gap_m": 0.021398222573646684,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.013394363224506378,
+          "mean_gap_m": 0.018933846916565123,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00020830619905609637,
+          "mean_gap_m": 0.017138184081920405,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 321,
+      "wrist_transverse_self_pairs": 252,
+      "geometry_fingerprint": "13c4c14ecb16d3735ce27b6a04c801617dea8501c131a32f2bc3cfe2fc47f1ff"
+    },
+    {
+      "frame": 43.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001381087233312428,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004555026534944773,
+          "mean_gap_m": 0.009337394312024117,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.011749348603188992,
+          "mean_gap_m": 0.018237617628818207,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.011965306475758553,
+          "mean_gap_m": 0.021192390971430917,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.013194046914577484,
+          "mean_gap_m": 0.018757501808816895,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00028994661988690495,
+          "mean_gap_m": 0.017212199164701073,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 329,
+      "wrist_transverse_self_pairs": 280,
+      "geometry_fingerprint": "0cdad5507ec4a211eb86106ee8ac233dfdc0f267e85dde8380dd684be805ee9a"
+    },
+    {
+      "frame": 44.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0013695446541532874,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004534701816737652,
+          "mean_gap_m": 0.009245473767320316,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.011508295312523842,
+          "mean_gap_m": 0.018098976209082386,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.011531640775501728,
+          "mean_gap_m": 0.020988441413132157,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.012885123491287231,
+          "mean_gap_m": 0.018581328584867364,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003755000070668757,
+          "mean_gap_m": 0.017287874877823656,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 330,
+      "wrist_transverse_self_pairs": 259,
+      "geometry_fingerprint": "74eda6d0e81fe25d91d51183b73ce957192ea186b498940c611cae8d32380398"
+    },
+    {
+      "frame": 44.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0013596115168184042,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004514655098319054,
+          "mean_gap_m": 0.009153528045862913,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.011268610134720802,
+          "mean_gap_m": 0.01796101981943304,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01110096089541912,
+          "mean_gap_m": 0.020786405222990165,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.012519118376076221,
+          "mean_gap_m": 0.01840545962948133,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00046489093801938,
+          "mean_gap_m": 0.017365439935626153,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 332,
+      "wrist_transverse_self_pairs": 251,
+      "geometry_fingerprint": "1ad481e68ffa23c2c1b6cfaf05b03956a2e7532bb986ac9a2963b78105a64b50"
+    },
+    {
+      "frame": 45.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001351629849523306,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004494782537221909,
+          "mean_gap_m": 0.009061525405074159,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.011030678637325764,
+          "mean_gap_m": 0.017823597557391182,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.01067354530096054,
+          "mean_gap_m": 0.020586487768990237,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.012153470888733864,
+          "mean_gap_m": 0.018229772227213663,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0005586813203990459,
+          "mean_gap_m": 0.017444793373147992,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 328,
+      "wrist_transverse_self_pairs": 275,
+      "geometry_fingerprint": "ea9f0ca8dccd6c9e44f0d39f50f1473d18c9077922f3bc590802c02f53f89f87"
+    },
+    {
+      "frame": 45.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0013453516876325011,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004475119989365339,
+          "mean_gap_m": 0.008969615725800396,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.01079526450484991,
+          "mean_gap_m": 0.017686766487630932,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.010249217972159386,
+          "mean_gap_m": 0.020388618747635586,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.011788373813033104,
+          "mean_gap_m": 0.018054602174636197,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0006563706556335092,
+          "mean_gap_m": 0.017526158447489486,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 336,
+      "wrist_transverse_self_pairs": 270,
+      "geometry_fingerprint": "f3761f6760a65fc280ba5f6a516b59e5dd73b4b8b62a004b7c21eb097830d30d"
+    },
+    {
+      "frame": 46.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0013404830824583769,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004455797374248505,
+          "mean_gap_m": 0.008877692914878329,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.010562769137322903,
+          "mean_gap_m": 0.017550625273901405,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.009828510694205761,
+          "mean_gap_m": 0.020192991237996553,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.011423821561038494,
+          "mean_gap_m": 0.017879714148447794,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0007578725344501436,
+          "mean_gap_m": 0.017609641979948652,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 335,
+      "wrist_transverse_self_pairs": 290,
+      "geometry_fingerprint": "5edc97fd9f880f4a0f694b83d7b47c20b30fe0107cf7f49664b081dd3f5fc490"
+    },
+    {
+      "frame": 46.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001337624154984951,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004436552058905363,
+          "mean_gap_m": 0.008785723367085059,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.010333182290196419,
+          "mean_gap_m": 0.0174153120906064,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.009411252103745937,
+          "mean_gap_m": 0.019999428902093958,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.011059822514653206,
+          "mean_gap_m": 0.017705285127329475,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0006861498113721609,
+          "mean_gap_m": 0.01769484064748718,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 347,
+      "wrist_transverse_self_pairs": 278,
+      "geometry_fingerprint": "a4d732f641340827d4e793d28d361522a498906be77ae21b9b5488e1e0d744dd"
+    },
+    {
+      "frame": 47.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001214208547025919,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004417699761688709,
+          "mean_gap_m": 0.008693815224493544,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.010105133056640625,
+          "mean_gap_m": 0.017280544690562016,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.008997660130262375,
+          "mean_gap_m": 0.019808398105385826,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.010696482844650745,
+          "mean_gap_m": 0.01753128243281561,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0006035590195097029,
+          "mean_gap_m": 0.017779619795166783,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 353,
+      "wrist_transverse_self_pairs": 276,
+      "geometry_fingerprint": "caa12c3049e743789149f04b965d852312a5ceed384143c610cd5c5d2744a944"
+    },
+    {
+      "frame": 47.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0010527995182201266,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004399009048938751,
+          "mean_gap_m": 0.008601923007518053,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.009879026561975479,
+          "mean_gap_m": 0.017146620306779038,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.008587702177464962,
+          "mean_gap_m": 0.019620165933014418,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.010333663783967495,
+          "mean_gap_m": 0.017357776790638182,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0005169578362256289,
+          "mean_gap_m": 0.0178660792848354,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 359,
+      "wrist_transverse_self_pairs": 285,
+      "geometry_fingerprint": "9c05fd8d7b9be430ad9af17b58c824cc6b503d47f7ad3c509658715d2b1bf3f3"
+    },
+    {
+      "frame": 48.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0009291525348089635,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004380509257316589,
+          "mean_gap_m": 0.008509812643751502,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.009654496796429157,
+          "mean_gap_m": 0.017013334810282246,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.008181755430996418,
+          "mean_gap_m": 0.01943497861758238,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.00997169129550457,
+          "mean_gap_m": 0.01718467383590691,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00042611343087628484,
+          "mean_gap_m": 0.017953947610092454,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 361,
+      "wrist_transverse_self_pairs": 279,
+      "geometry_fingerprint": "235daddab13c27c6ac3af55a930b06bd3068621a0043011d397d20885ebc3c28"
+    },
+    {
+      "frame": 48.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.000878994120284915,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 3,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004341883584856987,
+          "mean_gap_m": 0.008417815156280994,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.009431625716388226,
+          "mean_gap_m": 0.01688077551961848,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.007786246482282877,
+          "mean_gap_m": 0.019253228461687883,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.00961060170084238,
+          "mean_gap_m": 0.017012260580325827,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0003314728382974863,
+          "mean_gap_m": 0.018043009181619035,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 366,
+      "wrist_transverse_self_pairs": 291,
+      "geometry_fingerprint": "d466e75b38c0b970cfaf1704b45cf6cf53bd831a71afd625e95ad54d9d254438"
+    },
+    {
+      "frame": 49.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0007772303652018309,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.004171824082732201,
+          "mean_gap_m": 0.008325783008088668,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.009210641495883465,
+          "mean_gap_m": 0.016749054757934628,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.007406408432871103,
+          "mean_gap_m": 0.019075217690863986,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.009250383824110031,
+          "mean_gap_m": 0.016840455231859404,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00023246879572980106,
+          "mean_gap_m": 0.01813397292291349,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 369,
+      "wrist_transverse_self_pairs": 297,
+      "geometry_fingerprint": "1dbcfdbac6a265287d75a8c21404856edd92ffe4f359b5a5f3c439afcfa8246e"
+    },
+    {
+      "frame": 49.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0007690868806093931,
+      "sword_transverse_pairs": 20,
+      "inside_unknown_samples": 7,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00400233780965209,
+          "mean_gap_m": 0.008233822835609316,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.008991441689431667,
+          "mean_gap_m": 0.016617872582917862,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0070448946207761765,
+          "mean_gap_m": 0.01890099373441644,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.008891229517757893,
+          "mean_gap_m": 0.01666924708029803,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00013398012379184365,
+          "mean_gap_m": 0.01822675310756528,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 380,
+      "wrist_transverse_self_pairs": 287,
+      "geometry_fingerprint": "ae01deedc644276ae48adbcff11bf765c9c025e38f608524b6ba34a9252fab59"
+    },
+    {
+      "frame": 50.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0008051052573136985,
+      "sword_transverse_pairs": 18,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0038327255751937628,
+          "mean_gap_m": 0.00814188418444246,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.008774090558290482,
+          "mean_gap_m": 0.01648739618108128,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.006704446393996477,
+          "mean_gap_m": 0.018730795999034877,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.008532766252756119,
+          "mean_gap_m": 0.01649873624281848,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00017378354095853865,
+          "mean_gap_m": 0.01832617413095216,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 404,
+      "wrist_transverse_self_pairs": 287,
+      "geometry_fingerprint": "884c7744834c538fb7deb984f6236b807914e37afc15fa0590aa13ba9e5c2f54"
+    },
+    {
+      "frame": 50.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0008432901813648641,
+      "sword_transverse_pairs": 18,
+      "inside_unknown_samples": 5,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0036634732969105244,
+          "mean_gap_m": 0.008049983663174014,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.008535456843674183,
+          "mean_gap_m": 0.016357741290421196,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0063741146586835384,
+          "mean_gap_m": 0.018564574840683037,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.008175411261618137,
+          "mean_gap_m": 0.016329034560305232,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002233483683085069,
+          "mean_gap_m": 0.01842819665169507,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 414,
+      "wrist_transverse_self_pairs": 292,
+      "geometry_fingerprint": "2cb123d182f50548964bd0f3d752e361ca7119098d32d9ded4b63684869089e9"
+    },
+    {
+      "frame": 51.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0008833457832224667,
+      "sword_transverse_pairs": 18,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0034944212529808283,
+          "mean_gap_m": 0.007958117329205075,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.008175703696906567,
+          "mean_gap_m": 0.016228963536295025,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.006049307994544506,
+          "mean_gap_m": 0.018402147379408523,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.007819212973117828,
+          "mean_gap_m": 0.016159989378031564,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0002571566728875041,
+          "mean_gap_m": 0.018530317710462475,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 419,
+      "wrist_transverse_self_pairs": 291,
+      "geometry_fingerprint": "8d2f04a33f2ee60dc093b444c25544ff7d7ce3220a4e5a6c1722b0d2b5d3a3ac"
+    },
+    {
+      "frame": 51.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0009252432500943542,
+      "sword_transverse_pairs": 18,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0033253200817853212,
+          "mean_gap_m": 0.007866274332627654,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.007816733792424202,
+          "mean_gap_m": 0.01610104175228061,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.005729878321290016,
+          "mean_gap_m": 0.01824325890984477,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.007463876623660326,
+          "mean_gap_m": 0.015991822419249836,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00025108965928666294,
+          "mean_gap_m": 0.01863294570864161,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 413,
+      "wrist_transverse_self_pairs": 270,
+      "geometry_fingerprint": "7cc68aa3ff6b4cd1d0a02a07c32794571614e0bf043d021433379bc05fcc97c9"
+    },
+    {
+      "frame": 52.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0009690336300991476,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.003156626131385565,
+          "mean_gap_m": 0.007774495737006267,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.007458790205419064,
+          "mean_gap_m": 0.015973979409671192,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.005415997467935085,
+          "mean_gap_m": 0.01808803313888791,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.007109711412340403,
+          "mean_gap_m": 0.015824333161992186,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00024286418920382857,
+          "mean_gap_m": 0.018737031675064592,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 423,
+      "wrist_transverse_self_pairs": 225,
+      "geometry_fingerprint": "6eb220adfef7ff6b9b56eb785a8c456ce3018eb54290ed9d981e1ad985e266c7"
+    },
+    {
+      "frame": 52.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.001014592475257814,
+      "sword_transverse_pairs": 14,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0029881009832024574,
+          "mean_gap_m": 0.007682703350049754,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0071019865572452545,
+          "mean_gap_m": 0.015847854372678383,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.005107860546559095,
+          "mean_gap_m": 0.017936442501661255,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.006756580900400877,
+          "mean_gap_m": 0.015657751273144695,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00023277939180843532,
+          "mean_gap_m": 0.018843001624056208,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 430,
+      "wrist_transverse_self_pairs": 219,
+      "geometry_fingerprint": "fee649251ae24bc5e403c63dff79a5b736685edab642091cccc1cc2d794ba90d"
+    },
+    {
+      "frame": 53.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0010618454543873668,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.002819774206727743,
+          "mean_gap_m": 0.007590949729395409,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0067461635917425156,
+          "mean_gap_m": 0.01572274179621176,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0048051513731479645,
+          "mean_gap_m": 0.017788150745284993,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.006404762621968985,
+          "mean_gap_m": 0.015491987496395321,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00022067654936108738,
+          "mean_gap_m": 0.018951128422082145,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 433,
+      "wrist_transverse_self_pairs": 231,
+      "geometry_fingerprint": "f9fb939daaac4260dbcdfd2c7c0b86a32425f83a41027abe1069b05054097f8a"
+    },
+    {
+      "frame": 53.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0011109689949080348,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 4,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0026517033111304045,
+          "mean_gap_m": 0.0074992911734928685,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.006391497794538736,
+          "mean_gap_m": 0.015598587423675892,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.004508364945650101,
+          "mean_gap_m": 0.017643119560600055,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.006054254714399576,
+          "mean_gap_m": 0.01532725548809942,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00020663898612838238,
+          "mean_gap_m": 0.019061213218298723,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 437,
+      "wrist_transverse_self_pairs": 219,
+      "geometry_fingerprint": "914706e11f3cf87099ded007283e1a770c29491215c1eba3bd39873d87cb0e61"
+    },
+    {
+      "frame": 54.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0011287814704701304,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 6,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0024839851539582014,
+          "mean_gap_m": 0.00740767689421773,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.006038120482116938,
+          "mean_gap_m": 0.015475482482350233,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.004217525478452444,
+          "mean_gap_m": 0.017501492189561447,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.005705038085579872,
+          "mean_gap_m": 0.015163491795058636,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00019050184346269816,
+          "mean_gap_m": 0.019172764228844445,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 438,
+      "wrist_transverse_self_pairs": 211,
+      "geometry_fingerprint": "966ec19c729fd4cd35b89f451a1770320a0e7030e9318d3ce376093b25f09345"
+    },
+    {
+      "frame": 54.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0009655168396420777,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0023166306782513857,
+          "mean_gap_m": 0.0073161642688016094,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.005686034914106131,
+          "mean_gap_m": 0.015353478477195356,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.003932603169232607,
+          "mean_gap_m": 0.01736428589764528,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.005357169546186924,
+          "mean_gap_m": 0.015000820940579562,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00017250193923246115,
+          "mean_gap_m": 0.019283171623774926,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 438,
+      "wrist_transverse_self_pairs": 210,
+      "geometry_fingerprint": "736d413e08bc87528d8a2a525d1872e3c4e883bcb20d1a9a492b90a63e09b4b1"
+    },
+    {
+      "frame": 55.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0008362656808458269,
+      "sword_transverse_pairs": 16,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0021493423264473677,
+          "mean_gap_m": 0.007224647840484977,
+          "within_2mm": 0
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.005335135385394096,
+          "mean_gap_m": 0.015232462675846888,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0036536469124257565,
+          "mean_gap_m": 0.017232112643286224,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.005010729655623436,
+          "mean_gap_m": 0.0148393029538805,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00015781031106598675,
+          "mean_gap_m": 0.019396683861419593,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 432,
+      "wrist_transverse_self_pairs": 202,
+      "geometry_fingerprint": "f45f081ded96f3768afe122c72ffd4aa19460612a3d20ab8c7fe8370cbc647b4"
+    },
+    {
+      "frame": 55.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0007060792413540184,
+      "sword_transverse_pairs": 14,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0019823862239718437,
+          "mean_gap_m": 0.007133220291386048,
+          "within_2mm": 1
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.004985794425010681,
+          "mean_gap_m": 0.015112332378824552,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.003380823414772749,
+          "mean_gap_m": 0.017105334290734877,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0046659233048558235,
+          "mean_gap_m": 0.014679048361037584,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0001431382988812402,
+          "mean_gap_m": 0.01951172017126939,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 437,
+      "wrist_transverse_self_pairs": 204,
+      "geometry_fingerprint": "0823a0688eb26155bead8de9dbebdeedc9d1cd26f93a0ddd771a6933a510c173"
+    },
+    {
+      "frame": 56.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0005741137429140508,
+      "sword_transverse_pairs": 14,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0018155771540477872,
+          "mean_gap_m": 0.007041826599743217,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0046375892125070095,
+          "mean_gap_m": 0.014993254956083767,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.003114004386588931,
+          "mean_gap_m": 0.016983024054774788,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.004322131164371967,
+          "mean_gap_m": 0.014519936213379396,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00012633380538318306,
+          "mean_gap_m": 0.019631135518634605,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 455,
+      "wrist_transverse_self_pairs": 178,
+      "geometry_fingerprint": "750c9261cfe48756e0f3871b0bb160ad5f51692cea866d3de08e6cbe050a509b"
+    },
+    {
+      "frame": 56.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00044028094271197915,
+      "sword_transverse_pairs": 14,
+      "inside_unknown_samples": 2,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0016489088302478194,
+          "mean_gap_m": 0.0069503736061354475,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0042902035638689995,
+          "mean_gap_m": 0.014875305562534115,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.002869636518880725,
+          "mean_gap_m": 0.016864999657405948,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.003979444038122892,
+          "mean_gap_m": 0.014362051576266395,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00010754762479336932,
+          "mean_gap_m": 0.019754825597677456,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 458,
+      "wrist_transverse_self_pairs": 160,
+      "geometry_fingerprint": "d8882c30a4964d8bef62b7b3662030fec181aa6f84da0fc8f0618a0f2d6b5b47"
+    },
+    {
+      "frame": 57.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.0003052508691325784,
+      "sword_transverse_pairs": 12,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0014830180443823338,
+          "mean_gap_m": 0.006859302478066335,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.003945834934711456,
+          "mean_gap_m": 0.014759191029676886,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.002636628458276391,
+          "mean_gap_m": 0.016752136939364237,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0036397164221853018,
+          "mean_gap_m": 0.014206188662415919,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 8.678295853314921e-05,
+          "mean_gap_m": 0.019881083295196597,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 467,
+      "wrist_transverse_self_pairs": 150,
+      "geometry_fingerprint": "dd444f6020eff2b5ad8b0ece5e2ec2f9a6683adcc77383bef3db05de7efc773c"
+    },
+    {
+      "frame": 57.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00016926383250392973,
+      "sword_transverse_pairs": 12,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0013181575341150165,
+          "mean_gap_m": 0.006768637922747681,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0036042481660842896,
+          "mean_gap_m": 0.014644763263111765,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0024111540988087654,
+          "mean_gap_m": 0.016644813103328753,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.003264127764850855,
+          "mean_gap_m": 0.014052221085876226,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00016154171316884458,
+          "mean_gap_m": 0.020010348957536433,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 467,
+      "wrist_transverse_self_pairs": 146,
+      "geometry_fingerprint": "e1f37615589545760277c4cb510df5a1f58a5b0deeedf1581c4467ceb0dc4c60"
+    },
+    {
+      "frame": 58.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00010314436804037541,
+      "sword_transverse_pairs": 12,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0011518776882439852,
+          "mean_gap_m": 0.006677053414750844,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.003260092344135046,
+          "mean_gap_m": 0.014530379953088634,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0021895996760576963,
+          "mean_gap_m": 0.01654103988349983,
+          "within_2mm": 0
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0028285235166549683,
+          "mean_gap_m": 0.0138982232345049,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 2.9710929084103554e-05,
+          "mean_gap_m": 0.020147661985565384,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 466,
+      "wrist_transverse_self_pairs": 147,
+      "geometry_fingerprint": "deb96c1ea4b1cb8921d3a030f1d6864533cd675b2472030ce747b7c70a81e056"
+    },
+    {
+      "frame": 58.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00017388274136465043,
+      "sword_transverse_pairs": 8,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0009827578905969858,
+          "mean_gap_m": 0.0065838891624783475,
+          "within_2mm": 2
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.002911844989284873,
+          "mean_gap_m": 0.014415655835446987,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0019711407367140055,
+          "mean_gap_m": 0.016439719897944752,
+          "within_2mm": 1
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0023862039670348167,
+          "mean_gap_m": 0.013742982540005708,
+          "within_2mm": 0
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0001149066592915915,
+          "mean_gap_m": 0.020292951903684298,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 474,
+      "wrist_transverse_self_pairs": 156,
+      "geometry_fingerprint": "08df8d200f58dfe58e8bd7f8173e3f26d0cea1b19e03e9990eb97d0ae06e2a05"
+    },
+    {
+      "frame": 59.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0.00010577870125416666,
+      "sword_transverse_pairs": 8,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.000821659981738776,
+          "mean_gap_m": 0.006494884586815412,
+          "within_2mm": 3
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0025807020720094442,
+          "mean_gap_m": 0.014307344113617684,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0017691415268927813,
+          "mean_gap_m": 0.01634784219445797,
+          "within_2mm": 1
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.001964365132153034,
+          "mean_gap_m": 0.013595791759572047,
+          "within_2mm": 1
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.00026613453519530594,
+          "mean_gap_m": 0.020436154496834474,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 477,
+      "wrist_transverse_self_pairs": 143,
+      "geometry_fingerprint": "cda19549344b59031cd8262b274eeac6049e9f90453ed2227565edc53fa01073"
+    },
+    {
+      "frame": 59.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0,
+      "sword_transverse_pairs": 8,
+      "inside_unknown_samples": 1,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0006710899178870022,
+          "mean_gap_m": 0.006411680575304975,
+          "within_2mm": 3
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0022721916902810335,
+          "mean_gap_m": 0.014207251631005696,
+          "within_2mm": 0
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0016254428774118423,
+          "mean_gap_m": 0.01626698849382015,
+          "within_2mm": 1
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0015701369848102331,
+          "mean_gap_m": 0.013459147097926368,
+          "within_2mm": 3
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0004094170581083745,
+          "mean_gap_m": 0.02057319972825806,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 477,
+      "wrist_transverse_self_pairs": 142,
+      "geometry_fingerprint": "c0547ec5e8356e261086c73444cfafc55d58a77ce3c944c19c53795188c8a110"
+    },
+    {
+      "frame": 60.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0,
+      "sword_transverse_pairs": 0,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0004930042778141797,
+          "mean_gap_m": 0.0063131250266451385,
+          "within_2mm": 3
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0019083137158304453,
+          "mean_gap_m": 0.01409029042009603,
+          "within_2mm": 1
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0015646578976884484,
+          "mean_gap_m": 0.01617959098856351,
+          "within_2mm": 3
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0011036783689633012,
+          "mean_gap_m": 0.013298448623733266,
+          "within_2mm": 3
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.000580585328862071,
+          "mean_gap_m": 0.02074011485092342,
+          "within_2mm": 5
+        }
+      },
+      "glove_transverse_self_pairs": 477,
+      "wrist_transverse_self_pairs": 150,
+      "geometry_fingerprint": "40fc6eb141bc4082259bca31fd3776a34a093c3abd9a4a89c9463d8ba42704da"
+    },
+    {
+      "frame": 60.5,
+      "kind": "half_frame_diagnostic",
+      "holding_interval_contact_required": false,
+      "maximum_penetration_m": 0,
+      "sword_transverse_pairs": 0,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.0002773245796561241,
+          "mean_gap_m": 0.006193533548503183,
+          "within_2mm": 4
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0014693699777126312,
+          "mean_gap_m": 0.013950575908617766,
+          "within_2mm": 2
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0011918460950255394,
+          "mean_gap_m": 0.01608376448871795,
+          "within_2mm": 4
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0005453175399452448,
+          "mean_gap_m": 0.01310552135691978,
+          "within_2mm": 4
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0007910794811323285,
+          "mean_gap_m": 0.020948284454385027,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 486,
+      "wrist_transverse_self_pairs": 145,
+      "geometry_fingerprint": "9161f49c32bb236249ec6bd927425e7c6283d7f22300cd7caea3552e0a6a4ee7"
+    },
+    {
+      "frame": 61.0,
+      "kind": "actual_baked_frame",
+      "holding_interval_contact_required": true,
+      "maximum_penetration_m": 0,
+      "sword_transverse_pairs": 0,
+      "inside_unknown_samples": 0,
+      "contact_pads": {
+        "finger1": {
+          "vertices": 30,
+          "minimum_gap_m": 0.00016572985623497516,
+          "mean_gap_m": 0.006131587041212091,
+          "within_2mm": 4
+        },
+        "finger2": {
+          "vertices": 33,
+          "minimum_gap_m": 0.0012430362403392792,
+          "mean_gap_m": 0.013879324912770906,
+          "within_2mm": 4
+        },
+        "finger3": {
+          "vertices": 41,
+          "minimum_gap_m": 0.0009332019253633916,
+          "mean_gap_m": 0.016039172044057946,
+          "within_2mm": 5
+        },
+        "finger4": {
+          "vertices": 34,
+          "minimum_gap_m": 0.0002708745887503028,
+          "mean_gap_m": 0.01300685375377618,
+          "within_2mm": 4
+        },
+        "thumb": {
+          "vertices": 54,
+          "minimum_gap_m": 0.0009012446971610188,
+          "mean_gap_m": 0.02105872660521763,
+          "within_2mm": 4
+        }
+      },
+      "glove_transverse_self_pairs": 491,
+      "wrist_transverse_self_pairs": 137,
+      "geometry_fingerprint": "19418ca4b08fcabf8426285812758e1be2ca64542463796d6a55ff05c4327e04"
+    }
+  ],
+  "search_evaluations": 0,
+  "new_geometry_versions": 0,
+  "baked_interval_collision_pass": false,
+  "baked_interval_art_pass": false,
+  "limitations": [
+    "Discrete61frames+60half-frame diagnostics are not continuous collision proof",
+    "Same evaluated point+loop triangles with original-point attribute identity; adjacency is frozen at rest",
+    "Transverse tests exclude coplanar/tangential/adjacent folds; actual close views remain required"
+  ],
+  "original_source_unchanged": true,
+  "producer_no_file_saved": true
+}

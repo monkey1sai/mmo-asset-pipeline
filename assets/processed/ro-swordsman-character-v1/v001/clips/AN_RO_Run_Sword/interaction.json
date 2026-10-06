@@ -1,0 +1,41 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Run_Sword",
+ "fps": 60,
+ "frames": 40,
+ "loop": true,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     0,
+     39
+    ]
+   ],
+   "establishment_frames": [
+    0
+   ]
+  },
+  "grasp.L": {
+   "windows": []
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    20,
+    29
+   ]
+  ],
+  "R": [
+   [
+    0,
+    9
+   ]
+  ]
+ },
+ "events": [],
+ "nominal_speed_m_s": 3.5,
+ "note": "Stance windows are the frames in which each foot is flat (scripts/cv1_gait.py stance_window); flight between stances is not a contact window; grasp window covers the loop."
+}

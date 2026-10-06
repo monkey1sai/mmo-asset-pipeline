@@ -1,0 +1,22 @@
+{
+  "observed_utc": "2026-10-03T13:27:55.558388+00:00",
+  "verdict": "NO_SHIP",
+  "scope": "v004 fixedsource smallmotion only",
+  "visible_deformation_gate": "fail_root indentation/fold in .30side and .30+.15opposition side",
+  "small_motion_numeric_gate": true,
+  "numeric_subset_does_not_override_visual_failure": true,
+  "source_geometry_gate": "passed local thumbcap only",
+  "material_gate": "fail16mixedsourceUVislandfaces",
+  "weight_domain_failure": "Full weight-vector chain transitions not solved by scalar thumb01 smoothing; any thumb02 influence incorrectly frozen for this hypothesis",
+  "not_run": [
+    "Sword contact",
+    "Forearm/bracer assembly",
+    "Left hand",
+    "Full300frame skills",
+    "VFX",
+    "Fresh animatedGLB"
+  ],
+  "new_service_credits": 0,
+  "quality_targets_lowered": false,
+  "phase_clock_reset": false
+}

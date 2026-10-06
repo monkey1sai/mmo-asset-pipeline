@@ -1,0 +1,169 @@
+{
+ "observed_utc": "2026-10-05T09:14:07.329404+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "4137e384f8372c08fa6d9fe699ce18d5ca46cb481a2756668004da403d275e73",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "source_sha256_after": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+ "spec": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/crease-smoothing-A.json",
+  "sha256": "79f32a830a0a23b46d3364a7467ab4b5c938e0f816fc82812330e2c42b301f8b"
+ },
+ "rules_in": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b08-smoothA/ro_character_v001_b08-smoothA.blend",
+  "sha256": "cf79e1d61c0a387e08b21114345e16e0522de3ca821169d75dd18bf87466bddb"
+ },
+ "mesh": "SM_RO_core",
+ "vertices_rewritten": 2789,
+ "dropped_shape_keys": [
+  "SKC_core_fold_01",
+  "SKC_core_fold_02",
+  "SKC_core_fold_03",
+  "SKC_core_fold_04",
+  "SKC_core_fold_05",
+  "SKC_core_fold_06",
+  "SKC_core_fold_07"
+ ],
+ "channels_after": 40,
+ "regions": [
+  {
+   "name": "groin.L",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.L"
+   ],
+   "seed_vertices": 55,
+   "zone_vertices": 182,
+   "vertices_changed": 182,
+   "max_share_change": 0.4467,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "armpit.L",
+   "parent": [
+    "clavicle.L",
+    "spine_01",
+    "spine_02"
+   ],
+   "child": [
+    "upper_arm.L"
+   ],
+   "seed_vertices": 226,
+   "zone_vertices": 377,
+   "vertices_changed": 377,
+   "max_share_change": 0.8438,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "knee.L",
+   "parent": [
+    "upper_leg.L"
+   ],
+   "child": [
+    "lower_leg.L"
+   ],
+   "seed_vertices": 595,
+   "zone_vertices": 720,
+   "vertices_changed": 720,
+   "max_share_change": 0.1292,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "elbow.L",
+   "parent": [
+    "upper_arm.L"
+   ],
+   "child": [
+    "lower_arm.L"
+   ],
+   "seed_vertices": 158,
+   "zone_vertices": 249,
+   "vertices_changed": 249,
+   "max_share_change": 0.2974,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "groin.R",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.R"
+   ],
+   "seed_vertices": 49,
+   "zone_vertices": 164,
+   "vertices_changed": 164,
+   "max_share_change": 0.4243,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "armpit.R",
+   "parent": [
+    "clavicle.R",
+    "spine_01",
+    "spine_02"
+   ],
+   "child": [
+    "upper_arm.R"
+   ],
+   "seed_vertices": 229,
+   "zone_vertices": 374,
+   "vertices_changed": 374,
+   "max_share_change": 0.7635,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "knee.R",
+   "parent": [
+    "upper_leg.R"
+   ],
+   "child": [
+    "lower_leg.R"
+   ],
+   "seed_vertices": 642,
+   "zone_vertices": 754,
+   "vertices_changed": 754,
+   "max_share_change": 0.1078,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  },
+  {
+   "name": "elbow.R",
+   "parent": [
+    "upper_arm.R"
+   ],
+   "child": [
+    "lower_arm.R"
+   ],
+   "seed_vertices": 147,
+   "zone_vertices": 245,
+   "vertices_changed": 245,
+   "max_share_change": 0.2246,
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5
+  }
+ ],
+ "scope": "Skin weights of the body mesh inside the named crease zones only; Basis, topology, UVs, other meshes and the r010 hand untouched."
+}

@@ -1,0 +1,16 @@
+{
+  "original": {
+    "path": "scripts/solve_ro_coupled_hand_contact.py",
+    "sha256": "8b05d7eb8803826cf0473515bacf3357b090bd3c0fa11e78db26df3ee0280532"
+  },
+  "derived": {
+    "path": "scripts/solve_ro_moving_target_contact.py",
+    "sha256": "9e029486b9102c0d36031fbd21620a31547d1561a5cc30342ce8ac6a985b0a8d"
+  },
+  "purpose": "Fix only missing rigidtarget shift in derivative; explicitlycheck each translationJacobiancolumn. Originalfaultycode and83probev002 kept.",
+  "different_candidate_counted": true,
+  "no_old_retry_released": true,
+  "initial_unexecuted_derivation_sha256": "d25b09117270af81c7ea8b3eb8ea2d990847897004142021934086a2dbbca775",
+  "preflight_correction": "Fixed outputdirectory to newv003 beforecandidateexecution; no oldmodel overwritten.",
+  "preexecution_Astra_requirements": "Signed x/y/z residual and unchangedpoint preflight; exactlinearizationIDs/targets andtranslationcolumnerror archived."
+}

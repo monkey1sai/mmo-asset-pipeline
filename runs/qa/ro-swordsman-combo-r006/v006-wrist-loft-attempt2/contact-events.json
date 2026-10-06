@@ -1,0 +1,132 @@
+[
+  {
+    "label": "single-grip",
+    "parameters": {
+      "joint_ik": {
+        "radius": 0.02,
+        "phis": [
+          140,
+          140,
+          160,
+          140
+        ],
+        "thumb_width": -0.02,
+        "thumb_front": -0.021,
+        "thumb_down": 0
+      },
+      "checkpoint": "wrist_loft_checkpoint"
+    },
+    "candidate_fingerprint": "7d5c87cf18fba20b57cf118ed734e26c416795937dd14d2c0fb63c60edbcd3e4",
+    "actual_sword_closed_after_weld": true,
+    "handle_triangles": 494,
+    "pad_contacts": {
+      "finger1": {
+        "vertices": 30,
+        "minimum_gap_m": 0.0001656938111409545,
+        "mean_gap_m": 0.0061315958960525075,
+        "within_2mm": 4
+      },
+      "finger2": {
+        "vertices": 33,
+        "minimum_gap_m": 0.0012430241331458092,
+        "mean_gap_m": 0.013879313183045297,
+        "within_2mm": 4
+      },
+      "finger3": {
+        "vertices": 41,
+        "minimum_gap_m": 0.0009332140325568616,
+        "mean_gap_m": 0.016039171953197207,
+        "within_2mm": 5
+      },
+      "finger4": {
+        "vertices": 34,
+        "minimum_gap_m": 0.0002708745887503028,
+        "mean_gap_m": 0.013006877169519773,
+        "within_2mm": 4
+      },
+      "thumb": {
+        "vertices": 54,
+        "minimum_gap_m": 0.000901292369235307,
+        "mean_gap_m": 0.021058769315627782,
+        "within_2mm": 4
+      }
+    },
+    "sample_count": 5848,
+    "unknown_inside": [],
+    "maximum_penetration_m": 0,
+    "deep_samples": 0,
+    "worst_penetrations": [],
+    "transverse_crossings_count": 0,
+    "crossings": [],
+    "surface_gate_pass": true,
+    "visual_acceptance_required": true,
+    "event_kind": "wrist_loft_checkpoint",
+    "event_number": 1,
+    "timestamp_utc": "2026-10-03T07:28:28.351779+00:00"
+  },
+  {
+    "label": "single-grip",
+    "parameters": {
+      "joint_ik": {
+        "radius": 0.02,
+        "phis": [
+          140,
+          140,
+          160,
+          140
+        ],
+        "thumb_width": -0.02,
+        "thumb_front": -0.021,
+        "thumb_down": 0
+      },
+      "checkpoint": "bracer_trim_checkpoint"
+    },
+    "candidate_fingerprint": "7f7c0419cd67d67c66f3974ae56c22c1b2d65d83986793cea17f8548a5acc6fc",
+    "actual_sword_closed_after_weld": true,
+    "handle_triangles": 494,
+    "pad_contacts": {
+      "finger1": {
+        "vertices": 30,
+        "minimum_gap_m": 0.0001656938111409545,
+        "mean_gap_m": 0.0061315958960525075,
+        "within_2mm": 4
+      },
+      "finger2": {
+        "vertices": 33,
+        "minimum_gap_m": 0.0012430241331458092,
+        "mean_gap_m": 0.013879313183045297,
+        "within_2mm": 4
+      },
+      "finger3": {
+        "vertices": 41,
+        "minimum_gap_m": 0.0009332140325568616,
+        "mean_gap_m": 0.016039171953197207,
+        "within_2mm": 5
+      },
+      "finger4": {
+        "vertices": 34,
+        "minimum_gap_m": 0.0002708745887503028,
+        "mean_gap_m": 0.013006877169519773,
+        "within_2mm": 4
+      },
+      "thumb": {
+        "vertices": 54,
+        "minimum_gap_m": 0.000901292369235307,
+        "mean_gap_m": 0.021058769315627782,
+        "within_2mm": 4
+      }
+    },
+    "sample_count": 5848,
+    "unknown_inside": [],
+    "maximum_penetration_m": 0,
+    "deep_samples": 0,
+    "worst_penetrations": [],
+    "transverse_crossings_count": 0,
+    "crossings": [],
+    "surface_gate_pass": true,
+    "visual_acceptance_required": true,
+    "event_kind": "bracer_trim_checkpoint",
+    "event_number": 2,
+    "timestamp_utc": "2026-10-03T07:28:28.673501+00:00"
+  }
+]

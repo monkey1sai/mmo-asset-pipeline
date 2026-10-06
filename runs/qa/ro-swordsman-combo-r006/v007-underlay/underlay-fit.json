@@ -1,0 +1,78 @@
+{
+  "trial": "v007",
+  "finished_utc": "2026-10-03T07:42:43.141755+00:00",
+  "source_preserved": true,
+  "surface_gate_pass": true,
+  "pad_contacts": {
+    "finger1": {
+      "vertices": 30,
+      "minimum_gap_m": 0.0001656938111409545,
+      "mean_gap_m": 0.0061315958960525075,
+      "within_2mm": 4
+    },
+    "finger2": {
+      "vertices": 33,
+      "minimum_gap_m": 0.0012430241331458092,
+      "mean_gap_m": 0.013879313183045297,
+      "within_2mm": 4
+    },
+    "finger3": {
+      "vertices": 41,
+      "minimum_gap_m": 0.0009332140325568616,
+      "mean_gap_m": 0.016039171953197207,
+      "within_2mm": 5
+    },
+    "finger4": {
+      "vertices": 34,
+      "minimum_gap_m": 0.0002708745887503028,
+      "mean_gap_m": 0.013006877169519773,
+      "within_2mm": 4
+    },
+    "thumb": {
+      "vertices": 54,
+      "minimum_gap_m": 0.000901292369235307,
+      "mean_gap_m": 0.021058769315627782,
+      "within_2mm": 4
+    }
+  },
+  "maximum_penetration_m": 0,
+  "sword_crossings": 0,
+  "whole_triangles": 57039,
+  "whole_budget_pass": true,
+  "seams_max_m": 0.0,
+  "armor_crossings_by_sample": [
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 170
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 700
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 689
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 693
+    },
+    {
+      "SM_RO_glove.R": 0,
+      "SM_RO_WristLoft.R": 0,
+      "SM_RO_core": 697
+    }
+  ],
+  "maximum_underlay_delta_m": 0.04667952198814678,
+  "art_acceptance": "pending actual fixed views",
+  "full_animation_accepted": false,
+  "delivered": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v007-underlay/ro_underlay_fit.blend",
+    "sha256": "871ffab18e8ee77a79939de105c53afe5f1dcbce56cd70eace05fc051c97bf09"
+  }
+}

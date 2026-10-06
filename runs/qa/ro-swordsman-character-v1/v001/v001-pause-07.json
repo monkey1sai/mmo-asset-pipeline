@@ -1,0 +1,484 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T06:26:14Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "paused_waiting_for_user (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z"
+ ],
+ "active_seconds_total": 3211,
+ "trial_seconds_cap": 21600,
+ "current_best_build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "joint_range": "73 of 73 numeric gates pass",
+  "closed_loop": "runtime 4.64 um, readback 4.21 um"
+ },
+ "shoulder_work_option_1": {
+  "authority": "盔甲用做法 1。繼續第一個候選",
+  "trials": [
+   {
+    "variant": "cut core under pauldrons (c02-fit), no follow",
+    "result": "visual only: runs/qa/ro-swordsman-character-v1/v001/c02-fit-compare.png",
+    "motions": "cut left visible gaps between pauldron and cuirass at rest and crumpled faces under the pauldron"
+   },
+   {
+    "variant": "ray binding (c03-bind) + follow 0.3",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h2/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 1102,
+      "ext": 1848,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": false,
+      "typ": 929,
+      "ext": 1298,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1575,
+      "ext": 1870,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": true,
+      "typ": 589,
+      "ext": 803,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": true,
+      "typ": 205,
+      "ext": 886,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "shoulder-flexion.R": {
+      "pass": false,
+      "typ": 1360,
+      "ext": 2093,
+      "ceiling": [
+       727,
+       1322
+      ]
+     },
+     "shoulder-abduction.R": {
+      "pass": false,
+      "typ": 1635,
+      "ext": 1810,
+      "ceiling": [
+       1201,
+       1175
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2517,
+      "ext": 4046,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     },
+     "combo-cast-open-palm.L": {
+      "pass": false,
+      "typ": 1048,
+      "ext": 1312,
+      "ceiling": [
+       647,
+       792
+      ]
+     }
+    }
+   },
+   {
+    "variant": "ray binding (c03-bind) + follow 0.5",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/c03-bind-h1/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 1133,
+      "ext": 1653,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": false,
+      "typ": 1040,
+      "ext": 1268,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1298,
+      "ext": 1748,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": true,
+      "typ": 589,
+      "ext": 803,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": true,
+      "typ": 205,
+      "ext": 886,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "shoulder-flexion.R": {
+      "pass": false,
+      "typ": 1420,
+      "ext": 2106,
+      "ceiling": [
+       727,
+       1322
+      ]
+     },
+     "shoulder-abduction.R": {
+      "pass": false,
+      "typ": 1332,
+      "ext": 1741,
+      "ceiling": [
+       1201,
+       1175
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2601,
+      "ext": 3872,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     },
+     "combo-cast-open-palm.L": {
+      "pass": false,
+      "typ": 1054,
+      "ext": 1300,
+      "ceiling": [
+       647,
+       792
+      ]
+     }
+    }
+   },
+   {
+    "variant": "proximity binding 20-40 mm + follow 0.3",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/breakdown-c04-bind-p1-c03-h2/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 1214,
+      "ext": 2212,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": false,
+      "typ": 624,
+      "ext": 896,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1585,
+      "ext": 2250,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": false,
+      "typ": 186,
+      "ext": 290,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "shoulder-axial-minus.L": {
+      "pass": true,
+      "typ": 199,
+      "ext": 432,
+      "ceiling": [
+       723,
+       704
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": false,
+      "typ": 246,
+      "ext": 896,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2601,
+      "ext": 4501,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     }
+    }
+   },
+   {
+    "variant": "proximity binding 35-60 mm + follow 0.2",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/breakdown-c04-bind-p2-c03-h3/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 1227,
+      "ext": 2035,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": true,
+      "typ": 521,
+      "ext": 725,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1267,
+      "ext": 1694,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": true,
+      "typ": 123,
+      "ext": 204,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "shoulder-axial-minus.L": {
+      "pass": true,
+      "typ": 150,
+      "ext": 246,
+      "ceiling": [
+       723,
+       704
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": false,
+      "typ": 201,
+      "ext": 905,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2580,
+      "ext": 4060,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     }
+    }
+   },
+   {
+    "variant": "hinge at inner top edge + follow 0.3",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/breakdown-c05-hinge-l0-c03-h2/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 929,
+      "ext": 1725,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": false,
+      "typ": 690,
+      "ext": 845,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1050,
+      "ext": 1684,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": true,
+      "typ": 123,
+      "ext": 204,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": false,
+      "typ": 201,
+      "ext": 905,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2154,
+      "ext": 3655,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     }
+    }
+   },
+   {
+    "variant": "hinge + 5 mm lift + follow 0.3",
+    "result": "runs/qa/ro-swordsman-character-v1/v001/breakdown-c05-hinge-l5-c03-h2/joint-range-result.json",
+    "motions": {
+     "shoulder-flexion.L": {
+      "pass": false,
+      "typ": 876,
+      "ext": 1735,
+      "ceiling": [
+       600,
+       1140
+      ]
+     },
+     "shoulder-extension.L": {
+      "pass": true,
+      "typ": 712,
+      "ext": 771,
+      "ceiling": [
+       745,
+       794
+      ]
+     },
+     "shoulder-abduction.L": {
+      "pass": false,
+      "typ": 1004,
+      "ext": 1632,
+      "ceiling": [
+       1106,
+       1120
+      ]
+     },
+     "shoulder-axial-plus.L": {
+      "pass": false,
+      "typ": 129,
+      "ext": 196,
+      "ceiling": [
+       755,
+       883
+      ]
+     },
+     "elbow-flexion.L": {
+      "pass": false,
+      "typ": 241,
+      "ext": 934,
+      "ceiling": [
+       208,
+       897
+      ]
+     },
+     "combo-arms-overhead": {
+      "pass": false,
+      "typ": 2077,
+      "ext": 3588,
+      "ceiling": [
+       1380,
+       2568
+      ]
+     }
+    }
+   }
+  ],
+  "finding": "Binding the core copy of the shoulder armour to the pauldron removes almost all core-pauldron contacts that moving the pauldron would create (333 to 4 at typical shoulder flexion), and a hinge at the inner top edge cuts the cuirass contacts by about a third. Still no variant brings shoulder flexion, abduction or arms-overhead under the baseline ceilings: the pauldron rim sits 4 mm inside the cuirass at rest, and the bound copy now rubs the core arm and chest (core self pairs 300 to 650).",
+  "conclusion": "Under the frozen count-based body ratchet, moving pauldrons has not converged after seven variants; the remaining contacts are hidden rim and under-armour contacts that the count cannot tell apart from visible penetration."
+ },
+ "hyper3d_question": {
+  "asked": "是否執行用 hyper3d可以加速任務執行?",
+  "local_records": "5 past operations, each 0.5 credits consumed, 3 to 6 minutes from submit to download (runs/hyper3d/operations)",
+  "available": "Gen-2.5 generation from images or text (Raw/Quad, face count, materials, TAPose, symmetry, seed)",
+  "not_available": "part splitting (BANG), texture-only, agentic edit, rigging or animation (docs/hyper3d-api-entry.md)",
+  "no_api_call_made": true
+ },
+ "new_paid_submissions": 0
+}

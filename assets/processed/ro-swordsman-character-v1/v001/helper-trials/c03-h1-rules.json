@@ -1,0 +1,100 @@
+{
+ "schema_version": 1,
+ "id": "ro-swordsman-character-v1-v001-c03-h1",
+ "status": "candidate",
+ "quaternion_convention": "wxyz; rest-relative local rotation of the bone",
+ "drivers": {
+  "grasp.R": {
+   "type": "state",
+   "key": "grasp.R"
+  },
+  "grasp.L": {
+   "type": "state",
+   "key": "grasp.L"
+  }
+ },
+ "channels": [
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.L",
+   "curve": {
+    "type": "linear"
+   }
+  }
+ ],
+ "helpers": [
+  {
+   "bone": "pauldron.L",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "upper_arm.L",
+     "share": 0.5,
+     "swing_only": true
+    }
+   ]
+  },
+  {
+   "bone": "pauldron.R",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "upper_arm.R",
+     "share": 0.5,
+     "swing_only": true
+    }
+   ]
+  },
+  {
+   "bone": "coat.L",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "upper_leg.L",
+     "share": 0.6,
+     "swing_only": true
+    }
+   ]
+  },
+  {
+   "bone": "coat.R",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "upper_leg.R",
+     "share": 0.6,
+     "swing_only": true
+    }
+   ]
+  },
+  {
+   "bone": "tabard",
+   "owner": "runtime_evaluator",
+   "follow": [
+    {
+     "source": "upper_leg.L",
+     "share": 0.3,
+     "swing_only": true
+    },
+    {
+     "source": "upper_leg.R",
+     "share": 0.3,
+     "swing_only": true
+    }
+   ]
+  }
+ ]
+}

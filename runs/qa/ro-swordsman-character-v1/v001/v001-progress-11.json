@@ -1,0 +1,51 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T08:15:11Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "status": "in_progress (interval open; not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602,
+  1277
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z",
+  "2026-10-05T07:16:26Z"
+ ],
+ "active_seconds_total": 5328,
+ "open_interval_start_utc": "2026-10-05T07:54:20Z",
+ "open_interval_note": "07:51:57-07:54:20Z (143 s) was the r6 setup, booked to the r6 baseline as in earlier versions; the candidate interval starts after it.",
+ "trial_seconds_cap": 64800,
+ "trial_cap_source": "requests/ro-swordsman-character-v1-r6.json (authorization entry 10)",
+ "current_best_foundation": "b05-twist (b03 BLEND + rules with forearm twist helpers + poses without hand-keyed twist); runs/qa/ro-swordsman-character-v1/v001/b05-twist/build-record.json",
+ "done_this_interval": [
+  "r6 frozen and baseline registered",
+  "twist_only helper rule (Python+JS, tests)",
+  "b05-twist joint range 73/73, readback 4.206 um, runtime 4.642 um",
+  "shared measurement module scripts/cv1_soup.py (joint-range output identical before/after)",
+  "interaction config module + registry (scripts/cv1_interaction.py, tests)",
+  "arm IK module, clip authoring tool, clip check tool",
+  "Idle a01 refused (grip out of reach), a02 authored (wrist bend 10-12 deg); Idle interaction config registered 08:14:48Z"
+ ],
+ "next": [
+  "Idle a02 clip check result",
+  "runtime closed loop for clips (multi-clip export + harness)",
+  "Walk/Run (foot IK)"
+ ],
+ "new_paid_submissions": 0
+}

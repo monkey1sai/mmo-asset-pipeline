@@ -1,0 +1,80 @@
+{
+  "observed_utc": "2026-10-05T03:16:02.458148+00:00",
+  "status": "verified_handoff_received",
+  "handoff_scope": "Conversation and repo TODO transfer; no new production stage",
+  "conversation_id": "6ac30789-321c-83ee-83ba-e0b2efb866d4",
+  "conversation_title": "自然包握設計決策",
+  "source_turns": 3,
+  "source_messages": 6,
+  "source_hasMore": false,
+  "attachments_returned": 0,
+  "referenced_spec_attachment_retrieved": false,
+  "Claude_receipt_status": "RECEIVED",
+  "Claude_exit_code": 0,
+  "Claude_num_turns": 1,
+  "CLI_version_observed": "2.1.282",
+  "receipt_session_persisted": false,
+  "no_background_jobs_running": true,
+  "model_production_started": false,
+  "new_Hyper3D_operations": 0,
+  "live_reverified_r008_r009_history_files": 310,
+  "live_reverified_r010_document_files": 6,
+  "live_reverified_final_GLB": true,
+  "historical_r010_unit_tests": 131,
+  "unit_tests_rerun_this_handoff": false,
+  "diff_check_passed": true,
+  "launcher_syntax_parsed": true,
+  "git_heads": {
+    "worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+    "main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "staged_paths": [],
+  "Git_mutations_performed": false,
+  "files": [
+    {
+      "path": "docs/handoffs/claude-code-character-animation-v1-20261005.md",
+      "bytes": 16746,
+      "sha256": "0cf5f09c2dffe76a918d14b86d1b3b87fabae888773d491c02c6e282aff9aab6"
+    },
+    {
+      "path": "scripts/receive_claude_character_handoff.py",
+      "bytes": 8572,
+      "sha256": "494e4be60fde3bc5a2f4e03286e8e41a2a74b8421c39b06b99ba8572d21f6566"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/authorization-envelope.json",
+      "bytes": 1680,
+      "sha256": "2f9a4057856f973e54e12ac5ebbd95563dcf8c05cfda6b1b991e6f2ed464a813"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/claude-acknowledgement.md",
+      "bytes": 3077,
+      "sha256": "65a68a1d9d993c61d0394a93a896db4a6ed0fb37b4d302625d79e57fd7dae0ca"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/claude-receipt.json",
+      "bytes": 4569,
+      "sha256": "a68939931340c8cbeeef0839e9af8a307b43bbccb50d6cd6d115047e40918be9"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/conversation-source.json",
+      "bytes": 40153,
+      "sha256": "386e32282dc0fff9d689a677231c9e9bed69ae1de10dd1a763e27dd615591f09"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/conversation-source.md",
+      "bytes": 38361,
+      "sha256": "5d1e2d752736aeeb88f7c6e87fac2e5706b3f397177d6e4e16d37cf24b18c30c"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/readonly-snapshot.json",
+      "bytes": 946,
+      "sha256": "eb4f4d69a6d6bbe11985a2434b138fa8a5122343484b922d489b50690d8cd8ec"
+    },
+    {
+      "path": "runs/handoffs/claude-code-character-animation-v1-20261005/sent-payload.txt",
+      "bytes": 61085,
+      "sha256": "60f8d16e2f9fe73da00bfcb157767ea89b16a0f4e50f47d9539db62881eb7828"
+    }
+  ]
+}

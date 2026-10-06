@@ -1,0 +1,34 @@
+{
+ "observed_utc": "2026-10-05T06:20:56.796236+00:00",
+ "script_sha256": "bcc563895982546b35d34789e7f5d7c859340819ed6e8c5b17895a13fb3ab49d",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/c01-base/ro_character_v001_c01-base.blend",
+  "sha256": "90c659e384deb10fc9ebd9b6b823f39a05acd314caafe7aef63289164f108b24"
+ },
+ "source_sha256_after": "90c659e384deb10fc9ebd9b6b823f39a05acd314caafe7aef63289164f108b24",
+ "spec": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/bind-spec-shoulders.json",
+  "sha256": "fa228694f81db82ba7f39017ecba6bc731f20db6d74d8945266668c78c5e0aed"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/c03-bind/ro_character_v001_c03-bind.blend",
+  "sha256": "752af17d0c4f196a3ce1227581dcaded9875a615c119fd95acb627192a6c8063"
+ },
+ "pieces": [
+  {
+   "armor": "SM_RO_pauldron.L",
+   "bone": "pauldron.L",
+   "vertices_bound": 269,
+   "fully_bound": 3,
+   "share_median": 0.204
+  },
+  {
+   "armor": "SM_RO_pauldron.R",
+   "bone": "pauldron.R",
+   "vertices_bound": 289,
+   "fully_bound": 9,
+   "share_median": 0.235
+  }
+ ],
+ "geometry_shape_keys_uv_unchanged": true
+}

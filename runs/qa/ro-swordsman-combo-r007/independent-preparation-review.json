@@ -1,0 +1,13 @@
+{
+  "reviewer": "Existing hand_phase_review, Astra/high read-only architecture and preparation review",
+  "scope": "New source design, anatomical/topology-first sequence, actual baseline measurement method and prospective budget; advisory, no external file/API authority or asset acceptance",
+  "inputs": ["requests/ro-swordsman-combo-r007.json", "hand-gate-contract.json", "generation-prepared.json", "assembly-measurements.json", "baseline/baseline.json", "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png", "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png"],
+  "finding": "Materially different method and compatible right-hand palm/back designs support preparation; actual generated anatomy, native topology and deformation remain unverified",
+  "required_clarifications": ["Move obsolete58868/492 budget to history; current57039-2742-estimated537 plus256reserve gives5984tri for both hands", "Explicitly require every baked local frame plus intermediate diagnostics; contact only required in holding interval while all intervals must avoid weapon crossing"],
+  "clarifications_implemented": ["hand-gate-contract-v2.json", "contract-clarification.json", "baseline/baked-interval.json", "baseline-binding-v2.json"],
+  "preserved_risks": ["2D refs show extra forearm length, not exact80mm", "Near-straight2Dpose does not prove opposed-thumb pivot or micro-flexed bind", "Ray hits are surface distances, not full cavity/clearance proof", "Rest duplicate adjacency and transverse tests have disclosed exclusions", "Native Quad/target1200 is not automatic animation topology PASS", "Substantial retopology remains substantial production"],
+  "baseline_verdict": "NO_SHIP; only closed endpoint contact subset passes, saved local interval fails",
+  "next_step": "Complete offline verification; keep prepared_not_submitted until exact new task file authority; then one submission and source anatomy/topology inspection before rigging",
+  "review_is_permission": false,
+  "review_started_paid_or_background_work": false
+}

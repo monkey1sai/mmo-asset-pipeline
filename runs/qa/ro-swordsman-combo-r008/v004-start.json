@@ -1,0 +1,182 @@
+{
+  "id": "v004",
+  "started_utc": "2026-10-03T14:43:40.131735+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r008/v002-direction/right_hand_vectors_direction.blend",
+    "sha256": "97521d37054cbd32c05810c1436084452af31a33753739e1c59684691f0e6115"
+  },
+  "previous_pose_source": {
+    "path": "assets/processed/ro-swordsman-combo-r008/v003-digit-control/right_hand_actual_sword_control.blend",
+    "sha256": "4aa46e9c3d07793d6ba2042b421efc7faeb5fd2e40fa5206b5b7f1b6bfe3e5c0"
+  },
+  "weapon": {
+    "path": "runs/qa/ro-swordsman-combo-r008/weapon-probe/actual-weapon.json",
+    "sha256": "08ef39378705e956916bc0a149ae4ff7484ee4f36e1ebbb7e580e85e6a64eaae"
+  },
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "hypothesis": "Collisionconstrained actualcontactsolver withindependentcurl andsplay-beforecurl canformvalidfixed-sourcegrasp.",
+  "change": "Onlyposevariables, splay-beforecurlcomposition, onerigidweapontranslation. Same mesh/UV/weights/boneheads, no siblingweights/correctives/rescale.",
+  "bounds": {
+    "finger1:0": [
+      0.15,
+      0.5
+    ],
+    "finger1:1": [
+      0.6,
+      1.4
+    ],
+    "finger1:2": [
+      0.3,
+      1.05
+    ],
+    "finger2:0": [
+      0.35,
+      1.05
+    ],
+    "finger2:1": [
+      0.6,
+      1.6
+    ],
+    "finger2:2": [
+      0.4,
+      1.1
+    ],
+    "finger3:0": [
+      0.35,
+      1.05
+    ],
+    "finger3:1": [
+      0.6,
+      1.6
+    ],
+    "finger3:2": [
+      0.4,
+      1.1
+    ],
+    "finger4:0": [
+      0.35,
+      1.05
+    ],
+    "finger4:1": [
+      0.6,
+      1.6
+    ],
+    "finger4:2": [
+      0.4,
+      1.1
+    ],
+    "thumb:0": [
+      0.1,
+      0.45
+    ],
+    "thumb:1": [
+      0.3,
+      1.1
+    ],
+    "thumb:2": [
+      0.1,
+      0.65
+    ],
+    "splay:finger1": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger2": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger3": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger4": [
+      -0.15,
+      0.15
+    ],
+    "pronation": [
+      0.2,
+      0.9
+    ],
+    "shift:0": [
+      -0.012,
+      0.012
+    ],
+    "shift:1": [
+      -0.045,
+      -0.018
+    ],
+    "shift:2": [
+      -0.035,
+      0.005
+    ]
+  },
+  "initial_controls": {
+    "id": "shallow",
+    "finger1": [
+      0.4,
+      0.75,
+      0.45
+    ],
+    "finger2": [
+      0.65,
+      0.95,
+      0.55
+    ],
+    "finger3": [
+      0.7,
+      1.0,
+      0.55
+    ],
+    "finger4": [
+      0.65,
+      0.95,
+      0.55
+    ],
+    "thumb": [
+      0.25,
+      0.65,
+      0.35
+    ],
+    "pronation": 0.4
+  },
+  "initial_splays": {
+    "finger1": 0.05,
+    "finger2": 0.02,
+    "finger3": -0.02,
+    "finger4": -0.04
+  },
+  "initial_shift": [
+    0,
+    -0.033,
+    -0.024
+  ],
+  "maximum_evaluations": 480,
+  "max_solver_seconds": 1800,
+  "steps": [
+    {
+      "curl": 0.1,
+      "splay": 0.045,
+      "shift": 0.005
+    },
+    {
+      "curl": 0.05,
+      "splay": 0.0225,
+      "shift": 0.0025
+    },
+    {
+      "curl": 0.025,
+      "splay": 0.01125,
+      "shift": 0.00125
+    }
+  ],
+  "fixed_sweeps_per_step": 3,
+  "adaptive_seed_restart": false,
+  "objective": "Hardactualself/swordcross,unknown,depth thenworstperdigitthirdpadgap; no padresampling, no creditforsomefingersoffsetothers. Overall functiongate still requiresall originalconstraints plusvisualopposition.",
+  "finaltests": "Fullsavedbest allpairs/inside/contact/image; ifstaticgatepass fixedweaponapproach->grip61actual+60half samples; onlythenUV andwholeassembly.",
+  "candidate_limit": 4,
+  "previous_candidates_used": 3,
+  "new_credits": 0
+}

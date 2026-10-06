@@ -1,0 +1,123 @@
+{
+  "observed_utc": "2026-10-03T12:52:53.249239+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+    "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599"
+  },
+  "initial_bad": [
+    47,
+    54
+  ],
+  "final_bad": [
+    54
+  ],
+  "sequence_probes": 72,
+  "maximum_second_step_probes": 160,
+  "best_sequence": {
+    "seed": {
+      "edge_vertices": [
+        49,
+        50
+      ],
+      "ccw": true
+    },
+    "second_edge": [
+      649,
+      651
+    ],
+    "ccw": true,
+    "event_kind": "two_step_sequence_probe",
+    "remaining_bad": [
+      54
+    ],
+    "geometry": {
+      "sampled_bidirectional_surface_max_m": 0.0009774041827768087,
+      "surface_sample_count": 54,
+      "degenerate_triangles": 0,
+      "changed_faces_wrong_normal": 0,
+      "neutral_transverse_pairs": 0,
+      "boundary_edges": 18,
+      "boundary_degree2": true,
+      "manifold_except_cuff": true,
+      "actual_corner_UV_pass": true,
+      "unchanged_faces_read_back": 862,
+      "new_or_moved_poles": [
+        {
+          "vertex": 49,
+          "valence": 3,
+          "IP_axial_m": 0.009000251514407864,
+          "IP_radial_m": 0.010036754223487616
+        },
+        {
+          "vertex": 54,
+          "valence": 3,
+          "IP_axial_m": 0.006382341592598095,
+          "IP_radial_m": 0.010031485172205772
+        },
+        {
+          "vertex": 649,
+          "valence": 3,
+          "IP_axial_m": 0.007024006969004404,
+          "IP_radial_m": 0.011731199729270335
+        }
+      ],
+      "pole_wrong_destination": [
+        49,
+        54,
+        649
+      ],
+      "gate": false
+    }
+  },
+  "actual_geometry_check": {
+    "sampled_bidirectional_surface_max_m": 0.0009774041827768087,
+    "surface_sample_count": 54,
+    "degenerate_triangles": 0,
+    "changed_faces_wrong_normal": 0,
+    "neutral_transverse_pairs": 0,
+    "boundary_edges": 18,
+    "boundary_degree2": true,
+    "manifold_except_cuff": true,
+    "actual_corner_UV_pass": true,
+    "unchanged_faces_read_back": 862,
+    "new_or_moved_poles": [
+      {
+        "vertex": 49,
+        "valence": 3,
+        "IP_axial_m": 0.009000251514407864,
+        "IP_radial_m": 0.010036754223487616
+      },
+      {
+        "vertex": 54,
+        "valence": 3,
+        "IP_axial_m": 0.006382341592598095,
+        "IP_radial_m": 0.010031485172205772
+      },
+      {
+        "vertex": 649,
+        "valence": 3,
+        "IP_axial_m": 0.007024006969004404,
+        "IP_radial_m": 0.011731199729270335
+      }
+    ],
+    "pole_wrong_destination": [
+      49,
+      54,
+      649
+    ],
+    "gate": false
+  },
+  "vertex_positions_unchanged": true,
+  "source_gate": false,
+  "rig_created": false,
+  "animation_topology_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v002-two-step/right_hand_two_step.blend",
+    "sha256": "04f367b2ee3b8cc6b4e1e11debba7f2833e387b6eb36e0203f8238f8932bcb18"
+  },
+  "limitations": [
+    "Surface samples are discrete; no complete continuous surface equivalence proof",
+    "Neutral transverse diagnostic excludes adjacent/tangential folds",
+    "Pole-band pass would only permit small-motion testing"
+  ]
+}

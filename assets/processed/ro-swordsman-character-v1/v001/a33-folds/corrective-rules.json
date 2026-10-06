@@ -1,0 +1,185 @@
+{
+ "schema_version": 1,
+ "id": "ro-swordsman-character-v1-v001-a33-folds",
+ "status": "candidate",
+ "quaternion_convention": "wxyz; rest-relative local rotation of the bone",
+ "drivers": {
+  "grasp.R": {
+   "type": "state",
+   "key": "grasp.R"
+  },
+  "grasp.L": {
+   "type": "state",
+   "key": "grasp.L"
+  },
+  "fold.01": {
+   "type": "rotation_difference",
+   "bone": "spine_02",
+   "target_quaternion_wxyz": [
+    0.9970861077308655,
+    -2.9188883948760846e-11,
+    0.07581745833158493,
+    0.008424158208072186
+   ],
+   "target_source": "spine_02 in spine-twist at the typical level"
+  },
+  "fold.02": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.7933533787727356,
+    -0.4529437720775604,
+    -0.30861377716064453,
+    -0.2649337947368622
+   ],
+   "target_source": "upper_arm.L in shoulder-flexion.L at the typical level"
+  },
+  "fold.03": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.5000001192092896,
+    0.439034640789032,
+    -0.0035304503981024027,
+    -0.7464824914932251
+   ],
+   "target_source": "upper_arm.L in shoulder-abduction.L at the extreme level"
+  },
+  "fold.04": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.2588191628456116,
+    -0.7186889052391052,
+    0.48967957496643066,
+    0.4203721582889557
+   ],
+   "target_source": "upper_arm.R in shoulder-flexion.R at the extreme level"
+  },
+  "fold.05": {
+   "type": "rotation_difference",
+   "bone": "upper_leg.L",
+   "target_quaternion_wxyz": [
+    0.9063077569007874,
+    -0.4198639392852783,
+    -0.034549787640571594,
+    -0.03356817364692688
+   ],
+   "target_source": "upper_leg.L in combo-deep-squat at the typical level"
+  },
+  "fold.06": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.L",
+   "target_quaternion_wxyz": [
+    0.7071067690849304,
+    -0.5261167287826538,
+    -0.3584703207015991,
+    -0.30773383378982544
+   ],
+   "target_source": "upper_arm.L in combo-cast-open-palm.L at the extreme level"
+  },
+  "fold.07": {
+   "type": "rotation_difference",
+   "bone": "upper_arm.R",
+   "target_quaternion_wxyz": [
+    0.7648067474365234,
+    -0.5918562412261963,
+    9.741781781258396e-08,
+    0.2545129656791687
+   ],
+   "target_source": "upper_arm.R in combo-two-hand-chop at the typical level"
+  }
+ },
+ "channels": [
+  {
+   "mesh": "SM_RO_hand.R",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.R",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "morph": "SK_RO_GraspPulp_Corrective",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.L",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_01",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.01",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_02",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.02",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_03",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.03",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_04",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.04",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_05",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.05",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_06",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.06",
+   "curve": {
+    "type": "linear"
+   }
+  },
+  {
+   "mesh": "SM_RO_core",
+   "morph": "SKC_core_fold_07",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "fold.07",
+   "curve": {
+    "type": "linear"
+   }
+  }
+ ]
+}

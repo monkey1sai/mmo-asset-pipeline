@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo",
+  "request_sha256": "9e3ea59bc4ef1a556135f79413233df75ed2d165a810b5f4a56998346e48d2cc",
+  "protocol_sha256": "464fb0b3e748684e54108b5939a77c17721a25a31ef1d8bc361e6bf05ccf5025",
+  "trials": [],
+  "status": "blocked",
+  "note": "No valid fully-reviewed baseline was recorded before revisions. Do not invent elapsed_seconds, scores or parent-best history. Actual three revisions remain spent; empty trials do not reset production budget.",
+  "production_attempts": [
+    {
+      "id": "v001",
+      "role": "baseline diagnostic",
+      "construction_report": {
+        "path": "runs/qa/ro-swordsman-combo/v001/construction-check.json",
+        "sha256": "4d4cc3c28c5186a2e0fd3758bd78921b216a668a55a44a86dea55f66ea4f7e09"
+      },
+      "numeric_roundtrip": {
+        "path": "runs/qa/ro-swordsman-combo/v001/roundtrip-check.json",
+        "sha256": "ebc7635a6bc4b2bcd42138b169a87353a1e49b7a5d76cbcfeab78e2adbd691d5"
+      },
+      "full_elapsed_accounting": "not_recorded",
+      "completed_quality_trial": false
+    },
+    {
+      "id": "v002",
+      "role": "revision diagnostic",
+      "construction_report": {
+        "path": "runs/qa/ro-swordsman-combo/v002/construction-check.json",
+        "sha256": "2f40d1b8a6ead9a45d7456ce4c19c86940b410d09fff45c573a7349c27ac7b8e"
+      },
+      "numeric_roundtrip": {
+        "path": "runs/qa/ro-swordsman-combo/v002/roundtrip-check.json",
+        "sha256": "b6850e0b3bc66b0b97c4e770735790ecd768bcc2a84deeebe9b29bd26dd44bba"
+      },
+      "full_elapsed_accounting": "not_recorded",
+      "completed_quality_trial": false
+    },
+    {
+      "id": "v003",
+      "role": "revision diagnostic",
+      "construction_report": {
+        "path": "runs/qa/ro-swordsman-combo/v003/construction-check.json",
+        "sha256": "6636ad47103a3ddc67f0f58d59ed82fb8b179bd3f09b6038480e79200a63c639"
+      },
+      "numeric_roundtrip": {
+        "path": "runs/qa/ro-swordsman-combo/v003/roundtrip-check.json",
+        "sha256": "a62fd7f74db460277850b4c6228078cad71ec69a1d0a3803b1765e2ac70386f7"
+      },
+      "full_elapsed_accounting": "not_recorded",
+      "completed_quality_trial": false
+    },
+    {
+      "id": "v004",
+      "role": "revision diagnostic",
+      "construction_report": {
+        "path": "runs/qa/ro-swordsman-combo/v004/construction-check.json",
+        "sha256": "0e667ac080db77431057ad09c7796c9674dacb9022acb7852fb1b0d2f4f78eb5"
+      },
+      "numeric_roundtrip": {
+        "path": "runs/qa/ro-swordsman-combo/v004/roundtrip-check.json",
+        "sha256": "498cc1e5d44344365d05cb93d8a8b3e3542f0df781b3345260bfe35d01c6d26e"
+      },
+      "full_elapsed_accounting": "not_recorded",
+      "completed_quality_trial": false
+    }
+  ],
+  "actual_revision_usage": {
+    "used": 3,
+    "limit": 3,
+    "remaining": 0,
+    "source": "Preserved baseline v001 and diagnostic revisions v002/v003/v004; API candidate included in last revision."
+  }
+}

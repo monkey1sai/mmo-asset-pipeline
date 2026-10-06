@@ -1,0 +1,34 @@
+{
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+ "evaluator_files": [
+  "scripts/cv1_pose_rules.py",
+  "tools/runtime-qa/three/src/cv1-pose-rules.js",
+  "tools/runtime-qa/three/src/cv1-runtime.js"
+ ],
+ "meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R",
+  "SM_RO_sword"
+ ],
+ "bones": 62,
+ "actions_present": [],
+ "signature": {
+  "mesh": "4154600f6f44c99e1ee8c751b9de29bab50e1a1476fa2a20edd8a4eb652c1156",
+  "rest": "d9894d8e20acf5e761638cabecbb97187f5b6051a221f3e4e102d17a4dbcd20e",
+  "weights": "f1258ac9115f3299772a43f50d331cfd3b1ddaa117a7dbadae3a78f80d39e163",
+  "morphs": "fb815bcdaad357909d318c6c3acc80de75dffba9b0e30f33c072fae13d7a1035",
+  "rules": "ccde8982cd8c8a56008005f536a5e6e749a3c5b273ad4d7619f43406d2bb9021",
+  "evaluator": "42c9db19ffb1d28da4c8600e4507a16152f9c8d96f7170da99e4182e1d74639e"
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "v004",
+  "started_utc": "2026-10-04T05:44:19.077830+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v003-local-animation/right_hand_grasp_61f.blend",
+    "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+    "sha256": "09773ab0b04439b2cc362946c5086aade223ce520807ef9c70172264ce487749"
+  },
+  "hypothesis": "Conservative closed-oriented-solid classification resolves a numerical ray ambiguity without changing actual shape, pose or acceptance thresholds.",
+  "change": "Only supplemental classification of original unknown rays: winding0/abs1 within1e-7, nearest>=1um andclosedorientationverified, elseunknown retained; originalreports separatelysaved.",
+  "original_unknown_gate": 0,
+  "method_change_recorded": true,
+  "geometry_animation_unchanged": true,
+  "prior_candidates_used": 3,
+  "last_candidate": true,
+  "new_credits": 0,
+  "expected_points": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v003-local-animation/expected-animation-points.npz",
+    "sha256": "56c6107ee8c9c651628bb610205aa1cfbf8e368e26ee9d58158a90fcff18107d"
+  },
+  "no_clock_reset": true
+}

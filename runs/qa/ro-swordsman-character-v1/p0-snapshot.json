@@ -1,0 +1,108 @@
+{
+ "observed_utc": "2026-10-05T03:27:49.397856+00:00",
+ "phase": "P0 read-only verification and request draft",
+ "git_head_worktree": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+ "staged_paths": [],
+ "model_production_started": false,
+ "new_API_submissions": 0,
+ "git_mutations": false,
+ "r010_reopened": false,
+ "history_recheck": {
+  "r010_phase_start_entries": 311,
+  "mismatch": 0,
+  "missing": 0,
+  "integrity_final_documents": 6,
+  "handoff_files": 9
+ },
+ "unit_tests_rerun": 131,
+ "unit_tests_result": "OK",
+ "files_added_this_phase": [
+  {
+   "path": "requests/ro-swordsman-character-v1.json",
+   "bytes": 31943,
+   "sha256": "0014fafce33353af706f56e054cfa29df1ef6edcd6d925046d00a7f767fb64f2"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-inspect-blend-used.py",
+   "bytes": 4361,
+   "sha256": "461e3ba4f5aa3fbb6c65d40706902f5cea874eeeec3937f30d544438120be844"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-pipeline-validate.log",
+   "bytes": 206,
+   "sha256": "7f80bd86e2448519f4d0eb1da7085e08760da8420a47366bab62b709e8b23a57"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-r010-hand-inspect.json",
+   "bytes": 11102,
+   "sha256": "8b195f2bbdf1fab9fdb7289b3d4bb6686ce3aa15422b63aa4a287f96745d2536"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-request-validate.json",
+   "bytes": 1485,
+   "sha256": "1cd25872c5107bae050d7a2695913c11d8cd8331372226f975844a5529e86658"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-unit-tests.log",
+   "bytes": 18433,
+   "sha256": "52cb40ebc25df92ee1155d2ba8f27f198e77d20cd0d41dca30b9e94c7acea5fb"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-verification.md",
+   "bytes": 15171,
+   "sha256": "7579acd9d50fabacfe1d991e6867a5a9cadcacaa1e0ccd6ad717b41baaf76e1f"
+  },
+  {
+   "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+   "bytes": 32422,
+   "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+  }
+ ],
+ "inspected_sources_unchanged": [
+  {
+   "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+   "bytes": 42525711,
+   "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.glb",
+   "bytes": 34937204,
+   "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.blend",
+   "bytes": 42525711,
+   "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.glb",
+   "bytes": 34937204,
+   "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend",
+   "bytes": 1769627,
+   "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  },
+  {
+   "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_exact_weights.glb",
+   "bytes": 499208,
+   "sha256": "54c27c256e4b06a2312a8d0562e68195a64a5b502b21e23a5d0d3c453d773502"
+  },
+  {
+   "path": "requests/ro-swordsman-combo.json",
+   "bytes": 12516,
+   "sha256": "b71c1ae300432ef9d90c7494d5d1e7bed976622d509a4992e6ed3dcd6bc95584"
+  },
+  {
+   "path": "requests/ro-swordsman-combo-r010.json",
+   "bytes": 17466,
+   "sha256": "561f23394006f40a8d657afb1d2d9162efdc4a0b07136d27722d73fd5e811f74"
+  },
+  {
+   "path": "docs/handoffs/claude-code-character-animation-v1-20261005.md",
+   "bytes": 16746,
+   "sha256": "0cf5f09c2dffe76a918d14b86d1b3b87fabae888773d491c02c6e282aff9aab6"
+  }
+ ]
+}

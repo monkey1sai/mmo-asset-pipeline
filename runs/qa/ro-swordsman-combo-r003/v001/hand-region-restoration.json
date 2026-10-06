@@ -1,0 +1,280 @@
+{
+  "same_trial": "v001",
+  "started_utc": "2026-10-02T15:59:45.332553+00:00",
+  "source_hashes": {
+    "ro_swordsman_preflight.blend": "ef0db191fd6f8154d3b5a2e0cba90d163c44c256d14cbab11459017bddcd6d50",
+    "ro_swordsman_refined_preflight.blend": "06d27c66a228ce9023cc882323c7df6859b7de19bd1e7e66144473e1c7cb755b"
+  },
+  "selection": "Original dominant hand/thumb/finger bone with >=50% total hand influence; rest sanity assertion, not a box replacement.",
+  "selected_vertices": 842,
+  "restored_vertices": 9,
+  "restored_indices": [
+    41,
+    119,
+    7478,
+    7479,
+    7480,
+    7481,
+    7482,
+    7495,
+    9679
+  ],
+  "coordinates_unchanged": true,
+  "UV_unchanged": true,
+  "stress_diagnostics": [
+    {
+      "pose": "overhead",
+      "edges_over8x_and100mm": 0,
+      "largest": [],
+      "tracked": [
+        {
+          "indices": [
+            41,
+            42
+          ],
+          "length_m": 0.003853619079764049,
+          "ratio": 0.9293961395127697
+        },
+        {
+          "indices": [
+            119,
+            9677
+          ],
+          "length_m": 0.006345234994284802,
+          "ratio": 0.9091310198158112
+        }
+      ]
+    },
+    {
+      "pose": "deep-crouch",
+      "edges_over8x_and100mm": 152,
+      "largest": [
+        {
+          "edge": 31089,
+          "indices": [
+            16212,
+            16213
+          ],
+          "ratio": 32.10548824279561,
+          "length_m": 0.1707436524583042
+        },
+        {
+          "edge": 11474,
+          "indices": [
+            16217,
+            16330
+          ],
+          "ratio": 29.71752894997195,
+          "length_m": 0.16689428818345925
+        },
+        {
+          "edge": 11479,
+          "indices": [
+            16331,
+            16338
+          ],
+          "ratio": 29.68734607599976,
+          "length_m": 0.16632851039227847
+        },
+        {
+          "edge": 58640,
+          "indices": [
+            16209,
+            16211
+          ],
+          "ratio": 29.49329381576357,
+          "length_m": 0.1647861348233405
+        },
+        {
+          "edge": 53966,
+          "indices": [
+            16206,
+            16210
+          ],
+          "ratio": 28.174800391034577,
+          "length_m": 0.1636730056479285
+        },
+        {
+          "edge": 5155,
+          "indices": [
+            16205,
+            17031
+          ],
+          "ratio": 27.263628970922042,
+          "length_m": 0.17395787483546876
+        },
+        {
+          "edge": 19813,
+          "indices": [
+            1190,
+            1193
+          ],
+          "ratio": 25.877775289970337,
+          "length_m": 0.1925766485945908
+        },
+        {
+          "edge": 5156,
+          "indices": [
+            16059,
+            17032
+          ],
+          "ratio": 25.854647215970967,
+          "length_m": 0.18745679247108668
+        },
+        {
+          "edge": 5420,
+          "indices": [
+            17634,
+            17635
+          ],
+          "ratio": 25.39500535198877,
+          "length_m": 0.16378741757828555
+        },
+        {
+          "edge": 51244,
+          "indices": [
+            18000,
+            18001
+          ],
+          "ratio": 25.362260179089223,
+          "length_m": 0.18624374159613408
+        }
+      ],
+      "tracked": [
+        {
+          "indices": [
+            41,
+            42
+          ],
+          "length_m": 0.003792990815566153,
+          "ratio": 0.9147741248495209
+        },
+        {
+          "indices": [
+            119,
+            9677
+          ],
+          "length_m": 0.005923822383756187,
+          "ratio": 0.8487519673901405
+        }
+      ]
+    },
+    {
+      "pose": "downslash",
+      "edges_over8x_and100mm": 91,
+      "largest": [
+        {
+          "edge": 31089,
+          "indices": [
+            16212,
+            16213
+          ],
+          "ratio": 22.32220200136083,
+          "length_m": 0.11871410494682878
+        },
+        {
+          "edge": 11474,
+          "indices": [
+            16217,
+            16330
+          ],
+          "ratio": 20.546613137343275,
+          "length_m": 0.11539022574557145
+        },
+        {
+          "edge": 11479,
+          "indices": [
+            16331,
+            16338
+          ],
+          "ratio": 20.40525670617403,
+          "length_m": 0.11432399324012935
+        },
+        {
+          "edge": 58640,
+          "indices": [
+            16209,
+            16211
+          ],
+          "ratio": 20.296545861807402,
+          "length_m": 0.11340168933740093
+        },
+        {
+          "edge": 53966,
+          "indices": [
+            16206,
+            16210
+          ],
+          "ratio": 19.259035739563938,
+          "length_m": 0.11187955980615759
+        },
+        {
+          "edge": 5155,
+          "indices": [
+            16205,
+            17031
+          ],
+          "ratio": 18.957266076700993,
+          "length_m": 0.1209584286417136
+        },
+        {
+          "edge": 5156,
+          "indices": [
+            16059,
+            17032
+          ],
+          "ratio": 18.334847966317074,
+          "length_m": 0.13293516486613371
+        },
+        {
+          "edge": 19813,
+          "indices": [
+            1190,
+            1193
+          ],
+          "ratio": 18.226980898599933,
+          "length_m": 0.13564113823997975
+        },
+        {
+          "edge": 51244,
+          "indices": [
+            18000,
+            18001
+          ],
+          "ratio": 17.963714625371566,
+          "length_m": 0.1319136938573327
+        },
+        {
+          "edge": 18627,
+          "indices": [
+            17995,
+            17996
+          ],
+          "ratio": 17.761126702861155,
+          "length_m": 0.12814491189890465
+        }
+      ],
+      "tracked": [
+        {
+          "indices": [
+            41,
+            42
+          ],
+          "length_m": 0.0041405615456190465,
+          "ratio": 0.9985994558001278
+        },
+        {
+          "indices": [
+            119,
+            9677
+          ],
+          "length_m": 0.006306917564656186,
+          "ratio": 0.9036409845521275
+        }
+      ]
+    }
+  ],
+  "diagnostic_threshold_is_not_acceptance": true,
+  "full_animation": false,
+  "acceptance": "Await independent preflight; cloth defects remain a separate gate."
+}

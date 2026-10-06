@@ -1,0 +1,619 @@
+{
+ "observed_utc": "2026-10-05T03:36:48.754589+00:00",
+ "blender": "4.5.5 LTS",
+ "blender_hash": "836beaaf597a",
+ "source": {
+  "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+  "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+  "role": "real whole character, NO_SHIP baseline; opened read-only, never saved"
+ },
+ "source_saved": false,
+ "source_sha256_after": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+ "phase_start": {
+  "path": "runs/qa/ro-swordsman-character-v1/p1/phase-start.json",
+  "bytes": 4243,
+  "sha256": "d9602865b9b26b6db082da8242153d8045d948ec370d7a1baaf0e8ad46f4c5c1"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/p1-probe-rules.json",
+  "bytes": 1808,
+  "sha256": "dd8c987840f675017175eaa62a86d8a135f33c47faa9ca4addb4a0e2bda7d4c9"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/ro_character_p1_runtime_owner.glb",
+   "bytes": 35162952,
+   "sha256": "936aceb2e3fd5e1553d5770f4714a480793b0d926b41b60426cd72b726b5f7ea"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/p1-closed-loop/ro_character_p1_baked_owner.glb",
+   "bytes": 2459148,
+   "sha256": "29cea78e28eda0817881369415b836cfa9fceea612954e4c02d94bd9e8964581"
+  }
+ },
+ "export_settings": {
+  "export_format": "GLB",
+  "use_selection": true,
+  "export_yup": true,
+  "export_apply": false,
+  "export_skins": true,
+  "export_all_influences": false,
+  "export_def_bones": false,
+  "export_rest_position_armature": true,
+  "export_morph": true,
+  "export_morph_normal": true,
+  "export_animations": true,
+  "export_animation_mode": "SCENE",
+  "export_anim_scene_split_object": false,
+  "export_force_sampling": true,
+  "export_frame_range": true,
+  "export_frame_step": 1,
+  "export_optimize_animation_size": false,
+  "export_attributes": true,
+  "baked_owner_extra": {
+   "export_morph_animation": true,
+   "export_image_format": "NONE"
+  },
+  "runtime_owner_extra": {
+   "export_morph_animation": false
+  }
+ },
+ "id_attribute": "_CV1_ID",
+ "fps": 60,
+ "frame_to_time": "(frame - 1) / fps",
+ "coordinates": "Blender world metres, Z up, -Y front; glTF (x, y, z) = Blender (x, z, -y)",
+ "binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/p1/blender-reference.f64.bin",
+  "bytes": 12908712,
+  "sha256": "31edd58a639e7958c75d330c75b653d30b8be005289a3c7af0153828f5a2a9d8",
+  "dtype": "float64 little-endian",
+  "values_per_vertex": 3
+ },
+ "mesh_layout": [
+  {
+   "name": "SM_RO_WristLoft.R",
+   "vertices": 458,
+   "offset_values_in_block": 0,
+   "morphs": [
+    "WristVolume_025",
+    "WristVolume_050",
+    "WristVolume_075",
+    "WristVolume_100"
+   ]
+  },
+  {
+   "name": "SM_RO_bracer.L",
+   "vertices": 1767,
+   "offset_values_in_block": 1374,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_bracer.R",
+   "vertices": 1364,
+   "offset_values_in_block": 6675,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_coat",
+   "vertices": 6888,
+   "offset_values_in_block": 10767,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_core",
+   "vertices": 7219,
+   "offset_values_in_block": 31431,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_cuirass",
+   "vertices": 6221,
+   "offset_values_in_block": 53088,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_glove.R",
+   "vertices": 1007,
+   "offset_values_in_block": 71751,
+   "morphs": [
+    "GripContact_R"
+   ]
+  },
+  {
+   "name": "SM_RO_pauldron.L",
+   "vertices": 2611,
+   "offset_values_in_block": 74772,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_pauldron.R",
+   "vertices": 2611,
+   "offset_values_in_block": 82605,
+   "morphs": []
+  },
+  {
+   "name": "SM_RO_sword",
+   "vertices": 1493,
+   "offset_values_in_block": 90438,
+   "morphs": []
+  }
+ ],
+ "blocks": [
+  {
+   "label": "baked/frame-1",
+   "offset_values": 0,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 1,
+   "time_s": 0.0,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.0
+   }
+  },
+  {
+   "label": "baked/frame-8.5",
+   "offset_values": 94917,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 8.5,
+   "time_s": 0.125,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.4999999403953552,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.1250002682209015
+   }
+  },
+  {
+   "label": "baked/frame-16",
+   "offset_values": 189834,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 16,
+   "time_s": 0.25,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 1.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.25
+   }
+  },
+  {
+   "label": "baked/frame-23.5",
+   "offset_values": 284751,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 23.5,
+   "time_s": 0.375,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.5,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.4999999403953552,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.375
+   }
+  },
+  {
+   "label": "baked/frame-31",
+   "offset_values": 379668,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 31,
+   "time_s": 0.5,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 1.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.5
+   }
+  },
+  {
+   "label": "baked/frame-46",
+   "offset_values": 474585,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 46,
+   "time_s": 0.75,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 1.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.75
+   }
+  },
+  {
+   "label": "baked/frame-53.5",
+   "offset_values": 569502,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 53.5,
+   "time_s": 0.875,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.5,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.4999999403953552,
+    "SM_RO_glove.R/GripContact_R": 0.8749997615814209
+   }
+  },
+  {
+   "label": "baked/frame-61",
+   "offset_values": 664419,
+   "values": 94917,
+   "mode": "baked_owner",
+   "frame": 61,
+   "time_s": 1.0,
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 1.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   }
+  },
+  {
+   "label": "runtime/frame-1",
+   "offset_values": 759336,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 1,
+   "time_s": 0.0,
+   "grasp": 0,
+   "drivers": {
+    "wrist_progress.R": 1.1796551513398867e-09,
+    "grasp.R": 0.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 4.718620605359547e-09,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.0
+   },
+   "hand.R_rel_wxyz": [
+    1.0,
+    -8.149072527885437e-10,
+    0.0,
+    1.862645149230957e-09
+   ]
+  },
+  {
+   "label": "runtime/frame-8.5",
+   "offset_values": 854253,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 8.5,
+   "time_s": 0.125,
+   "grasp": 0,
+   "drivers": {
+    "wrist_progress.R": 0.12500025784014268,
+    "grasp.R": 0.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.5000010313605707,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.0
+   },
+   "hand.R_rel_wxyz": [
+    0.9893986582756042,
+    0.04369086027145386,
+    -0.05672064423561096,
+    0.12634941935539246
+   ]
+  },
+  {
+   "label": "runtime/frame-16",
+   "offset_values": 949170,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 16,
+   "time_s": 0.25,
+   "grasp": 0.5,
+   "drivers": {
+    "wrist_progress.R": 0.25000000699800906,
+    "grasp.R": 0.5
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.9999999720079638,
+    "SM_RO_WristLoft.R/WristVolume_050": 2.7992036244484098e-08,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.5
+   },
+   "hand.R_rel_wxyz": [
+    0.9578195810317993,
+    0.08645512163639069,
+    -0.11223848164081573,
+    0.2500194013118744
+   ]
+  },
+  {
+   "label": "runtime/frame-23.5",
+   "offset_values": 1044087,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 23.5,
+   "time_s": 0.375,
+   "grasp": 0.5,
+   "drivers": {
+    "wrist_progress.R": 0.37500005143027026,
+    "grasp.R": 0.5
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.49999979427891894,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.5000002057210811,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.5
+   },
+   "hand.R_rel_wxyz": [
+    0.9059321880340576,
+    0.12738646566867828,
+    -0.1653766632080078,
+    0.3683886229991913
+   ]
+  },
+  {
+   "label": "runtime/frame-31",
+   "offset_values": 1139004,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 31,
+   "time_s": 0.5,
+   "grasp": 1,
+   "drivers": {
+    "wrist_progress.R": 0.4999999901659583,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 3.93361667683223e-08,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.9999999606638332,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    0.8348367214202881,
+    0.16561682522296906,
+    -0.21500840783119202,
+    0.4789469540119171
+   ]
+  },
+  {
+   "label": "runtime/frame-46",
+   "offset_values": 1233921,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 46,
+   "time_s": 0.75,
+   "grasp": 1,
+   "drivers": {
+    "wrist_progress.R": 0.7499999577176526,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 1.691293896044499e-07,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.9999998308706104,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    0.6414263248443604,
+    0.23080697655677795,
+    -0.29964008927345276,
+    0.6674700975418091
+   ]
+  },
+  {
+   "label": "runtime/frame-53.5",
+   "offset_values": 1328838,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 53.5,
+   "time_s": 0.875,
+   "grasp": 0,
+   "drivers": {
+    "wrist_progress.R": 0.8749997085749318,
+    "grasp.R": 0.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.5000011657002728,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.49999883429972725,
+    "SM_RO_glove.R/GripContact_R": 0.0
+   },
+   "hand.R_rel_wxyz": [
+    0.5232124328613281,
+    0.2563844621181488,
+    -0.3328455090522766,
+    0.741437554359436
+   ]
+  },
+  {
+   "label": "runtime/frame-61",
+   "offset_values": 1423755,
+   "values": 94917,
+   "mode": "runtime_owner",
+   "frame": 61,
+   "time_s": 1.0,
+   "grasp": 1,
+   "drivers": {
+    "wrist_progress.R": 1.0,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 1.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    0.39390456676483154,
+    0.27652600407600403,
+    -0.3589938282966614,
+    0.7996849417686462
+   ]
+  },
+  {
+   "label": "runtime/blend-1-61-0.5",
+   "offset_values": 1518672,
+   "values": 94917,
+   "mode": "runtime_owner_blend",
+   "frames": [
+    1,
+    61
+   ],
+   "blend": 0.5,
+   "grasp": 0.5,
+   "drivers": {
+    "wrist_progress.R": 0.5000000913163539,
+    "grasp.R": 0.5
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.9999996347345843,
+    "SM_RO_WristLoft.R/WristVolume_075": 3.6526541569159576e-07,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 0.5
+   },
+   "hand.R_rel_wxyz": [
+    0.8348366022109985,
+    0.16561686992645264,
+    -0.2150084674358368,
+    0.4789469838142395
+   ]
+  }
+ ],
+ "rule_fidelity": {
+  "frames": 61,
+  "max_abs_difference": 1.0664818126393527e-06,
+  "limit": 0.001,
+  "pass": true,
+  "worst": {
+   "frame": 39,
+   "max_abs_difference": 1.0664818126393527e-06
+  }
+ },
+ "rest_local_wxyz": {
+  "lower_arm.R": [
+   0.9823416471481323,
+   -0.17354653775691986,
+   0.03638114780187607,
+   0.05968993529677391
+  ],
+  "hand.R": [
+   0.9879878759384155,
+   0.126655712723732,
+   0.026271183043718338,
+   -0.08454681187868118
+  ]
+ },
+ "camera": {
+  "type": "ORTHO",
+  "ortho_scale": 1.009600043296814,
+  "location": [
+   -1.4412108659744263,
+   -1.6022932529449463,
+   1.7122668027877808
+  ],
+  "look_at": [
+   -0.27738213539123535,
+   -0.14750736951828003,
+   0.9848738312721252
+  ],
+  "resolution": 960
+ },
+ "renders": [
+  {
+   "frame": 1,
+   "grasp": 1.0,
+   "drivers": {
+    "wrist_progress.R": 1.1796551513398867e-09,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 4.718620605359547e-09,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    1.0,
+    -8.149072527885437e-10,
+    0.0,
+    1.862645149230957e-09
+   ],
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-001.png",
+    "bytes": 940861,
+    "sha256": "87673144a13fb17cca56daab1d7972836fb5725a2eabac196aef7f441bedad5e"
+   }
+  },
+  {
+   "frame": 31,
+   "grasp": 1.0,
+   "drivers": {
+    "wrist_progress.R": 0.4999999901659583,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 3.93361667683223e-08,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.9999999606638332,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 0.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    0.8348367214202881,
+    0.16561682522296906,
+    -0.21500840783119202,
+    0.4789469540119171
+   ],
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-031.png",
+    "bytes": 916591,
+    "sha256": "34f948e61949399b189718b0fc4bbdeee8cb756a093a4c9dc8907c5630f12ac8"
+   }
+  },
+  {
+   "frame": 61,
+   "grasp": 1.0,
+   "drivers": {
+    "wrist_progress.R": 1.0,
+    "grasp.R": 1.0
+   },
+   "morph_weights": {
+    "SM_RO_WristLoft.R/WristVolume_025": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_050": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_075": 0.0,
+    "SM_RO_WristLoft.R/WristVolume_100": 1.0,
+    "SM_RO_glove.R/GripContact_R": 1.0
+   },
+   "hand.R_rel_wxyz": [
+    0.39390456676483154,
+    0.27652600407600403,
+    -0.3589938282966614,
+    0.7996849417686462
+   ],
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/p1/blender-wrist-frame-061.png",
+    "bytes": 912278,
+    "sha256": "de6ec1acf246bdeae58d6753768b6005192f76ce9800b95940e3a3761c38ac7c"
+   }
+  }
+ ]
+}

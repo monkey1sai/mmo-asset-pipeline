@@ -1,0 +1,113 @@
+{
+  "scope": "Actual Blender matrix direction smoke check for measured bones; no geometry/deformation/contact acceptance.",
+  "blender": "4.5.5 LTS",
+  "bones_checked": 20,
+  "checks": [
+    {
+      "bone": "finger1.R_01",
+      "correct_axis_front_displacement": 0.2966462057083845,
+      "opposite_axis_front_displacement": -0.2941663432866335
+    },
+    {
+      "bone": "finger1.R_02",
+      "correct_axis_front_displacement": 0.2966461982578039,
+      "opposite_axis_front_displacement": -0.29416635632514954
+    },
+    {
+      "bone": "finger1.R_03",
+      "correct_axis_front_displacement": 0.2966461982578039,
+      "opposite_axis_front_displacement": -0.29416635259985924
+    },
+    {
+      "bone": "finger2.R_01",
+      "correct_axis_front_displacement": 0.2965349480509758,
+      "opposite_axis_front_displacement": -0.29432438872754574
+    },
+    {
+      "bone": "finger2.R_02",
+      "correct_axis_front_displacement": 0.2965349927544594,
+      "opposite_axis_front_displacement": -0.2943243123590946
+    },
+    {
+      "bone": "finger2.R_03",
+      "correct_axis_front_displacement": 0.29653501883149147,
+      "opposite_axis_front_displacement": -0.29432437755167484
+    },
+    {
+      "bone": "finger3.R_01",
+      "correct_axis_front_displacement": 0.2937899939715862,
+      "opposite_axis_front_displacement": -0.29689354449510574
+    },
+    {
+      "bone": "finger3.R_02",
+      "correct_axis_front_displacement": 0.2937900386750698,
+      "opposite_axis_front_displacement": -0.29689355939626694
+    },
+    {
+      "bone": "finger3.R_03",
+      "correct_axis_front_displacement": 0.2937900088727474,
+      "opposite_axis_front_displacement": -0.29689354076981544
+    },
+    {
+      "bone": "finger4.R_01",
+      "correct_axis_front_displacement": 0.2946801371872425,
+      "opposite_axis_front_displacement": -0.29626701958477497
+    },
+    {
+      "bone": "finger4.R_02",
+      "correct_axis_front_displacement": 0.29468007385730743,
+      "opposite_axis_front_displacement": -0.29626701958477497
+    },
+    {
+      "bone": "finger4.R_03",
+      "correct_axis_front_displacement": 0.29468007758259773,
+      "opposite_axis_front_displacement": -0.2962669339030981
+    },
+    {
+      "bone": "finger1.L_01",
+      "correct_axis_front_displacement": 0.27943456172943115,
+      "opposite_axis_front_displacement": -0.29828939214348793
+    },
+    {
+      "bone": "finger1.L_02",
+      "correct_axis_front_displacement": 0.2907503992319107,
+      "opposite_axis_front_displacement": -0.2982199303805828
+    },
+    {
+      "bone": "finger2.L_01",
+      "correct_axis_front_displacement": 0.29865485802292824,
+      "opposite_axis_front_displacement": -0.2887149192392826
+    },
+    {
+      "bone": "finger2.L_02",
+      "correct_axis_front_displacement": 0.2937096282839775,
+      "opposite_axis_front_displacement": -0.2969433292746544
+    },
+    {
+      "bone": "finger3.L_01",
+      "correct_axis_front_displacement": 0.29878222569823265,
+      "opposite_axis_front_displacement": -0.2876524291932583
+    },
+    {
+      "bone": "finger3.L_02",
+      "correct_axis_front_displacement": 0.29421158879995346,
+      "opposite_axis_front_displacement": -0.29661477729678154
+    },
+    {
+      "bone": "finger4.L_01",
+      "correct_axis_front_displacement": 0.2976798340678215,
+      "opposite_axis_front_displacement": -0.2922794371843338
+    },
+    {
+      "bone": "finger4.L_02",
+      "correct_axis_front_displacement": 0.2965884432196617,
+      "opposite_axis_front_displacement": -0.29424919933080673
+    }
+  ],
+  "status": "pass",
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-surface/ro_surface_specimen.blend",
+    "sha256": "ccc52c36fbe861ea295b2d3556f6b9fbc7ad06d1f1f51b37d56eb3e4d3d9a25d"
+  },
+  "art_pass": false
+}

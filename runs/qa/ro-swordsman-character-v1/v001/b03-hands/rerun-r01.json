@@ -1,0 +1,63 @@
+{
+ "id": "b03-rerun-r01",
+ "recorded_utc": "2026-10-05T07:24:46Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "build": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "why": "The joint-range tool (06:37Z), pose-rule module (06:13Z), export script (06:11Z) and runtime harness (06:11-06:13Z) changed after the recorded b03 runs (joint range 05:52Z, export 06:01Z, runtime 06:04Z).",
+ "tool_fix": {
+  "path": "scripts/cv1_joint_range.py",
+  "sha256": "509ffdc7898685000214affcb33841768285224220aee50c346542cb68713a19",
+  "change": "The armour depth gate is added to a motion's gate only when the contract names armour meshes. Before the fix it was reported as true when nothing was measured (joint-range-r01)."
+ },
+ "export": {
+  "script_sha256": "cd3f72c82d8d1d80cd97b03276d31ddf35d0e3b3f838657a0b76c2e229a4ff56",
+  "byte_identical_to_06_01_export": {
+   "b03_runtime_owner.glb": true,
+   "b03_baked_owner.glb": true,
+   "blender-reference.f64.bin": true,
+   "exact-weight GLBs": true
+  },
+  "weights_snapshot_meshes_identical": true
+ },
+ "readback": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/roundtrip-b03_baked_owner_exact_weights.json",
+  "tolerance_m": 5e-06,
+  "max_error_m": 4.205930287720827e-06,
+  "over_tolerance": 0,
+  "pass": true,
+  "misinvoked_first_run": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/invoked-without-tolerance-1um-roundtrip-b03_baked_owner_exact_weights.json",
+   "cause": "run without --tolerance, so the script default 1e-6 m applied instead of the frozen 5e-6 m; same 4.206 um maximum; kept, not counted"
+  }
+ },
+ "runtime": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/runtime/20261005t072130z-runtime-results.json",
+  "manifest": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/runtime-manifest.json",
+  "gate_m": 1e-05,
+  "pass": true,
+  "runtime_owner_max_error_m": 4.641708524806419e-06,
+  "baked_owner_max_error_m": 4.641708524806419e-06,
+  "blend_max_error_m": 8.27108137307137e-07,
+  "max_rule_weight_difference": 2.564278636874029e-06,
+  "negative_controls_detected": "all",
+  "same_numbers_as_06_04": true,
+  "saved_under": "closed-loop/runtime because the 8766 server's save folder is fixed; the run reads the r01 manifest"
+ },
+ "joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/joint-range-r02/joint-range-result.json",
+  "contract_sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7",
+  "measured": 73,
+  "numeric_gate_pass": true,
+  "failed_motions": [],
+  "difference_to_05_52": "Only fields the current tool adds (other_new_by_mesh_pair; armour fields, zero because the contract names no armour meshes) and no tiles (--no-render). Every earlier measurement is identical; the 05:52 tiles remain the images for the same BLEND hash.",
+  "superseded_run": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/joint-range-r01 (vacuous armour gate key)"
+ },
+ "duplicates_kept": "export-r01 and closed-loop-r01 hold byte-identical copies of the 06:01 export (about 60 MB); kept because the rerun evidence points at them; can be cleaned with the shoulder intermediates if the user asks.",
+ "not_rerun": [
+  "protocol views (BLEND unchanged)",
+  "foundation signature (BLEND, rules and evaluator inputs unchanged; evaluator source changed, so the signature is recomputed at freeze)"
+ ]
+}

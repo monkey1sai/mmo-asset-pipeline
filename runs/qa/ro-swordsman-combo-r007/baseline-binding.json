@@ -1,0 +1,24 @@
+{
+  "request_sha256": "137997c6bb5a57120cd8025a2762b6a19a0c32706f94520988591c314d383876",
+  "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+  "local_gate_contract": {
+    "path": "runs/qa/ro-swordsman-combo-r007/hand-gate-contract.json",
+    "sha256": "a62f4c2b6454c185a46a965ee0da03ccc4d128096316199563fc034d57fd6aea"
+  },
+  "actual_baseline_report": {
+    "path": "runs/qa/ro-swordsman-combo-r007/baseline/baseline.json",
+    "sha256": "e6ba5475c4bb83082d73df0e3c90d1a985b35376dda779f0d1fd2986b5dd1752"
+  },
+  "source_helpers": [
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/ro_hand_gate.py",
+      "sha256": "f9f84c28038d1a82c519a999c72133ba701e6f211f75619f9a770257b45855a9"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/ro_review_common.py",
+      "sha256": "98b795e379d682d84476b4e18d7c296364c1a6cf9bb36af6d4e13a08dbe1fc3d"
+    }
+  ],
+  "first_candidate_started": false,
+  "source_model_byte_identical": true
+}

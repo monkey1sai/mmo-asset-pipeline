@@ -1,0 +1,675 @@
+{
+ "file": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\assets\\processed\\ro-swordsman-combo-r010\\v004-certified-animation\\right_hand_grasp_61f.blend",
+ "blender": "4.5.5 LTS",
+ "scene": {
+  "fps": 60,
+  "frame_start": 1,
+  "frame_end": 61,
+  "unit_scale": 1.0,
+  "unit_system": "METRIC"
+ },
+ "objects": [
+  {
+   "name": "ARM_RO_HandDiagnostic",
+   "type": "ARMATURE",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.8291,
+    0.0865,
+    0.1138
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": [],
+   "bones": [
+    {
+     "name": "hand",
+     "parent": null,
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.0116,
+      0.0021,
+      0.1034
+     ],
+     "tail": [
+      -0.0116,
+      0.0021,
+      0.1534
+     ],
+     "length": 0.05
+    },
+    {
+     "name": "finger1_01",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.0544,
+      -0.0109,
+      0.1926
+     ],
+     "tail": [
+      -0.0584,
+      -0.0229,
+      0.2155
+     ],
+     "length": 0.0261
+    },
+    {
+     "name": "finger1_02",
+     "parent": "finger1_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0584,
+      -0.0229,
+      0.2155
+     ],
+     "tail": [
+      -0.0575,
+      -0.0316,
+      0.234
+     ],
+     "length": 0.0205
+    },
+    {
+     "name": "finger1_03",
+     "parent": "finger1_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0575,
+      -0.0316,
+      0.234
+     ],
+     "tail": [
+      -0.0566,
+      -0.037,
+      0.2525
+     ],
+     "length": 0.0193
+    },
+    {
+     "name": "finger2_01",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.0348,
+      -0.0011,
+      0.1959
+     ],
+     "tail": [
+      -0.0387,
+      -0.0141,
+      0.2231
+     ],
+     "length": 0.0304
+    },
+    {
+     "name": "finger2_02",
+     "parent": "finger2_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0387,
+      -0.0141,
+      0.2231
+     ],
+     "tail": [
+      -0.0379,
+      -0.0316,
+      0.2557
+     ],
+     "length": 0.037
+    },
+    {
+     "name": "finger2_03",
+     "parent": "finger2_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0379,
+      -0.0316,
+      0.2557
+     ],
+     "tail": [
+      -0.037,
+      -0.0381,
+      0.2742
+     ],
+     "length": 0.0196
+    },
+    {
+     "name": "finger3_01",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.0141,
+      0.0054,
+      0.1981
+     ],
+     "tail": [
+      -0.0152,
+      -0.0054,
+      0.2285
+     ],
+     "length": 0.0324
+    },
+    {
+     "name": "finger3_02",
+     "parent": "finger3_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0152,
+      -0.0054,
+      0.2285
+     ],
+     "tail": [
+      -0.0138,
+      -0.0218,
+      0.2666
+     ],
+     "length": 0.0415
+    },
+    {
+     "name": "finger3_03",
+     "parent": "finger3_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.0138,
+      -0.0218,
+      0.2666
+     ],
+     "tail": [
+      -0.0127,
+      -0.0276,
+      0.2873
+     ],
+     "length": 0.0215
+    },
+    {
+     "name": "finger4_01",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0076,
+      0.0087,
+      0.1991
+     ],
+     "tail": [
+      0.0111,
+      0.0027,
+      0.2285
+     ],
+     "length": 0.0302
+    },
+    {
+     "name": "finger4_02",
+     "parent": "finger4_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      0.0111,
+      0.0027,
+      0.2285
+     ],
+     "tail": [
+      0.0135,
+      -0.0102,
+      0.2557
+     ],
+     "length": 0.0302
+    },
+    {
+     "name": "finger4_03",
+     "parent": "finger4_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      0.0135,
+      -0.0102,
+      0.2557
+     ],
+     "tail": [
+      0.0148,
+      -0.0163,
+      0.2753
+     ],
+     "length": 0.0206
+    },
+    {
+     "name": "thumb_01",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0207,
+      -0.0131,
+      0.1415
+     ],
+     "tail": [
+      0.0414,
+      -0.0218,
+      0.1806
+     ],
+     "length": 0.0451
+    },
+    {
+     "name": "thumb_02",
+     "parent": "thumb_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      0.0414,
+      -0.0218,
+      0.1806
+     ],
+     "tail": [
+      0.0545,
+      -0.0283,
+      0.2013
+     ],
+     "length": 0.0254
+    },
+    {
+     "name": "thumb_03",
+     "parent": "thumb_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      0.0545,
+      -0.0283,
+      0.2013
+     ],
+     "tail": [
+      0.0599,
+      -0.0283,
+      0.2144
+     ],
+     "length": 0.0141
+    },
+    {
+     "name": "sword",
+     "parent": "hand",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.0293,
+      -0.0566,
+      0.1702
+     ],
+     "tail": [
+      0.7707,
+      -0.0566,
+      0.1702
+     ],
+     "length": 0.8
+    }
+   ],
+   "pose_constraints": {},
+   "rotation_modes": [
+    "QUATERNION"
+   ],
+   "bone_collections": [],
+   "action": "AN_RO_RightHand_GraspDiagnostic",
+   "nla_tracks": [],
+   "drivers": 0
+  },
+  {
+   "name": "Fill",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    -3.0,
+    -2.0,
+    3.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Key",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    3.0,
+    -4.0,
+    5.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Plane",
+   "type": "MESH",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    200.0,
+    200.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": true,
+   "modifiers": [],
+   "constraints": [],
+   "verts": 4,
+   "polys": 1,
+   "tris": 2,
+   "face_tri_quad_ngon": [
+    0,
+    1,
+    0
+   ],
+   "non_manifold_edges": 4,
+   "boundary_edges": 4,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "ReviewFloor"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 0,
+   "weights": {
+    "zero_weight_verts": 4,
+    "gt4_influence_verts": 0,
+    "max_influences": 0,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {},
+   "attributes": [
+    "position",
+    "sharp_face",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "ReviewCamera",
+   "type": "CAMERA",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    1.0,
+    0.22
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Rim",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    3.0,
+    4.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "SM_RO_LocalActualSword",
+   "type": "MESH",
+   "parent": "ARM_RO_HandDiagnostic",
+   "parent_bone": null,
+   "dims": [
+    1.07,
+    0.1811,
+    0.0774
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "RigidSwordFollow",
+     "ARM_RO_HandDiagnostic"
+    ]
+   ],
+   "constraints": [],
+   "verts": 1493,
+   "polys": 2552,
+   "tris": 2552,
+   "face_tri_quad_ngon": [
+    2552,
+    0,
+    0
+   ],
+   "non_manifold_edges": 422,
+   "boundary_edges": 422,
+   "loose_verts": 0,
+   "uv_layers": [],
+   "materials": [
+    "ActualSwordLocalMaterial"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "sword": 1493
+   },
+   "attributes": [
+    "_r010_weapon_id",
+    "position",
+    "sharp_face"
+   ]
+  },
+  {
+   "name": "SM_RO_RightHand_Exterior",
+   "type": "MESH",
+   "parent": "ARM_RO_HandDiagnostic",
+   "parent_bone": null,
+   "dims": [
+    0.1214,
+    0.1224,
+    0.2029
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_HandDiagnostic"
+    ]
+   ],
+   "constraints": [],
+   "verts": 904,
+   "polys": 894,
+   "tris": 1788,
+   "face_tri_quad_ngon": [
+    0,
+    894,
+    0
+   ],
+   "non_manifold_edges": 18,
+   "boundary_edges": 18,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "r010CorrectiveGray"
+   ],
+   "shape_keys": [
+    "Basis",
+    "SK_RO_GraspPulp_Corrective"
+   ],
+   "shape_key_drivers": 0,
+   "shape_key_action": "AN_RO_RightHand_GraspMorph",
+   "vertex_groups": 16,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 4,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "finger1_03": 100,
+    "finger1_02": 80,
+    "finger1_01": 93,
+    "hand": 793,
+    "thumb_01": 226,
+    "thumb_02": 178,
+    "thumb_03": 203,
+    "finger4_03": 116,
+    "finger4_02": 91,
+    "finger4_01": 91,
+    "finger3_01": 103,
+    "finger3_02": 103,
+    "finger3_03": 125,
+    "finger2_01": 97,
+    "finger2_02": 96,
+    "finger2_03": 115
+   },
+   "attributes": [
+    "_r010_id",
+    "r007_original_point_id",
+    "r007_source_point_id",
+    "position",
+    "sharp_face",
+    "UVMap"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "name": "AN_RO_RightHand_GraspDiagnostic",
+   "range": [
+    1.0,
+    61.0
+   ],
+   "fcurves": 170,
+   "users": 1
+  },
+  {
+   "name": "AN_RO_RightHand_GraspMorph",
+   "range": [
+    1.0,
+    61.0
+   ],
+   "fcurves": 1,
+   "users": 1
+  }
+ ],
+ "images": [
+  {
+   "name": "Render Result",
+   "size": [
+    0,
+    0
+   ],
+   "packed": false,
+   "filepath": ""
+  }
+ ],
+ "materials": [
+  "ActualSwordLocalMaterial",
+  "r010CorrectiveGray",
+  "ReviewFloor"
+ ],
+ "is_dirty_after_inspect": true
+}

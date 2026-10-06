@@ -1,0 +1,328 @@
+{
+ "schema_version": 1,
+ "request_id": "ro-swordsman-character-v1-r2",
+ "request_sha256": "6e5cbb4fb7999ecf8a9e9964052311ebb0027df09e8356d869e323407a80d3ba",
+ "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+ "joint_range_contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r2/joint-range-contract-v3.json",
+  "sha256": "2c9d83e057dd545b44a4e14533a53576d2b3cb8817b07ebddf7b8704370f3b1b"
+ },
+ "trials": [
+  {
+   "id": "baseline",
+   "parent_id": null,
+   "status": "completed",
+   "started_utc": "2026-10-05T04:02:48Z",
+   "ended_utc": "2026-10-05T05:07:10Z",
+   "elapsed_seconds": 1940.0,
+   "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+   "reviewer": "Coordinator (Claude Code): viewed all five fixed views and reviewed every check against measured files; not an independent sign-off; same file, views and scores as the v1 baseline, joint-range re-measured with the r2 contract",
+   "previews": {
+    "front": {
+     "path": "runs/qa/ro-swordsman-combo-r010/baseline/front.png",
+     "sha256": "177c50b835efa01da8be05343997482a2c1ee94c9128242c15339ae0227ca16e"
+    },
+    "side": {
+     "path": "runs/qa/ro-swordsman-combo-r010/baseline/side.png",
+     "sha256": "b991ec8438f971016d700651d7fe7f1d05052fba3d1bd87d94ed67841a4bb74c"
+    },
+    "back": {
+     "path": "runs/qa/ro-swordsman-combo-r010/baseline/back.png",
+     "sha256": "ec1fd4b137a289c51dd940d800db60c88952cce89ec009a0ac7b5d93157efe10"
+    },
+    "three-quarter": {
+     "path": "runs/qa/ro-swordsman-combo-r010/baseline/three-quarter.png",
+     "sha256": "2cde9800ca954ca8bd824eb7b5b1c2ba53b69d76f2b977b15293f4f632992da2"
+    },
+    "detail": {
+     "path": "runs/qa/ro-swordsman-combo-r010/baseline/detail.png",
+     "sha256": "012ceabdd7cae77017393e6fc3763e7ae91257fee9b6197c3907d8c626332ca3"
+    }
+   },
+   "scores": {
+    "design-intent": {
+     "value": 3,
+     "reason": "Brown spiky hair, anime face, silver plate, blue coat with white tabard, leather gloves, belt and boots and a straight sword are all present; armor patches painted on the cloth core clash with the separate cuirass."
+    },
+    "silhouette": {
+     "value": 3,
+     "reason": "Front and three-quarter read clearly; side and back are stable, but the right wrist fitting is bulbous and the pauldrons sit detached from the arm line."
+    },
+    "form-proportion": {
+     "value": 2,
+     "reason": "Main volumes hold at rest, but the left hand has mitten-like fused finger segments, the right wrist sleeve balloons and duplicated armor volume remains on the core."
+    },
+    "materials": {
+     "value": 3,
+     "reason": "Material regions are readable in all five views; seams and the duplicated painted armor on the core remain."
+    },
+    "craft": {
+     "value": 1,
+     "reason": "Several critical defects under the contract poses: shoulder flexion collapses triangles and drives the arm through the cuirass, elbow and hip fold, and the exposed right hand self-intersects at typical angles."
+    },
+    "use-readability": {
+     "value": 0,
+     "reason": "None of the required skill combo, locomotion, sleep or cast clips exists; only a 61-frame grip prototype."
+    }
+   },
+   "evidence": {
+    "schema_version": 1,
+    "request_id": "ro-swordsman-character-v1-r2",
+    "request_sha256": "6e5cbb4fb7999ecf8a9e9964052311ebb0027df09e8356d869e323407a80d3ba",
+    "checks": {
+     "art_match": {
+      "status": "fail",
+      "method": "Viewed the five fixed views of this exact file: character reads correctly, but painted armor patches on the cloth core overlap the cuirass, the right wrist fitting is bulbous and the grasp is a prototype.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-combo-r010/baseline/front.png",
+        "sha256": "177c50b835efa01da8be05343997482a2c1ee94c9128242c15339ae0227ca16e"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-combo-r010/baseline/detail.png",
+        "sha256": "012ceabdd7cae77017393e6fc3763e7ae91257fee9b6197c3907d8c626332ca3"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-combo-r007/baseline/review.json",
+        "sha256": "9828fb94487bb36afb66df8e70af66f41ed7175c5addc52679a87ed90d753c15"
+       }
+      ]
+     },
+     "scale_pivot": {
+      "status": "pass",
+      "method": "Read-only Blender inventory: core height 1.74 m, armature and meshes at world origin with unit scale; GLB accessor bounds Y 0..1.74 with +Y up. Scope: size, axis and ground pivot only.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "geometry_materials": {
+      "status": "fail",
+      "method": "57,039 triangles measured (budget 60,000) and 2K textures present, but every mesh has open boundary edges of undiagnosed cause, armor and core overlap visibly, and the right hand is a different source than the r010 hand.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-combo-r010/baseline/front.png",
+        "sha256": "177c50b835efa01da8be05343997482a2c1ee94c9128242c15339ae0227ca16e"
+       }
+      ]
+     },
+     "package_complete": {
+      "status": "fail",
+      "method": "Only the baseline BLEND and GLB exist; no clips, interaction data, QA scene package, README or manifest for this request.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "rig_mapping": {
+      "status": "fail",
+      "method": "53 bones: right thumb has 2 segments, left fingers 2 segments each, no control layer. Five contract motions cannot be posed because the bones are missing, and no grasp pose asset exists.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-character-v1-r2/baseline-joint-range-v3/joint-range-result.json",
+        "sha256": "a26bf397c4bc37a479d845dbfa5e35be75bb7c3cd037a0c22376bbd79d98b880"
+       }
+      ]
+     },
+     "deformation": {
+      "status": "fail",
+      "method": "Joint-range sweep on this file with the r2 contract: 35 of 73 motions fail or cannot be posed.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1-r2/baseline-joint-range-v3/joint-range-result.json",
+        "sha256": "a26bf397c4bc37a479d845dbfa5e35be75bb7c3cd037a0c22376bbd79d98b880"
+       }
+      ]
+     },
+     "animation": {
+      "status": "fail",
+      "method": "Only the 61-frame wrist-grip prototype action exists; none of the nine listed clips is present.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "export-roundtrip": {
+      "status": "fail",
+      "method": "Fresh-Blender readback of this file as exported: maximum 14.55 um on 8 samples, above the 5 um world-space tolerance, because the exporter drops skin weights <= 1e-4; no listed clip exists to read back.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p2-prep/weights-probe/roundtrip-as-exported.json",
+        "sha256": "867e5983d3c314ea107d7fd690bf1e88a2c284788883974fcac510186c3c364b"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/p1-report.md",
+        "sha256": "e4105fcea3f87b217efeb09c552856c173baa1e3be75cfb32b64326dd6ff9819"
+       }
+      ]
+     },
+     "skill-effects": {
+      "status": "fail",
+      "method": "No slash, fire or golden effect objects exist in the inspected file.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "grasp-contact-windowed": {
+      "status": "fail",
+      "method": "Earlier interval readback of this same file (identical SHA) shows sword crossings before the closed endpoint; no windowed grasp verification exists for any listed clip.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-combo-r007/baseline/baked-interval.json",
+        "sha256": "5f75691b5f05a78ceebaa33f9fca52534504deff89097a4ecf77468df9592c8f"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-combo-r007/baseline/review.json",
+        "sha256": "9828fb94487bb36afb66df8e70af66f41ed7175c5addc52679a87ed90d753c15"
+       }
+      ]
+     },
+     "joint-range": {
+      "status": "fail",
+      "method": "scripts/cv1_joint_range.py with the frozen r2 contract: numeric gate false, 25 motions fail and 10 cannot be posed.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1-r2/baseline-joint-range-v3/joint-range-result.json",
+        "sha256": "a26bf397c4bc37a479d845dbfa5e35be75bb7c3cd037a0c22376bbd79d98b880"
+       }
+      ]
+     },
+     "clip-set": {
+      "status": "fail",
+      "method": "No listed clip exists to sample.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "transition-interaction": {
+      "status": "fail",
+      "method": "No clips, sockets or bed interaction exist to transition between.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "runtime-closed-loop": {
+      "status": "fail",
+      "method": "P1 proved the wiring on this file at a 100 um gate with a probe rule only; the frozen 10 um runtime tolerance is not met (14.7 um) and no accepted corrective rules or clips exist.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+        "sha256": "fc14a370ff92c3a5e03629cc557e8c1927e72ee1a72d626a1d72d16a1dfae87c"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/p1-report.md",
+        "sha256": "e4105fcea3f87b217efeb09c552856c173baa1e3be75cfb32b64326dd6ff9819"
+       }
+      ]
+     },
+     "frozen-holdout-reuse": {
+      "status": "fail",
+      "method": "No frozen character base exists and the holdout has not been revealed.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json",
+        "sha256": "d3e2e5110fd9ed577808788d2a06253d4c032041d681c982ea814992687ba486"
+       }
+      ]
+     },
+     "negative-controls": {
+      "status": "fail",
+      "method": "Only the four P1 probe controls exist; weapon-inside-hand and wrong-contact-window controls have not been built.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+        "sha256": "fc14a370ff92c3a5e03629cc557e8c1927e72ee1a72d626a1d72d16a1dfae87c"
+       }
+      ]
+     },
+     "performance-report": {
+      "status": "fail",
+      "method": "No frame-time measurement exists; the P1 timing is CPU vertex comparison, not rendering cost.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/p1-report.md",
+        "sha256": "e4105fcea3f87b217efeb09c552856c173baa1e3be75cfb32b64326dd6ff9819"
+       }
+      ]
+     },
+     "target_environment": {
+      "status": "fail",
+      "method": "Three.js 0.186.0 QA scene loaded this file only for the P1 wiring probe; none of the listed clips, transitions or corrective rules exists to verify in the target environment.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+        "sha256": "fc14a370ff92c3a5e03629cc557e8c1927e72ee1a72d626a1d72d16a1dfae87c"
+       },
+       {
+        "path": "runs/qa/ro-swordsman-character-v1/p1/p1-report.md",
+        "sha256": "e4105fcea3f87b217efeb09c552856c173baa1e3be75cfb32b64326dd6ff9819"
+       }
+      ]
+     },
+     "art-motion-review": {
+      "status": "fail",
+      "method": "No motion exists to review and no independent art review has been run for this request.",
+      "artifacts": [
+       {
+        "path": "runs/qa/ro-swordsman-character-v1-r2/baseline-joint-range-v3/joint-range-result.json",
+        "sha256": "a26bf397c4bc37a479d845dbfa5e35be75bb7c3cd037a0c22376bbd79d98b880"
+       }
+      ]
+     }
+    },
+    "deliverables": [
+     {
+      "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+     },
+     {
+      "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.glb",
+      "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+     }
+    ],
+    "subject_artifacts": [
+     {
+      "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+     },
+     {
+      "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.glb",
+      "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+     }
+    ]
+   }
+  }
+ ],
+ "phase_history": {
+  "previous_ledger": {
+   "path": "runs/qa/ro-swordsman-character-v1/quality-ledger.json",
+   "sha256": "6af48a654563062e46f2cac51b0f4b7b3b9c64ea8272ab8934bbfb54e20fb5a9"
+  },
+  "previous_phase_reopened": false,
+  "quality_targets_lowered": false,
+  "elapsed_carried_from_previous_version_seconds": 1835.0
+ }
+}
