@@ -5,6 +5,10 @@ Windows DPAPI 憑證提供者與受限 HTTPS 傳輸；不修改舊 `authorizatio
 provider 程式、憑證或舊任務。舊入口的特定任務限制不適用於新 client；新 client
 自行檢查工作區路徑、輸入版本、操作唯一性、狀態與成本。
 
+provider 必須同時符合釘選雜湊與 `Provider` interface（`balance`、`protected_bytes`、
+`api`、`public_download_url`、`PinnedHTTPS`）；缺少成員時回報 `PROVIDER_INTERFACE_INVALID`，
+不會呼叫任何服務。所有紀錄時間戳與 status 退避都取自 `Client` 的 clock（預設為目前 UTC 時間）。
+
 ## 啟動
 
 使用 Python 3.10 以上，不需安裝套件；Windows 執行實際 API。請固定 `python -B`，
