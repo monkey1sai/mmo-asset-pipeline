@@ -1,0 +1,628 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Cast_OpenPalm",
+ "fps": 60,
+ "frames": 90,
+ "loop": false,
+ "mode": "keys",
+ "intent": "Open-palm cast from the Idle ready stance: gather the left hand in front of the chest (frame 20), push the open palm forward to shoulder height with the fingers spread (frame 34; release event 36), hold, and return to the Idle frame-0 pose at frame 89. Feet stay planted; the right hand keeps the Idle sword grip with a slight lift. The peak stays inside the frozen contract pose combo-cast-open-palm.L (shoulder 90, elbow 30, wrist dorsal 30, spread 15).",
+ "poses": [
+  "grasp.R"
+ ],
+ "steps": [
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      20,
+      2.0
+     ],
+     [
+      34,
+      -3.0
+     ],
+     [
+      58,
+      -3.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      34,
+      1.5
+     ],
+     [
+      58,
+      1.5
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      1.4045
+     ],
+     [
+      20,
+      0.5
+     ],
+     [
+      34,
+      2.5
+     ],
+     [
+      58,
+      2.5
+     ],
+     [
+      89,
+      1.4045
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "clavicle.R",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": 0
+  },
+  {
+   "bone": "clavicle.L",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      34,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "forward",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      -4.6473
+     ],
+     [
+      34,
+      -3.0
+     ],
+     [
+      58,
+      -3.0
+     ],
+     [
+      89,
+      -4.6473
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      20,
+      35.0
+     ],
+     [
+      34,
+      80.0
+     ],
+     [
+      58,
+      80.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "lower_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      15.809
+     ],
+     [
+      20,
+      65.0
+     ],
+     [
+      34,
+      20.0
+     ],
+     [
+      58,
+      20.0
+     ],
+     [
+      89,
+      15.809
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "hand.L",
+   "kind": "swing",
+   "toward": "dorsal",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      20,
+      5.0
+     ],
+     [
+      34,
+      30.0
+     ],
+     [
+      58,
+      30.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      15
+     ],
+     [
+      20,
+      20
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      15
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      18
+     ],
+     [
+      20,
+      23
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      18
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      21
+     ],
+     [
+      20,
+      26
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      21
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      24
+     ],
+     [
+      20,
+      29
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      24
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      18
+     ],
+     [
+      20,
+      23
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      18
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      22
+     ],
+     [
+      20,
+      27
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      22
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      25
+     ],
+     [
+      20,
+      30
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      25
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      28
+     ],
+     [
+      20,
+      33
+     ],
+     [
+      30,
+      2.0
+     ],
+     [
+      58,
+      2.0
+     ],
+     [
+      89,
+      28
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "thumb.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      10
+     ],
+     [
+      30,
+      0.0
+     ],
+     [
+      58,
+      0.0
+     ],
+     [
+      89,
+      10
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "radial",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      30,
+      14.0
+     ],
+     [
+      58,
+      14.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "ulnar",
+   "degrees": {
+    "keys": [
+     [
+      0,
+      0.0
+     ],
+     [
+      30,
+      14.0
+     ],
+     [
+      58,
+      14.0
+     ],
+     [
+      89,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  }
+ ],
+ "sword": {
+  "grip": {
+   "keys": [
+    [
+     0,
+     [
+      -0.38,
+      -0.1,
+      0.900927
+     ]
+    ],
+    [
+     34,
+     [
+      -0.375,
+      -0.09,
+      0.91
+     ]
+    ],
+    [
+     58,
+     [
+      -0.375,
+      -0.09,
+      0.91
+     ]
+    ],
+    [
+     89,
+     [
+      -0.38,
+      -0.1,
+      0.900927
+     ]
+    ]
+   ]
+  },
+  "blade": [
+   -0.587,
+   -0.492,
+   0.643
+  ],
+  "pitch_deg": {
+   "keys": [
+    [
+     0,
+     0.4702
+    ],
+    [
+     34,
+     2.0
+    ],
+    [
+     58,
+     2.0
+    ],
+    [
+     89,
+     0.4702
+    ]
+   ]
+  },
+  "roll_deg": 170,
+  "swivel_deg": -10
+ },
+ "start_pose_note": "Frame 0 equals Idle a03 frame 0 (head 1.4045, upper_arm.L about forward -4.6473, lower_arm.L 15.8090, grip z 0.900927, pitch 0.4702)."
+}

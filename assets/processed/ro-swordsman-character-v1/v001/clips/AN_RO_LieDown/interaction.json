@@ -1,0 +1,107 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_LieDown",
+ "fps": 60,
+ "frames": 90,
+ "loop": false,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     0,
+     30
+    ]
+   ],
+   "establishment_frames": [
+    0
+   ]
+  },
+  "grasp.L": {
+   "windows": []
+  },
+  "lying": {
+   "windows": [
+    [
+     63,
+     89
+    ]
+   ]
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    16,
+    32
+   ]
+  ],
+  "R": [
+   [
+    16,
+    32
+   ]
+  ]
+ },
+ "events": [
+  {
+   "name": "put_sword_down",
+   "frame": 30
+  }
+ ],
+ "nominal_speed_m_s": 0.0,
+ "bed": {
+  "centre_m": [
+   0.0,
+   0.65
+  ],
+  "top_z_m": 0.45,
+  "size_m": [
+   2.0,
+   0.9
+  ],
+  "yaw_deg": 0
+ },
+ "bed_support": {
+  "windows": [
+   [
+    63,
+    89
+   ]
+  ],
+  "establishment_frames": [
+   63
+  ]
+ },
+ "sword_socket": {
+  "initial": "hand",
+  "switches": [
+   {
+    "event": "put_sword_down",
+    "to": "bed"
+   }
+  ],
+  "bed_socket": {
+   "head_m": [
+    -0.4,
+    0.32,
+    0.469597
+   ],
+   "quaternion_wxyz": [
+    0.12278781086206436,
+    0.6963642835617065,
+    -0.6963642239570618,
+    0.12278781086206436
+   ]
+  }
+ },
+ "note": "Grasp until the put-down event at frame 30 (>= 25%); seated feet planted 16-32 (quarter-frame refinement at touchdown/lift-off); bed support from frame 63 (<= 70%) to the end; the sword switches to the shared bed socket at the event (bed-interaction-design.json). lying (2026-10-06): from bed-support establishment to the end, rising over the 12 frames before it; drives the b20 coat lying corrective. seated_on_bed (2026-10-06, entries 19-20): from where the hanging coat first meets the bed while sitting down until the bed support is established (the window ends on the support's first frame, where the support takes over); the coat may hang into the bed there.",
+ "seated_on_bed": {
+  "windows": [
+   [
+    2,
+    63
+   ]
+  ]
+ }
+}

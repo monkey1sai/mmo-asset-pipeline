@@ -1,0 +1,111 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_GetUp",
+ "fps": 60,
+ "frames": 90,
+ "loop": false,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     60,
+     89
+    ]
+   ],
+   "establishment_frames": [
+    60
+   ]
+  },
+  "grasp.L": {
+   "windows": []
+  },
+  "lying": {
+   "windows": [
+    [
+     0,
+     27
+    ]
+   ]
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    58,
+    73
+   ]
+  ],
+  "R": [
+   [
+    58,
+    73
+   ]
+  ]
+ },
+ "events": [
+  {
+   "name": "leave_bed",
+   "frame": 27
+  },
+  {
+   "name": "pick_sword_up",
+   "frame": 60
+  }
+ ],
+ "nominal_speed_m_s": 0.0,
+ "bed": {
+  "centre_m": [
+   0.0,
+   0.65
+  ],
+  "top_z_m": 0.45,
+  "size_m": [
+   2.0,
+   0.9
+  ],
+  "yaw_deg": 0
+ },
+ "bed_support": {
+  "windows": [
+   [
+    0,
+    27
+   ]
+  ],
+  "establishment_frames": [
+   0
+  ]
+ },
+ "sword_socket": {
+  "initial": "bed",
+  "switches": [
+   {
+    "event": "pick_sword_up",
+    "to": "hand"
+   }
+  ],
+  "bed_socket": {
+   "head_m": [
+    -0.4,
+    0.32,
+    0.469597
+   ],
+   "quaternion_wxyz": [
+    0.12278781086206436,
+    0.6963642835617065,
+    -0.6963642239570618,
+    0.12278781086206436
+   ]
+  }
+ },
+ "seated_on_bed": {
+  "windows": [
+   [
+    27,
+    87
+   ]
+  ]
+ },
+ "note": "Mirror of AN_RO_LieDown (clip spec built by runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/prep/mirror-spec-used.py; LieDown frames 89/63/30/0 -> GetUp 0/27/60/89). Bed support from the start to leave_bed 27 (>= 30%); the sword lies on the shared bed socket until pick_sword_up 60 (<= 75%) and grasp.R holds from there to the end; seated feet planted 58-73 (LieDown 16-32 mirrored, quarter-frame refinement at touchdown/lift-off). lying: from the start to leave_bed, falling over the 12 frames after it (drives the b20 coat lying corrective). seated_on_bed (entries 19-20, GetUp mirrors LieDown): from leave_bed, where the support window ends, until standing (LieDown 2 -> 87); the coat may hang into the bed there."
+}

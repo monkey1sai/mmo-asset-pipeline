@@ -1,0 +1,1349 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_GetUp",
+ "fps": 60,
+ "frames": 90,
+ "loop": false,
+ "mode": "keys",
+ "poses": [
+  {
+   "name": "grasp.R",
+   "weight": {
+    "keys": [
+     [
+      55.0,
+      0.0
+     ],
+     [
+      57.0,
+      0.84
+     ],
+     [
+      59.0,
+      0.84
+     ],
+     [
+      60.0,
+      1.0
+     ],
+     [
+      89.0,
+      1.0
+     ]
+    ]
+   }
+  }
+ ],
+ "pelvis": {
+  "location_m": {
+   "keys": [
+    [
+     27.0,
+     [
+      0.0,
+      0.65,
+      0.6209734678268433
+     ]
+    ],
+    [
+     34.0,
+     [
+      0.0,
+      0.55,
+      0.5794686
+     ]
+    ],
+    [
+     43.0,
+     [
+      0.0,
+      0.55,
+      0.5794686
+     ]
+    ],
+    [
+     50.0,
+     [
+      0.0,
+      0.32,
+      0.5794686
+     ]
+    ],
+    [
+     71.6,
+     [
+      0.0,
+      0.32,
+      0.5794686
+     ]
+    ],
+    [
+     83.2,
+     [
+      0.0,
+      0.06,
+      0.83
+     ]
+    ],
+    [
+     89.0,
+     [
+      0.0,
+      0.04,
+      0.89
+     ]
+    ]
+   ]
+  },
+  "rotation": [
+   {
+    "axis": "x",
+    "degrees": {
+     "keys": [
+      [
+       27.0,
+       -90.0
+      ],
+      [
+       34.0,
+       -10.0
+      ],
+      [
+       71.6,
+       -10.0
+      ],
+      [
+       83.2,
+       0.0
+      ],
+      [
+       89.0,
+       0.0
+      ]
+     ]
+    }
+   },
+   {
+    "axis": "z",
+    "degrees": {
+     "keys": [
+      [
+       33.0,
+       -90.0
+      ],
+      [
+       40.0,
+       0.0
+      ],
+      [
+       89.0,
+       0.0
+      ]
+     ]
+    }
+   }
+  ]
+ },
+ "steps": [
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      -3.094041645526886
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "spine_01",
+   "kind": "swing",
+   "toward": "right",
+   "degrees": {
+    "keys": [
+     [
+      48.0,
+      0.0
+     ],
+     [
+      54.0,
+      6.0
+     ],
+     [
+      61.9333,
+      6.0
+     ],
+     [
+      71.6,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "right",
+   "degrees": {
+    "keys": [
+     [
+      48.0,
+      0.0
+     ],
+     [
+      54.0,
+      15.0
+     ],
+     [
+      61.9333,
+      15.0
+     ],
+     [
+      71.6,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      9.892387893050909
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      10.0424
+     ],
+     [
+      34.0,
+      -1.4045
+     ],
+     [
+      89.0,
+      -1.4045
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "clavicle.R",
+   "kind": "swing",
+   "toward": "down",
+   "degrees": {
+    "keys": [
+     [
+      48.0,
+      0.0
+     ],
+     [
+      54.0,
+      10.0
+     ],
+     [
+      61.9333,
+      10.0
+     ],
+     [
+      71.6,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "clavicle.L",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": 0
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "forward",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      32.0,
+      10.0
+     ],
+     [
+      40.0,
+      10.0
+     ],
+     [
+      46.0,
+      -4.6473
+     ],
+     [
+      89.0,
+      -4.6473
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      -22.621592804789543
+     ],
+     [
+      40.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "lower_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      40.0,
+      15.809
+     ],
+     [
+      89.0,
+      15.809
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.R",
+   "kind": "swing",
+   "toward": "out",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      38.0,
+      25.0
+     ],
+     [
+      60.0,
+      25.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "upper_arm.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      -22.621592804789543
+     ],
+     [
+      38.0,
+      15.0
+     ],
+     [
+      46.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "lower_arm.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      38.0,
+      45.0
+     ],
+     [
+      46.0,
+      10.0
+     ],
+     [
+      60.0,
+      10.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "coat.L",
+   "kind": "swing",
+   "toward": "right",
+   "degrees": {
+    "keys": [
+     [
+      14.5385,
+      0.0
+     ],
+     [
+      27.0,
+      19.0
+     ],
+     [
+      33.0,
+      19.0
+     ],
+     [
+      38.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "coat.R",
+   "kind": "swing",
+   "toward": "right",
+   "degrees": {
+    "keys": [
+     [
+      14.5385,
+      0.0
+     ],
+     [
+      27.0,
+      19.0
+     ],
+     [
+      33.0,
+      19.0
+     ],
+     [
+      38.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "upper_leg.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      34.0,
+      95.0
+     ],
+     [
+      40.0,
+      95.0
+     ],
+     [
+      44.0,
+      80.0
+     ],
+     [
+      52.0,
+      80.0
+     ],
+     [
+      58.0,
+      60.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "lower_leg.L",
+   "kind": "twist",
+   "about": "left",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      34.0,
+      5.0
+     ],
+     [
+      40.0,
+      5.0
+     ],
+     [
+      44.0,
+      60.0
+     ],
+     [
+      52.0,
+      60.0
+     ],
+     [
+      58.0,
+      20.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      34.0,
+      95.0
+     ],
+     [
+      40.0,
+      95.0
+     ],
+     [
+      44.0,
+      80.0
+     ],
+     [
+      52.0,
+      80.0
+     ],
+     [
+      58.0,
+      60.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "lower_leg.R",
+   "kind": "twist",
+   "about": "left",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      0.0
+     ],
+     [
+      34.0,
+      5.0
+     ],
+     [
+      40.0,
+      5.0
+     ],
+     [
+      44.0,
+      60.0
+     ],
+     [
+      52.0,
+      60.0
+     ],
+     [
+      58.0,
+      20.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 15,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      15
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger1.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      18
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger2.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 22,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      18
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger2.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      22
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger3.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 21,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 25,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      21
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger3.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      25
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 24,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 28,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      24
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "finger4.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      28
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "thumb.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 10,
+   "side": "L"
+  },
+  {
+   "bone": "thumb.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": {
+    "keys": [
+     [
+      42.0,
+      10.0
+     ],
+     [
+      54.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "upper_leg.L",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      5.047133602201939
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "foot.L",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      9.0
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      4.911732338368893
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  },
+  {
+   "bone": "foot.R",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": {
+    "keys": [
+     [
+      27.0,
+      7.5
+     ],
+     [
+      34.0,
+      0.0
+     ],
+     [
+      89.0,
+      0.0
+     ]
+    ]
+   },
+   "side": "R"
+  }
+ ],
+ "legs_ik": {
+  "weight": {
+   "keys": [
+    [
+     52.0,
+     0.0
+    ],
+    [
+     58.0,
+     1.0
+    ],
+    [
+     89.0,
+     1.0
+    ]
+   ]
+  },
+  "pole_yaw_deg": 0.0,
+  "L": {
+   "ankle_m": {
+    "keys": [
+     [
+      75.4667,
+      [
+       0.19499999284744263,
+       -0.25,
+       0.104999840259552
+      ]
+     ],
+     [
+      86.1,
+      [
+       0.19499999284744263,
+       0.07500000298023224,
+       0.104999840259552
+      ]
+     ],
+     [
+      89.0,
+      [
+       0.19499999284744263,
+       0.07500000298023224,
+       0.104999840259552
+      ]
+     ]
+    ]
+   },
+   "foot_turn_deg": 0.0
+  },
+  "R": {
+   "ankle_m": {
+    "keys": [
+     [
+      75.4667,
+      [
+       -0.19499999284744263,
+       -0.25,
+       0.104999840259552
+      ]
+     ],
+     [
+      86.1,
+      [
+       -0.19499999284744263,
+       0.07500000298023224,
+       0.104999840259552
+      ]
+     ],
+     [
+      89.0,
+      [
+       -0.19499999284744263,
+       0.07500000298023224,
+       0.104999840259552
+      ]
+     ]
+    ]
+   },
+   "foot_turn_deg": 0.0
+  },
+  "reach": 1.0
+ },
+ "sword": {
+  "grip": {
+   "keys": [
+    [
+     40.0,
+     [
+      -0.4756,
+      0.318,
+      0.8759
+     ]
+    ],
+    [
+     41.0,
+     [
+      -0.4882,
+      0.3304,
+      0.8463
+     ]
+    ],
+    [
+     42.0,
+     [
+      -0.5017,
+      0.3496,
+      0.8138
+     ]
+    ],
+    [
+     43.0,
+     [
+      -0.5137,
+      0.374,
+      0.7835
+     ]
+    ],
+    [
+     50.0,
+     [
+      -0.43,
+      0.3,
+      0.665
+     ]
+    ],
+    [
+     53.5,
+     [
+      -0.39,
+      0.37,
+      0.62
+     ]
+    ],
+    [
+     55.0,
+     [
+      -0.385,
+      0.385,
+      0.55
+     ]
+    ],
+    [
+     57.0,
+     [
+      -0.385,
+      0.38,
+      0.471097
+     ]
+    ],
+    [
+     59.0,
+     [
+      -0.4,
+      0.32,
+      0.469597
+     ]
+    ],
+    [
+     60.0,
+     [
+      -0.4,
+      0.32,
+      0.469597
+     ]
+    ],
+    [
+     71.6,
+     [
+      -0.4,
+      0.28,
+      0.665
+     ]
+    ],
+    [
+     83.2,
+     [
+      -0.38,
+      -0.08,
+      0.840927
+     ]
+    ],
+    [
+     89.0,
+     [
+      -0.38,
+      -0.1,
+      0.900927
+     ]
+    ]
+   ]
+  },
+  "blade": {
+   "keys": [
+    [
+     57.0,
+     [
+      -1.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     60.0,
+     [
+      -1.0,
+      0.0,
+      0.0
+     ]
+    ],
+    [
+     71.6,
+     [
+      -0.8,
+      -0.3,
+      0.3
+     ]
+    ],
+    [
+     89.0,
+     [
+      -0.587,
+      -0.492,
+      0.643
+     ]
+    ]
+   ]
+  },
+  "pitch_deg": {
+   "keys": [
+    [
+     71.6,
+     0.0
+    ],
+    [
+     89.0,
+     0.4702
+    ]
+   ]
+  },
+  "roll_deg": {
+   "keys": [
+    [
+     59.0,
+     166.0
+    ],
+    [
+     60.0,
+     160.0
+    ],
+    [
+     89.0,
+     170.0
+    ]
+   ]
+  },
+  "swivel_deg": {
+   "keys": [
+    [
+     43.0,
+     -22.0
+    ],
+    [
+     50.0,
+     10.0
+    ],
+    [
+     53.5,
+     15.0
+    ],
+    [
+     57.0,
+     15.0
+    ],
+    [
+     59.0,
+     -10.0
+    ],
+    [
+     60.0,
+     -10.0
+    ],
+    [
+     71.6,
+     -40.0
+    ],
+    [
+     89.0,
+     -10.0
+    ]
+   ]
+  },
+  "ik_weight": {
+   "keys": [
+    [
+     40.0,
+     0.0
+    ],
+    [
+     43.0,
+     1.0
+    ],
+    [
+     89.0,
+     1.0
+    ]
+   ]
+  },
+  "ik": "hinge",
+  "hand_relax": {
+   "keys": [
+    [
+     46.0,
+     1.0
+    ],
+    [
+     52.0,
+     0.6
+    ],
+    [
+     55.0,
+     0.0
+    ]
+   ]
+  }
+ },
+ "intent": "Time reversal of AN_RO_LieDown a08: from the AN_RO_Sleep_Loop a04 frame-0 pose (0-14.5) the coat swings towards the body right (14.5-27), sit up off the bed support (leave_bed 27, 27-34), turn back on the seat with the legs raised over the sword (33-40), bend the knees (40-44), scoot to the bed edge (43-50), the right hand leaves the free arm pose at the side (40-43), travels over the socketed grip (43-50), reaches behind it, slides the half-closed fingers under it and closes on it (50-60, pick_sword_up 60) while the feet come down to the floor (52-58) and the body leans right (54-62), lift the sword (60-72) and stand to the Idle ready stance (72-89; feet slide back 75.5-86).",
+ "revision_note": "a02: rebuilt by prep/mirror-spec-used.py from AN_RO_LieDown clip.json a08 (entry 21 option B mirrored: the hand leaves the free arm pose and reaches the grip without the swing; a01 mirrored a07). a01: built by prep/mirror-spec-used.py from AN_RO_LieDown clip.json a07 (time map anchors LieDown 89/63/30/0 -> GetUp 0/27/60/89; between 63 and 30 g = 90 - L). Entry 20: seated_on_bed mirrors LieDown, from leaving the lying support until standing.",
+ "start_pose_note": "Frame 0 equals AN_RO_Sleep_Loop a04 frame 0; frame 89 equals AN_RO_LieDown a07 frame 0 (the Idle ready stance)."
+}

@@ -1,0 +1,234 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Sleep_Loop",
+ "fps": 60,
+ "frames": 180,
+ "loop": true,
+ "mode": "procedural",
+ "intent": "Asleep on the bed proxy: supine, head towards +X, the five bed-support sets resting on the bed top (posture-01), hands relaxed beside the body, one slow breath per loop (spine_02 0.4 deg, head 0.3 deg). The sword lies on the bed socket (interaction config).",
+ "pelvis": {
+  "location_m": [
+   0.0,
+   0.65,
+   0.6209734678268433
+  ],
+  "rotation": [
+   {
+    "axis": "x",
+    "degrees": -90.0
+   },
+   {
+    "axis": "z",
+    "degrees": -90.0
+   }
+  ]
+ },
+ "steps": [
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 15,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 22,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 21,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 25,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 24,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 28,
+   "side": "L"
+  },
+  {
+   "bone": "thumb.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 10,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 15,
+   "side": "R"
+  },
+  {
+   "bone": "finger1.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "R"
+  },
+  {
+   "bone": "finger2.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "R"
+  },
+  {
+   "bone": "finger2.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 22,
+   "side": "R"
+  },
+  {
+   "bone": "finger3.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 21,
+   "side": "R"
+  },
+  {
+   "bone": "finger3.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 25,
+   "side": "R"
+  },
+  {
+   "bone": "finger4.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 24,
+   "side": "R"
+  },
+  {
+   "bone": "finger4.R_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 28,
+   "side": "R"
+  },
+  {
+   "bone": "thumb.R_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 10,
+   "side": "R"
+  },
+  {
+   "bone": "coat.L",
+   "kind": "swing",
+   "toward": "in",
+   "degrees": 15.0,
+   "side": "L"
+  },
+  {
+   "bone": "coat.R",
+   "kind": "swing",
+   "toward": "in",
+   "degrees": 15.0,
+   "side": "R"
+  },
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "base": -3.094041645526886,
+    "waves": [
+     [
+      0.4,
+      1,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 9.892387893050909
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "base": 9.892387893050909,
+    "waves": [
+     [
+      0.15,
+      1,
+      0.25
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "upper_leg.L",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 5.341351144015789,
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -25.06458766758442,
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 5.383193604648113,
+   "side": "R"
+  },
+  {
+   "bone": "upper_arm.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -25.06458766758442,
+   "side": "R"
+  }
+ ],
+ "posture_source": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/posture-02/posture.json",
+ "revision_note": "a02: a01 crossed the sword on the bed socket with the left coat tail (coat.L, 81 pairs, 5.6 mm); both coat tails now swing 15 deg towards the midline (posture-02 re-solved: all five support sets 1.0 mm above the bed top) and the head breath is 0.15 deg (a01 head_back float reached 4.09 mm)."
+}
