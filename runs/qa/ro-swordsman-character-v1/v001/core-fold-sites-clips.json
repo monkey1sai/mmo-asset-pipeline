@@ -1,0 +1,129 @@
+{
+ "note": "Clip-pose fold fixes on the b12 hybrid foundation: triangles that fold only in Walk a04 and Run a02 combinations (hip with knee), each driven by the bones at that clip frame (product for hip x knee) and zero at every frozen-level contract pose.",
+ "sites": [
+  {
+   "centre": [
+    -0.0516,
+    -0.0466,
+    0.7951
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/AN_RO_Walk_Sword.blend",
+    "action": "AN_RO_Walk_Sword",
+    "frame": 44.25
+   },
+   "driver_bones": [
+    "upper_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  },
+  {
+   "centre": [
+    -0.0516,
+    -0.0466,
+    0.7951
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 20.5
+   },
+   "driver_bones": [
+    "upper_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  },
+  {
+   "centre": [
+    -0.1774,
+    0.1065,
+    0.5235
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 29.25
+   },
+   "driver_bones": [
+    "upper_leg.R",
+    "lower_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  },
+  {
+   "centre": [
+    -0.1774,
+    0.1065,
+    0.5235
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 16.75
+   },
+   "driver_bones": [
+    "upper_leg.R",
+    "lower_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  },
+  {
+   "centre": [
+    -0.1849,
+    0.1076,
+    0.5161
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 30.0
+   },
+   "driver_bones": [
+    "upper_leg.R",
+    "lower_leg.R"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  },
+  {
+   "centre": [
+    0.1809,
+    0.1086,
+    0.5175
+   ],
+   "pose_from": {
+    "clip_blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+    "action": "AN_RO_Run_Sword",
+    "frame": 8.5
+   },
+   "driver_bones": [
+    "upper_leg.L",
+    "lower_leg.L"
+   ],
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 0.0
+   },
+   "area_ratio": 0.1
+  }
+ ]
+}

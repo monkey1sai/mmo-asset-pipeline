@@ -1,0 +1,44 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T07:12:52Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "paused_waiting_for_user (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238,
+  602
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z",
+  "2026-10-05T07:02:50Z"
+ ],
+ "interval_note": "The last interval starts at the first command of the turn; reasoning before it is not observable and not counted.",
+ "active_seconds_total": 4051,
+ "trial_seconds_cap": 21600,
+ "current_best_build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "joint_range": "73 of 73 numeric gates pass",
+  "closed_loop": "runtime 4.64 um, readback 4.21 um",
+  "note": "The recorded joint-range and closed-loop runs predate later tool and harness changes; both are rerun before any ledger entry."
+ },
+ "this_interval": "Read-only skeleton compliance check (v001-compliance-check-01.json) and authorization entry 8 (pauldrons static; forearm twist carriers retro-authorized). No build, no experiment.",
+ "open_decisions": [
+  "wrist_transition.L (static left carrier beyond zone A)",
+  "rest direction and roll change of the existing wrist_transition.R"
+ ],
+ "new_paid_submissions": 0
+}

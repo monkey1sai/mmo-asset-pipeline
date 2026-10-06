@@ -1,0 +1,87 @@
+{
+ "schema_version": 1,
+ "id": "ro-swordsman-character-v1-p1-probe",
+ "status": "probe_for_wiring_only_not_accepted_corrective",
+ "quaternion_convention": "wxyz; rest-relative local rotation of the bone; Blender bone-local axes",
+ "drivers": {
+  "wrist_progress.R": {
+   "type": "rotation_difference",
+   "bone": "hand.R",
+   "target_quaternion_wxyz": [
+    0.39390456676483154,
+    0.27652600407600403,
+    -0.3589938282966614,
+    0.7996849417686462
+   ],
+   "target_source": "authored action RO_WristGrip_Prototype_61f frame 61"
+  },
+  "grasp.R": {
+   "type": "state",
+   "key": "grasp.R"
+  }
+ },
+ "channels": [
+  {
+   "mesh": "SM_RO_WristLoft.R",
+   "morph": "WristVolume_025",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "wrist_progress.R",
+   "curve": {
+    "type": "hat",
+    "prev": 0.0,
+    "at": 0.25,
+    "next": 0.5
+   }
+  },
+  {
+   "mesh": "SM_RO_WristLoft.R",
+   "morph": "WristVolume_050",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "wrist_progress.R",
+   "curve": {
+    "type": "hat",
+    "prev": 0.25,
+    "at": 0.5,
+    "next": 0.75
+   }
+  },
+  {
+   "mesh": "SM_RO_WristLoft.R",
+   "morph": "WristVolume_075",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "wrist_progress.R",
+   "curve": {
+    "type": "hat",
+    "prev": 0.5,
+    "at": 0.75,
+    "next": 1.0
+   }
+  },
+  {
+   "mesh": "SM_RO_WristLoft.R",
+   "morph": "WristVolume_100",
+   "owner": "runtime_evaluator",
+   "kind": "body_pose",
+   "driver": "wrist_progress.R",
+   "curve": {
+    "type": "hat",
+    "prev": 0.75,
+    "at": 1.0,
+    "next": null
+   }
+  },
+  {
+   "mesh": "SM_RO_glove.R",
+   "morph": "GripContact_R",
+   "owner": "runtime_evaluator",
+   "kind": "contact_state",
+   "driver": "grasp.R",
+   "curve": {
+    "type": "linear"
+   }
+  }
+ ]
+}

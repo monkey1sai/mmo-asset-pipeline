@@ -1,0 +1,77 @@
+{
+ "observed_utc": "2026-10-05T04:44:08.262932+00:00",
+ "review": {
+  "path": "runs/qa/ro-swordsman-character-v1/p2-prep/independent-contract-review.md",
+  "sha256": "a88e9684436dee807a85ecda8b68b3b7e91260f2d6c9b48e3603057ee2e78fd0"
+ },
+ "note": "每項皆先核對再處置；審查意見是模型產出，不是人類批准。九項全部核對屬實。",
+ "findings": [
+  {
+   "n": 1,
+   "severity": "High",
+   "verdict": "confirmed",
+   "action": "工具新增 deforms 關卡：每根被擺動的骨須有>=3個權重>=0.1的頂點且典型角度位移>=0.1mm。基準的 toe-extension.L/R 現在因 toe 無權重而不通過。",
+   "residual": "無 expect 的扭轉與張指動作只驗有位移，未驗方向符號。"
+  },
+  {
+   "n": 2,
+   "severity": "High",
+   "verdict": "confirmed",
+   "action": "手區交叉在組合姿勢（握拳除外）與非手部動作的極端角度也強制為0；手區以外在典型與極端角度都受基準上限約束，另加極端角度邊長比上限。",
+   "residual": "握拳與腕指掃描的極端角度手區交叉仍只報告，交美術審查；接觸與穿入的深度量測未實作。"
+  },
+  {
+   "n": 3,
+   "severity": "High",
+   "verdict": "confirmed",
+   "action": "改以手部骨權重定義手區，武器以外所有蒙皮網格合成單一集合計算跨網格交叉；移除依網格名稱的零容忍清單。",
+   "residual": "手區以外只是防退步上限：基準在髖前屈、深蹲等動作的大量穿插仍被容許，須靠美術審查。"
+  },
+  {
+   "n": 4,
+   "severity": "High",
+   "verdict": "confirmed",
+   "action": "新增 holdout_policy：固定名稱與需求雜湊外的紀錄檔、通過條件含全部clip檢查、允許與禁止的新增內容；runtime_contract 限定互動狀態只能由宣告時窗以固定過渡產生。",
+   "residual": "承諾雜湊需使用者提供；未提供時無法事後證明holdout未被更換。"
+  },
+  {
+   "n": 5,
+   "severity": "Medium",
+   "verdict": "confirmed",
+   "action": "baseline登記腳本補 target_environment 檢查；授權紀錄移到 authorizations.json（不在需求雜湊範圍）。",
+   "residual": "無"
+  },
+  {
+   "n": 6,
+   "severity": "Medium",
+   "verdict": "confirmed",
+   "action": "新增 grasp_gate，逐字引用 r010 functional_gate、original_shape_guard、interval 規則與「失敗後不得移動建立時刻」，並註明灰模接受屬通過條件。",
+   "residual": "左手沿用鏡射pad是新增定義，r010沒有左手。"
+  },
+  {
+   "n": 7,
+   "severity": "Medium",
+   "verdict": "confirmed",
+   "action": "新增 contact_measurement、transition_matrix.gates、肩與髖軸向旋轉、握劍＋腕動作的 requires_pose 組合。",
+   "residual": "名義速度與床面量點是設計值，未經實測校正。"
+  },
+  {
+   "n": 8,
+   "severity": "Medium",
+   "verdict": "confirmed",
+   "action": "改為單一口徑（協調者實際工作時間），刪除「可改採牆鐘重算」。",
+   "residual": "需使用者明確同意；同意前不凍結。"
+  },
+  {
+   "n": 9,
+   "severity": "Low",
+   "verdict": "confirmed",
+   "action": "工具必須明示 --rules 或 --no-rules、以修改器判定蒙皮網格、可用 --request 核對契約SHA；rest既有交叉改為手區內必須0、手區外不得超過基準；需求區塊改名去除 draft／proposal。",
+   "residual": "rest時手區對其他部位既有的交叉（基準4對）不設上限，只報告。"
+  }
+ ],
+ "uncertainty_resolved": {
+  "one_micron_whole_body": "實測不可保證：還原精確權重後最大1.048µm。需求改訂完整角色世界座標5µm，需使用者知悉。"
+ },
+ "side_effect": "回讀驗證腳本第一次執行時造成Blender擴充套件快取被清空，見 incident-blender-extension-cache.json；已恢復。"
+}

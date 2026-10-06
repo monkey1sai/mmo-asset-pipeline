@@ -1,0 +1,29 @@
+{
+  "status": "proposal_not_applied_auto_review_requires_explicit_file_write_approval",
+  "subsequent_outcome": "User selected direction 1; reviewed single-file update applied and readback verified. Completed task downloaded, consumed0.5; old policy must not be restored over the new reservation.",
+  "subsequent_evidence": "runs/ro-swordsman-api-grant-applied.json; assets/raw/ro-swordsman-combo/rodin-v001/manifest.json",
+  "target": "C:/Users/IOT/.codex/tools/hyper3d-api/authorization.json",
+  "operation_id": "ro-swordsman-reference-20261002-001",
+  "input_roots": ["C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png"],
+  "output_roots": ["C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop/assets/raw/ro-swordsman-combo/rodin-v001"],
+  "allowed_new_spend": 0.5,
+  "allowed_new_submissions": 1,
+  "apply_contract": [
+    "Requires explicit approval for this one local authorization-file update; earlier read-only diagnosis does not permit it.",
+    "Read only nonsecret operation/budget controls and journal state; never read credential blobs or environment variables.",
+    "Stop if any previous operation remains pending, unknown or otherwise nonterminal; do not disrupt another task.",
+    "Back up the original authorization metadata with SHA256; preserve all previous journal records and reservations.",
+    "Narrow input to this exact image file and output to this one task directory; do not add the entire C drive, user folder or repository.",
+    "Set this operation ID; derive total reservation ceiling from existing reservation accounting plus exactly 0.5, and submission ceiling from prior records plus one. No counter deletion or history reset.",
+    "Re-read and verify the written policy. Do not change global Codex/MCP configuration, tool code, hooks, credentials, ACLs or network protections.",
+    "Use the already authorized one generation; stop on unknown submission, unexpected fee, duplicate or denial. Do not retry a submitted operation."
+  ],
+  "authorization_envelope": {
+    "destination": "local Hyper3D API authorization file only; subsequently existing Hyper3D API account",
+    "purpose": "bind the user's specific 0.5-credit character generation permission to the installed interface",
+    "allowed_operations": "only after approval: bounded policy metadata read, backup, narrow update, readback; one paid submission already authorized",
+    "data_transmitted": "one reference image and prepared prompt on later generation; local policy metadata is not sent externally",
+    "forbidden_operations": ["credential read/print", "broad root grant", "counter reset", "journal deletion", "tool-code modification", "global configuration change", "quota purchase", "other pending-task disruption"],
+    "stop_conditions": ["approval absent", "previous nonterminal task", "unknown policy schema", "unexpected file drift", "hash mismatch", "automatic-review denial"]
+  }
+}

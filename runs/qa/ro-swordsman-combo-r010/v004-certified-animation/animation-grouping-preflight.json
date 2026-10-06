@@ -1,0 +1,16 @@
+{
+  "parameter": "export_anim_scene_split_object",
+  "type": "BOOLEAN",
+  "default": true,
+  "observed_problem": "Initial supportedSCENE export splits skeleton andmorphinto2clips",
+  "classification": "TEST_FAILURE: exporter grouping not synchronized clip",
+  "old_GLb": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.glb",
+    "sha256": "6c546dcff69e7dba66bb30582e305483a2fe3208947729db430990181fa2ebbf"
+  },
+  "old_structure": {
+    "path": "runs/qa/ro-swordsman-combo-r010/v004-certified-animation/glb-structure.json",
+    "sha256": "398ece9ac12d33f9c3c1100c0c464fb50ac8bd5837ba6f0f0be4d83ae4e62f47"
+  },
+  "curve_and_source_changed": false
+}

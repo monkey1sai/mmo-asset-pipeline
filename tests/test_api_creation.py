@@ -59,6 +59,26 @@ class ApiCreationTests(unittest.TestCase):
         self.assertEqual(creation["unknown_submission_policy"], "reconcile_original_operation_never_resubmit")
         self.assertEqual(creation["website_policy"], "credit_evidence_or_documented_fallback_only")
 
+    def test_large_repair_fallback_does_not_submit_or_reset_budget(self):
+        request = specified()
+        request["production"]["route"] = "modify"
+        before = deepcopy(request)
+        plan = workbench.production_plan(request)
+        policy = plan["reconstruction_fallback"]
+        self.assertFalse(policy["automatic_paid_retry"])
+        self.assertFalse(plan["paid_submission_authorized_by_this_plan"])
+        self.assertIn("new_phase_requires_user_scope", policy["budget"])
+        self.assertNotIn("creation_workflow", plan)
+        self.assertEqual(request, before)
+
+    def test_generated_shape_preserves_animation_and_current_adapter_gate(self):
+        request = specified()
+        request["production"]["route"] = "generate"
+        policy = workbench.production_plan(request)["creation_workflow"]["reconstruction_policy"]
+        self.assertIn("probe_current_adapter", policy["capabilities"])
+        self.assertIn("does_not_supply_verified_rig", policy["animation"])
+        self.assertEqual(policy["steps"][0], "preserve_failed_candidate_and_evidence")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,30 @@
+{
+  "operation_id": "ro-split-cuirass-20261003-001",
+  "request": "requests/ro-swordsman-combo-r004.json",
+  "images": [
+    "assets/raw/ro-swordsman-combo/design-v003/cuirass.png"
+  ],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/cuirass",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Raw",
+    "quality_override": 3000,
+    "quad_normal": false,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "texture_mode": "high",
+    "texture_delight": true,
+    "TAPose": false,
+    "is_symmetric": "balanced",
+    "image_label": [
+      "FL"
+    ],
+    "seed": 4401,
+    "preview_render": true
+  },
+  "authorization": {
+    "spending_scope": "User explicitly permits demand-driven existing monthly/regular API credits and now approves design->Hyper3D->Blender production. Global writes require separate exact-file authority; commit/push held.",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

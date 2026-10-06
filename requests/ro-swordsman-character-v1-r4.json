@@ -1,0 +1,926 @@
+{
+  "schema_version": 1,
+  "id": "ro-swordsman-character-v1-r4",
+  "title": "RO劍士：可重用角色動畫V1（凍結後接入新動作驗收）r4",
+  "brief": "請讀取 C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\docs\\handoffs\\claude-code-character-animation-v1-20261005.md，接手其中代辦。先完成 P0 核對與新需求草稿；保留原驗收、歷史及單一 writer。r010 不得重開；commit／push 繼續等我驗證。",
+  "purpose": "同一完整角色的網格、rest骨架、權重與依關節姿勢啟動的通用修形只建立一次；之後新增動作只增加片段、轉場與互動設定。保留原RO照片技能連段的獨立可編輯BLEND與可搬移GLB交付要求。",
+  "task_type": "rigged_character",
+  "status": "specified",
+  "project": null,
+  "style": {
+    "description": "照片中的年輕棕髮男性動漫劍士，銀灰裝甲、深藍衣襬、白色前襟及棕色皮裝；依二維參考重建三維。（沿用 requests/ro-swordsman-combo.json，未改）",
+    "references": [
+      "C:\\.llmcode\\ro_swordsman_animation",
+      "runs/evidence/ro-swordsman-reference-analysis.md",
+      "docs/handoffs/claude-code-character-animation-v1-20261005.md",
+      "runs/handoffs/claude-code-character-animation-v1-20261005/conversation-source.md"
+    ],
+    "must_have": [
+      "棕色尖髮與動漫男性臉",
+      "分片銀色胸肩臂甲",
+      "深藍分叉衣擺與白前襟",
+      "皮手套／腰帶／長靴",
+      "獨立直劍／武器掛點",
+      "可編輯骨架及真正連續技能動作",
+      "可關閉的斬擊、怒爆火焰、霸體金色光效",
+      "完整角色（左右手、腕、衣甲）使用同一套網格／rest骨架／權重／通用修形承載全部動作",
+      "身體修形依最終關節姿勢啟動；接觸修形另依互動狀態啟動，兩者分開",
+      "角色基礎凍結後接入未用於調整模型的holdout動作，逐資料類別簽章不變"
+    ],
+    "must_not_have": [
+      "把場景文字或火光融合進角色幾何",
+      "靜態圖片輪播代替骨骼動畫",
+      "以特效遮住握持或關節缺陷",
+      "自行新增遊戲傷害／碰撞規則",
+      "依動畫名稱或固定幀號啟動的形變特判",
+      "以局部右手或假人冒稱完整角色通過",
+      "同一morph通道同時由烘焙clip與runtime求值器寫入",
+      "空手握拳或張掌時出現劍柄壓痕",
+      "以關節掃描冒充走路、睡眠或施法動作"
+    ]
+  },
+  "spec": {
+    "size_m": [
+      1.2,
+      1.74,
+      1.2
+    ],
+    "size_scope": "GLB [X,Y,Z]：角色名義站高1.74m（+Y上）；X/Z為規劃包絡。武器與動作包絡另行量測；不宣稱精確XYZ。（沿用r010）",
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "target_triangles": 60000,
+    "triangle_budget_scope": "完整角色與劍合計上限；展示stage/VFX另記。P0實測基準57,039tri，餘額2,961；左手替換與腕縫的估算見 runs/qa/ro-swordsman-character-v1/p0-verification.md，屬估算非量測。",
+    "texture_px": 2048,
+    "requires_rig": true,
+    "animations": [
+      "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory",
+      "AN_RO_Idle_Sword",
+      "AN_RO_Walk_Sword",
+      "AN_RO_Run_Sword",
+      "AN_RO_LieDown",
+      "AN_RO_Sleep_Loop",
+      "AN_RO_GetUp",
+      "AN_RO_Cast_OpenPalm",
+      "AN_RO_Holdout_01"
+    ],
+    "animation_contract": {
+      "fps": 60,
+      "frames": 300,
+      "sampling_interval_seconds": [
+        0,
+        4.9833333333
+      ],
+      "playback_duration_seconds": 5,
+      "reference_order": [
+        "provoke",
+        "bash",
+        "magnum_break",
+        "endure",
+        "victory"
+      ],
+      "root_motion": "原地表演；跳躍由骨盆位移，不改遊戲位移；動作銜接推定。",
+      "scope_note": "以上六欄為原照片連段 AN_RO_Combo_* 的契約，原文沿用未改。其餘片段的契約在 clip_contracts_draft，待凍結。"
+    },
+    "parts": [
+      {
+        "id": "character",
+        "pivot": "地面中心；Blender+Z上/-Y前→GLB+Y上/+Z前"
+      },
+      {
+        "id": "sword",
+        "pivot": "握柄中心；掛hand.R武器骨；放劍／取劍以socket事件切換，不逐幀漂移武器"
+      },
+      {
+        "id": "coat-tails",
+        "pivot": "骨盆左右分叉衣擺獨立活動"
+      },
+      {
+        "id": "effects",
+        "pivot": "分離展示層，角色動作可不含效果檢查"
+      },
+      {
+        "id": "bed-proxy",
+        "pivot": "床面中心；只作互動定位與支撐面代理，不屬角色三角預算"
+      }
+    ],
+    "clip_contracts": {
+      "status": "frozen_with_request",
+      "note": "長度、loop、事件與接觸為凍結值；holdout由使用者保管。所有clip以60fps製作。",
+      "clips": [
+        {
+          "id": "AN_RO_Idle_Sword",
+          "loop": true,
+          "contact": "雙腳全程支撐；右手握持時窗=全程",
+          "frames": 120
+        },
+        {
+          "id": "AN_RO_Walk_Sword",
+          "loop": true,
+          "contact": "左右腳stance時窗另列；右手握持時窗=全程；root_motion原地loop＋另記位移速度",
+          "frames": 60
+        },
+        {
+          "id": "AN_RO_Run_Sword",
+          "loop": true,
+          "contact": "同Walk；含騰空相位，騰空時不要求腳接觸",
+          "frames": 40
+        },
+        {
+          "id": "AN_RO_LieDown",
+          "loop": false,
+          "contact": "床面支撐區（背、骨盆、後腦、小腿）自接觸建立幀起；放劍事件後不要求握持",
+          "frames": 90
+        },
+        {
+          "id": "AN_RO_Sleep_Loop",
+          "loop": true,
+          "contact": "床面支撐區全程；手自然放鬆，不要求靠近劍柄",
+          "frames": 180
+        },
+        {
+          "id": "AN_RO_GetUp",
+          "loop": false,
+          "contact": "床面支撐至離床幀；取劍事件後恢復握持時窗",
+          "frames": 90
+        },
+        {
+          "id": "AN_RO_Cast_OpenPalm",
+          "loop": false,
+          "contact": "雙腳支撐；左手張掌（無接觸修形）；右手握持全程；釋放事件1個",
+          "frames": 90
+        },
+        {
+          "id": "AN_RO_Holdout_01",
+          "loop": null,
+          "contact": "由使用者在凍結前封存指定，凍結後才製作；不得用於調整網格／rest／權重／morph／規則／求值器",
+          "frames": null
+        }
+      ]
+    }
+  },
+  "production": {
+    "route": "modify",
+    "reason": "素材庫已有完整角色基準（r007/r010 baseline，57,039tri／53骨，NO_SHIP）與右手局部原型（r010-v004）。差距在骨架完整性、左手、權重／修形與動作，屬修訂既有來源；P0未觀測到必須重新生成整體造型的證據。候選上限4為使用者2026-10-05核准；P1閉環準備不計候選。",
+    "max_revisions": 4,
+    "reuse_candidates": [
+      "ro-swordsman-combo-r006-v008",
+      "ro-swordsman-combo-r010-v004",
+      "ro-swordsman-combo-r007-hand-source"
+    ]
+  },
+  "delivery": {
+    "scope": "target_environment",
+    "formats": [
+      "blend",
+      "glb"
+    ],
+    "target_environment": {
+      "name": "Three.js（本repo內隔離QA場景 tools/runtime-qa/three）",
+      "version": "0.186.0",
+      "verification_context": "Chromium系瀏覽器載入GLB，AnimationMixer混合後由runtime求值器計算修形，再以引擎原生morph＋skinning渲染與CPU求值點量測。不代表changshan-longdan、Godot或Unity已可用；不寫任何客戶repo。"
+    }
+  },
+  "provenance": {
+    "kind": "user_brief",
+    "reference": "requests/ro-swordsman-character-v1-r4.json#brief; previous version r3; docs/handoffs/claude-code-character-animation-v1-20261005.md"
+  },
+  "additional_checks": [
+    {
+      "id": "export-roundtrip",
+      "area": "technical",
+      "description": "乾淨場景GLB重匯入，實際skin/joints/channels/材質/採樣與變形保留；以交付hash綁定。（原檢查，未改）"
+    },
+    {
+      "id": "skill-effects",
+      "area": "art",
+      "description": "斬擊／怒爆／霸體效果對應參考且可關閉；無效果全段另外檢查。（原檢查，未改）"
+    },
+    {
+      "id": "grasp-contact-windowed",
+      "area": "technical",
+      "description": "r010 握持功能關卡原文：Original5pads each>=3pointswithin2mm; unknowninside0; actualself/swordtransverse0; degenerates0; sampledmaxpenetration<=1mm; independentgrayshapeacceptance. 另含原形狀防護（邊長比0.25–3）、武器剛性跟手、不得逐幀滑動、失敗後不得移動建立時刻；於各clip宣告的握持時窗內逐取樣強制，時窗外仍查穿入與交叉。細節見 grasp_gate。"
+    },
+    {
+      "id": "joint-range",
+      "area": "technical",
+      "description": "support_envelope.joint_range_contract 綁定的契約由 scripts/cv1_joint_range.py 執行：全部動作的數值關卡通過，加固定視角同尺度灰模的獨立審查。"
+    },
+    {
+      "id": "clip-set",
+      "area": "technical",
+      "description": "spec.animations 全部片段逐一：整幀＋半幀＋高風險區加密取樣；各自宣告的接觸時窗、滑動、穿入、漂浮門檻。只宣稱受測時間點。"
+    },
+    {
+      "id": "transition-interaction",
+      "area": "technical",
+      "description": "transition_matrix 所列轉場×時長×播放速度×求值步進逐一取樣，依 transition_matrix.gates 判定；含pause/resume/seek、loop接縫與反覆切換、武器socket與床面支撐時窗。"
+    },
+    {
+      "id": "runtime-closed-loop",
+      "area": "technical",
+      "description": "BLEND→GLB→選定runtime載入、播放、修形、渲染與量測；morph 0／部分／1取樣的圖像與求值點對照；求值順序與每通道唯一owner。runtime選定並改為target_environment交付後，另加target_environment實測。"
+    },
+    {
+      "id": "frozen-holdout-reuse",
+      "area": "technical",
+      "description": "凍結mesh／rest骨架／權重／通用morph／驅動規則／runtime求值器後接入holdout動作；只新增clip／骨對應／事件／互動時窗；各資料類別以正規化簽章逐一比較不變，且holdout必須通過與其他clip相同的 clip-set、握持、轉場與美術檢查。細節見 holdout_policy。"
+    },
+    {
+      "id": "negative-controls",
+      "area": "technical",
+      "description": "可丟棄副本反例：缺失骨映射、關閉必要修形、武器移入手內、錯誤接觸時窗；每個反例對應到確切失敗的檢查項。"
+    },
+    {
+      "id": "performance-report",
+      "area": "technical",
+      "description": "選定runtime與硬體上的實測幀時間與求值成本；30／60／120fps求值步進為測試工況，不是性能承諾。"
+    },
+    {
+      "id": "art-motion-review",
+      "area": "art",
+      "description": "獨立美術審查：先看匿名A/B固定視角灰模與動作影片，再看數值；握姿包握、關節輪廓、重心與支撐分開評語。"
+    }
+  ],
+  "assumptions": [
+    "目標環境為本repo內隔離的Three.js 0.186.0 QA場景（使用者2026-10-05選A）；不宣稱任何實際遊戲、Godot或Unity可用。",
+    "原需求 requests/ro-swordsman-combo.json 至 r010.json 不覆寫；本草稿的 style、size、60,000tri、2K、1.74m、300幀／60fps連段、可關閉VFX與六個品質維度均原樣沿用，未降低。",
+    "走路／跑步／躺下／睡眠／起床／施法與holdout重用驗收是使用者在來源對話第2、3輪提出的能力擴充；它們是新增驗收，不取代原照片技能連段驗收。",
+    "r010 四候選已封存（compare=stop_budget、assess=not_ready），本需求不重開、不改名延續r010；r010 局部成果只作回歸基準與握持時窗檢查來源。",
+    "來源對話引用的 character_animation_v1_codex_spec.md 未取得；本草稿依交接文件P0..P6與可讀對話整理，不沿用該附件內未知的預算或條款。",
+    "預設不提交新的付費生成：左手優先以既有右手來源鏡射衍生。若實物證據指出必須新來源，依使用者既有『按需使用現有點數』授權逐筆登記唯一operation；不加購、不升級。",
+    "121或其他有限取樣只支持受測時間點；CPU求值位置不冒稱GPU畫面證據；1µm只適用於同版本來源對匯出回讀精度，不泛化為美術門檻。",
+    "背面及中間動作依照片設計推定；參考權利由使用者提供，商業使用權仍未驗證。（沿用原需求）",
+    "stage／commit／push／merge／部署不在本需求執行範圍，等待使用者驗證。同一BLEND／場景只有一個writer。",
+    "睡眠床面：使用者未指定實際規格，採0.45m高、2.0×0.9m代理為低風險預設；有實際遊戲床規格時另版修訂。",
+    "同一trial可跨多個回合；trial內的實作修復保留先前失敗與原時鐘。P2到P5屬同一候選的生命週期：compare 對任何非美術必要檢查失敗的completed候選一律discard，所以候選要帶著全部必要檢查才登記completed。",
+    "灰模先行：候選先以關節範圍灰模與固定五視角做內部檢視，再投入完整clip、runtime與匯出驗證；內部檢視不取代登記時的全部必要檢查。",
+    "30/60/120fps、0.5x/1x/1.5x、100/200/400ms是測試工況，不是性能證明。",
+    "holdout：使用者2026-10-05採做法1，已私下選定並自行保管，角色基礎凍結後才揭示；規則見 holdout_policy。",
+    "匯出回讀容差：完整角色世界座標5µm、runtime CPU求值點10µm，依2026-10-05基準實測訂定（還原精確權重後最大1.048µm）；r010手部局部原型的1µm結果保留為回歸證據。",
+    "時鐘（單一口徑）：trial 的 elapsed_seconds 是協調者實際工作時間，即各回合開始到結束的時間相加，含量測、等待工具與審查；等待使用者回覆的區間不計入，逐筆記錄起訖供查核。",
+    "r2 與 v1 的差異僅限姿勢定義（肩肘髖膝的旋轉軸、抬臂過頭、雙手下劈需候選姿勢）；角度、門檻、動作清單、品質契約、預算與保護區規則皆同 v1。候選次數與時間自 v1 延續，不重設。",
+    "r3 與 r2 的差異僅兩項：腳趾等基準未變形的動作改用一般上限；脊椎側彎極端角度的手區交叉改為只報告。其餘角度、門檻、動作清單、品質契約、預算與保護區規則皆同。候選次數與時間延續，不重設。",
+    "r4 與 r3 的差異僅一項：雙手下劈的身體防退步上限改由基準以同一組手臂旋轉量得，手臂旋轉以雜湊凍結。其餘角度、門檻、動作清單、品質契約、預算與保護區規則皆同。候選次數與時間延續，不重設。"
+  ],
+  "open_questions": [],
+  "quality": {
+    "schema_version": 1,
+    "status": "frozen",
+    "protocol": {
+      "views": [
+        "front",
+        "side",
+        "back",
+        "three-quarter",
+        "detail"
+      ],
+      "lighting": "Fixed Eevee studio: Key (3,-4,5)700W 4m; Fill(-3,-2,3)350W 3m; Rim(0,3,4)800W 3m; world(.16,.16,.16). No VFX on evaluation views.",
+      "background": "AgX exposure0; neutral grey floor(.18,.19,.21); 1280x1280 PNG.",
+      "framing": "Frame1; ortho scale2.25; target(0,0,.9); front(0,-4,1.35),side(4,0,1.35),back(0,4,1.35),3Q(2.8,-4,2). Detail(1.2,-4,1.75)target(0,0,1.53)scale.62.",
+      "tool_version": "Blender4.5.5 LTS build836beaaf597a; BLENDER_EEVEE_NEXT; local reproducible construction.",
+      "inspection_context": "Standalone stylized humanoid matching supplied art. Compare five views and face; inspect neutral animation entire300frames and transition midpoints; shoulders/elbows/hips/knees, grip, sword arc, foot contact, garment collision; clean GLB reimport. No target game specified."
+    },
+    "reference_artifacts": [
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/01_provoke.jpg",
+        "sha256": "b6bdb93c0ca7ec4307e0641a82b26c58ebac1cdac0c6123e48890322b78cc76d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/02_bash.jpg",
+        "sha256": "8e5cbb73710767e34bf1cf4e2eed1aaa13b8c36fda18408878d410ea5f8af255"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/03_magnum_break.jpg",
+        "sha256": "96cb4d1c088093dde65a3a23e167fc42e71a370538b379e907246038a56f8985"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/04_endure.jpg",
+        "sha256": "e84df1ccf2d7845ce3c55dfc440972b89dc943a2f1759cd101658f4b324c8120"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/05_victory.jpg",
+        "sha256": "c0523c82008c6b542d04138a555484ac69251d8e36ac0532ac1330e3f480bca8"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/ro_swordsman_action_sheet.jpg",
+        "sha256": "45ceb6e3ba9bba29c49647712f4b726cb6ca8e276a34cc3de66e36a1595dde4c"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_01.png",
+        "sha256": "5dba0b7385f952c88899bf2595221e2b52f8bd62bd7e9641faf23d5d03c9c3f5"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_02.png",
+        "sha256": "836520de2b5542ef1f4ca4aeae5f88ae40df1d3917982088f4806a4a00c0f0c2"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_03.png",
+        "sha256": "14e6b2d966abc1529cbd73caab9509ee296398f7dfdfe45a27c0f94b9d69d407"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_04.png",
+        "sha256": "d138ca4823dc8882690b06595d583a3eb55bebdb4fda0c1b8708f2f7b8c9d031"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_05.png",
+        "sha256": "0088ebd1e2602107c6f53630f3899d96e27abdba93744074bb2557a538a4321f"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_06.png",
+        "sha256": "1cc074adaa0c44523ea000189f6b95a07a11dc55a323d2065077df9052176738"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_07.png",
+        "sha256": "e28f25e4317c3086b3ac967225db1d1b64fbe5ca7f604935bec31d6424e83e2d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_08.png",
+        "sha256": "0f9fd24d06049b87d735f6e6fb27c84f3a4c439f62cd72dfb4ff366fdec566a7"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_09.png",
+        "sha256": "30a2936cafff9541f85d20153b5822a31f4e3f759b18181e8894c3fec9ff000b"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_10.png",
+        "sha256": "8edf662a4451dd8c33e56a3a118db26b906553f71beba7bac703badc0b28c3f6"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_11.png",
+        "sha256": "6c96fef0773af51825d003039cbbc18294fddf2775f12ed9e969e47a037d6389"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png",
+        "sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png",
+        "sha256": "b00dc0e01da4d223b17be84a108bf2218a4eba08100b0ca296e404c8316ac5db"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/core.png",
+        "sha256": "bff59da46f2887c0f5ba95e000043c59f09e384cdb50787dfa247d0408b671c3"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/cuirass.png",
+        "sha256": "7f6e16c7476f4ae3fb46e16ab3dc52a4ed18a9ed110d2e3b6e3ec596e0b844fc"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/pauldron.png",
+        "sha256": "7500ff888c838b3b30d98ab92d13aaf520767e149120fe5619165e6e71add354"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/bracer.png",
+        "sha256": "635bd677551e608c6450c525433791ed6f6f29cdda1bc1ab3201f7439bc551f6"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/coat.png",
+        "sha256": "07430f62a29b959c5fd43d419c604c5f1ac608bea69ae6c2aa8a2ce0e788d06d"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v003/sword.png",
+        "sha256": "e5b598bd0f13cd4dbe4be4e6596cfb84b491ac220da947cbf65ad53096cc54c7"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png",
+        "sha256": "195d226c017fd3675ebebcb49b03e1cb0ece7928aeba79e634188fa1b67fabb6"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png",
+        "sha256": "e45720d0d015ac321e9814901b0b813306f33b079ce0b7cea0af588bb039d02a"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png",
+        "sha256": "36dd21b2958eeb2f8b35edd09d04d25c530ce82b1056fb8d074df4a85368a487"
+      },
+      {
+        "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png",
+        "sha256": "319d4a600582cfa1e14343d9ec909332cd04dc057ad3bacc74382c7091532903"
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "design-intent",
+        "criterion": "棕色尖髮男性劍士、銀色分片甲、藍衣擺／白前襟、皮裝、直劍皆符合照片；臉部動漫語言相符。",
+        "target": 4,
+        "anchors": [
+          "用途或主體完全錯誤",
+          "多數核心元素錯誤",
+          "部分符合但關鍵特徵仍偏離",
+          "核心符合但風格或必要細節有可見差距",
+          "所有核心約束符合且設計語言一致",
+          "符合全部約束並達到固定標竿的精緻度與辨識度"
+        ]
+      },
+      {
+        "id": "silhouette",
+        "criterion": "主要輪廓在固定五視角與實際觀看尺度清楚，禁止用貼圖掩蓋形體",
+        "target": 4,
+        "anchors": [
+          "輪廓無法辨識",
+          "主要輪廓錯誤",
+          "可辨識但關鍵輪廓偏離",
+          "正面符合但側面或背面仍不穩定",
+          "各指定視角輪廓符合且清楚",
+          "各視角輪廓達到固定標竿且細節層次清楚"
+        ]
+      },
+      {
+        "id": "form-proportion",
+        "criterion": "比例、體積、結構及需求相關人體／建築／製造邏輯可信",
+        "target": 4,
+        "anchors": [
+          "結構或比例無法成立",
+          "主要比例嚴重錯誤",
+          "多處體積或結構差距",
+          "主要體積成立但關鍵部位仍需修正",
+          "各關鍵部位比例與結構符合設計",
+          "體積轉折與結構細節達到固定標竿"
+        ]
+      },
+      {
+        "id": "materials",
+        "criterion": "依指定風格檢查材質分區、roughness、色彩、貼圖密度與 UV 接縫",
+        "target": 4,
+        "anchors": [
+          "缺少指定材質或貼圖失效",
+          "材質類型與需求相反",
+          "可辨識但多處分區或貼圖缺陷",
+          "主要分區正確但接縫或質感仍不一致",
+          "所有指定材質清楚且無可見接縫缺陷",
+          "材質層次、細節與風格一致性達到固定標竿"
+        ]
+      },
+      {
+        "id": "craft",
+        "criterion": "固定視角與連段中肩肘髖膝變形、甲衣接合、劍手握持皆無關鍵瑕疵；特效不掩蓋缺陷。",
+        "target": 4,
+        "anchors": [
+          "模型破損或必要部件缺失",
+          "大量破面、融合或穿插",
+          "存在多處關鍵瑕疵",
+          "主要部件乾淨但近看仍有需修正缺陷",
+          "指定角度及功能範圍無可見關鍵瑕疵",
+          "細節收邊、接合與所有適用姿勢達到固定標竿"
+        ]
+      },
+      {
+        "id": "use-readability",
+        "criterion": "挑釁→狂擊→怒爆→霸體→勝利及12參考姿勢／連續銜接清楚，重心、支撐脚和劍尖弧線可信；必要效果為分離可關閉內容。",
+        "target": 4,
+        "anchors": [
+          "用途所需結構不可用或不可辨識",
+          "主要功能結構無法辨識",
+          "只有近看可辨識",
+          "主要使用情境可辨識但部分視角有混淆",
+          "所有指定使用情境主次清楚且符合用途",
+          "使用情境與表現均達到固定標竿且無多餘視覺干擾"
+        ]
+      }
+    ],
+    "budget": {
+      "trial_seconds": 21600,
+      "total_seconds": 172800
+    }
+  },
+  "support_envelope": {
+    "status": "frozen_with_request",
+    "note": "角度為相對rest的單軸活動範圍（度）。2026-10-05以基準角色實跑校正：角度未調整；校正結果只用來訂量測門檻與基準上限。凍結後不得為過關而縮小。",
+    "joint_ranges_deg": {
+      "spine_total": {
+        "flexion": 45,
+        "extension": 20,
+        "lateral": 25,
+        "twist": 35
+      },
+      "neck_head": {
+        "yaw": 50,
+        "pitch": 30,
+        "roll": 20
+      },
+      "shoulder": {
+        "flexion": 150,
+        "extension": 40,
+        "abduction": 120,
+        "axial_rotation": 60
+      },
+      "elbow": {
+        "flexion": 135
+      },
+      "forearm": {
+        "twist": 70
+      },
+      "wrist": {
+        "flexion": 60,
+        "extension": 60,
+        "radial": 20,
+        "ulnar": 20
+      },
+      "finger_mcp": {
+        "flexion": 85,
+        "spread": 15
+      },
+      "finger_pip": {
+        "flexion": 100
+      },
+      "finger_dip": {
+        "flexion": 70
+      },
+      "thumb": {
+        "cmc_opposition": 45,
+        "mcp_flexion": 50,
+        "ip_flexion": 70
+      },
+      "hip": {
+        "flexion": 110,
+        "extension": 20,
+        "abduction": 40,
+        "axial_rotation": 35
+      },
+      "knee": {
+        "flexion": 130
+      },
+      "ankle": {
+        "dorsiflexion": 25,
+        "plantarflexion": 40
+      },
+      "toe": {
+        "extension": 45
+      }
+    },
+    "sample_levels": [
+      "neutral",
+      "typical_50pct",
+      "extreme_100pct"
+    ],
+    "combination_poses": [
+      "抬臂過頭（雙臂保持平行）",
+      "雙手下劈（需要候選的雙手握劍姿勢 two_hand_chop）",
+      "深蹲／落地",
+      "空手握拳（不得出現劍柄壓痕）",
+      "張掌施法（左手）",
+      "握劍＋腕屈伸／橈尺偏（需要候選的FK握姿 grasp.R）",
+      "仰臥睡姿（於睡眠clip評估）"
+    ],
+    "contact_thresholds_proposed": {
+      "grasp": "沿用r010：原五指pad每指>=3點<=2mm；樣本穿入<=1mm；僅握持時窗",
+      "foot_stance_slide_mm": 5,
+      "foot_floor_penetration_mm": 2,
+      "foot_float_mm": 3,
+      "bed_support_penetration_mm": 5,
+      "bed_support_float_mm": 5
+    },
+    "out_of_scope_v1": [
+      "翅膀／變身／極端伸縮",
+      "臉部表情與台詞",
+      "跨骨架自動重定向（只交付骨名映射與說明）",
+      "布料物理模擬（衣擺以骨骼活動）"
+    ],
+    "joint_range_gates": {
+      "subject": "武器以外所有蒙皮網格合成單一三角形集合量測，跨網格穿插計入；手區＝任一頂點的手部骨（hand／finger／thumb／wrist_transition）權重合計>=0.5的三角形，與所在網格無關。",
+      "missing": "契約列出的骨或姿勢不存在即該動作不通過",
+      "direction": "典型角度時，指定骨尾端位移在預期方向的分量>0",
+      "deforms": "每根被擺動的骨必須有>=3個權重>=0.1的頂點，且典型角度時最大位移>=0.1mm；沒有權重的骨不算通過",
+      "collapse": "典型與極端角度皆不得有求值後面積小於rest面積5%的三角形",
+      "hand_self": "手區內部自交對數為0：rest與典型角度一律適用；組合姿勢（握拳除外）與非手部動作的極端角度也適用",
+      "hand_other": "手區對其他部位相對rest新增的交叉對數為0，適用層級同上",
+      "hand_shape_guard": "手區邊長比在典型與極端角度皆須在0.25–3（沿用r010原形狀防護）",
+      "body_ratchet": "手區以外：rest既有交叉對數不得超過基準；各動作在典型與極端角度相對rest新增的交叉對數與極端角度最大邊長比不得超過基準同一動作的值。這是防退步上限，不是接受基準的缺陷。 基準無法擺出、或擺了但沒有任何皮膚變形的動作（基準的腳趾沒有權重）不沿用基準數值，改用一般上限：新增交叉0對、邊長比不超過3。 需要候選姿勢的動作（雙手下劈）：手臂旋轉於本需求以雜湊凍結，基準以同一組手臂旋轉擺姿量出上限；候選必須使用凍結的手臂旋轉，否則量測中止。",
+      "reported_only": "腕、指、拇指掃描與握拳在極端角度的手區交叉只報告，交由灰模美術審查；脊椎側彎在極端角度的手區交叉亦只報告（手臂維持原位時手會壓進衣擺），典型角度仍須為0",
+      "art": "每個部位的同尺度灰模由獨立審查者判定；數值通過不代表美術通過"
+    },
+    "contact_window_rules": {
+      "note": "各clip的接觸時窗在量測該clip之前於互動設定宣告；下列為最低涵蓋，防止以縮短時窗過關。",
+      "grasp_R": "Idle、Walk、Run、Cast、Combo全程；LieDown自開始至放劍事件、GetUp自取劍事件至結束。放劍事件不得早於LieDown的25%，取劍事件不得晚於GetUp的75%。",
+      "foot_stance": "Idle雙腳全程；Walk每腳stance至少40%週期；Run每腳stance至少20%週期；Cast雙腳全程。",
+      "bed_support": "LieDown的支撐建立幀不得晚於該clip的70%；Sleep_Loop全程；GetUp至離床幀，離床幀不得早於該clip的30%。"
+    },
+    "contact_measurement": {
+      "floor": "地面為世界 Z=0 平面（Blender）／Y=0（GLB）",
+      "sole_set": "腳底量點＝rest時 foot／toe 骨權重合計>=0.5 且高度在該腳最低點以上10mm內的頂點；於角色基礎凍結時以頂點ID清單與SHA固定，之後不得更換。",
+      "foot_slide": "stance時窗內 sole_set 質心相對時窗第一個取樣的水平位移最大值；原地循環的Walk／Run先扣除名義速度造成的等速後移。",
+      "nominal_speed_m_s": {
+        "AN_RO_Walk_Sword": 1.4,
+        "AN_RO_Run_Sword": 3.5
+      },
+      "foot_penetration_float": "stance時窗內 sole_set 最低點低於地面的最大深度／高於地面的最大高度",
+      "bed": "床面為代理頂面平面；支撐區量點＝背、骨盆、後腦、小腿各自 rest 時最靠後10mm內的頂點，同樣於基礎凍結時固定。",
+      "sampling": "每個clip整幀＋半幀；握持建立、放劍／取劍、腳著地與離地前後各加密到1/4幀。只宣稱受測時間點。",
+      "window_lock": "每個clip的接觸時窗、事件幀與名義速度寫在該clip的互動設定檔，於該clip第一次量測前登記SHA；量測失敗後修改時窗視為實作修復，保留原失敗紀錄，且仍受 contact_window_rules 的最低涵蓋限制。"
+    },
+    "pose_definition": "肩、肘、髖、膝以繞身體軸旋轉定義：屈伸繞左右軸、外展繞前後軸。v1的『朝某方向擺動』在超過90度後會使肢體越過中線，抬臂過頭變成雙臂交叉、雙手下劈使雙手重疊，任何候選都無法通過；r2只修正這些定義，角度與所有門檻不變。",
+    "frozen_poses": {
+      "two_hand_chop": {
+        "arm_rotations": {
+          "upper_arm.R": [
+            0.7648067474365234,
+            -0.5918561816215515,
+            7.79342528289817e-08,
+            0.2545129358768463
+          ],
+          "lower_arm.R": [
+            0.9768653512001038,
+            -0.16077779233455658,
+            3.813514837247567e-08,
+            -0.14101295173168182
+          ],
+          "upper_arm.L": [
+            0.8588912487030029,
+            -0.4817572832107544,
+            -4.3373248104217055e-08,
+            -0.17382675409317017
+          ],
+          "lower_arm.L": [
+            0.9404905438423157,
+            -0.267254501581192,
+            -3.564906592146144e-08,
+            0.20988714694976807
+          ]
+        },
+        "candidate_pose": {
+          "path": "assets/processed/ro-swordsman-character-v1/v001/a29-pose/poses.json",
+          "sha256": "28375c9c83812b83eadc76fae805dfb0c7d4a4ac0c6eb18486a2825c87f690bd"
+        },
+        "baseline_stub": {
+          "path": "runs/qa/ro-swordsman-character-v1-r4/baseline-pose-stub.json",
+          "sha256": "0e2b10d0ced8ac3d074b794560b675335dc4b750dcc8cd0c3592250c366da1b2"
+        },
+        "note": "手與手指的旋轉屬候選資料，不在凍結範圍；手區零交叉的要求不變。"
+      }
+    },
+    "joint_range_contract": {
+      "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+      "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+    },
+    "calibration": {
+      "result": "runs/qa/ro-swordsman-character-v1-r4/baseline-joint-range-v5-calibration/joint-range-result.json",
+      "sha256": "feab2b7da9a94ee924fd87e239f3a630026c0ba5eb626d131b7f7d8a3be747e8",
+      "note": "基準角色以v3姿勢定義實跑，只用來記錄防退步上限；角度未調整。"
+    }
+  },
+  "phase_history": {
+    "previous_request": {
+      "path": "requests/ro-swordsman-combo-r010.json",
+      "sha256": "561f23394006f40a8d657afb1d2d9162efdc4a0b07136d27722d73fd5e811f74"
+    },
+    "previous_phase_reopened": false,
+    "quality_targets_lowered": false,
+    "authority": "請讀取交接文件，接手其中代辦。先完成 P0 核對與新需求草稿；保留原驗收、歷史及單一 writer。r010 不得重開；commit／push 繼續等我驗證。",
+    "new_method": "由單一握姿改為可重用角色基礎：幾何→骨位／軸→完整權重→必要姿勢空間修形；FK設計握姿、IK僅受限微調；凍結後以holdout動作與逐類簽章證明重用。",
+    "p0_report": "runs/qa/ro-swordsman-character-v1/p0-verification.md",
+    "previous_ledger": {
+      "path": "runs/qa/ro-swordsman-combo-r010/quality-ledger.json",
+      "sha256": "f3ee3d81077d9da75580e88909375065f10723c3ff04bfcbfa9d01daf711c520"
+    },
+    "previous_result": {
+      "path": "runs/qa/ro-swordsman-combo-r010/comparison-final.json",
+      "sha256": "7b2bc089179021911768e2339e66594c09d3e222f71a0adc873d7d9723e47238"
+    },
+    "previous_accounting": {
+      "path": "runs/qa/ro-swordsman-combo-r010/phase-accounting-final.json",
+      "sha256": "821a4ae0767a199b94f7591f4dbe99ebc4b39d523cf448842c405bbccd2f4651"
+    },
+    "original_request": {
+      "path": "requests/ro-swordsman-combo.json",
+      "sha256": "b71c1ae300432ef9d90c7494d5d1e7bed976622d509a4992e6ed3dcd6bc95584"
+    },
+    "previous_revisions": 4,
+    "quality_contract_source": "requests/ro-swordsman-combo-r010.json#quality：protocol、29個reference_artifacts、六維度與anchors/target原樣複製；僅status改為draft，budget為待授權提案值。",
+    "p1_report": "runs/qa/ro-swordsman-character-v1/p1/p1-report.md",
+    "authorization_record": "runs/qa/ro-swordsman-character-v1/authorizations.json",
+    "previous_version": {
+      "request": {
+        "path": "requests/ro-swordsman-character-v1-r3.json",
+        "sha256": "74e7c1d0055de94ca23188ec191fd5f3d95357e56ba80346a3245cdc78366617"
+      },
+      "request_sha256": "e0cc340cf54f82ce2c71047ea359e9165242159d7af3fb8700b8cc0d5139dfe2",
+      "ledger": {
+        "path": "runs/qa/ro-swordsman-character-v1-r3/quality-ledger.json",
+        "sha256": "699f5bed2cdbabf4395bd86501051736f0e0f67e88c7c930ba4151cf8e320a50"
+      },
+      "freeze": {
+        "path": "runs/qa/ro-swordsman-character-v1-r3/freeze.json",
+        "sha256": "de1468a0c98e11049af9cae47d07d785d7fac2ed9cdc074ec5c7ecab41a7fa63"
+      },
+      "earlier_version": {
+        "request": {
+          "path": "requests/ro-swordsman-character-v1-r2.json",
+          "sha256": "bd3e8b8f36f154127752cb9fcb61789dd38b920f2ec15ce5060db3dcd26b4c29"
+        },
+        "request_sha256": "6e5cbb4fb7999ecf8a9e9964052311ebb0027df09e8356d869e323407a80d3ba",
+        "ledger": {
+          "path": "runs/qa/ro-swordsman-character-v1-r2/quality-ledger.json",
+          "sha256": "088f68490a2b5e0da052152880c61990cca601e7de8a6f0b3b591c3155621f49"
+        },
+        "freeze": {
+          "path": "runs/qa/ro-swordsman-character-v1-r2/freeze.json",
+          "sha256": "23650d2cd6629aa96286027450068391acd8b80e7263f822c40cb6252a773598"
+        },
+        "earlier_version": {
+          "request": {
+            "path": "requests/ro-swordsman-character-v1.json",
+            "sha256": "414fbd572795ce8aecb06c4cfe971a7829890ecc6401edb7b506e15b503baeeb"
+          },
+          "request_sha256": "bc3191249b7f94bb1ed8ceb6e75a6a0ed8d63650e4bb02dfe160b141d3308aa9",
+          "ledger": {
+            "path": "runs/qa/ro-swordsman-character-v1/quality-ledger.json",
+            "sha256": "6af48a654563062e46f2cac51b0f4b7b3b9c64ea8272ab8934bbfb54e20fb5a9"
+          },
+          "freeze": {
+            "path": "runs/qa/ro-swordsman-character-v1/freeze.json",
+            "sha256": "7cf9a4965e5d8c4f8f238a0297007c2ad8e0a0f606bc7704e5dca7bbd159e120"
+          },
+          "reason": "凍結契約的姿勢定義缺陷，見 runs/qa/ro-swordsman-character-v1/v001/v001-pause-01.json",
+          "authority": "袖口權重授權；契約用做法 1。繼續第一個候選",
+          "candidates_used_in_previous_version": 0,
+          "candidate_in_progress": "v001（延續，計為本版第1個候選）",
+          "quality_targets_lowered": false,
+          "thresholds_changed": false
+        },
+        "reason": "兩個無法通過的門檻，見 runs/qa/ro-swordsman-character-v1/v001/v001-pause-02.json",
+        "authority": "契約用做法 1。繼續第一個候選",
+        "candidates_used_in_previous_version": 0,
+        "candidate_in_progress": "v001（延續，計為本版第1個候選）",
+        "quality_targets_lowered": false,
+        "thresholds_changed": "腳趾上限由基準的不變形數值改為一般上限；脊椎側彎極端角度手區交叉由必須為0改為只報告"
+      },
+      "reason": "雙手下劈的身體上限無基準可比，見 runs/qa/ro-swordsman-character-v1/v001/v001-pause-03.json",
+      "authority": "雙手下劈用做法 1。繼續第一個候選",
+      "candidates_used_in_previous_version": 0,
+      "candidate_in_progress": "v001（延續，計為本版第1個候選）",
+      "quality_targets_lowered": false,
+      "thresholds_changed": "雙手下劈的身體上限由一般上限（0對、邊長比3）改為基準同手臂姿勢的實測值"
+    }
+  },
+  "budget": {
+    "status": "authorized",
+    "candidate_limit": 4,
+    "trial_seconds": 21600,
+    "total_seconds": 172800,
+    "p1_closed_loop_preparation_seconds_cap": 14400,
+    "p1_counts_as_candidate": false,
+    "holdout": "每個凍結版本1個holdout；失敗即承認能力缺口，修正須升版並計1個候選，原holdout轉回歸，再另選未用過的holdout。",
+    "new_api_submissions_default": 0,
+    "basis": "候選數與時間沿用r007–r010各階段已實行的4候選／6h／48h慣例，不是性能或完成保證。r010實際階段耗時4,043秒，僅供參考，不外推。",
+    "clock_rule": "baseline與準備時間計入階段總時間；失敗、被淘汰與預檢失敗的候選不釋出次數；不以改名或新seed延長。elapsed_seconds 採協調者實際工作時間（各回合起訖相加），等待使用者回覆的區間不計入並逐筆記錄。"
+  },
+  "protected_zone": {
+    "status": "see_authorization_record",
+    "kept_frozen_by_default": [
+      "r010右手：904點Basis、每角UV、原權重、16手骨位、203拇指保護點、原拓樸",
+      "r010原五指完整pad遮罩（31/44/54/40/77點）與每指>=3點<=2mm門檻、握持建立語義",
+      "r008/r009/r010全部歷史檔、時計、失敗紀錄與成本",
+      "原六個品質維度、anchors與target=4",
+      "真實未縮放劍尺寸（2552tri）"
+    ],
+    "requires_authorization": [
+      {
+        "id": "A",
+        "change": "完整角色rest骨架擴充：新增 thumb.R_03、thumb.L_03、finger1..4.L_03（共6骨，53→59）；骨名改為左右一致的三節命名",
+        "reason": "P0實測完整角色右拇指2節、左手各指2節，而r010右手原型為拇指3節＋四指各3節；不擴充則r010右手無法接回完整角色，左手無法做握拳／張掌施法。",
+        "evidence": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json"
+      },
+      {
+        "id": "B",
+        "change": "左手替換：以r007右手來源鏡射衍生左手，移除SM_RO_core內既有左手面並新建左腕接縫",
+        "reason": "既有左手是core的一部分，每節指骨僅19–42個權重頂點、hand.L 227點，無獨立手套件；不足以支撐握拳與張掌變形。",
+        "evidence": "runs/qa/ro-swordsman-character-v1/p0-whole-baseline-inspect.json"
+      },
+      {
+        "id": "C",
+        "change": "（暫不申請）上臂／前臂twist輔助骨、肩肘膝輔助骨",
+        "reason": "目前無twist骨；是否需要須由P2關節範圍實測決定，先以證據提出再申請。",
+        "evidence": "待P2"
+      },
+      {
+        "id": "D",
+        "change": "（暫不申請）解凍r010右手Basis／權重／拇指203點",
+        "reason": "r010包握未過的原因為側面C形偏鬆、指節偏硬、掌心／指腹支撐不足；先以新增姿勢空間shape key（不動Basis）處理，證據顯示不足時才提出具體差異。",
+        "evidence": "runs/qa/ro-swordsman-combo-r010/independent-final-review.md"
+      }
+    ],
+    "rule": "A、B已授權。C、D與任何其他保護區變更須先在授權紀錄檔新增一筆使用者授權才可動工；未授權的保護區變更使候選失敗。"
+  },
+  "transition_matrix": {
+    "status": "frozen_with_request",
+    "pairs": [
+      "Idle<->Walk",
+      "Walk<->Run",
+      "Idle->Cast->Idle",
+      "Walk->Cast(上半身層)->Walk",
+      "Idle->LieDown->Sleep->GetUp->Idle",
+      "Idle->Combo->Idle"
+    ],
+    "blend_ms": [
+      100,
+      200,
+      400
+    ],
+    "playback_speed": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "evaluation_fps": [
+      30,
+      60,
+      120
+    ],
+    "controls": [
+      "pause",
+      "resume",
+      "seek",
+      "loop_seam",
+      "repeated_switch"
+    ],
+    "gates": {
+      "collapse": "轉場期間任何取樣不得有面積比<5%的三角形",
+      "hand": "手區自交與相對rest新增交叉為0",
+      "grasp": "兩端clip在該時刻都屬握持時窗時，握持功能關卡持續成立；武器剛性跟手、不得滑動",
+      "weapon_body": "武器對身體網格的取樣穿入<=1mm",
+      "feet": "兩端都屬stance的腳，轉場期間滑動不超過 foot_stance_slide_mm 的2倍",
+      "continuity": "轉場起點與終點的骨骼姿勢與來源clip在該時刻的姿勢一致（每骨<=0.5度、根位置<=1mm）",
+      "determinism": "同一時間與狀態，不論經由播放、pause/resume 或 seek 抵達，求值後頂點位置相差<=1e-9m（求值器不得帶歷史狀態）",
+      "loop_seam": "loop clip 最後一幀接第一幀：每骨<=1度、sole_set與握持點位置<=1mm"
+    }
+  },
+  "runtime_contract": {
+    "status": "frozen_with_request",
+    "evaluation_order": [
+      "動作播放／重定向／混合",
+      "FK手勢層／IK與約束",
+      "取得最終關節姿勢與接觸狀態",
+      "計算修形權重（身體=姿勢驅動；接觸=互動狀態）",
+      "引擎原生morph＋skinning"
+    ],
+    "channel_ownership": "身體姿勢修形與接觸修形的morph通道由runtime求值器唯一擁有，clip不含這些通道的weights軌；無求值器的獨立GLB檢視另出烘焙變體，該變體的通道由烘焙clip唯一擁有並在manifest標示。兩種owner不得在同一檔同時存在。",
+    "known_gap": "P0實測：既有 GripContact_R、WristVolume_025..100、SK_RO_GraspPulp_Corrective 全部由時間曲線驅動（drivers=0），不是已驗證的姿勢驅動器。 P1探針規則重現既有時間曲線（61幀最大差1.07e-6），但它只是接線探針，不是已接受的通用修形。",
+    "measurement": "用runtime實際求值後的morph+skin位置量測並與Blender同姿勢對照；CPU樣本與GPU畫面分開報告。",
+    "p1_verified_20261005": {
+      "evidence": "runs/qa/ro-swordsman-character-v1/p1/runtime/p1-20261005t034404z-runtime-results.json",
+      "scope": "探針規則與8個取樣＋1個混合取樣；右腕既有morph；CPU求值點。不是美術或完整動作驗收。",
+      "evaluation_order": "AnimationMixer混合→讀最終骨骼rest-relative local旋轉→規則求值寫入morph→引擎morph後skin；已以混合取樣與stale-pose反例驗證求值器讀的是混合後姿勢。",
+      "bone_space": "glTF節點local旋轉與Blender骨骼rest-relative local旋轉一致（驅動值差<=3.2e-7）；規則的目標四元數可直接跨兩端使用。",
+      "name_mapping": "GLTFLoader會移除節點名稱中的\".\"；骨骼與網格以userData.name的原名對應。",
+      "clip_time_origin": "Blender匯出保留場景frame編號：frame f 的時間是 f/fps，clip開頭有1/fps的靜止段。遊戲用clip需明定時間原點（slide to zero或記錄lead-in），P3凍結前決定。",
+      "skin_weight_cutoff": "匯出器略去<=1e-4的權重：core有333個頂點帶此類權重，最大位置差14.7µm（frame 61）。接線關卡100µm通過；1µm同版本回讀門檻未達，交付前需把r010的精確權重還原方法參數化後套用。",
+      "channel_ownership": "runtime-owner GLB的clip無weights軌；baked-owner GLB有，於runtime-owner模式載入會被擁有權檢查擋下。兩種owner分檔，未同時存在。"
+    },
+    "clip_time_origin": "交付用clip的第一個key在t=0（匯出時slide to zero）；QA以clip實際key時間核對後才量測，frame f 對應 (f - 起始frame)/fps。",
+    "tolerances_m": {
+      "export_roundtrip_fresh_blender_world": 5e-06,
+      "runtime_cpu_evaluated_world": 1e-05,
+      "measured_basis": {
+        "as_exported": "runs/qa/ro-swordsman-character-v1/p2-prep/weights-probe/roundtrip-as-exported.json",
+        "exact_weights": "runs/qa/ro-swordsman-character-v1/p2-prep/weights-probe/roundtrip-exact-weights.json",
+        "observed": "基準完整角色8個取樣：匯出原樣最大14.55µm；還原精確權重後最大1.048µm（rest姿勢即0.861µm），47個頂點取樣超過1µm。"
+      },
+      "rationale": "完整角色頂點距原點1–1.7m，GLB的float32位置與反綁定矩陣使世界座標回讀的精度下限約1µm，1µm門檻在整個角色上無法保證。r010的1µm是手部局部座標原型的門檻，其原檔與結果保留為回歸證據、不得改動。完整角色世界座標回讀定為5µm，runtime CPU求值點10µm；兩者都要求先還原被匯出器略去的極小權重。",
+      "requires": "scripts/cv1_restore_glb_weights.py 還原全部蒙皮網格的來源權重後才量測"
+    },
+    "interaction_state": "互動狀態（如 grasp.R）只能由各clip宣告的時窗產生：時窗內1、時窗外0，邊界以固定12幀線性過渡；不得為個別clip編寫狀態曲線。同一狀態值在所有clip對應同一組修形權重。"
+  },
+  "grasp_gate": {
+    "source": {
+      "path": "runs/qa/ro-swordsman-combo-r010/local-contract.json",
+      "sha256": "09773ab0b04439b2cc362946c5086aade223ce520807ef9c70172264ce487749"
+    },
+    "functional_gate_verbatim": "Original5pads each>=3pointswithin2mm; unknowninside0; actualself/swordtransverse0; degenerates0; sampledmaxpenetration<=1mm; independentgrayshapeacceptance.",
+    "original_shape_guard_verbatim": {
+      "min_ratio": 0.25,
+      "max_ratio": 3,
+      "denominator": "Original immutable Basis edge lengths; conservative diagnostic, not artistic volume acceptance."
+    },
+    "pads_verbatim_reference": "local-contract.json#pads（finger1 31／finger2 44／finger3 54／finger4 40／thumb 77 點），遮罩不改、不換近點",
+    "interval_rules_verbatim": {
+      "supplemental_half_frames": true,
+      "rigid_weapon_follow_hand_required": true,
+      "no_perframe_weapon_sliding": true
+    },
+    "establishment_rule": "每個握持時窗的建立幀在量測前宣告；失敗後不得移動建立時刻（r010 activation: no moving establishment time after failure）。",
+    "window_scope": "上述全部條件在各clip宣告的握持時窗內逐取樣強制；時窗外不要求接觸，但 unknown/inside 0、手劍橫向交叉 0、樣本穿入<=1mm 仍適用。",
+    "gray_acceptance": "independentgrayshapeacceptance 屬本檢查的通過條件之一，由獨立審查者判定，不得以數值通過代替。",
+    "hand_identity": "右手沿用r010的904點來源ID與原五指pad；左手鏡射後以鏡射ID對應同一組pad。"
+  },
+  "holdout_policy": {
+    "name": "AN_RO_Holdout_01 是『當前凍結版本的holdout』的固定名稱；輪替時沿用此名，實際內容記於 holdout 紀錄檔（不在需求雜湊範圍內）。",
+    "record": "runs/qa/ro-swordsman-character-v1/holdout-record.json",
+    "commitment": "使用者2026-10-05決定不提供承諾雜湊；holdout紀錄檔註明無承諾雜湊，揭示內容無法事後核對是否更換。",
+    "reveal": "只在角色基礎各資料類別的簽章登記完成後揭示。",
+    "allowed_additions": [
+      "holdout clip的骨骼動畫",
+      "骨對應",
+      "事件",
+      "依 contact_window_rules 宣告的互動時窗"
+    ],
+    "forbidden": [
+      "修改mesh／rest骨架／權重／通用morph／驅動規則／runtime求值器",
+      "新增morph通道或規則",
+      "為holdout編寫互動狀態曲線",
+      "依動畫名稱或幀號的特判"
+    ],
+    "pass": "簽章逐類不變，且holdout通過 clip-set、grasp-contact-windowed（若含握持）、transition-interaction（Idle<->Holdout）、runtime-closed-loop 與獨立美術審查。",
+    "failure": "承認該版本能力缺口；修正須升版並計1個候選；失敗的holdout轉為回歸clip；下一個凍結版本使用使用者另行保管的新holdout。"
+  }
+}

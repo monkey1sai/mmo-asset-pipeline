@@ -1,0 +1,32 @@
+{
+  "operation_id": "ro-hand-structure-20261003-001",
+  "request": "requests/ro-swordsman-combo-r007.json",
+  "images": [
+    "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png",
+    "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png"
+  ],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Quad",
+    "quality_override": 1200,
+    "quad_normal": true,
+    "geometry_file_format": "obj",
+    "material": "PBR",
+    "texture_mode": "high",
+    "texture_delight": true,
+    "TAPose": false,
+    "is_symmetric": "asymmetric",
+    "image_label": [
+      "F",
+      "B"
+    ],
+    "seed": 4701,
+    "preview_render": true
+  },
+  "authorization": {
+    "spending_scope": "Existing explicit demand-driven monthly/regular API authority; human agrees new anatomy/topology-first method. Exact new recovery file authority still pending; no top-up/upgrade or Git mutation.",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

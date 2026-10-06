@@ -1,0 +1,93 @@
+{
+  "operations": [
+    {
+      "part": "core",
+      "operation_id": "ro-split-core-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "cbac0a6ecbe6e07572a05146945df4b6d05836a091687a10163b83684ba79157",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-core-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/core"
+    },
+    {
+      "part": "cuirass",
+      "operation_id": "ro-split-cuirass-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "06c80fdeb113ea7dc487d40c322cd44a332aefd246d6dd52f44c308b09312673",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-cuirass-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/cuirass"
+    },
+    {
+      "part": "pauldron",
+      "operation_id": "ro-split-pauldron-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "eef7ec1aaef650b1c038b56364d255bf8e1c85a8b2047668c677712aa5d977ff",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-pauldron-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/pauldron"
+    },
+    {
+      "part": "bracer",
+      "operation_id": "ro-split-bracer-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "4f15bbe085798d54b03b8981af7e446425bf003ba7a3f3f4eb580afb0b8f6c39",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-bracer-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/bracer"
+    },
+    {
+      "part": "coat",
+      "operation_id": "ro-split-coat-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "219ceae3a1b14f9cd4d333b0b2326fd5665505d8d005995b7c026e448a2582c4",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-coat-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/coat"
+    },
+    {
+      "part": "sword",
+      "operation_id": "ro-split-sword-20261003-001",
+      "estimated_credits": 0.5,
+      "plan_sha256": "d64b389e4b7d88ed0c1793f4de6a8c1e520b8adbb4a0478209c24dc2e059ff09",
+      "global_task_file": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-split-sword-20261003-001.dpapi",
+      "global_file_exists_before": false,
+      "status": "prepared_not_submitted",
+      "output_directory": "assets/raw/ro-swordsman-combo/rodin-v003/sword"
+    }
+  ],
+  "estimated_initial_credits": 3.0,
+  "spending_authority": "Already granted; no new points approval requested.",
+  "global_write_authority": "Awaiting exact six new task files; prior single-task authority remains scoped to its old operation.",
+  "envelope": {
+    "destination": "https://api.hyper3d.com/api/v2/rodin",
+    "purpose": "Six designed parts for one RO character",
+    "allowed_operations": [
+      "one initial generation per prepared part",
+      "same-task status",
+      "completed result download"
+    ],
+    "data_transmitted": [
+      "six new design images, one per task",
+      "validated nonsecret parameters"
+    ],
+    "forbidden_operations": [
+      "topup",
+      "upgrade",
+      "secret output",
+      "old state overwrite",
+      "Git mutation"
+    ],
+    "stop_conditions": [
+      "unknown/pending submission",
+      "unexpected destination",
+      "file collision",
+      "global write authority missing"
+    ]
+  }
+}

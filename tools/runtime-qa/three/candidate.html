@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>角色 V1 候選 runtime QA</title>
+<style>
+  :root { color-scheme: dark; --bg: #1c1d21; --panel: #26282e; --line: #3a3d46; --text: #e6e7ea; --muted: #9a9eaa; --ok: #6fcf97; --bad: #ff7a7a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 "Segoe UI", "Microsoft JhengHei", sans-serif; display: flex; flex-wrap: wrap; }
+  #view { flex: 1 1 520px; min-width: 320px; display: flex; align-items: flex-start; justify-content: center; padding: 12px; }
+  canvas { width: min(100%, 960px); height: auto; aspect-ratio: 1; background: #77797f; border: 1px solid var(--line); }
+  #panel { flex: 0 1 380px; padding: 12px 16px; background: var(--panel); border-left: 1px solid var(--line); min-height: 100vh; }
+  h1 { font-size: 16px; margin: 0 0 4px; }
+  h2 { font-size: 13px; margin: 16px 0 6px; color: var(--muted); font-weight: 600; }
+  p.note { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+  label { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+  label span.name { flex: 0 0 96px; color: var(--muted); }
+  input[type=range] { flex: 1; }
+  select, button { background: #32353d; color: var(--text); border: 1px solid var(--line); border-radius: 4px; padding: 4px 10px; font: inherit; }
+  button { cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  output { font-variant-numeric: tabular-nums; min-width: 52px; text-align: right; }
+  #pose { font-size: 12px; color: var(--muted); min-height: 1.5em; }
+  #status { white-space: pre-wrap; font-size: 12px; color: var(--muted); }
+  .ok { color: var(--ok); } .bad { color: var(--bad); }
+</style>
+<script type="importmap">
+{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="view"><canvas id="canvas" width="960" height="960"></canvas></div>
+<div id="panel">
+  <h1>角色 V1 候選 runtime QA</h1>
+  <p class="note">QA 姿勢片段：每一幀是一個契約姿勢。混合 → 最終姿勢 → 修形規則 → 引擎 morph＋skin。這不是遊戲動作片段。</p>
+  <h2>檢視</h2>
+  <label><span class="name">frame</span><input id="frame" type="range" min="0" max="0" step="1" value="0"><output id="frameOut">0</output></label>
+  <div id="pose"></div>
+  <label><span class="name">求值器</span><input id="evaluator" type="checkbox" checked><span>依最終姿勢計算修形</span></label>
+  <label><span class="name">鏡頭</span>
+    <select id="camera"><option value="whole">全身</option><option value="hands">雙手</option></select>
+  </label>
+  <h2>量測</h2>
+  <button id="run">執行閉環量測並存檔</button>
+  <div id="status">載入中…</div>
+</div>
+<script type="module" src="./src/candidate.js"></script>
+</body>
+</html>

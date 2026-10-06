@@ -1,0 +1,58 @@
+{
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-direction/ro_direction_checked.blend",
+    "sha256": "dba4c1cd0aa6fde352691abe856c0937ac64ef98e6710df18d68fa5a51106312"
+  },
+  "hypothesis": "Minimal-axis forearm solver did not account for hand pronation; align forearm roll with measured palm while preserving bone endpoints/geometry.",
+  "diagnostic_scope": "Only actual evaluated right distal forearm/hand subset plus full sword; full core temporarily hidden to make back surface visible, original assembly unchanged.",
+  "poses": {
+    "before": {
+      "requested_grip": [
+        -0.08,
+        -0.29,
+        1.12
+      ],
+      "feasible_grip": [
+        -0.07999999821186066,
+        -0.28999999165534973,
+        1.1200000047683716
+      ],
+      "grip_adjustment_m": 0.0,
+      "bone_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 0.0008552074059396952,
+        "foot.L": 0.0008552074059396952,
+        "thumb.R": 0.0
+      },
+      "surface_contact_accepted": false
+    },
+    "after": {
+      "requested_grip": [
+        -0.08,
+        -0.29,
+        1.12
+      ],
+      "feasible_grip": [
+        -0.07999999821186066,
+        -0.28999999165534973,
+        1.1200000047683716
+      ],
+      "grip_adjustment_m": 0.0,
+      "bone_target_residual_m": {
+        "R": 0.0,
+        "forearm_roll.R": -1.3363034171855026,
+        "foot.R": 0.0008552074059396952,
+        "foot.L": 0.0008552074059396952,
+        "thumb.R": 0.0
+      },
+      "surface_contact_accepted": false
+    }
+  },
+  "contact_search_count": 100,
+  "prototype_clock_reset": false,
+  "rig_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-roll/ro_roll_checked.blend",
+    "sha256": "2ef9f2c0575414db0a99544af2825fe91e5e1bb6e4f1eafdc6ede3db273215ce"
+  }
+}

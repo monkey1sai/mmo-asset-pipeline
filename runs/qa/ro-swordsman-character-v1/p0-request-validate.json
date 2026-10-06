@@ -1,0 +1,15 @@
+{
+  "status": "valid_request",
+  "request_id": "ro-swordsman-character-v1",
+  "request_sha256": "f88bc20479a041558512e4ee5222a923b149b73a674bfa7507e96945dadcacc3",
+  "pending": [
+    "runtime：請從 A=本repo內隔離的Three.js 0.186.0 QA場景、B=本機Godot 4.7.2、C=Unity 6000.6.4f1 選一個作為P1閉環與通用修形求值器的目標（比較見 p0-verification.md 第4節）。",
+    "預算：是否同意 budget_proposal（4個正式候選、每候選6h、階段48h、P1閉環準備上限4h且不計候選、新API提交預設0），或指定其他上限。",
+    "保護區：是否授權 protected_zone_proposal 的 A（完整角色rest骨架新增右拇指第三節與左手各指第三節）與 B（左手以右手來源鏡射替換、新建左腕接縫）；r010右手Basis／UV／權重／16骨位／203拇指點預設維持凍結。",
+    "holdout：請在凍結前指定一個不公開給製作階段使用的holdout動作（候選：坐下起身、前滾翻、彎腰拾取、雙手下劈、受擊後仰），或同意由我列候選、你抽選後封存。",
+    "床面規格：睡眠互動的床面高度與尺寸（未指定時以0.45m高、2.0×0.9m代理為低風險預設，仍待你確認是否有實際遊戲床規格）。",
+    "品質契約仍是 draft，需整理參考、評分錨點與實測條件後凍結",
+    "需求仍是 draft，需整理為 specified"
+  ],
+  "note": "結構有效不表示已核准製作或驗收通過"
+}

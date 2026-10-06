@@ -1,0 +1,7317 @@
+{
+ "observed_utc": "2026-10-05T09:05:10.577464+00:00",
+ "blender": "4.5.5 LTS",
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+  "saved": false
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/midrange-contract-diagnostic.json",
+  "sha256": "034331cc811c5d94fb050dc4eb3b11580ee29b39af0e0fb056eaffce32a82bae",
+  "bound_to_request": null
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "armor_contact": {
+  "meshes": [],
+  "bones": [],
+  "slack_m": 0.0,
+  "rest_pairs": 0,
+  "rest_depth_max_m": 0.0,
+  "triangles": 0
+ },
+ "armature": "ARM_RO_Swordsman",
+ "bones": 62,
+ "measured_meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R"
+ ],
+ "excluded_meshes": [
+  "SM_RO_sword"
+ ],
+ "soup": {
+  "vertices": 29774,
+  "triangles": 53883,
+  "hand_region_triangles": 3576
+ },
+ "rest_pairs": {
+  "hand_self": 0,
+  "hand_other": 248,
+  "other": 4534
+ },
+ "rest_gate": {
+  "hand_self_intersection_zero": true,
+  "other_pairs_within_ceiling": true
+ },
+ "hand_frames": {
+  "L": {
+   "palmar": [
+    -0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    -0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  },
+  "R": {
+   "palmar": [
+    0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    -0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    -0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  }
+ },
+ "calibration_run": false,
+ "partial_run": [
+  "combo-deep-squat",
+  "elbow-flexion.L",
+  "hip-flexion.L",
+  "hip-flexion.R",
+  "knee-flexion.L",
+  "shoulder-flexion.L"
+ ],
+ "motions": 6,
+ "measured": 6,
+ "missing": 0,
+ "numeric_gate_pass": false,
+ "failed_motions": [],
+ "scope": "Numeric guards only, at finite poses: direction, real deformation of every stepped bone, triangle collapse, hand-region self and new cross-mesh intersections, hand edge-ratio guard, and a no-worse-than-baseline ratchet for the rest of the body (overlap at rest, pose-induced pairs and stretch). Weapon meshes are excluded here and judged by the grasp and clip gates. Not a continuous-range or art acceptance.",
+ "results": [
+  {
+   "id": "shoulder-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.17947769165039062,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08691245746110743,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4357,
+     "other_new_pairs": 600,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 333,
+      "SM_RO_core|SM_RO_cuirass": 181,
+      "SM_RO_core|SM_RO_core": 86
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1965,
+        0.1142,
+        1.3432
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.202,
+        0.1115,
+        1.3339
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.11,
+        1.3711
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.085,
+        1.3906
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521069600809,
+      1.000058341584215
+     ],
+     "other_edge_ratio": [
+      0.19688903253457893,
+      25.40383694798799
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 11,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17399,
+       "rest_at": [
+        0.2392,
+        0.024,
+        1.151
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17400,
+       "rest_at": [
+        0.2362,
+        0.0296,
+        1.1495
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21463,
+       "rest_at": [
+        0.2235,
+        0.0309,
+        1.1486
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21464,
+       "rest_at": [
+        0.2207,
+        0.0373,
+        1.1509
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09420249611139297,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.052880243725479635,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4852,
+     "other_new_pairs": 1140,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 716,
+      "SM_RO_core|SM_RO_cuirass": 246,
+      "SM_RO_core|SM_RO_core": 178
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1981,
+        0.0646,
+        1.37
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1759,
+        0.0286,
+        1.3384
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2235,
+        0.0287,
+        1.2486
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1145,
+        0.0661,
+        1.4183
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999367962936451,
+      1.000078996299152
+     ],
+     "other_edge_ratio": [
+      0.14399579075020041,
+      40.03539585908757
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 19,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17399,
+       "rest_at": [
+        0.2392,
+        0.024,
+        1.151
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17437,
+       "rest_at": [
+        0.2084,
+        -0.0035,
+        1.3165
+       ],
+       "dominant": [
+        "clavicle.L",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21357,
+       "rest_at": [
+        0.1983,
+        -0.0034,
+        1.3309
+       ],
+       "dominant": [
+        "clavicle.L",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21453,
+       "rest_at": [
+        0.2357,
+        0.0025,
+        1.1621
+       ],
+       "dominant": [
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": 0.07091554254293442,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.35702577153855075,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4408,
+     "other_new_pairs": 454,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 355,
+      "SM_RO_core|SM_RO_cuirass": 87,
+      "SM_RO_core|SM_RO_core": 12
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1764,
+        0.1148,
+        1.2968
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1643,
+        0.1113,
+        1.2897
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2939,
+        0.0125,
+        1.2277
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3071,
+        0.0137,
+        1.2101
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999536422085848,
+      1.000069976227806
+     ],
+     "other_edge_ratio": [
+      0.5905863183621282,
+      8.376920296390647
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17418,
+       "rest_at": [
+        0.2379,
+        0.037,
+        1.1492
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21471,
+       "rest_at": [
+        0.2286,
+        0.0756,
+        1.1533
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": 0.1128852516412735,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2587551523013463,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4469,
+     "other_new_pairs": 594,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 452,
+      "SM_RO_core|SM_RO_cuirass": 107,
+      "SM_RO_core|SM_RO_core": 35
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1934,
+        0.0293,
+        1.228
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.221,
+        0.0638,
+        1.3659
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2638,
+        -0.0183,
+        1.2847
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2957,
+        0.0055,
+        1.1717
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999931718191392,
+      1.0000844156788107
+     ],
+     "other_edge_ratio": [
+      0.4364920895485972,
+      13.573465418961199
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17418,
+       "rest_at": [
+        0.2379,
+        0.037,
+        1.1492
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21492,
+       "rest_at": [
+        0.2314,
+        0.0666,
+        1.1298
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": 0.14108631014823914,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.31116165644928556,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4384,
+     "other_new_pairs": 555,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 351,
+      "SM_RO_core|SM_RO_cuirass": 146,
+      "SM_RO_core|SM_RO_core": 58
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2179,
+        0.0369,
+        1.2348
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2969,
+        -0.0122,
+        1.2385
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2118,
+        0.1027,
+        1.3542
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1624,
+        0.0146,
+        1.3905
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999276099368285,
+      1.0000820394947008
+     ],
+     "other_edge_ratio": [
+      0.24829435807696523,
+      17.57741553703179
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 5,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21467,
+       "rest_at": [
+        0.2222,
+        0.0499,
+        1.1498
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21468,
+       "rest_at": [
+        0.2216,
+        0.0597,
+        1.1531
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21492,
+       "rest_at": [
+        0.2314,
+        0.0666,
+        1.1298
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": 0.1607712358236313,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.1315866987115506,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4389,
+     "other_new_pairs": 597,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 358,
+      "SM_RO_core|SM_RO_cuirass": 170,
+      "SM_RO_core|SM_RO_core": 69
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2028,
+        0.1098,
+        1.3577
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2747,
+        0.003,
+        1.2729
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.202,
+        0.1143,
+        1.3375
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2607,
+        0.0076,
+        1.3132
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999080887075406,
+      1.000053589573643
+     ],
+     "other_edge_ratio": [
+      0.09942275275250237,
+      20.92719153491097
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 7,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21463,
+       "rest_at": [
+        0.2235,
+        0.0309,
+        1.1486
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21464,
+       "rest_at": [
+        0.2207,
+        0.0373,
+        1.1509
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21467,
+       "rest_at": [
+        0.2222,
+        0.0499,
+        1.1498
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21468,
+       "rest_at": [
+        0.2216,
+        0.0597,
+        1.1531
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": 0.18454313278198242,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.04105871640363976,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4418,
+     "other_new_pairs": 691,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 338,
+      "SM_RO_core|SM_RO_cuirass": 231,
+      "SM_RO_core|SM_RO_core": 122
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1965,
+        0.1094,
+        1.3395
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2155,
+        0.0521,
+        1.3613
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.0852,
+        1.3854
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1997,
+        0.0439,
+        1.3741
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999871182919375,
+      1.0000702994373827
+     ],
+     "other_edge_ratio": [
+      0.2689518524115125,
+      31.284870331095387
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 27513,
+       "rest_at": [
+        0.1444,
+        0.0078,
+        1.2531
+       ],
+       "rest_area_mm2": 53.1346
+      }
+     ],
+     "flipped_triangles": 13,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17399,
+       "rest_at": [
+        0.2392,
+        0.024,
+        1.151
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17400,
+       "rest_at": [
+        0.2362,
+        0.0296,
+        1.1495
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21463,
+       "rest_at": [
+        0.2235,
+        0.0309,
+        1.1486
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21464,
+       "rest_at": [
+        0.2207,
+        0.0373,
+        1.1509
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": 0.17225506901741028,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.036297855364301496,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4565,
+     "other_new_pairs": 844,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 454,
+      "SM_RO_core|SM_RO_cuirass": 239,
+      "SM_RO_core|SM_RO_core": 151
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1981,
+        0.0683,
+        1.379
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1879,
+        0.0673,
+        1.3878
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2155,
+        0.0576,
+        1.3581
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1766,
+        0.0175,
+        1.3072
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999555250741337,
+      1.0000569882887218
+     ],
+     "other_edge_ratio": [
+      0.171675894470638,
+      34.550994929644794
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 27513,
+       "rest_at": [
+        0.1444,
+        0.0078,
+        1.2531
+       ],
+       "rest_area_mm2": 53.1346
+      }
+     ],
+     "flipped_triangles": 14,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17399,
+       "rest_at": [
+        0.2392,
+        0.024,
+        1.151
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17400,
+       "rest_at": [
+        0.2362,
+        0.0296,
+        1.1495
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21463,
+       "rest_at": [
+        0.2235,
+        0.0309,
+        1.1486
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21464,
+       "rest_at": [
+        0.2207,
+        0.0373,
+        1.1509
+       ],
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": 0.14828775823116302,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.03838750757513638,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4705,
+     "other_new_pairs": 990,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_pauldron.L": 572,
+      "SM_RO_core|SM_RO_cuirass": 241,
+      "SM_RO_core|SM_RO_core": 177
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1981,
+        0.0676,
+        1.3751
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1759,
+        0.0217,
+        1.3444
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.146,
+        0.1086,
+        1.389
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1427,
+        0.0487,
+        1.2934
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999271604067549,
+      1.000099247815284
+     ],
+     "other_edge_ratio": [
+      0.0829160770828796,
+      37.22661913334579
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17437,
+       "rest_at": [
+        0.2084,
+        -0.0035,
+        1.3165
+       ],
+       "rest_area_mm2": 226.6987
+      }
+     ],
+     "flipped_triangles": 17,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17399,
+       "rest_at": [
+        0.2392,
+        0.024,
+        1.151
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17400,
+       "rest_at": [
+        0.2362,
+        0.0296,
+        1.1495
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17417,
+       "rest_at": [
+        0.2348,
+        0.0367,
+        1.1477
+       ],
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21357,
+       "rest_at": [
+        0.1983,
+        -0.0034,
+        1.3309
+       ],
+       "dominant": [
+        "clavicle.L",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21358,
+       "rest_at": [
+        0.1946,
+        -0.0049,
+        1.3256
+       ],
+       "dominant": [
+        "clavicle.L",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "elbow-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.3139,
+     0.0709,
+     1.1449
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.8
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.1306653618812561,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.07023776816430868,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4607,
+     "other_new_pairs": 208,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_core": 145,
+      "SM_RO_core|SM_RO_pauldron.L": 43,
+      "SM_RO_bracer.L|SM_RO_pauldron.L": 20
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.333,
+        0.0309,
+        1.1795
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3171,
+        -0.0113,
+        1.1767
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3466,
+        -0.0067,
+        1.0856
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3161,
+        0.03,
+        1.179
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9998846306327875,
+      1.0000827624626736
+     ],
+     "other_edge_ratio": [
+      0.466513053245277,
+      1.6462558442457254
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 1,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.0025687534362077713,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08257553871712037,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5263,
+     "other_new_pairs": 897,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_pauldron.L": 345,
+      "SM_RO_bracer.L|SM_RO_core": 256,
+      "SM_RO_core|SM_RO_pauldron.L": 227,
+      "SM_RO_core|SM_RO_core": 69
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3384,
+        0.0928,
+        1.189
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3505,
+        0.0426,
+        1.1453
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3073,
+        0.0315,
+        1.1354
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3339,
+        -0.0092,
+        1.1934
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999908333681411,
+      1.0000536917028287
+     ],
+     "other_edge_ratio": [
+      0.22544084973079104,
+      1.9407211247352418
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 1,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21809,
+       "rest_at": [
+        0.3335,
+        0.0691,
+        1.1577
+       ],
+       "dominant": [
+        "lower_arm.L",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": 0.06303070485591888,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.7087175917549627,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4546,
+     "other_new_pairs": 75,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_core": 70,
+      "SM_RO_core|SM_RO_pauldron.L": 5
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3466,
+        0.0618,
+        1.0477
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3396,
+        0.0942,
+        1.1263
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2728,
+        0.007,
+        1.1836
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.325,
+        0.104,
+        1.1214
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999675044929649,
+      1.0000316548213757
+     ],
+     "other_edge_ratio": [
+      0.7835843000014246,
+      1.21750934638535
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": 0.09541475772857666,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.5110947148099242,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4548,
+     "other_new_pairs": 117,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_core": 108,
+      "SM_RO_core|SM_RO_pauldron.L": 9
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3396,
+        0.0913,
+        1.1088
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.332,
+        0.024,
+        1.1589
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3207,
+        -0.0256,
+        1.1227
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3046,
+        0.0146,
+        1.1531
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999665678084562,
+      1.0000459166138227
+     ],
+     "other_edge_ratio": [
+      0.6671013551401466,
+      1.356078716272933
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": 0.114288330078125,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.3558614244201062,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4557,
+     "other_new_pairs": 139,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_core": 125,
+      "SM_RO_core|SM_RO_pauldron.L": 14
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3129,
+        0.0007,
+        1.1544
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3396,
+        0.0842,
+        1.1056
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.332,
+        0.0274,
+        1.1675
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3102,
+        0.0195,
+        1.161
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999370775294847,
+      1.000070058801689
+     ],
+     "other_edge_ratio": [
+      0.6072026860013968,
+      1.4591325552135006
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": 0.12508399784564972,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.22525994720898898,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4555,
+     "other_new_pairs": 146,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_core": 131,
+      "SM_RO_core|SM_RO_pauldron.L": 15
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.333,
+        0.0239,
+        1.1692
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3161,
+        0.0231,
+        1.1685
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3396,
+        0.0776,
+        1.104
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.332,
+        0.0317,
+        1.1743
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999489656708465,
+      1.000050042786546
+     ],
+     "other_edge_ratio": [
+      0.5634824564904527,
+      1.5419436970721305
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 1,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": 0.11697272956371307,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05453580941312634,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4930,
+     "other_new_pairs": 545,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_pauldron.L": 208,
+      "SM_RO_bracer.L|SM_RO_core": 194,
+      "SM_RO_core|SM_RO_pauldron.L": 115,
+      "SM_RO_core|SM_RO_core": 28
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3505,
+        0.0513,
+        1.1244
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2943,
+        0.0306,
+        1.1852
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.303,
+        0.0463,
+        1.1763
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3165,
+        0.0135,
+        1.1988
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999964027373397,
+      1.0000690790184177
+     ],
+     "other_edge_ratio": [
+      0.38454367532797856,
+      1.7673557171102487
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21677,
+       "rest_at": [
+        0.3255,
+        0.045,
+        1.1647
+       ],
+       "dominant": [
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21680,
+       "rest_at": [
+        0.3174,
+        0.0324,
+        1.1611
+       ],
+       "dominant": [
+        "lower_arm.L",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": 0.09387008845806122,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.03128333800076157,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5039,
+     "other_new_pairs": 658,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_pauldron.L": 247,
+      "SM_RO_bracer.L|SM_RO_core": 227,
+      "SM_RO_core|SM_RO_pauldron.L": 138,
+      "SM_RO_core|SM_RO_core": 46
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3352,
+        -0.0127,
+        1.1322
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3343,
+        0.0169,
+        1.2325
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3411,
+        0.0445,
+        1.2142
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2873,
+        0.0431,
+        1.1653
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999495756187017,
+      1.0000577435057425
+     ],
+     "other_edge_ratio": [
+      0.3495408910788961,
+      1.8220766831818846
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21621,
+       "rest_at": [
+        0.2502,
+        0.0391,
+        1.1221
+       ],
+       "rest_area_mm2": 99.9153
+      }
+     ],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21677,
+       "rest_at": [
+        0.3255,
+        0.045,
+        1.1647
+       ],
+       "dominant": [
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21812,
+       "rest_at": [
+        0.3319,
+        0.0514,
+        1.1584
+       ],
+       "dominant": [
+        "lower_arm.L",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": 0.06098903715610504,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.03186215474233698,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5142,
+     "other_new_pairs": 767,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_bracer.L|SM_RO_pauldron.L": 282,
+      "SM_RO_bracer.L|SM_RO_core": 243,
+      "SM_RO_core|SM_RO_pauldron.L": 186,
+      "SM_RO_core|SM_RO_core": 56
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3352,
+        -0.0134,
+        1.152
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3297,
+        0.0083,
+        1.2335
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3449,
+        0.0474,
+        1.237
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3505,
+        0.0442,
+        1.1355
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521962504285,
+      1.0000505154485804
+     ],
+     "other_edge_ratio": [
+      0.3239348585297967,
+      1.854668074662925
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21812,
+       "rest_at": [
+        0.3319,
+        0.0514,
+        1.1584
+       ],
+       "rest_area_mm2": 152.1934
+      }
+     ],
+     "flipped_triangles": 4,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17422,
+       "rest_at": [
+        0.2323,
+        0.0476,
+        1.1403
+       ],
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21620,
+       "rest_at": [
+        0.2457,
+        0.0469,
+        1.1228
+       ],
+       "dominant": [
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21621,
+       "rest_at": [
+        0.2502,
+        0.0391,
+        1.1221
+       ],
+       "dominant": [
+        "lower_arm.L",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 21812,
+       "rest_at": [
+        0.3319,
+        0.0514,
+        1.1584
+       ],
+       "dominant": [
+        "lower_arm.L",
+        "upper_arm.L"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-flexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3237340450286865,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.17301286476803573,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5032,
+     "other_new_pairs": 515,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 476,
+      "SM_RO_core|SM_RO_core": 39
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1967,
+        -0.1555,
+        0.7601
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2004,
+        -0.1891,
+        0.7058
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2014,
+        -0.1709,
+        0.7241
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0837,
+        -0.1088,
+        0.8786
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.5665732264050719,
+      6.333433001639929
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 7,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22775,
+       "rest_at": [
+        0.0187,
+        0.0002,
+        0.7975
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 25827,
+       "rest_at": [
+        0.1904,
+        0.0134,
+        0.8088
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.3799009323120117,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.19045723434441506,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4957,
+     "other_new_pairs": 441,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 223,
+      "SM_RO_core|SM_RO_core": 218
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0801,
+        -0.0706,
+        0.8979
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0745,
+        -0.0735,
+        0.8816
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0477,
+        -0.1629,
+        0.953
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1471,
+        -0.0691,
+        0.8783
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.1615905396688157,
+      11.086762556764876
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 12,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22761,
+       "rest_at": [
+        0.0178,
+        0.0336,
+        0.7991
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22850,
+       "rest_at": [
+        0.1316,
+        -0.0665,
+        0.7427
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": 0.11117798089981079,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.4822456235438842,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4526,
+     "other_new_pairs": 6,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 6
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1781,
+        0.0529,
+        0.798
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1715,
+        0.0555,
+        0.8052
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1715,
+        0.0555,
+        0.8052
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1842,
+        0.0371,
+        0.8208
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.49970896225276407,
+      2.2190714241681615
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": 0.18121211230754852,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2730736622803295,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4798,
+     "other_new_pairs": 280,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 280
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1111,
+        -0.1945,
+        0.5412
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1158,
+        -0.1934,
+        0.5269
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1288,
+        -0.2325,
+        0.4964
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1157,
+        -0.1475,
+        0.7187
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.3118565759262569,
+      3.3969539247972884
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 1,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": 0.23282627761363983,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.035425239513022344,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5171,
+     "other_new_pairs": 653,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 651,
+      "SM_RO_core|SM_RO_core": 2
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0744,
+        -0.2162,
+        0.5058
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2102,
+        -0.213,
+        0.6235
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.104,
+        -0.1338,
+        0.8173
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2294,
+        -0.1941,
+        0.5601
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.3517728417948938,
+      4.354084659152832
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22884,
+       "rest_at": [
+        0.0377,
+        -0.037,
+        0.8035
+       ],
+       "rest_area_mm2": 230.2396
+      }
+     ],
+     "flipped_triangles": 5,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22868,
+       "rest_at": [
+        0.0756,
+        -0.0691,
+        0.828
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22884,
+       "rest_at": [
+        0.0377,
+        -0.037,
+        0.8035
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": 0.2737238109111786,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 1,
+     "min_triangle_area_ratio": 0.045123533210955254,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5173,
+     "other_new_pairs": 655,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 646,
+      "SM_RO_core|SM_RO_core": 9
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1057,
+        -0.2241,
+        0.4843
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2004,
+        -0.1891,
+        0.7058
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0638,
+        -0.2072,
+        0.6131
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0972,
+        -0.2687,
+        0.4961
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.5017594303238223,
+      5.182123965736874
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22883,
+       "rest_at": [
+        0.0431,
+        -0.0394,
+        0.7912
+       ],
+       "rest_area_mm2": 295.2875
+      }
+     ],
+     "flipped_triangles": 7,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22775,
+       "rest_at": [
+        0.0187,
+        0.0002,
+        0.7975
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22880,
+       "rest_at": [
+        0.0439,
+        -0.0464,
+        0.8066
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22883,
+       "rest_at": [
+        0.0431,
+        -0.0394,
+        0.7912
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22884,
+       "rest_at": [
+        0.0377,
+        -0.037,
+        0.8035
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": 0.37667375802993774,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.324307649817233,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5045,
+     "other_new_pairs": 528,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 412,
+      "SM_RO_core|SM_RO_core": 116
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0557,
+        -0.1768,
+        0.8177
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0886,
+        -0.1765,
+        0.9014
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1985,
+        -0.1006,
+        0.8549
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0619,
+        -0.0675,
+        0.8504
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.41318202251069763,
+      7.95973641095664
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 9,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22761,
+       "rest_at": [
+        0.0178,
+        0.0336,
+        0.7991
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": 0.3953588604927063,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.32853827749045,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5153,
+     "other_new_pairs": 636,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 475,
+      "SM_RO_core|SM_RO_core": 161
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0656,
+        -0.1821,
+        0.91
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1078,
+        -0.0855,
+        0.8896
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0652,
+        -0.1719,
+        0.8157
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1245,
+        -0.0891,
+        0.814
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.3121012128018023,
+      8.958924240324428
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 9,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22761,
+       "rest_at": [
+        0.0178,
+        0.0336,
+        0.7991
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": 0.3998836874961853,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.26411443139597734,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5084,
+     "other_new_pairs": 568,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 395,
+      "SM_RO_core|SM_RO_core": 173
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.13,
+        -0.0701,
+        0.8925
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0583,
+        -0.1064,
+        0.9437
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0403,
+        -0.1747,
+        0.953
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1433,
+        -0.1492,
+        0.8537
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.22103800805509,
+      9.877987665864275
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 10,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22761,
+       "rest_at": [
+        0.0178,
+        0.0336,
+        0.7991
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22850,
+       "rest_at": [
+        0.1316,
+        -0.0665,
+        0.7427
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "knee-flexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.177,
+     0.06,
+     0.5
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3493313193321228,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.13987200312674802,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {},
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.17289917206949598,
+      1.66044157208188
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 2,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22463,
+       "rest_at": [
+        0.1932,
+        0.107,
+        0.5024
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 27348,
+       "rest_at": [
+        0.1842,
+        0.1129,
+        0.5064
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.2779461145401001,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08700356777781747,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4826,
+     "other_new_pairs": 292,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 148,
+      "SM_RO_core|SM_RO_core": 144
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1533,
+        0.1684,
+        0.6883
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1443,
+        0.2414,
+        0.6777
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2095,
+        0.054,
+        0.5426
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0837,
+        0.0719,
+        0.5255
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.31955835623974554,
+      2.1398866660717832
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 4,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 18268,
+       "rest_at": [
+        0.1228,
+        0.1211,
+        0.5008
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22460,
+       "rest_at": [
+        0.2142,
+        0.0757,
+        0.496
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22461,
+       "rest_at": [
+        0.1894,
+        0.1079,
+        0.4914
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22589,
+       "rest_at": [
+        0.0909,
+        0.0904,
+        0.49
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": 0.13099351525306702,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.7345318452384033,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {},
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.7662347221760062,
+      1.2333160802135472
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": 0.20988444983959198,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.5513387209504553,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {},
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.5986827413807604,
+      1.3734939171823293
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": 0.2648732662200928,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.40903006147302523,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {},
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.4602997936428693,
+      1.4745932083783122
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": 0.3054995536804199,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.29809461266237997,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {},
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.33822475511324634,
+      1.5540471146437018
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 0,
+     "flipped_examples": [],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": 0.3796197175979614,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.07159452664083278,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4773,
+     "other_new_pairs": 239,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 146,
+      "SM_RO_core|SM_RO_core": 93
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1994,
+        0.315,
+        0.5277
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2328,
+        0.282,
+        0.5239
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.193,
+        0.0886,
+        0.5323
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1645,
+        0.2323,
+        0.5778
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.1765703287654828,
+      1.8491439146648583
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 7,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 18247,
+       "rest_at": [
+        0.137,
+        0.1248,
+        0.4859
+       ],
+       "dominant": [
+        "lower_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22322,
+       "rest_at": [
+        0.1809,
+        0.1086,
+        0.5175
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22325,
+       "rest_at": [
+        0.1941,
+        0.1001,
+        0.5195
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22463,
+       "rest_at": [
+        0.1932,
+        0.107,
+        0.5024
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22464,
+       "rest_at": [
+        0.1886,
+        0.1099,
+        0.497
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 27347,
+       "rest_at": [
+        0.1872,
+        0.1091,
+        0.5115
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": 0.3746633529663086,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05113771678376449,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4831,
+     "other_new_pairs": 297,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 190,
+      "SM_RO_core|SM_RO_core": 107
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1277,
+        0.233,
+        0.5986
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2386,
+        0.2094,
+        0.5511
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1436,
+        0.3114,
+        0.5507
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1855,
+        0.0834,
+        0.5307
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.10641471301161567,
+      1.9562076904055328
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 9,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22325,
+       "rest_at": [
+        0.1941,
+        0.1001,
+        0.5195
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22327,
+       "rest_at": [
+        0.2005,
+        0.1006,
+        0.5135
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22458,
+       "rest_at": [
+        0.2034,
+        0.0903,
+        0.4929
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22461,
+       "rest_at": [
+        0.1894,
+        0.1079,
+        0.4914
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22462,
+       "rest_at": [
+        0.1939,
+        0.101,
+        0.4908
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22463,
+       "rest_at": [
+        0.1932,
+        0.107,
+        0.5024
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": 0.3497328758239746,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05723576068902166,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4804,
+     "other_new_pairs": 270,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 159,
+      "SM_RO_core|SM_RO_core": 111
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2003,
+        0.0869,
+        0.5663
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0822,
+        0.0744,
+        0.5178
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2348,
+        0.251,
+        0.5793
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1664,
+        0.2509,
+        0.5498
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.1296433382683572,
+      2.0450533644216793
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 4,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22327,
+       "rest_at": [
+        0.2005,
+        0.1006,
+        0.5135
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22460,
+       "rest_at": [
+        0.2142,
+        0.0757,
+        0.496
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22461,
+       "rest_at": [
+        0.1894,
+        0.1079,
+        0.4914
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22462,
+       "rest_at": [
+        0.1939,
+        0.101,
+        0.4908
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-flexion.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3237340450286865,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.11456614048679745,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4997,
+     "other_new_pairs": 487,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 471,
+      "SM_RO_core|SM_RO_core": 16
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0864,
+        -0.1183,
+        0.8697
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0683,
+        -0.1917,
+        0.6861
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0617,
+        -0.1733,
+        0.8069
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1946,
+        -0.1954,
+        0.6694
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.44279267368846104,
+      4.96864450672011
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 8,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23457,
+       "rest_at": [
+        -0.0429,
+        -0.0333,
+        0.7916
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23469,
+       "rest_at": [
+        -0.0152,
+        0.0019,
+        0.8183
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23494,
+       "rest_at": [
+        -0.0204,
+        0.0229,
+        0.7869
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.3799009323120117,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.24062715449557132,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5018,
+     "other_new_pairs": 512,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 211,
+      "SM_RO_core|SM_RO_core": 191,
+      "SM_RO_core|SM_RO_cuirass": 110
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1024,
+        -0.0522,
+        1.0162
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0249,
+        -0.0231,
+        0.8759
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1525,
+        -0.0225,
+        0.9625
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0401,
+        -0.1206,
+        0.9536
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.28714006550789745,
+      8.04461007963078
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 13,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23329,
+       "rest_at": [
+        -0.1777,
+        0.0537,
+        0.8268
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23410,
+       "rest_at": [
+        -0.1789,
+        -0.0144,
+        0.825
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23427,
+       "rest_at": [
+        -0.1295,
+        -0.0671,
+        0.7668
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23457,
+       "rest_at": [
+        -0.0429,
+        -0.0333,
+        0.7916
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23461,
+       "rest_at": [
+        -0.0322,
+        -0.0206,
+        0.7881
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": 0.11117798089981079,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.3415799512107597,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4538,
+     "other_new_pairs": 24,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 24
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1805,
+        -0.0274,
+        0.8172
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.19,
+        -0.0146,
+        0.8206
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1902,
+        -0.0223,
+        0.8044
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1846,
+        -0.0373,
+        0.8022
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.4697134498225801,
+      2.217530571022713
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 2,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": 0.18121211230754852,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.1412002509450331,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4855,
+     "other_new_pairs": 344,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 344
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1082,
+        -0.1708,
+        0.63
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0916,
+        -0.2024,
+        0.4863
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0883,
+        -0.1498,
+        0.6503
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.19,
+        -0.0146,
+        0.8206
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.4324511610418913,
+      3.0369146611584985
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 2,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": 0.23282627761363983,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2157626954662783,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5172,
+     "other_new_pairs": 662,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 662
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0768,
+        -0.1949,
+        0.4939
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1942,
+        -0.1987,
+        0.6603
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1209,
+        -0.1383,
+        0.8051
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1691,
+        0.0438,
+        0.8199
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.4261380657110867,
+      3.67751796177259
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": 0.2737238109111786,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.24395886947537973,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5119,
+     "other_new_pairs": 609,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 608,
+      "SM_RO_core|SM_RO_core": 1
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0627,
+        -0.1621,
+        0.6743
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1977,
+        -0.1707,
+        0.6094
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.164,
+        -0.1541,
+        0.8006
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1778,
+        -0.1554,
+        0.7786
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.40914139607792743,
+      4.222252418215629
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": 0.37667375802993774,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.3133022096664025,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4996,
+     "other_new_pairs": 489,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 408,
+      "SM_RO_core|SM_RO_core": 81
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1029,
+        -0.0836,
+        0.8845
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1717,
+        -0.1519,
+        0.8031
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1191,
+        -0.0793,
+        0.8738
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0388,
+        -0.1234,
+        0.8719
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.27187136439160053,
+      6.002895813231563
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 6,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23457,
+       "rest_at": [
+        -0.0429,
+        -0.0333,
+        0.7916
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23469,
+       "rest_at": [
+        -0.0152,
+        0.0019,
+        0.8183
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23494,
+       "rest_at": [
+        -0.0204,
+        0.0229,
+        0.7869
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 25600,
+       "rest_at": [
+        -0.1886,
+        0.0279,
+        0.8283
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": 0.3953588604927063,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.26580089634285803,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5096,
+     "other_new_pairs": 590,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 431,
+      "SM_RO_core|SM_RO_core": 159
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1446,
+        -0.0999,
+        0.9622
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1798,
+        -0.1063,
+        0.8577
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0189,
+        -0.0271,
+        0.8587
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1365,
+        -0.0649,
+        0.881
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.1887211844517587,
+      6.6256332684903185
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 7,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23457,
+       "rest_at": [
+        -0.0429,
+        -0.0333,
+        0.7916
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23469,
+       "rest_at": [
+        -0.0152,
+        0.0019,
+        0.8183
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23494,
+       "rest_at": [
+        -0.0204,
+        0.0229,
+        0.7869
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 25597,
+       "rest_at": [
+        -0.1886,
+        0.0109,
+        0.8276
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": 0.3998836874961853,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.23874008449705955,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5137,
+     "other_new_pairs": 631,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 397,
+      "SM_RO_core|SM_RO_core": 234
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1917,
+        -0.0463,
+        0.9289
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.109,
+        -0.0597,
+        0.9723
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.154,
+        -0.1306,
+        0.861
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1974,
+        -0.0444,
+        0.9035
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.18344605415478787,
+      7.1879617043653194
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 8,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23329,
+       "rest_at": [
+        -0.1777,
+        0.0537,
+        0.8268
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23457,
+       "rest_at": [
+        -0.0429,
+        -0.0333,
+        0.7916
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23469,
+       "rest_at": [
+        -0.0152,
+        0.0019,
+        0.8183
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23494,
+       "rest_at": [
+        -0.0204,
+        0.0229,
+        0.7869
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 25597,
+       "rest_at": [
+        -0.1886,
+        0.0109,
+        0.8276
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "combo-deep-squat",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     0.89
+    ],
+    "view": [
+     0.8575,
+     -0.5145,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.0833261627394583,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5953,
+     "other_new_pairs": 2004,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1621,
+      "SM_RO_core|SM_RO_cuirass": 330,
+      "SM_RO_core|SM_RO_core": 45,
+      "SM_RO_core|SM_RO_pauldron.R": 7,
+      "SM_RO_core|SM_RO_pauldron.L": 1
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0141,
+        1.0328
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1844,
+        -0.1624,
+        0.6666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.14,
+        -0.1542,
+        0.8538
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0894,
+        -0.2049,
+        0.6368
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999665754800007,
+      1.0000250859032707
+     ],
+     "other_edge_ratio": [
+      0.18354736010009012,
+      5.817518002008485
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 18,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22463,
+       "rest_at": [
+        0.1932,
+        0.107,
+        0.5024
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22763,
+       "rest_at": [
+        0.0167,
+        0.0223,
+        0.7979
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22775,
+       "rest_at": [
+        0.0187,
+        0.0002,
+        0.7975
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05099716941933504,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 6184,
+     "other_new_pairs": 2362,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1313,
+      "SM_RO_core|SM_RO_core": 645,
+      "SM_RO_core|SM_RO_cuirass": 390,
+      "SM_RO_core|SM_RO_pauldron.R": 9,
+      "SM_RO_core|SM_RO_pauldron.L": 5
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0066,
+        -0.0744,
+        1.0285
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0477,
+        -0.1629,
+        0.953
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0572,
+        -0.1566,
+        0.8936
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999716661528668,
+      1.0000454327013628
+     ],
+     "other_edge_ratio": [
+      0.18049495274621044,
+      10.382618419022155
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 31,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17704,
+       "rest_at": [
+        -0.2112,
+        0.0757,
+        0.4881
+       ],
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 18268,
+       "rest_at": [
+        0.1228,
+        0.1211,
+        0.5008
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22460,
+       "rest_at": [
+        0.2142,
+        0.0757,
+        0.496
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22461,
+       "rest_at": [
+        0.1894,
+        0.1079,
+        0.4914
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22589,
+       "rest_at": [
+        0.0909,
+        0.0904,
+        0.49
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l15": {
+     "level": 0.15,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.22318296654111558,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4479,
+     "other_new_pairs": 305,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_core|SM_RO_cuirass": 263,
+      "SM_RO_coat|SM_RO_core": 39,
+      "SM_RO_core|SM_RO_pauldron.R": 3
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0151,
+        1.0338
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0309,
+        -0.0662,
+        1.0558
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0082,
+        -0.075,
+        0.9762
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.054,
+        0.1226,
+        1.0223
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999693941412569,
+      1.0000336997708565
+     ],
+     "other_edge_ratio": [
+      0.5035358506714527,
+      2.1049608229322403
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 2,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l25": {
+     "level": 0.25,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.2315893268344178,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4723,
+     "other_new_pairs": 640,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 323,
+      "SM_RO_core|SM_RO_cuirass": 314,
+      "SM_RO_core|SM_RO_pauldron.R": 3
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0148,
+        1.0335
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.0837,
+        -0.0396,
+        1.0973
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0985,
+        -0.1621,
+        0.5903
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999749041768408,
+      1.0000352848845453
+     ],
+     "other_edge_ratio": [
+      0.33107133637484276,
+      3.1262770943386755
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 3,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l33": {
+     "level": 0.33,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08941123659858045,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5261,
+     "other_new_pairs": 1238,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 917,
+      "SM_RO_core|SM_RO_cuirass": 317,
+      "SM_RO_core|SM_RO_pauldron.R": 3,
+      "SM_RO_core|SM_RO_pauldron.L": 1
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0146,
+        1.0333
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.0754,
+        -0.1288,
+        0.7672
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1055,
+        -0.1978,
+        0.6563
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2131,
+        -0.1197,
+        0.6524
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999725951476782,
+      1.0000272986841192
+     ],
+     "other_edge_ratio": [
+      0.3235354579514562,
+      3.9969969304561
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 6,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22867,
+       "rest_at": [
+        0.0859,
+        -0.0711,
+        0.8158
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22868,
+       "rest_at": [
+        0.0756,
+        -0.0691,
+        0.828
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23453,
+       "rest_at": [
+        -0.0516,
+        -0.0466,
+        0.7951
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23463,
+       "rest_at": [
+        -0.0249,
+        -0.0062,
+        0.786
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23466,
+       "rest_at": [
+        -0.0208,
+        -0.0075,
+        0.8094
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l40": {
+     "level": 0.4,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.0986139958659842,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5542,
+     "other_new_pairs": 1556,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1214,
+      "SM_RO_core|SM_RO_cuirass": 325,
+      "SM_RO_core|SM_RO_core": 9,
+      "SM_RO_core|SM_RO_pauldron.R": 7,
+      "SM_RO_core|SM_RO_pauldron.L": 1
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0144,
+        1.0331
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1516,
+        -0.0711,
+        0.86
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1997,
+        -0.1933,
+        0.6616
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999967672086763,
+      1.0000294549311655
+     ],
+     "other_edge_ratio": [
+      0.3538246245758944,
+      4.7552299183155835
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 9,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22773,
+       "rest_at": [
+        0.0167,
+        0.0063,
+        0.7974
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22775,
+       "rest_at": [
+        0.0187,
+        0.0002,
+        0.7975
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22859,
+       "rest_at": [
+        0.0931,
+        -0.0741,
+        0.8186
+       ],
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22868,
+       "rest_at": [
+        0.0756,
+        -0.0691,
+        0.828
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22883,
+       "rest_at": [
+        0.0431,
+        -0.0394,
+        0.7912
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22884,
+       "rest_at": [
+        0.0377,
+        -0.037,
+        0.8035
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l65": {
+     "level": 0.65,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05571354477010334,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5694,
+     "other_new_pairs": 1782,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1217,
+      "SM_RO_core|SM_RO_cuirass": 348,
+      "SM_RO_core|SM_RO_core": 208,
+      "SM_RO_core|SM_RO_pauldron.R": 8,
+      "SM_RO_core|SM_RO_pauldron.L": 1
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.165,
+        -0.0887,
+        0.7886
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.096,
+        -0.2239,
+        0.5823
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1843,
+        -0.0704,
+        0.8783
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0137,
+        1.0323
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999755622694577,
+      1.0000236509159248
+     ],
+     "other_edge_ratio": [
+      0.11602530002555346,
+      7.338094700597089
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 25,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17737,
+       "rest_at": [
+        -0.1774,
+        0.1065,
+        0.5235
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17739,
+       "rest_at": [
+        -0.1898,
+        0.1014,
+        0.5209
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17740,
+       "rest_at": [
+        -0.1849,
+        0.1076,
+        0.5161
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 18247,
+       "rest_at": [
+        0.137,
+        0.1248,
+        0.4859
+       ],
+       "dominant": [
+        "lower_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22463,
+       "rest_at": [
+        0.1932,
+        0.107,
+        0.5024
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l75": {
+     "level": 0.75,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.06593162736201334,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5788,
+     "other_new_pairs": 1907,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1103,
+      "SM_RO_core|SM_RO_core": 427,
+      "SM_RO_core|SM_RO_cuirass": 366,
+      "SM_RO_core|SM_RO_pauldron.R": 8,
+      "SM_RO_core|SM_RO_pauldron.L": 3
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1391,
+        -0.0795,
+        0.8629
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0134,
+        1.032
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1956,
+        -0.2919,
+        0.7661
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999975431023582,
+      1.000029436963645
+     ],
+     "other_edge_ratio": [
+      0.11212675466275625,
+      8.288373679991784
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "flipped_triangles": 29,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17731,
+       "rest_at": [
+        -0.1376,
+        0.1249,
+        0.4859
+       ],
+       "dominant": [
+        "lower_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17732,
+       "rest_at": [
+        -0.1312,
+        0.1233,
+        0.4906
+       ],
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17739,
+       "rest_at": [
+        -0.1898,
+        0.1014,
+        0.5209
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17740,
+       "rest_at": [
+        -0.1849,
+        0.1076,
+        0.5161
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22325,
+       "rest_at": [
+        0.1941,
+        0.1001,
+        0.5195
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    },
+    "l85": {
+     "level": 0.85,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 4,
+     "min_triangle_area_ratio": 0.017750695792950303,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 6164,
+     "other_new_pairs": 2307,
+     "armor_pairs": 0,
+     "armor_depth_max_m": 0.0,
+     "armor_depth_violations": 0,
+     "armor_excess_max_m": 0.0,
+     "armor_examples": [],
+     "other_new_by_mesh_pair": {
+      "SM_RO_coat|SM_RO_core": 1341,
+      "SM_RO_core|SM_RO_core": 585,
+      "SM_RO_core|SM_RO_cuirass": 367,
+      "SM_RO_core|SM_RO_pauldron.R": 9,
+      "SM_RO_core|SM_RO_pauldron.L": 5
+     },
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1446,
+        -0.0999,
+        0.9622
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1412,
+        -0.1792,
+        0.8166
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1798,
+        -0.1063,
+        0.8577
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999776974632789,
+      1.000031275444447
+     ],
+     "other_edge_ratio": [
+      0.090451852031764,
+      9.177985221247505
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22457,
+       "rest_at": [
+        0.2081,
+        0.0861,
+        0.4965
+       ],
+       "rest_area_mm2": 105.9187
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22460,
+       "rest_at": [
+        0.2142,
+        0.0757,
+        0.496
+       ],
+       "rest_area_mm2": 68.7185
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23749,
+       "rest_at": [
+        -0.1186,
+        0.1147,
+        0.4886
+       ],
+       "rest_area_mm2": 119.2836
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 23757,
+       "rest_at": [
+        -0.1331,
+        0.1217,
+        0.4829
+       ],
+       "rest_area_mm2": 82.9622
+      }
+     ],
+     "flipped_triangles": 33,
+     "flipped_examples": [
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17704,
+       "rest_at": [
+        -0.2112,
+        0.0757,
+        0.4881
+       ],
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 17740,
+       "rest_at": [
+        -0.1849,
+        0.1076,
+        0.5161
+       ],
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22188,
+       "rest_at": [
+        0.1884,
+        0.0354,
+        0.811
+       ],
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22325,
+       "rest_at": [
+        0.1941,
+        0.1001,
+        0.5195
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22327,
+       "rest_at": [
+        0.2005,
+        0.1006,
+        0.5135
+       ],
+       "dominant": [
+        "upper_leg.L"
+       ]
+      },
+      {
+       "mesh": "SM_RO_core",
+       "triangle": 22457,
+       "rest_at": [
+        0.2081,
+        0.0861,
+        0.4965
+       ],
+       "dominant": [
+        "lower_leg.L",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  }
+ ]
+}

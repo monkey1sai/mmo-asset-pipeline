@@ -1,0 +1,56 @@
+{
+  "trial": "v004",
+  "finished_utc": "2026-10-03T06:53:47.277895+00:00",
+  "shape_key": "GripContact_R",
+  "corrective_iterations": 1,
+  "events": 3,
+  "maximum_rest_corrective_m": 0.003804178696836872,
+  "cuff_weight_vertices": 243,
+  "new_sleeve_triangles": 156,
+  "source_geometry_and_uv_preserved": true,
+  "whole_triangles": 60699,
+  "surface_gate_pass": false,
+  "maximum_penetration_m": 0,
+  "crossings": 0,
+  "pad_contacts": {
+    "finger1": {
+      "vertices": 30,
+      "minimum_gap_m": 0.0001656938111409545,
+      "mean_gap_m": 0.0061315958960525075,
+      "within_2mm": 4
+    },
+    "finger2": {
+      "vertices": 33,
+      "minimum_gap_m": 0.0012430241331458092,
+      "mean_gap_m": 0.013879313183045297,
+      "within_2mm": 4
+    },
+    "finger3": {
+      "vertices": 41,
+      "minimum_gap_m": 0.0009332140325568616,
+      "mean_gap_m": 0.016039171953197207,
+      "within_2mm": 5
+    },
+    "finger4": {
+      "vertices": 34,
+      "minimum_gap_m": 0.0002708745887503028,
+      "mean_gap_m": 0.013006877169519773,
+      "within_2mm": 4
+    },
+    "thumb": {
+      "vertices": 54,
+      "minimum_gap_m": 0.0009996461449190974,
+      "mean_gap_m": 0.02116166430534105,
+      "within_2mm": 2
+    }
+  },
+  "art_and_cuff_clearance": "pending actual visual/rigid-armor surface review",
+  "whole_budget_pass": false,
+  "full_animation_accepted": false,
+  "delivered": false,
+  "source_preserved": true,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v004-corrective/ro_glove_corrective.blend",
+    "sha256": "39a42e5b637ad5715e62c2152984dcaf8b5317113110b49e722d3bc095ab3ca4"
+  }
+}

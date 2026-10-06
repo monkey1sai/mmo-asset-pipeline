@@ -1,0 +1,35 @@
+{
+  "baseline_started_utc": "2026-10-03T10:45:41.431021+00:00",
+  "clock_scope": "Prospective from first r007 planning registration, includes measurements/design/review/baseline and later production; no old clock reset",
+  "request_sha256": "137997c6bb5a57120cd8025a2762b6a19a0c32706f94520988591c314d383876",
+  "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "max_revisions": 4,
+  "baseline_source": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.blend",
+    "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "prior_phase_history": {
+    "previous_request": "requests/ro-swordsman-combo-r006.json",
+    "previous_request_sha256": "a54ad708db150f7ba42c19f292f7ec0c3efc02f58c846c4b589089dcd9353b98",
+    "previous_result": "runs/qa/ro-swordsman-combo-r006/comparison-final.json",
+    "previous_result_sha256": "1cf03420bd63c4c2de38ca24eda8bf3e4e312035c12c2101602a388e0adc8b8d",
+    "previous_revisions": 8,
+    "previous_phase_seconds": 10887.310051,
+    "previous_phase_service_reported_credits": 0.5,
+    "r005_plus_r006_service_reported_credits": 1.5,
+    "r005_accounting": "runs/qa/ro-swordsman-combo-r005/phase-accounting-final.json",
+    "r006_accounting": "runs/qa/ro-swordsman-combo-r006/phase-accounting-final.json",
+    "authority": "同意 — 接續新掌腕造型、動畫面流與護腕配裝方法；保留歷史，API按需授權沿用，commit/push等驗證。",
+    "new_method": "Fitted worn glove outer skin with anatomical thenar/opposition and measured short forearm; topology/anatomy validation before rigging; rigid armor/internal core volume independent from wrist skin",
+    "old_phase_reopened": false,
+    "quality_targets_lowered": false
+  },
+  "local_contract": {
+    "path": "runs/qa/ro-swordsman-combo-r007/hand-gate-contract.json",
+    "sha256": "a62f4c2b6454c185a46a965ee0da03ccc4d128096316199563fc034d57fd6aea"
+  }
+}

@@ -1,0 +1,83 @@
+{
+ "core_boundary_loops": [
+  {
+   "vertices": 39,
+   "centre": [
+    -0.402,
+    -0.0063,
+    0.97
+   ],
+   "max_radius_mm": 38.5,
+   "axial_from_wrist_L_mm": -365.5,
+   "axial_from_wrist_R_mm": -25.4
+  }
+ ],
+ "sides": {
+  "L": {
+   "wrist": [
+    0.4137,
+    -0.0122,
+    0.9479
+   ],
+   "forearm_axis": [
+    0.423,
+    -0.3522,
+    -0.8349
+   ],
+   "core_vertices_past_wrist": 2955,
+   "core_vertices_mostly_hand_weighted": 305,
+   "their_axial_range_mm": [
+    -4.5,
+    192.4
+   ],
+   "hand_group_vertex_counts": {
+    "finger3.L_02": 26,
+    "thumb.L_02": 36,
+    "thumb.L_01": 20,
+    "hand.L": 227,
+    "finger3.L_01": 28,
+    "finger4.L_01": 22,
+    "finger4.L_02": 26,
+    "finger2.L_01": 42,
+    "finger2.L_02": 33,
+    "finger1.L_01": 27,
+    "finger1.L_02": 19
+   },
+   "bracer_axial_range_mm": [
+    -237.4,
+    -11.3
+   ],
+   "bracer_vertices": 1767
+  },
+  "R": {
+   "wrist": [
+    -0.4137,
+    -0.0122,
+    0.9479
+   ],
+   "forearm_axis": [
+    -0.423,
+    -0.3522,
+    -0.8349
+   ],
+   "core_vertices_past_wrist": 2644,
+   "core_vertices_mostly_hand_weighted": 0,
+   "their_axial_range_mm": null,
+   "hand_group_vertex_counts": {
+    "hand.R": 10
+   },
+   "bracer_axial_range_mm": [
+    -237.4,
+    -52.0
+   ],
+   "bracer_vertices": 1364
+  }
+ },
+ "left_vs_mirrored_right_bone_head_mm": {
+  "clavicle": 0.0,
+  "upper_arm": 0.0,
+  "lower_arm": 0.0,
+  "hand": 0.0
+ },
+ "core_vertices": 7219
+}

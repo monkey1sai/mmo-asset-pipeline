@@ -1,0 +1,178 @@
+{
+  "id": "v002",
+  "started_utc": "2026-10-04T01:44:14.057013+00:00",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r009/v001-vectors/right_hand_full_vectors.blend",
+    "sha256": "88accd75d727174dac304b21675690af05462019935b85f515aab588dfaa9e0b"
+  },
+  "hypothesis": "Coupled finite-difference palm-pad IK canclose fixedmissingdigits without breaking improvedroot oractualcollision constraints.",
+  "change": "Poseonly: dampedGaussNewton on3closest existingfixedmask points per digit, bounded jointcurl/MCPsplay andonerigidweapontranslation; no mesh/weights/bonescale/UV changes.",
+  "bounds": {
+    "finger1:0": [
+      0.15,
+      0.9
+    ],
+    "finger1:1": [
+      0.6,
+      1.4
+    ],
+    "finger1:2": [
+      0.3,
+      1.05
+    ],
+    "finger2:0": [
+      0.25,
+      1.25
+    ],
+    "finger2:1": [
+      0.6,
+      1.6
+    ],
+    "finger2:2": [
+      0.4,
+      1.1
+    ],
+    "finger3:0": [
+      0.25,
+      1.25
+    ],
+    "finger3:1": [
+      0.6,
+      1.6
+    ],
+    "finger3:2": [
+      0.4,
+      1.1
+    ],
+    "finger4:0": [
+      0.25,
+      1.25
+    ],
+    "finger4:1": [
+      0.6,
+      1.6
+    ],
+    "finger4:2": [
+      0.4,
+      1.1
+    ],
+    "thumb:0": [
+      0.1,
+      0.45
+    ],
+    "thumb:1": [
+      0.3,
+      1.1
+    ],
+    "thumb:2": [
+      0.1,
+      0.65
+    ],
+    "splay:finger1": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger2": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger3": [
+      -0.15,
+      0.15
+    ],
+    "splay:finger4": [
+      -0.15,
+      0.15
+    ],
+    "pronation": [
+      0.2,
+      0.9
+    ],
+    "shift:0": [
+      -0.012,
+      0.012
+    ],
+    "shift:1": [
+      -0.045,
+      -0.018
+    ],
+    "shift:2": [
+      -0.035,
+      0.005
+    ]
+  },
+  "initial_controls": {
+    "finger1": [
+      0.5,
+      1.1,
+      0.32499999999999996
+    ],
+    "finger2": [
+      0.55,
+      0.875,
+      0.4
+    ],
+    "finger3": [
+      0.6,
+      0.9,
+      0.625
+    ],
+    "finger4": [
+      0.8250000000000001,
+      0.8999999999999999,
+      0.4
+    ],
+    "thumb": [
+      0.15,
+      0.65,
+      0.19999999999999996
+    ],
+    "pronation": 0.4
+  },
+  "initial_splays": {
+    "finger1": 0.08375,
+    "finger2": 0.02,
+    "finger3": -0.15,
+    "finger4": -0.15
+  },
+  "initial_shift": [
+    -0.00375,
+    -0.043,
+    -0.034
+  ],
+  "weapon": {
+    "path": "runs/qa/ro-swordsman-combo-r008/weapon-probe/actual-weapon.json",
+    "sha256": "08ef39378705e956916bc0a149ae4ff7484ee4f36e1ebbb7e580e85e6a64eaae"
+  },
+  "pads_source": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/frozen-masks-and-weights.json",
+  "maximum_evaluations": 700,
+  "max_solver_seconds": 1800,
+  "maximum_iterations": 24,
+  "finite_steps": {
+    "curl": 0.002,
+    "shift": 0.0002
+  },
+  "damping": 0.0001,
+  "max_normalized_step": 0.15,
+  "line_search_factors": [
+    1,
+    0.5,
+    0.25,
+    0.125
+  ],
+  "point_target_distance_m": 0.0012,
+  "parameter_scales": {
+    "curl": 1,
+    "shift": 0.03
+  },
+  "derivative_collision_checks": "not_run; explicitlylogged diagnostic probes only",
+  "hard_admissibility": "Onlyfull lineproposal testedself/swordcross0,unknown0,depth<=1mm,no degenerate,minedge>=.25,maxedge<=3 canreplacebest; finalgrayreview separately required.",
+  "objective": "Three closestpoints from each fixed full semanticmask update byiteration as IKguides; acceptancealwaysuses entire original frozenmask>=3 per digit, no gate resampling.",
+  "new_credits": 0,
+  "candidate_limit": 4,
+  "previous_candidates_used": 1
+}

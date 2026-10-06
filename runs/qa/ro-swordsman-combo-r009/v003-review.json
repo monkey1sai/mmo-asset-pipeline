@@ -1,0 +1,23 @@
+{
+  "observed_utc": "2026-10-04T01:54:22.545253+00:00",
+  "verdict": "NO_SHIP",
+  "classification": "PRODUCT_FAILURE: correcteddampedcontact direction blocked byactualswordcrossing",
+  "preflight": {
+    "path": "runs/qa/ro-swordsman-combo-r009/v003-moving-target/translation-preflight.json",
+    "sha256": "6c12b8cb4cbb25a8bc35c67af4d4400840fed38b91c1ec7f5ed740979ae972f8"
+  },
+  "actual_evaluations": 36,
+  "full_proposals": 5,
+  "derivative_or_base_probes_not_functionchecked": 31,
+  "rejected_crossings": [
+    50,
+    34,
+    8,
+    6
+  ],
+  "stop": "bounded_line_search_stalled",
+  "next_hypothesis": "Actualnearcontact collision constraints canpermit tangent directions rather thanleast-squares step followed only by rejection.",
+  "sourcebone_meshfailure_not_proven": true,
+  "new_credits": 0,
+  "whole_scores_changed": false
+}

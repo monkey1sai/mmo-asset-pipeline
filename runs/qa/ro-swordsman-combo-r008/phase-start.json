@@ -1,0 +1,69 @@
+{
+  "id": "ro-swordsman-combo-r008",
+  "baseline_started_utc": "2026-10-03T13:48:14+00:00",
+  "clock_source": "First current-turn UTC observation after initial readonlystate/memory command; later planning/review included",
+  "initial_read_exec_wall_seconds_before_clock_observation": 6.1,
+  "precise_initial_start_unobserved": true,
+  "registered_utc": "2026-10-03T13:54:39.917691+00:00",
+  "request_sha256": "d96d7d4c0461d59ef65c5fcd267a104e4ff9770299af421baf0eaddc3238d54b",
+  "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+  "max_revisions": 4,
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "baseline_source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.blend",
+    "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "local_baseline_source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+    "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e"
+  },
+  "geometry_guide": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+    "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458"
+  },
+  "joint_probe": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/joint-and-pole-probe.json",
+    "sha256": "b8145fa50d0981bd32bc691374620af99fd89f244aa090640b310d7a855da824"
+  },
+  "protected_history": [
+    {
+      "path": "requests/ro-swordsman-combo-r007.json",
+      "sha256": "49bacbf20a6e501787fb195c81f3183124076902590f108da4db4ef5abe522a4"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "sha256": "f999aa115a62cdf33772cc9b0d3d615566e9a392af53768410c2bbbd905eed01"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/comparison-final.json",
+      "sha256": "4a071650e26a75f9b217bee4dccab8a747ada79da815e7ed90af405bc362e63f"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/phase-accounting-final.json",
+      "sha256": "aff8a5208798a793c4b233fa449aa598ebf2b3b3fb7929fcdf59280f7976cfe0"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+      "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+      "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e"
+    }
+  ],
+  "existing_API_authority_preserved": true,
+  "new_paid_generation": false,
+  "repo_external_writes": "none",
+  "effective_runtime": {
+    "sandbox_mode": "workspace-write",
+    "approvals_reviewer": "auto_review",
+    "hooks": "not_changed",
+    "default_command_probe": "ENVIRONMENT_FAILURE: sandbox provisioning failed",
+    "full_scoped_escalations": "individual review, no permanent prefix"
+  },
+  "stage_commit_push": "held_by_user",
+  "old_clocks_or_costs_reset": false
+}

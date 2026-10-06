@@ -1,0 +1,20 @@
+{
+  "scope": "Supplementary classification; original closed ledger, failed producers, verifier attempts and logs preserved",
+  "phase": "ro-swordsman-combo-r006",
+  "verdict": "NO_SHIP",
+  "next_action": "stop_budget",
+  "revisions_used": 8,
+  "failures": [
+    {"class": "PRODUCT_FAILURE", "observed": "Visible palm/wrist folding and cuff bulge, diagnostic glove/tube self-intersections and core/bracer overlap remain", "evidence": "final-review.json", "resolved": false},
+    {"class": "PRODUCT_FAILURE", "observed": "Boolean produced 265 unweighted bracer vertices; pose deformation broke rigid gear", "evidence": "boolean-binding-diagnosis.json", "resolution": "v008 explicitly binds all 1364 bracer vertices to the existing lowerarm.R bone; maximum rigid prediction error 3.0282738e-7m", "resolved": true},
+    {"class": "TEST_FAILURE", "observed": "v006 precondition assumed one cuff boundary; actual generated cuff has outer and inner rings", "evidence": "v006-producer.log", "resolution": "Diagnose and handle both rings within the same trial and clock", "resolved": true},
+    {"class": "TEST_FAILURE", "observed": "Roundtrip verifier assumed GLB time begins at zero; actual source frame 1 time is retained", "evidence": "v008-roundtrip.log", "resolution": "Map source frames 1..61 to actual GLB 1/60..61/60s", "resolved": true},
+    {"class": "TOOL_FAILURE", "observed": "Roundtrip verifier treated the named GLB container as a mesh", "evidence": "v008-roundtrip-attempt2.log", "resolved": true},
+    {"class": "TOOL_FAILURE", "observed": "Roundtrip verifier assumed skin mesh remains a descendant of its named container; importer reparents it", "evidence": "v008-roundtrip-attempt3.log", "resolution": "Use the original named GLB node.mesh index and exact imported mesh data name; attempt4 completes actual geometry/morph playback", "resolved": true},
+    {"class": "ENVIRONMENT_FAILURE", "observed": "Existing sandbox provisioning failure; doctor before/after reports the same18ok/10notes/6warn/1fail", "evidence": "api-completion-verification.json", "resolution": "Individually reviewed complete host commands; no ACL, ownership, sandbox or global security changes", "resolved": false}
+  ],
+  "authorization_denial_this_run": false,
+  "global_mutation_scope": "Only the newly authorized ro-hand-source-20261003-001.dpapi task recovery file; provider and old authorization hashes verified unchanged",
+  "local_roundtrip_scope": "61frames/60fps open-to-grip geometry and morph playback pass; full300frame skills, left hand, VFX, material equivalence and art acceptance remain incomplete",
+  "commit_push": "held by user"
+}

@@ -1,0 +1,13 @@
+{
+ "observed_utc": "2026-10-05T05:00:55.698099+00:00",
+ "tag": "a01-rigid",
+ "classification": "PRODUCT_FAILURE of this build step (implementation bug inside candidate v001; trial clock keeps running)",
+ "observed": "Joint-range sweep: every left-hand bone reported as not deforming, right-hand motions showed hundreds of hand-region intersections and edge ratios up to 93.",
+ "cause": "Vertex groups are stored on mesh data. The mirrored left hand and the mirrored left bracer kept the right-side group names, so both followed the right arm's bones; the script had added empty left-named groups instead of renaming.",
+ "evidence": [
+  "runs/qa/ro-swordsman-character-v1/v001/a01-rigid/joint-range/joint-range-result.json",
+  "object inspection: SM_RO_hand.L had 32 groups, 16 of them empty"
+ ],
+ "fix": "Rename the copied groups to the left side and assert no right-side name remains; rebuild as tag a02-rigid. a01 outputs are kept.",
+ "gates_or_contract_changed": false
+}

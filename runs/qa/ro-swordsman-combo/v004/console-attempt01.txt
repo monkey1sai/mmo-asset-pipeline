@@ -1,0 +1,13 @@
+20:55:34 | INFO: Data are loaded, start creating Blender stuff
+20:55:34 | INFO: Blender create Mesh node model
+20:55:34 | INFO: glTF import finished in 0.05s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\postprocess_ro_swordsman.py", line 256, in <module>
+    if problems:raise RuntimeError('Construction defects: '+str(problems))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Construction defects: ['SM_RO_Arm.L: nonmanifold 194', 'SM_RO_Arm.R: nonmanifold 49', 'SM_RO_Coat.L: nonmanifold 80', 'SM_RO_Coat.R: nonmanifold 238', 'SM_RO_Head: nonmanifold 19', 'SM_RO_Leg.L: nonmanifold 187', 'SM_RO_Leg.R: nonmanifold 122', 'SM_RO_Tabard: nonmanifold 68', 'SM_RO_Torso: nonmanifold 235']
+
+Error: script failed, file: 'scripts/postprocess_ro_swordsman.py', exiting.
+
+Blender quit

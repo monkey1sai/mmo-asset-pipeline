@@ -1,0 +1,1959 @@
+{
+ "file": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\assets\\processed\\ro-swordsman-combo-r010\\baseline\\ro_whole_baseline.blend",
+ "blender": "4.5.5 LTS",
+ "scene": {
+  "fps": 60,
+  "frame_start": 1,
+  "frame_end": 61,
+  "unit_scale": 1.0,
+  "unit_system": "METRIC"
+ },
+ "objects": [
+  {
+   "name": "ARM_RO_Swordsman",
+   "type": "ARMATURE",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    1.6564,
+    0.4036,
+    1.69
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": [],
+   "bones": [
+    {
+     "name": "root",
+     "parent": null,
+     "deform": false,
+     "connected": false,
+     "head": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "tail": [
+      0.0,
+      0.0,
+      0.18
+     ],
+     "length": 0.18
+    },
+    {
+     "name": "pelvis",
+     "parent": "root",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.04,
+      0.89
+     ],
+     "tail": [
+      0.0,
+      0.04,
+      1.0
+     ],
+     "length": 0.11
+    },
+    {
+     "name": "spine_01",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.04,
+      1.0
+     ],
+     "tail": [
+      0.0,
+      0.04,
+      1.16
+     ],
+     "length": 0.16
+    },
+    {
+     "name": "spine_02",
+     "parent": "spine_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.04,
+      1.16
+     ],
+     "tail": [
+      0.0,
+      0.06,
+      1.34
+     ],
+     "length": 0.1811
+    },
+    {
+     "name": "neck",
+     "parent": "spine_02",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.06,
+      1.34
+     ],
+     "tail": [
+      0.0,
+      0.04,
+      1.46
+     ],
+     "length": 0.1217
+    },
+    {
+     "name": "head",
+     "parent": "neck",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.04,
+      1.46
+     ],
+     "tail": [
+      0.0,
+      0.04,
+      1.69
+     ],
+     "length": 0.23
+    },
+    {
+     "name": "clavicle.R",
+     "parent": "spine_02",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.06,
+      1.33
+     ],
+     "tail": [
+      -0.205,
+      0.07,
+      1.33
+     ],
+     "length": 0.2052
+    },
+    {
+     "name": "upper_arm.R",
+     "parent": "clavicle.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.205,
+      0.07,
+      1.33
+     ],
+     "tail": [
+      -0.3139,
+      0.0709,
+      1.1449
+     ],
+     "length": 0.2148
+    },
+    {
+     "name": "lower_arm.R",
+     "parent": "upper_arm.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.3139,
+      0.0709,
+      1.1449
+     ],
+     "tail": [
+      -0.4137,
+      -0.0122,
+      0.9479
+     ],
+     "length": 0.2359
+    },
+    {
+     "name": "hand.R",
+     "parent": "lower_arm.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4137,
+      -0.0122,
+      0.9479
+     ],
+     "tail": [
+      -0.4474,
+      -0.0169,
+      0.8733
+     ],
+     "length": 0.082
+    },
+    {
+     "name": "thumb.R_01",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4434,
+      -0.0385,
+      0.9232
+     ],
+     "tail": [
+      -0.4613,
+      -0.0586,
+      0.8927
+     ],
+     "length": 0.0407
+    },
+    {
+     "name": "thumb.R_02",
+     "parent": "thumb.R_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.4613,
+      -0.0586,
+      0.8927
+     ],
+     "tail": [
+      -0.4778,
+      -0.0773,
+      0.8645
+     ],
+     "length": 0.0376
+    },
+    {
+     "name": "sword",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.3959,
+      -0.0655,
+      0.8628
+     ],
+     "tail": [
+      -1.1496,
+      -0.3036,
+      0.9858
+     ],
+     "length": 0.8
+    },
+    {
+     "name": "finger1.R_01",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.3768,
+      -0.0184,
+      0.8693
+     ],
+     "tail": [
+      -0.3746,
+      -0.0307,
+      0.8482
+     ],
+     "length": 0.0246
+    },
+    {
+     "name": "finger1.R_02",
+     "parent": "finger1.R_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.3746,
+      -0.0307,
+      0.8482
+     ],
+     "tail": [
+      -0.3729,
+      -0.0406,
+      0.8313
+     ],
+     "length": 0.0197
+    },
+    {
+     "name": "finger1.R_03",
+     "parent": "finger1.R_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.3729,
+      -0.0406,
+      0.8313
+     ],
+     "tail": [
+      -0.3714,
+      -0.0492,
+      0.8165
+     ],
+     "length": 0.0172
+    },
+    {
+     "name": "finger2.R_01",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4002,
+      -0.0221,
+      0.8613
+     ],
+     "tail": [
+      -0.3979,
+      -0.0361,
+      0.8356
+     ],
+     "length": 0.0293
+    },
+    {
+     "name": "finger2.R_02",
+     "parent": "finger2.R_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.3979,
+      -0.0361,
+      0.8356
+     ],
+     "tail": [
+      -0.396,
+      -0.0474,
+      0.8151
+     ],
+     "length": 0.0235
+    },
+    {
+     "name": "finger2.R_03",
+     "parent": "finger2.R_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.396,
+      -0.0474,
+      0.8151
+     ],
+     "tail": [
+      -0.3943,
+      -0.0572,
+      0.7971
+     ],
+     "length": 0.0205
+    },
+    {
+     "name": "finger3.R_01",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4182,
+      -0.0258,
+      0.861
+     ],
+     "tail": [
+      -0.4169,
+      -0.0414,
+      0.8312
+     ],
+     "length": 0.0336
+    },
+    {
+     "name": "finger3.R_02",
+     "parent": "finger3.R_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.4169,
+      -0.0414,
+      0.8312
+     ],
+     "tail": [
+      -0.4159,
+      -0.0538,
+      0.8073
+     ],
+     "length": 0.0269
+    },
+    {
+     "name": "finger3.R_03",
+     "parent": "finger3.R_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.4159,
+      -0.0538,
+      0.8073
+     ],
+     "tail": [
+      -0.4149,
+      -0.0646,
+      0.7865
+     ],
+     "length": 0.0235
+    },
+    {
+     "name": "finger4.R_01",
+     "parent": "hand.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4386,
+      -0.0315,
+      0.8684
+     ],
+     "tail": [
+      -0.4381,
+      -0.0453,
+      0.8418
+     ],
+     "length": 0.03
+    },
+    {
+     "name": "finger4.R_02",
+     "parent": "finger4.R_01",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.4381,
+      -0.0453,
+      0.8418
+     ],
+     "tail": [
+      -0.4378,
+      -0.0563,
+      0.8205
+     ],
+     "length": 0.024
+    },
+    {
+     "name": "finger4.R_03",
+     "parent": "finger4.R_02",
+     "deform": true,
+     "connected": true,
+     "head": [
+      -0.4378,
+      -0.0563,
+      0.8205
+     ],
+     "tail": [
+      -0.4375,
+      -0.066,
+      0.8018
+     ],
+     "length": 0.021
+    },
+    {
+     "name": "wrist_transition.R",
+     "parent": "lower_arm.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.4137,
+      -0.0122,
+      0.9479
+     ],
+     "tail": [
+      -0.4139,
+      -0.0299,
+      0.912
+     ],
+     "length": 0.04
+    },
+    {
+     "name": "pauldron.R",
+     "parent": "clavicle.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.205,
+      0.07,
+      1.33
+     ],
+     "tail": [
+      -0.255,
+      0.07,
+      1.23
+     ],
+     "length": 0.1118
+    },
+    {
+     "name": "clavicle.L",
+     "parent": "spine_02",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      0.06,
+      1.33
+     ],
+     "tail": [
+      0.205,
+      0.07,
+      1.33
+     ],
+     "length": 0.2052
+    },
+    {
+     "name": "upper_arm.L",
+     "parent": "clavicle.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.205,
+      0.07,
+      1.33
+     ],
+     "tail": [
+      0.3139,
+      0.0709,
+      1.1449
+     ],
+     "length": 0.2148
+    },
+    {
+     "name": "lower_arm.L",
+     "parent": "upper_arm.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.3139,
+      0.0709,
+      1.1449
+     ],
+     "tail": [
+      0.4137,
+      -0.0122,
+      0.9479
+     ],
+     "length": 0.2359
+    },
+    {
+     "name": "hand.L",
+     "parent": "lower_arm.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4137,
+      -0.0122,
+      0.9479
+     ],
+     "tail": [
+      0.4498,
+      -0.0137,
+      0.8743
+     ],
+     "length": 0.082
+    },
+    {
+     "name": "thumb.L_01",
+     "parent": "hand.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.455,
+      -0.037,
+      0.914
+     ],
+     "tail": [
+      0.485,
+      -0.072,
+      0.894
+     ],
+     "length": 0.0502
+    },
+    {
+     "name": "thumb.L_02",
+     "parent": "thumb.L_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.485,
+      -0.072,
+      0.894
+     ],
+     "tail": [
+      0.5067,
+      -0.0951,
+      0.8822
+     ],
+     "length": 0.0338
+    },
+    {
+     "name": "finger1.L_01",
+     "parent": "hand.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4229,
+      0.0076,
+      0.867
+     ],
+     "tail": [
+      0.4078,
+      -0.0151,
+      0.8313
+     ],
+     "length": 0.0449
+    },
+    {
+     "name": "finger1.L_02",
+     "parent": "finger1.L_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4078,
+      -0.0151,
+      0.8313
+     ],
+     "tail": [
+      0.3993,
+      -0.0323,
+      0.7984
+     ],
+     "length": 0.0381
+    },
+    {
+     "name": "finger2.L_01",
+     "parent": "hand.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4414,
+      -0.0089,
+      0.867
+     ],
+     "tail": [
+      0.4365,
+      -0.0245,
+      0.8209
+     ],
+     "length": 0.0489
+    },
+    {
+     "name": "finger2.L_02",
+     "parent": "finger2.L_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4365,
+      -0.0245,
+      0.8209
+     ],
+     "tail": [
+      0.4336,
+      -0.0489,
+      0.7784
+     ],
+     "length": 0.0491
+    },
+    {
+     "name": "finger3.L_01",
+     "parent": "hand.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4617,
+      -0.0185,
+      0.867
+     ],
+     "tail": [
+      0.4663,
+      -0.0407,
+      0.8172
+     ],
+     "length": 0.0547
+    },
+    {
+     "name": "finger3.L_02",
+     "parent": "finger3.L_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4663,
+      -0.0407,
+      0.8172
+     ],
+     "tail": [
+      0.4672,
+      -0.0692,
+      0.7713
+     ],
+     "length": 0.0541
+    },
+    {
+     "name": "finger4.L_01",
+     "parent": "hand.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4878,
+      -0.0353,
+      0.867
+     ],
+     "tail": [
+      0.4944,
+      -0.0568,
+      0.8306
+     ],
+     "length": 0.0428
+    },
+    {
+     "name": "finger4.L_02",
+     "parent": "finger4.L_01",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.4944,
+      -0.0568,
+      0.8306
+     ],
+     "tail": [
+      0.5008,
+      -0.0786,
+      0.7969
+     ],
+     "length": 0.0406
+    },
+    {
+     "name": "pauldron.L",
+     "parent": "clavicle.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.205,
+      0.07,
+      1.33
+     ],
+     "tail": [
+      0.255,
+      0.07,
+      1.23
+     ],
+     "length": 0.1118
+    },
+    {
+     "name": "upper_leg.R",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.145,
+      0.05,
+      0.89
+     ],
+     "tail": [
+      -0.177,
+      0.06,
+      0.5
+     ],
+     "length": 0.3914
+    },
+    {
+     "name": "lower_leg.R",
+     "parent": "upper_leg.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.177,
+      0.06,
+      0.5
+     ],
+     "tail": [
+      -0.195,
+      0.075,
+      0.105
+     ],
+     "length": 0.3957
+    },
+    {
+     "name": "foot.R",
+     "parent": "lower_leg.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.195,
+      0.075,
+      0.105
+     ],
+     "tail": [
+      -0.195,
+      -0.11,
+      0.053
+     ],
+     "length": 0.1922
+    },
+    {
+     "name": "toe.R",
+     "parent": "foot.R",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.195,
+      -0.11,
+      0.053
+     ],
+     "tail": [
+      -0.195,
+      -0.22,
+      0.053
+     ],
+     "length": 0.11
+    },
+    {
+     "name": "coat.R",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      -0.14,
+      0.06,
+      0.91
+     ],
+     "tail": [
+      -0.27,
+      0.1,
+      0.46
+     ],
+     "length": 0.4701
+    },
+    {
+     "name": "upper_leg.L",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.145,
+      0.05,
+      0.89
+     ],
+     "tail": [
+      0.177,
+      0.06,
+      0.5
+     ],
+     "length": 0.3914
+    },
+    {
+     "name": "lower_leg.L",
+     "parent": "upper_leg.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.177,
+      0.06,
+      0.5
+     ],
+     "tail": [
+      0.195,
+      0.075,
+      0.105
+     ],
+     "length": 0.3957
+    },
+    {
+     "name": "foot.L",
+     "parent": "lower_leg.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.195,
+      0.075,
+      0.105
+     ],
+     "tail": [
+      0.195,
+      -0.11,
+      0.053
+     ],
+     "length": 0.1922
+    },
+    {
+     "name": "toe.L",
+     "parent": "foot.L",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.195,
+      -0.11,
+      0.053
+     ],
+     "tail": [
+      0.195,
+      -0.22,
+      0.053
+     ],
+     "length": 0.11
+    },
+    {
+     "name": "coat.L",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.14,
+      0.06,
+      0.91
+     ],
+     "tail": [
+      0.27,
+      0.1,
+      0.46
+     ],
+     "length": 0.4701
+    },
+    {
+     "name": "tabard",
+     "parent": "pelvis",
+     "deform": true,
+     "connected": false,
+     "head": [
+      0.0,
+      -0.13,
+      0.91
+     ],
+     "tail": [
+      0.0,
+      -0.18,
+      0.46
+     ],
+     "length": 0.4528
+    }
+   ],
+   "pose_constraints": {},
+   "rotation_modes": [
+    "QUATERNION"
+   ],
+   "bone_collections": [],
+   "action": "RO_WristGrip_Prototype_61f_ARM_RO_Swordsman",
+   "nla_tracks": [],
+   "drivers": 0
+  },
+  {
+   "name": "Fill",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    -3.0,
+    -2.0,
+    3.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Key",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    3.0,
+    -4.0,
+    5.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Plane",
+   "type": "MESH",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    200.0,
+    200.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": [],
+   "verts": 4,
+   "polys": 1,
+   "tris": 2,
+   "face_tri_quad_ngon": [
+    0,
+    1,
+    0
+   ],
+   "non_manifold_edges": 4,
+   "boundary_edges": 4,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "ReviewFloor"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 0,
+   "weights": {
+    "zero_weight_verts": 4,
+    "gt4_influence_verts": 0,
+    "max_influences": 0,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {},
+   "attributes": [
+    "position",
+    "sharp_face",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "ReviewCamera",
+   "type": "CAMERA",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    2.8,
+    -4.0,
+    2.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "Rim",
+   "type": "LIGHT",
+   "parent": null,
+   "parent_bone": null,
+   "dims": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loc": [
+    0.0,
+    3.0,
+    4.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [],
+   "constraints": []
+  },
+  {
+   "name": "SM_RO_bracer.L",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.1632,
+    0.15,
+    0.2107
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 1767,
+   "polys": 3026,
+   "tris": 3026,
+   "face_tri_quad_ngon": [
+    3026,
+    0,
+    0
+   ],
+   "non_manifold_edges": 496,
+   "boundary_edges": 496,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "lower_arm.L": 1767
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_bracer.R",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.1492,
+    0.1417,
+    0.1812
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 1364,
+   "polys": 2173,
+   "tris": 2404,
+   "face_tri_quad_ngon": [
+    2028,
+    89,
+    56
+   ],
+   "non_manifold_edges": 336,
+   "boundary_edges": 336,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "lower_arm.R": 1364
+   },
+   "attributes": [
+    "position",
+    "material_index",
+    "sharp_face",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_coat",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.7932,
+    0.6778,
+    0.5107
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 6888,
+   "polys": 12542,
+   "tris": 12542,
+   "face_tri_quad_ngon": [
+    12542,
+    0,
+    0
+   ],
+   "non_manifold_edges": 1216,
+   "boundary_edges": 1216,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 4,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 2,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "coat.R": 1950,
+    "pelvis": 4118,
+    "tabard": 1582,
+    "coat.L": 2013
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_core",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.9536,
+    0.3307,
+    1.74
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Armature",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 7219,
+   "polys": 14404,
+   "tris": 14423,
+   "face_tri_quad_ngon": [
+    14385,
+    19,
+    0
+   ],
+   "non_manifold_edges": 39,
+   "boundary_edges": 39,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 41,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 4,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "head": 2280,
+    "finger3.L_02": 26,
+    "thumb.L_02": 36,
+    "thumb.L_01": 20,
+    "hand.L": 227,
+    "finger3.L_01": 28,
+    "finger4.L_01": 22,
+    "finger4.L_02": 26,
+    "finger2.L_01": 42,
+    "lower_arm.L": 389,
+    "finger2.L_02": 33,
+    "finger1.L_01": 27,
+    "finger1.L_02": 19,
+    "upper_arm.L": 468,
+    "spine_02": 1055,
+    "spine_01": 933,
+    "pelvis": 1009,
+    "clavicle.L": 255,
+    "foot.R": 534,
+    "lower_leg.R": 808,
+    "upper_leg.R": 857,
+    "foot.L": 548,
+    "lower_leg.L": 765,
+    "upper_leg.L": 806,
+    "neck": 341,
+    "clavicle.R": 261,
+    "upper_arm.R": 451,
+    "lower_arm.R": 305,
+    "hand.R": 10
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_cuirass",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.4641,
+    0.3368,
+    0.5314
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 6221,
+   "polys": 10734,
+   "tris": 10734,
+   "face_tri_quad_ngon": [
+    10734,
+    0,
+    0
+   ],
+   "non_manifold_edges": 1666,
+   "boundary_edges": 1666,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "spine_02": 6221
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_glove.R",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.1192,
+    0.0872,
+    0.1548
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 1007,
+   "polys": 1918,
+   "tris": 1918,
+   "face_tri_quad_ngon": [
+    1918,
+    0,
+    0
+   ],
+   "non_manifold_edges": 92,
+   "boundary_edges": 92,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.001"
+   ],
+   "shape_keys": [
+    "Basis",
+    "GripContact_R"
+   ],
+   "shape_key_drivers": 0,
+   "shape_key_action": "RO_WristGrip_Prototype_61f_Key.001",
+   "vertex_groups": 16,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 3,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "finger1.R_03": 56,
+    "finger4.R_03": 52,
+    "finger4.R_02": 47,
+    "thumb.R_02": 127,
+    "finger3.R_01": 104,
+    "hand.R": 428,
+    "finger4.R_01": 82,
+    "finger2.R_01": 87,
+    "thumb.R_01": 112,
+    "finger1.R_01": 59,
+    "lower_arm.R": 114,
+    "finger3.R_03": 54,
+    "finger3.R_02": 52,
+    "finger2.R_03": 40,
+    "finger2.R_02": 36,
+    "finger1.R_02": 38
+   },
+   "attributes": [
+    "position",
+    "material_index",
+    "sharp_face",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_pauldron.L",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.2394,
+    0.1767,
+    0.2227
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 2611,
+   "polys": 4308,
+   "tris": 4308,
+   "face_tri_quad_ngon": [
+    4308,
+    0,
+    0
+   ],
+   "non_manifold_edges": 892,
+   "boundary_edges": 892,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "pauldron.L": 2611
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_pauldron.R",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.2394,
+    0.1767,
+    0.2227
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 2611,
+   "polys": 4308,
+   "tris": 4308,
+   "face_tri_quad_ngon": [
+    4308,
+    0,
+    0
+   ],
+   "non_manifold_edges": 892,
+   "boundary_edges": 892,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "pauldron.R": 2611
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_sword",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    1.0141,
+    0.3307,
+    0.1744
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Skin",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 1493,
+   "polys": 2552,
+   "tris": 2552,
+   "face_tri_quad_ngon": [
+    2552,
+    0,
+    0
+   ],
+   "non_manifold_edges": 422,
+   "boundary_edges": 422,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "model.002"
+   ],
+   "shape_keys": [],
+   "shape_key_drivers": 0,
+   "shape_key_action": null,
+   "vertex_groups": 1,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 1,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "sword": 1493
+   },
+   "attributes": [
+    "position",
+    "custom_normal",
+    "UVMap"
+   ]
+  },
+  {
+   "name": "SM_RO_WristLoft.R",
+   "type": "MESH",
+   "parent": "ARM_RO_Swordsman",
+   "parent_bone": null,
+   "dims": [
+    0.0787,
+    0.0676,
+    0.0598
+   ],
+   "loc": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "scale": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "hide_render": false,
+   "modifiers": [
+    [
+     "ARMATURE",
+     "Armature",
+     "ARM_RO_Swordsman"
+    ]
+   ],
+   "constraints": [],
+   "verts": 458,
+   "polys": 777,
+   "tris": 824,
+   "face_tri_quad_ngon": [
+    730,
+    47,
+    0
+   ],
+   "non_manifold_edges": 92,
+   "boundary_edges": 92,
+   "loose_verts": 0,
+   "uv_layers": [
+    "UVMap"
+   ],
+   "materials": [
+    "M_RO_WristLeather"
+   ],
+   "shape_keys": [
+    "Basis",
+    "WristVolume_025",
+    "WristVolume_050",
+    "WristVolume_075",
+    "WristVolume_100"
+   ],
+   "shape_key_drivers": 0,
+   "shape_key_action": "RO_WristGrip_Prototype_61f_Key",
+   "vertex_groups": 4,
+   "weights": {
+    "zero_weight_verts": 0,
+    "gt4_influence_verts": 0,
+    "max_influences": 3,
+    "not_normalized_verts": 0
+   },
+   "groups_used": {
+    "lower_arm.R": 266,
+    "wrist_transition.R": 288,
+    "hand.R": 188,
+    "thumb.R_01": 7
+   },
+   "attributes": [
+    "position",
+    "sharp_face",
+    "UVMap"
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "name": "RO_WristGrip_Prototype_61f_ARM_RO_Swordsman",
+   "range": [
+    1.0,
+    61.0
+   ],
+   "fcurves": 530,
+   "users": 1
+  },
+  {
+   "name": "RO_WristGrip_Prototype_61f_Key",
+   "range": [
+    1.0,
+    61.0
+   ],
+   "fcurves": 4,
+   "users": 1
+  },
+  {
+   "name": "RO_WristGrip_Prototype_61f_Key.001",
+   "range": [
+    1.0,
+    61.0
+   ],
+   "fcurves": 1,
+   "users": 1
+  }
+ ],
+ "images": [
+  {
+   "name": "Render Result",
+   "size": [
+    0,
+    0
+   ],
+   "packed": false,
+   "filepath": ""
+  },
+  {
+   "name": "RO_WristLeather_BaseColor_2K",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\assets\\processed\\ro-swordsman-combo-r006\\v007-underlay\\wrist_leather_basecolor.png"
+  },
+  {
+   "name": "RO_WristLeather_Normal_2K",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\assets\\processed\\ro-swordsman-combo-r006\\v007-underlay\\wrist_leather_normal.png"
+  },
+  {
+   "name": "texture_diffuse",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_diffuse.001",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_diffuse.002",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_metallic-texture_roughness",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_metallic-texture_roughness.001",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_metallic-texture_roughness.002",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_normal",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_normal.001",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  },
+  {
+   "name": "texture_normal.002",
+   "size": [
+    2048,
+    2048
+   ],
+   "packed": true,
+   "filepath": ""
+  }
+ ],
+ "materials": [
+  "M_RO_WristLeather",
+  "model",
+  "model.001",
+  "model.002",
+  "ReviewFloor"
+ ],
+ "is_dirty_after_inspect": true
+}

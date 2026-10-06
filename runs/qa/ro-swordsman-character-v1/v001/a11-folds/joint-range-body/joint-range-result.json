@@ -1,0 +1,2508 @@
+{
+ "observed_utc": "2026-10-05T05:29:31.337562+00:00",
+ "blender": "4.5.5 LTS",
+ "subject": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a11-folds/ro_character_v001_a11-folds.blend",
+  "sha256": "09b862e351971499261b228d60b57fde858227d001b2074685f530e5fc8f2e68",
+  "saved": false
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r3/joint-range-contract-v4.json",
+  "sha256": "63510cc001ee2a23d0a04f95360a1ca9e2e0441826c905632a7c9d79d8d4246b",
+  "bound_to_request": true
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a11-folds/corrective-rules.json",
+  "sha256": "9fcc47c3a0ad122c748ec051866512583cda7714655be9b1b1597029ccae2487"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a11-folds/poses.json",
+  "sha256": "cbd11e5927a0c47ebd9b0aed11735291e48dd644ddd65b342ab2717fd1047eaf"
+ },
+ "armature": "ARM_RO_Swordsman",
+ "bones": 60,
+ "measured_meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R"
+ ],
+ "excluded_meshes": [
+  "SM_RO_sword"
+ ],
+ "soup": {
+  "vertices": 29774,
+  "triangles": 53883,
+  "hand_region_triangles": 3576
+ },
+ "rest_pairs": {
+  "hand_self": 0,
+  "hand_other": 248,
+  "other": 4534
+ },
+ "rest_gate": {
+  "hand_self_intersection_zero": true,
+  "other_pairs_within_ceiling": true
+ },
+ "hand_frames": {
+  "L": {
+   "palmar": [
+    -0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    -0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  },
+  "R": {
+   "palmar": [
+    0.2573,
+    -0.9301,
+    0.262
+   ],
+   "dorsal": [
+    -0.2573,
+    0.9301,
+    -0.262
+   ],
+   "radial": [
+    -0.8688,
+    -0.104,
+    0.484
+   ],
+   "ulnar": [
+    0.8688,
+    0.104,
+    -0.484
+   ],
+   "index_finger": 4
+  }
+ },
+ "calibration_run": false,
+ "partial_run": [
+  "combo-arms-overhead",
+  "combo-cast-open-palm.L",
+  "combo-deep-squat",
+  "elbow-flexion.L",
+  "hip-flexion.L",
+  "shoulder-abduction.L",
+  "shoulder-axial-plus.L",
+  "shoulder-flexion.L",
+  "shoulder-flexion.R",
+  "spine-flexion",
+  "spine-lateral",
+  "spine-twist",
+  "toe-extension.L",
+  "toe-extension.R"
+ ],
+ "motions": 14,
+ "measured": 14,
+ "missing": 0,
+ "numeric_gate_pass": false,
+ "failed_motions": [
+  "toe-extension.R"
+ ],
+ "scope": "Numeric guards only, at finite poses: direction, real deformation of every stepped bone, triangle collapse, hand-region self and new cross-mesh intersections, hand edge-ratio guard, and a no-worse-than-baseline ratchet for the rest of the body (overlap at rest, pose-induced pairs and stretch). Weapon meshes are excluded here and judged by the grasp and clip gates. Not a continuous-range or art acceptance.",
+ "results": [
+  {
+   "id": "spine-flexion",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.9439,
+     -0.3304,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10161992907524109,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.45015465493453916,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4365,
+     "other_new_pairs": 526,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1543,
+        -0.0306,
+        0.9073
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.156,
+        0.0227,
+        0.9558
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1325,
+        -0.0073,
+        1.0419
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0066,
+        -0.0746,
+        1.0266
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999680345951831,
+      1.0000247466156376
+     ],
+     "other_edge_ratio": [
+      0.5796807892257833,
+      1.3814214988743998
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.1943664252758026,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.33762509803729246,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4402,
+     "other_new_pairs": 691,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1165,
+        0.0427,
+        1.0732
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1319,
+        0.0686,
+        1.0197
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1173,
+        -0.0247,
+        1.0629
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1376,
+        -0.0416,
+        1.2702
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9998882476636667,
+      1.0000566046859949
+     ],
+     "other_edge_ratio": [
+      0.4544329156531346,
+      2.0599160928378515
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "spine-lateral",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.05649776756763458,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.6400682222314202,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4504,
+     "other_new_pairs": 567,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1392,
+        0.0312,
+        1.0342
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1543,
+        -0.0306,
+        0.9073
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0187,
+        -0.0731,
+        0.9827
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999469440867265,
+      1.0000565491619333
+     ],
+     "other_edge_ratio": [
+      0.6591874287689012,
+      2.8768330326488405
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.11093568801879883,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.30498417541749845,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 345,
+     "hand_other_new_pairs": 97,
+     "other_pairs": 4604,
+     "other_new_pairs": 803,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.138,
+        0.0777,
+        0.8647
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0553,
+        -0.058,
+        1.0647
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0463,
+        -0.0624,
+        1.0617
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9998862339204937,
+      1.0000508341116308
+     ],
+     "other_edge_ratio": [
+      0.44429307912131727,
+      5.0028830778750155
+     ],
+     "hand_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_02",
+         "finger1.L_03"
+        ]
+       ],
+       "at": [
+        0.2893,
+        -0.0716,
+        0.6747
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_03"
+        ]
+       ],
+       "at": [
+        0.2872,
+        -0.0941,
+        0.6666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_02",
+         "finger1.L_03"
+        ]
+       ],
+       "at": [
+        0.2872,
+        -0.0941,
+        0.6666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_03"
+        ]
+       ],
+       "at": [
+        0.2872,
+        -0.0941,
+        0.6666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_01",
+         "finger1.L_02"
+        ]
+       ],
+       "at": [
+        0.2889,
+        -0.0547,
+        0.6711
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger2.L_02"
+        ]
+       ],
+       "at": [
+        0.2952,
+        -0.0827,
+        0.6644
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "finger1.L_02",
+         "finger1.L_03"
+        ]
+       ],
+       "at": [
+        0.2748,
+        -0.0888,
+        0.691
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_hand.L"
+       ],
+       "bones": [
+        [
+         "coat.L"
+        ],
+        [
+         "hand.L"
+        ]
+       ],
+       "at": [
+        0.2779,
+        -0.0421,
+        0.7332
+       ]
+      }
+     ],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "spine-twist",
+   "region": "torso",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.08
+    ],
+    "view": [
+     0.2873,
+     -0.9578,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.0809247001605131,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4520,
+     "other_new_pairs": 617,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1096,
+        -0.0043,
+        1.1123
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1489,
+        0.0439,
+        1.0142
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0783,
+        -0.0432,
+        1.0937
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0804,
+        -0.0695,
+        0.9824
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999955304403565,
+      1.000036084565956
+     ],
+     "other_edge_ratio": [
+      0.15730978902481105,
+      3.2812976335054445
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.5700371937423824,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4573,
+     "other_new_pairs": 788,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.0158,
+        -0.0729,
+        1.0156
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0181,
+        -0.07,
+        1.0286
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1231,
+        0.0932,
+        1.0131
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.0856,
+        0.1155,
+        1.0273
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999709743555045,
+      1.0000305223030637
+     ],
+     "other_edge_ratio": [
+      0.5048109895227416,
+      6.169160406337261
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.17947769165039062,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08691245746110743,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4357,
+     "other_new_pairs": 600,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1965,
+        0.1142,
+        1.3432
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.202,
+        0.1115,
+        1.3339
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.11,
+        1.3711
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.085,
+        1.3906
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521069600809,
+      1.000058341584215
+     ],
+     "other_edge_ratio": [
+      0.19688903253457893,
+      25.40383694798799
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09420249611139297,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.052880243725479635,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4852,
+     "other_new_pairs": 1140,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1981,
+        0.0646,
+        1.37
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1759,
+        0.0286,
+        1.3384
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2235,
+        0.0287,
+        1.2486
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1145,
+        0.0661,
+        1.4183
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999367962936451,
+      1.000078996299152
+     ],
+     "other_edge_ratio": [
+      0.14399579075020041,
+      40.03539585908757
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-abduction.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.10589033365249634,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.4084257036016811,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4897,
+     "other_new_pairs": 1106,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2963,
+        0.0855,
+        1.348
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.186,
+        0.0736,
+        1.3866
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2602,
+        0.0247,
+        1.2407
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3239,
+        0.075,
+        1.2233
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999313722224371,
+      1.0000580724727048
+     ],
+     "other_edge_ratio": [
+      0.5741827474594136,
+      21.575552180699038
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.002995818853378296,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08150564337881833,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4847,
+     "other_new_pairs": 1120,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3029,
+        0.0183,
+        1.338
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1725,
+        0.0347,
+        1.2257
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1472,
+        0.109,
+        1.3885
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1153,
+        0.0649,
+        1.4175
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999508148546014,
+      1.0000612561255102
+     ],
+     "other_edge_ratio": [
+      0.19520398809939699,
+      36.562282005633385
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-axial-plus.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     0.4472,
+     -0.8944,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.30133739641680657,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4597,
+     "other_new_pairs": 755,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1442,
+        0.1209,
+        1.3843
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2069,
+        0.0134,
+        1.2757
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1435,
+        0.1195,
+        1.2656
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1534,
+        0.1114,
+        1.2635
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999526439555729,
+      1.0000447888906963
+     ],
+     "other_edge_ratio": [
+      0.401687674400083,
+      4.895692615512059
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.22147143263723706,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4639,
+     "other_new_pairs": 883,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.21,
+        0.0557,
+        1.1895
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3277,
+        0.1053,
+        1.1968
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1574,
+        0.1012,
+        1.2459
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1833,
+        0.1142,
+        1.2319
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999554174613347,
+      1.0000411164076934
+     ],
+     "other_edge_ratio": [
+      0.4446967841299537,
+      9.101522885053036
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "elbow-flexion.L",
+   "region": "arm.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.3139,
+     0.0709,
+     1.1449
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.8
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.1306653618812561,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.07023776816430868,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4607,
+     "other_new_pairs": 208,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.333,
+        0.0309,
+        1.1795
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3171,
+        -0.0113,
+        1.1767
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3466,
+        -0.0067,
+        1.0856
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3161,
+        0.03,
+        1.179
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9998846306327875,
+      1.0000827624626736
+     ],
+     "other_edge_ratio": [
+      0.466513053245277,
+      1.6462558442457254
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": -0.0025687534362077713,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08257553871712037,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5263,
+     "other_new_pairs": 897,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3384,
+        0.0928,
+        1.189
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3505,
+        0.0426,
+        1.1453
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3073,
+        0.0315,
+        1.1354
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.3339,
+        -0.0092,
+        1.1934
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.999908333681411,
+      1.0000536917028287
+     ],
+     "other_edge_ratio": [
+      0.22544084973079104,
+      1.9407211247352418
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "hip-flexion.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.145,
+     0.05,
+     0.89
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 1.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.3237340450286865,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.17301286476803573,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5032,
+     "other_new_pairs": 515,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1967,
+        -0.1555,
+        0.7601
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2004,
+        -0.1891,
+        0.7058
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.2014,
+        -0.1709,
+        0.7241
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0837,
+        -0.1088,
+        0.8786
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.5665732264050719,
+      6.333433001639929
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.3799009323120117,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.19045723434441506,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4957,
+     "other_new_pairs": 441,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0801,
+        -0.0706,
+        0.8979
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0745,
+        -0.0735,
+        0.8816
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0477,
+        -0.1629,
+        0.953
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.1471,
+        -0.0691,
+        0.8783
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.1615905396688157,
+      11.086762556764876
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "toe-extension.L",
+   "region": "leg.L",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.195,
+     -0.11,
+     0.053
+    ],
+    "view": [
+     0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.042094964534044266,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.7440752638656971,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.7853473818920049,
+      1.4709084004296744
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07778149843215942,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.46433068691707363,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4534,
+     "other_new_pairs": 0,
+     "other_new_examples": [],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.580691649250207,
+      1.8893716947266792
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "shoulder-flexion.R",
+   "region": "arm.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.205,
+     0.07,
+     1.33
+    ],
+    "view": [
+     -0.9285,
+     -0.3714,
+     0.0
+    ],
+    "ortho_scale": 1.1
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.17947769165039062,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.16326916502848604,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4406,
+     "other_new_pairs": 727,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.1939,
+        0.0919,
+        1.3864
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.1753,
+        0.1009,
+        1.2905
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2346,
+        -0.0183,
+        1.2028
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.2185,
+        0.0099,
+        1.2567
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999521069600809,
+      1.000058341584215
+     ],
+     "other_edge_ratio": [
+      0.25305490735261543,
+      19.94090491689337
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.09420249611139297,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05133820756884587,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4955,
+     "other_new_pairs": 1322,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2303,
+        0.038,
+        1.2394
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.1593,
+        0.0369,
+        1.3247
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999367962936451,
+      1.000078996299152
+     ],
+     "other_edge_ratio": [
+      0.16017654545988722,
+      31.09706675606489
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "toe-extension.R",
+   "region": "leg.R",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     -0.195,
+     -0.11,
+     0.053
+    ],
+    "view": [
+     -0.9578,
+     -0.2873,
+     0.0
+    ],
+    "ortho_scale": 0.6
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": 0.042094964534044266,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.47320711808890015,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4535,
+     "other_new_pairs": 1,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.3029,
+        -0.096,
+        0.0222
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.8028446212236255,
+      1.4918904771287833
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": 0.07778149843215942,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.4899426554931372,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4535,
+     "other_new_pairs": 1,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.3029,
+        -0.0979,
+        0.0256
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      1.0,
+      1.0
+     ],
+     "other_edge_ratio": [
+      0.5905684283014857,
+      1.9310378789144305
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": false,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": false
+  },
+  {
+   "id": "combo-arms-overhead",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     1.16
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.08691245746110743,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4220,
+     "other_new_pairs": 1380,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.1939,
+        0.0919,
+        1.3864
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.R"
+       ],
+       "at": [
+        -0.1753,
+        0.1009,
+        1.2905
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2346,
+        -0.0179,
+        1.2028
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1965,
+        0.1142,
+        1.3432
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999149069179162,
+      1.0000886113059053
+     ],
+     "other_edge_ratio": [
+      0.19688903253457893,
+      25.448952856891314
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05133820756884587,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5271,
+     "other_new_pairs": 2568,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.2303,
+        0.038,
+        1.2394
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.1981,
+        0.0646,
+        1.37
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.1556,
+        0.0046,
+        1.3514
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999110687709554,
+      1.0000872857872374
+     ],
+     "other_edge_ratio": [
+      0.14399579075020041,
+      39.874776954171196
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "combo-deep-squat",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.0,
+     0.04,
+     0.89
+    ],
+    "view": [
+     0.8575,
+     -0.5145,
+     0.0
+    ],
+    "ortho_scale": 2.3
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.0833261627394583,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 5953,
+     "other_new_pairs": 2004,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.143,
+        0.0141,
+        1.0328
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1844,
+        -0.1624,
+        0.6666
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.14,
+        -0.1542,
+        0.8538
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0894,
+        -0.2049,
+        0.6368
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999665754800007,
+      1.0000250859032707
+     ],
+     "other_edge_ratio": [
+      0.18354736010009012,
+      5.817518002008485
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.05099716941933504,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 6184,
+     "other_new_pairs": 2362,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        -0.0066,
+        -0.0744,
+        1.0285
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0477,
+        -0.1629,
+        0.953
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        -0.1313,
+        0.0922,
+        0.8305
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_coat",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.0572,
+        -0.1566,
+        0.8936
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.9999716661528668,
+      1.0000454327013628
+     ],
+     "other_edge_ratio": [
+      0.18049495274621044,
+      10.382618419022155
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  },
+  {
+   "id": "combo-cast-open-palm.L",
+   "region": "combo",
+   "status": "measured",
+   "camera": {
+    "focus": [
+     0.4137,
+     -0.0122,
+     0.9479
+    ],
+    "view": [
+     0.5145,
+     -0.8575,
+     0.0
+    ],
+    "ortho_scale": 1.2
+   },
+   "levels": {
+    "typical": {
+     "level": 0.5,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.26401329696682946,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4424,
+     "other_new_pairs": 625,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2956,
+        -0.0032,
+        1.205
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_cuirass"
+       ],
+       "at": [
+        0.2118,
+        0.1025,
+        1.3557
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2607,
+        0.014,
+        1.2977
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_bracer.L",
+        "SM_RO_core"
+       ],
+       "at": [
+        0.3466,
+        -0.1295,
+        1.1296
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.7331212425939735,
+      1.3628929804191903
+     ],
+     "other_edge_ratio": [
+      0.3187766304306763,
+      16.21528921624919
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    },
+    "extreme": {
+     "level": 1.0,
+     "direction_smoke_m": null,
+     "bones_not_deforming": [],
+     "collapsed_triangles": 0,
+     "min_triangle_area_ratio": 0.06307418894020257,
+     "hand_self_pairs": 0,
+     "hand_other_pairs": 248,
+     "hand_other_new_pairs": 0,
+     "other_pairs": 4401,
+     "other_new_pairs": 751,
+     "other_new_examples": [
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1965,
+        0.1112,
+        1.3405
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.2375,
+        -0.0165,
+        1.2812
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.1086,
+        1.3679
+       ]
+      },
+      {
+       "meshes": [
+        "SM_RO_core",
+        "SM_RO_pauldron.L"
+       ],
+       "at": [
+        0.1922,
+        0.0853,
+        1.3871
+       ]
+      }
+     ],
+     "hand_edge_ratio": [
+      0.5166830372449968,
+      1.7366528376018897
+     ],
+     "other_edge_ratio": [
+      0.30145705665160855,
+      29.427065896892955
+     ],
+     "hand_examples": [],
+     "collapsed_examples": [],
+     "tile": null
+    }
+   },
+   "neutral_tile": null,
+   "gate": {
+    "direction": true,
+    "deforms": true,
+    "no_collapse": true,
+    "hand_self_intersection_zero": true,
+    "hand_other_new_intersection_zero": true,
+    "hand_shape_guard": true,
+    "other_intersections_within_ceiling": true,
+    "other_stretch_within_ceiling": true
+   },
+   "pass": true
+  }
+ ]
+}

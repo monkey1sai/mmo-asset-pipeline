@@ -1,0 +1,684 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo-r003",
+  "request_sha256": "b291ee870b983043361c3f1ce47c6b16f5b9b310a71126174ac9040bf1991ef6",
+  "protocol_sha256": "c1aa578571937b0e735a9d9f515556720d7bcf3e271e1421360863a92f09e948",
+  "trials": [
+    {
+      "id": "baseline",
+      "parent_id": null,
+      "status": "completed",
+      "started_utc": "2026-10-02T14:49:27.333812+00:00",
+      "ended_utc": "2026-10-02T15:59:45.332553+00:00",
+      "elapsed_seconds": 4217.998741,
+      "protocol_sha256": "c1aa578571937b0e735a9d9f515556720d7bcf3e271e1421360863a92f09e948",
+      "reviewer": "Independent quality_review task; actual five PNGs, new design and original action sheet",
+      "previews": {
+        "front": {
+          "path": "runs/qa/ro-swordsman-combo-r003/baseline/front.png",
+          "sha256": "c7d58ee514d7ade57e7caa5c29407020f41282811bc0dd1f40f8444c770f02cf"
+        },
+        "side": {
+          "path": "runs/qa/ro-swordsman-combo-r003/baseline/side.png",
+          "sha256": "e7aa9f3eae9838ce19676d2b2ba640f7223964ef65e0c3a9584678bb26ab9f63"
+        },
+        "back": {
+          "path": "runs/qa/ro-swordsman-combo-r003/baseline/back.png",
+          "sha256": "278f084bed5c1fa30b21a45ee4514d0cac8c4a053762dd0d744194de6095db49"
+        },
+        "three-quarter": {
+          "path": "runs/qa/ro-swordsman-combo-r003/baseline/three-quarter.png",
+          "sha256": "663785a66e38ba4913d7b03041f0c33c3b91068861c9b61705789dbce086d939"
+        },
+        "detail": {
+          "path": "runs/qa/ro-swordsman-combo-r003/baseline/detail.png",
+          "sha256": "ae13b39fd37eaea1298238c206fa51757963598c55013efacdaba2f3683f0543"
+        }
+      },
+      "scores": {
+        "design-intent": {
+          "value": 3,
+          "reason": "Hair, male anime face, armor and colors match; required sword absent and facial linework blurred."
+        },
+        "silhouette": {
+          "value": 3,
+          "reason": "Clear arm/torso separation and front/3Q; rear coat bell is thick and lacks separate articulated panels."
+        },
+        "form-proportion": {
+          "value": 3,
+          "reason": "Credible main body volumes; thick hair, flat facial transition and thick coat hem need refinement."
+        },
+        "materials": {
+          "value": 3,
+          "reason": "Metal/cloth/leather readable and three embedded maps loaded; eye smear, rough plate-edge marks and patchy shoulder highlights."
+        },
+        "craft": {
+          "value": 2,
+          "reason": "Static source improved but hair/eyes/armor edges imperfect; eight nonmanifold edges unlocalized and no functional articulation."
+        },
+        "use-readability": {
+          "value": 0,
+          "reason": "No sword, rig, sequence or effects."
+        }
+      },
+      "evidence": {
+        "schema_version": 1,
+        "request_id": "ro-swordsman-combo-r003",
+        "request_sha256": "b291ee870b983043361c3f1ce47c6b16f5b9b310a71126174ac9040bf1991ef6",
+        "checks": {
+          "art_match": {
+            "status": "fail",
+            "method": "Actual independent five-view review and source inventory: this full requirement is missing or defective; see review.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "scale_pivot": {
+            "status": "fail",
+            "method": "Body-only fresh GLB bounds are1.7400000095m/ground0; weapon pivot absent, full requirement remains failed.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "geometry_materials": {
+            "status": "fail",
+            "method": "Actual independent five-view review and source inventory: this full requirement is missing or defective; see review.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "package_complete": {
+            "status": "fail",
+            "method": "Baseline .blend/.glb/README exist, full requested character+sword+rig+animation+effects package absent.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "rig_mapping": {
+            "status": "fail",
+            "method": "Actual independent five-view review and source inventory: this full requirement is missing or defective; see review.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "deformation": {
+            "status": "fail",
+            "method": "Actual zero-bone baseline lacks deformation capability; no stress poses run, cannot pass.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "animation": {
+            "status": "fail",
+            "method": "Actual independent five-view review and source inventory: this full requirement is missing or defective; see review.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "export-roundtrip": {
+            "status": "fail",
+            "method": "Actual fresh static GLB import preserves39746tri/3packedmaps/noexternalURI; required rig and animation absent, full check fails.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          },
+          "skill-effects": {
+            "status": "fail",
+            "method": "Actual independent five-view review and source inventory: this full requirement is missing or defective; see review.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/inspection.json",
+                "sha256": "b0271154abdbbffa24e6cafba596aefa05eeb9a5b1c6004b35354baf0f84fb5a"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/fresh-import.json",
+                "sha256": "e1b7d2d0060cd5e21ea30460b958b7b6307d2d8670202f0539f375942f5ce55f"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/baseline/independent-review.json",
+                "sha256": "abebed7d25081cbbbe5a1159e60583b9ab6b910d26a297a7fe926298b47bb20f"
+              }
+            ]
+          }
+        },
+        "subject_artifacts": [
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/baseline/ro_source_baseline.blend",
+            "sha256": "6c459f248ee14e7a8e8f0db6ceedebeebde8804fe9b3c4bd59dd3e14c763b8b9"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/baseline/ro_source_baseline.glb",
+            "sha256": "a11187c1e409cc5f1e98fac50bb9932195457ab88a38b8e7b89cedfd82ff90c6"
+          }
+        ],
+        "deliverables": [
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/baseline/ro_source_baseline.blend",
+            "sha256": "6c459f248ee14e7a8e8f0db6ceedebeebde8804fe9b3c4bd59dd3e14c763b8b9"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/baseline/ro_source_baseline.glb",
+            "sha256": "a11187c1e409cc5f1e98fac50bb9932195457ab88a38b8e7b89cedfd82ff90c6"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/baseline/README.json",
+            "sha256": "54b1a521102ddbe3b1649797b8fee3f90a20a3e97182aa68c1197b68f60ae81f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v001",
+      "parent_id": "baseline",
+      "started_utc": "2026-10-02T15:59:45.332553+00:00",
+      "before_candidate_work": true,
+      "hypothesis": "Retain neutral source UV/shape, diagnose local seams, segment clothing by visible seams, author joint and finger weights, then add independent sword/sequence/effects without replacing anatomy.",
+      "change": "One source-preserving local refinement; preflight three stress poses and early fresh GLB comparison before full animation.",
+      "old_trials_preserved": true,
+      "status": "completed",
+      "ended_utc": "2026-10-02T16:59:40.880191+00:00",
+      "elapsed_seconds": 3595.547638,
+      "protocol_sha256": "c1aa578571937b0e735a9d9f515556720d7bcf3e271e1421360863a92f09e948",
+      "reviewer": "Existing independent quality_review agent; read-only actual image and artifact review",
+      "scores": {
+        "design-intent": {
+          "value": 3,
+          "reason": "角色、服裝與髮型保留且加入獨立劍；臉部線條模糊，圓柱護手與簡略劍材質未與角色細節一致。"
+        },
+        "silhouette": {
+          "value": 3,
+          "reason": "人物武器輪廓清楚；後衣仍鐘形，蹲姿側衣硬折角；過頭手劍聚集臉前，未證明完整舉劍範圍。"
+        },
+        "form-proportion": {
+          "value": 2,
+          "reason": "實際姿勢有腕部扭折、掌面與拇指根部塌折，肩甲／上臂甲被拉成軟質折面；相對靜態baseline的3是結構退步。"
+        },
+        "materials": {
+          "value": 3,
+          "reason": "布、皮、金屬分區保留；臉眼、髮束與甲邊貼圖瑕疵、斑駁高光及簡略新劍材質仍在。"
+        },
+        "craft": {
+          "value": 2,
+          "reason": "手部長刺、靴腿大幅拉伸及深蹲前襟已有改善；腕掌、甲片接合和握持未過，原8條非流形邊未修。"
+        },
+        "use-readability": {
+          "value": 0,
+          "reason": "骨架與壓力姿勢是工程進展；指定連段、銜接、重心／支撐與必要效果未製作，不能提高連段用途分數。"
+        }
+      },
+      "previews": {
+        "front": {
+          "path": "runs/qa/ro-swordsman-combo-r003/v001/final-views/front.png",
+          "sha256": "fa8d4395aff2e387a7149ffd42815a4dbacad33cd050d3cf9cba973c808ac369"
+        },
+        "side": {
+          "path": "runs/qa/ro-swordsman-combo-r003/v001/final-views/side.png",
+          "sha256": "ae1f9b451d9edc146e0f246a35817db12cdbd59bf67620ee71753111a2d413ed"
+        },
+        "back": {
+          "path": "runs/qa/ro-swordsman-combo-r003/v001/final-views/back.png",
+          "sha256": "ebfac417e4c67c36e8ad7d9d73e9c8813c75317fd62e15869fcf2ee6082c5898"
+        },
+        "three-quarter": {
+          "path": "runs/qa/ro-swordsman-combo-r003/v001/final-views/three-quarter.png",
+          "sha256": "696549a1e9a67a469a883073150fb880c2d36a1f4403b60dea51bfc9a8ff7f7f"
+        },
+        "detail": {
+          "path": "runs/qa/ro-swordsman-combo-r003/v001/final-views/detail.png",
+          "sha256": "2390df62327ae2c73eb00bfaeec99390b87a5b7e575fe74052bfbec9630ce720"
+        }
+      },
+      "evidence": {
+        "schema_version": 1,
+        "request_id": "ro-swordsman-combo-r003",
+        "request_sha256": "b291ee870b983043361c3f1ce47c6b16f5b9b310a71126174ac9040bf1991ef6",
+        "checks": {
+          "art_match": {
+            "status": "fail",
+            "method": "Actual independent28-view review scores3/3/2/3/2/0 below all4 targets; form regresses from baseline3 to2.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "scale_pivot": {
+            "status": "fail",
+            "method": "Body fresh bind bounds verify nominal1.74m and ground numerical epsilon; full weapon/posed pivot and grip acceptance remains incomplete, no blanket scale/pivot PASS.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "geometry_materials": {
+            "status": "fail",
+            "method": "Actual8 source nonmanifold edges and malformed wrist/armor surfaces remain; threeembedded2K textures/39946tri alone are inventory.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "package_complete": {
+            "status": "fail",
+            "method": "Local failed preflight master/glb/README saved; requested complete character+continuous animation+effects package absent.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "rig_mapping": {
+            "status": "fail",
+            "method": "46named bones/1skin and finite normalized weights observed in fresh import; functional hand/armor mapping fails actual stress poses.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "deformation": {
+            "status": "fail",
+            "method": "Actual wrist/thumb/palm volume collapse and soft armor folds remain; repairing long spikes/tabard does not close this check.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "animation": {
+            "status": "fail",
+            "method": "GLB actual0animations; requested continuous300frames60fps5s not authored after preflight rejection.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "export-roundtrip": {
+            "status": "fail",
+            "method": "Actual static rig/texture fresh import done; posed/continuous-animation preservation cannot pass without the required animation.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          },
+          "skill-effects": {
+            "status": "fail",
+            "method": "Requested separateBash/Magnum/Endure effects absent; not authored to hide failed deformation.",
+            "artifacts": [
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/independent-review.json",
+                "sha256": "69221ce0e75c7572efe16750dc058cea21803f618848545dcdbf6f1265605729"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/preflight-fresh-import.json",
+                "sha256": "d11a73213e821f3efdf8e64f683626e7c083c5a4d659fb5b3305c0da48a89410"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/final-preflight-report.json",
+                "sha256": "8ea052f1c148414549210d3be4c4533780bad73fcef2203498e06b683aee3dcb"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/hand-region-restoration.json",
+                "sha256": "3483468ccbfe32bd78b44a18ad138d3149bcca030a55a94b8058aa0eb128c8a5"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/continuous-base-report.json",
+                "sha256": "69d4ba6e612224788a0f3d904badf0b869b914ef9a93079d34c417fae3490eba"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/paired-reach-report.json",
+                "sha256": "d77cb4ec940f367a8d060ce16efe79c76c24a80562316d8f44dd6b47bb55db07"
+              },
+              {
+                "path": "runs/qa/ro-swordsman-combo-r003/v001/grip-frame-probe/report.json",
+                "sha256": "20a3a0529f00a1c2e55e5b93c4d88bfb15b58eb00d6c7b0939000dd1523d8505"
+              }
+            ]
+          }
+        },
+        "subject_artifacts": [
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.blend",
+            "sha256": "8e6d10b6326de018b618ce4f26db9710c7b92757a0d6e8c4b5b828737609beae"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.glb",
+            "sha256": "ca36d44de038dfc681736059d5a1254d275a7eccff07f5ce94fda9be433400ca"
+          }
+        ],
+        "deliverables": [
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.blend",
+            "sha256": "8e6d10b6326de018b618ce4f26db9710c7b92757a0d6e8c4b5b828737609beae"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.glb",
+            "sha256": "ca36d44de038dfc681736059d5a1254d275a7eccff07f5ce94fda9be433400ca"
+          },
+          {
+            "path": "assets/processed/ro-swordsman-combo-r003/v001/README.md",
+            "sha256": "a409f751067b52cea3b98edac2453bb1b0c33b0f9f8a36140742cd649cc2c566"
+          }
+        ]
+      },
+      "intra_trial_attempts": [
+        "original_uv_mask_failed",
+        "smooth_cloth_envelope_thumb_capture_failed",
+        "restore9native_hand_vertices",
+        "continuous_leg_boot_pelvis_transitions",
+        "tabard_motion_probe",
+        "grip_frame_and_thumb_probe",
+        "paired_reach_and_forward_elbow_poles",
+        "final_actual_preflight_NO_SHIP"
+      ]
+    }
+  ],
+  "previous_phase_preserved": {
+    "original_phase": {
+      "previous_request": "requests/ro-swordsman-combo.json",
+      "previous_ledger": "runs/qa/ro-swordsman-combo/quality-ledger-blocked.json",
+      "old_revisions_used": 3,
+      "old_revisions_limit": 3,
+      "old_result": "invalid experiment and failed deformation, preserved without reset",
+      "new_scope": "three bounded local reconstruction revisions after a reviewed new source baseline",
+      "new_paid_authority": false,
+      "git_mutation": "held_for_user_verification"
+    },
+    "previous_request": "requests/ro-swordsman-combo-r002.json",
+    "previous_ledger": "runs/qa/ro-swordsman-combo-r002/quality-ledger.json",
+    "status": "Final third candidate under independent review. Preserved, no remaining fourth local candidate. New user-directed API route changes source; does not erase prior trials."
+  },
+  "clock_policy": "Real wall clock starts before this raw generation; candidate edit clock begins only after full baseline record; prior r002 clocks preserved."
+}

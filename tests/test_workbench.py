@@ -79,6 +79,27 @@ class RequestTests(unittest.TestCase):
         request["spec"]["requires_rig"] = False
         self.assertTrue(workbench.validate_request(request))
 
+    def test_generated_character_plan_requires_authoring_and_inspection(self):
+        request = specified("rigged_character")
+        request["production"]["route"] = "generate"
+        request["spec"]["animations"] = ["continuous_skill"]
+        capabilities = workbench.production_plan(request)["needed_capabilities"]
+        self.assertTrue({"rig_authoring", "animation_authoring", "rig_inspection", "deformation_inspection", "animation_inspection"} <= set(capabilities))
+        self.assertEqual(capabilities, workbench.production_plan(request)["needed_capabilities"])
+        self.assertFalse(workbench.production_plan(request)["paid_submission_authorized_by_this_plan"])
+
+    def test_reused_character_and_static_plans_do_not_require_new_rig_authoring(self):
+        request = specified("rigged_character")
+        request["production"]["route"] = "reuse"
+        request["spec"]["animations"] = ["idle"]
+        capabilities = workbench.production_plan(request)["needed_capabilities"]
+        self.assertTrue({"rig_inspection", "deformation_inspection", "animation_inspection"} <= set(capabilities))
+        self.assertNotIn("rig_authoring", capabilities)
+        self.assertNotIn("animation_authoring", capabilities)
+        static = specified()
+        static["production"]["route"] = "generate"
+        self.assertFalse({"rig_authoring", "animation_authoring", "rig_inspection", "deformation_inspection", "animation_inspection"} & set(workbench.production_plan(static)["needed_capabilities"]))
+
     def test_interactive_template_includes_parts_and_motion(self):
         request = identity.read_json(REPO / "requests" / "examples" / "openable-gate.json")
         self.assertEqual(workbench.validate_request(request), [])

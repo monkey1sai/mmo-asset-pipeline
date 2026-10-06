@@ -1,0 +1,45 @@
+{
+  "observed_utc": "2026-10-03T11:06:02.647905+00:00",
+  "classification": "TEST_FAILURE in reporting scope, not a newly changed source mesh",
+  "original_phase_closed_unchanged": true,
+  "r006_ledger_modified": false,
+  "corrected_claim": "v008sword-contact pass refers to the fully closed endpoint. The five-sample claim of zero sword penetration/crossings throughout the saved local clip is not supported.",
+  "new_actual_evidence": {
+    "path": "runs/qa/ro-swordsman-combo-r007/baseline/baseline.json",
+    "sha256": "e6ba5475c4bb83082d73df0e3c90d1a985b35376dda779f0d1fd2986b5dd1752"
+  },
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.blend",
+    "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "source_byte_unchanged": true,
+  "actual_frames": [
+    1,
+    16,
+    31,
+    46,
+    61
+  ],
+  "maximum_penetration_m": [
+    0.007185039576143026,
+    0.005430430639535189,
+    0.0034094725269824266,
+    0.0013404830824583769,
+    0
+  ],
+  "sword_transverse_pairs": [
+    94,
+    65,
+    53,
+    20,
+    0
+  ],
+  "closed_endpoint_contacts": [
+    4,
+    4,
+    5,
+    4,
+    4
+  ],
+  "meaning": "r006NO_SHIP/stop_budget and localGLBgeometry roundtrip remain; geometry equivalence preserves defects and never constitutes collision acceptance."
+}

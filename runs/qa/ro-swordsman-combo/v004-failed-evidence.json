@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo",
+  "request_sha256": "9e3ea59bc4ef1a556135f79413233df75ed2d165a810b5f4a56998346e48d2cc",
+  "checks": {
+    "art_match": {
+      "status": "fail",
+      "method": "Coordinator and independent reviewer observed five fixed views and 12 key poses; six scores below4; see exact failures",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/independent-review-v004.md",
+          "sha256": "e71f8beb8f2f1a33cabc48efe89c3cc8167201bf4be4c48eb7947d60a220ac89"
+        }
+      ]
+    },
+    "scale_pivot": {
+      "status": "not_run",
+      "method": "Bind normalization applied to1.74m; full contractual motion envelope/pivot acceptance not completed",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/construction-check.json",
+          "sha256": "0e667ac080db77431057ad09c7796c9674dacb9022acb7852fb1b0d2f4f78eb5"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/full-animation-stress.json",
+          "sha256": "ce64e23374a6c6b6fbf952096a3268e1bd099922181e1c13faadc77632b4dcf9"
+        }
+      ]
+    },
+    "geometry_materials": {
+      "status": "fail",
+      "method": "33096tri and numeric manifold check pass, but photographed material regions, reconstructed surfaces and visible intersections fail",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/construction-check.json",
+          "sha256": "0e667ac080db77431057ad09c7796c9674dacb9022acb7852fb1b0d2f4f78eb5"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/independent-review-v004.md",
+          "sha256": "e71f8beb8f2f1a33cabc48efe89c3cc8167201bf4be4c48eb7947d60a220ac89"
+        }
+      ]
+    },
+    "package_complete": {
+      "status": "not_run",
+      "method": "Candidate files exist; no accepted delivery package or library delivered status",
+      "artifacts": []
+    },
+    "rig_mapping": {
+      "status": "fail",
+      "method": "25bones, skin and normalized weights exist; visible body/hand/sword surface correspondence and intended grip are incorrect",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/roundtrip-check.json",
+          "sha256": "498cc1e5d44344365d05cb93d8a8b3e3542f0df781b3345260bfe35d01c6d26e"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/independent-review-v004.md",
+          "sha256": "e71f8beb8f2f1a33cabc48efe89c3cc8167201bf4be4c48eb7947d60a220ac89"
+        }
+      ]
+    },
+    "deformation": {
+      "status": "fail",
+      "method": "Actual overhead sword, impact and turn poses exhibit large stretched surfaces and residual fused geometry",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/independent-review-v004.md",
+          "sha256": "e71f8beb8f2f1a33cabc48efe89c3cc8167201bf4be4c48eb7947d60a220ac89"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/continuous-neutral-failed.mp4",
+          "sha256": "ae46f25350145744723aa8b1a9b9e04fc85401a4d881703e554a9a70883736a6"
+        }
+      ]
+    },
+    "animation": {
+      "status": "fail",
+      "method": "Rendered all300 true3D frames to five-second60fps video; sampled visible skills/transition poses fail bodily integrity and grip. Rendering is not a claim every frame was visually reviewed",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/full-animation-stress.json",
+          "sha256": "ce64e23374a6c6b6fbf952096a3268e1bd099922181e1c13faadc77632b4dcf9"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/continuous-neutral-failed.mp4",
+          "sha256": "ae46f25350145744723aa8b1a9b9e04fc85401a4d881703e554a9a70883736a6"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo/independent-review-v004.md",
+          "sha256": "e71f8beb8f2f1a33cabc48efe89c3cc8167201bf4be4c48eb7947d60a220ac89"
+        }
+      ]
+    },
+    "export-roundtrip": {
+      "status": "not_run",
+      "method": "Clean GLB numeric roundtrip passes; full materials/visual/deformation roundtrip acceptance deliberately not asserted",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/roundtrip-check.json",
+          "sha256": "498cc1e5d44344365d05cb93d8a8b3e3542f0df781b3345260bfe35d01c6d26e"
+        }
+      ]
+    },
+    "skill-effects": {
+      "status": "fail",
+      "method": "Saved construction explicitly reports skill_effects not_done; required slash/fire/endure layers absent, not hidden by VFX",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo/v004/construction-check.json",
+          "sha256": "0e667ac080db77431057ad09c7796c9674dacb9022acb7852fb1b0d2f4f78eb5"
+        }
+      ]
+    }
+  },
+  "deliverables": [
+    {
+      "path": "assets/processed/ro-swordsman-combo/v004/ro_swordsman_combo.glb",
+      "sha256": "1e87016ea674d195ff7aa2b6b80b65cf57198a41bda7a7184c38c0d6cb9c277c"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo/v004/ro_swordsman_master.blend",
+      "sha256": "226ac742818d78458aac2f7c6abe4a75c224296db62fda3ff152caa6185ef1c8"
+    }
+  ],
+  "subject_artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo/v004/ro_swordsman_combo.glb",
+      "sha256": "1e87016ea674d195ff7aa2b6b80b65cf57198a41bda7a7184c38c0d6cb9c277c"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo/v004/ro_swordsman_master.blend",
+      "sha256": "226ac742818d78458aac2f7c6abe4a75c224296db62fda3ff152caa6185ef1c8"
+    }
+  ],
+  "quality_ledger": {
+    "path": "runs/qa/ro-swordsman-combo/quality-ledger-blocked.json",
+    "sha256": "2665f6842e85447ab70c0a02389275c61cde132dcd14a54c8f66cbadc92cc89e"
+  },
+  "note": "Actual failed candidate subjects, not accepted delivery; hashes alone do not establish quality."
+}

@@ -1,0 +1,59 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r4.json",
+  "bytes": 50754,
+  "sha256": "529dd2ef6c1dfcd0598c12cbcaf8f0c48db4a0cba364009682a0057a9d2eda2d"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r4.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/blender-reference.json",
+  "bytes": 187018,
+  "sha256": "83f0c24442ea8eff238957448aa79dbd9ac0dd4cec04e701aa42f02ea7e489f8"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/blender-reference.f64.bin",
+  "bytes": 30016320,
+  "sha256": "b4e7b724d8ab1a9fb8e1b388ccaff42ccba13010b2a5d3d7cb21b6d3613bc27e"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "bytes": 21213,
+  "sha256": "620c00194a11e1eb171cd860603f216f4f5b6811212bec5703a77b6574131805"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/export-r01/b03_runtime_owner_exact_weights.glb",
+   "bytes": 27371108,
+   "sha256": "e59fea3036d1b233f2da0f1a7ee45afa692c75436fe2ff3ce9ecf07d4c4588d4"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/export-r01/b03_baked_owner_exact_weights.glb",
+   "bytes": 2707224,
+   "sha256": "e36b907f87423551be26c565cba8afe1a78077d1cbc23d562f3b58c268d86798"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   16,
+   "hands"
+  ],
+  [
+   37,
+   "whole"
+  ],
+  [
+   37,
+   "hands"
+  ],
+  [
+   34,
+   "whole"
+  ]
+ ],
+ "note": "Exact-weight GLBs (scripts/cv1_restore_glb_weights.py) as required by runtime_contract.tolerances_m.requires. Rerun r01 with the current export script and harness; GLBs and reference binary are byte-identical to the 06:01 export."
+}

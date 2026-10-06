@@ -1,0 +1,54 @@
+{
+ "id": "b05-twist",
+ "recorded_utc": "2026-10-05T08:02:02Z",
+ "request": "ro-swordsman-character-v1-r6",
+ "authority": "授權紀錄第10筆：扭轉骨用做法 1",
+ "blend": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "blend_note": "Unchanged b03 BLEND; this build changes rules and candidate poses only.",
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "change": {
+  "helpers": "wrist_transition.R_twist and wrist_transition.L_twist follow 50% of the same-side hand's twist about their own (forearm) axis; evaluator-owned",
+  "evaluator": {
+   "scripts/cv1_pose_rules.py": "04121ff0b7f72ea65dc26a307606cf56fc2688d25bf1cbd6a7b8e28e9fc158d2",
+   "tools/runtime-qa/three/src/cv1-pose-rules.js": "382845fa98b4fdc27dd67c4d734ec3ed43a150a711469bdf5c69b989aae0108a",
+   "new_option": "follow.twist_only (not combinable with swing_only)",
+   "tests": "tests/test_cv1_pose_rules.py: 15 pass incl. twist and Python/JS parity; full suite 147 pass"
+  },
+  "two_hand_chop": "hand-keyed twist removed from the candidate pose; the rule gives the same angles (R 15.73 deg, L 18.45 deg, difference 0.00 deg); frozen arm rotations unchanged"
+ },
+ "joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/joint-range/joint-range-result.json",
+  "measured": 73,
+  "numeric_gate_pass": true,
+  "failed_motions": [],
+  "changed_vs_b03": 17,
+  "better": "forearm pronation/supination: hand-region edge ratio at the extreme level 0.56-2.01 -> 0.65-1.67 (less cuff stretch); wrist extension extreme minimum triangle area 0.347 -> 0.362",
+  "worse_report_only": "forearm pronation/supination extreme: 9-10 new hand-to-other pairs (cuff end against the rigid bracer, SM_RO_bracer.X vs SM_RO_hand.X), 0 at the typical level; wrist flexion extreme: hand self pairs 14 -> 16, minimum triangle area 0.394 -> 0.364. Both are wrist sweeps at the extreme level, which the contract reports without a gate; flagged for the art review."
+ },
+ "readback": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/roundtrip-b05_baked_owner_exact_weights.json",
+  "tolerance_m": 5e-06,
+  "max_error_m": 4.205930287720827e-06,
+  "pass": true
+ },
+ "runtime": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/runtime/20261005t080015z-runtime-results.json",
+  "gate_m": 1e-05,
+  "pass": true,
+  "runtime_owner_max_error_m": 4.641708524806419e-06,
+  "helper_channels": "stripped from the runtime-owner GLB (6 channels, BIN unchanged); verdict runtime_owner_clip_has_no_helper_bone_channel true",
+  "twist_exercised": "the b05 Blender reference differs from b03 by up to 16.9 mm in 1,964 values (cuff following the twist), and the runtime matches it within 4.642 um",
+  "earlier_run": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/runtime/20261005t075913z-runtime-results.json (same numbers; its recorded evaluation order omitted the helper step, fixed in candidate.js)"
+ },
+ "status": "current best foundation for v001 (not frozen; signature at freeze)"
+}

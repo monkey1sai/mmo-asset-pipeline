@@ -1,0 +1,28 @@
+{
+  "reviewer": "Independent batch_review; current weights report and actual R/L grip plus small-curl closeups",
+  "verdict": "NO_SHIP",
+  "verified": [
+    "One new core generation completed/downloaded; service reports0.5 credits.",
+    "Static source face sharper; actual new core15020tri before four isolated head fins removed.",
+    "Exact four fin removals read back; other face positions and corner UVs retained, final core15016tri and nonmanifold0.",
+    "Whole assembly58868tri; 48 FK bones and normalized max4 legal weights.",
+    "100/160 contact search evaluations; loss reduction did not establish contact.",
+    "493 local weight vertices repaired; sibling influences removed without geometry/UV changes; actual big-angle grip still fails."
+  ],
+  "failures": [
+    "Right finger-root angular collapse and handle penetration; left open grip and pinched web.",
+    "Bracer/glove overlap and blue shirt protrusion at breastplate; actual cavity needs local verification.",
+    "Full3stressposes for this core,300frames/60fps, separate VFX and animated GLB reimport not performed because local grip fails."
+  ],
+  "inference": "Remaining root and large-angle failure justifies bounded local palm/digit retopology plus remeasured joints; neither extra bones nor density alone guarantees a fix.",
+  "final_trial_bounds": {
+    "prototype_seconds": 5400,
+    "region": "Right hand/wrist seam first, then left only if right passes; equipment local fit/inner cavity only.",
+    "stop": [
+      "Visible collapse, spikes or penetration at prototype gate",
+      "unexpected nonmanifold seam, UV stretch or >60000tri",
+      "need whole forearm/shoulder/coat or full armor rebuilding",
+      "same original max3/6h/18h exhausted"
+    ]
+  }
+}

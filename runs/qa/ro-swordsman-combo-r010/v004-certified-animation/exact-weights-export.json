@@ -1,0 +1,448 @@
+{
+  "observed_utc": "2026-10-04T06:00:27.071473+00:00",
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_exact_weights.glb",
+    "sha256": "54c27c256e4b06a2312a8d0562e68195a64a5b502b21e23a5d0d3c453d773502"
+  },
+  "source_blend": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend",
+    "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  },
+  "prior_export": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_combined.glb",
+    "sha256": "834110e859b88a06e06921e8ea5794501ad22056dee00779454451dd9a4f9ea2"
+  },
+  "frozen_weights": {
+    "path": "runs/qa/ro-swordsman-combo-r010/baseline/mesh-and-weights.json",
+    "sha256": "b82e64ce18481c34f90d98a0e4d8e2d85d43dc16abbb8ed7d57acca863e45d36"
+  },
+  "sourceID_attribute": "_R010_ID",
+  "source_ids": 904,
+  "affected_original_weight_ids": 112,
+  "affected_ids": [
+    31,
+    60,
+    63,
+    64,
+    75,
+    76,
+    78,
+    89,
+    90,
+    91,
+    123,
+    131,
+    132,
+    133,
+    134,
+    136,
+    142,
+    145,
+    164,
+    165,
+    166,
+    167,
+    168,
+    170,
+    171,
+    172,
+    185,
+    186,
+    187,
+    189,
+    199,
+    214,
+    215,
+    218,
+    223,
+    224,
+    225,
+    236,
+    237,
+    239,
+    270,
+    273,
+    291,
+    328,
+    332,
+    338,
+    355,
+    408,
+    409,
+    429,
+    430,
+    434,
+    435,
+    467,
+    468,
+    469,
+    470,
+    471,
+    479,
+    480,
+    483,
+    491,
+    495,
+    546,
+    559,
+    560,
+    597,
+    601,
+    602,
+    605,
+    608,
+    658,
+    659,
+    661,
+    662,
+    663,
+    665,
+    673,
+    674,
+    678,
+    811,
+    836,
+    840,
+    841,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878
+  ],
+  "lost_weight_examples": [
+    {
+      "source_id": 31,
+      "prior_export_weights": {
+        "finger1_03": 0.9131422638893127,
+        "finger1_02": 0.07779882103204727,
+        "finger1_01": 0.008461805991828442,
+        "hand": 0.0005970023339614272
+      },
+      "frozen_weights": {
+        "finger1_03": 0.9131423830986023,
+        "finger1_02": 0.07779882848262787,
+        "finger1_01": 0.008461806923151016,
+        "hand": 0.0005970023921690881
+      },
+      "prior_L1_difference": 1.2764940038323402e-07
+    },
+    {
+      "source_id": 60,
+      "prior_export_weights": {
+        "hand": 0.8374062180519104,
+        "thumb_01": 0.1603473722934723,
+        "thumb_02": 0.002246432239189744
+      },
+      "frozen_weights": {
+        "hand": 0.8373262882232666,
+        "thumb_01": 0.1603320688009262,
+        "thumb_02": 0.0022462178021669388,
+        "thumb_03": 9.539326856611297e-05
+      },
+      "prior_L1_difference": 0.00019084102677879855
+    },
+    {
+      "source_id": 63,
+      "prior_export_weights": {
+        "hand": 0.9427829384803772,
+        "thumb_01": 0.05646221339702606,
+        "thumb_02": 0.0007548476569354534
+      },
+      "frozen_weights": {
+        "hand": 0.9427529573440552,
+        "thumb_01": 0.0564604178071022,
+        "thumb_02": 0.0007548236753791571,
+        "thumb_03": 3.1824136385694146e-05
+      },
+      "prior_L1_difference": 6.362484418787062e-05
+    },
+    {
+      "source_id": 63,
+      "prior_export_weights": {
+        "hand": 0.9427829384803772,
+        "thumb_01": 0.05646221339702606,
+        "thumb_02": 0.0007548476569354534
+      },
+      "frozen_weights": {
+        "hand": 0.9427529573440552,
+        "thumb_01": 0.0564604178071022,
+        "thumb_02": 0.0007548236753791571,
+        "thumb_03": 3.1824136385694146e-05
+      },
+      "prior_L1_difference": 6.362484418787062e-05
+    },
+    {
+      "source_id": 64,
+      "prior_export_weights": {
+        "hand": 0.9161013960838318,
+        "thumb_01": 0.08298373222351074,
+        "thumb_02": 0.0009149173856712878
+      },
+      "frozen_weights": {
+        "hand": 0.9160672426223755,
+        "thumb_01": 0.08298064023256302,
+        "thumb_02": 0.0009148832759819925,
+        "thumb_03": 3.726521390490234e-05
+      },
+      "prior_L1_difference": 7.454477599821985e-05
+    },
+    {
+      "source_id": 64,
+      "prior_export_weights": {
+        "hand": 0.9161013960838318,
+        "thumb_01": 0.08298373222351074,
+        "thumb_02": 0.0009149173856712878
+      },
+      "frozen_weights": {
+        "hand": 0.9160672426223755,
+        "thumb_01": 0.08298064023256302,
+        "thumb_02": 0.0009148832759819925,
+        "thumb_03": 3.726521390490234e-05
+      },
+      "prior_L1_difference": 7.454477599821985e-05
+    },
+    {
+      "source_id": 75,
+      "prior_export_weights": {
+        "thumb_01": 0.6368727087974548,
+        "hand": 0.3611428737640381,
+        "thumb_02": 0.0019844118505716324
+      },
+      "frozen_weights": {
+        "thumb_01": 0.6368273496627808,
+        "hand": 0.3611171543598175,
+        "thumb_02": 0.0019842705223709345,
+        "thumb_03": 7.12009277776815e-05
+      },
+      "prior_L1_difference": 0.00014242079487303272
+    },
+    {
+      "source_id": 76,
+      "prior_export_weights": {
+        "thumb_01": 0.73787522315979,
+        "hand": 0.2593693137168884,
+        "thumb_02": 0.0027554347179830074
+      },
+      "frozen_weights": {
+        "thumb_01": 0.7378033399581909,
+        "hand": 0.25934404134750366,
+        "thumb_02": 0.0027551662642508745,
+        "thumb_03": 9.748498996486887e-05
+      },
+      "prior_L1_difference": 0.0001949090146808885
+    },
+    {
+      "source_id": 78,
+      "prior_export_weights": {
+        "hand": 0.5117517113685608,
+        "thumb_01": 0.48623618483543396,
+        "thumb_02": 0.002012115903198719
+      },
+      "frozen_weights": {
+        "hand": 0.5117143392562866,
+        "thumb_01": 0.4862006902694702,
+        "thumb_02": 0.0020119689870625734,
+        "thumb_03": 7.299025310203433e-05
+      },
+      "prior_L1_difference": 0.00014600384747609496
+    },
+    {
+      "source_id": 89,
+      "prior_export_weights": {
+        "hand": 0.9456562399864197,
+        "thumb_01": 0.05405210331082344,
+        "thumb_02": 0.0002916670055128634
+      },
+      "frozen_weights": {
+        "hand": 0.9456436038017273,
+        "thumb_01": 0.05405138060450554,
+        "thumb_02": 0.0002916631055995822,
+        "thumb_03": 1.3338765711523592e-05
+      },
+      "prior_L1_difference": 2.670155663508922e-05
+    },
+    {
+      "source_id": 90,
+      "prior_export_weights": {
+        "hand": 0.9205501675605774,
+        "thumb_01": 0.07910386472940445,
+        "thumb_02": 0.00034592230804264545
+      },
+      "frozen_weights": {
+        "hand": 0.920535683631897,
+        "thumb_01": 0.07910262048244476,
+        "thumb_02": 0.00034591686562635005,
+        "thumb_03": 1.5803550923010334e-05
+      },
+      "prior_L1_difference": 3.1537168979411945e-05
+    },
+    {
+      "source_id": 91,
+      "prior_export_weights": {
+        "finger4_03": 0.9805037975311279,
+        "finger4_02": 0.018768152222037315,
+        "finger4_01": 0.0007280868012458086
+      },
+      "frozen_weights": {
+        "finger4_03": 0.9804697036743164,
+        "finger4_02": 0.018767500296235085,
+        "finger4_01": 0.0007280614809133112,
+        "hand": 3.476347046671435e-05
+      },
+      "prior_L1_difference": 6.953457341296598e-05
+    },
+    {
+      "source_id": 123,
+      "prior_export_weights": {
+        "hand": 0.6897540092468262,
+        "thumb_01": 0.30984964966773987,
+        "thumb_02": 0.0003963230992667377
+      },
+      "frozen_weights": {
+        "hand": 0.6897437572479248,
+        "thumb_01": 0.3098450303077698,
+        "thumb_02": 0.000396317191189155,
+        "thumb_03": 1.492794126534136e-05
+      },
+      "prior_L1_difference": 2.9805208214384038e-05
+    },
+    {
+      "source_id": 131,
+      "prior_export_weights": {
+        "hand": 0.7172831892967224,
+        "thumb_01": 0.2824123203754425,
+        "thumb_02": 0.0003045402991119772
+      },
+      "frozen_weights": {
+        "hand": 0.7172746062278748,
+        "thumb_01": 0.2824089229106903,
+        "thumb_02": 0.00030453666113317013,
+        "thumb_03": 1.1924858881684486e-05
+      },
+      "prior_L1_difference": 2.3909030460345093e-05
+    },
+    {
+      "source_id": 132,
+      "prior_export_weights": {
+        "thumb_01": 0.5220840573310852,
+        "hand": 0.47707366943359375,
+        "thumb_02": 0.0008423279505223036
+      },
+      "frozen_weights": {
+        "thumb_01": 0.5220666527748108,
+        "hand": 0.4770577847957611,
+        "thumb_02": 0.0008422998944297433,
+        "thumb_03": 3.3278298360528424e-05
+      },
+      "prior_L1_difference": 6.659554856014438e-05
+    },
+    {
+      "source_id": 133,
+      "prior_export_weights": {
+        "thumb_01": 0.6923428773880005,
+        "hand": 0.30594223737716675,
+        "thumb_02": 0.0017148887272924185
+      },
+      "frozen_weights": {
+        "thumb_01": 0.6922983527183533,
+        "hand": 0.30592256784439087,
+        "thumb_02": 0.0017147784819826484,
+        "thumb_03": 6.43114181002602e-05
+      },
+      "prior_L1_difference": 0.000128615865833126
+    },
+    {
+      "source_id": 134,
+      "prior_export_weights": {
+        "hand": 0.9041873216629028,
+        "thumb_01": 0.09581266343593597
+      },
+      "frozen_weights": {
+        "hand": 0.9041039943695068,
+        "thumb_01": 0.09580383449792862,
+        "thumb_02": 8.867437281878665e-05,
+        "thumb_03": 3.472256366876536e-06
+      },
+      "prior_L1_difference": 0.00018430286058901402
+    },
+    {
+      "source_id": 136,
+      "prior_export_weights": {
+        "hand": 0.7359555959701538,
+        "thumb_01": 0.2637002170085907,
+        "thumb_02": 0.00034419147414155304
+      },
+      "frozen_weights": {
+        "hand": 0.7359448671340942,
+        "thumb_01": 0.2636963725090027,
+        "thumb_02": 0.00034418643917888403,
+        "thumb_03": 1.459193299524486e-05
+      },
+      "prior_L1_difference": 2.9170303605496883e-05
+    },
+    {
+      "source_id": 142,
+      "prior_export_weights": {
+        "hand": 0.693347692489624,
+        "finger3_01": 0.30495011806488037,
+        "finger3_02": 0.00170215405523777
+      },
+      "frozen_weights": {
+        "hand": 0.6933326721191406,
+        "finger3_01": 0.3049435019493103,
+        "finger3_02": 0.001702117151580751,
+        "finger3_03": 2.171149753849022e-05
+      },
+      "prior_L1_difference": 4.3384887248976156e-05
+    },
+    {
+      "source_id": 145,
+      "prior_export_weights": {
+        "hand": 0.5757834911346436,
+        "finger3_01": 0.4216311573982239,
+        "finger3_02": 0.002585294423624873
+      },
+      "frozen_weights": {
+        "hand": 0.5757649540901184,
+        "finger3_01": 0.4216175675392151,
+        "finger3_02": 0.002585211070254445,
+        "finger3_03": 3.228931745979935e-05
+      },
+      "prior_L1_difference": 6.449957436416298e-05
+    }
+  ],
+  "changed_bytes": 1686,
+  "permitted_change": "Only selected original-ID hand JOINTS_0 and WEIGHTS_0 payload bytes; all other GLB bytes exactunchanged.",
+  "all_other_bytes_unchanged": true,
+  "geometry_UV_morph_bones_animations_unchanged": true,
+  "protected_thumb_original_weights_restored": true,
+  "weights_match_frozen_float32_exact": true,
+  "no_source_or_global_addon_change": true,
+  "new_candidate_or_clock_reset": false,
+  "root_cause": "Blender4.5official exporter primitive_extract.py __get_bone_data hardcodedmin_influence0.0001; rawexport artifacts and failed1umcheck preserved.",
+  "fresh_GLb": "pending"
+}

@@ -1,0 +1,81 @@
+{
+  "candidate": "v001",
+  "stage": "rig preflight; not full continuous animation",
+  "source_sha256": "eaf01613d30cddbf44a951236aabdbfd3931f309da8e0791ef5924b309993a66",
+  "source_preserved": true,
+  "bone_heat_warning": null,
+  "bones": 48,
+  "triangles": 55488,
+  "invalid_weights": [],
+  "weight_validation_pass": true,
+  "linear_skinning": true,
+  "fk_editable": true,
+  "ik_fk_switch": false,
+  "real_stress_poses": [
+    {
+      "pose": "head",
+      "hip_height_m": 0.89,
+      "requested_grip": [
+        0,
+        -0.16,
+        1.5
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 0.00177494032291525,
+        "L": 0.0,
+        "foot.L": 0.00177494032291525
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "head",
+      "hip_height_m": 0.7,
+      "requested_grip": [
+        0,
+        -0.22,
+        1.02
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.0,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 1.666000468656264e-08,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    },
+    {
+      "pose": "head",
+      "hip_height_m": 0.82,
+      "requested_grip": [
+        0,
+        -0.25,
+        1.08
+      ],
+      "wrist_and_foot_target_residual_m": {
+        "R": 0.08794265107943805,
+        "foot.R": 2.2351741790771484e-08,
+        "L": 1.4901161193847656e-08,
+        "foot.L": 2.2351741790771484e-08
+      },
+      "acceptance": "Unreviewed; numerical reach is not surface grip acceptance"
+    }
+  ],
+  "animation_channels": 0,
+  "effects": false,
+  "elapsed_trial_seconds": 1312.109742,
+  "elapsed_phase_seconds": 6009.215566,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-preflight/ro_rig_preflight.blend",
+      "sha256": "e11d232015592a99c0ba0ea709e8ab4ccb4897f9a855cb1e5fbab6482400164e",
+      "bytes": 17281311
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/v001-rig-preflight/ro_rig_preflight.glb",
+      "sha256": "9038793351e046357003e891e3c4973f707bcc73ece6bf9e14b357270919b22f",
+      "bytes": 12278716
+    }
+  ],
+  "acceptance": "Pending actual views/grip/deformation and fresh GLB reimport; no art/technical PASS"
+}

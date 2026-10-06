@@ -1,0 +1,2276 @@
+{
+  "observed_utc": "2026-10-03T13:35:39.346825+00:00",
+  "integrity": "pass",
+  "art_verdict": "NO_SHIP",
+  "delivered": false,
+  "scope": "Closedphase archive, required current local tools, actual prior API/Blender readbacks; not model acceptance",
+  "current_comparison": {
+    "mode": "declared_quality_comparison_only",
+    "request_id": "ro-swordsman-combo-r007",
+    "request_sha256": "137997c6bb5a57120cd8025a2762b6a19a0c32706f94520988591c314d383876",
+    "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+    "trials": [
+      {
+        "id": "baseline",
+        "decision": "baseline",
+        "issues": [],
+        "failed_gates": [
+          "geometry_materials",
+          "package_complete",
+          "deformation",
+          "animation",
+          "export-roundtrip"
+        ]
+      },
+      {
+        "id": "v001",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      },
+      {
+        "id": "v002",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      },
+      {
+        "id": "v003",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      },
+      {
+        "id": "v004",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      }
+    ],
+    "blockers": [],
+    "best_trial_id": "baseline",
+    "best_content_artifacts": [
+      {
+        "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.blend",
+        "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+      },
+      {
+        "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.glb",
+        "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+      }
+    ],
+    "quality_target_met": false,
+    "elapsed_seconds": 9734.127367000001,
+    "candidate_trials_used": 4,
+    "next_action": "stop_budget",
+    "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。"
+  },
+  "assessment_decision": "not_ready",
+  "verified_artifacts": [
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-structure-authority.json",
+      "sha256": "00ebe71df456af913bbf13ee8d0d5ebdf9c167a78b1017dbe1af48566e340572",
+      "bytes": 1556
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/base.obj",
+      "sha256": "c374f5951e788deb818cbb104a385bda8225a2e0c0b99d1ed3288a0b672debdc",
+      "bytes": 161520
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_diffuse.png",
+      "sha256": "d87a47fdfd6578447a3512404adbd5097c8d93a08b99818430b7352cf484da31",
+      "bytes": 1541770
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_metallic.png",
+      "sha256": "4342c349276f1fc65f193cd2437074d89c175b5cf6694c146b63d0e54be816b9",
+      "bytes": 18558
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_normal.png",
+      "sha256": "891561c6a05e068f94051f145a2b1278bc8d6c2bba924ed0e67ab56dc9ed2cab",
+      "bytes": 2835749
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_pbr.png",
+      "sha256": "81906809b398944affed5e741f6756eb42fb089dafcb85689d937786520c78bf",
+      "bytes": 1544172
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_roughness.png",
+      "sha256": "25c8a6fddbdae9fe913249ab16bd7518ca8706981eef21b4cde80edfa894d6c4",
+      "bytes": 865611
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/preview.webp",
+      "sha256": "be9da335766fa1690ffe7a0e808b27feaf67c5b4035a048564e21a9f268b0053",
+      "bytes": 2768
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/render.jpg",
+      "sha256": "8c8d9898c3b4a1dfeabe0712eabdc7212bff1907ef6a5637942d501688a601d2",
+      "bytes": 8581
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png",
+      "sha256": "36dd21b2958eeb2f8b35edd09d04d25c530ce82b1056fb8d074df4a85368a487",
+      "bytes": 1596854
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png",
+      "sha256": "319d4a600582cfa1e14343d9ec909332cd04dc057ad3bacc74382c7091532903",
+      "bytes": 2006519
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+      "bytes": 42525711
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/baseline.json",
+      "sha256": "e6ba5475c4bb83082d73df0e3c90d1a985b35376dda779f0d1fd2986b5dd1752",
+      "bytes": 232598
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/review.json",
+      "sha256": "9828fb94487bb36afb66df8e70af66f41ed7175c5addc52679a87ed90d753c15",
+      "bytes": 1806
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/baked-interval.json",
+      "sha256": "5f75691b5f05a78ceebaa33f9fca52534504deff89097a4ecf77468df9592c8f",
+      "bytes": 169487
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+      "bytes": 42525711
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/baseline/ro_hand_structure_baseline.glb",
+      "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985",
+      "bytes": 34937204
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-gate-contract-v2.json",
+      "sha256": "011fa5cfbdb7ea98272a58f970337c62eff9b35e5d11885e884af01d2d013f12",
+      "bytes": 9970
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "sha256": "f999aa115a62cdf33772cc9b0d3d615566e9a392af53768410c2bbbd905eed01",
+      "bytes": 24150
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/quality-ledger-before-v001.json",
+      "sha256": "0c81b31e57a27a9bf6531c7c7ff9983ac9a474bbed60549879ac1a83ef1003b9",
+      "bytes": 15026
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/back.png",
+      "sha256": "57025ba6c7662e468245e7efe1f9e738fac2522c80d21146aeb3aa61bfb798e3",
+      "bytes": 1805598
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/detail.png",
+      "sha256": "23c76849a9042693a3192bdf5a0ff7d1eb8f0003307fb80163da9e7fcdcbb937",
+      "bytes": 1957783
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-001/back.png",
+      "sha256": "974e7f70009316f955f98c558e2bf27cce3c0933ca8032d15ef8fa7e3c97b326",
+      "bytes": 1813529
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-001/palm.png",
+      "sha256": "f82d54ead616f588b9ce8b7f4e527f9f2ad61ddcfff93096efc85568b3743378",
+      "bytes": 1924824
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-001/side.png",
+      "sha256": "34319bbe1d4b0e521683856b63c2adbefd78fcd68e3d7f25b708d684234f17bf",
+      "bytes": 2231857
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-001/wrist.png",
+      "sha256": "902ca269a818b50f2c3596f7bbe4d05f63b8bf827d2d3a9a7a7c0c84cdcbde0b",
+      "bytes": 2246370
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-016/back.png",
+      "sha256": "83e0ccf99ab7ee70402bc2d81ccf7a3779a24a15dfec12e2d0f635a2d03384c3",
+      "bytes": 1842085
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-016/palm.png",
+      "sha256": "9d93a15de4a860523a6150cf4c2eb560ea297754d4d134222fb5446911dd7062",
+      "bytes": 1928972
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-016/side.png",
+      "sha256": "e37c32e8ca1a1b1fa4050e37d2be7f38f75005482a80d24106880fe727096766",
+      "bytes": 2250199
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-016/wrist.png",
+      "sha256": "3dd4d8fc45b1c8aa592ad571d21b53e55477d08a8b0c365a0697ee9776dd11cc",
+      "bytes": 2244604
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-031/back.png",
+      "sha256": "6dfe0d0acaa10709c5d93d67cff463bd81fdbd4e3714a8ff6d6af757946d1e91",
+      "bytes": 1931062
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-031/palm.png",
+      "sha256": "112796832549c13c3cfca5eac0422619dd605e54bdb85613e7f3eeab574e95fc",
+      "bytes": 1930198
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-031/side.png",
+      "sha256": "d13574a7b91d8169f651e31f576c78cb7b15ef84b0747fe5fe88177881db5195",
+      "bytes": 2264519
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-031/wrist.png",
+      "sha256": "0262024ec1ac764968b3aef495b408ac469ae533ab441f057d64adcaf52e3f85",
+      "bytes": 2313405
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-046/back.png",
+      "sha256": "c88835ab441eae9abffcb903cf6bdcbb4c32f04f20a766ea91981a632d529e2e",
+      "bytes": 1986432
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-046/palm.png",
+      "sha256": "c1523a2a57b6b3baaf5bd576abb2d729adb25e13f3a14c6c9fc035c9933b18a1",
+      "bytes": 2082211
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-046/side.png",
+      "sha256": "01a13379429430ba73d6fd12edb8e3fa112c8d088aedd9cd3625d69db4378101",
+      "bytes": 2129137
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-046/wrist.png",
+      "sha256": "23f0baedd5bce9494afb7ab0c7334b6a6ca4053163c3e1dba146ef83cb7ffd62",
+      "bytes": 2385026
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-061/back.png",
+      "sha256": "9c753db2bd649d8c09c0d744aed8c325164fc4431bb4a18f49a44ce45de15bfd",
+      "bytes": 2002326
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-061/palm.png",
+      "sha256": "ba6fee9aefad4b8cf51cf9eadb27cc5ab3855017a3836bdc55f3c989c33ba99a",
+      "bytes": 2156531
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-061/side.png",
+      "sha256": "371415d6d804e23057dee9537e77eca3fd07abb4abb42552689bd25abf5ce53c",
+      "bytes": 2098054
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/frame-061/wrist.png",
+      "sha256": "b3953fea987b9dd17ad34624a32f48b9f9fd21a83744503b256ed92c12b9cdc4",
+      "bytes": 2353037
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/front.png",
+      "sha256": "ecb2582a9ee9f820ca1c6903992587cefd0d61c24cf1846cc1dd5040bc7efec7",
+      "bytes": 1903568
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/side.png",
+      "sha256": "09089d2aee34f6385ba8605104671220df74cc24ae61e48fba2bb8bf7b84bb2b",
+      "bytes": 1769758
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/three-quarter.png",
+      "sha256": "b37b922d7a4ed98507dc6e0bcf5c51e435924761686da8dc3d5dbffd04507560",
+      "bytes": 1861650
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-gate-contract.json",
+      "sha256": "a62f4c2b6454c185a46a965ee0da03ccc4d128096316199563fc034d57fd6aea",
+      "bytes": 8209
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline-binding.json",
+      "sha256": "873027c9e89bfbea9017cc92ef124a699bff2d490fc5283270078d8f609d954c",
+      "bytes": 1019
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/contract-clarification.json",
+      "sha256": "6b3dd7663a48d5dbf0bb6e8edd8797622fcdcb884da8531ed88432d5c5a3fdcd",
+      "bytes": 874
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/ro_hand_gate.py",
+      "sha256": "f9f84c28038d1a82c519a999c72133ba701e6f211f75619f9a770257b45855a9",
+      "bytes": 6054
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/baseline/ro_review_common.py",
+      "sha256": "98b795e379d682d84476b4e18d7c296364c1a6cf9bb36af6d4e13a08dbe1fc3d",
+      "bytes": 2738
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/comparison-final.json",
+      "sha256": "4a071650e26a75f9b217bee4dccab8a747ada79da815e7ed90af405bc362e63f",
+      "bytes": 1775
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/assessment-final.json",
+      "sha256": "14866fb79f2e82eefab1e1a31041d9cee1c08f7d77d7b06f73db9171f29ca3ef",
+      "bytes": 4727
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/assembly-measurements.json",
+      "sha256": "7314360908f735ed6747032420c176eecdab80c7951000935a581c4bbb61225f",
+      "bytes": 59826
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/hand-source/right_hand_native_source.blend",
+      "sha256": "d515d08954a5d01fca4c53d19578b599fc379474f4d31217f98eeafbc61166f1",
+      "bytes": 5924379
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/back.png",
+      "sha256": "f20b66d843944764e6dabab9370daee41b257811525d4d4c46d743763fd2fb93",
+      "bytes": 1152896
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/cuff.png",
+      "sha256": "ae9c2d6a6e744f270e2ba6ac0e990398408c62d1b739069d7acc98dbaa571508",
+      "bytes": 867009
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/front.png",
+      "sha256": "22ef44185b99236fbc66716f7bd29878c391d15cce862af8d55444585e476a19",
+      "bytes": 1157776
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-back.png",
+      "sha256": "a15f260f302e5822ebe352d918dadfab46a72fad3876bd89fd77904d5710a67c",
+      "bytes": 920979
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-front.png",
+      "sha256": "2c85dcc04905a5b41c5dab0a9d576194bb416ce562b3aebeca50188ec13febd4",
+      "bytes": 912233
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-three-quarter.png",
+      "sha256": "2ac43e729ead88fb98b2b4f2b3f82232cf6fbc9709f33b4f399fbc1442c25dd3",
+      "bytes": 980937
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/left.png",
+      "sha256": "6a4e55693eb97bea990f43b3655bc80f157354b07229035db9d13fbcd2f38dcf",
+      "bytes": 1108214
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/right.png",
+      "sha256": "fdcb70bcaaa52bab46d2685f8a2dca03c98d17cb3954f108f0ec733d9bc03da9",
+      "bytes": 1120879
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/three-quarter.png",
+      "sha256": "fed26f5f5224cf78b066d075a9d6c480c948a5341712216adde5176090de8458",
+      "bytes": 1227474
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-back.png",
+      "sha256": "00efe09940dec276c2d9806e15cd5e876b864ac016677a0e8dc1e0078a404964",
+      "bytes": 986560
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-front.png",
+      "sha256": "0d55543729b1ceeb5c4a0e9cba1fcbd4959e4dba7ad3b997319da83d59b82026",
+      "bytes": 1003444
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-three-quarter.png",
+      "sha256": "cb2a88c03c15a8d37b6b04926c49cebc860ff5c916e8adc38f0da7352aec6e6a",
+      "bytes": 1083855
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/native-topology.json",
+      "sha256": "ce39a276ff3e76f321101a4186d7c7cac8b8c56e93bf07dadc0857d1994170d7",
+      "bytes": 778089
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r006/comparison-final.json",
+      "sha256": "1cf03420bd63c4c2de38ca24eda8bf3e4e312035c12c2101602a388e0adc8b8d",
+      "bytes": 1572
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/comparison-baseline-v2.json",
+      "sha256": "ead50203c60a8a112fad0c927ec1c09e47a9273967c43d225b44812fba869b24",
+      "bytes": 1329
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/01_provoke.jpg",
+      "sha256": "b6bdb93c0ca7ec4307e0641a82b26c58ebac1cdac0c6123e48890322b78cc76d",
+      "bytes": 975520
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/02_bash.jpg",
+      "sha256": "8e5cbb73710767e34bf1cf4e2eed1aaa13b8c36fda18408878d410ea5f8af255",
+      "bytes": 833600
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/03_magnum_break.jpg",
+      "sha256": "96cb4d1c088093dde65a3a23e167fc42e71a370538b379e907246038a56f8985",
+      "bytes": 783843
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/04_endure.jpg",
+      "sha256": "e84df1ccf2d7845ce3c55dfc440972b89dc943a2f1759cd101658f4b324c8120",
+      "bytes": 737546
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/05_victory.jpg",
+      "sha256": "c0523c82008c6b542d04138a555484ac69251d8e36ac0532ac1330e3f480bca8",
+      "bytes": 770102
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/ro_swordsman_action_sheet.jpg",
+      "sha256": "45ceb6e3ba9bba29c49647712f4b726cb6ca8e276a34cc3de66e36a1595dde4c",
+      "bytes": 504218
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_01.png",
+      "sha256": "5dba0b7385f952c88899bf2595221e2b52f8bd62bd7e9641faf23d5d03c9c3f5",
+      "bytes": 65200
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_02.png",
+      "sha256": "836520de2b5542ef1f4ca4aeae5f88ae40df1d3917982088f4806a4a00c0f0c2",
+      "bytes": 66001
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_03.png",
+      "sha256": "14e6b2d966abc1529cbd73caab9509ee296398f7dfdfe45a27c0f94b9d69d407",
+      "bytes": 65988
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_04.png",
+      "sha256": "d138ca4823dc8882690b06595d583a3eb55bebdb4fda0c1b8708f2f7b8c9d031",
+      "bytes": 61404
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_05.png",
+      "sha256": "0088ebd1e2602107c6f53630f3899d96e27abdba93744074bb2557a538a4321f",
+      "bytes": 71318
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_06.png",
+      "sha256": "1cc074adaa0c44523ea000189f6b95a07a11dc55a323d2065077df9052176738",
+      "bytes": 112662
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_07.png",
+      "sha256": "e28f25e4317c3086b3ac967225db1d1b64fbe5ca7f604935bec31d6424e83e2d",
+      "bytes": 69031
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_08.png",
+      "sha256": "0f9fd24d06049b87d735f6e6fb27c84f3a4c439f62cd72dfb4ff366fdec566a7",
+      "bytes": 80507
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_09.png",
+      "sha256": "30a2936cafff9541f85d20153b5822a31f4e3f759b18181e8894c3fec9ff000b",
+      "bytes": 95419
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_10.png",
+      "sha256": "8edf662a4451dd8c33e56a3a118db26b906553f71beba7bac703badc0b28c3f6",
+      "bytes": 174594
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_11.png",
+      "sha256": "6c96fef0773af51825d003039cbbc18294fddf2775f12ed9e969e47a037d6389",
+      "bytes": 96386
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/references-v001/transparent_frames/sprite_12.png",
+      "sha256": "94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3",
+      "bytes": 62256
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v002/ro_swordsman_apose.png",
+      "sha256": "b00dc0e01da4d223b17be84a108bf2218a4eba08100b0ca296e404c8316ac5db",
+      "bytes": 1572671
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/core.png",
+      "sha256": "bff59da46f2887c0f5ba95e000043c59f09e384cdb50787dfa247d0408b671c3",
+      "bytes": 1526100
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/cuirass.png",
+      "sha256": "7f6e16c7476f4ae3fb46e16ab3dc52a4ed18a9ed110d2e3b6e3ec596e0b844fc",
+      "bytes": 2223793
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/pauldron.png",
+      "sha256": "7500ff888c838b3b30d98ab92d13aaf520767e149120fe5619165e6e71add354",
+      "bytes": 2001564
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/bracer.png",
+      "sha256": "635bd677551e608c6450c525433791ed6f6f29cdda1bc1ab3201f7439bc551f6",
+      "bytes": 1963508
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/coat.png",
+      "sha256": "07430f62a29b959c5fd43d419c604c5f1ac608bea69ae6c2aa8a2ce0e788d06d",
+      "bytes": 2005261
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v003/sword.png",
+      "sha256": "e5b598bd0f13cd4dbe4be4e6596cfb84b491ac220da947cbf65ad53096cc54c7",
+      "bytes": 1018569
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v004/batch-parts.png",
+      "sha256": "195d226c017fd3675ebebcb49b03e1cb0ece7928aeba79e634188fa1b67fabb6",
+      "bytes": 1608941
+    },
+    {
+      "path": "assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png",
+      "sha256": "e45720d0d015ac321e9814901b0b813306f33b079ce0b7cea0af588bb039d02a",
+      "bytes": 1429617
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/unit-tests-preparation.log",
+      "sha256": "45dc8eea067b3445fcf3f496150b4c623484519e6bff079849dce2557835d7e6",
+      "bytes": 16210
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/pipeline-validation-preparation.log",
+      "sha256": "7f80bd86e2448519f4d0eb1da7085e08760da8420a47366bab62b709e8b23a57",
+      "bytes": 206
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/api-entry-help-preparation.log",
+      "sha256": "0846b5f72c6aef980bc35dafbd6fcfd926a9d3d465331537c140e638663aa254",
+      "bytes": 563
+    },
+    {
+      "path": "scripts/advance_ro_binding_trial.py",
+      "sha256": "3b2ce3415fafa59a2e3792bdcc9fad1a0b6b33818b3096460e5ddccca999e847",
+      "bytes": 3003
+    },
+    {
+      "path": "scripts/advance_ro_contact_ik.py",
+      "sha256": "d2b901af669857fa168d4dc22edd27fa900e18d74c5aa384d9497d64380c942a",
+      "bytes": 3425
+    },
+    {
+      "path": "scripts/advance_ro_corrective_trial.py",
+      "sha256": "938238fbc2bd23676fe88d0b556e728301364cae3bfc5c3170d9dd75abe2685d",
+      "bytes": 2647
+    },
+    {
+      "path": "scripts/advance_ro_hand_trial.py",
+      "sha256": "3c00c437d382fe9a51930f1ea6fb94656e1c568e4dcd6c3b8fa413b3fb2ce9d5",
+      "bytes": 3658
+    },
+    {
+      "path": "scripts/advance_ro_underlay_trial.py",
+      "sha256": "f00bf36e955850c156ac4a0b445343fb11d86fbb20a6cc80896d751dfb13cdbd",
+      "bytes": 4074
+    },
+    {
+      "path": "scripts/advance_ro_wrist_rebuild.py",
+      "sha256": "7e336f3e0753b94a78dee7fc79dc22ecc580b2ab1148e15fb9a7781e315fd09c",
+      "bytes": 4098
+    },
+    {
+      "path": "scripts/advance_ro_wrist_trial.py",
+      "sha256": "6590718a48fbc728a1034fef41c577c98be4355bd27b4ead7b0ca1dde99e6e87",
+      "bytes": 3729
+    },
+    {
+      "path": "scripts/archive_ro_phase_evidence.py",
+      "sha256": "b9f53cff38f8ac9bed448549f90d783c7451241ffe933dcd6a39dd945804de8c",
+      "bytes": 2738
+    },
+    {
+      "path": "scripts/assemble_ro_batch_baseline.py",
+      "sha256": "6c8989ca68c2e6f158c3d1f2443d7397300bab031bac7d96a35169fc6f06baab",
+      "bytes": 6135
+    },
+    {
+      "path": "scripts/baseline_ro_hand_phase.py",
+      "sha256": "f0ef7665f47e0bfab60f0aed1b980fa50092c7384dea5b4907ed7fdfec2af88b",
+      "bytes": 8326
+    },
+    {
+      "path": "scripts/baseline_ro_hand_structure_phase.py",
+      "sha256": "8d4f493f225fb94f397de10b8efdb941dd783354c6cb59b14fdb01929e98a859",
+      "bytes": 8618
+    },
+    {
+      "path": "scripts/build_ro_apose_baseline.py",
+      "sha256": "c6f10f94d7d6452d2be39fd36cf92f218bf83c278b12fda9747a0490c2acafb7",
+      "bytes": 4834
+    },
+    {
+      "path": "scripts/build_ro_apose_candidate.py",
+      "sha256": "4bbf7deeafc0e0c071c807620b1af2d38168c766e6a26c709c71a860c64ebcd4",
+      "bytes": 16699
+    },
+    {
+      "path": "scripts/build_ro_source_baseline.py",
+      "sha256": "3231bfdc6d1fedbfdfa88f5331aa53e4e3eba5aa4fe72ce51913c88de3eec7f2",
+      "bytes": 2879
+    },
+    {
+      "path": "scripts/build_ro_swordsman.py",
+      "sha256": "d5f358f27e4c733a23bf9de2e9fdf46e74b341881f3c95cb7e11110d2a3cb8d4",
+      "bytes": 25474
+    },
+    {
+      "path": "scripts/calibrate_ro_generated_glove.py",
+      "sha256": "75d0b5de1623da7447967ee606dde57bb3bd4f51a455f4cda8d779072fef4690",
+      "bytes": 8791
+    },
+    {
+      "path": "scripts/calibrate_ro_hand_prototype.py",
+      "sha256": "1c983499278e2f3906d3f335d41af80e437b656541381d91bb15510283a39ebb",
+      "bytes": 9827
+    },
+    {
+      "path": "scripts/check_ro_batch_roundtrip.py",
+      "sha256": "1843c286bfd82bb5dae6f8eb4776ff50c00a21c17384f414fed566257cbd7aef",
+      "bytes": 3310
+    },
+    {
+      "path": "scripts/check_ro_digit_axis_runtime.py",
+      "sha256": "1fdfb99d432d1bf45a5301dc6a311fa76320cfa70527f08caf1e2d2bf93d2e80",
+      "bytes": 1921
+    },
+    {
+      "path": "scripts/check_ro_hand_direction.py",
+      "sha256": "e86a23b271eb20c024dd1bdc3f386c92f461994b4ea86616070f8307b954800d",
+      "bytes": 3992
+    },
+    {
+      "path": "scripts/check_ro_hand_roll.py",
+      "sha256": "508298bba3eeb009ae3ecb1461b48122fe58ede9988608cdc6a5964fe185b3aa",
+      "bytes": 4207
+    },
+    {
+      "path": "scripts/check_ro_swordsman.py",
+      "sha256": "a003b88180c13adf305042ef0c6eff62649fc1458548e6e4044fb3f56d5a3efe",
+      "bytes": 6660
+    },
+    {
+      "path": "scripts/check_ro_wrist_animation_roundtrip.py",
+      "sha256": "a4cc77ceccf96a684cc0dfd2a84a957fb00b027d215a7b807b2caf390cb61d92",
+      "bytes": 7514
+    },
+    {
+      "path": "scripts/clarify_ro_hand_structure_contract.py",
+      "sha256": "a6d93a6216d6d5bcf20196091367e1b077b76287e3c9309ea53f0f1f78c922c1",
+      "bytes": 3335
+    },
+    {
+      "path": "scripts/close_ro_core_trial.py",
+      "sha256": "4fae03fb930ecce41f328ecae58f3bc3fcda21dd8550579d55e4250deaa0f761",
+      "bytes": 5536
+    },
+    {
+      "path": "scripts/close_ro_final_prototype.py",
+      "sha256": "a28671e53a6206239bc2d3d821c67bbec62f0d749bc6bb14970a5f333a889e0c",
+      "bytes": 8206
+    },
+    {
+      "path": "scripts/close_ro_hand_phase.py",
+      "sha256": "234ab42266d4cc52b6a9c98fe7416ca258e51f9df72c46732667eb891baf96ec",
+      "bytes": 11725
+    },
+    {
+      "path": "scripts/correct_ro_glove_contact.py",
+      "sha256": "03ace3371801d3d4387243a401ac834f47f18d423b3c09dffea57ecd16c19f2d",
+      "bytes": 9234
+    },
+    {
+      "path": "scripts/diagnose_ro_apose_weights.py",
+      "sha256": "aa3824971c878cd5b2d3901f28708921d8493e47e265deb3e1c52eded8ee592e",
+      "bytes": 2548
+    },
+    {
+      "path": "scripts/diagnose_ro_cloth_boundaries.py",
+      "sha256": "1468e63673a155232e34539766326c9dea6fed819a0abed8ba0c0e5ee394ae07",
+      "bytes": 2158
+    },
+    {
+      "path": "scripts/extract_ro_batch_parts.py",
+      "sha256": "3384e6d914e8cfa39d60ead221910055debaa592594ee9c0c477321d7627a9b2",
+      "bytes": 6139
+    },
+    {
+      "path": "scripts/finish_ro_apose_preflight.py",
+      "sha256": "6ea64b5719b63b5f6ba73baf0b606499db46fb7150f772aa19354788b74987d6",
+      "bytes": 6915
+    },
+    {
+      "path": "scripts/finish_ro_batch_experiment.py",
+      "sha256": "aded312bf530b95098c1e0d7996a7d96e09197e89aab0fd3f9349c4bae6cd724",
+      "bytes": 8697
+    },
+    {
+      "path": "scripts/finish_ro_hand_structure_preparation.py",
+      "sha256": "a3e5f5ead5ee6d33e3ff0057903fa151e2bdb5f744902b91f808862853beff3e",
+      "bytes": 4096
+    },
+    {
+      "path": "scripts/finish_ro_repair_phase.py",
+      "sha256": "d5c4d56575181c60d397a23d533812a28962616876404f06197ffa879fd03c24",
+      "bytes": 6451
+    },
+    {
+      "path": "scripts/fit_ro_batch_candidate.py",
+      "sha256": "549e055cf0888bf2d3e8bafa5e834f7d4d8f2086c7f533365fc6ca8ec08ccb43",
+      "bytes": 4917
+    },
+    {
+      "path": "scripts/fit_ro_core_fallback.py",
+      "sha256": "692884ae6451df414328e4466032f0826343c487fd299b1677266c271ce07931",
+      "bytes": 6448
+    },
+    {
+      "path": "scripts/fit_ro_forearm_underlay.py",
+      "sha256": "7a9591103455553f15ffa913198159a3917d4aa901e8ebf3fb7e4eee146ff6eb",
+      "bytes": 14407
+    },
+    {
+      "path": "scripts/fit_ro_generated_glove.py",
+      "sha256": "10bfbc805db39155e0c8b557462a916c70de80cfa58c7085695ce19c4fa9e196",
+      "bytes": 11186
+    },
+    {
+      "path": "scripts/hyper3d_api.py",
+      "sha256": "63a1c5971b6cb77f7223b06ff55d2dbf146dad4f44b398734bdce55d038ab73a",
+      "bytes": 28380
+    },
+    {
+      "path": "scripts/inspect_ro_batch_source.py",
+      "sha256": "d4dcf6f7e7d722dc1f02f73897a56848ecb370e37515a9007896e1ac39b887e6",
+      "bytes": 8439
+    },
+    {
+      "path": "scripts/inspect_ro_candidate.py",
+      "sha256": "d1d2260d3944f087d1e4a6441c4277022c80e7f1d64d4fc767ba8e616af7c2da",
+      "bytes": 5041
+    },
+    {
+      "path": "scripts/inspect_ro_core_fallback.py",
+      "sha256": "aa7e90cdf7c72f0bb7139033c43bcd14fe16435480a8642cf083bf93a40b3497",
+      "bytes": 5621
+    },
+    {
+      "path": "scripts/inspect_ro_hand_source.py",
+      "sha256": "965f03bf92d8d6b1c376e25ba5e05dda9296130fd31f1d630c31d1297a8df718",
+      "bytes": 4571
+    },
+    {
+      "path": "scripts/inspect_ro_review_package.py",
+      "sha256": "4de66cff3d7b40800a3f9a978a2e0da8b62dfc1c413609d20f8ceadd9230d70b",
+      "bytes": 2156
+    },
+    {
+      "path": "scripts/inspect_ro_split_source.py",
+      "sha256": "d7c8b696bdf903851039afc8e4a1ae8fd86547eb48c47c0214224e6ff46f0a5c",
+      "bytes": 6669
+    },
+    {
+      "path": "scripts/optimize_ro_core_contact.py",
+      "sha256": "3953d97febc8de0b5b59e9ca6b797ce7a374319d031e2b01c9d92690dc9a66ba",
+      "bytes": 9620
+    },
+    {
+      "path": "scripts/optimize_ro_repair.py",
+      "sha256": "6df28826855ca16bafc238970cca051b3cb3106394ea67e61cae959681f51eb3",
+      "bytes": 4500
+    },
+    {
+      "path": "scripts/pipeline.py",
+      "sha256": "d0778ddf3b68e8cdf88bf743ac89bd5b1f048debd69731f273dd7949f3dd76c0",
+      "bytes": 14863
+    },
+    {
+      "path": "scripts/postprocess_ro_swordsman.py",
+      "sha256": "21a3f23afd47b23a19f4ed650a35039c2a1c30006775b3f2771c04fd4eb82c67",
+      "bytes": 20808
+    },
+    {
+      "path": "scripts/prepare_ro_apose_phase.py",
+      "sha256": "018d3d29645a17ed257c387de360f75d6916a41538236e9578eeec75219f475a",
+      "bytes": 5065
+    },
+    {
+      "path": "scripts/prepare_ro_batch_source.py",
+      "sha256": "9a2d2320c677e22bd9e2ced7cbb679de2f571b1fad670b13b9faa219236a5212",
+      "bytes": 9775
+    },
+    {
+      "path": "scripts/prepare_ro_hand_phase.py",
+      "sha256": "4f7e62d72f9dedc9a945f7c0b8c620bbbd465da2f33a44b80e7d9ee7f6b6335b",
+      "bytes": 8936
+    },
+    {
+      "path": "scripts/prepare_ro_hand_structure_phase.py",
+      "sha256": "04b4513d498827dbf55362482efa213fd8544ad2874fcbdfbd0ff468372e940a",
+      "bytes": 10161
+    },
+    {
+      "path": "scripts/prepare_ro_repair_phase.py",
+      "sha256": "31af243805c97555982e3162db0a61c39bf4f24e83507a9f26fd3688751a629c",
+      "bytes": 3686
+    },
+    {
+      "path": "scripts/prepare_ro_split_phase.py",
+      "sha256": "4806cef0280e610f97306bfa5e22c9c44ae3c2ef0b8d5a3816f7be13bd3432a6",
+      "bytes": 9689
+    },
+    {
+      "path": "scripts/prepare_ro_swordsman.py",
+      "sha256": "80270411aef7057c8ec39e660e403d26907047cf9e47c0cfb7f13db405b8d5a3",
+      "bytes": 6805
+    },
+    {
+      "path": "scripts/probe_ro_apose_structure.py",
+      "sha256": "974208b5937cad715c42dd7ba07eb148ef23ebb352bae28efae482c85b27bc95",
+      "bytes": 1696
+    },
+    {
+      "path": "scripts/probe_ro_boolean_binding.py",
+      "sha256": "2db48c0caddadbdabcebf53eb8f2ee046bc5f00797f7dd53fd98a7cfa96ddb29",
+      "bytes": 1913
+    },
+    {
+      "path": "scripts/probe_ro_bracer_cavity.py",
+      "sha256": "349fa92cb910654838822f84d023c46d49a640e915b3c1b566228d4453637d7f",
+      "bytes": 1880
+    },
+    {
+      "path": "scripts/probe_ro_core_contact.py",
+      "sha256": "8e4f2693ee3363131e3d54d058e220c6cd33c505e0bbc9caaee0f89859d8ef35",
+      "bytes": 4104
+    },
+    {
+      "path": "scripts/probe_ro_core_digits.py",
+      "sha256": "b3aca0680f576a7172ea62bd87a13f254f3bcec64e886a69f92718dfe27768a2",
+      "bytes": 1994
+    },
+    {
+      "path": "scripts/probe_ro_core_landmarks.py",
+      "sha256": "ff03495d4553a554abe013859fbb42dbe80f604f8d3091f278721a1a0a4e1bc5",
+      "bytes": 2320
+    },
+    {
+      "path": "scripts/probe_ro_covered_forearm.py",
+      "sha256": "59e9bb17db93f225933e00b9d80158a8f61d4fb1734c286924a6e240f9b3da54",
+      "bytes": 5031
+    },
+    {
+      "path": "scripts/probe_ro_equipment_fit.py",
+      "sha256": "c61ed765ed5e273efcddcbdde90f090a428ae77ccc60ccc4bc565a0e27e92e07",
+      "bytes": 2454
+    },
+    {
+      "path": "scripts/probe_ro_forearm_underlay.py",
+      "sha256": "3042c621efa8dbad32cfe29d5650e02b851513cd3674f276eff02c3dc03ccfd1",
+      "bytes": 4995
+    },
+    {
+      "path": "scripts/probe_ro_glove_anatomy.py",
+      "sha256": "3276205dfb05ce612ddcad4935cc191b2d9037ff0468472db5c604efdef5075e",
+      "bytes": 1891
+    },
+    {
+      "path": "scripts/probe_ro_glove_cut_loops.py",
+      "sha256": "f5c3bc853c96e8c444cfe31a966adb4a1e78ad357cea2f11d161afc5f4a911fd",
+      "bytes": 3070
+    },
+    {
+      "path": "scripts/probe_ro_grip_contact.py",
+      "sha256": "981b7c54af7504f078c1170e79070bad96ea87e28bc3a6a1b2dd46d96b5243fe",
+      "bytes": 4741
+    },
+    {
+      "path": "scripts/probe_ro_grip_frame.py",
+      "sha256": "17774ca58bb37840e6b9b58665cb5c1088a6a5901bd17b7bcc2861bc827d1eb8",
+      "bytes": 3836
+    },
+    {
+      "path": "scripts/probe_ro_hand_baked_interval.py",
+      "sha256": "1795b5769ef905fd65ba5507db562c5c83a6cd9068567af6389956ce0e6a32d9",
+      "bytes": 4257
+    },
+    {
+      "path": "scripts/probe_ro_hand_baseline_technical.py",
+      "sha256": "2c4a80c936b3f4bb757c4945069753f33375865ae8bab806b62d69bdc3983c4f",
+      "bytes": 3064
+    },
+    {
+      "path": "scripts/probe_ro_hand_budget.py",
+      "sha256": "a590eac99547f94353c95f3f0e485e318b517ab5a76da8cd6c3045abb81058d4",
+      "bytes": 2264
+    },
+    {
+      "path": "scripts/probe_ro_hand_prototype_deformation.py",
+      "sha256": "d45150ec08286da66fb24446029bd6657612379ff9eb3711818dc855600f282f",
+      "bytes": 4621
+    },
+    {
+      "path": "scripts/probe_ro_hand_structure_fit.py",
+      "sha256": "d5cd825adc64b235517c7a0594123aa0a958d6e55658d2e8768a9b3bf2e0e9c9",
+      "bytes": 5335
+    },
+    {
+      "path": "scripts/probe_ro_repair_preflight.py",
+      "sha256": "96fdc4c1dabb8b36256218f43ad65b99dfd590cb742f1fd89e8a16fd03cdb19a",
+      "bytes": 3545
+    },
+    {
+      "path": "scripts/probe_ro_retopo_transfer.py",
+      "sha256": "4192674ce2274e197131341db0a23add657760ca0376103a818d2accbec36a99",
+      "bytes": 1205
+    },
+    {
+      "path": "scripts/probe_ro_tabard_motion.py",
+      "sha256": "4ad930c1ac427383d864385a31c1e92d7bbcdf758cd40c722eae4c517bf24bae",
+      "bytes": 2132
+    },
+    {
+      "path": "scripts/probe_ro_topology.py",
+      "sha256": "8276efaa95bdf343c4a62a6b0d97ad4eb8eb3bea95e5436dd63869c75ce70cc3",
+      "bytes": 1618
+    },
+    {
+      "path": "scripts/probe_ro_wrist_interfaces.py",
+      "sha256": "638610ad78196090b768c66898d9812d897c8690fb742b2742f543be68a449a8",
+      "bytes": 5039
+    },
+    {
+      "path": "scripts/probe_ro_wrist_volume.py",
+      "sha256": "1816559bc8ab791934b248e7b683dded06e504ea905a2541f8c9ce4241f10396",
+      "bytes": 4469
+    },
+    {
+      "path": "scripts/rebuild_ro_articulation.py",
+      "sha256": "1584df9cb9a4d358e17d38e63d39382f71b3e3afd345d96cff3b53e27b877204",
+      "bytes": 35236
+    },
+    {
+      "path": "scripts/rebuild_ro_wrist_interface.py",
+      "sha256": "fd2b5fca8fe3ede990837162720e55e25b3bf9b9022c60ed0b27e6b40ed79d4d",
+      "bytes": 18520
+    },
+    {
+      "path": "scripts/record_ro_apose_baseline.py",
+      "sha256": "584812d3fbc49503a807724322f0c35876ef603ab14b675362ffabbe99d04cf0",
+      "bytes": 5925
+    },
+    {
+      "path": "scripts/record_ro_apose_preflight_result.py",
+      "sha256": "e7e2a44e50bacbdc629fe1dc87646ed862ac98a2481429a7687f06f5f45047e7",
+      "bytes": 6353
+    },
+    {
+      "path": "scripts/record_ro_baseline.py",
+      "sha256": "513ac559f5d62b559b95d53e6beaf2ab1e16ee8ac02f105c65aa9384972869a6",
+      "bytes": 5257
+    },
+    {
+      "path": "scripts/record_ro_batch_baseline.py",
+      "sha256": "d315abdf40debc9db6c28908f55b4ef0c826efcea9417ae89cd9ddbe2ca676ef",
+      "bytes": 4886
+    },
+    {
+      "path": "scripts/record_ro_batch_verification.py",
+      "sha256": "8568dbdfe8fb536578f13578d9c8bd08882766f3650dbe4532d5412562ab3d1b",
+      "bytes": 4693
+    },
+    {
+      "path": "scripts/record_ro_failure.py",
+      "sha256": "86dfe5d01c83450787cd5ebc5451aeba1f15b1b306b1ee79c493d9f542b553a6",
+      "bytes": 6414
+    },
+    {
+      "path": "scripts/record_ro_hand_baseline.py",
+      "sha256": "307e4614022273407c18ad9a27c7f51133ef39856231099480788f888fd1f2a3",
+      "bytes": 7202
+    },
+    {
+      "path": "scripts/record_ro_hand_structure_baseline.py",
+      "sha256": "82954f2e7c9858d20b9be3a99ba7569639bcbc43c64fd94cecc2b695939f322f",
+      "bytes": 7547
+    },
+    {
+      "path": "scripts/record_ro_preflight_failure.py",
+      "sha256": "9e1a1e96c15fddf1df34c28ce07cb503435108177282c16b38a2c68c03d54431",
+      "bytes": 2159
+    },
+    {
+      "path": "scripts/refine_ro_apose_cloth.py",
+      "sha256": "4351f2cc5a5f21d299341f34d1a4ffbf2532b0c5544fd2fa1874539ba46a0e9c",
+      "bytes": 5282
+    },
+    {
+      "path": "scripts/refine_ro_core_digit_weights.py",
+      "sha256": "3ffdf3df830291695b78aae7d1be9dcaf31d10930316c92748aba226963dc109",
+      "bytes": 8013
+    },
+    {
+      "path": "scripts/refine_ro_thumb_wrist.py",
+      "sha256": "85a7671f52fe158acfee9efaad7fe0ea8a95d03a5d8ebe1a8c414423b0f50732",
+      "bytes": 12134
+    },
+    {
+      "path": "scripts/register_ro_apose_operation.py",
+      "sha256": "11bc8d491442e4bf239374aac69ed111e93485dde6fefce5382a11a812113b4a",
+      "bytes": 5106
+    },
+    {
+      "path": "scripts/render_ro_stress.py",
+      "sha256": "d01ce28075f329663806b56c4e64f78187dcdee1f942683d7e723bd9e25af983",
+      "bytes": 2891
+    },
+    {
+      "path": "scripts/repair_ro_front_arm_poles.py",
+      "sha256": "1cfc1de9e3d0e5e7b5a69e57773e1aa1e8779285a15c2577ffa5213b520d1bf0",
+      "bytes": 4991
+    },
+    {
+      "path": "scripts/repair_ro_motion.py",
+      "sha256": "d2fb351dcbf4948682744c1b6704d2543831f3499468ee6540589f6a0ed24b6e",
+      "bytes": 4211
+    },
+    {
+      "path": "scripts/repair_ro_paired_reach.py",
+      "sha256": "2780abcc3ba93ee99ab8a6ce20caf742a6d2de5e99a0dcdad0605e7708eb5a69",
+      "bytes": 4011
+    },
+    {
+      "path": "scripts/repair_ro_rigid_wrist_prototype.py",
+      "sha256": "af725f275fc15c2a71d4941002af53c7d4ac1a90827942f3545875a0992ea40b",
+      "bytes": 13585
+    },
+    {
+      "path": "scripts/repair_ro_swordsman_api_grant.py",
+      "sha256": "35f8b5e0fe6c24837aeb86f54d157915fb92513f48ea9424c051500e9c482e00",
+      "bytes": 6845
+    },
+    {
+      "path": "scripts/restore_ro_apose_hands.py",
+      "sha256": "e4f8b0635f22099618b7cb792a7b220668a8bf8ea0040db1571de0afecbdf9c3",
+      "bytes": 6268
+    },
+    {
+      "path": "scripts/resume_ro_hand_generation.py",
+      "sha256": "36c2afee449ac67fffefcd0a9fd8b809ca8677fc3e919387e0bf1c6c169c89df",
+      "bytes": 4628
+    },
+    {
+      "path": "scripts/resume_ro_split_preparation.py",
+      "sha256": "238bfe30e1a3d2ea0a3e2bbcc0ee924baad5c55efe15333a932eef036514811d",
+      "bytes": 4183
+    },
+    {
+      "path": "scripts/retopo_ro_hand_prototype.py",
+      "sha256": "6e22f0ed93ab11dda3b52568000377628b27c12f5038cff304af9e6372529448",
+      "bytes": 16978
+    },
+    {
+      "path": "scripts/rig_ro_batch_preflight.py",
+      "sha256": "b7da4d74ab5efc8fd1724d3dd37933ba40626fdec7dec689fa30ef5ce622ae50",
+      "bytes": 19677
+    },
+    {
+      "path": "scripts/rig_ro_core_fallback.py",
+      "sha256": "83b250d6b95917cf17b5976b8ae016848e55f0a6387e9e41e384c5dc4861edda",
+      "bytes": 12620
+    },
+    {
+      "path": "scripts/ro_core_rig.py",
+      "sha256": "8a9184b7067ca6c353ec36d907de7b75e5417f46daed00dafa7b45248c8e9874",
+      "bytes": 10471
+    },
+    {
+      "path": "scripts/ro_glove_contact_ik.py",
+      "sha256": "8756b90eb70116549ceb4b5f634f5c2885431598b2830b9c98ff51f630f91a8c",
+      "bytes": 3874
+    },
+    {
+      "path": "scripts/ro_hand_gate.py",
+      "sha256": "f9f84c28038d1a82c519a999c72133ba701e6f211f75619f9a770257b45855a9",
+      "bytes": 6054
+    },
+    {
+      "path": "scripts/ro_review_common.py",
+      "sha256": "98b795e379d682d84476b4e18d7c296364c1a6cf9bb36af6d4e13a08dbe1fc3d",
+      "bytes": 2738
+    },
+    {
+      "path": "scripts/smooth_ro_leg_transitions.py",
+      "sha256": "f8d8b4f1425aca456b39da28fdb9c4f5ca79bda6747b35684a3fed1ff0bda135",
+      "bytes": 5150
+    },
+    {
+      "path": "scripts/solve_ro_glove_joint_contact.py",
+      "sha256": "12a7eb1963789fc4632791ecf9a51a89c86564488c23c0cc5d2ac7c51eafe190",
+      "bytes": 9790
+    },
+    {
+      "path": "scripts/start_ro_hand_structure_phase.py",
+      "sha256": "69f99b6ad73a9f2acc8e8cee9d7987db3177119acf07981131ace200fd9ced47",
+      "bytes": 2536
+    },
+    {
+      "path": "scripts/stress_ro_repair.py",
+      "sha256": "0da434d0c5ad660db525b6d914e0688341aa608de9af2abdd5ab7090658f3fdd",
+      "bytes": 6075
+    },
+    {
+      "path": "scripts/tailor_ro_batch_fit.py",
+      "sha256": "f2eee2779d6c214095ca1de8e593644ce45bd64267ca770e6a5edaa127af2c38",
+      "bytes": 5656
+    },
+    {
+      "path": "scripts/verify_ro_apose_preflight.py",
+      "sha256": "c40eaaeeacb6211fdaebdf280a7263cbfcf7625a451eefe2b323679b12c1434f",
+      "bytes": 3951
+    },
+    {
+      "path": "scripts/verify_ro_batch_preparation.py",
+      "sha256": "1f5f051a19ace83778c1211cb7faa52b532f8abb3dc6341078529889b8067a46",
+      "bytes": 6410
+    },
+    {
+      "path": "scripts/verify_ro_core_fit.py",
+      "sha256": "c534623280672a7d308b33e5f3adf6d585d95ed2871dcd12b7e1ba2eb9263925",
+      "bytes": 2348
+    },
+    {
+      "path": "scripts/verify_ro_hand_api_completion.py",
+      "sha256": "ffbb7bbb9365b8363b057f0c1184051e5be023d01d72e4acba1a25bd6271d717",
+      "bytes": 3708
+    },
+    {
+      "path": "scripts/verify_ro_hand_phase_final.py",
+      "sha256": "82c63d143da27fccbd3a2ffdca5a7dfe4932d2184d838d675d8c72367895a18e",
+      "bytes": 10736
+    },
+    {
+      "path": "scripts/verify_ro_hand_preparation.py",
+      "sha256": "5b6d249c291679a04cd2e4841c994c34fbd906b2b54e3ed5d12b9cee35ec2ab2",
+      "bytes": 4497
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_preparation.py",
+      "sha256": "f0db0a4041812b463192db5be84663f048cfd715e77dbd699c73c8c3e9a8ef30",
+      "bytes": 10436
+    },
+    {
+      "path": "scripts/verify_ro_phase_final.py",
+      "sha256": "db9d60cf967adcd1545ad96dc82af6da1e9962d4b61582bbd28932b6b60f6cb6",
+      "bytes": 6573
+    },
+    {
+      "path": "scripts/verify_ro_repair.py",
+      "sha256": "b000d5e4fce40a82c915e35d38068c5753b3c0b64b5d8b73b3f0222f3b65e2bb",
+      "bytes": 4550
+    },
+    {
+      "path": "scripts/workbench.py",
+      "sha256": "cbe8a8f9d175136d4388e4e4c8b34ed9985ffb2f5b02c608ef77c4fc1069ad0b",
+      "bytes": 41411
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/api-completion-verification.json",
+      "sha256": "f201876a3edade295f369c917b54ef305826d8658673b66c7781dd688fabc2da",
+      "bytes": 3494
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-review.json",
+      "sha256": "d2e06697b3e3fdf72f3e3b9d8968f63cf2fd9f29be5e362a553e02ab531bdded",
+      "bytes": 1130
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/preparation.json",
+      "sha256": "8b1d1f4655881a4324c13c219fa36ac7caaa589d67be657cc64b83ee13eb74f8",
+      "bytes": 73069
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/joint-and-pole-probe.json",
+      "sha256": "b8145fa50d0981bd32bc691374620af99fd89f244aa090640b310d7a855da824",
+      "bytes": 30621
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-thumb-flow/flow.json",
+      "sha256": "da4793d84253d6e6a7a0d8db6ac4cf716056e0229e6d9f1174c6553e8377a473",
+      "bytes": 2624
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-stop-scope-correction.json",
+      "sha256": "32d2012e0eef09ae6c45a8021d73ac7e4f999fcf8730d028b1fa3830c2455bbd",
+      "bytes": 591
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+      "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599",
+      "bytes": 5856582
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-start.json",
+      "sha256": "37fd794648e18ea3d33ab73b2c1dbfd86566e67f48df7274eff0af9f9fa62b9c",
+      "bytes": 1592
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-review.json",
+      "sha256": "d3c45f78cdf353c62e4215e2f6f3eec7391e8b8de8dc8a5af45d09046d217b34",
+      "bytes": 682
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-two-step/two-step.json",
+      "sha256": "522e0d249cb7d4ac2fdebe9a207d264c1a895ff4bd56f9c96cc416cd7793348f",
+      "bytes": 3344
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v002-two-step/right_hand_two_step.blend",
+      "sha256": "04f367b2ee3b8cc6b4e1e11debba7f2833e387b6eb36e0203f8238f8932bcb18",
+      "bytes": 5856582
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-review.json",
+      "sha256": "1d94c7ab0cb33dc0651d2e19f94d0ec4d576a28cc93392fef10cb82bd166c7c9",
+      "bytes": 881
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/patch.json",
+      "sha256": "0d0f113ca15c34985a9eddfe0f7101e67dc4fff36863cab752ac1846ed055fbc",
+      "bytes": 15804
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/UV-islands.json",
+      "sha256": "d72862b52a4ddcef49eb2d0ff9e96f38c3d9e1afbeb26725bf05402d3aaade0e",
+      "bytes": 12633
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/skin.json",
+      "sha256": "a8263614cc8f517f4ec02da93304588a2fa46a465720779d2c6c129f2282b3ba",
+      "bytes": 25802
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-independent-review.json",
+      "sha256": "77badb1a3750e28d069a904f4fe72be151cfec3c8be9e0a25ce8bd2733fb2362",
+      "bytes": 700
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+      "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458",
+      "bytes": 5847075
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v003-skin-diagnostic/right_hand_small_motion.blend",
+      "sha256": "c02e72908f6699d025cea8483556894a9d5f136ad710b6b333634547a1e56c38",
+      "bytes": 5983193
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-review.json",
+      "sha256": "63ca83c4233948bb1a567b9f0fc86eca5d28105e129e99e60ea857784c3c9947",
+      "bytes": 867
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-independent-review.json",
+      "sha256": "46027c3415e54624d3d9063db28f0491c0bc301160e1ca51f3138bd08420196a",
+      "bytes": 1933
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/weights.json",
+      "sha256": "c9cd97a099aa43133639dbda23e1802ac4354fa7679cd14c7438a190f02a445b",
+      "bytes": 28219
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/frozen-weights.json",
+      "sha256": "68c1cee8cc9332bcfbed4cdea0fa451a851e65c794d8bddf877825cc6a794319",
+      "bytes": 62000
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+      "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e",
+      "bytes": 5984249
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v001-source-preparation/right_hand_exterior.blend",
+      "sha256": "cc384612d5a5881530681f68dea96db49f7b8535f6c3ae3f6cfad7c2184e0624",
+      "bytes": 5856582
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/boundary.json",
+      "sha256": "da000a50fa881c01f88c516b364837946329104ed1537c79904bb50f247c8048",
+      "bytes": 5870
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/frozen-masks-and-weights.json",
+      "sha256": "e4dfbbb88d816c1bbe3e353079812aa581f1cdaaa87da84fce8e01028979b294",
+      "bytes": 134732
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/back.png",
+      "sha256": "48248e69be9593427dec3c00bc605d3fbb1f5b7161f66eb64d15907c3914c8ea",
+      "bytes": 809118
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/bottom.png",
+      "sha256": "8bfe89d9a1c37b098d9436280023ba4467cdec7296380765d0f495b27eb8e431",
+      "bytes": 627406
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/front.png",
+      "sha256": "2af6c406289bf460ff56a73e280b3e7db9666994e792a2b6ef13649d1e2ecc19",
+      "bytes": 781299
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/three-quarter.png",
+      "sha256": "5dfdf8119fdd2f0b29c1bfde45677eb1fa0a1cd7985109c08adf200df1bcc564",
+      "bytes": 772403
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-thumb-flow/back.png",
+      "sha256": "b3aa9fa4e1f1c4bab0b4e71b4b534875d4546055bf24bfcf788133f6d91cbeb3",
+      "bytes": 630645
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-thumb-flow/front.png",
+      "sha256": "08e3f9f58463886916a7150cfcd59ae9535cc82283534194931595d5b73b6daa",
+      "bytes": 653534
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v001-thumb-flow/three-quarter.png",
+      "sha256": "46a29adbd0e11c75c1fd07d5eab3e549cbc04f5ccc3751765a897ebf07aa87be",
+      "bytes": 656552
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-two-step/back.png",
+      "sha256": "ae259aece7d040678d5e4e9d1265def1c2549554772bb404bddece19bf81e199",
+      "bytes": 630621
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-two-step/front.png",
+      "sha256": "fdfa81af69814011dc13cfbb1d3b4c34e19cf8f17f7284b34b7625a9b40a3c2c",
+      "bytes": 653527
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v002-two-step/three-quarter.png",
+      "sha256": "be4718b1d4caba5c2db34d45c3b7bff0326482bb0582adebdde1292e2c935cb5",
+      "bytes": 656454
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/open-back.png",
+      "sha256": "9f2d8dd7e865d218951a335e15f17d8f79dca7f09143b235d0d99123f825b3b7",
+      "bytes": 570277
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/open-palm.png",
+      "sha256": "ca8c38650148a1a6ed9c332e52344146c58f19ddf1fe7cf565f0a672a76d43d0",
+      "bytes": 581425
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/open-side.png",
+      "sha256": "f0293b60a59e384f0dd53143a13324d84bd6a0afadd62e57e0beed29695d745f",
+      "bytes": 564888
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.15-back.png",
+      "sha256": "c25ae9f058a78c08e1121452a07a77f4bf5cb8e504905c64464ef0e9fdc6f659",
+      "bytes": 564470
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.15-palm.png",
+      "sha256": "c3926cb98a4a63e65c5bf68ae8d066893969d5e83a907c0be88659243323475d",
+      "bytes": 579324
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.15-side.png",
+      "sha256": "6854c80e6c112ebf55e05885d04f251222ae761defcaa4ae3a35ce5169bdf2b6",
+      "bytes": 562994
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.3-back.png",
+      "sha256": "f72c0b389a6157133efb42b07cc6d004cdd96af43ac1d1a72d40e7870366f862",
+      "bytes": 556917
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.3-palm.png",
+      "sha256": "94ff8dd9dfc072bc2b2266fd76429be54f11e8dafac463277f3b14ef85a39306",
+      "bytes": 574513
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-skin-diagnostic/small-0.3-side.png",
+      "sha256": "2c9e0ec80b1d6c788eee7b4498f37e5405c07f0115f8546e6fbc98beb1215902",
+      "bytes": 558937
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/back-texture.png",
+      "sha256": "ad07316011b7e6bd991156d415d196553a383f4906a29a0a31289a9480a6bbf4",
+      "bytes": 808854
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/back-wire.png",
+      "sha256": "0db7e4c76a1d4567391a1b7401fbdfb0f9ebb11665a443ffbe202a9883af293e",
+      "bytes": 631290
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/front-texture.png",
+      "sha256": "9543a4b3a2be6378589ae4b8b19ea98146c9b8856ef28d816f282e95f0395187",
+      "bytes": 780998
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/front-wire.png",
+      "sha256": "497d6d05426e5f6ec4231dff49eaf933c6d528ffa8e02d9922d3f24ea553947f",
+      "bytes": 653237
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/three-quarter-texture.png",
+      "sha256": "de78912f830998aceedf09fd14635801447c4856c1bd4de1296c2952f5cf3ce6",
+      "bytes": 772263
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v003-thumb-patch/three-quarter-wire.png",
+      "sha256": "5a20b4810751c4584dfe5a8c47f411a44eadcebab06a42a4ba332fcdbcc20559",
+      "bytes": 656469
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/open-back.png",
+      "sha256": "dbf2d9ac14005dbe25bc1c1abcaeebb4d33525783c81d1947c79ab53ef742fde",
+      "bytes": 570283
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/open-palm.png",
+      "sha256": "fde3aeab3a9087bdc45c33cce18ec2c19f9463fbe78772056f94d0269b3da581",
+      "bytes": 581431
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/open-side.png",
+      "sha256": "47206d6957fae579232ac18ded0b97b4f873016294c867d39dd137cf3aafcb90",
+      "bytes": 564894
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/opposition005-back.png",
+      "sha256": "f9c31d1289097a6cb0f92c881cc73eaf760c84d18772b9b994cc1afbb89c8be5",
+      "bytes": 570212
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/opposition005-palm.png",
+      "sha256": "390539971fbe514da14908d8eaf1ecec187052a77f8da975ed35db2d9c2b6589",
+      "bytes": 581362
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/opposition005-side.png",
+      "sha256": "f75bd7e28114b863017e9c3cffcf498f6488b281b62c55c5540bfd97a4a58f0a",
+      "bytes": 565330
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small015-back.png",
+      "sha256": "d39eb2fbb878737159aa94c00b81786905f92dde5b92294b8ebf475c7a99f40b",
+      "bytes": 564155
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small015-palm.png",
+      "sha256": "e434ab666edbc2b034d431b0704824b4b61867869bdd4e05591b2b48ab0ad3c0",
+      "bytes": 580095
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small015-side.png",
+      "sha256": "98e52e4e9374c83a99b2ce8f3e66b1c35c0437e097919c3ea62fc24618baa630",
+      "bytes": 561269
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-back.png",
+      "sha256": "6f177d18f9469a200cbf1577df9f78603c387ef37fddfabb6e7d8fc2ad9174c1",
+      "bytes": 556568
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-opposition-back.png",
+      "sha256": "e47f2dfba44ec0e8b424d34661198350dc402202b67d1d307b26f0c3ca0a365e",
+      "bytes": 556534
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-opposition-palm.png",
+      "sha256": "9d05e53e99bb3b460a38cc000ea22c375e9d07f7f09ded3eacb883d0490ff80e",
+      "bytes": 575151
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-opposition-side.png",
+      "sha256": "6390c143a37f127653fe2716181b2bc7132e75ec321fe5423e3db580192ddced",
+      "bytes": 557498
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-palm.png",
+      "sha256": "126ce0be5ba3e231310736b3b8a5d47adf9b195bf89068806fa2e92a318875e6",
+      "bytes": 575447
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/small030-side.png",
+      "sha256": "14abfb4e523a610c0b0bdfd879637bf403a26ae7e28c0a8c97fe8ee942c61014",
+      "bytes": 558143
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/unit-tests-final.log",
+      "sha256": "463d52a2daeadd73a9f0ba1543f3f1f02028264079f92a329cfd415ca27fafb6",
+      "bytes": 16210
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/pipeline-validation-final.log",
+      "sha256": "7f80bd86e2448519f4d0eb1da7085e08760da8420a47366bab62b709e8b23a57",
+      "bytes": 206
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/request-validation-final.log",
+      "sha256": "9e6182d8bdac78867863acd940812187f3cd8c3fde67305ee25052a0b951fc61",
+      "bytes": 252
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/api-entry-help-final.log",
+      "sha256": "0846b5f72c6aef980bc35dafbd6fcfd926a9d3d465331537c140e638663aa254",
+      "bytes": 563
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/api-completed-status-final.log",
+      "sha256": "fdbb3819b97232e941008b3123cbd0f6a1fff628f907b67338ad4662820113bc",
+      "bytes": 3590
+    }
+  ],
+  "historical_mutable_bindings_resolved_to_preserved_snapshots": [
+    {
+      "record": "runs/qa/ro-swordsman-combo-r007/baseline/assessment-evidence-v2.json",
+      "original_mutable_path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "historical_sha256": "0c81b31e57a27a9bf6531c7c7ff9983ac9a474bbed60549879ac1a83ef1003b9",
+      "actual_preserved_snapshot": "runs/qa/ro-swordsman-combo-r007/quality-ledger-before-v001.json",
+      "current_mutable_file_matches_historical": false
+    },
+    {
+      "record": "runs/qa/ro-swordsman-combo-r007/preparation-verification.json",
+      "original_mutable_path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "historical_sha256": "0c81b31e57a27a9bf6531c7c7ff9983ac9a474bbed60549879ac1a83ef1003b9",
+      "actual_preserved_snapshot": "runs/qa/ro-swordsman-combo-r007/quality-ledger-before-v001.json",
+      "current_mutable_file_matches_historical": false
+    }
+  ],
+  "public_reports_parsed": 79,
+  "script_hashes": [
+    {
+      "path": "scripts/advance_ro_binding_trial.py",
+      "sha256": "3b2ce3415fafa59a2e3792bdcc9fad1a0b6b33818b3096460e5ddccca999e847"
+    },
+    {
+      "path": "scripts/advance_ro_contact_ik.py",
+      "sha256": "d2b901af669857fa168d4dc22edd27fa900e18d74c5aa384d9497d64380c942a"
+    },
+    {
+      "path": "scripts/advance_ro_corrective_trial.py",
+      "sha256": "938238fbc2bd23676fe88d0b556e728301364cae3bfc5c3170d9dd75abe2685d"
+    },
+    {
+      "path": "scripts/advance_ro_hand_trial.py",
+      "sha256": "3c00c437d382fe9a51930f1ea6fb94656e1c568e4dcd6c3b8fa413b3fb2ce9d5"
+    },
+    {
+      "path": "scripts/advance_ro_underlay_trial.py",
+      "sha256": "f00bf36e955850c156ac4a0b445343fb11d86fbb20a6cc80896d751dfb13cdbd"
+    },
+    {
+      "path": "scripts/advance_ro_wrist_rebuild.py",
+      "sha256": "7e336f3e0753b94a78dee7fc79dc22ecc580b2ab1148e15fb9a7781e315fd09c"
+    },
+    {
+      "path": "scripts/advance_ro_wrist_trial.py",
+      "sha256": "6590718a48fbc728a1034fef41c577c98be4355bd27b4ead7b0ca1dde99e6e87"
+    },
+    {
+      "path": "scripts/archive_ro_phase_evidence.py",
+      "sha256": "b9f53cff38f8ac9bed448549f90d783c7451241ffe933dcd6a39dd945804de8c"
+    },
+    {
+      "path": "scripts/assemble_ro_batch_baseline.py",
+      "sha256": "6c8989ca68c2e6f158c3d1f2443d7397300bab031bac7d96a35169fc6f06baab"
+    },
+    {
+      "path": "scripts/audit_ro_thumb_patch_uv.py",
+      "sha256": "b94ca0597ecd1bea6e47701bc21367a91c41b1e749fa9689aa92a8796146b76d"
+    },
+    {
+      "path": "scripts/baseline_ro_hand_phase.py",
+      "sha256": "f0ef7665f47e0bfab60f0aed1b980fa50092c7384dea5b4907ed7fdfec2af88b"
+    },
+    {
+      "path": "scripts/baseline_ro_hand_structure_phase.py",
+      "sha256": "8d4f493f225fb94f397de10b8efdb941dd783354c6cb59b14fdb01929e98a859"
+    },
+    {
+      "path": "scripts/build_ro_apose_baseline.py",
+      "sha256": "c6f10f94d7d6452d2be39fd36cf92f218bf83c278b12fda9747a0490c2acafb7"
+    },
+    {
+      "path": "scripts/build_ro_apose_candidate.py",
+      "sha256": "4bbf7deeafc0e0c071c807620b1af2d38168c766e6a26c709c71a860c64ebcd4"
+    },
+    {
+      "path": "scripts/build_ro_source_baseline.py",
+      "sha256": "3231bfdc6d1fedbfdfa88f5331aa53e4e3eba5aa4fe72ce51913c88de3eec7f2"
+    },
+    {
+      "path": "scripts/build_ro_swordsman.py",
+      "sha256": "d5f358f27e4c733a23bf9de2e9fdf46e74b341881f3c95cb7e11110d2a3cb8d4"
+    },
+    {
+      "path": "scripts/build_ro_thumb_quad_patch.py",
+      "sha256": "425e9c9df5673e8ca396e944a6ee81119b141b9ee2c90ad7b5394e467ae536b5"
+    },
+    {
+      "path": "scripts/calibrate_ro_generated_glove.py",
+      "sha256": "75d0b5de1623da7447967ee606dde57bb3bd4f51a455f4cda8d779072fef4690"
+    },
+    {
+      "path": "scripts/calibrate_ro_hand_prototype.py",
+      "sha256": "1c983499278e2f3906d3f335d41af80e437b656541381d91bb15510283a39ebb"
+    },
+    {
+      "path": "scripts/check_ro_batch_roundtrip.py",
+      "sha256": "1843c286bfd82bb5dae6f8eb4776ff50c00a21c17384f414fed566257cbd7aef"
+    },
+    {
+      "path": "scripts/check_ro_digit_axis_runtime.py",
+      "sha256": "1fdfb99d432d1bf45a5301dc6a311fa76320cfa70527f08caf1e2d2bf93d2e80"
+    },
+    {
+      "path": "scripts/check_ro_hand_direction.py",
+      "sha256": "e86a23b271eb20c024dd1bdc3f386c92f461994b4ea86616070f8307b954800d"
+    },
+    {
+      "path": "scripts/check_ro_hand_roll.py",
+      "sha256": "508298bba3eeb009ae3ecb1461b48122fe58ede9988608cdc6a5964fe185b3aa"
+    },
+    {
+      "path": "scripts/check_ro_swordsman.py",
+      "sha256": "a003b88180c13adf305042ef0c6eff62649fc1458548e6e4044fb3f56d5a3efe"
+    },
+    {
+      "path": "scripts/check_ro_wrist_animation_roundtrip.py",
+      "sha256": "a4cc77ceccf96a684cc0dfd2a84a957fb00b027d215a7b807b2caf390cb61d92"
+    },
+    {
+      "path": "scripts/clarify_ro_hand_structure_contract.py",
+      "sha256": "a6d93a6216d6d5bcf20196091367e1b077b76287e3c9309ea53f0f1f78c922c1"
+    },
+    {
+      "path": "scripts/close_ro_core_trial.py",
+      "sha256": "4fae03fb930ecce41f328ecae58f3bc3fcda21dd8550579d55e4250deaa0f761"
+    },
+    {
+      "path": "scripts/close_ro_final_prototype.py",
+      "sha256": "a28671e53a6206239bc2d3d821c67bbec62f0d749bc6bb14970a5f333a889e0c"
+    },
+    {
+      "path": "scripts/close_ro_hand_phase.py",
+      "sha256": "234ab42266d4cc52b6a9c98fe7416ca258e51f9df72c46732667eb891baf96ec"
+    },
+    {
+      "path": "scripts/close_ro_hand_structure_first_trial.py",
+      "sha256": "9be2cad98da0ce43666db026cc9a6ab41b50bab45ef6f6a3b9069a71ac8268d0"
+    },
+    {
+      "path": "scripts/close_ro_hand_structure_phase.py",
+      "sha256": "4bbd9a81d89794b9ffa4d38a4dd6a53d6d89e30e8e137f7197ceed7b304d0936"
+    },
+    {
+      "path": "scripts/close_ro_thumb_patch_trial.py",
+      "sha256": "94812d7b1a2aad182b671c9c2f7af1cf5a128b12e113f726aad8e8b2c5c33f2a"
+    },
+    {
+      "path": "scripts/close_ro_thumb_two_step.py",
+      "sha256": "d63b6259d90f9b9b530790d7872e82d5170fab9b42a3c1c7c205164175f8b2b5"
+    },
+    {
+      "path": "scripts/correct_ro_glove_contact.py",
+      "sha256": "03ace3371801d3d4387243a401ac834f47f18d423b3c09dffea57ecd16c19f2d"
+    },
+    {
+      "path": "scripts/diagnose_ro_apose_weights.py",
+      "sha256": "aa3824971c878cd5b2d3901f28708921d8493e47e265deb3e1c52eded8ee592e"
+    },
+    {
+      "path": "scripts/diagnose_ro_cloth_boundaries.py",
+      "sha256": "1468e63673a155232e34539766326c9dea6fed819a0abed8ba0c0e5ee394ae07"
+    },
+    {
+      "path": "scripts/diagnose_ro_new_hand_skin.py",
+      "sha256": "fbda91d4f5e7fc89dd2c0cb712b91fc094c9369c9ec992479d82ac8344bf09bd"
+    },
+    {
+      "path": "scripts/extract_ro_batch_parts.py",
+      "sha256": "3384e6d914e8cfa39d60ead221910055debaa592594ee9c0c477321d7627a9b2"
+    },
+    {
+      "path": "scripts/finish_ro_apose_preflight.py",
+      "sha256": "6ea64b5719b63b5f6ba73baf0b606499db46fb7150f772aa19354788b74987d6"
+    },
+    {
+      "path": "scripts/finish_ro_batch_experiment.py",
+      "sha256": "aded312bf530b95098c1e0d7996a7d96e09197e89aab0fd3f9349c4bae6cd724"
+    },
+    {
+      "path": "scripts/finish_ro_hand_structure_preparation.py",
+      "sha256": "a3e5f5ead5ee6d33e3ff0057903fa151e2bdb5f744902b91f808862853beff3e"
+    },
+    {
+      "path": "scripts/finish_ro_repair_phase.py",
+      "sha256": "d5c4d56575181c60d397a23d533812a28962616876404f06197ffa879fd03c24"
+    },
+    {
+      "path": "scripts/fit_ro_batch_candidate.py",
+      "sha256": "549e055cf0888bf2d3e8bafa5e834f7d4d8f2086c7f533365fc6ca8ec08ccb43"
+    },
+    {
+      "path": "scripts/fit_ro_core_fallback.py",
+      "sha256": "692884ae6451df414328e4466032f0826343c487fd299b1677266c271ce07931"
+    },
+    {
+      "path": "scripts/fit_ro_forearm_underlay.py",
+      "sha256": "7a9591103455553f15ffa913198159a3917d4aa901e8ebf3fb7e4eee146ff6eb"
+    },
+    {
+      "path": "scripts/fit_ro_generated_glove.py",
+      "sha256": "10bfbc805db39155e0c8b557462a916c70de80cfa58c7085695ce19c4fa9e196"
+    },
+    {
+      "path": "scripts/hyper3d_api.py",
+      "sha256": "63a1c5971b6cb77f7223b06ff55d2dbf146dad4f44b398734bdce55d038ab73a"
+    },
+    {
+      "path": "scripts/inspect_ro_batch_source.py",
+      "sha256": "d4dcf6f7e7d722dc1f02f73897a56848ecb370e37515a9007896e1ac39b887e6"
+    },
+    {
+      "path": "scripts/inspect_ro_candidate.py",
+      "sha256": "d1d2260d3944f087d1e4a6441c4277022c80e7f1d64d4fc767ba8e616af7c2da"
+    },
+    {
+      "path": "scripts/inspect_ro_core_fallback.py",
+      "sha256": "aa7e90cdf7c72f0bb7139033c43bcd14fe16435480a8642cf083bf93a40b3497"
+    },
+    {
+      "path": "scripts/inspect_ro_hand_source.py",
+      "sha256": "965f03bf92d8d6b1c376e25ba5e05dda9296130fd31f1d630c31d1297a8df718"
+    },
+    {
+      "path": "scripts/inspect_ro_hand_structure_source.py",
+      "sha256": "414163d8ad23e7906fecf340e7fca4408d3045356fe96f95ddc2d37ef16b14a1"
+    },
+    {
+      "path": "scripts/inspect_ro_review_package.py",
+      "sha256": "4de66cff3d7b40800a3f9a978a2e0da8b62dfc1c413609d20f8ceadd9230d70b"
+    },
+    {
+      "path": "scripts/inspect_ro_split_source.py",
+      "sha256": "d7c8b696bdf903851039afc8e4a1ae8fd86547eb48c47c0214224e6ff46f0a5c"
+    },
+    {
+      "path": "scripts/optimize_ro_core_contact.py",
+      "sha256": "3953d97febc8de0b5b59e9ca6b797ce7a374319d031e2b01c9d92690dc9a66ba"
+    },
+    {
+      "path": "scripts/optimize_ro_repair.py",
+      "sha256": "6df28826855ca16bafc238970cca051b3cb3106394ea67e61cae959681f51eb3"
+    },
+    {
+      "path": "scripts/pipeline.py",
+      "sha256": "d0778ddf3b68e8cdf88bf743ac89bd5b1f048debd69731f273dd7949f3dd76c0"
+    },
+    {
+      "path": "scripts/postprocess_ro_swordsman.py",
+      "sha256": "21a3f23afd47b23a19f4ed650a35039c2a1c30006775b3f2771c04fd4eb82c67"
+    },
+    {
+      "path": "scripts/prepare_ro_apose_phase.py",
+      "sha256": "018d3d29645a17ed257c387de360f75d6916a41538236e9578eeec75219f475a"
+    },
+    {
+      "path": "scripts/prepare_ro_batch_source.py",
+      "sha256": "9a2d2320c677e22bd9e2ced7cbb679de2f571b1fad670b13b9faa219236a5212"
+    },
+    {
+      "path": "scripts/prepare_ro_hand_phase.py",
+      "sha256": "4f7e62d72f9dedc9a945f7c0b8c620bbbd465da2f33a44b80e7d9ee7f6b6335b"
+    },
+    {
+      "path": "scripts/prepare_ro_hand_structure_phase.py",
+      "sha256": "04b4513d498827dbf55362482efa213fd8544ad2874fcbdfbd0ff468372e940a"
+    },
+    {
+      "path": "scripts/prepare_ro_native_hand_skin.py",
+      "sha256": "46b5afabb42d90b1b9d9ff9434aef620d2f7d2a13992a9137a797ce2d2366b52"
+    },
+    {
+      "path": "scripts/prepare_ro_repair_phase.py",
+      "sha256": "31af243805c97555982e3162db0a61c39bf4f24e83507a9f26fd3688751a629c"
+    },
+    {
+      "path": "scripts/prepare_ro_split_phase.py",
+      "sha256": "4806cef0280e610f97306bfa5e22c9c44ae3c2ef0b8d5a3816f7be13bd3432a6"
+    },
+    {
+      "path": "scripts/prepare_ro_swordsman.py",
+      "sha256": "80270411aef7057c8ec39e660e403d26907047cf9e47c0cfb7f13db405b8d5a3"
+    },
+    {
+      "path": "scripts/probe_ro_apose_structure.py",
+      "sha256": "974208b5937cad715c42dd7ba07eb148ef23ebb352bae28efae482c85b27bc95"
+    },
+    {
+      "path": "scripts/probe_ro_boolean_binding.py",
+      "sha256": "2db48c0caddadbdabcebf53eb8f2ee046bc5f00797f7dd53fd98a7cfa96ddb29"
+    },
+    {
+      "path": "scripts/probe_ro_bracer_cavity.py",
+      "sha256": "349fa92cb910654838822f84d023c46d49a640e915b3c1b566228d4453637d7f"
+    },
+    {
+      "path": "scripts/probe_ro_core_contact.py",
+      "sha256": "8e4f2693ee3363131e3d54d058e220c6cd33c505e0bbc9caaee0f89859d8ef35"
+    },
+    {
+      "path": "scripts/probe_ro_core_digits.py",
+      "sha256": "b3aca0680f576a7172ea62bd87a13f254f3bcec64e886a69f92718dfe27768a2"
+    },
+    {
+      "path": "scripts/probe_ro_core_landmarks.py",
+      "sha256": "ff03495d4553a554abe013859fbb42dbe80f604f8d3091f278721a1a0a4e1bc5"
+    },
+    {
+      "path": "scripts/probe_ro_covered_forearm.py",
+      "sha256": "59e9bb17db93f225933e00b9d80158a8f61d4fb1734c286924a6e240f9b3da54"
+    },
+    {
+      "path": "scripts/probe_ro_equipment_fit.py",
+      "sha256": "c61ed765ed5e273efcddcbdde90f090a428ae77ccc60ccc4bc565a0e27e92e07"
+    },
+    {
+      "path": "scripts/probe_ro_forearm_underlay.py",
+      "sha256": "3042c621efa8dbad32cfe29d5650e02b851513cd3674f276eff02c3dc03ccfd1"
+    },
+    {
+      "path": "scripts/probe_ro_glove_anatomy.py",
+      "sha256": "3276205dfb05ce612ddcad4935cc191b2d9037ff0468472db5c604efdef5075e"
+    },
+    {
+      "path": "scripts/probe_ro_glove_cut_loops.py",
+      "sha256": "f5c3bc853c96e8c444cfe31a966adb4a1e78ad357cea2f11d161afc5f4a911fd"
+    },
+    {
+      "path": "scripts/probe_ro_grip_contact.py",
+      "sha256": "981b7c54af7504f078c1170e79070bad96ea87e28bc3a6a1b2dd46d96b5243fe"
+    },
+    {
+      "path": "scripts/probe_ro_grip_frame.py",
+      "sha256": "17774ca58bb37840e6b9b58665cb5c1088a6a5901bd17b7bcc2861bc827d1eb8"
+    },
+    {
+      "path": "scripts/probe_ro_hand_baked_interval.py",
+      "sha256": "1795b5769ef905fd65ba5507db562c5c83a6cd9068567af6389956ce0e6a32d9"
+    },
+    {
+      "path": "scripts/probe_ro_hand_baseline_technical.py",
+      "sha256": "2c4a80c936b3f4bb757c4945069753f33375865ae8bab806b62d69bdc3983c4f"
+    },
+    {
+      "path": "scripts/probe_ro_hand_budget.py",
+      "sha256": "a590eac99547f94353c95f3f0e485e318b517ab5a76da8cd6c3045abb81058d4"
+    },
+    {
+      "path": "scripts/probe_ro_hand_prototype_deformation.py",
+      "sha256": "d45150ec08286da66fb24446029bd6657612379ff9eb3711818dc855600f282f"
+    },
+    {
+      "path": "scripts/probe_ro_hand_structure_fit.py",
+      "sha256": "d5cd825adc64b235517c7a0594123aa0a958d6e55658d2e8768a9b3bf2e0e9c9"
+    },
+    {
+      "path": "scripts/probe_ro_hand_structure_landmarks.py",
+      "sha256": "f3f6dc2e531ff0e0ceba5a0dce703eea415c21aa9bc4b7d9724f000abd75bba1"
+    },
+    {
+      "path": "scripts/probe_ro_new_hand_joints.py",
+      "sha256": "4d7fac0fc0fcb3b78b71b849db3d9f5792b0fb87c98814c1cb04a58197ad643b"
+    },
+    {
+      "path": "scripts/probe_ro_repair_preflight.py",
+      "sha256": "96fdc4c1dabb8b36256218f43ad65b99dfd590cb742f1fd89e8a16fd03cdb19a"
+    },
+    {
+      "path": "scripts/probe_ro_retopo_transfer.py",
+      "sha256": "4192674ce2274e197131341db0a23add657760ca0376103a818d2accbec36a99"
+    },
+    {
+      "path": "scripts/probe_ro_tabard_motion.py",
+      "sha256": "4ad930c1ac427383d864385a31c1e92d7bbcdf758cd40c722eae4c517bf24bae"
+    },
+    {
+      "path": "scripts/probe_ro_topology.py",
+      "sha256": "8276efaa95bdf343c4a62a6b0d97ad4eb8eb3bea95e5436dd63869c75ce70cc3"
+    },
+    {
+      "path": "scripts/probe_ro_wrist_interfaces.py",
+      "sha256": "638610ad78196090b768c66898d9812d897c8690fb742b2742f543be68a449a8"
+    },
+    {
+      "path": "scripts/probe_ro_wrist_volume.py",
+      "sha256": "1816559bc8ab791934b248e7b683dded06e504ea905a2541f8c9ce4241f10396"
+    },
+    {
+      "path": "scripts/rebuild_ro_articulation.py",
+      "sha256": "1584df9cb9a4d358e17d38e63d39382f71b3e3afd345d96cff3b53e27b877204"
+    },
+    {
+      "path": "scripts/rebuild_ro_wrist_interface.py",
+      "sha256": "fd2b5fca8fe3ede990837162720e55e25b3bf9b9022c60ed0b27e6b40ed79d4d"
+    },
+    {
+      "path": "scripts/record_ro_apose_baseline.py",
+      "sha256": "584812d3fbc49503a807724322f0c35876ef603ab14b675362ffabbe99d04cf0"
+    },
+    {
+      "path": "scripts/record_ro_apose_preflight_result.py",
+      "sha256": "e7e2a44e50bacbdc629fe1dc87646ed862ac98a2481429a7687f06f5f45047e7"
+    },
+    {
+      "path": "scripts/record_ro_baseline.py",
+      "sha256": "513ac559f5d62b559b95d53e6beaf2ab1e16ee8ac02f105c65aa9384972869a6"
+    },
+    {
+      "path": "scripts/record_ro_batch_baseline.py",
+      "sha256": "d315abdf40debc9db6c28908f55b4ef0c826efcea9417ae89cd9ddbe2ca676ef"
+    },
+    {
+      "path": "scripts/record_ro_batch_verification.py",
+      "sha256": "8568dbdfe8fb536578f13578d9c8bd08882766f3650dbe4532d5412562ab3d1b"
+    },
+    {
+      "path": "scripts/record_ro_failure.py",
+      "sha256": "86dfe5d01c83450787cd5ebc5451aeba1f15b1b306b1ee79c493d9f542b553a6"
+    },
+    {
+      "path": "scripts/record_ro_hand_baseline.py",
+      "sha256": "307e4614022273407c18ad9a27c7f51133ef39856231099480788f888fd1f2a3"
+    },
+    {
+      "path": "scripts/record_ro_hand_structure_baseline.py",
+      "sha256": "82954f2e7c9858d20b9be3a99ba7569639bcbc43c64fd94cecc2b695939f322f"
+    },
+    {
+      "path": "scripts/record_ro_preflight_failure.py",
+      "sha256": "9e1a1e96c15fddf1df34c28ce07cb503435108177282c16b38a2c68c03d54431"
+    },
+    {
+      "path": "scripts/refine_ro_apose_cloth.py",
+      "sha256": "4351f2cc5a5f21d299341f34d1a4ffbf2532b0c5544fd2fa1874539ba46a0e9c"
+    },
+    {
+      "path": "scripts/refine_ro_core_digit_weights.py",
+      "sha256": "3ffdf3df830291695b78aae7d1be9dcaf31d10930316c92748aba226963dc109"
+    },
+    {
+      "path": "scripts/refine_ro_native_thumb_flow.py",
+      "sha256": "b631b601e4dd53e8226ac1b83dfcd8ddd1517f9d17fadcb1fbb7ce522854bc23"
+    },
+    {
+      "path": "scripts/refine_ro_thumb_two_step.py",
+      "sha256": "ce1d4593a9f1c73eeca2e4a01fce4e7b363485eb1e4bf5ad845530b1de1760b0"
+    },
+    {
+      "path": "scripts/refine_ro_thumb_wrist.py",
+      "sha256": "85a7671f52fe158acfee9efaad7fe0ea8a95d03a5d8ebe1a8c414423b0f50732"
+    },
+    {
+      "path": "scripts/register_ro_apose_operation.py",
+      "sha256": "11bc8d491442e4bf239374aac69ed111e93485dde6fefce5382a11a812113b4a"
+    },
+    {
+      "path": "scripts/render_ro_stress.py",
+      "sha256": "d01ce28075f329663806b56c4e64f78187dcdee1f942683d7e723bd9e25af983"
+    },
+    {
+      "path": "scripts/repair_ro_front_arm_poles.py",
+      "sha256": "1cfc1de9e3d0e5e7b5a69e57773e1aa1e8779285a15c2577ffa5213b520d1bf0"
+    },
+    {
+      "path": "scripts/repair_ro_motion.py",
+      "sha256": "d2fb351dcbf4948682744c1b6704d2543831f3499468ee6540589f6a0ed24b6e"
+    },
+    {
+      "path": "scripts/repair_ro_paired_reach.py",
+      "sha256": "2780abcc3ba93ee99ab8a6ce20caf742a6d2de5e99a0dcdad0605e7708eb5a69"
+    },
+    {
+      "path": "scripts/repair_ro_rigid_wrist_prototype.py",
+      "sha256": "af725f275fc15c2a71d4941002af53c7d4ac1a90827942f3545875a0992ea40b"
+    },
+    {
+      "path": "scripts/repair_ro_swordsman_api_grant.py",
+      "sha256": "35f8b5e0fe6c24837aeb86f54d157915fb92513f48ea9424c051500e9c482e00"
+    },
+    {
+      "path": "scripts/restore_ro_apose_hands.py",
+      "sha256": "e4f8b0635f22099618b7cb792a7b220668a8bf8ea0040db1571de0afecbdf9c3"
+    },
+    {
+      "path": "scripts/resume_ro_hand_generation.py",
+      "sha256": "36c2afee449ac67fffefcd0a9fd8b809ca8677fc3e919387e0bf1c6c169c89df"
+    },
+    {
+      "path": "scripts/resume_ro_hand_structure_generation.py",
+      "sha256": "1de6ce690e06a2742a3189e7312373935658cbdf1d5512f42a20692ab78aee9e"
+    },
+    {
+      "path": "scripts/resume_ro_split_preparation.py",
+      "sha256": "238bfe30e1a3d2ea0a3e2bbcc0ee924baad5c55efe15333a932eef036514811d"
+    },
+    {
+      "path": "scripts/retopo_ro_hand_prototype.py",
+      "sha256": "6e22f0ed93ab11dda3b52568000377628b27c12f5038cff304af9e6372529448"
+    },
+    {
+      "path": "scripts/rig_ro_batch_preflight.py",
+      "sha256": "b7da4d74ab5efc8fd1724d3dd37933ba40626fdec7dec689fa30ef5ce622ae50"
+    },
+    {
+      "path": "scripts/rig_ro_core_fallback.py",
+      "sha256": "83b250d6b95917cf17b5976b8ae016848e55f0a6387e9e41e384c5dc4861edda"
+    },
+    {
+      "path": "scripts/ro_core_rig.py",
+      "sha256": "8a9184b7067ca6c353ec36d907de7b75e5417f46daed00dafa7b45248c8e9874"
+    },
+    {
+      "path": "scripts/ro_glove_contact_ik.py",
+      "sha256": "8756b90eb70116549ceb4b5f634f5c2885431598b2830b9c98ff51f630f91a8c"
+    },
+    {
+      "path": "scripts/ro_hand_gate.py",
+      "sha256": "f9f84c28038d1a82c519a999c72133ba701e6f211f75619f9a770257b45855a9"
+    },
+    {
+      "path": "scripts/ro_review_common.py",
+      "sha256": "98b795e379d682d84476b4e18d7c296364c1a6cf9bb36af6d4e13a08dbe1fc3d"
+    },
+    {
+      "path": "scripts/scout_ro_thumb_patch_boundary.py",
+      "sha256": "6d24658ee5fe5d930c72434a9a526cb17c45ae653d237ce2b9830e2659f7b997"
+    },
+    {
+      "path": "scripts/smooth_ro_hand_root_weights.py",
+      "sha256": "8019a1268c0bc885cc98e44f913ac30700631dd7bb8244c65f517c6bb6f11fca"
+    },
+    {
+      "path": "scripts/smooth_ro_leg_transitions.py",
+      "sha256": "f8d8b4f1425aca456b39da28fdb9c4f5ca79bda6747b35684a3fed1ff0bda135"
+    },
+    {
+      "path": "scripts/solve_ro_glove_joint_contact.py",
+      "sha256": "12a7eb1963789fc4632791ecf9a51a89c86564488c23c0cc5d2ac7c51eafe190"
+    },
+    {
+      "path": "scripts/start_ro_hand_root_weights.py",
+      "sha256": "3046da46b84aa2b6d78f1c5701961a6e2a348b8d98215fb860594c9b53e3f53a"
+    },
+    {
+      "path": "scripts/start_ro_hand_structure_phase.py",
+      "sha256": "69f99b6ad73a9f2acc8e8cee9d7987db3177119acf07981131ace200fd9ced47"
+    },
+    {
+      "path": "scripts/start_ro_thumb_patch.py",
+      "sha256": "9b8b9469a4db183ac52eb2e7d0a143bad3648682dcbe7150ee17426bf94da3d0"
+    },
+    {
+      "path": "scripts/start_ro_thumb_two_step.py",
+      "sha256": "10a8970b9a21b181e1f3d4054ad3031ffcfbbec531f247cdbaf3ad09d77b1dca"
+    },
+    {
+      "path": "scripts/stress_ro_repair.py",
+      "sha256": "0da434d0c5ad660db525b6d914e0688341aa608de9af2abdd5ab7090658f3fdd"
+    },
+    {
+      "path": "scripts/tailor_ro_batch_fit.py",
+      "sha256": "f2eee2779d6c214095ca1de8e593644ce45bd64267ca770e6a5edaa127af2c38"
+    },
+    {
+      "path": "scripts/verify_ro_apose_preflight.py",
+      "sha256": "c40eaaeeacb6211fdaebdf280a7263cbfcf7625a451eefe2b323679b12c1434f"
+    },
+    {
+      "path": "scripts/verify_ro_batch_preparation.py",
+      "sha256": "1f5f051a19ace83778c1211cb7faa52b532f8abb3dc6341078529889b8067a46"
+    },
+    {
+      "path": "scripts/verify_ro_core_fit.py",
+      "sha256": "c534623280672a7d308b33e5f3adf6d585d95ed2871dcd12b7e1ba2eb9263925"
+    },
+    {
+      "path": "scripts/verify_ro_hand_api_completion.py",
+      "sha256": "ffbb7bbb9365b8363b057f0c1184051e5be023d01d72e4acba1a25bd6271d717"
+    },
+    {
+      "path": "scripts/verify_ro_hand_phase_final.py",
+      "sha256": "82c63d143da27fccbd3a2ffdca5a7dfe4932d2184d838d675d8c72367895a18e"
+    },
+    {
+      "path": "scripts/verify_ro_hand_preparation.py",
+      "sha256": "5b6d249c291679a04cd2e4841c994c34fbd906b2b54e3ed5d12b9cee35ec2ab2"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_api.py",
+      "sha256": "4c19670cb6a9a030b9eb99e17670abfb305e19422519341af0af16d26af9827a"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_phase.py",
+      "sha256": "da1d41614d0322edcbea579c2dfc8d09f8ba4a7d94da3d3a00d137ffa5e8bf9e"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_preparation.py",
+      "sha256": "f0db0a4041812b463192db5be84663f048cfd715e77dbd699c73c8c3e9a8ef30"
+    },
+    {
+      "path": "scripts/verify_ro_phase_final.py",
+      "sha256": "db9d60cf967adcd1545ad96dc82af6da1e9962d4b61582bbd28932b6b60f6cb6"
+    },
+    {
+      "path": "scripts/verify_ro_repair.py",
+      "sha256": "b000d5e4fce40a82c915e35d38068c5753b3c0b64b5d8b73b3f0222f3b65e2bb"
+    },
+    {
+      "path": "scripts/workbench.py",
+      "sha256": "cbe8a8f9d175136d4388e4e4c8b34ed9985ffb2f5b02c608ef77c4fc1069ad0b"
+    }
+  ],
+  "actual_pngs": 77,
+  "checks_executed_this_run": [
+    {
+      "name": "unit-tests",
+      "argv": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-03T13:35:36.806375+00:00",
+      "ended_utc": "2026-10-03T13:35:39.013385+00:00",
+      "log": "runs/qa/ro-swordsman-combo-r007/unit-tests-final.log",
+      "tests": 116,
+      "seconds": 2.017
+    },
+    {
+      "name": "pipeline-validation",
+      "argv": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-B",
+        "scripts/pipeline.py",
+        "validate"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-03T13:35:39.013385+00:00",
+      "ended_utc": "2026-10-03T13:35:39.093316+00:00",
+      "log": "runs/qa/ro-swordsman-combo-r007/pipeline-validation-final.log"
+    },
+    {
+      "name": "request-validation",
+      "argv": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-B",
+        "scripts/workbench.py",
+        "validate",
+        "requests/ro-swordsman-combo-r007.json"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-03T13:35:39.093316+00:00",
+      "ended_utc": "2026-10-03T13:35:39.180259+00:00",
+      "log": "runs/qa/ro-swordsman-combo-r007/request-validation-final.log"
+    },
+    {
+      "name": "api-entry-help",
+      "argv": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-B",
+        "scripts/hyper3d_api.py",
+        "--help"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-03T13:35:39.180259+00:00",
+      "ended_utc": "2026-10-03T13:35:39.263341+00:00",
+      "log": "runs/qa/ro-swordsman-combo-r007/api-entry-help-final.log"
+    },
+    {
+      "name": "api-completed-status",
+      "argv": [
+        "C:\\Program Files\\Python312\\python.exe",
+        "-B",
+        "scripts/hyper3d_api.py",
+        "status",
+        "--operation",
+        "ro-hand-structure-20261003-001"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-03T13:35:39.263341+00:00",
+      "ended_utc": "2026-10-03T13:35:39.346825+00:00",
+      "log": "runs/qa/ro-swordsman-combo-r007/api-completed-status-final.log",
+      "verification_scope": "Actual CLI local download state; no remote query or cost"
+    }
+  ],
+  "git": {
+    "isolated_worktree": {
+      "head": "c990639962b7ce85eb6beb631057aa4d76a3e86d",
+      "staged_paths": [],
+      "diff_check": "pass"
+    },
+    "main_checkout": {
+      "head": "e077e22ba57447031b7cc89e3d37bd9cef47daf4",
+      "staged_paths": [],
+      "diff_check": "pass"
+    }
+  },
+  "request_spec_quality_targets_preserved": true,
+  "phase_clock_reset": false,
+  "phase_wall_seconds_at_trial_close": 9734.127367,
+  "post_trial_archive_verification_seconds": 463.788437,
+  "original_phase_wall_seconds_through_verification": 10197.915804,
+  "API": {
+    "entry": "C:\\Repos\\mmo-asset-pipeline\\scripts\\hyper3d_api.py",
+    "state": "downloaded",
+    "consumed_credits": 0.5,
+    "paid_submissions": 1,
+    "files": 8,
+    "provider_oldpolicy_rootentry_unchanged": true,
+    "exact_DPAPI_binding_verified": true,
+    "outside_repo_health": "known ENVIRONMENT_FAILURE unchanged, no safety/config repair"
+  },
+  "right_grip_left_hand_full300frame_VFX_freshanimatedGLB": "not_run_this_phase",
+  "independent_final_review": "runs\\qa\\ro-swordsman-combo-r007\\v004-independent-review.json",
+  "stage_commit_push": "held_by_user",
+  "task_owned_background_work": "none"
+}

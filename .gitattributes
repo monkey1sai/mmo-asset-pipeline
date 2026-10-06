@@ -6,6 +6,11 @@
 *.json text eol=lf
 *.py text eol=lf
 *.toml text eol=lf
+# 執行期 QA 頁面與腳本的 SHA-256 記在閉環紀錄裡；固定 LF，Windows（autocrlf）clone 後雜湊不變。
+*.js text eol=lf
+*.mjs text eol=lf
+*.html text eol=lf
+*.css text eol=lf
 .agents/skills/** text eol=lf
 # Skill 試用文字快照保留相同位元組，供跨平台雜湊核對。
 runs/qa/art-engineer-skill-*/**/*.json text eol=lf
@@ -16,11 +21,15 @@ runs/qa/art-engineer-skill-*.json text eol=lf
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.obj filter=lfs diff=lfs merge=lfs -text
 *.blend filter=lfs diff=lfs merge=lfs -text
+# Blender 存檔時留下的上一版（.blend1）也是 Blender 源檔；封存清單列名的備份同樣走 LFS。
+*.blend1 filter=lfs diff=lfs merge=lfs -text
 *.usd filter=lfs diff=lfs merge=lfs -text
 *.usdc filter=lfs diff=lfs merge=lfs -text
 *.usdz filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
+assets/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+deliveries/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
 assets/**/*.png filter=lfs diff=lfs merge=lfs -text
 assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
 assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
@@ -41,5 +50,22 @@ deliveries/**/*.tiff filter=lfs diff=lfs merge=lfs -text
 deliveries/**/*.exr filter=lfs diff=lfs merge=lfs -text
 deliveries/**/*.hdr filter=lfs diff=lfs merge=lfs -text
 deliveries/**/*.psd filter=lfs diff=lfs merge=lfs -text
+# 參考文件（PDF）是二進位，照原位元組保存，清單記錄的 SHA-256 才能核對。
+*.pdf binary
 # 保留已鎖來源的原始位元組，避免移機換行改動破壞 vendor SHA-256。
 /vendor/blender-skills/** -text
+# r010 回讀用原頂點點陣列；保存實際二進位證據（2026-10-05 使用者授權提交與推送）。
+runs/qa/ro-swordsman-combo-r010/**/*.npz filter=lfs diff=lfs merge=lfs -text
+# 下列證據有些在 Windows 以 CRLF 寫出，紀錄裡的 SHA-256 以寫入時的位元組計算；
+# 不做換行轉換，照原位元組保存，移機或重新 clone 後雜湊仍可核對。不要改寫這些檔案的換行。
+/runs/qa/ro-swordsman-combo*/** -text
+/runs/qa/ro-swordsman-character-v1*/** -text
+/runs/handoffs/** -text
+/runs/ro-swordsman-api-*.json -text
+/assets/raw/ro-swordsman-combo/** -text
+/assets/processed/ro-swordsman-combo*/** -text
+/requests/ro-swordsman-combo*.json -text
+/library/index.json -text
+/scripts/build_ro_index_pulp.py -text
+/scripts/solve_ro_collision_constrained_contact.py -text
+/scripts/solve_ro_moving_target_contact.py -text

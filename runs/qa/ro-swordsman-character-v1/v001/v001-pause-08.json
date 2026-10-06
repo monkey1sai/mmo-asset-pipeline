@@ -1,0 +1,43 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T06:40:05Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "paused_waiting_for_user (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297,
+  358,
+  433,
+  507,
+  238
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z",
+  "2026-10-05T06:00:25Z",
+  "2026-10-05T06:07:33Z",
+  "2026-10-05T06:17:47Z",
+  "2026-10-05T06:36:07Z"
+ ],
+ "active_seconds_total": 3449,
+ "trial_seconds_cap": 21600,
+ "current_best_build": {
+  "blend": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "rules": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+  "joint_range": "73 of 73 numeric gates pass",
+  "closed_loop": "runtime 4.64 um, readback 4.21 um"
+ },
+ "r5": {
+  "withdrawal": {
+   "path": "runs/qa/ro-swordsman-character-v1-r5/withdrawn.json",
+   "sha256": "34ca39453b041cd6daa3951723b1e3a2694552b071261c645457024984b7a725"
+  },
+  "tooling_kept": "armour-contact depth class in scripts/cv1_joint_range.py (inactive unless a contract lists armour meshes); contract builder support"
+ },
+ "shoulder_conclusion": "With this body mesh, automated binding, hinging and following of the pauldrons does not produce a better shoulder: contacts get deeper and the bound armour copy twists. A better moving shoulder needs hand-made modelling of the shoulder region and pauldrons.",
+ "new_paid_submissions": 0
+}

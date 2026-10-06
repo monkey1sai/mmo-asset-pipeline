@@ -1,0 +1,26 @@
+{
+  "id": "v002",
+  "started_utc": "2026-10-03T14:16:37.892905+00:00",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r008/v001-vectors/right_hand_vectors.blend",
+    "sha256": "7d5357fbadb76564a5bcf4340f360bbac195dd2f8b18140834edea3302c071c7"
+  },
+  "weights": {
+    "path": "runs/qa/ro-swordsman-combo-r008/v001-vectors/weights.json",
+    "sha256": "d26598a078619c8b20f1fb236b7292e825b159b25a5ddfde2472f4a94a32aa0d"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r008/local-contract.json",
+    "sha256": "c1f98a6880d358dbbabde945df20ddc4df3ac65fd48c0ba044220601ac0e0f96"
+  },
+  "hypothesis": "Correct axialCMC sign matches frozenulnarpad direction with same completevectorweights.",
+  "change": "Only opposite longitudinalCMC rotation sign; geometry,bones,UV,weights unchanged; allisolatedsigned tests repeated; combined only aftervisual review.",
+  "opposition_mode": "opposition_ulnar",
+  "previous_candidates_used": 1,
+  "candidate_limit": 4,
+  "new_credits": 0
+}

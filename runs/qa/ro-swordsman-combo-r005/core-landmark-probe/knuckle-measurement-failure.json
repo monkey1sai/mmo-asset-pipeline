@@ -1,0 +1,11 @@
+{
+  "classification": "TEST_FAILURE",
+  "error": "RuntimeError: Insufficient knuckle section",
+  "method": "Vertices within a fixed 7mm height band gave insufficient samples for a generated sparse knuckle surface.",
+  "preserved_method": "failed-rig-knuckle-vertex-sampling.py",
+  "new_evidence_based_method": "Intersect actual mesh edges with the knuckle plane before computing bounded local section centers; keep sufficient-sample guard.",
+  "source_modified": false,
+  "completed_rig_output_created": false,
+  "trial_id": "v002",
+  "budget_reset": false
+}

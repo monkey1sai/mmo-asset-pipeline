@@ -1,0 +1,21 @@
+{
+  "id": "v001",
+  "started_utc": "2026-10-04T01:39:56.142657+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r008/v004-contact-solver/right_hand_actual_sword_best.blend",
+    "sha256": "6da16d01cec579544eccb3e3fc366d5fd0618ac6b3bf2a3fbf8d7075c196d282"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r009/local-contract.json",
+    "sha256": "825809ee84263b1df33fdcd92ce37b6d9d06769cf8b4938663a3e7e020555842"
+  },
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "hypothesis": "Fourfinger completechain +sharedroot legalvector gradients reduce original hard-weight collapse without changing sourcegeometry/bones orselectedgrip.",
+  "change": "600 fixed simultaneous projected graph iterations; fixed anatomical caps,16/10/6mm targethalfwidths; protected203thumb points, unchanged actualweapon andcontrols.",
+  "new_credits": 0,
+  "candidate_limit": 4,
+  "previous_candidates_used": 0
+}

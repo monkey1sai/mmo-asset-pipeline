@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "operation_id": "ro-swordsman-reference-20261002-001",
+  "status": "authorized_ready_to_submit",
+  "authority": "User explicitly selected direction 1: update the reviewed authorization.json; at most one additional generation and 0.5 existing monthly or regular credits.",
+  "authorization_envelope": {
+    "destination": "Existing supported Hyper3D API credential account; official Rodin API",
+    "purpose": "Reference-derived RO swordsman static candidate for the requested character, rig and continuous skill animation stress test",
+    "allowed_operations": ["one 0.5-credit generation", "read status of that task", "download completed task into the approved repository directory"],
+    "data_transmitted": "Only sprite_12.png (sha256 94389808174bf30d268d69fbea7cf1f118207e2f272b6a8e73696a6fb93102a3) and the previously recorded 982-character design prompt",
+    "forbidden_operations": ["additional paid submissions", "top-up or upgrade", "paid rigging", "public gallery publishing", "credential disclosure", "other repository writes", "duplicate pending or unknown submission"],
+    "stop_conditions": ["unexpected price", "unknown submission outcome", "failed task", "account or input mismatch"],
+    "conservative_default": "Use the supported credential provider and the same unique operation ID; preserve all previous usage records. Rigging and animation are local work with separate acceptance."
+  },
+  "policy_readback": "runs/ro-swordsman-api-grant-applied.json",
+  "health_check": "codex --strict-config doctor --summary: 19 ok, 8 notes, 6 warn, 0 fail; existing optional MCP and thread warnings remain",
+  "pre_submission_balance": 229,
+  "previous_preflight_failures": [
+    {"input_location": "user source", "result": "PATH_OUTSIDE_AUTHORIZED_ROOTS", "submitted": false},
+    {"input_location": "repository copy", "result": "PATH_OUTSIDE_AUTHORIZED_ROOTS", "submitted": false}
+  ],
+  "previous_task_terminal_recheck": {"task_uuid": "94016052-d332-482a-adee-5b8bd9a83ea4", "done": true, "failed": false, "jobs": "all seven Done"},
+  "note": "The frozen asset request predates the explicit paid authorization. This record supplies the later authority without silently changing frozen evaluation hashes."
+}

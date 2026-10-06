@@ -1,0 +1,405 @@
+{
+ "observed_utc": "2026-10-05T07:27:24.269430+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "d0c85736d1f70c75feaaab39c0b414cfc9a809b3b554a6119a63b7da2c05c436",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516"
+ },
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r4.json",
+  "sha256": "529dd2ef6c1dfcd0598c12cbcaf8f0c48db4a0cba364009682a0057a9d2eda2d"
+ },
+ "definition_verbatim": {
+  "floor": "地面為世界 Z=0 平面（Blender）／Y=0（GLB）",
+  "sole_set": "腳底量點＝rest時 foot／toe 骨權重合計>=0.5 且高度在該腳最低點以上10mm內的頂點；於角色基礎凍結時以頂點ID清單與SHA固定，之後不得更換。",
+  "bed": "床面為代理頂面平面；支撐區量點＝背、骨盆、後腦、小腿各自 rest 時最靠後10mm內的頂點，同樣於基礎凍結時固定。"
+ },
+ "measured_meshes": [
+  "SM_RO_bracer.L",
+  "SM_RO_bracer.R",
+  "SM_RO_coat",
+  "SM_RO_core",
+  "SM_RO_cuirass",
+  "SM_RO_hand.L",
+  "SM_RO_hand.R",
+  "SM_RO_pauldron.L",
+  "SM_RO_pauldron.R"
+ ],
+ "vertex_id": "Blender vertex index per mesh = exported _CV1_ID",
+ "fixtures": {
+  "sole_set.L": {
+   "rule": "foot+toe weight >= 0.5 and z <= lowest + 10 mm",
+   "region_vertices": 515,
+   "lowest_z_m": 8e-05,
+   "vertices": 41,
+   "by_mesh": {
+    "SM_RO_core": 41
+   },
+   "centroid_m": [
+    0.24465,
+    -0.09527,
+    0.00394
+   ],
+   "z_range_m": [
+    8e-05,
+    0.00898
+   ],
+   "y_range_m": [
+    -0.1582,
+    -0.03336
+   ],
+   "sha256": "227b8a799d2daf0e8fcef7d7b7fb9ca03c505a814fc09bc58246bb482448d10e",
+   "ids": {
+    "SM_RO_core": [
+     605,
+     606,
+     607,
+     608,
+     609,
+     610,
+     611,
+     612,
+     613,
+     614,
+     615,
+     616,
+     617,
+     618,
+     5474,
+     5475,
+     5476,
+     5477,
+     5478,
+     5479,
+     5480,
+     5481,
+     5482,
+     5483,
+     5484,
+     5485,
+     5486,
+     5487,
+     5589,
+     5590,
+     5591,
+     5592,
+     5593,
+     5594,
+     5595,
+     5596,
+     5680,
+     5682,
+     5685,
+     5703,
+     5704
+    ]
+   }
+  },
+  "sole_set.R": {
+   "rule": "foot+toe weight >= 0.5 and z <= lowest + 10 mm",
+   "region_vertices": 502,
+   "lowest_z_m": 0.0,
+   "vertices": 36,
+   "by_mesh": {
+    "SM_RO_core": 36
+   },
+   "centroid_m": [
+    -0.2425,
+    -0.0953,
+    0.00421
+   ],
+   "z_range_m": [
+    0.0,
+    0.00934
+   ],
+   "y_range_m": [
+    -0.1597,
+    -0.02087
+   ],
+   "sha256": "d392a87465caba8c8d1346bbed553691e7d5c37a10a5754f02245874bf30b6f5",
+   "ids": {
+    "SM_RO_core": [
+     152,
+     153,
+     154,
+     155,
+     156,
+     157,
+     158,
+     3081,
+     3082,
+     3083,
+     3084,
+     3085,
+     3086,
+     3087,
+     5057,
+     5058,
+     5060,
+     5062,
+     5064,
+     5117,
+     5118,
+     5122,
+     5123,
+     5127,
+     5152,
+     5153,
+     5154,
+     5155,
+     5156,
+     5158,
+     5159,
+     5160,
+     5161,
+     5162,
+     5163,
+     5164
+    ]
+   }
+  },
+  "bed_support.back": {
+   "rule": "weight of spine_01+spine_02 >= 0.5 and y >= rearmost - 10 mm (+Y is the back)",
+   "region_vertices": 6639,
+   "rearmost_y_m": 0.21841,
+   "vertices": 62,
+   "by_mesh": {
+    "SM_RO_cuirass": 62
+   },
+   "centroid_m": [
+    -0.13747,
+    0.2128,
+    1.31312
+   ],
+   "z_range_m": [
+    1.24018,
+    1.35051
+   ],
+   "y_range_m": [
+    0.20843,
+    0.21841
+   ],
+   "sha256": "fd4c3c2ca29cd742f8748e9939affcb9147d6ca0a0385461e748977a1496a98f",
+   "ids": {
+    "SM_RO_cuirass": [
+     1162,
+     1163,
+     1164,
+     1165,
+     1166,
+     1167,
+     1168,
+     1188,
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195,
+     1196,
+     1197,
+     1198,
+     1199,
+     1200,
+     1201,
+     1202,
+     1203,
+     1204,
+     1205,
+     1212,
+     1218,
+     1219,
+     1241,
+     1242,
+     1246,
+     1247,
+     1248,
+     1689,
+     1690,
+     1786,
+     5093,
+     5097,
+     5100,
+     5105,
+     5106,
+     5112,
+     5113,
+     5114,
+     5115,
+     5116,
+     5119,
+     5120,
+     5121,
+     5122,
+     5123,
+     5124,
+     5127,
+     5128,
+     5129,
+     5130,
+     5131,
+     5132,
+     5133,
+     5134,
+     5135,
+     5136
+    ]
+   }
+  },
+  "bed_support.pelvis": {
+   "rule": "weight of pelvis >= 0.5 and y >= rearmost - 10 mm (+Y is the back)",
+   "region_vertices": 3428,
+   "rearmost_y_m": 0.21128,
+   "vertices": 5,
+   "by_mesh": {
+    "SM_RO_coat": 5
+   },
+   "centroid_m": [
+    0.0172,
+    0.20712,
+    0.79158
+   ],
+   "z_range_m": [
+    0.78965,
+    0.79299
+   ],
+   "y_range_m": [
+    0.20135,
+    0.21128
+   ],
+   "sha256": "5d8310e412704be24ed621ffb82db3b88a8e57c3c92926349d782e27839df07a",
+   "ids": {
+    "SM_RO_coat": [
+     1210,
+     1211,
+     1216,
+     6875,
+     6876
+    ]
+   }
+  },
+  "bed_support.head_back": {
+   "rule": "weight of head >= 0.5 and y >= rearmost - 10 mm (+Y is the back)",
+   "region_vertices": 2082,
+   "rearmost_y_m": 0.16193,
+   "vertices": 18,
+   "by_mesh": {
+    "SM_RO_core": 18
+   },
+   "centroid_m": [
+    0.00141,
+    0.15761,
+    1.6235
+   ],
+   "z_range_m": [
+    1.61372,
+    1.63302
+   ],
+   "y_range_m": [
+    0.153,
+    0.16193
+   ],
+   "sha256": "225653ce77713659f157cf1d9a8b1a339bf1c1d597c3eac26ca174a5680e008c",
+   "ids": {
+    "SM_RO_core": [
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195,
+     1215,
+     1216,
+     1217,
+     1218,
+     1219,
+     1220,
+     1221,
+     1222,
+     2025,
+     2026,
+     2077
+    ]
+   }
+  },
+  "bed_support.calf.L": {
+   "rule": "weight of lower_leg.L >= 0.5 and y >= rearmost - 10 mm (+Y is the back)",
+   "region_vertices": 490,
+   "rearmost_y_m": 0.16514,
+   "vertices": 11,
+   "by_mesh": {
+    "SM_RO_core": 11
+   },
+   "centroid_m": [
+    0.15466,
+    0.15981,
+    0.40372
+   ],
+   "z_range_m": [
+    0.36285,
+    0.42525
+   ],
+   "y_range_m": [
+    0.15542,
+    0.16514
+   ],
+   "sha256": "de9b9653b7540f6d48dd37f22b7d97102cf8f9d1d3dee7b1310ab8ca187d4f3f",
+   "ids": {
+    "SM_RO_core": [
+     3929,
+     3932,
+     5341,
+     5343,
+     5344,
+     5345,
+     5346,
+     5348,
+     5730,
+     5829,
+     5831
+    ]
+   }
+  },
+  "bed_support.calf.R": {
+   "rule": "weight of lower_leg.R >= 0.5 and y >= rearmost - 10 mm (+Y is the back)",
+   "region_vertices": 456,
+   "rearmost_y_m": 0.16535,
+   "vertices": 9,
+   "by_mesh": {
+    "SM_RO_core": 9
+   },
+   "centroid_m": [
+    -0.15928,
+    0.15941,
+    0.40404
+   ],
+   "z_range_m": [
+    0.34928,
+    0.43366
+   ],
+   "y_range_m": [
+    0.15569,
+    0.16535
+   ],
+   "sha256": "5b82f9f6c73e4f8ac603f1d43bb691d740f183af1852098ebd4f5e5dca80e1ef",
+   "ids": {
+    "SM_RO_core": [
+     322,
+     4629,
+     4631,
+     4650,
+     4652,
+     4654,
+     4655,
+     4657,
+     4792
+    ]
+   }
+  }
+ },
+ "fixtures_sha256": "2cf5f1cd75874244fd6f5d10cc2a819c83fbaed2d73cad5fb4bfecfd40dc059c",
+ "scope": "Measurement point sets only. They are fixed with the foundation at freeze; floor and bed placement are per-clip setup."
+}

@@ -1,0 +1,51 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-closed-loop/blender-reference.json",
+  "bytes": 129238,
+  "sha256": "98f16f6a69148c8c928551bf2c0360da9e425830d3fdca472d26aeb0014fd0f5"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-closed-loop/blender-reference.f64.bin",
+  "bytes": 19510608,
+  "sha256": "f70238aa422f0831dc1b60ee5a3136a670aa77ad55fa3f0bfd318f0c11b08650"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "bytes": 21606,
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/export/idle_a03_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 27556236,
+   "sha256": "28bb596ca7fcf27440da99e36232ec1c05dd45e5b41967f60b7196e4d7d9b866"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/export/idle_a03_baked_owner_exact_weights.glb",
+   "bytes": 2908400,
+   "sha256": "b8484fe5dd813b7d15719bdcd497281c2d5c577e6e2804cf19978e2309162d10"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   0,
+   "hands"
+  ],
+  [
+   60,
+   "whole"
+  ]
+ ],
+ "note": "Clip closed loop for AN_RO_Idle_Sword a03 (scripts/cv1_export_clip.py): integer frames every 6 frames (runtime and baked) and half frames 0.5/30.5/60.5/90.5 (runtime only), one blend sample of frames 0 and 60. Exact-weight GLBs; twist helper channels stripped from the runtime-owner GLB."
+}

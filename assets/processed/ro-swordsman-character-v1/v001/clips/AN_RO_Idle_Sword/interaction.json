@@ -1,0 +1,41 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Idle_Sword",
+ "fps": 60,
+ "frames": 120,
+ "loop": true,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     0,
+     119
+    ]
+   ],
+   "establishment_frames": [
+    0
+   ]
+  },
+  "grasp.L": {
+   "windows": []
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    0,
+    119
+   ]
+  ],
+  "R": [
+   [
+    0,
+    119
+   ]
+  ]
+ },
+ "events": [],
+ "nominal_speed_m_s": 0.0,
+ "note": "Grasp window covers the whole loop (contact_window_rules.grasp_R); both feet in stance for the whole loop (contact_window_rules.foot_stance)."
+}

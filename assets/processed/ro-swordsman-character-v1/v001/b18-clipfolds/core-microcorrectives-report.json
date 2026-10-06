@@ -1,0 +1,40 @@
+{
+ "observed_utc": "2026-10-05T09:47:44.522690+00:00",
+ "script_sha256": "2d6e73c37338229932c97ecd12207a07d1243aff33c165852058101edd005d49",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b17-clipfolds/ro_character_v001_b17-clipfolds.blend",
+  "sha256": "84c920a9d8f2f81d4754f4bb21e113cb82989a0a874c2cbbfc1ec1c1fa5cf91c"
+ },
+ "source_sha256_after": "84c920a9d8f2f81d4754f4bb21e113cb82989a0a874c2cbbfc1ec1c1fa5cf91c",
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/ro_character_v001_b18-clipfolds.blend",
+  "sha256": "3bd261c386b5f92c652be536696a3fc1a267ede455c8171f9bddaca9bd234ff1"
+ },
+ "area_ratio_target": 0.08,
+ "sites": [
+  {
+   "site": 35,
+   "motion": "clip:AN_RO_Run_Sword@16.5",
+   "level": "clip",
+   "driver_bone": "upper_leg.R*lower_leg.R",
+   "triangle_vertices": [
+    425,
+    424,
+    426
+   ],
+   "apex": 424,
+   "area_ratio_before": 0.0422,
+   "area_ratio_after": 0.1052,
+   "posed_offset_mm": 0.2,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.0,
+    "frozen_pose_maximum_at": "knee-flexion.R@typical"
+   }
+  }
+ ],
+ "scope": "One vertex per site, moved only as far as the triangle needs to keep a share of its rest area in that pose. Not a shoulder or hip deformation fix."
+}

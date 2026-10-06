@@ -1,0 +1,179 @@
+{
+ "sources": {
+  "whole": {
+   "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+   "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "hand": {
+   "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend",
+   "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  }
+ },
+ "method": "Rigid Kabsch fit (rotation + translation, no scale) of r010 hand bone heads onto the whole character's right-hand bone heads.",
+ "fit_all_15_joints": {
+  "landmarks": [
+   "hand.R",
+   "finger1.R_01",
+   "finger1.R_02",
+   "finger1.R_03",
+   "finger2.R_01",
+   "finger2.R_02",
+   "finger2.R_03",
+   "finger3.R_01",
+   "finger3.R_02",
+   "finger3.R_03",
+   "finger4.R_01",
+   "finger4.R_02",
+   "finger4.R_03",
+   "thumb.R_01",
+   "thumb.R_02"
+  ],
+  "rms_mm": 7.573587707806721,
+  "max_mm": 12.364364240158034,
+  "per_landmark_mm": {
+   "hand.R": 11.4,
+   "finger1.R_01": 3.08,
+   "finger1.R_02": 4.99,
+   "finger1.R_03": 5.51,
+   "finger2.R_01": 4.98,
+   "finger2.R_02": 6.7,
+   "finger2.R_03": 12.36,
+   "finger3.R_01": 6.58,
+   "finger3.R_02": 7.04,
+   "finger3.R_03": 7.89,
+   "finger4.R_01": 6.05,
+   "finger4.R_02": 9.51,
+   "finger4.R_03": 8.82,
+   "thumb.R_01": 5.89,
+   "thumb.R_02": 6.95
+  }
+ },
+ "fit_wrist_and_knuckles_6": {
+  "landmarks": [
+   "hand.R",
+   "finger1.R_01",
+   "finger2.R_01",
+   "finger3.R_01",
+   "finger4.R_01",
+   "thumb.R_01"
+  ],
+  "rms_mm": 5.47246801607594,
+  "max_mm": 8.50552589752981,
+  "per_landmark_mm": {
+   "hand.R": 8.51,
+   "finger1.R_01": 5.84,
+   "finger2.R_01": 2.66,
+   "finger3.R_01": 2.1,
+   "finger4.R_01": 6.08,
+   "thumb.R_01": 4.98
+  }
+ },
+ "determinant": {
+  "all": 1.0000000000000007,
+  "base": 0.9999999999999998
+ },
+ "hand_local": {
+  "vertices": 904,
+  "wrist_ring_vertices": 18,
+  "wrist_ring_centre": [
+   -0.00713,
+   0.00386,
+   0.02338
+  ],
+  "wrist_ring_radius_mm": {
+   "min": 39.25,
+   "max": 44.67
+  },
+  "ring_axial_from_hand_bone_mm": -79.98,
+  "mesh_axial_range_from_hand_bone_mm": [
+   -81.74,
+   183.75
+  ],
+  "hand_bone_head": [
+   -0.01164,
+   0.00209,
+   0.10338
+  ]
+ },
+ "in_whole_space_using_base_fit": {
+  "wrist_ring_centre": [
+   -0.41723,
+   0.00864,
+   1.03336
+  ],
+  "hand_bone_head": [
+   -0.41605,
+   -0.00816,
+   0.955
+  ],
+  "whole_hand.R_head": [
+   -0.41366,
+   -0.01221,
+   0.94792
+  ],
+  "ring_centre_along_forearm_from_wrist_mm": -77.17
+ },
+ "bracer_R": {
+  "axial_range_from_wrist_mm": [
+   -237.45,
+   -52.0
+  ],
+  "note": "Negative values are toward the elbow."
+ },
+ "bone_length_mm": {
+  "whole": {
+   "hand.R": 82.0,
+   "finger1.R_01": 24.57,
+   "finger1.R_02": 19.66,
+   "finger1.R_03": 17.2,
+   "finger2.R_01": 29.34,
+   "finger2.R_02": 23.47,
+   "finger2.R_03": 20.54,
+   "finger3.R_01": 33.64,
+   "finger3.R_02": 26.91,
+   "finger3.R_03": 23.55,
+   "finger4.R_01": 30.01,
+   "finger4.R_02": 24.01,
+   "finger4.R_03": 21.01,
+   "thumb.R_01": 40.73,
+   "thumb.R_02": 37.59
+  },
+  "hand": {
+   "hand": 50.0,
+   "finger1_01": 26.11,
+   "finger1_02": 20.47,
+   "finger1_03": 19.3,
+   "finger2_01": 30.43,
+   "finger2_02": 37.01,
+   "finger2_03": 19.64,
+   "finger3_01": 32.37,
+   "finger3_02": 41.46,
+   "finger3_03": 21.52,
+   "finger4_01": 30.19,
+   "finger4_02": 30.23,
+   "finger4_03": 20.56,
+   "thumb_01": 45.15,
+   "thumb_02": 25.36
+  }
+ },
+ "base_fit_matrix_rows": [
+  [
+   -0.909804,
+   -0.412529,
+   -0.045563,
+   -0.421069
+  ],
+  [
+   -0.394682,
+   0.893913,
+   -0.212475,
+   0.007348
+  ],
+  [
+   0.128381,
+   -0.175328,
+   -0.976104,
+   1.057775
+  ]
+ ]
+}

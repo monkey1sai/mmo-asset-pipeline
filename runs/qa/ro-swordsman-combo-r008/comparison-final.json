@@ -1,0 +1,61 @@
+{
+  "mode": "declared_quality_comparison_only",
+  "request_id": "ro-swordsman-combo-r008",
+  "request_sha256": "d96d7d4c0461d59ef65c5fcd267a104e4ff9770299af421baf0eaddc3238d54b",
+  "protocol_sha256": "24728a9f363acc58985e35b58928066dacb7e789d512f0bf06c80cf80916e86f",
+  "trials": [
+    {
+      "id": "baseline",
+      "decision": "baseline",
+      "issues": [],
+      "failed_gates": [
+        "geometry_materials",
+        "package_complete",
+        "deformation",
+        "animation",
+        "export-roundtrip"
+      ]
+    },
+    {
+      "id": "v001",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    },
+    {
+      "id": "v002",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    },
+    {
+      "id": "v003",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    },
+    {
+      "id": "v004",
+      "decision": "failed",
+      "issues": [],
+      "failed_gates": []
+    }
+  ],
+  "blockers": [],
+  "best_trial_id": "baseline",
+  "best_content_artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r008/baseline/ro_weight_vector_baseline.blend",
+      "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r008/baseline/ro_weight_vector_baseline.glb",
+      "sha256": "027cf2501619b4262ea8b040618364d2e756e6a3f476e12ed827fff9fadd2985"
+    }
+  ],
+  "quality_target_met": false,
+  "elapsed_seconds": 3968.465451,
+  "candidate_trials_used": 4,
+  "next_action": "stop_budget",
+  "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。"
+}

@@ -1,0 +1,13 @@
+{
+  "original": {
+    "path": "scripts/solve_ro_moving_target_contact.py",
+    "sha256": "9e029486b9102c0d36031fbd21620a31547d1561a5cc30342ce8ac6a985b0a8d"
+  },
+  "derived": {
+    "path": "scripts/solve_ro_collision_constrained_contact.py",
+    "sha256": "e9fa946134703ba289e1b8544455cb71badf0d3a7fe23d9f3312599edcaa694d"
+  },
+  "method": "Hmetric projection ofcontactstep into active vertex/edge/triangle-centroid nearweapon halfspaces plus parameterbox; actual fullcollision andfixedpads remain final guards.",
+  "old_code_preserved": true,
+  "no_oldcandidate_reset": true
+}

@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-03T12:47:32.558448+00:00",
+  "source_report": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v001-thumb-flow/flow.json",
+    "sha256": "da4793d84253d6e6a7a0d8db6ac4cf716056e0229e6d9f1174c6553e8377a473"
+  },
+  "original_stop_reason": "no_legal_improving_local_rotation",
+  "actual_bounded_stop": "160-probe budget reached with2poles remaining",
+  "does_not_prove_Blender_cannot_fix": true,
+  "old_report_preserved": true,
+  "correction": "Unsearched neighbors after probe limit are not proof of no legal edge rotation; no extra v001 probes allowed"
+}

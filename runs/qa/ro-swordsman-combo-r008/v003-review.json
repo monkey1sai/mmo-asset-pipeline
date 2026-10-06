@@ -1,0 +1,54 @@
+{
+  "verdict": "NO_SHIP",
+  "classification": "PRODUCT_FAILURE: actualsword cuts allfixedtemplategrasps; handselffailpersists",
+  "cases": [
+    {
+      "label": "shallow-palm",
+      "self_pairs": 6,
+      "sword_pairs": 326,
+      "penetration_m": 0.01008452195674181
+    },
+    {
+      "label": "wrap-palm",
+      "self_pairs": 20,
+      "sword_pairs": 438,
+      "penetration_m": 0.010090225376188755
+    },
+    {
+      "label": "distalwrap-palm",
+      "self_pairs": 7,
+      "sword_pairs": 465,
+      "penetration_m": 0.010020315647125244
+    },
+    {
+      "label": "shallow-distal",
+      "self_pairs": 6,
+      "sword_pairs": 409,
+      "penetration_m": 0.009910572320222855
+    },
+    {
+      "label": "wrap-distal",
+      "self_pairs": 20,
+      "sword_pairs": 457,
+      "penetration_m": 0.010197391733527184
+    },
+    {
+      "label": "distalwrap-distal",
+      "self_pairs": 7,
+      "sword_pairs": 457,
+      "penetration_m": 0.010136954486370087
+    }
+  ],
+  "littlefinger_isolated_counts": [
+    0,
+    0,
+    0,
+    3,
+    11
+  ],
+  "next_hypothesis": "Frozenconstraints not provenimpossible; littlefinger3isolateddifferentPIP/DIPposes0cross. Correctcontrolledsplayorder andboundedactualcontactsolve.",
+  "numeric_contact_near_is_not_holding": "Existing nearby sourcepads coincide withlargecutting; no contactPASS.",
+  "material_FAIL": 16,
+  "whole_scores_changed": false,
+  "new_credits": 0
+}

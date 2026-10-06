@@ -1,0 +1,96 @@
+{
+ "observed_utc": "2026-10-05T08:23:10.607514+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "027bf3b2b222201b7c7e5d8e318d637a36f17dfac6c08f75ef1bc94c3d9dd353",
+ "foundation": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+  "saved": false
+ },
+ "spec": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/clip.json",
+  "sha256": "2c88682d41ee2deef2163e5386c9cf1920a0f1b79cc8324eed35e3d6d6bf33e0"
+ },
+ "contract": {
+  "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+ },
+ "poses": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/poses.json",
+  "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/corrective-rules.json",
+  "sha256": "9062308084f01c13a54e49c4fdbd3662abdf69dcb5dd98a84e81677a2895ad22"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/AN_RO_Idle_Sword.blend",
+  "sha256": "f366021aaa5318c961fe5e80ef00bbbd3a1ee5b3cd7285f121ada7f716578db5",
+  "action": "AN_RO_Idle_Sword",
+  "fcurves": 136
+ },
+ "clip": "AN_RO_Idle_Sword",
+ "frames": 120,
+ "keyed_frames": [
+  0,
+  120
+ ],
+ "interpolation": "LINEAR",
+ "animated_bones": [
+  "clavicle.L",
+  "clavicle.R",
+  "finger1.L_01",
+  "finger1.L_02",
+  "finger1.R_01",
+  "finger1.R_02",
+  "finger1.R_03",
+  "finger2.L_01",
+  "finger2.L_02",
+  "finger2.R_01",
+  "finger2.R_02",
+  "finger2.R_03",
+  "finger3.L_01",
+  "finger3.L_02",
+  "finger3.R_01",
+  "finger3.R_02",
+  "finger3.R_03",
+  "finger4.L_01",
+  "finger4.L_02",
+  "finger4.R_01",
+  "finger4.R_02",
+  "finger4.R_03",
+  "hand.R",
+  "head",
+  "lower_arm.L",
+  "lower_arm.R",
+  "neck",
+  "spine_02",
+  "thumb.L_01",
+  "thumb.R_01",
+  "thumb.R_02",
+  "thumb.R_03",
+  "upper_arm.L",
+  "upper_arm.R"
+ ],
+ "helper_bones_not_keyed": [
+  "wrist_transition.L_twist",
+  "wrist_transition.R_twist"
+ ],
+ "sword_solution": {
+  "roll_deg": 170,
+  "swivel_deg": -10,
+  "wrist_bend_deg_at_frame0": 13.05,
+  "searched": 1
+ },
+ "ik": {
+  "max_wrist_error_mm": 0.000155572690202453,
+  "wrist_bend_deg_range": [
+   12.968142082739295,
+   13.53772009536312
+  ],
+  "elbow_angle_deg_range": [
+   153.10373092544327,
+   155.10900616386732
+  ]
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-04T05:33:29.010192+00:00",
+  "candidate": "v003",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v003-index-pulp/right_hand_grasp_corrective.blend",
+    "sha256": "5a775e0e8201cf8cbab5a8a0f9008a2f1434f6b76836697f5ffbe859abd84e55"
+  },
+  "new_model_search": false,
+  "curve": "smoothstep closure frame1..31, morph=t^3, frame31..61 hold; hand rigid motion after31; baked integerframes and sampledhalfframes",
+  "contact_establishment_frame": 31,
+  "scope": "local diagnostic only, not full300",
+  "controls_source": {
+    "path": "runs/qa/ro-swordsman-combo-r009/v004-collision-constraints/result.json",
+    "sha256": "29cca416aa7ddf0a75fb9a5e9b111b400baee1071797de5829a7ec0dd46fbab9"
+  }
+}

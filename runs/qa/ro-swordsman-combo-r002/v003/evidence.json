@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "request_id": "ro-swordsman-combo-r002",
+  "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+  "checks": {
+    "art_match": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: art_match failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "scale_pivot": {
+      "status": "fail",
+      "method": "Actual evaluated REST body-only height1.737321855m, ground~-1.7e-9m and root0; nominal1.74m differs2.678mm, no approved tolerance/exact size acceptance. Bone pivots explicitly mapped; failed posed feet remain separate.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "geometry_materials": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: geometry_materials failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "package_complete": {
+      "status": "pass",
+      "method": "Actual three requested model artifacts, README rig/axis/time/effect mapping, manifest/readback hashes, bothGLBs no externalbuffers/images, and threeffprobe60fps/300frames/5s videos. Complete local failed review package, not accepted delivery.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "rig_mapping": {
+      "status": "pass",
+      "method": "Actual freshGLB25named joints/1skin/75channels, mapped local bone heads/tails and bindings; no game retarget claim.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "deformation": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: deformation failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "animation": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: animation failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "export-roundtrip": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: export-roundtrip failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    },
+    "skill-effects": {
+      "status": "fail",
+      "method": "Actual independent fixed-view/all300thumbnail/selectedfullframe review plus current-subject DCC reports: skill-effects failed for findings in independent-review; no claimed game/runtime test.",
+      "artifacts": [
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/independent-review.json",
+          "sha256": "8d09002343eb32fde44574192765cdb4ff39ecc0feb86bc1d047c3c551452646"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/fresh-import.json",
+          "sha256": "a7adb9036d4f8a9138e0b6bd74dbbe31744a62a5119cdce3cb041985c53c520b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/body-scale-rig-map.json",
+          "sha256": "fb00da3c103b695bd79faa5f2c354ed938c89afa189099b90fbcfab3ad7051e8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/review-package-manifest.json",
+          "sha256": "4e756f791bab853ebf6d69b1f61f732ba00bcf1ef932d6708edde9bb3b1d92d8"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master-final/report.json",
+          "sha256": "26311cdfdd2e90f2108907c6b4bffa84f2e0019174757e1fec9c26ee3e83902b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/neutral-roundtrip-final/report.json",
+          "sha256": "8ec1f9e39dbb72069f680fb7f9737d03164db0150c010ec554e385eae6a6c72b"
+        },
+        {
+          "path": "runs/qa/ro-swordsman-combo-r002/v003/with-effects-final/report.json",
+          "sha256": "0178f34fea98932b3f89010356e8c94f26aa47f285956cdf679a9b5f590f1be7"
+        }
+      ]
+    }
+  },
+  "deliverables": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_master.blend",
+      "sha256": "1c47aa35ab5e0b6647f874d92c3093c1139625ae0aa4edf3bcf60b862e25638c"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_combo.glb",
+      "sha256": "8132df5c46574b24a50c4f6cbf9682e52dff6d2d4138d0baa470f9ecc44aa53d"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_skill_effects.glb",
+      "sha256": "f748438d9979d7495438413436c12796701675949d3c21c3746339902fd75a3a"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/README.md",
+      "sha256": "1652e7ccfa7fd537bbd6be539c80384b34651a15ce7de23facdcb2b48cf18631"
+    }
+  ],
+  "subject_artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_master.blend",
+      "sha256": "1c47aa35ab5e0b6647f874d92c3093c1139625ae0aa4edf3bcf60b862e25638c"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_combo.glb",
+      "sha256": "8132df5c46574b24a50c4f6cbf9682e52dff6d2d4138d0baa470f9ecc44aa53d"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r002/v003/ro_skill_effects.glb",
+      "sha256": "f748438d9979d7495438413436c12796701675949d3c21c3746339902fd75a3a"
+    }
+  ]
+}

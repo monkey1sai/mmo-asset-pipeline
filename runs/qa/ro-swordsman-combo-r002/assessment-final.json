@@ -1,0 +1,146 @@
+{
+  "mode": "evidence_contract_check_only",
+  "request_id": "ro-swordsman-combo-r002",
+  "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+  "delivery_scope": "standalone",
+  "checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "rig_mapping",
+      "area": "technical",
+      "description": "指定骨架、權重及掛點經檢查",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "deformation",
+      "area": "technical",
+      "description": "關節變形及指定動作經檢查",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "animation",
+      "area": "technical",
+      "description": "需求列出的所有動作經檢查",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "export-roundtrip",
+      "area": "technical",
+      "description": "乾淨場景GLB重匯入，實際skin/joints/channels/材質/採樣與變形保留；以交付hash綁定。",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    },
+    {
+      "id": "skill-effects",
+      "area": "art",
+      "description": "斬擊／怒爆／霸體效果對應參考且可關閉；無效果全段另外檢查。",
+      "declared_status": "fail",
+      "evidence_integrity": "not_satisfied"
+    }
+  ],
+  "blockers": [
+    "art_match: fail",
+    "scale_pivot: fail",
+    "geometry_materials: fail",
+    "deformation: fail",
+    "animation: fail",
+    "export-roundtrip: fail",
+    "skill-effects: fail",
+    "quality targets or required best-version checks not satisfied",
+    "delivery model/dependencies do not match the evaluated best version"
+  ],
+  "decision": "not_ready",
+  "target_environment_claim": "not_requested",
+  "note": "只核對已登記證據及檔案完整性；不自行判斷外觀、骨架或引擎可用，也不宣稱已交付。",
+  "quality_comparison": {
+    "mode": "declared_quality_comparison_only",
+    "request_id": "ro-swordsman-combo-r002",
+    "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+    "protocol_sha256": "464fb0b3e748684e54108b5939a77c17721a25a31ef1d8bc361e6bf05ccf5025",
+    "trials": [
+      {
+        "id": "baseline",
+        "decision": "baseline",
+        "issues": [],
+        "failed_gates": [
+          "geometry_materials",
+          "rig_mapping",
+          "deformation",
+          "animation",
+          "export-roundtrip"
+        ]
+      },
+      {
+        "id": "v001",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      },
+      {
+        "id": "v002",
+        "decision": "failed",
+        "issues": [],
+        "failed_gates": []
+      },
+      {
+        "id": "v003",
+        "decision": "discard",
+        "issues": [],
+        "failed_gates": [
+          "scale_pivot",
+          "geometry_materials",
+          "deformation",
+          "animation",
+          "export-roundtrip"
+        ]
+      }
+    ],
+    "blockers": [],
+    "best_trial_id": "baseline",
+    "best_content_artifacts": [
+      {
+        "path": "assets/processed/ro-swordsman-combo-r002/baseline/ro_source_baseline.blend",
+        "sha256": "fb3edee5a4b736cf547bcb2664137fa9cd09146b826dfa1814797fbdeed0f102"
+      },
+      {
+        "path": "assets/processed/ro-swordsman-combo-r002/baseline/ro_source_baseline.glb",
+        "sha256": "38e37aa985f179080769d65137d64b5f2d5535ebe0b5340538bcfe18f054d759"
+      }
+    ],
+    "quality_target_met": false,
+    "elapsed_seconds": 5100.384359,
+    "candidate_trials_used": 3,
+    "next_action": "stop_budget",
+    "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。"
+  }
+}

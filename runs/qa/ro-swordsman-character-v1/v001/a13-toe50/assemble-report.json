@@ -1,0 +1,239 @@
+{
+ "observed_utc": "2026-10-05T05:30:35.789658+00:00",
+ "blender": "4.5.5 LTS",
+ "tag": "a13-toe50",
+ "sources": {
+  "whole": {
+   "path": "assets/processed/ro-swordsman-combo-r010/baseline/ro_whole_baseline.blend",
+   "sha256": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e"
+  },
+  "whole_sha256_after": "e1b17ac13d8677ef4914995e3308b18e99fd22f694c7fd240c541e74701d178e",
+  "hand": {
+   "path": "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend",
+   "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  }
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/a13-toe50/ro_character_v001_a13-toe50.blend",
+  "sha256": "9d1d5950e9d2d71d2d78db13a7afcbbb796383fab692788f51cb26b2ca1b3c99",
+  "bytes": 40020649
+ },
+ "registration": {
+  "rule": "wrist joint to wrist joint; hand axis on the forearm axis; palm facing as in the baseline; rigid, no scale",
+  "matrix_rows": [
+   [
+    -0.68897957,
+    -0.49852484,
+    -0.52609903,
+    -0.366243
+   ],
+   [
+    -0.33005959,
+    0.86204857,
+    -0.38462034,
+    0.02191184
+   ],
+   [
+    0.64526576,
+    -0.09135146,
+    -0.75847667,
+    1.03403175
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "determinant": 0.9999998807907104
+ },
+ "bones": {
+  "before": 54,
+  "after": 60,
+  "cuff_carriers": [
+   "wrist_transition.R",
+   "wrist_transition.L"
+  ],
+  "right_hand_frames": "r010 bone matrices under the registration",
+  "left_hand_frames": "mirror of the right"
+ },
+ "protected_r010_hand": {
+  "vertices": true,
+  "max_edge_length_change_m": 8.439218864616377e-08,
+  "polygons_identical": true,
+  "uv_identical": true,
+  "max_corrective_delta_change_m": 6.083634170256716e-08,
+  "weights_identical_ids": 786,
+  "weights_changed_ids": 118
+ },
+ "cuff": {
+  "applied": true,
+  "vertices_behind_wrist": 118,
+  "blend_mm": 30.0,
+  "right_vertex_ids_changed": [
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   638,
+   639,
+   640,
+   641,
+   642,
+   643,
+   644,
+   645,
+   647,
+   648,
+   650,
+   651,
+   707,
+   708,
+   709,
+   710,
+   711,
+   712,
+   713,
+   714,
+   715,
+   716,
+   717,
+   718,
+   719,
+   720,
+   721,
+   722,
+   723,
+   724,
+   725,
+   726,
+   727,
+   728,
+   729,
+   730,
+   731,
+   732,
+   733,
+   734,
+   735,
+   736,
+   737,
+   738,
+   739,
+   741,
+   742,
+   743,
+   746,
+   767,
+   768,
+   769,
+   770,
+   771,
+   772,
+   773,
+   774,
+   775,
+   776,
+   777,
+   778,
+   779,
+   780,
+   781,
+   782,
+   783,
+   784,
+   785,
+   786,
+   787,
+   788,
+   789,
+   790,
+   791,
+   792,
+   793,
+   794,
+   795,
+   798,
+   799,
+   800,
+   801,
+   802,
+   803,
+   804,
+   805,
+   806,
+   807,
+   808,
+   809,
+   810,
+   813,
+   814,
+   815,
+   816,
+   817,
+   818,
+   819,
+   820,
+   821,
+   822,
+   823,
+   824,
+   825,
+   826,
+   827,
+   828,
+   829,
+   830
+  ]
+ },
+ "toes": {
+  "applied": true,
+  "blend_mm": 50.0,
+  "radius_mm": 50.0,
+  "vertices_1.0": 64
+ },
+ "weapon": {
+  "congruence_max_m": 3.652820565469561e-08,
+  "socket": "r010 sword bone under the registration"
+ },
+ "replaced_right_parts_triangles": {
+  "SM_RO_glove.R": 1918,
+  "SM_RO_WristLoft.R": 824
+ },
+ "core_right_stump_vertices_reweighted": 10,
+ "left_core": {
+  "cut_axial_from_wrist_mm": -55.0,
+  "faces_removed_left": 760,
+  "faces_removed_right": 61,
+  "stump_vertices_reweighted": 64,
+  "vertices_left_beyond_cut": 14
+ },
+ "left_bracer": "original left bracer cut at -52.0 mm from the wrist; faces 3026 -> 2354",
+ "core_relax": {
+  "applied": false
+ },
+ "core_rigid_triangles": {
+  "applied": false
+ },
+ "triangles": {
+  "SM_RO_bracer.L": 2395,
+  "SM_RO_bracer.R": 2404,
+  "SM_RO_coat": 12542,
+  "SM_RO_core": 13616,
+  "SM_RO_cuirass": 10734,
+  "SM_RO_hand.L": 1788,
+  "SM_RO_hand.R": 1788,
+  "SM_RO_pauldron.L": 4308,
+  "SM_RO_pauldron.R": 4308,
+  "SM_RO_sword": 2552
+ },
+ "triangles_total": 56435,
+ "triangle_budget": 60000,
+ "materials_note": "Both hands still carry the r010 gray review material; textured material is a later step of this candidate."
+}

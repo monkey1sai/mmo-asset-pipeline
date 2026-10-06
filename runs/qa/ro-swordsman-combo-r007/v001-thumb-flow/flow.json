@@ -1,0 +1,98 @@
+{
+  "observed_utc": "2026-10-03T12:37:10.702201+00:00",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-source-preparation/right_hand_exterior.blend",
+    "sha256": "cc384612d5a5881530681f68dea96db49f7b8535f6c3ae3f6cfad7c2184e0624"
+  },
+  "frozen_joint_probe": {
+    "path": "runs/qa/ro-swordsman-combo-r007/v001-source-preparation/joint-and-pole-probe.json",
+    "sha256": "b8145fa50d0981bd32bc691374620af99fd89f244aa090640b310d7a855da824"
+  },
+  "initial_bad_poles": [
+    47,
+    54,
+    68,
+    95
+  ],
+  "final_bad_poles": [
+    47,
+    54
+  ],
+  "pole_gate": false,
+  "probe_count": 160,
+  "maximum_probes": 160,
+  "maximum_rotations": 8,
+  "chosen_rotations": [
+    {
+      "iteration": 0,
+      "edge_vertices": [
+        69,
+        70
+      ],
+      "ccw": false,
+      "before_bad": 4,
+      "event_kind": "topology_probe",
+      "observed_utc": "2026-10-03T12:37:09.066937+00:00",
+      "after_bad": 3,
+      "surface_centroid_residual_m": 0.00019077963952440768,
+      "changed_faces": [
+        [
+          68,
+          69,
+          650,
+          652
+        ],
+        [
+          68,
+          70,
+          71,
+          652
+        ]
+      ]
+    },
+    {
+      "iteration": 1,
+      "edge_vertices": [
+        92,
+        93
+      ],
+      "ccw": false,
+      "before_bad": 3,
+      "event_kind": "topology_probe",
+      "observed_utc": "2026-10-03T12:37:09.242273+00:00",
+      "after_bad": 2,
+      "surface_centroid_residual_m": 0.0005824059480801225,
+      "changed_faces": [
+        [
+          92,
+          95,
+          703,
+          704
+        ],
+        [
+          93,
+          94,
+          95,
+          704
+        ]
+      ]
+    }
+  ],
+  "stop_reason": "no_legal_improving_local_rotation",
+  "vertex_positions_unchanged": true,
+  "unchanged_face_count_UV_readback": 861,
+  "changed_original_face_count": 4,
+  "untouched_corner_UV_pass": true,
+  "changed_face_UV_method": "Existing consistent local vertex UV; seams rejected",
+  "source_unchanged": true,
+  "rig_created": false,
+  "animation_topology_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+    "sha256": "23996a8978e98a96b8674fc782f00bf00e77b04225b0bb29c8976c6223d75599"
+  },
+  "limitations": [
+    "Centroid surface residual is partial; actual changed triangles/self-intersections still require validation before binding",
+    "Frozen joint bands are a bounded artist mask, not all possible deformation regions"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+ "id_attribute": "_CV1_ID",
+ "meshes": [
+  {
+   "mesh": "SM_RO_bracer.L",
+   "export_vertices": 1444,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_bracer.R",
+   "export_vertices": 1560,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_coat",
+   "export_vertices": 6888,
+   "vertices_with_restored_influence": 1,
+   "max_l1_before": 0.00016005833776672483
+  },
+  {
+   "mesh": "SM_RO_core",
+   "export_vertices": 8014,
+   "vertices_with_restored_influence": 365,
+   "max_l1_before": 0.00032081192741298197
+  },
+  {
+   "mesh": "SM_RO_cuirass",
+   "export_vertices": 6221,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_hand.L",
+   "export_vertices": 1106,
+   "vertices_with_restored_influence": 121,
+   "max_l1_before": 0.00019628107336582944
+  },
+  {
+   "mesh": "SM_RO_hand.R",
+   "export_vertices": 1106,
+   "vertices_with_restored_influence": 121,
+   "max_l1_before": 0.00019628107336582944
+  },
+  {
+   "mesh": "SM_RO_pauldron.L",
+   "export_vertices": 2611,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_pauldron.R",
+   "export_vertices": 2611,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  },
+  {
+   "mesh": "SM_RO_sword",
+   "export_vertices": 1493,
+   "vertices_with_restored_influence": 0,
+   "max_l1_before": 0.0
+  }
+ ],
+ "changed_bytes": 7432,
+ "all_other_bytes_identical": true,
+ "input": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/export/idle_a03_baked_owner.glb",
+  "sha256": "7b638a448218d6b359345c49333caee31546d2996e3e68f15f1c10d189295c81"
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/export/idle_a03_baked_owner_exact_weights.glb",
+  "sha256": "b8484fe5dd813b7d15719bdcd497281c2d5c577e6e2804cf19978e2309162d10",
+  "bytes": 2908400
+ },
+ "snapshot": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop-r01/weights-snapshot.json",
+  "sha256": "a453ab8f53f1ec48f625070013475591796ddda0fba67145407c1372caecb3c3"
+ }
+}

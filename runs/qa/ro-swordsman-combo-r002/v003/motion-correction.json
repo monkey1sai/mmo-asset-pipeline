@@ -1,0 +1,18 @@
+{
+  "candidate": "v003",
+  "same_trial_clock": true,
+  "cause": "First all300stress found28blade/head overlap frames and125mm right wrist one-frame step. Shared grip arc moved ahead of face; continuous cross-product hand direction removes hard global-X sign flip. No geometry rebuild or new paid generation.",
+  "before": {
+    "ro_swordsman_master.blend": "84dc197b0d2c726ebb940a2d223aa6474a5abcd6e3ffe6cc76b511c396010b41",
+    "ro_swordsman_combo.glb": "929bebd476a6038e6bc124f1de36c3337b5df1c5fe75975761ac48bcf990b5a5",
+    "ro_skill_effects.glb": "f748438d9979d7495438413436c12796701675949d3c21c3746339902fd75a3a"
+  },
+  "after": {
+    "ro_swordsman_master.blend": "1c47aa35ab5e0b6647f874d92c3093c1139625ae0aa4edf3bcf60b862e25638c",
+    "ro_swordsman_combo.glb": "8132df5c46574b24a50c4f6cbf9682e52dff6d2d4138d0baa470f9ecc44aa53d",
+    "ro_skill_effects.glb": "f748438d9979d7495438413436c12796701675949d3c21c3746339902fd75a3a"
+  },
+  "failed_stress": "runs/qa/ro-swordsman-combo-r002/v003/neutral-master/report.json",
+  "motion_source_sha256": "1584df9cb9a4d358e17d38e63d39382f71b3e3afd345d96cff3b53e27b877204",
+  "acceptance": "pending rerun and independent review"
+}

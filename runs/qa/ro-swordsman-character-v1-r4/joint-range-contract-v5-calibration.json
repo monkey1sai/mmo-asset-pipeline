@@ -1,0 +1,2308 @@
+{
+ "schema_version": 4,
+ "id": "ro-swordsman-character-v1-r4-joint-range",
+ "source": "request.support_envelope.joint_ranges_deg",
+ "axes": {
+  "forward": [
+   0,
+   -1,
+   0
+  ],
+  "up": [
+   0,
+   0,
+   1
+  ],
+  "left": [
+   1,
+   0,
+   0
+  ]
+ },
+ "hand_landmarks": {
+  "hand": "hand.{side}",
+  "finger_base": "finger{i}.{side}_01",
+  "thumb_base": "thumb.{side}_01"
+ },
+ "levels": {
+  "typical": 0.5,
+  "extreme": 1.0
+ },
+ "limits": {
+  "collapse_area_ratio": 0.05,
+  "min_rest_triangle_area_m2": 1e-10,
+  "hand_bone_prefixes": [
+   "hand.",
+   "finger",
+   "thumb.",
+   "wrist_transition."
+  ],
+  "hand_edge_ratio": [
+   0.25,
+   3.0
+  ],
+  "deform_min_weight": 0.1,
+  "deform_min_displacement_m": 0.0001,
+  "excluded_meshes": [
+   "SM_RO_sword"
+  ]
+ },
+ "render": {
+  "tile_px": 384,
+  "engine": "BLENDER_WORKBENCH",
+  "shading": "studio, single gray 0.62, cavity on"
+ },
+ "deferred_combinations": [
+  "仰臥睡姿：需要床面與睡眠clip，於 clip-set 評估"
+ ],
+ "motions": [
+  {
+   "id": "spine-flexion",
+   "region": "torso",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 22.5
+    },
+    {
+     "bone": "spine_02",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 22.5
+    }
+   ],
+   "focus_bones": [
+    "spine_01",
+    "spine_02"
+   ],
+   "view": {
+    "left": 1,
+    "forward": 0.35
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "expect": {
+    "bone": "spine_02",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "spine-extension",
+   "region": "torso",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "swing",
+     "toward": "back",
+     "degrees": 10.0
+    },
+    {
+     "bone": "spine_02",
+     "kind": "swing",
+     "toward": "back",
+     "degrees": 10.0
+    }
+   ],
+   "focus_bones": [
+    "spine_01",
+    "spine_02"
+   ],
+   "view": {
+    "left": 1,
+    "forward": 0.35
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "expect": {
+    "bone": "spine_02",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "spine-lateral",
+   "region": "torso",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "swing",
+     "toward": "left",
+     "degrees": 12.5
+    },
+    {
+     "bone": "spine_02",
+     "kind": "swing",
+     "toward": "left",
+     "degrees": 12.5
+    }
+   ],
+   "focus_bones": [
+    "spine_01",
+    "spine_02"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": false,
+   "expect": {
+    "bone": "spine_02",
+    "toward": "left"
+   }
+  },
+  {
+   "id": "spine-twist",
+   "region": "torso",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "twist",
+     "about": "up",
+     "degrees": 17.5
+    },
+    {
+     "bone": "spine_02",
+     "kind": "twist",
+     "about": "up",
+     "degrees": 17.5
+    }
+   ],
+   "focus_bones": [
+    "spine_01",
+    "spine_02"
+   ],
+   "view": {
+    "forward": 1,
+    "left": 0.3
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true
+  },
+  {
+   "id": "neck-yaw",
+   "region": "head",
+   "steps": [
+    {
+     "bone": "neck",
+     "kind": "twist",
+     "about": "up",
+     "degrees": 25.0
+    },
+    {
+     "bone": "head",
+     "kind": "twist",
+     "about": "up",
+     "degrees": 25.0
+    }
+   ],
+   "focus_bones": [
+    "neck",
+    "head"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 0.7,
+   "gate_extreme_hand_region": true
+  },
+  {
+   "id": "neck-pitch",
+   "region": "head",
+   "steps": [
+    {
+     "bone": "neck",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 15.0
+    },
+    {
+     "bone": "head",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 15.0
+    }
+   ],
+   "focus_bones": [
+    "neck",
+    "head"
+   ],
+   "view": {
+    "left": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.7,
+   "gate_extreme_hand_region": true,
+   "expect": {
+    "bone": "head",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "neck-roll",
+   "region": "head",
+   "steps": [
+    {
+     "bone": "neck",
+     "kind": "swing",
+     "toward": "left",
+     "degrees": 10.0
+    },
+    {
+     "bone": "head",
+     "kind": "swing",
+     "toward": "left",
+     "degrees": 10.0
+    }
+   ],
+   "focus_bones": [
+    "neck",
+    "head"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 0.7,
+   "gate_extreme_hand_region": true,
+   "expect": {
+    "bone": "head",
+    "toward": "left"
+   }
+  },
+  {
+   "id": "shoulder-flexion.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 150
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.4
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_arm.L",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "shoulder-extension.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.4
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_arm.L",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "shoulder-abduction.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about": "forward",
+     "degrees": 120
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.L"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_arm.L",
+    "toward": "out"
+   }
+  },
+  {
+   "id": "shoulder-axial-plus.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about_bone": "upper_arm.L",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.L"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "shoulder-axial-minus.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about_bone": "upper_arm.L",
+     "degrees": -60
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.L"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "elbow-flexion.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "lower_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 135
+    }
+   ],
+   "focus_bones": [
+    "lower_arm.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.8,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "lower_arm.L",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "forearm-pronation.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "twist",
+     "about_bone": "lower_arm.L",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 0.45,
+   "gate_extreme_hand_region": false,
+   "side": "L"
+  },
+  {
+   "id": "forearm-supination.L",
+   "region": "arm.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "twist",
+     "about_bone": "lower_arm.L",
+     "degrees": -70
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 0.45,
+   "gate_extreme_hand_region": false,
+   "side": "L"
+  },
+  {
+   "id": "wrist-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "hand.L",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "wrist-extension.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "swing",
+     "toward": "dorsal",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "hand.L",
+    "toward": "dorsal"
+   }
+  },
+  {
+   "id": "wrist-radial.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "hand.L",
+    "toward": "radial"
+   }
+  },
+  {
+   "id": "wrist-ulnar.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "hand.L",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "hand.L",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "fingers-mcp-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "finger1.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger2.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger3.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger4.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    }
+   ],
+   "focus_bones": [
+    "finger2.L_01",
+    "finger3.L_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "finger2.L_01",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-pip-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "finger1.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger2.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger3.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger4.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    }
+   ],
+   "focus_bones": [
+    "finger2.L_01",
+    "finger3.L_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "finger2.L_02",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-dip-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "finger1.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger2.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger3.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger4.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "finger2.L_01",
+    "finger3.L_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "finger2.L_03",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-spread.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "finger4.L_01",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 15
+    },
+    {
+     "bone": "finger1.L_01",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 15
+    }
+   ],
+   "focus_bones": [
+    "finger2.L_01",
+    "finger3.L_01"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "thumb-cmc-opposition.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "thumb.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 45
+    }
+   ],
+   "focus_bones": [
+    "thumb.L_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "thumb.L_01",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "thumb-mcp-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "thumb.L_02",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 50
+    }
+   ],
+   "focus_bones": [
+    "thumb.L_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "thumb.L_02",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "thumb-ip-flexion.L",
+   "region": "hand.L",
+   "steps": [
+    {
+     "bone": "thumb.L_03",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "thumb.L_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L",
+   "expect": {
+    "bone": "thumb.L_03",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "combo-empty-fist.L",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "finger1.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger2.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger3.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger4.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger1.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger2.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger3.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger4.L_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger1.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger2.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger3.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger4.L_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "thumb.L_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 45
+    },
+    {
+     "bone": "thumb.L_02",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 50
+    },
+    {
+     "bone": "thumb.L_03",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "finger2.L_01",
+    "finger3.L_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.5
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "L"
+  },
+  {
+   "id": "hip-flexion.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 110
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_leg.L",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "hip-extension.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_leg.L",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "hip-abduction.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about": "forward",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.L"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "upper_leg.L",
+    "toward": "out"
+   }
+  },
+  {
+   "id": "hip-axial-plus.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about_bone": "upper_leg.L",
+     "degrees": 35
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.L"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "hip-axial-minus.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about_bone": "upper_leg.L",
+     "degrees": -35
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.L"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "knee-flexion.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "lower_leg.L",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 130
+    }
+   ],
+   "focus_bones": [
+    "lower_leg.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "lower_leg.L",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "ankle-dorsiflexion.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "foot.L",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 25
+    }
+   ],
+   "focus_bones": [
+    "foot.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "foot.L",
+    "toward": "up"
+   }
+  },
+  {
+   "id": "ankle-plantarflexion.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "foot.L",
+     "kind": "swing",
+     "toward": "down",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "foot.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "foot.L",
+    "toward": "down"
+   }
+  },
+  {
+   "id": "toe-extension.L",
+   "region": "leg.L",
+   "steps": [
+    {
+     "bone": "toe.L",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 45
+    }
+   ],
+   "focus_bones": [
+    "toe.L"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "L",
+   "expect": {
+    "bone": "toe.L",
+    "toward": "up"
+   }
+  },
+  {
+   "id": "shoulder-flexion.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 150
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.4
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_arm.R",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "shoulder-extension.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.4
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_arm.R",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "shoulder-abduction.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about": "back",
+     "degrees": 120
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.R"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_arm.R",
+    "toward": "out"
+   }
+  },
+  {
+   "id": "shoulder-axial-plus.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about_bone": "upper_arm.R",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.R"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R"
+  },
+  {
+   "id": "shoulder-axial-minus.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about_bone": "upper_arm.R",
+     "degrees": -60
+    }
+   ],
+   "focus_bones": [
+    "upper_arm.R"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R"
+  },
+  {
+   "id": "elbow-flexion.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "lower_arm.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 135
+    }
+   ],
+   "focus_bones": [
+    "lower_arm.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.8,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "lower_arm.R",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "forearm-pronation.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "twist",
+     "about_bone": "lower_arm.R",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 0.45,
+   "gate_extreme_hand_region": false,
+   "side": "R"
+  },
+  {
+   "id": "forearm-supination.R",
+   "region": "arm.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "twist",
+     "about_bone": "lower_arm.R",
+     "degrees": -70
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.5
+   },
+   "ortho_scale": 0.45,
+   "gate_extreme_hand_region": false,
+   "side": "R"
+  },
+  {
+   "id": "wrist-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "wrist-extension.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "dorsal",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "dorsal"
+   }
+  },
+  {
+   "id": "wrist-radial.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "radial"
+   }
+  },
+  {
+   "id": "wrist-ulnar.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "fingers-mcp-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "finger1.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger2.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger3.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger4.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    }
+   ],
+   "focus_bones": [
+    "finger2.R_01",
+    "finger3.R_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "finger2.R_01",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-pip-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "finger1.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger2.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger3.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger4.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    }
+   ],
+   "focus_bones": [
+    "finger2.R_01",
+    "finger3.R_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "finger2.R_02",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-dip-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "finger1.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger2.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger3.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger4.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "finger2.R_01",
+    "finger3.R_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.25
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "finger2.R_03",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "fingers-spread.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "finger4.R_01",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 15
+    },
+    {
+     "bone": "finger1.R_01",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 15
+    }
+   ],
+   "focus_bones": [
+    "finger2.R_01",
+    "finger3.R_01"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": true,
+   "side": "R"
+  },
+  {
+   "id": "thumb-cmc-opposition.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "thumb.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 45
+    }
+   ],
+   "focus_bones": [
+    "thumb.R_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "thumb.R_01",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "thumb-mcp-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "thumb.R_02",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 50
+    }
+   ],
+   "focus_bones": [
+    "thumb.R_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "thumb.R_02",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "thumb-ip-flexion.R",
+   "region": "hand.R",
+   "steps": [
+    {
+     "bone": "thumb.R_03",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "thumb.R_01"
+   ],
+   "view": {
+    "palmar": 1,
+    "radial": 0.4
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R",
+   "expect": {
+    "bone": "thumb.R_03",
+    "toward": "ulnar"
+   }
+  },
+  {
+   "id": "combo-empty-fist.R",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "finger1.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger2.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger3.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger4.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 85
+    },
+    {
+     "bone": "finger1.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger2.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger3.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger4.R_02",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 100
+    },
+    {
+     "bone": "finger1.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger2.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger3.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "finger4.R_03",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 70
+    },
+    {
+     "bone": "thumb.R_01",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 45
+    },
+    {
+     "bone": "thumb.R_02",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 50
+    },
+    {
+     "bone": "thumb.R_03",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 70
+    }
+   ],
+   "focus_bones": [
+    "finger2.R_01",
+    "finger3.R_01"
+   ],
+   "view": {
+    "radial": 1,
+    "palmar": 0.5
+   },
+   "ortho_scale": 0.32,
+   "gate_extreme_hand_region": false,
+   "side": "R"
+  },
+  {
+   "id": "hip-flexion.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 110
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_leg.R",
+    "toward": "forward"
+   }
+  },
+  {
+   "id": "hip-extension.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_leg.R",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "hip-abduction.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about": "back",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.R"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "upper_leg.R",
+    "toward": "out"
+   }
+  },
+  {
+   "id": "hip-axial-plus.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about_bone": "upper_leg.R",
+     "degrees": 35
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.R"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "R"
+  },
+  {
+   "id": "hip-axial-minus.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about_bone": "upper_leg.R",
+     "degrees": -35
+    }
+   ],
+   "focus_bones": [
+    "upper_leg.R"
+   ],
+   "view": {
+    "forward": 1
+   },
+   "ortho_scale": 1.3,
+   "gate_extreme_hand_region": true,
+   "side": "R"
+  },
+  {
+   "id": "knee-flexion.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "lower_leg.R",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 130
+    }
+   ],
+   "focus_bones": [
+    "lower_leg.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 1.1,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "lower_leg.R",
+    "toward": "back"
+   }
+  },
+  {
+   "id": "ankle-dorsiflexion.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "foot.R",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 25
+    }
+   ],
+   "focus_bones": [
+    "foot.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "foot.R",
+    "toward": "up"
+   }
+  },
+  {
+   "id": "ankle-plantarflexion.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "foot.R",
+     "kind": "swing",
+     "toward": "down",
+     "degrees": 40
+    }
+   ],
+   "focus_bones": [
+    "foot.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "foot.R",
+    "toward": "down"
+   }
+  },
+  {
+   "id": "toe-extension.R",
+   "region": "leg.R",
+   "steps": [
+    {
+     "bone": "toe.R",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 45
+    }
+   ],
+   "focus_bones": [
+    "toe.R"
+   ],
+   "view": {
+    "out": 1,
+    "forward": 0.3
+   },
+   "ortho_scale": 0.6,
+   "gate_extreme_hand_region": true,
+   "side": "R",
+   "expect": {
+    "bone": "toe.R",
+    "toward": "up"
+   }
+  },
+  {
+   "id": "combo-arms-overhead",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 150,
+     "side": "L"
+    },
+    {
+     "bone": "lower_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 20,
+     "side": "L"
+    },
+    {
+     "bone": "upper_arm.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 150,
+     "side": "R"
+    },
+    {
+     "bone": "lower_arm.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 20,
+     "side": "R"
+    }
+   ],
+   "focus_bones": [
+    "spine_02"
+   ],
+   "view": {
+    "forward": 1,
+    "left": 0.6
+   },
+   "ortho_scale": 2.3,
+   "gate_extreme_hand_region": true
+  },
+  {
+   "id": "combo-two-hand-chop",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 15
+    },
+    {
+     "bone": "spine_02",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 15
+    }
+   ],
+   "focus_bones": [
+    "spine_02"
+   ],
+   "view": {
+    "forward": 1,
+    "left": 0.6
+   },
+   "ortho_scale": 2.3,
+   "gate_extreme_hand_region": true,
+   "requires_pose": "two_hand_chop",
+   "state": {
+    "grasp.R": 1.0,
+    "grasp.L": 1.0
+   }
+  },
+  {
+   "id": "combo-deep-squat",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "spine_01",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 10
+    },
+    {
+     "bone": "spine_02",
+     "kind": "swing",
+     "toward": "forward",
+     "degrees": 10
+    },
+    {
+     "bone": "upper_leg.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 100,
+     "side": "L"
+    },
+    {
+     "bone": "lower_leg.L",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 120,
+     "side": "L"
+    },
+    {
+     "bone": "foot.L",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 25,
+     "side": "L"
+    },
+    {
+     "bone": "upper_leg.R",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 100,
+     "side": "R"
+    },
+    {
+     "bone": "lower_leg.R",
+     "kind": "twist",
+     "about": "left",
+     "degrees": 120,
+     "side": "R"
+    },
+    {
+     "bone": "foot.R",
+     "kind": "swing",
+     "toward": "up",
+     "degrees": 25,
+     "side": "R"
+    }
+   ],
+   "focus_bones": [
+    "pelvis"
+   ],
+   "view": {
+    "left": 1,
+    "forward": 0.6
+   },
+   "ortho_scale": 2.3,
+   "gate_extreme_hand_region": true
+  },
+  {
+   "id": "combo-cast-open-palm.L",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "upper_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 90,
+     "side": "L"
+    },
+    {
+     "bone": "lower_arm.L",
+     "kind": "twist",
+     "about": "right",
+     "degrees": 30,
+     "side": "L"
+    },
+    {
+     "bone": "hand.L",
+     "kind": "swing",
+     "toward": "dorsal",
+     "degrees": 30,
+     "side": "L"
+    },
+    {
+     "bone": "finger4.L_01",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 15,
+     "side": "L"
+    },
+    {
+     "bone": "finger1.L_01",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 15,
+     "side": "L"
+    }
+   ],
+   "focus_bones": [
+    "hand.L"
+   ],
+   "view": {
+    "forward": 1,
+    "out": 0.6
+   },
+   "ortho_scale": 1.2,
+   "gate_extreme_hand_region": true,
+   "side": "L"
+  },
+  {
+   "id": "combo-grasp-wrist-flexion.R",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "palmar",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "requires_pose": "grasp.R",
+   "state": {
+    "grasp.R": 1.0
+   },
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "palmar"
+   }
+  },
+  {
+   "id": "combo-grasp-wrist-extension.R",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "dorsal",
+     "degrees": 60
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "radial": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "requires_pose": "grasp.R",
+   "state": {
+    "grasp.R": 1.0
+   },
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "dorsal"
+   }
+  },
+  {
+   "id": "combo-grasp-wrist-radial.R",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "radial",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "requires_pose": "grasp.R",
+   "state": {
+    "grasp.R": 1.0
+   },
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "radial"
+   }
+  },
+  {
+   "id": "combo-grasp-wrist-ulnar.R",
+   "region": "combo",
+   "steps": [
+    {
+     "bone": "hand.R",
+     "kind": "swing",
+     "toward": "ulnar",
+     "degrees": 20
+    }
+   ],
+   "focus_bones": [
+    "hand.R"
+   ],
+   "view": {
+    "dorsal": 1
+   },
+   "ortho_scale": 0.4,
+   "gate_extreme_hand_region": false,
+   "requires_pose": "grasp.R",
+   "state": {
+    "grasp.R": 1.0
+   },
+   "side": "R",
+   "expect": {
+    "bone": "hand.R",
+    "toward": "ulnar"
+   }
+  }
+ ]
+}

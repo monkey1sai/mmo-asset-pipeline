@@ -1,0 +1,67 @@
+{
+  "observed_utc": "2026-10-03T14:54:22.465451+00:00",
+  "id": "ro-swordsman-combo-r008",
+  "phase_started_utc": "2026-10-03T13:48:14+00:00",
+  "phase_closed_utc": "2026-10-03T14:54:22.465451+00:00",
+  "phase_wall_seconds_at_close": 3968.465451,
+  "baseline_and_preparation_seconds": 1241.217127,
+  "candidate_seconds": [
+    {
+      "id": "v001",
+      "seconds": 462.675778
+    },
+    {
+      "id": "v002",
+      "seconds": 1172.372121
+    },
+    {
+      "id": "v003",
+      "seconds": 449.866709
+    },
+    {
+      "id": "v004",
+      "seconds": 642.333716
+    }
+  ],
+  "waiting_planning_review_verification_included_in_wall": true,
+  "preclock_readwall_seconds_separately_reported": 6.1,
+  "precise_initial_start_unobserved": true,
+  "candidate_used": 4,
+  "candidate_limit": 4,
+  "r008_paid_submissions": 0,
+  "r008_new_service_credits": 0,
+  "no_API_balance_query_thisphase": true,
+  "historical_r007_newservicecredits": 0.5,
+  "historical_r005_r006_r007_scopedsubtotal": 2.0,
+  "historical_APIcost_subtotal_is_not_entireprojecttotal": true,
+  "imagegen_or_machine_cost": "notpricedbyservice, noestimatedpriceclaim",
+  "old_history_hashes_preserved": [
+    {
+      "path": "requests/ro-swordsman-combo-r007.json",
+      "sha256": "49bacbf20a6e501787fb195c81f3183124076902590f108da4db4ef5abe522a4"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json",
+      "sha256": "f999aa115a62cdf33772cc9b0d3d615566e9a392af53768410c2bbbd905eed01"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/comparison-final.json",
+      "sha256": "4a071650e26a75f9b217bee4dccab8a747ada79da815e7ed90af405bc362e63f"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/phase-accounting-final.json",
+      "sha256": "aff8a5208798a793c4b233fa449aa598ebf2b3b3fb7929fcdf59280f7976cfe0"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+      "sha256": "7a556ce62eb00e664da4c44027bc3f75863a6ac9701b20fcd58453b3723ae458"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+      "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e"
+    }
+  ],
+  "stop": "fourcandidatephase closed; no newfifthcandidate oroldclock reset",
+  "stage_commit_push": "held_by_user",
+  "background": "no_API_orBlender_jobs_running"
+}

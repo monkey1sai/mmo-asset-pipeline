@@ -1,0 +1,9 @@
+{
+  "observed_original_unweighted": 265,
+  "actual_vertices_rebound": 1364,
+  "verified_source_rigid_bone": "lower_arm.R",
+  "weight": 1,
+  "rest_geometry_unchanged": true,
+  "evidence": "boolean-binding-diagnosis.json + wrist-volume-diagnosis.json",
+  "method": "bind all rigid vertices explicitly after topology operation; never assume Boolean propagates weights"
+}

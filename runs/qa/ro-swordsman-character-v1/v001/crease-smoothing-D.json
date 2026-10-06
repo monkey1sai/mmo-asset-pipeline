@@ -1,0 +1,59 @@
+{
+ "mesh": "SM_RO_core",
+ "drop_shape_keys": [
+  "SKC_core_fold_05"
+ ],
+ "regions": [
+  {
+   "name": "groin.L",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.L"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5,
+   "centres": [
+    [
+     0.0756,
+     -0.0691,
+     0.828
+    ],
+    [
+     0.0377,
+     -0.037,
+     0.8035
+    ],
+    [
+     0.0431,
+     -0.0394,
+     0.7912
+    ]
+   ],
+   "radius_m": 0.045
+  },
+  {
+   "name": "groin.R",
+   "parent": [
+    "pelvis"
+   ],
+   "child": [
+    "upper_leg.R"
+   ],
+   "rings": 2,
+   "iterations": 10,
+   "factor": 0.5,
+   "centres": [
+    [
+     -0.0516,
+     -0.0466,
+     0.7951
+    ]
+   ],
+   "radius_m": 0.035
+  }
+ ],
+ "note": "Variant D (hybrid): C plus a small local smoothing of the right groin at the one triangle that folds in the walk (23453), radius 35 mm; B's other right-groin centres are left out because they caused a hip-flexion.R collapse at the typical level."
+}

@@ -268,26 +268,15 @@ def api_creation_plan(request: dict) -> dict:
     split = request["production"]["route"] == "split_then_generate"
     parts = request["spec"]["parts"] if split else [{"id": request["id"]}]
     return {
-        "owner": "art_engineer",
-        "preferred_execution": "hyper3d_api_via_available_mcp",
-        "execution_state": "not_submitted",
-        "capability_state": "requires_current_probe",
+        "owner": "art_engineer", "preferred_execution": "hyper3d_api_via_available_mcp",
+        "execution_state": "not_submitted", "capability_state": "requires_current_probe",
         "authorization_state": "requires_existing_scope_check",
         "credit_pool_state": "requires_monthly_credit_evidence",
-        "input_state": "requires_artist_design_and_backend_mapping",
-        "submission_ready": False,
-        "jobs": [{
-            "subject_id": part["id"],
-            "design_brief": {
-                "purpose": request["purpose"],
-                "style": deepcopy(request["style"]),
-                "part": deepcopy(part) if split else None,
-                "whole_asset_spec": deepcopy(request["spec"]),
-            },
-            "prompt": None,
-            "reference_images": [],
-            "operation_id": None,
-        } for part in parts],
+        "input_state": "requires_artist_design_and_backend_mapping", "submission_ready": False,
+        "jobs": [{"subject_id": part["id"], "design_brief": {
+            "purpose": request["purpose"], "style": deepcopy(request["style"]),
+            "part": deepcopy(part) if split else None, "whole_asset_spec": deepcopy(request["spec"]),
+        }, "prompt": None, "reference_images": [], "operation_id": None} for part in parts],
         "preparation_pending": (["拆件路徑需先定義部件"] if not parts else []) + [
             "美術工程師將需求轉成單件／單部件 prompt，逐張確認參考圖與上傳範圍",
             "核對當前工具 schema；圖生工具缺圖時先準備設計圖，不把需求文字直接當圖片輸入",
@@ -302,6 +291,15 @@ def api_creation_plan(request: dict) -> dict:
             "美術工程師後製、品質比較、驗收及交付歸檔",
         ],
         "unknown_submission_policy": "reconcile_original_operation_never_resubmit",
+        "reconstruction_policy": {
+            "trigger": "observed_structural_gap_or_postprocess_cost_exceeds_remaining_revision_budget",
+            "steps": ["preserve_failed_candidate_and_evidence", "prepare_clear_reference_design", "select_available_api_by_gap", "check_existing_spending_scope", "save_new_raw_and_baseline", "blender_detail_rig_animation_and_fixed_review"],
+            "api_choices": {"shape": "reference_to_3d", "fused_parts": "part_split_if_available", "material_only": "texture_only_if_available"},
+            "capabilities": "probe_current_adapter_never_infer_from_vendor_docs",
+            "budget": "preserve_consumed_trials_and_costs_new_phase_requires_user_scope",
+            "animation": "generated_shape_does_not_supply_verified_rig_or_action_sequence",
+            "automatic_paid_retry": False,
+        },
         "website_policy": "credit_evidence_or_documented_fallback_only",
         "note": "這是待工程師整理的創作交接；不是可直接送出的 API payload、交易鎖或付費許可。",
     }
@@ -327,10 +325,26 @@ def production_plan(request: dict) -> dict:
         "required_checks": checks, "paid_submission_authorized_by_this_plan": False,
         "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。",
     }
+    # A static generator does not satisfy requested rig/animation work. Keep
     if route in {"generate", "split_then_generate"}:
         result["creation_workflow"] = api_creation_plan(request)
         if route == "split_then_generate" and not request["spec"]["parts"]:
             result["pending"].append("拆件生成前需定義部件")
+    if route == "modify":
+        # A declared alternative for an artist, never an automatic submit or
+        # a budget reset after an exhausted/unknown experiment.
+        result["reconstruction_fallback"] = api_creation_plan(request)["reconstruction_policy"]
+    # Source generation and local articulated authoring are separate capabilities.
+    # authoring and inspection explicit, while reuse only needs verification.
+    needs_authoring = route in {"modify", "generate", "split_then_generate"}
+    if request["spec"]["requires_rig"]:
+        result["needed_capabilities"].extend(["rig_inspection", "deformation_inspection"])
+        if needs_authoring:
+            result["needed_capabilities"].append("rig_authoring")
+    if request["spec"]["animations"]:
+        result["needed_capabilities"].append("animation_inspection")
+        if needs_authoring:
+            result["needed_capabilities"].append("animation_authoring")
     if "quality" in request:
         result["quality_loop"] = {
             "protocol_sha256": identity.json_digest(request["quality"]),

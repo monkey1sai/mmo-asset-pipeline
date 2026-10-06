@@ -1,0 +1,27 @@
+[
+  {
+    "case": "empty",
+    "rejected": true,
+    "error": "COMPLETE_FIVE_DIGIT_MASK_REQUIRED"
+  },
+  {
+    "case": "missing_thumb",
+    "rejected": true,
+    "error": "COMPLETE_FIVE_DIGIT_MASK_REQUIRED"
+  },
+  {
+    "case": "duplicates",
+    "rejected": true,
+    "error": "UNIQUE_VALID_CONTACT_VERTEX_IDS_REQUIRED: thumb"
+  },
+  {
+    "case": "out_of_range",
+    "rejected": true,
+    "error": "UNIQUE_VALID_CONTACT_VERTEX_IDS_REQUIRED: thumb"
+  },
+  {
+    "case": "too_short",
+    "rejected": true,
+    "error": "UNIQUE_VALID_CONTACT_VERTEX_IDS_REQUIRED: thumb"
+  }
+]

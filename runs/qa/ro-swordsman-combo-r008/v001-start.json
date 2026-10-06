@@ -1,0 +1,21 @@
+{
+  "id": "v001",
+  "started_utc": "2026-10-03T14:08:55.217127+00:00",
+  "budget": {
+    "trial_seconds": 21600,
+    "total_seconds": 172800
+  },
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend",
+    "sha256": "b98d72250f01b859d158e2276a71c498c8f9ea43e65e4ce4d6246a2cf7d15e8e"
+  },
+  "contract": {
+    "path": "runs/qa/ro-swordsman-combo-r008/local-contract.json",
+    "sha256": "c1f98a6880d358dbbabde945df20ddc4df3ac65fd48c0ba044220601ac0e0f96"
+  },
+  "hypothesis": "Complete fourcomponent screened harmonic vectors remove hand-to-thumb02 boundary while cap andfourfinger remain fixed.",
+  "change": "600 fixed Jacobi iterations, relaxation0.7, fidelity0.35; smooth axial joint targets with16/10/6mm root/MCP/IP halfwidths; no parameter variants in v001.",
+  "new_credits": 0,
+  "previous_candidates_used": 0,
+  "candidate_limit": 4
+}

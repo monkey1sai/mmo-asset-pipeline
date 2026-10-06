@@ -1,0 +1,30 @@
+{
+ "note": "Shoulders, proximity binding 35-60 mm.",
+ "body": "SM_RO_core",
+ "pieces": [
+  {
+   "armor": "SM_RO_pauldron.L",
+   "bone": "pauldron.L",
+   "axis": [
+    "clavicle.L:0.5",
+    "upper_arm.L:head"
+   ],
+   "margin_mm": 60,
+   "near_mm": 35,
+   "far_mm": 60,
+   "smoothing_iterations": 1
+  },
+  {
+   "armor": "SM_RO_pauldron.R",
+   "bone": "pauldron.R",
+   "axis": [
+    "clavicle.R:0.5",
+    "upper_arm.R:head"
+   ],
+   "margin_mm": 60,
+   "near_mm": 35,
+   "far_mm": 60,
+   "smoothing_iterations": 1
+  }
+ ]
+}

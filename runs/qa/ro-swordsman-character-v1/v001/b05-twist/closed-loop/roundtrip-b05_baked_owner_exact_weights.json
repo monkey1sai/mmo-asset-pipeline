@@ -1,0 +1,567 @@
+{
+ "blender": "4.5.5 LTS",
+ "fresh_process_empty_scene": true,
+ "glb": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b05-twist/export/b05_baked_owner_exact_weights.glb",
+  "sha256": "3b8954d35458345aea73853efa11decfbd6adc107c331aba59b20ded63b713ce"
+ },
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/blender-reference.json",
+  "sha256": "1a870362f9065475db211be674c57f501cfd5626766eecbf66db4aa590de7e72"
+ },
+ "prefix": "all",
+ "time_rule": "frame_over_fps",
+ "tolerance_m": 5e-06,
+ "samples": [
+  {
+   "reference_block": "all/frame-0",
+   "frame": 0,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.364895513448953e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-1",
+   "frame": 1,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.35266909912412e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-2",
+   "frame": 2,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.343068090752129e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-3",
+   "frame": 3,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3533473147495375e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-4",
+   "frame": 4,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3496805948742505e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-5",
+   "frame": 5,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.359685338899017e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-6",
+   "frame": 6,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3554260521761373e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-7",
+   "frame": 7,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3644627701287082e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-8",
+   "frame": 8,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3624321068019115e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-9",
+   "frame": 9,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3661082494445177e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-10",
+   "frame": 10,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3690937962037137e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-11",
+   "frame": 11,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3656124058673516e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-12",
+   "frame": 12,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3649629091174708e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-13",
+   "frame": 13,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3553561174282576e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-14",
+   "frame": 14,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3427721459325556e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-15",
+   "frame": 15,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3447695335579122e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-16",
+   "frame": 16,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3593421034174682e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-17",
+   "frame": 17,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.347331488010295e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-18",
+   "frame": 18,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3603393551127217e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-19",
+   "frame": 19,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3265044441901677e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-20",
+   "frame": 20,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3744919048505686e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-21",
+   "frame": 21,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3364321321007346e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-22",
+   "frame": 22,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3624066836132842e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-23",
+   "frame": 23,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3563072384446972e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-24",
+   "frame": 24,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.3876053189151956e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-25",
+   "frame": 25,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.5707809939431995e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-26",
+   "frame": 26,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.966727667117704e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-27",
+   "frame": 27,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.5282472872527795e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-28",
+   "frame": 28,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 1.0616489130590484e-06,
+   "rms_error_m": 2.867467544963439e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_hand.L",
+    "blender_vertex": 393,
+    "error_m": 1.0616489130590484e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-29",
+   "frame": 29,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.441631086880822e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-30",
+   "frame": 30,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 1.1963925085430714e-06,
+   "rms_error_m": 2.739138226407973e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_hand.L",
+    "blender_vertex": 178,
+    "error_m": 1.1963925085430714e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-31",
+   "frame": 31,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.516249221200107e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-32",
+   "frame": 32,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 1.0014866351811024e-06,
+   "rms_error_m": 2.910148501184391e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_hand.R",
+    "blender_vertex": 547,
+    "error_m": 1.0014866351811024e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-33",
+   "frame": 33,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 1.0845138414459682e-06,
+   "rms_error_m": 2.893626357595877e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5510,
+    "error_m": 1.0845138414459682e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-34",
+   "frame": 34,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 4.205930287720827e-06,
+   "rms_error_m": 7.283934794801378e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 153,
+    "error_m": 4.205930287720827e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-35",
+   "frame": 35,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.4244979508171777e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-36",
+   "frame": 36,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.503358623410684e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  },
+  {
+   "reference_block": "all/frame-37",
+   "frame": 37,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 1.0460572704544214e-06,
+   "rms_error_m": 3.2161470403276175e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_sword",
+    "blender_vertex": 1232,
+    "error_m": 1.0460572704544214e-06
+   }
+  },
+  {
+   "reference_block": "all/frame-38",
+   "frame": 38,
+   "half_frame": false,
+   "vertices": 33054,
+   "max_error_m": 8.605843907478094e-07,
+   "rms_error_m": 2.5700540797210574e-07,
+   "over_tolerance": 0,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5194,
+    "error_m": 8.605843907478094e-07
+   }
+  }
+ ],
+ "max_error_m": 4.205930287720827e-06,
+ "over_tolerance": 0,
+ "pass": true,
+ "scope": "Sampled frames only; same-version Blender source against its own GLB."
+}

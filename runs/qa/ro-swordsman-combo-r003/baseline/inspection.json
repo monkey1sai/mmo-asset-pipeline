@@ -1,0 +1,88 @@
+{
+  "source": "assets/raw/ro-swordsman-combo/rodin-v002/base_basic_pbr.glb",
+  "source_sha256": "da418afbd90bf95d7994e6642460891b0a3e85699713769db7cbaed1a98a4b98",
+  "tool": "4.5.5 LTS",
+  "normalization": {
+    "height_m": 1.74,
+    "ground_z": 0,
+    "units": "m",
+    "factor": 0.919334711100888,
+    "original_bounds": {
+      "min": [
+        -0.537293016910553,
+        -0.24503007531166077,
+        -0.9485120177268982
+      ],
+      "max": [
+        0.5388060212135315,
+        0.242855966091156,
+        0.9441609978675842
+      ]
+    }
+  },
+  "mesh_stats": [
+    {
+      "mesh": "SM_RO_APoseSource_0",
+      "vertices_uv_split": 22993,
+      "triangles": 39746,
+      "source_polygons_by_size": {
+        "3": 39746
+      },
+      "exact_seam_weld_vertices": 19862,
+      "nonmanifold_after_seam_weld": 8,
+      "components_after_seam_weld": [
+        {
+          "vertices": 19862,
+          "min": [
+            -0.4946475923061371,
+            -0.22426529228687286,
+            0.0
+          ],
+          "max": [
+            0.4946475923061371,
+            0.22426529228687286,
+            1.7400000095367432
+          ]
+        }
+      ],
+      "uv_layers": 1,
+      "materials": [
+        "model"
+      ]
+    }
+  ],
+  "bones": 0,
+  "animations": 0,
+  "skill_effects": 0,
+  "images": [
+    {
+      "name": "texture_diffuse",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "artifacts": {
+    "ro_source_baseline.blend": "6c459f248ee14e7a8e8f0db6ceedebeebde8804fe9b3c4bd59dd3e14c763b8b9",
+    "ro_source_baseline.glb": "a11187c1e409cc5f1e98fac50bb9932195457ab88a38b8e7b89cedfd82ff90c6"
+  },
+  "acceptance": "Not run: source baseline requires actual five-view review and no rig or animation is assumed."
+}

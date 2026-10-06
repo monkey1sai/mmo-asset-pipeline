@@ -1,0 +1,52 @@
+{
+  "source_sha256": "9350ee0a6cbe9af02bedabcc7ccee01153b7af90edc7f604dae67d205999e4c1",
+  "normalization": {
+    "height_m": 1.74,
+    "ground_z": 0,
+    "units": "m",
+    "blender_up": "+Z",
+    "blender_forward": "-Y",
+    "glb_up": "+Y",
+    "glb_forward": "+Z"
+  },
+  "triangles": 30000,
+  "meshes": 1,
+  "bones": 0,
+  "animations": 0,
+  "skill_effects": 0,
+  "topology": {
+    "welded_vertices": 14970,
+    "nonmanifold_after_exact_seam_weld": 0
+  },
+  "images": [
+    {
+      "name": "texture_diffuse",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_metallic-texture_roughness",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "observed_function_failure": "No rig/animation/effects exist; fused hands and weapon prevent articulated use. Static source is a failing but completely inspected baseline, not delivered.",
+  "artifacts": {
+    "ro_source_baseline.blend": "fb3edee5a4b736cf547bcb2664137fa9cd09146b826dfa1814797fbdeed0f102",
+    "ro_source_baseline.glb": "38e37aa985f179080769d65137d64b5f2d5535ebe0b5340538bcfe18f054d759"
+  }
+}

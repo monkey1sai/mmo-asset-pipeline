@@ -1,0 +1,31 @@
+{
+  "operation_id": "ro-hand-source-20261003-001",
+  "request": "requests/ro-swordsman-combo-r006.json",
+  "images": [
+    "assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png"
+  ],
+  "output_directory": "assets/raw/ro-swordsman-combo/rodin-v006/right-glove",
+  "parameters": {
+    "tier": "Gen-2.5-High",
+    "mesh_mode": "Quad",
+    "quality_override": 1000,
+    "quad_normal": true,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "texture_mode": "high",
+    "texture_delight": true,
+    "TAPose": false,
+    "is_symmetric": "asymmetric",
+    "image_label": [
+      "F"
+    ],
+    "seed": 4601,
+    "preview_render": true,
+    "prompt": "One anatomically correct right brown leather glove in neutral open-hand pose, five separated digits, substantial palm and thumb root, hollow short wrist cuff. No arm, armor, weapon or additional objects."
+  },
+  "authorization": {
+    "spending_scope": "User authorizes direction1 hand/fitting pressure-test phase and demand-driven existing monthly/regular API credits. Exact new private state file awaits separate authority; no top-up/upgrade or Git mutation.",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

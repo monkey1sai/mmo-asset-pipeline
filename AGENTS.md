@@ -5,6 +5,7 @@
 - 新製作及品質修訂依 `docs/art-quality-loop.md` 凍結品質標竿與評估條件，先做 baseline，再以有界實驗比較；任一維度退步不得用其他高分抵銷。有 `quality` 的需求必須由 `assess` 核對實驗紀錄與已評估交付內容；不把分數宣稱為自動美術 PASS 或「頂尖」保證。
 - 只在本 repo 維護需求、工程師資產、產製工具與證據。`projects/` 是選用客戶規格；EvoLoot、changshan-longdan 是首批來源，不能寫死在核心。其他 repo 預設唯讀；遊戲接入、Unity、push、PR、部署和排程依使用者具體範圍。
 - 每次製作先查 `library/index.json`、需求、來源版本與現有 master。重新生成取決於需求差距和修訂成本；剩餘點數不能取代用途。遊戲美術不得自行改寫規則、命中範圍或碰撞。
+- 美術設計與製作前，也查 `docs/references/mmorpg-github-sources.md`（使用者指定的 MMORPG 開源倉庫參考清單）可重用的資料、方法與命名，避免重造輪子；外部倉庫唯讀引用並記錄 commit，逐項核對授權並經使用者同意後才可複製。
 - 自然語言先形成 `requests/` 草稿。低風險預設寫入 assumptions；真正影響用途、功能或交付的缺項才詢問。`intake` 保留原文，不宣稱已自動理解完整規格。
 - 骨架、動畫、LOD、拆件與目標環境驗收由需求明確指定。獨立資產不強制 Unity；指定目標環境才驗該環境。美術、技術、目標環境、交付狀態分開保存。
 - `assess` 只核對證據格式、需求雜湊及本機檔案雜湊。`eligible_for_delivery_review` 不是自動交付通過，不能取代美術判斷、DCC 實測或目標 runtime。

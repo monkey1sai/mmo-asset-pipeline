@@ -1,0 +1,155 @@
+{
+ "observed_utc": "2026-10-05T09:44:07.725403+00:00",
+ "script_sha256": "2d6e73c37338229932c97ecd12207a07d1243aff33c165852058101edd005d49",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b12-hybrid/ro_character_v001_b12-hybrid.blend",
+  "sha256": "f9546caf539163df2dc37c02ba30f790efc78e86bcf380041ac15ab71cec71ca"
+ },
+ "source_sha256_after": "f9546caf539163df2dc37c02ba30f790efc78e86bcf380041ac15ab71cec71ca",
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b16-clipfolds/ro_character_v001_b16-clipfolds.blend",
+  "sha256": "5782bc390991862791f61b8226bf5307c167a460f05b3db0d95edb3f8d8a5441"
+ },
+ "area_ratio_target": 0.08,
+ "sites": [
+  {
+   "site": 27,
+   "motion": "clip:AN_RO_Walk_Sword@44.25",
+   "level": "clip",
+   "driver_bone": "upper_leg.R",
+   "triangle_vertices": [
+    4247,
+    4245,
+    4336
+   ],
+   "apex": 4245,
+   "area_ratio_before": 0.0445,
+   "area_ratio_after": 0.1037,
+   "posed_offset_mm": 0.7,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.4847,
+    "frozen_pose_maximum_at": "combo-deep-squat@typical"
+   }
+  },
+  {
+   "site": 28,
+   "motion": "clip:AN_RO_Run_Sword@20.5",
+   "level": "clip",
+   "driver_bone": "upper_leg.R",
+   "triangle_vertices": [
+    4247,
+    4245,
+    4336
+   ],
+   "apex": 4245,
+   "area_ratio_before": 0.0958,
+   "area_ratio_after": 0.1001,
+   "posed_offset_mm": 0.05,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.4942,
+    "frozen_pose_maximum_at": "combo-deep-squat@typical"
+   }
+  },
+  {
+   "site": 29,
+   "motion": "clip:AN_RO_Run_Sword@29.25",
+   "level": "clip",
+   "driver_bone": "upper_leg.R*lower_leg.R",
+   "triangle_vertices": [
+    425,
+    424,
+    426
+   ],
+   "apex": 424,
+   "area_ratio_before": 0.0037,
+   "area_ratio_after": 0.1118,
+   "posed_offset_mm": 0.35,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.6668,
+    "frozen_pose_maximum_at": "combo-deep-squat@typical"
+   }
+  },
+  {
+   "site": 30,
+   "motion": "clip:AN_RO_Run_Sword@16.75",
+   "level": "clip",
+   "driver_bone": "upper_leg.R*lower_leg.R",
+   "triangle_vertices": [
+    425,
+    424,
+    426
+   ],
+   "apex": 424,
+   "area_ratio_before": 0.0124,
+   "area_ratio_after": 0.1066,
+   "posed_offset_mm": 0.3,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.0,
+    "frozen_pose_maximum_at": "knee-flexion.R@typical"
+   }
+  },
+  {
+   "site": 31,
+   "motion": "clip:AN_RO_Run_Sword@30.0",
+   "level": "clip",
+   "driver_bone": "upper_leg.R*lower_leg.R",
+   "triangle_vertices": [
+    428,
+    424,
+    423
+   ],
+   "apex": 423,
+   "area_ratio_before": 0.0525,
+   "area_ratio_after": 0.1003,
+   "posed_offset_mm": 0.65,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.6997,
+    "frozen_pose_maximum_at": "combo-deep-squat@typical"
+   }
+  },
+  {
+   "site": 32,
+   "motion": "clip:AN_RO_Run_Sword@8.5",
+   "level": "clip",
+   "driver_bone": "upper_leg.L*lower_leg.L",
+   "triangle_vertices": [
+    945,
+    3818,
+    3819
+   ],
+   "apex": 3818,
+   "area_ratio_before": 0.0499,
+   "area_ratio_after": 0.0709,
+   "posed_offset_mm": 0.3,
+   "existing_correctives_counted": true,
+   "curve": {
+    "type": "hat",
+    "prev": 0.8,
+    "at": 1.0,
+    "frozen_pose_maximum": 0.6427,
+    "frozen_pose_maximum_at": "combo-deep-squat@typical"
+   }
+  }
+ ],
+ "scope": "One vertex per site, moved only as far as the triangle needs to keep a share of its rest area in that pose. Not a shoulder or hip deformation fix."
+}

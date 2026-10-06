@@ -1,0 +1,143 @@
+{
+  "operation_id": "ro-core-fallback-20261003-001",
+  "source": "assets/raw/ro-swordsman-combo/rodin-v005/core/base_basic_pbr.glb",
+  "source_sha256": "a81bd5a694047ea10a2e860bf8e96ffc08254d37b782017e022a122a796fe2d2",
+  "old_master_sha256": "a837d63b9a1f53e48c448001dc2ee89b47aa21de7ce6154135ebf122aee19928",
+  "tool": "4.5.5 LTS",
+  "cores": {
+    "new": {
+      "normalization": {
+        "factor": 0.9190467581376534,
+        "original_min": [
+          -0.5568090081214905,
+          -0.18407507240772247,
+          -0.9487320184707642
+        ],
+        "original_max": [
+          0.5560320019721985,
+          0.17576195299625397,
+          0.9445340037345886
+        ],
+        "height_m": 1.74
+      },
+      "vertices": 9009,
+      "triangles": 15020,
+      "bounds_m": {
+        "min": [
+          -0.5113764405250549,
+          -0.16535352170467377,
+          0.0
+        ],
+        "max": [
+          0.5113764405250549,
+          0.16535352170467377,
+          1.7399998903274536
+        ]
+      },
+      "diagnostic_components": [
+        {
+          "id": 0,
+          "vertices": 9009,
+          "triangles": 15020,
+          "min": [
+            -0.5113764405250549,
+            -0.16535352170467377,
+            0.0
+          ],
+          "max": [
+            0.5113764405250549,
+            0.16535352170467377,
+            1.7399998903274536
+          ]
+        }
+      ],
+      "diagnostic_weld_vertices": 7501,
+      "boundary_edges_after_diagnostic_weld": 8,
+      "nonmanifold_edges_after_diagnostic_weld": 12,
+      "materials": [
+        "model"
+      ],
+      "uv_layers": 1
+    },
+    "old": {
+      "normalization": {
+        "factor": 1.000000063030203,
+        "original_min": [
+          -0.5094035863876343,
+          -0.20069614052772522,
+          0.0
+        ],
+        "original_max": [
+          0.5094035863876343,
+          0.20069614052772522,
+          1.7399998903274536
+        ],
+        "height_m": 1.74
+      },
+      "vertices": 6651,
+      "triangles": 11636,
+      "bounds_m": {
+        "min": [
+          -0.509403645992279,
+          -0.2006961703300476,
+          0.0
+        ],
+        "max": [
+          0.509403645992279,
+          0.2006961703300476,
+          1.7400001287460327
+        ]
+      },
+      "diagnostic_components": [
+        {
+          "id": 0,
+          "vertices": 6651,
+          "triangles": 11636,
+          "min": [
+            -0.509403645992279,
+            -0.2006961703300476,
+            0.0
+          ],
+          "max": [
+            0.509403645992279,
+            0.2006961703300476,
+            1.7400001287460327
+          ]
+        }
+      ],
+      "diagnostic_weld_vertices": 5820,
+      "boundary_edges_after_diagnostic_weld": 0,
+      "nonmanifold_edges_after_diagnostic_weld": 0,
+      "materials": [
+        "model.001"
+      ],
+      "uv_layers": 1
+    }
+  },
+  "fixed_studio": "ro_review_common.py; same 1.74m normalized height, five cameras, 1280px, AgX, lighting",
+  "whole_character_triangle_limit": 60000,
+  "reused_equipment_triangles": 43852,
+  "replacement_core_limit": 16148,
+  "replacement_triangle_gate": true,
+  "visual_comparison_pending": true,
+  "rig_accepted": false,
+  "animation_accepted": false,
+  "delivered": false,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/core-source-comparison/new_core.glb",
+      "bytes": 8802176,
+      "sha256": "27809f55569b88569efda9e996ceb3236f27dfa9002a0688fcd18942c15d3c05"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/core-source-comparison/old_core.glb",
+      "bytes": 10556064,
+      "sha256": "2c6ac507f265417f23d61f4cef108d9754dcb1ecd0ff85a82a8895f669444610"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-combo-r005/core-source-comparison/source_comparison.blend",
+      "bytes": 21658084,
+      "sha256": "fe76a7e15c5f8a91e4d78c6722a31f326d49df1fbd6eda888c567474a663fd59"
+    }
+  ]
+}

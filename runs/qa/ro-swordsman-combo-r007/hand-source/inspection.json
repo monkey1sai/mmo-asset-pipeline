@@ -1,0 +1,281 @@
+{
+  "observed_utc": "2026-10-03T12:12:06.821770+00:00",
+  "started_utc": "2026-10-03T12:12:01.459551+00:00",
+  "tool": "4.5.5 LTS",
+  "operation_id": "ro-hand-structure-20261003-001",
+  "consumed_credits": 0.5,
+  "source": {
+    "bytes": 161520,
+    "path": "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/base.obj",
+    "sha256": "c374f5951e788deb818cbb104a385bda8225a2e0c0b99d1ed3288a0b672debdc"
+  },
+  "download_dependencies_verified": [],
+  "native_OBJ_polygon_sides": {
+    "4": 1213
+  },
+  "native_OBJ_polygons": 1213,
+  "imported_native_face_count_preserved": true,
+  "importer_default_axes": {
+    "forward_axis": "NEGATIVE_Z",
+    "up_axis": "Y"
+  },
+  "explicit_import_axes": {
+    "forward_axis": "NEGATIVE_Z",
+    "up_axis": "Y"
+  },
+  "source_bounds_after_axis_import": {
+    "min": [
+      -0.4443050026893616,
+      -0.30067095160484314,
+      -0.9459890127182007
+    ],
+    "max": [
+      0.4457249939441681,
+      0.2997729480266571,
+      0.9477909803390503
+    ]
+  },
+  "display_normalization": {
+    "total_extent_z_m": 0.265,
+    "scale": 0.13993177717132466,
+    "hand_length_185mm_or_forearm_80mm_verified": false,
+    "purpose": "Source visualization only; locate actual wrist before fitting"
+  },
+  "mesh_stats": [
+    {
+      "object": "SM_RO_RightHand_Native_00",
+      "vertices": 1215,
+      "polygons": 1213,
+      "triangles": 2426,
+      "polygon_sides": {
+        "4": 1213
+      },
+      "boundary_edges": 0,
+      "nonmanifold_edges_including_boundary": 0,
+      "vertex_valence_histogram": {
+        "3": 39,
+        "4": 1150,
+        "5": 21,
+        "6": 5
+      },
+      "non_four_valence_vertex_ids": [
+        0,
+        7,
+        9,
+        18,
+        20,
+        24,
+        35,
+        37,
+        38,
+        45,
+        49,
+        53,
+        59,
+        66,
+        83,
+        90,
+        97,
+        104,
+        119,
+        128,
+        131,
+        133,
+        143,
+        146,
+        147,
+        150,
+        153,
+        155,
+        162,
+        169,
+        176,
+        185,
+        188,
+        194,
+        206,
+        207,
+        210,
+        217,
+        224,
+        231,
+        246,
+        257,
+        258,
+        263,
+        274,
+        276,
+        283,
+        290,
+        297,
+        309,
+        310,
+        312,
+        313,
+        323,
+        326,
+        335,
+        338,
+        345,
+        351,
+        354,
+        357,
+        514,
+        670,
+        729,
+        740
+      ],
+      "components": [
+        {
+          "id": 0,
+          "vertices": 1215,
+          "triangles": 2426,
+          "min": [
+            -0.06227174401283264,
+            -0.0420105941593647,
+            0.0
+          ],
+          "max": [
+            0.06227174401283264,
+            0.0420105941593647,
+            0.26500001549720764
+          ]
+        }
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "materials": []
+    }
+  ],
+  "images": [
+    {
+      "name": "texture_metallic.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_normal.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_pbr.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    {
+      "name": "texture_roughness.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "packed": true
+    }
+  ],
+  "source_geometry_corrections": 0,
+  "material_binding": {
+    "raw_MTL_present": false,
+    "raw_usemtl_present": false,
+    "artist_PBR_reconstructed": true,
+    "map_bindings": {
+      "Base Color": "texture_pbr.png",
+      "Metallic": "texture_metallic.png",
+      "Roughness": "texture_roughness.png",
+      "Normal": "texture_normal.png"
+    },
+    "original_material_graph_equivalence_claimed": false,
+    "reason": "Actual API OBJ package supplies UV and separate maps without MTL; color map choice still subject to visual review"
+  },
+  "rig_created": false,
+  "anatomy_art_review": "pending",
+  "animation_topology_accepted": false,
+  "rig_accepted": false,
+  "deformation_accepted": false,
+  "contact_accepted": false,
+  "artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-combo-r007/hand-source/right_hand_native_source.blend",
+      "bytes": 5924379,
+      "sha256": "d515d08954a5d01fca4c53d19578b599fc379474f4d31217f98eeafbc61166f1"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/back.png",
+      "bytes": 1152896,
+      "sha256": "f20b66d843944764e6dabab9370daee41b257811525d4d4c46d743763fd2fb93"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/cuff.png",
+      "bytes": 867009,
+      "sha256": "ae9c2d6a6e744f270e2ba6ac0e990398408c62d1b739069d7acc98dbaa571508"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/front.png",
+      "bytes": 1157776,
+      "sha256": "22ef44185b99236fbc66716f7bd29878c391d15cce862af8d55444585e476a19"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-back.png",
+      "bytes": 920979,
+      "sha256": "a15f260f302e5822ebe352d918dadfab46a72fad3876bd89fd77904d5710a67c"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-front.png",
+      "bytes": 912233,
+      "sha256": "2c85dcc04905a5b41c5dab0a9d576194bb416ce562b3aebeca50188ec13febd4"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/gray-three-quarter.png",
+      "bytes": 980937,
+      "sha256": "2ac43e729ead88fb98b2b4f2b3f82232cf6fbc9709f33b4f399fbc1442c25dd3"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/left.png",
+      "bytes": 1108214,
+      "sha256": "6a4e55693eb97bea990f43b3655bc80f157354b07229035db9d13fbcd2f38dcf"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/right.png",
+      "bytes": 1120879,
+      "sha256": "fdcb70bcaaa52bab46d2685f8a2dca03c98d17cb3954f108f0ec733d9bc03da9"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/three-quarter.png",
+      "bytes": 1227474,
+      "sha256": "fed26f5f5224cf78b066d075a9d6c480c948a5341712216adde5176090de8458"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-back.png",
+      "bytes": 986560,
+      "sha256": "00efe09940dec276c2d9806e15cd5e876b864ac016677a0e8dc1e0078a404964"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-front.png",
+      "bytes": 1003444,
+      "sha256": "0d55543729b1ceeb5c4a0e9cba1fcbd4959e4dba7ad3b997319da83d59b82026"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/wire-three-quarter.png",
+      "bytes": 1083855,
+      "sha256": "cb2a88c03c15a8d37b6b04926c49cebc860ff5c916e8adc38f0da7352aec6e6a"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-combo-r007/hand-source/native-topology.json",
+      "bytes": 778089,
+      "sha256": "ce39a276ff3e76f321101a4186d7c7cac8b8c56e93bf07dadc0857d1994170d7"
+    }
+  ],
+  "limitations": [
+    "Quad count/closed manifold alone does not establish useful joint loops",
+    "No rig or posed skin exists yet; source render is not animation acceptance"
+  ]
+}

@@ -1,0 +1,1421 @@
+{
+  "trial": "v003",
+  "source": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-roll/ro_roll_checked.blend",
+    "sha256": "2ef9f2c0575414db0a99544af2825fe91e5e1bb6e4f1eafdc6ede3db273215ce"
+  },
+  "thumb_port_weight_vertices_changed": 14,
+  "geometry_and_uv_unchanged": true,
+  "search_prior": 100,
+  "new_searches": 30,
+  "global_search_used": 130,
+  "global_search_limit": 160,
+  "right_hand_search_limit": 80,
+  "right_hand_prior_assumed50": true,
+  "prototype_clock_reset": false,
+  "safe_candidates": 3,
+  "selected": {
+    "parameters": [
+      0.055,
+      -0.008,
+      0.65
+    ],
+    "thumb_offset": [
+      -0.02,
+      0.009,
+      -0.02
+    ],
+    "samples": 754,
+    "inside_deeper_than1mm": 0,
+    "max_penetration_m": 0,
+    "ray_disagreements": 0,
+    "fixed_pad_contacts": {
+      "finger1": {
+        "within2mm": 0,
+        "minimum_m": 0.006680016405880451,
+        "mean_m": 0.018136142380535604
+      },
+      "finger2": {
+        "within2mm": 0,
+        "minimum_m": 0.010195054113864899,
+        "mean_m": 0.02256861627101898
+      },
+      "finger3": {
+        "within2mm": 0,
+        "minimum_m": 0.01096943486481905,
+        "mean_m": 0.02446892047300935
+      },
+      "finger4": {
+        "within2mm": 0,
+        "minimum_m": 0.016162879765033722,
+        "mean_m": 0.026706304773688315
+      },
+      "thumb": {
+        "within2mm": 0,
+        "minimum_m": 0.006496054586023092,
+        "mean_m": 0.022930563944909308
+      }
+    },
+    "hard_surface_constraint_met": true,
+    "contact_loss": 0.050503439735621214
+  },
+  "search_log": [
+    {
+      "parameters": [
+        0.031,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 11,
+      "max_penetration_m": 0.005819317419081926,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.0025103960651904345,
+          "mean_m": 0.0069662208901718255
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.01180125679820776,
+          "mean_m": 0.014326430670917035
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.015109838917851448,
+          "mean_m": 0.018395096622407438
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.016228238120675087,
+          "mean_m": 0.019897852279245853
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.0036252946592867374,
+          "mean_m": 0.023754872588647738
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.04927502456121147
+    },
+    {
+      "parameters": [
+        0.031,
+        -0.008,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 48,
+      "max_penetration_m": 0.0088784359395504,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 3,
+          "minimum_m": 0.00021392838971223682,
+          "mean_m": 0.004156863350362983
+        },
+        "finger2": {
+          "within2mm": 3,
+          "minimum_m": 0.0013605497078970075,
+          "mean_m": 0.005451449402607977
+        },
+        "finger3": {
+          "within2mm": 4,
+          "minimum_m": 0.0004717053088825196,
+          "mean_m": 0.006912714513600804
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.00041933206375688314,
+          "mean_m": 0.010534817248117178
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.0036252946592867374,
+          "mean_m": 0.023754872588647738
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.0060908101295353845
+    },
+    {
+      "parameters": [
+        0.031,
+        -0.008,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 97,
+      "max_penetration_m": 0.010024570859968662,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 4,
+          "minimum_m": 0.00047955787158571184,
+          "mean_m": 0.0034059901401633395
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.0018771560862660408,
+          "mean_m": 0.004336791299283505
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.0012357471277937293,
+          "mean_m": 0.00522188488394022
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.001148055074736476,
+          "mean_m": 0.008222822844982148
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.0036252946592867374,
+          "mean_m": 0.023754872588647738
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.008365810819668695
+    },
+    {
+      "parameters": [
+        0.031,
+        0.01,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 42,
+      "max_penetration_m": 0.009660140611231327,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 7.276369160535978e-06,
+          "mean_m": 0.00504186404327811
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.001558523392304778,
+          "mean_m": 0.002655168133787811
+        },
+        "finger3": {
+          "within2mm": 6,
+          "minimum_m": 9.199962369166315e-05,
+          "mean_m": 0.0033053928549634294
+        },
+        "finger4": {
+          "within2mm": 4,
+          "minimum_m": 8.923106361180544e-05,
+          "mean_m": 0.003096429444849491
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013182507827877998,
+          "mean_m": 0.030524122347641323
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.014929538276646781
+    },
+    {
+      "parameters": [
+        0.031,
+        0.01,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 103,
+      "max_penetration_m": 0.009920582175254822,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 4,
+          "minimum_m": 0.0001623567077331245,
+          "mean_m": 0.004560622276039794
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.0007155524799600244,
+          "mean_m": 0.005969808110967279
+        },
+        "finger3": {
+          "within2mm": 4,
+          "minimum_m": 0.0003760121180675924,
+          "mean_m": 0.006229124433593825
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.00031405550544150174,
+          "mean_m": 0.0040029601339483635
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013182507827877998,
+          "mean_m": 0.030524122347641323
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.014750484639080241
+    },
+    {
+      "parameters": [
+        0.031,
+        0.01,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 117,
+      "max_penetration_m": 0.00968931894749403,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.0021245928946882486,
+          "mean_m": 0.007215400878340006
+        },
+        "finger2": {
+          "within2mm": 4,
+          "minimum_m": 0.0002878615923691541,
+          "mean_m": 0.008413697473588399
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.0014659854350611567,
+          "mean_m": 0.009151057351846247
+        },
+        "finger4": {
+          "within2mm": 3,
+          "minimum_m": 0.00012799282558262348,
+          "mean_m": 0.00544552409555763
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013182507827877998,
+          "mean_m": 0.030524122347641323
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.01718894057557918
+    },
+    {
+      "parameters": [
+        0.031,
+        0.028,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 101,
+      "max_penetration_m": 0.009280306287109852,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.005411683581769466,
+          "mean_m": 0.010165308974683285
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.00017701619071885943,
+          "mean_m": 0.005660351150436327
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.0021850354969501495,
+          "mean_m": 0.006717983749695122
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.0001964861003216356,
+          "mean_m": 0.004817298290436156
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013943450525403023,
+          "mean_m": 0.03348208979393045
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.021913671895163134
+    },
+    {
+      "parameters": [
+        0.031,
+        0.028,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 63,
+      "max_penetration_m": 0.009984650649130344,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.009575453586876392,
+          "mean_m": 0.018020044919103383
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.003035001689568162,
+          "mean_m": 0.01461996401194483
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.000887523521669209,
+          "mean_m": 0.013130045973230153
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.0014191364170983434,
+          "mean_m": 0.007577063143253326
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013943450525403023,
+          "mean_m": 0.03348208979393045
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.02886056574061513
+    },
+    {
+      "parameters": [
+        0.031,
+        0.028,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 25,
+      "max_penetration_m": 0.009741393849253654,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.01346671488136053,
+          "mean_m": 0.023664758633822204
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.00850361306220293,
+          "mean_m": 0.022165917977690696
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.004684814251959324,
+          "mean_m": 0.02037558639422059
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.0007451176061294973,
+          "mean_m": 0.011773533752420916
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.013943450525403023,
+          "mean_m": 0.03348208979393045
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.041343710327055305
+    },
+    {
+      "parameters": [
+        0.043,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 1,
+      "max_penetration_m": 0.0013981899246573448,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.002954381750896573,
+          "mean_m": 0.01137397305574268
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.00893543753772974,
+          "mean_m": 0.01716517172753811
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.011676986701786518,
+          "mean_m": 0.020195392053574325
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.014476620592176914,
+          "mean_m": 0.02217752831056714
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006375481374561787,
+          "mean_m": 0.02353905361249215
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.04441890795715153
+    },
+    {
+      "parameters": [
+        0.043,
+        -0.008,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 95,
+      "max_penetration_m": 0.00967882014811039,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 0.00012779561802744865,
+          "mean_m": 0.008045414625667036
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 5.114464511279948e-05,
+          "mean_m": 0.009797305109168519
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.0006933186668902636,
+          "mean_m": 0.011040300619788468
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.00034162861993536353,
+          "mean_m": 0.013395319698611274
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006375481374561787,
+          "mean_m": 0.02353905361249215
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.007589368924527662
+    },
+    {
+      "parameters": [
+        0.043,
+        -0.008,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 100,
+      "max_penetration_m": 0.009674855507910252,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 0.000607203459367156,
+          "mean_m": 0.005194108781870455
+        },
+        "finger2": {
+          "within2mm": 1,
+          "minimum_m": 0.0015579406172037125,
+          "mean_m": 0.007167803938500583
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.002636752789840102,
+          "mean_m": 0.00835946921724826
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.0011263753985986114,
+          "mean_m": 0.010103461157996207
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006375481374561787,
+          "mean_m": 0.02353905361249215
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.012303753639571369
+    },
+    {
+      "parameters": [
+        0.043,
+        0.01,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 63,
+      "max_penetration_m": 0.009866662323474884,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 0.0009318094816990197,
+          "mean_m": 0.0053484062489587815
+        },
+        "finger2": {
+          "within2mm": 1,
+          "minimum_m": 0.0019599581137299538,
+          "mean_m": 0.006243946659378707
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.00018282824021298438,
+          "mean_m": 0.0062955493645858954
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.0013487018877640367,
+          "mean_m": 0.006767045042943209
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010936867445707321,
+          "mean_m": 0.029743062927284174
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.015360165169113316
+    },
+    {
+      "parameters": [
+        0.043,
+        0.01,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 80,
+      "max_penetration_m": 0.009772907011210918,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 4,
+          "minimum_m": 0.0004009102121926844,
+          "mean_m": 0.003763926838291809
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.0027579707093536854,
+          "mean_m": 0.005583344819024205
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.003705922281369567,
+          "mean_m": 0.006170679372735322
+        },
+        "finger4": {
+          "within2mm": 3,
+          "minimum_m": 0.00044796650763601065,
+          "mean_m": 0.0046384572167880835
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010936867445707321,
+          "mean_m": 0.029743062927284174
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.01824963715625927
+    },
+    {
+      "parameters": [
+        0.043,
+        0.01,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 61,
+      "max_penetration_m": 0.01016240008175373,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 1,
+          "minimum_m": 0.0012174773728474975,
+          "mean_m": 0.008379508450161666
+        },
+        "finger2": {
+          "within2mm": 4,
+          "minimum_m": 0.0005439036758616567,
+          "mean_m": 0.0072801326692570004
+        },
+        "finger3": {
+          "within2mm": 3,
+          "minimum_m": 0.0003160408232361078,
+          "mean_m": 0.007112081273226068
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.001089982339181006,
+          "mean_m": 0.0034616200602613388
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010936867445707321,
+          "mean_m": 0.029743062927284174
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.014104271656833589
+    },
+    {
+      "parameters": [
+        0.043,
+        0.028,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 94,
+      "max_penetration_m": 0.009312459267675877,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.00596360070630908,
+          "mean_m": 0.010965698072686792
+        },
+        "finger2": {
+          "within2mm": 4,
+          "minimum_m": 0.00018376868683844805,
+          "mean_m": 0.005681131206802093
+        },
+        "finger3": {
+          "within2mm": 1,
+          "minimum_m": 0.001740418840199709,
+          "mean_m": 0.006077899015508592
+        },
+        "finger4": {
+          "within2mm": 3,
+          "minimum_m": 0.0007454468286596239,
+          "mean_m": 0.0040071805357001725
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.012661151587963104,
+          "mean_m": 0.03357741159076492
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.021294386649969965
+    },
+    {
+      "parameters": [
+        0.043,
+        0.028,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 35,
+      "max_penetration_m": 0.008904766291379929,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.01225975714623928,
+          "mean_m": 0.018791302107274532
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.00553462840616703,
+          "mean_m": 0.014612716529518366
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.000584359047934413,
+          "mean_m": 0.012008671858347952
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.0002096494717989117,
+          "mean_m": 0.006245711861993186
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.012661151587963104,
+          "mean_m": 0.03357741159076492
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.03124954566010274
+    },
+    {
+      "parameters": [
+        0.043,
+        0.028,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 17,
+      "max_penetration_m": 0.006745159160345793,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.01542582642287016,
+          "mean_m": 0.024834796506911515
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.00954175554215908,
+          "mean_m": 0.022482058499008417
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.005209048744291067,
+          "mean_m": 0.020401434041559696
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.000299462815746665,
+          "mean_m": 0.011702678189612925
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.012661151587963104,
+          "mean_m": 0.03357741159076492
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.043137245113030076
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 0,
+      "max_penetration_m": 0,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.006680016405880451,
+          "mean_m": 0.018136142380535604
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.010195054113864899,
+          "mean_m": 0.02256861627101898
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.01096943486481905,
+          "mean_m": 0.02446892047300935
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.016162879765033722,
+          "mean_m": 0.026706304773688315
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006735607050359249,
+          "mean_m": 0.023330862595078845
+        }
+      },
+      "hard_surface_constraint_met": true,
+      "contact_loss": 0.05074299219995737
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 104,
+      "max_penetration_m": 0.009679939597845078,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 0.0013107802951708436,
+          "mean_m": 0.013024651713203638
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.0050941528752446175,
+          "mean_m": 0.015341133531183004
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.004658162593841553,
+          "mean_m": 0.01655748775228858
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.002444069366902113,
+          "mean_m": 0.0184384043328464
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006735607050359249,
+          "mean_m": 0.023330862595078845
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.020242772181518376
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 46,
+      "max_penetration_m": 0.009534254670143127,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.006757277995347977,
+          "mean_m": 0.013292938796803355
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.0007066657999530435,
+          "mean_m": 0.01179760376107879
+        },
+        "finger3": {
+          "within2mm": 2,
+          "minimum_m": 0.0014191122027114034,
+          "mean_m": 0.012081023235805333
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.004264881834387779,
+          "mean_m": 0.015489043714478613
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006735607050359249,
+          "mean_m": 0.023330862595078845
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.019883544882759452
+    },
+    {
+      "parameters": [
+        0.055,
+        0.01,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 96,
+      "max_penetration_m": 0.009791051037609577,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 2,
+          "minimum_m": 0.0007060100906528533,
+          "mean_m": 0.010754722630372271
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.002731433603912592,
+          "mean_m": 0.012297517200931907
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.0034090636763721704,
+          "mean_m": 0.01276064368430525
+        },
+        "finger4": {
+          "within2mm": 2,
+          "minimum_m": 0.0005344516248442233,
+          "mean_m": 0.0121807778312359
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.008914475329220295,
+          "mean_m": 0.028753409369124308
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.016295434325002134
+    },
+    {
+      "parameters": [
+        0.055,
+        0.01,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 66,
+      "max_penetration_m": 0.009369859471917152,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.003565816441550851,
+          "mean_m": 0.011150075565092265
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.003220950486138463,
+          "mean_m": 0.009895031736232341
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.003869827138260007,
+          "mean_m": 0.009951843111775816
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.00115058827213943,
+          "mean_m": 0.008798384992405772
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.008914475329220295,
+          "mean_m": 0.028753409369124308
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.020721657667309046
+    },
+    {
+      "parameters": [
+        0.055,
+        0.01,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 26,
+      "max_penetration_m": 0.006559563335031271,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.012954466044902802,
+          "mean_m": 0.016423222608864307
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.009844436310231686,
+          "mean_m": 0.014135778788477183
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.005974385887384415,
+          "mean_m": 0.012613778049126268
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.00027281083748675883,
+          "mean_m": 0.0087035375792766
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.008914475329220295,
+          "mean_m": 0.028753409369124308
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.037960574409225956
+    },
+    {
+      "parameters": [
+        0.055,
+        0.028,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 80,
+      "max_penetration_m": 0.009559346362948418,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.007895727641880512,
+          "mean_m": 0.015956183802336453
+        },
+        "finger2": {
+          "within2mm": 2,
+          "minimum_m": 0.0015542218461632729,
+          "mean_m": 0.010843204893171787
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.0026053492911159992,
+          "mean_m": 0.009521929430775344
+        },
+        "finger4": {
+          "within2mm": 1,
+          "minimum_m": 0.0013411251129582524,
+          "mean_m": 0.007910642994102091
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010275086387991905,
+          "mean_m": 0.03275350941759017
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.023671510280109942
+    },
+    {
+      "parameters": [
+        0.055,
+        0.028,
+        0.85
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 19,
+      "max_penetration_m": 0.008284318260848522,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.019154198467731476,
+          "mean_m": 0.02305218707770109
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.013720806688070297,
+          "mean_m": 0.018626817874610423
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.008717557415366173,
+          "mean_m": 0.015810239035636185
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.0043999552726745605,
+          "mean_m": 0.010586410108953715
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010275086387991905,
+          "mean_m": 0.03275350941759017
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.05626760423183441
+    },
+    {
+      "parameters": [
+        0.055,
+        0.028,
+        1.05
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 2,
+      "max_penetration_m": 0.002352368086576462,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.021580703556537628,
+          "mean_m": 0.02940619979053736
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.016240589320659637,
+          "mean_m": 0.026465360075235367
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.011885560117661953,
+          "mean_m": 0.024138137698173523
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.008739746175706387,
+          "mean_m": 0.01671878444030881
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.010275086387991905,
+          "mean_m": 0.03275350941759017
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.06872168555855751
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.02,
+        0.009,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 0,
+      "max_penetration_m": 0,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.006680016405880451,
+          "mean_m": 0.018136142380535604
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.010195054113864899,
+          "mean_m": 0.02256861627101898
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.01096943486481905,
+          "mean_m": 0.02446892047300935
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.016162879765033722,
+          "mean_m": 0.026706304773688315
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.006496054586023092,
+          "mean_m": 0.022930563944909308
+        }
+      },
+      "hard_surface_constraint_met": true,
+      "contact_loss": 0.050503439735621214
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.022,
+        -0.02
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 0,
+      "max_penetration_m": 0,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.006680016405880451,
+          "mean_m": 0.018136142380535604
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.010195054113864899,
+          "mean_m": 0.02256861627101898
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.01096943486481905,
+          "mean_m": 0.02446892047300935
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.016162879765033722,
+          "mean_m": 0.026706304773688315
+        },
+        "thumb": {
+          "within2mm": 0,
+          "minimum_m": 0.009394040331244469,
+          "mean_m": 0.020205738592065044
+        }
+      },
+      "hard_surface_constraint_met": true,
+      "contact_loss": 0.05340142548084259
+    },
+    {
+      "parameters": [
+        0.055,
+        -0.008,
+        0.65
+      ],
+      "thumb_offset": [
+        -0.03,
+        0.009,
+        -0.005
+      ],
+      "samples": 754,
+      "inside_deeper_than1mm": 10,
+      "max_penetration_m": 0.0059724836610257626,
+      "ray_disagreements": 0,
+      "fixed_pad_contacts": {
+        "finger1": {
+          "within2mm": 0,
+          "minimum_m": 0.006680016405880451,
+          "mean_m": 0.018136142380535604
+        },
+        "finger2": {
+          "within2mm": 0,
+          "minimum_m": 0.010195054113864899,
+          "mean_m": 0.02256861627101898
+        },
+        "finger3": {
+          "within2mm": 0,
+          "minimum_m": 0.01096943486481905,
+          "mean_m": 0.02446892047300935
+        },
+        "finger4": {
+          "within2mm": 0,
+          "minimum_m": 0.016162879765033722,
+          "mean_m": 0.026706304773688315
+        },
+        "thumb": {
+          "within2mm": 3,
+          "minimum_m": 7.214384822873399e-05,
+          "mean_m": 0.015189448372944349
+        }
+      },
+      "hard_surface_constraint_met": false,
+      "contact_loss": 0.044079528997826856
+    }
+  ],
+  "selection_rule": "Only zero deep sample penetration and zero ray disagreement may be considered. If none, preserve the least-violating failed specimen and stop; contact improvement cannot compensate.",
+  "surface_contact_accepted": false,
+  "art_accepted": false,
+  "artifact": {
+    "path": "assets/processed/ro-swordsman-combo-r005/v003-hand-surface/ro_surface_specimen.blend",
+    "sha256": "ccc52c36fbe861ea295b2d3556f6b9fbc7ad06d1f1f51b37d56eb3e4d3d9a25d"
+  }
+}

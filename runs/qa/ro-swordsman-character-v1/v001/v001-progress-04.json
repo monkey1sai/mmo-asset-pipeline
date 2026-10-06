@@ -1,0 +1,107 @@
+{
+ "id": "v001",
+ "recorded_utc": "2026-10-05T05:53:06Z",
+ "request": "ro-swordsman-character-v1-r4",
+ "status": "in progress (not in the ledger; no completion claimed)",
+ "intervals_seconds": [
+  354,
+  486,
+  776,
+  297
+ ],
+ "interval_starts_utc": [
+  "2026-10-05T04:57:13Z",
+  "2026-10-05T05:07:10Z",
+  "2026-10-05T05:21:53Z",
+  "2026-10-05T05:48:09Z"
+ ],
+ "active_seconds_total": 1913,
+ "trial_seconds_cap": 21600,
+ "current_build": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/ro_character_v001_b03-hands.blend",
+  "sha256": "3dc9dd3969c9ca30ca8f704531321df1749b8572861b385f139718d6f277e516",
+  "rules": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/corrective-rules.json",
+   "sha256": "620c00194a11e1eb171cd860603f216f4f5b6811212bec5703a77b6574131805"
+  },
+  "poses": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b03-hands/poses.json",
+   "sha256": "28375c9c83812b83eadc76fae805dfb0c7d4a4ac0c6eb18486a2825c87f690bd"
+  },
+  "chain": [
+   "b01-base: assembly (hand material, cuff on static and twist carriers, stumps cut at -55 mm, toe weights, original left bracer cut)",
+   "b02-folds: seven one-vertex pose-driven fixes for folding core triangles",
+   "b03-hands: 19 pose-driven hand keys per hand"
+  ],
+  "bones": 62,
+  "triangles": 56435,
+  "protected_r010_hand": {
+   "vertices": true,
+   "max_edge_length_change_m": 8.439218864616377e-08,
+   "polygons_identical": true,
+   "uv_identical": true,
+   "max_corrective_delta_change_m": 6.083634170256716e-08,
+   "weights_identical_ids": 786,
+   "weights_changed_ids": 118
+  },
+  "cuff": {
+   "applied": true,
+   "vertices_behind_wrist": 118,
+   "blend_mm": 30.0
+  }
+ },
+ "joint_range": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/joint-range/joint-range-result.json",
+  "sha256": "62f5ebce7b2e9fbc288a3586743eb1c230761b2969eac00a061bc027f96964d0",
+  "contract": {
+   "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+   "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7",
+   "bound_to_request": true
+  },
+  "motions": 73,
+  "numeric_gate_pass": true,
+  "rest_gate": {
+   "hand_self_intersection_zero": true,
+   "other_pairs_within_ceiling": true
+  },
+  "baseline_motions_failed": 34
+ },
+ "fixed_views": {
+  "front": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/views/front.png",
+   "sha256": "7b276cc0941c1a5b3a27564dc5f54210bc8f3a207ad718d57f7a359d489e1c0d"
+  },
+  "side": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/views/side.png",
+   "sha256": "8df506dde54acba572ee81d0545ee93f21234b562edfa041f149bb84cb018799"
+  },
+  "back": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/views/back.png",
+   "sha256": "6d57b23f1200a2fc6668fc1e9432d5c775fda4dcf8703c93ed4070c73c157d95"
+  },
+  "three-quarter": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/views/three-quarter.png",
+   "sha256": "09a38e09425b40ac8e4d0f00b8ab8f91f1aebdca69679e0a5123c719d31e32e4"
+  },
+  "detail": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/b03-hands/views/detail.png",
+   "sha256": "9af9308008772dc0013ebd5092377ef1cd866995c3cef4978ac3c7db5be77585"
+  }
+ },
+ "gray_review": {
+  "sheets": "runs/qa/ro-swordsman-character-v1/v001/a34-hands/gray-review-ab",
+  "subject_of_sheets": "a34-hands and the r4 baseline; b03-hands has the same geometry chain with the textured hand material",
+  "status": "independent blind A/B review running in the background at record time"
+ },
+ "not_done": [
+  "independent gray review result and whatever it requires",
+  "real shoulder, pauldron and coat deformation work",
+  "16 cross-UV-island faces on the hands",
+  "all nine clips, VFX, interaction windows",
+  "QA scene with the runtime evaluator for these rules",
+  "GLB export with restored weights and fresh readback",
+  "negative controls, performance report, holdout",
+  "ledger entry for this candidate"
+ ],
+ "new_paid_submissions": 0
+}

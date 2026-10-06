@@ -1,0 +1,14 @@
+13:51:09 | INFO: Data are loaded, start creating Blender stuff
+13:51:09 | INFO: Blender create Mesh node ActualSwordLocal
+13:51:09 | INFO: Blender create Mesh node ThumbPatchCandidate
+13:51:09 | INFO: glTF import finished in 0.03s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\verify_ro_fresh_grasp_glb.py", line 76, in <module>
+    self_report,_=grip.capture(hand_proxy,rig,rest,'glb-'+str(frame),[])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: capture() missing 1 required positional argument: 'ww'
+
+Error: script failed, file: 'scripts\verify_ro_fresh_grasp_glb.py', exiting.
+
+Blender quit

@@ -1,0 +1,89 @@
+{
+  "mode": "offline_plan_only",
+  "request_id": "ro-swordsman-combo-r002",
+  "request_sha256": "1dff9c82d8a5614dec58234ea38c28e62ea1f4bc01b118dc9cb3a92091fcb096",
+  "project": null,
+  "route": "modify",
+  "reason": "Reuse completed authorized Hyper3D candidate at assets/raw/ro-swordsman-combo/rodin-v001/base_basic_pbr.glb. Preserve the exhausted invalid prior experiment; this new user-authorized phase establishes a complete source baseline before local semantic reconstruction. No new paid submission.",
+  "pending": [],
+  "reuse_candidates": [
+    "ro-swordsman-rodin-v001"
+  ],
+  "steps": [
+    "理解需求與交付承諾",
+    "制定設計、參考與可修訂預設",
+    "保留 master，以新版本修改指定差距",
+    "製作與需求指定的後製",
+    "逐項記錄美術／技術／必要目標環境證據",
+    "核對交付檔案並歸檔"
+  ],
+  "needed_capabilities": [
+    "mesh_edit",
+    "format_export",
+    "rig_inspection",
+    "deformation_inspection",
+    "rig_authoring",
+    "animation_inspection",
+    "animation_authoring"
+  ],
+  "required_checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全"
+    },
+    {
+      "id": "rig_mapping",
+      "area": "technical",
+      "description": "指定骨架、權重及掛點經檢查"
+    },
+    {
+      "id": "deformation",
+      "area": "technical",
+      "description": "關節變形及指定動作經檢查"
+    },
+    {
+      "id": "animation",
+      "area": "technical",
+      "description": "需求列出的所有動作經檢查"
+    },
+    {
+      "id": "export-roundtrip",
+      "area": "technical",
+      "description": "乾淨場景GLB重匯入，實際skin/joints/channels/材質/採樣與變形保留；以交付hash綁定。"
+    },
+    {
+      "id": "skill-effects",
+      "area": "art",
+      "description": "斬擊／怒爆／霸體效果對應參考且可關閉；無效果全段另外檢查。"
+    }
+  ],
+  "paid_submission_authorized_by_this_plan": false,
+  "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。",
+  "quality_loop": {
+    "protocol_sha256": "464fb0b3e748684e54108b5939a77c17721a25a31ef1d8bc361e6bf05ccf5025",
+    "max_candidate_trials": 3,
+    "budget": {
+      "trial_seconds": 7200,
+      "total_seconds": 21600
+    },
+    "retention_rule": "no_dimension_regression_and_gain_or_required_gate_repair",
+    "delivery_rule": "all_dimension_targets_and_required_checks",
+    "automation": "offline_declarations_only"
+  }
+}

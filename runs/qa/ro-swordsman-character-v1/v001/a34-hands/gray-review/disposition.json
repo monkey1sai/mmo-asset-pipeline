@@ -1,0 +1,66 @@
+{
+ "recorded_utc": "2026-10-05T06:08:20.221846+00:00",
+ "review": "runs/qa/ro-swordsman-character-v1/v001/a34-hands/gray-review/review.md",
+ "reviewer": "independent read-only subagent; looked only at the 21 sheets; not a human sign-off",
+ "unblinding": {
+  "reviewer_labels": "[S] smooth hand, [L] rough hand, assigned from appearance",
+  "rows_checked": {
+   "thumb-cmc-opposition.L": "A",
+   "combo-empty-fist.L": "A",
+   "combo-empty-fist.R": "B",
+   "fingers-mcp-flexion.L": "A",
+   "wrist-flexion.R": "A",
+   "forearm-supination.L": "B",
+   "fingers-dip-flexion.L": "B",
+   "thumb-ip-flexion.R": "B"
+  },
+  "candidate_side_per_row": {
+   "thumb-cmc-opposition.L": "A",
+   "combo-empty-fist.L": "A",
+   "combo-empty-fist.R": "B",
+   "fingers-mcp-flexion.L": "A",
+   "wrist-flexion.R": "A",
+   "forearm-supination.L": "B",
+   "fingers-dip-flexion.L": "B",
+   "thumb-ip-flexion.R": "B"
+  },
+  "S_equals_candidate_in_checked_rows": true
+ },
+ "findings_by_priority": [
+  {
+   "area": "pauldrons",
+   "observation": "At shoulder flexion and abduction extremes and arms overhead, the pauldrons stay put and hang under the raised arm; thin slivers stretch from the armpit.",
+   "plan": "helper-bone rule: pauldron turns by a share of the upper arm rotation, evaluated in the runtime evaluator; armpit strap weights"
+  },
+  {
+   "area": "coat and skirt",
+   "observation": "Hip flexion extreme splits the skirt into a dark wedge; hip abduction shears side panels; knee flexion extreme crushes the calf and the boot cuts the hem.",
+   "plan": "helper-bone rules: coat panels and tabard follow a share of thigh rotation; knee volume corrective"
+  },
+  {
+   "area": "chest",
+   "observation": "At spine extremes the chest armour bends like rubber while the belt and skirt stay put.",
+   "plan": "make the armour region of the core move with spine_02 only, bending left to the waist"
+  },
+  {
+   "area": "elbows",
+   "observation": "At the elbow extreme the forearm armour cuts into the pauldron and the elbow collapses.",
+   "plan": "re-measure after pauldron follow; elbow volume corrective"
+  },
+  {
+   "area": "neck",
+   "observation": "At neck pitch extreme the chin sinks into the collar; at yaw extreme the jaw skews.",
+   "plan": "collar rigid with the chest; review neck range"
+  },
+  {
+   "area": "hands (candidate)",
+   "observation": "All joints pose with no spikes or seams and are acceptable at gameplay distance; close up the palm looks inflated, knuckles undefined, the fist is a block, MCP flexion folds four fingers into one plate, PIP extreme forms a hard wedge.",
+   "plan": "knuckle volume correctives on flexion; shape changes to the protected r010 Basis would need authorization"
+  }
+ ],
+ "baseline_vs_candidate": "Body rows identical as expected (the body ratchet holds the candidate at baseline level). Hand rows favour the candidate in most rows; the baseline cannot pose DIP.L, thumb IP or any fist or grasp.",
+ "reviewer_caveats": [
+  "hand close-ups use a per-subject camera, so A/B hand views differ in angle",
+  "320 px tiles hide small intersections; toe and whole-body combo tiles too small to judge"
+ ]
+}

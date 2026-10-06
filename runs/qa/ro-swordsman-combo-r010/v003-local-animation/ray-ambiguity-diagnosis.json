@@ -1,0 +1,33 @@
+{
+  "observed_utc": "2026-10-04T05:36:17.440924+00:00",
+  "subject": {
+    "path": "assets/processed/ro-swordsman-combo-r010/v003-local-animation/right_hand_grasp_61f.blend",
+    "sha256": "a01676563c0a65e0a33d42308c653ef7fd499b059301596a82b9eae282131c96"
+  },
+  "reproduced_unknowns": [
+    [
+      "edge",
+      1227,
+      "parity_unknown"
+    ]
+  ],
+  "self_or_sword_failure_not_proven": true,
+  "welded_oriented_edges_bad": 0,
+  "unknown_sample_diagnosis": [
+    {
+      "kind": "edge",
+      "index": 1227,
+      "reason": "parity_unknown",
+      "point": [
+        -0.004759678617119789,
+        -0.03277891129255295,
+        0.1076802983880043
+      ],
+      "nearest_m": 0.06556452810764313,
+      "solid_angle_winding": -4.417437057588218e-18,
+      "original_unknown_preserved": true
+    }
+  ],
+  "method": "Double precision signed solid-angle winding over all actual sword triangles, diagnostic only; original failed half-frame and zero-unknown gate preserved.",
+  "geometry_or_animation_changed": false
+}

@@ -1,0 +1,14 @@
+{
+  "reviewer": "Existing hand_phase_review; Astra/high; read-only",
+  "scope": "Source topology and bounded next-method architecture; not approval or delivery acceptance",
+  "source_gate": "FAIL; keep original joint centers/bands; no rigging",
+  "verified": ["Actual cuff cut separates inner/outer;189lining vertices removed", "Single ordered18-edge cuff and1730tri exterior", "Actual protected corner UV readback consistent; neutral transverse0", "160probes=72+54+34;2remaining IP poles native83/native90"],
+  "joint_centers": "Reasonable fixed prototype hypotheses; inside is not anatomical acceptance. Scaled coordinates must be used; MCP surface distance3.81mm needs close review.",
+  "method_limit": "Strict single-step pole reduction rejected plateau states; bounded search exhaustion does not prove Blender cannot fix",
+  "next_hypothesis_seeds": [{"edge_vertices":[48,49],"ccw":false,"remaining_poles":2,"centroid_residual_m":0.000108},{"edge_vertices":[49,50],"ccw":true,"remaining_poles":2,"centroid_residual_m":0.000423}],
+  "requirements": ["Two-step sequence judged together", "Reject inverse/duplicate topology, UV seam ambiguity and invalid faces", "New poles must be on actual nonflexing distal cap, beyond mere mask edge", "Recheck actual loop triangles/normals/degenerates/self-cross/surface and cornerUV before skin"],
+  "fallback": "Thumb IP-to-tip local patch retopology if bounded sequences fail; no evidence for whole-hand rebuild yet; not automatically micro refinement",
+  "old_budget_reset": false,
+  "animation_or_delivery_pass": false,
+  "background_work": "none"
+}

@@ -2,20 +2,358 @@
   "schema_version": 1,
   "entries": [
     {
-      "id": "cl-brazier-v001", "asset_id": "cl-brazier", "name": "常山龍膽火盆候選", "project": "changshan-longdan", "version": "v001",
-      "tags": ["火盆", "brazier", "三國", "prop", "iron"], "status": "needs_revision",
-      "acceptance": {"art": "needs_revision", "technical": "inventory_only", "target_environment": "not_run", "delivery": "not_delivered"},
-      "files": ["assets/raw/cl-brazier/v001/base_basic_pbr.glb", "assets/raw/cl-brazier/v001/base_basic_shaded.glb", "assets/raw/cl-brazier/v001/texture_emissive.png"],
-      "provenance": {"operation_id": "bootstrap-20261002-cl-brazier-v001", "generation_id": "c4fead7e-d088-4c2b-bc68-4efe5216a58b", "record": "runs/2026-10-02-bootstrap.json"},
-      "qa_report": "runs/qa/cl-brazier-v001.md", "open_issues": ["靜態火焰需處理", "金屬支腳與石座目標不符", "尺寸、材質、LOD與交付驗收未完成"]
+      "id": "cl-brazier-v001",
+      "asset_id": "cl-brazier",
+      "name": "常山龍膽火盆候選",
+      "project": "changshan-longdan",
+      "version": "v001",
+      "tags": [
+        "火盆",
+        "brazier",
+        "三國",
+        "prop",
+        "iron"
+      ],
+      "status": "needs_revision",
+      "acceptance": {
+        "art": "needs_revision",
+        "technical": "inventory_only",
+        "target_environment": "not_run",
+        "delivery": "not_delivered"
+      },
+      "files": [
+        "assets/raw/cl-brazier/v001/base_basic_pbr.glb",
+        "assets/raw/cl-brazier/v001/base_basic_shaded.glb",
+        "assets/raw/cl-brazier/v001/texture_emissive.png"
+      ],
+      "provenance": {
+        "operation_id": "bootstrap-20261002-cl-brazier-v001",
+        "generation_id": "c4fead7e-d088-4c2b-bc68-4efe5216a58b",
+        "record": "runs/2026-10-02-bootstrap.json"
+      },
+      "qa_report": "runs/qa/cl-brazier-v001.md",
+      "open_issues": [
+        "靜態火焰需處理",
+        "金屬支腳與石座目標不符",
+        "尺寸、材質、LOD與交付驗收未完成"
+      ]
     },
     {
-      "id": "evoloot-iron-sword-neutral-v001", "asset_id": "evoloot.weapon.iron_sword_neutral", "name": "EvoLoot 基礎鐵劍候選", "project": "evoloot", "version": "v001",
-      "tags": ["鐵劍", "sword", "weapon", "dark-fantasy", "neutral"], "status": "needs_revision",
-      "acceptance": {"art": "needs_revision", "technical": "inventory_only", "target_environment": "not_run", "delivery": "not_delivered"},
-      "files": ["assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_pbr.glb", "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_shaded.glb"],
-      "provenance": {"operation_id": "bootstrap-20261002-evoloot-iron-sword-neutral-v001", "generation_id": "4574e81b-b870-4b71-a066-9b557b36ab9d", "record": "runs/2026-10-02-bootstrap.json"},
-      "qa_report": "runs/qa/evoloot-iron-sword-neutral-v001.md", "open_issues": ["雙叉刃及金色飾件偏離普通鏽鐵劍", "握點、尺度、LOD與交付驗收未完成"]
+      "id": "evoloot-iron-sword-neutral-v001",
+      "asset_id": "evoloot.weapon.iron_sword_neutral",
+      "name": "EvoLoot 基礎鐵劍候選",
+      "project": "evoloot",
+      "version": "v001",
+      "tags": [
+        "鐵劍",
+        "sword",
+        "weapon",
+        "dark-fantasy",
+        "neutral"
+      ],
+      "status": "needs_revision",
+      "acceptance": {
+        "art": "needs_revision",
+        "technical": "inventory_only",
+        "target_environment": "not_run",
+        "delivery": "not_delivered"
+      },
+      "files": [
+        "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_pbr.glb",
+        "assets/raw/evoloot.weapon.iron_sword_neutral/v001/base_basic_shaded.glb"
+      ],
+      "provenance": {
+        "operation_id": "bootstrap-20261002-evoloot-iron-sword-neutral-v001",
+        "generation_id": "4574e81b-b870-4b71-a066-9b557b36ab9d",
+        "record": "runs/2026-10-02-bootstrap.json"
+      },
+      "qa_report": "runs/qa/evoloot-iron-sword-neutral-v001.md",
+      "open_issues": [
+        "雙叉刃及金色飾件偏離普通鏽鐵劍",
+        "握點、尺度、LOD與交付驗收未完成"
+      ]
+    },
+    {
+      "id": "ro-swordsman-combo-r002-v003",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO 劍士連段壓力測試失敗候選",
+      "project": null,
+      "version": "r002-v003",
+      "tags": [
+        "RO",
+        "劍士",
+        "character",
+        "rig",
+        "combo",
+        "stress-test"
+      ],
+      "status": "needs_revision",
+      "acceptance": {
+        "art": "failed",
+        "technical": "diagnostics_partial_failed",
+        "target_environment": "not_requested",
+        "delivery": "not_delivered"
+      },
+      "files": [
+        "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_master.blend",
+        "assets/processed/ro-swordsman-combo-r002/v003/ro_swordsman_combo.glb",
+        "assets/processed/ro-swordsman-combo-r002/v003/ro_skill_effects.glb"
+      ],
+      "provenance": {
+        "operation_id": "ro-swordsman-reference-20261002-001",
+        "generation_id": "7120b25b-c2af-4393-b0b0-0bbc809fc11a",
+        "record": "runs/qa/ro-swordsman-combo-r002/quality-ledger.json"
+      },
+      "qa_report": "runs/qa/ro-swordsman-combo-r002/assessment-final.json",
+      "open_issues": [
+        "勝利站姿浮地",
+        "支撐腳滑動",
+        "握持轉折突變",
+        "匯出肘甲差異",
+        "造型比例與效果未達標"
+      ]
+    },
+    {
+      "id": "ro-swordsman-combo-r003-v001",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO劍士中性來源與骨架預檢失敗候選",
+      "project": null,
+      "version": "r003-v001",
+      "tags": ["RO", "劍士", "character", "rig", "preflight", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "failed", "target_environment": "not_run", "delivery": "not_delivered"},
+      "files": [
+        "assets/raw/ro-swordsman-combo/rodin-v002/base_basic_pbr.glb",
+        "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.blend",
+        "assets/processed/ro-swordsman-combo-r003/v001/ro_swordsman_preflight_final.glb"
+      ],
+      "provenance": {"operation_id": "ro-swordsman-apose-20261002-001", "generation_id": "b51afd35-409d-48e6-b2a0-4c4e0b844904", "record": "runs/qa/ro-swordsman-combo-r003/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r003/assessment-final.json",
+      "open_issues": ["腕掌／拇指塌折及握持不自然", "硬甲隨權重軟折", "原8條非流形邊未修", "完整300幀連段與技能效果未製作", "本輪唯一候選不通過；保留原基準和預算，不標示可交付"]
+    },
+    {
+      "id": "ro-swordsman-combo-r005-v001",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO劍士同圖六件來源與骨架預檢候選",
+      "project": null,
+      "version": "r005-v001",
+      "tags": ["RO", "劍士", "character", "rig", "batch", "preflight", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "static_roundtrip_verified_deformation_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/raw/ro-swordsman-combo/rodin-v004/batch/base_basic_pbr.glb",
+        "assets/processed/ro-swordsman-combo-r005/source-parts/source_parts.blend",
+        "assets/processed/ro-swordsman-combo-r005/baseline/ro_batch_assembly_baseline.blend",
+        "assets/processed/ro-swordsman-combo-r005/v001-rig-seams/ro_rig_preflight.blend",
+        "assets/processed/ro-swordsman-combo-r005/v001-rig-seams/ro_rig_preflight.glb"
+      ],
+      "provenance": {"operation_id": "ro-split-batch-20261003-001", "generation_id": "7ac5437d-678c-4eca-b5a9-050131bb25a8", "record": "runs/hyper3d/operations/ro-split-batch-20261003-001.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r005/v001-final-review.json",
+      "open_issues": ["六件完整性與分離已驗，但本版臉部細節未達標", "腕掌／拇指、肩袖及衣料變形仍失敗", "0動畫，完整300幀連段與技能效果尚未製作", "後續單件core已在r005-v002下載；本版保留為歷史失敗候選", "NO-SHIP，原基準與已耗預算保留，不標為可交付"]
+    },
+    {
+      "id": "ro-swordsman-combo-r005-v002",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO劍士單件core備援與局部骨架失敗候選",
+      "project": null,
+      "version": "r005-v002",
+      "tags": ["RO", "劍士", "character", "rig", "core-fallback", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "local_topology_verified_deformation_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/raw/ro-swordsman-combo/rodin-v005/core/base_basic_pbr.glb",
+        "assets/processed/ro-swordsman-combo-r005/core-source-comparison/source_comparison.blend",
+        "assets/processed/ro-swordsman-combo-r005/v002-fit/ro_core_fit.blend",
+        "assets/processed/ro-swordsman-combo-r005/v002-fit/ro_core_fit.glb",
+        "assets/processed/ro-swordsman-combo-r005/v002-digit-weights/ro_digit_weights.blend"
+      ],
+      "provenance": {"operation_id": "ro-core-fallback-20261003-001", "generation_id": "4c6a4f65-19a3-4931-9e81-4b27511d7aff", "record": "runs/hyper3d/operations/ro-core-fallback-20261003-001.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r005/v002-final-review.json",
+      "open_issues": ["固定視角靜態臉部改善不等於整件品質通過", "四個頭部fin精確移除，區域外面UV／幾何核對相同", "58868tri、48FK骨；握持及護臂／衣物配裝失敗", "個別指軸方向錯誤後續已修正，更正見v002-axis-review-correction.json；不能據此單獨歸因來源拓樸", "未完成指定連段與效果，NO-SHIP"]
+    },
+    {
+      "id": "ro-swordsman-combo-r005-v003",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO劍士最後右手重拓樸原型失敗標本",
+      "project": null,
+      "version": "r005-v003",
+      "tags": ["RO", "劍士", "character", "rig", "retopology", "prototype", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "right_hand_prototype_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r005/v003-hand-prototype/ro_hand_prototype.blend",
+        "assets/processed/ro-swordsman-combo-r005/v003-hand-surface/ro_surface_specimen.blend"
+      ],
+      "provenance": {"operation_id": "ro-core-fallback-20261003-001", "generation_id": "4c6a4f65-19a3-4931-9e81-4b27511d7aff", "record": "runs/qa/ro-swordsman-combo-r005/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r005/v003-final-review.json",
+      "open_issues": ["59120tri、52骨僅右手重拓樸；沒有新扣點", "有限樣本未见深穿透，但指墊距柄6.50至16.16mm，未形成握持", "掌根折疊及UV跨島污染尚未修好，沒有擴展到左手", "原phase三次修訂用畢，compare=stop_budget；品質目標false", "完整角色、300幀連段、VFX與動畫回讀未完成，NO-SHIP"]
+    },
+    {
+      "id": "ro-swordsman-combo-r006-hand-source",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO右手手套原始生成來源（未驗收動畫用途）",
+      "project": null,
+      "version": "r006-raw-hand",
+      "tags": ["RO", "劍士", "glove", "hand", "raw", "hyper3d", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "not_accepted_for_animation", "technical": "source_inspected_not_animation_ready", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/raw/ro-swordsman-combo/design-v006/right-glove-open.png",
+        "assets/raw/ro-swordsman-combo/rodin-v006/right-glove/base_basic_pbr.glb",
+        "assets/processed/ro-swordsman-combo-r006/hand-source/right_glove_source.blend"
+      ],
+      "provenance": {"operation_id": "ro-hand-source-20261003-001", "generation_id": "a7a1062d-beeb-49ce-9d11-5466b33a7440", "record": "runs/hyper3d/operations/ro-hand-source-20261003-001.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r006/hand-source/inspection.json",
+      "open_issues": ["來源GLB實測2268tri及2K貼圖；Quad參數不等於動畫面流通過", "內外兩層腕口需實體配裝診斷", "下載與來源檢查不等於可動畫或角色交付"]
+    },
+    {
+      "id": "ro-swordsman-combo-r006-v008",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO劍士61幀局部握持診斷原型（NO-SHIP）",
+      "project": null,
+      "version": "r006-v008",
+      "tags": ["RO", "劍士", "character", "rig", "glove", "prototype", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "local_animation_roundtrip_verified_deformation_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.blend",
+        "assets/processed/ro-swordsman-combo-r006/v008-rigid-wrist/ro_wrist_grip_prototype.glb"
+      ],
+      "provenance": {"operation_id": "ro-hand-source-20261003-001", "generation_id": "a7a1062d-beeb-49ce-9d11-5466b33a7440", "record": "runs/qa/ro-swordsman-combo-r006/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r006/final-review.json",
+      "open_issues": ["57039tri、53骨與61幀/60fps局部骨架及morph回讀已驗；不是完整300幀技能", "五指接觸及護腕剛性修復通過，腕管鼓包、掌根折疊及診斷自交仍失敗", "核心前臂與护腕重疊、材質sampler警告尚未解決", "左手及完整連段/VFX未驗收", "r006八輪用畢，compare=stop_budget/assess=not_ready；NO-SHIP"]
+    },
+    {
+      "id": "ro-swordsman-combo-r007-hand-source",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO貼身右手皮手套原生Quad來源（動畫用途未驗收）",
+      "project": null,
+      "version": "r007-raw-hand",
+      "tags": ["RO", "hand", "glove", "native-quad", "hyper3d", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "not_accepted_for_animation", "technical": "native_source_inspected_only", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/raw/ro-swordsman-combo/design-v007/right-hand-palm.png",
+        "assets/raw/ro-swordsman-combo/design-v007/right-hand-back.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/base.obj",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_diffuse.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_metallic.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_normal.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_pbr.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/texture_roughness.png",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/preview.webp",
+        "assets/raw/ro-swordsman-combo/rodin-v007/right-hand/render.jpg",
+        "assets/processed/ro-swordsman-combo-r007/hand-source/right_hand_native_source.blend"
+      ],
+      "provenance": {"operation_id": "ro-hand-structure-20261003-001", "generation_id": "4da84074-918b-4473-89f1-bf2589a445e5", "record": "runs/hyper3d/operations/ro-hand-structure-20261003-001.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r007/api-completion-verification.json",
+      "open_issues": ["服務回報0.5點、8下載與原生1213quad已核對；沒有MTL", "初始診斷使用合併PBR作顏色的錯接保留；後製改用diffuse，不能以初始圖宣稱材質等價", "封闭連通來源含內襯，189內襯頂點在新衍生外皮中移除", "Quad參數、下載及source inventory均不代表可動畫"]
+    },
+    {
+      "id": "ro-swordsman-combo-r007-v004",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO右手局部拇指面流與掌根權重診斷（NO-SHIP）",
+      "project": null,
+      "version": "r007-v004",
+      "tags": ["RO", "hand", "rig", "thumb", "retopology", "prototype", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "local_geometry_direction_verified_deformation_material_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r007/v001-source-preparation/right_hand_exterior.blend",
+        "assets/processed/ro-swordsman-combo-r007/v001-thumb-flow/right_hand_thumb_flow.blend",
+        "assets/processed/ro-swordsman-combo-r007/v002-two-step/right_hand_two_step.blend",
+        "assets/processed/ro-swordsman-combo-r007/v003-thumb-patch/right_hand_quad_patch.blend",
+        "assets/processed/ro-swordsman-combo-r007/v003-skin-diagnostic/right_hand_small_motion.blend",
+        "assets/processed/ro-swordsman-combo-r007/v004-root-weights/right_hand_root_weights.blend"
+      ],
+      "provenance": {"operation_id": "ro-hand-structure-20261003-001", "generation_id": "4da84074-918b-4473-89f1-bf2589a445e5", "record": "runs/qa/ro-swordsman-combo-r007/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r007/v004-root-weights/weights.json",
+      "open_issues": ["局部1788tri、三骨拇指；不是全角色新骨架", "拇指patch凍結彎曲帶pole0、814面位置/角UV保留；有限表面樣本並非連續等價證明", "16跨UV島新面，材質關卡失敗", "小屈方向及橫向診斷通過，掌根側面形體仍待修正；數值較低不代表美術PASS", "右手握持、左手、全角色300幀技能與VFX未展開；保留四輪失敗及原始時計"]
+    },
+    {
+      "id": "ro-swordsman-combo-r008-v004",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO右手完整拇指權重與真實劍接觸診斷（NO-SHIP）",
+      "project": null,
+      "version": "r008-v004",
+      "tags": ["RO", "hand", "rig", "thumb", "contact", "prototype", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed", "technical": "local_weight_direction_and_saved_readback_verified_complete_grip_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r008/v001-vectors/right_hand_vectors.blend",
+        "assets/processed/ro-swordsman-combo-r008/v002-direction/right_hand_vectors_direction.blend",
+        "assets/processed/ro-swordsman-combo-r008/v003-digit-control/right_hand_actual_sword_control.blend",
+        "assets/processed/ro-swordsman-combo-r008/v004-contact-solver/right_hand_actual_sword_best.blend",
+        "assets/processed/ro-swordsman-combo-r008/README.md"
+      ],
+      "provenance": {"operation_id": "ro-hand-structure-20261003-001", "generation_id": "4da84074-918b-4473-89f1-bf2589a445e5", "record": "runs/qa/ro-swordsman-combo-r008/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r008/fresh-saved-verification.json",
+      "open_issues": [
+        "沿用既有Hyper3D手來源；r008新增付費提交0、點數0，沒有再次查餘額",
+        "局部1788tri；v004再加入原尺寸2552tri實際劍。不是完整角色或新完整骨架",
+        "完整拇指向量與CMC旋轉方向修正；小動作改善只限受測範圍",
+        "383次有界接觸評估後：自交0、劍交叉0，但無名指1點、食指0點，仍低於每指3點",
+        "16跨UV島面仍FAIL；未rebake、未驗握持過程／左手／300幀／VFX／動畫GLB",
+        "新Blender重開確認保存檔的手geometry/UV/weights/16骨位與未縮放劍，重現同一失敗",
+        "四候選已封存stop_budget；commit與push等待人驗證，不當作可交付master"
+      ]
+    },
+    {
+      "id": "ro-swordsman-combo-r009-v004",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO全手權重與碰撞約束握持原型（未達交付）",
+      "project": null,
+      "version": "r009-v004",
+      "tags": ["RO", "hand", "rigging", "weight-vectors", "collision-constraints", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "failed_complete_grasp", "technical": "local_preservation_and_point_tolerance_verified_grip_failed", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r009/v001-vectors/right_hand_full_vectors.blend",
+        "assets/processed/ro-swordsman-combo-r009/v002-coupled-IK/right_hand_coupled_contact.blend",
+        "assets/processed/ro-swordsman-combo-r009/v003-moving-target/right_hand_moving_target_contact.blend",
+        "assets/processed/ro-swordsman-combo-r009/v004-collision-constraints/right_hand_collision_constrained_contact.blend",
+        "assets/processed/ro-swordsman-combo-r009/README.md"
+      ],
+      "provenance": {"operation_id": "ro-hand-structure-20261003-001", "generation_id": "4da84074-918b-4473-89f1-bf2589a445e5", "record": "runs/qa/ro-swordsman-combo-r009/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r009/fresh-saved-verification.json",
+      "open_issues": [
+        "469點四指/掌根域與86指尖cap修正，203拇指域保留；造型/UV/原16骨位未改",
+        "同握姿掌根277–278長度0.594→5.179mm；受測局部改善，完整quality分數維持",
+        "205接觸解算探測僅23個完整功能提案；182為導數/基準/自檢，非205次功能PASS",
+        "v002固定絕對target造成三平移導數失效；含缺陷候選與時計保留，v003另计修正",
+        "v004自交/劍交叉0，但接觸3/1/3/0/3，無名指與食指未達各3點；NO-SHIP",
+        "新程序904點最大/RMS差通過1微米容差；保留原mesh/UV/權重/16骨位/未縮放劍",
+        "16跨UV島面、握持interval、左手/衣甲/300幀/VFX/新動畫GLB仍未通過或未執行",
+        "四候選已封存stop_budget，新增API提交0/點數0；stage/commit/push等待人驗證"
+      ]
+    },
+    {
+      "id": "ro-swordsman-combo-r010-v004",
+      "asset_id": "ro-swordsman-combo",
+      "name": "RO右手可關閉握姿修形與61幀回讀原型（完整交付未驗收）",
+      "project": null,
+      "version": "r010-v004",
+      "tags": ["RO", "hand", "rigging", "grasp", "corrective", "skin-morph", "stress-test"],
+      "status": "needs_revision",
+      "acceptance": {"art": "not_accepted_complete_grasp", "technical": "local_121_sample_grasp_and_exact_weight_GLb_roundtrip_verified", "target_environment": "not_requested", "delivery": "not_delivered"},
+      "files": [
+        "assets/processed/ro-swordsman-combo-r010/v003-index-pulp/right_hand_grasp_corrective.blend",
+        "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f.blend",
+        "assets/processed/ro-swordsman-combo-r010/v004-certified-animation/right_hand_grasp_61f_exact_weights.glb",
+        "assets/processed/ro-swordsman-combo-r010/README.md"
+      ],
+      "provenance": {"operation_id": "ro-hand-structure-20261003-001", "generation_id": "4da84074-918b-4473-89f1-bf2589a445e5", "record": "runs/qa/ro-swordsman-combo-r010/quality-ledger.json"},
+      "qa_report": "runs/qa/ro-swordsman-combo-r010/v004-fresh-glb-attempt3/result.json",
+      "open_issues": [
+        "局部4340tri與17骨；原五指pad接觸3/1/3/0/3→3/3/3/3/3，有限樣本技術門檻不替代包握美術判斷",
+        "75無名指/食指點修形，可關閉shape key；Basis/UV/原權重/骨位/203拇指點無額外修改",
+        "61幀/60fps的121整幀及半幀已驗；不是300幀技能，也不是連續時間無交叉證明",
+        "一處射線unknown另立量測候選補充分類，原FAIL保留；造型與曲線位元組相同",
+        "原GLB拆clip与略去微小權重的失敗保留；repo後處理只還原1686bytes，其他模型內容相同",
+        "全新GLB手最大0.194微米、RMS0.041微米與真實劍骨跟隨通過原1微米門檻",
+        "16跨UV島面／材質、完整握姿美術、左手／衣甲配裝、300幀技能與VFX仍待處理",
+        "完整quality分數不提高，未建立可交付master；新增API提交0/點數0，commit/push等人驗證"
+      ]
     }
   ]
 }
