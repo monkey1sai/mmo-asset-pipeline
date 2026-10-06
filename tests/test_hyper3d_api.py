@@ -18,6 +18,19 @@ SECRET = "mock-subscription-DO-NOT-PRINT"
 SIGNED = "https://file.hyper3d.com/model.glb?private-signature=DO-NOT-PRINT"
 
 
+class FakeClock:
+    """注入 Client 的時間來源；測試以推進時間取代改寫磁碟 journal。"""
+
+    def __init__(self):
+        self.current = datetime(2026, 10, 6, 0, 0, tzinfo=timezone.utc)
+
+    def __call__(self):
+        return self.current
+
+    def advance(self, seconds):
+        self.current += timedelta(seconds=seconds)
+
+
 class FakeProvider:
     def __init__(self):
         self.calls = []
@@ -91,7 +104,8 @@ class Hyper3DApiTests(unittest.TestCase):
         (self.root / "assets/raw/design").mkdir(parents=True)
         (self.root / "assets/raw/design/pose.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
         self.provider = FakeProvider()
-        self.client = api.Client(self.root, self.provider, self.state)
+        self.clock = FakeClock()
+        self.client = api.Client(self.root, self.provider, self.state, clock=self.clock)
         self.spec = {"operation_id": "test-001", "request": "requests/character.json", "images": ["assets/raw/design/pose.png"],
                      "output_directory": "assets/raw/character/v001", "parameters": {"tier": "Gen-2.5-High", "mesh_mode": "Raw", "quality_override": 30000, "geometry_file_format": "glb", "TAPose": True, "is_symmetric": "symmetric", "material": "PBR"},
                      "authorization": {"spending_scope": "user permits demand-driven existing credits", "credit_pool": "existing_monthly_or_regular", "no_topup_or_upgrade": True}}
@@ -105,10 +119,7 @@ class Hyper3DApiTests(unittest.TestCase):
     def complete(self):
         self.prepare()
         self.submit()
-        path = self.client.record_path(self.spec["operation_id"])
-        record = api.read_json(path)
-        record["submitted_utc"] = (datetime.now(timezone.utc) - timedelta(seconds=61)).isoformat()
-        api.write_json(path, record)
+        self.clock.advance(61)
         return self.client.status(self.spec["operation_id"])
 
     def public_text(self):
@@ -360,10 +371,7 @@ class Hyper3DApiTests(unittest.TestCase):
         self.submit()
         with self.assertRaisesRegex(api.SafeError, "STATUS_BACKOFF"):
             self.client.status("test-001")
-        path = self.client.record_path("test-001")
-        record = api.read_json(path)
-        record["submitted_utc"] = (datetime.now(timezone.utc) - timedelta(seconds=61)).isoformat()
-        api.write_json(path, record)
+        self.clock.advance(61)
         self.provider.status_response = {"jobs": [{"status": "Done"}, {"status": "Failed"}]}
         result = self.client.status("test-001")
         self.assertEqual(result["state"], "failed")
@@ -390,8 +398,8 @@ class Hyper3DApiTests(unittest.TestCase):
             with self.subTest(state=state):
                 record = api.read_json(path)
                 record["state"] = state
-                record["status_checked_utc"] = (datetime.now(timezone.utc)-timedelta(seconds=61)).isoformat()
                 api.write_json(path, record)
+                self.clock.advance(61)
                 before = path.read_bytes()
                 calls = len(self.provider.calls)
                 result = self.client.status("test-001")
@@ -432,17 +440,121 @@ class Hyper3DApiTests(unittest.TestCase):
 
     def test_real_service_waiting_generating_states_and_unknown_state(self):
         self.complete()
-        path = self.client.record_path("test-001")
         for states, valid in ((["Waiting", "Generating", "Done"], True), (["Unexpected"], False)):
-            record = api.read_json(path)
-            record["status_checked_utc"] = (datetime.now(timezone.utc) - timedelta(seconds=61)).isoformat()
-            api.write_json(path, record)
+            self.clock.advance(61)
             self.provider.status_response = {"jobs": [{"status": x} for x in states]}
             if valid:
                 self.assertEqual(self.client.status("test-001")["state"], "processing")
             else:
                 with self.assertRaisesRegex(api.SafeError, "STATUS_RESPONSE_INVALID"):
                     self.client.status("test-001")
+
+    def test_injected_clock_stamps_records_and_drives_backoff(self):
+        self.prepare()
+        self.assertEqual(api.read_json(self.root / "runs/hyper3d/plans/test-001.json")["created_utc"], self.clock().isoformat())
+        record = self.submit()
+        self.assertEqual(record["started_utc"], "2026-10-06T00:00:00+00:00")
+        self.clock.advance(4)
+        with self.assertRaisesRegex(api.SafeError, "STATUS_BACKOFF_REQUIRED"):
+            self.client.status("test-001")
+        self.clock.advance(1)
+        self.assertEqual(self.client.status("test-001")["status_checked_utc"], "2026-10-06T00:00:05+00:00")
+        self.clock.advance(9)
+        with self.assertRaisesRegex(api.SafeError, "STATUS_BACKOFF_REQUIRED"):
+            self.client.status("test-001")
+
+    def test_existing_lock_blocks_every_mutation_and_is_preserved(self):
+        self.prepare()
+        lock = self.root / "runs/hyper3d/operations/.client.lock"
+        lock.parent.mkdir(parents=True, exist_ok=True)
+        lock.write_bytes(b"other client")
+        for action in (self.submit, lambda: self.client.status("test-001"), lambda: self.client.download("test-001")):
+            with self.assertRaisesRegex(api.SafeError, "CLIENT_BUSY_OR_STALE_LOCK_REQUIRES_REVIEW"):
+                action()
+        self.assertEqual(lock.read_bytes(), b"other client")
+        self.assertEqual(self.provider.calls, [])
+
+    def test_matching_active_fingerprint_never_resubmits_under_new_id(self):
+        self.prepare()
+        self.submit()
+        self.spec["operation_id"] = "test-002"
+        self.spec["output_directory"] = "assets/raw/character/v002"
+        self.prepare()
+        with self.assertRaisesRegex(api.SafeError, "MATCHING_ACTIVE_OPERATION_NEVER_RESUBMIT"):
+            self.submit()
+        self.assertEqual(len(self.provider.calls), 1)
+
+    def test_balance_gates_stop_before_any_charge_or_private_state(self):
+        self.prepare()
+        for response, code in (({"authenticated": True, "balance": 0.1}, "INSUFFICIENT_EXISTING_BALANCE"),
+                               ({"authenticated": False, "balance": 999}, "AUTHENTICATION_UNVERIFIED")):
+            self.provider.balance = lambda response=response: response
+            with self.subTest(code=code), self.assertRaisesRegex(api.SafeError, code):
+                self.submit()
+        self.assertEqual(self.provider.calls, [])
+        self.assertEqual(list(self.state.iterdir()), [])
+
+    def test_private_state_root_with_traversal_is_unsafe(self):
+        client = api.Client(self.root, self.provider, self.state / "nested" / "..", clock=self.clock)
+        with self.assertRaisesRegex(api.SafeError, "PRIVATE_STATE_PATH_UNSAFE"):
+            client.private_path("test-001")
+
+    def test_fake_provider_matches_declared_provider_interface(self):
+        self.assertIsInstance(self.provider, api.Provider)
+
+    def test_loaded_provider_must_match_declared_interface(self):
+        class Incomplete:
+            def balance(self):
+                return {}
+        with patch.object(api.identity, "file_digest", return_value=api.PROVIDER_SHA256), patch.object(Path, "is_file", return_value=True), \
+                patch.object(api.importlib.util, "spec_from_file_location"), patch.object(api.importlib.util, "module_from_spec", return_value=Incomplete()):
+            with self.assertRaisesRegex(api.SafeError, "PROVIDER_INTERFACE_INVALID"):
+                api.load_provider()
+
+    def cli(self, *argv):
+        stream = io.StringIO()
+        with contextlib.redirect_stdout(stream):
+            code = api.main(["--workspace", str(self.root), *argv])
+        self.assert_no_secret(stream.getvalue())
+        return code, json.loads(stream.getvalue())
+
+    def test_cli_paid_flow_exit_codes_with_injected_provider_and_clock(self):
+        spec = self.root / "runs/qa/spec.json"
+        spec.parent.mkdir(parents=True)
+        spec.write_text(json.dumps(self.spec), encoding="utf-8")
+        private = str(self.state / "test-001.dpapi")
+        with patch.object(api, "load_provider", return_value=self.provider), patch.object(api, "STATE_ROOT", self.state), \
+                patch.object(api, "utc_now", self.clock):
+            self.assertEqual(self.cli("prepare", "--spec", "runs/qa/spec.json")[0], 0)
+            code, record = self.cli("submit", "--operation", "test-001", "--spending-authorized", "--authorized-state-file", private)
+            self.assertEqual((code, record["state"]), (0, "submitted"))
+            self.assertEqual(self.cli("status", "--operation", "test-001"), (1, {"error": "STATUS_BACKOFF_REQUIRED"}))
+            self.clock.advance(61)
+            self.assertEqual(self.cli("status", "--operation", "test-001")[1]["state"], "complete")
+            code, record = self.cli("download", "--operation", "test-001")
+            self.assertEqual((code, record["state"]), (0, "downloaded"))
+            self.provider.response = TimeoutError(SECRET + SIGNED)
+            self.spec.update(operation_id="test-002", output_directory="assets/raw/character/v002")
+            self.spec["parameters"]["seed"] = 7
+            spec.write_text(json.dumps(self.spec), encoding="utf-8")
+            self.cli("prepare", "--spec", "runs/qa/spec.json")
+            code, record = self.cli("submit", "--operation", "test-002", "--spending-authorized", "--authorized-state-file", str(self.state / "test-002.dpapi"))
+            self.assertEqual((code, record["state"]), (1, "unknown"))
+
+    def test_cli_redacts_exceptions_raised_during_status(self):
+        self.prepare()
+        self.submit()
+        self.clock.advance(61)
+        original = self.provider.api
+
+        def failing(endpoint, body=None, content_type=None):
+            if endpoint == "/status":
+                raise RuntimeError(SECRET + SIGNED)
+            return original(endpoint, body, content_type)
+        self.provider.api = failing
+        with patch.object(api, "load_provider", return_value=self.provider), patch.object(api, "STATE_ROOT", self.state), \
+                patch.object(api, "utc_now", self.clock):
+            self.assertEqual(self.cli("status", "--operation", "test-001"), (1, {"error": "CLIENT_ERROR_REDACTED"}))
 
     def test_cli_redacts_provider_exception(self):
         with patch.object(api.Client, "balance", side_effect=RuntimeError(SECRET + SIGNED)):

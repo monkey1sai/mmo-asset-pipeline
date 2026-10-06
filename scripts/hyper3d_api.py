@@ -15,6 +15,7 @@ import math
 from pathlib import Path
 import re
 import sys
+from typing import Protocol, runtime_checkable
 import urllib.parse
 import uuid
 
@@ -46,8 +47,26 @@ class SafeError(Exception):
     pass
 
 
-def now():
-    return datetime.now(timezone.utc).isoformat()
+def utc_now():
+    return datetime.now(timezone.utc)
+
+
+@runtime_checkable
+class Provider(Protocol):
+    """已安裝且以 SHA 釘選的 DPAPI provider 必須提供的成員；測試的假 provider 照此實作。
+
+    憑證只由 provider 取得與使用；Client 不讀取、不保存密鑰。
+    """
+
+    def balance(self) -> dict: ...
+
+    def protected_bytes(self, value: bytes, decrypt: bool = False) -> bytes: ...
+
+    def api(self, endpoint: str, body: object = None, content_type: str | None = None) -> dict: ...
+
+    def public_download_url(self, value: object) -> tuple: ...
+
+    def PinnedHTTPS(self, host: str, public_ip: str) -> object: ...
 
 
 def read_json(path):
@@ -95,6 +114,8 @@ def load_provider():
     spec = importlib.util.spec_from_file_location("hyper3d_supported_provider", PROVIDER)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    if not isinstance(module, Provider):
+        raise SafeError("PROVIDER_INTERFACE_INVALID")
     return module
 
 
@@ -146,9 +167,11 @@ def parameters(value, image_count):
 
 
 class Client:
-    def __init__(self, workspace, provider=None, state_root=None):
+    def __init__(self, workspace, provider: Provider | None = None, state_root=None, clock=None):
         self.root = Path(workspace).resolve(strict=True)
         self.provider = provider
+        # 回傳 UTC aware datetime 的時間來源；所有紀錄時間戳與 status 退避都以它為準。
+        self.clock = clock if clock is not None else utc_now
         self.state_root = Path(state_root) if state_root is not None else STATE_ROOT
         self.operations = self.path("runs/hyper3d/operations")
         self.plans = self.path("runs/hyper3d/plans")
@@ -158,6 +181,9 @@ class Client:
             return identity.recorded_path(self.root, relative)
         except identity.IdentityError as exc:
             raise SafeError(str(exc)) from None
+
+    def now(self):
+        return self.clock().isoformat()
 
     def transport(self):
         if self.provider is None:
@@ -191,7 +217,7 @@ class Client:
         result = self.transport().balance()
         if result.get("authenticated") is not True:
             raise SafeError("AUTHENTICATION_UNVERIFIED")
-        return {"authenticated": True, "balance": number(result.get("balance"), "BALANCE_INVALID"), "observed_utc": now(), "charged": False, "pool_breakdown": "not_returned"}
+        return {"authenticated": True, "balance": number(result.get("balance"), "BALANCE_INVALID"), "observed_utc": self.now(), "charged": False, "pool_breakdown": "not_returned"}
 
     def capabilities(self):
         return {"provider_path": str(PROVIDER), "provider_sha256": PROVIDER_SHA256,
@@ -235,7 +261,7 @@ class Client:
             raise SafeError("REQUEST_ID_INVALID")
         if request_data.get("catalog_asset_id") is not None and not identity.is_asset_id(request_data["catalog_asset_id"]):
             raise SafeError("CATALOG_ASSET_ID_INVALID")
-        plan = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "created_utc": now(),
+        plan = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "created_utc": self.now(),
                 "request": {"path": spec["request"], "request_sha256": identity.json_digest(request_data), "quality_sha256": identity.json_digest(request_data.get("quality"))},
                 "images": [self.image(x) for x in images], "output_directory": spec["output_directory"],
                 "parameters": params, "authorization": dict(authorization), "estimated_credits": estimate,
@@ -319,7 +345,7 @@ class Client:
                 raise SafeError("PRIVATE_STATE_PROTECTION_FAILED")
             self.private_write(private, marker, True)
             record = {"schema_version": PLAN_SCHEMA, "operation_id": operation, "fingerprint": plan["fingerprint"],
-                      "plan_sha256": plan["plan_sha256"], "state": "pending", "started_utc": now(),
+                      "plan_sha256": plan["plan_sha256"], "state": "pending", "started_utc": self.now(),
                       "estimated_credits": plan["estimated_credits"], "consumed_credits": None, "cost_state": "unverified",
                       "balance_before": before, "task_uuid": None, "downloads": [],
                       "authorization": {**plan["authorization"], "authorized_private_state_file": str(private)},
@@ -342,10 +368,10 @@ class Client:
                     code = result["error"]
                     if not isinstance(code, str) or not re.fullmatch(r"[A-Z0-9_]{1,80}", code):
                         raise SafeError("GENERATION_RESPONSE_INVALID")
-                    record.update(state="failed", error_code=code, finished_utc=now())
+                    record.update(state="failed", error_code=code, finished_utc=self.now())
                 else:
                     task = str(uuid.UUID(result["uuid"]))
-                    record.update(task_uuid=task, response_identity_observed_utc=now())
+                    record.update(task_uuid=task, response_identity_observed_utc=self.now())
                     # Preserve known public identity and independently validated cost first.
                     failure_stage = "public_identity_save"
                     write_json(record_path, record)
@@ -354,10 +380,10 @@ class Client:
                         raise SafeError("GENERATION_RESPONSE_INVALID")
                     failure_stage = "private_state_save"
                     self.private_write(private, {**marker, "state": "submitted", "task_uuid": task, "subscription_key": subscription}, False)
-                    record.update(state="submitted", submitted_utc=now())
+                    record.update(state="submitted", submitted_utc=self.now())
             except Exception:
                 # Includes network ambiguity, malformed response, and private state write failure.
-                record.update(state="unknown", error_code="SUBMISSION_UNKNOWN_NEVER_RESUBMIT", failure_stage=failure_stage, observed_utc=now())
+                record.update(state="unknown", error_code="SUBMISSION_UNKNOWN_NEVER_RESUBMIT", failure_stage=failure_stage, observed_utc=self.now())
             write_json(record_path, record)
             try:
                 record["balance_after"] = self.balance()
@@ -394,7 +420,7 @@ class Client:
                 raise SafeError("TASK_STATE_TERMINAL_OR_INVALID")
             checked = record.get("status_checked_utc", record.get("submitted_utc", record["started_utc"]))
             interval = min(30, 5 * 2 ** min(record.get("status_poll_count", 0), 3))
-            if (datetime.now(timezone.utc) - datetime.fromisoformat(checked)).total_seconds() < interval:
+            if (self.clock() - datetime.fromisoformat(checked)).total_seconds() < interval:
                 raise SafeError("STATUS_BACKOFF_REQUIRED")
             private = self.private_read(record)
             result = self.transport().api("/status", {"subscription_key": private["subscription_key"]})
@@ -405,7 +431,7 @@ class Client:
             if len(states) != len(jobs) or any(x not in {"Waiting", "Generating", "Done", "Failed"} for x in states):
                 raise SafeError("STATUS_RESPONSE_INVALID")
             state = "failed" if "Failed" in states else "complete" if all(x == "Done" for x in states) else "processing"
-            record.update(state=state, task_uuid=private["task_uuid"], status_states=states, status_checked_utc=now(), status_poll_count=record.get("status_poll_count", 0) + 1)
+            record.update(state=state, task_uuid=private["task_uuid"], status_states=states, status_checked_utc=self.now(), status_poll_count=record.get("status_poll_count", 0) + 1)
             write_json(path, record)
             return record
 
@@ -437,7 +463,7 @@ class Client:
             if len({x[0].casefold() for x in files}) != len(files):
                 raise SafeError("DOWNLOAD_FILENAME_COLLISION")
             output.mkdir(parents=True, exist_ok=False)
-            record.update(state="download_partial", download_started_utc=now())
+            record.update(state="download_partial", download_started_utc=self.now())
             write_json(path, record)
             total = 0
             try:
@@ -471,7 +497,7 @@ class Client:
                         write_json(path, record)
                     finally:
                         connection.close()
-                record.update(state="downloaded", download_finished_utc=now())
+                record.update(state="downloaded", download_finished_utc=self.now())
             except Exception:
                 record.update(state="download_partial", error_code="DOWNLOAD_INCOMPLETE_PARTIAL_PRESERVED")
             write_json(path, record)
