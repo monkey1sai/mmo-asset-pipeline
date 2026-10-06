@@ -1,0 +1,52 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02-closed-loop-b19/blender-reference.json",
+  "bytes": 200877,
+  "sha256": "da9c6a186567f4d271cb1e5c90bbe5210a47a0a1842e72e705dc37951f9e3c17"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02-closed-loop-b19/blender-reference.f64.bin",
+  "bytes": 19510608,
+  "sha256": "1df7d23a64a2f00f9e8bbbf14d572f0c391d723f8d998f115f8c33c255be846f"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+  "bytes": 38968,
+  "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/export-b19/an_ro_run_sword_a02_b19_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 27990012,
+   "sha256": "64788dc08e77fe43ac04e21f65093367a3b19931ccec81f8907155a166da1a6f"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/export-b19/an_ro_run_sword_a02_b19_baked_owner_exact_weights.glb",
+   "bytes": 3331788,
+   "sha256": "ccb8ca25327a3ed0baaff2e501488d8c9161fd12734678d5318814119ab4f77c"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   0,
+   "hands"
+  ],
+  [
+   20,
+   "whole"
+  ]
+ ],
+ "note": "Clip closed loop for AN_RO_Run_Sword a02 (scripts/cv1_clip_pipeline.py). Exact-weight GLBs; helper channels stripped from the runtime-owner GLB.",
+ "sword_socket": null
+}

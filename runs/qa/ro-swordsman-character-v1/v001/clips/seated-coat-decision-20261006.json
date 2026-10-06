@@ -1,0 +1,56 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T05:14:42Z",
+ "status": "pending_user_decision",
+ "finding": "While the character sits on the bed edge (LieDown frames about 3-50, and the sitting part of GetUp) the coat skirt hangs straight down through the bed top, up to 341 mm, behind and beside the hips (a03 draft clearance: clips/AN_RO_LieDown/a06-prep/clearance-draft3.json).",
+ "why_not_at_clip_level": {
+  "evidence": [
+   "a06-prep/settle-coat-seated.json and settle-coat-profile.json: swinging a coat tail toward the back lifts the back but drives the front of the same half-skirt down into the bed (each tail is a left or right half-skirt, front to back)",
+   "a06-prep/coat-grid-L24.json: only back 20 + out 80 deg clears the bed (-2.4 mm), which spreads both half-skirts out like wings (b20-prep/seated-flare-y-back.png)"
+  ]
+ },
+ "foundation_option_tried": {
+  "tool": "scripts/cv1_coat_lying.py --mode fold (study only; no foundation built)",
+  "radial_fold_P2": {
+   "report": "b20-prep/fold-study-P2.json",
+   "lowest_over_bed_above_top_mm": -4.588,
+   "min_area_ratio": 0.0807,
+   "max_area_ratio": 14.5194,
+   "flipped_when_on": 361,
+   "images": [
+    "b20-prep/seatfold-P2-x.png",
+    "b20-prep/seatfold-P2-y-back.png"
+   ],
+   "look": "the skirt below the seat turns into a thin flat disc on the bed around the hips; corners stretched up to about 14x"
+  },
+  "back_fold_Q1_Q3": "b20-prep/fold-study-Q1..Q3.json: worse (front flaps pulled over the bed, 150-178 mm deep, areas down to 1%)"
+ },
+ "images": {
+  "no_change": "b20-prep/seated-plain-y-back.png",
+  "clip_level_flare": "b20-prep/seated-flare-y-back.png",
+  "b21_radial_fold": "b20-prep/seatfold-P2-y-back.png"
+ },
+ "options": [
+  {
+   "id": 1,
+   "recommended": true,
+   "title": "Let the seated coat hang into the bed",
+   "what": "While the character sits on the bed (LieDown from touch-down to the lie-back, GetUp from sitting up to standing) the coat mesh (SM_RO_coat) may lie below the bed top over the footprint, as a hanging coat that an opaque mattress hides; every other mesh keeps the 5 mm limit and the lying phase keeps the b20 corrective. Declared per clip as a 'seated' window in the interaction config and reported per sample.",
+   "needs": "your decision (an exception to the 5 mm bed-clearance check for the coat while seated)"
+  },
+  {
+   "id": 2,
+   "recommended": false,
+   "title": "b21: seated fold corrective",
+   "what": "Foundation b21 = b20 plus SKC_coat_seated (radial fold, driven by a 'seated' state); the skirt spreads flat on the bed around the hips; corners stretched up to about 14x; the sit-down and stand-up ramps still to be verified.",
+   "needs": "your authorization for a foundation change"
+  },
+  {
+   "id": 3,
+   "recommended": false,
+   "title": "Clip-level flare",
+   "what": "Half-skirts swung out 80 deg and back 20 deg while seated; passes the numbers but looks like wings.",
+   "needs": "art acceptance"
+  }
+ ]
+}

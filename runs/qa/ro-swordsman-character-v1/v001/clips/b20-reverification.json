@@ -1,0 +1,45 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T04:40:00Z",
+ "foundation": "b20-coatlie3 (runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/build-record.json)",
+ "authority": "authorizations.json entry 17",
+ "clips": {
+  "AN_RO_Idle_Sword a03": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03-check-b20",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t041430z-runtime-results.json (0.848 um, pass)",
+   "readback": "1.018 um (pass)",
+   "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/export-b20",
+   "check_vs_b19": "every measured sample field identical to the b19 check; the recorded states now list lying 0.0 (new rule state driver)"
+  },
+  "AN_RO_Walk_Sword a04": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-check-b20",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t042512z-runtime-results.json (1.966 um, pass)",
+   "readback": "1.439 um (pass)",
+   "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b20",
+   "check_vs_b19": "every measured sample field identical to the b19 check; the recorded states now list lying 0.0 (new rule state driver)"
+  },
+  "AN_RO_Run_Sword a02": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02-check-b20",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t043551z-runtime-results.json (2.106 um, pass)",
+   "readback": "1.539 um (pass)",
+   "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/export-b20",
+   "check_vs_b19": "every measured sample field identical to the b19 check; the recorded states now list lying 0.0 (new rule state driver)"
+  },
+  "AN_RO_Cast_OpenPalm a04": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/a04-check-b20",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t043622z-runtime-results.json (0.83 um, pass)",
+   "readback": "1.15 um (pass)",
+   "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/a04/export-b20",
+   "check_vs_b19": "every measured sample field identical to the b19 check; the recorded states now list lying 0.0 (new rule state driver)"
+  },
+  "AN_RO_Sleep_Loop a03": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03-check-b20-coatlie3",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t043654z-runtime-results.json (1.032 um, pass)",
+   "readback": "1.673 um (pass)",
+   "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03/export-b20",
+   "check_vs_b19": "first measured on b20: every gate passes, bed clearance worst 3.0 mm (heel); the runtime drives SKC_coat_lying at 1.0 (rule weights within 1.0e-7 of Blender, coat vertices within 0.32 um)"
+  }
+ },
+ "why_identical": "the coat corrective follows the lying state, which only bed clips declare; the runtime numbers move by float32 noise (Walk 2.035 -> 1.966, Run 2.176 -> 2.106 um) because the GLBs now carry one more morph target",
+ "superseded": "AN_RO_Sleep_Loop a02 (fails the bed-clearance gate on b19; kept with its records)"
+}

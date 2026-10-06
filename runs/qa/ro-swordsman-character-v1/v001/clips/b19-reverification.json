@@ -1,0 +1,35 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T02:45:00Z",
+ "foundation": "b19-crotch (runs/qa/ro-swordsman-character-v1/v001/b19-crotch/build-record.json)",
+ "authority": "authorizations.json entry 16",
+ "clips": {
+  "AN_RO_Idle_Sword a03": {
+   "check": "a03-check-b19 (0 failures; every sample identical to a03-check-b18)",
+   "runtime": "clips/runtime/20261006t024147z (0.848 um)",
+   "readback": "1.018 um"
+  },
+  "AN_RO_Walk_Sword a04": {
+   "check": "a04-check-b19 (0 failures; identical to b18)",
+   "runtime": "20261006t024216z (2.035 um)",
+   "readback": "1.439 um"
+  },
+  "AN_RO_Run_Sword a02": {
+   "check": "a02-check-b19 (0 failures; identical to b18)",
+   "runtime": "20261006t024241z (2.176 um)",
+   "readback": "1.653 um"
+  },
+  "AN_RO_Cast_OpenPalm a04": {
+   "check": "a04-check-b19 (0 failures; identical to b18)",
+   "runtime": "20261006t024307z (0.830 um)",
+   "readback": "1.150 um"
+  },
+  "AN_RO_Sleep_Loop a02": {
+   "check": "a02-check-b19 (0 failures; identical to b18; bed support unchanged)",
+   "runtime": "20261006t024347z (0.996 um)",
+   "readback": "1.472 um"
+  }
+ },
+ "why_identical": "none of these clips flexes both hips into the 60-87 deg band where the b19 crotch hats act",
+ "exports": "assets/processed/ro-swordsman-character-v1/v001/clips/<clip>/<attempt>/export-b19 (deliverable candidates on b19)"
+}

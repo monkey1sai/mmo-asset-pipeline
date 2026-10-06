@@ -287,6 +287,176 @@
     "購買 LFS 額度",
     "Unity 或其他目標環境"
    ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T02:18:45Z",
+   "text": "基礎用做法 1（b19）",
+   "covers": [
+    "以已同意的混合修正做法（第 13 筆）建立基礎 b19，補強躺下反覆出現的弱點：右手肘內側（屈曲約 80–100°）、左鼠蹊（髖屈約 60–70° 且軀幹移動）；手掌鬆手自交先以片段層處理，若需改手部則依保護區規則另行確認",
+    "b19 重跑凍結關節範圍（73/73 與防退步上限）、中段掃描、閉環與回讀，並在 b19 上重驗 Idle、Walk、Run、施法、睡眠",
+    "之後在 b19 完成躺下與起床，回報第三個里程碑"
+   ],
+   "not_covered": [
+    "放寬任何門檻或驗收",
+    "重開 r010",
+    "commit／push（本次未授權）",
+    "清除中間版本",
+    "修改需求版本（如床尺寸 r7）"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T03:41:41Z",
+   "text": "大衣用做法 1（b20）",
+   "covers": [
+    "依 runs/qa/ro-swordsman-character-v1/v001/clips/coat-bed-decision-20261006.json 做法 1 建立基礎 b20：b19 加上每側大衣下擺一個『躺下時下擺貼向腿後』的修形（SM_RO_coat），由剪輯在互動設定中宣告時窗的狀態驅動，所有凍結姿勢與非床上剪輯中為 0",
+    "b20 重跑凍結關節範圍（73/73 與防退步上限）、中段掃描、閉環與回讀，並重新檢查六支剪輯（Idle、Walk、Run、施法、睡眠，以及之後的躺下）",
+    "之後完成睡眠 a03 閉環、躺下 a06、起床，回報第三個里程碑（坐姿階段的大衣以片段層處理）"
+   ],
+   "not_covered": [
+    "放寬任何門檻或驗收（床面淨空 5 mm 不開例外）",
+    "重開 r010",
+    "commit／push（本次未授權）",
+    "清除中間版本",
+    "修改需求版本（如床尺寸 r7）",
+    "保護區 A–D 範圍內的變更（本次修形只在 SM_RO_coat）"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T05:03:31Z",
+   "text": "放劍用做法 1",
+   "covers": [
+    "依 runs/qa/ro-swordsman-character-v1/v001/clips/putdown-bed-decision-20261006.json 做法 1：床面在手下視為床墊——每個劍 socket 切換事件（躺下的放劍、起床的取劍）前後 6 格內，手部區域的點（手、指、拇指、腕部骨權重合計 >= 0.5，與量測的手區相同）在床面範圍內可低於床頂最多 50 mm；其他點與其他時間維持 5 mm",
+    "檢查工具逐樣本分開回報手部與其他部位的床面深度",
+    "之後完成躺下 a06、起床，回報第三個里程碑"
+   ],
+   "not_covered": [
+    "其他門檻或驗收的放寬",
+    "重開 r010",
+    "commit／push（本次未授權）",
+    "清除中間版本",
+    "修改需求版本（如床尺寸、加道具 r7）"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T05:16:31Z",
+   "text": "坐姿大衣用做法 1",
+   "covers": [
+    "依 runs/qa/ro-swordsman-character-v1/v001/clips/seated-coat-decision-20261006.json 做法 1：角色坐在床上時（躺下自坐下時大衣觸床到往後躺開始，起床自坐起到離開床面），大衣網格 SM_RO_coat 可低於床頂；其他網格維持 5 mm，躺姿維持 b20 修形",
+    "以每支剪輯互動設定中的 seated_on_bed 時窗宣告（隨設定 SHA 鎖定），檢查工具逐樣本另外回報被豁免的大衣深度",
+    "之後完成躺下 a06、起床，回報第三個里程碑"
+   ],
+   "not_covered": [
+    "其他網格或其他時段的床面淨空放寬",
+    "大衣對劍的穿插（weapon_body 1 mm 不變）",
+    "重開 r010",
+    "commit／push（本次未授權）",
+    "清除中間版本",
+    "修改需求版本（r7）"
+   ],
+   "coordinator_reading": "the window starts where the hanging coat first meets the bed while sitting down (it reaches the bed before the buttocks do) and ends where the lie-back starts; recorded so the reading can be corrected"
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T05:27:56Z",
+   "text": "往後躺大衣用做法 1",
+   "covers": [
+    "依 runs/qa/ro-swordsman-character-v1/v001/clips/lieback-coat-decision-20261006.json 做法 1：坐姿大衣豁免延伸到往後躺結束——躺下為 seated_on_bed [2, 62]（第 63 格起由床面支撐與 b20 躺姿修形接手）；起床比照：自離開躺姿支撐到站起",
+    "之後完成躺下 a06、起床，回報第三個里程碑"
+   ],
+   "not_covered": [
+    "大衣以外網格的床面淨空放寬",
+    "大衣對劍的穿插（weapon_body 1 mm 不變）",
+    "重開 r010",
+    "commit／push（本次未授權）",
+    "清除中間版本",
+    "修改需求版本（r7）"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T07:05:01Z",
+   "text": "放手後段用做法 B",
+   "covers": [
+    "依第三里程碑回報的做法 B：放慢躺下 a07 放手後段（第 36 幀後手越過劍柄、移到休息位置到手臂 IK 淡出；可調整第 36-47 幀附近的時序），起床依鏡像同步",
+    "重新製作並重跑躺下與起床的數值檢查、runtime 閉環與回讀，並確認與睡姿 a04 的銜接；之後回報"
+   ],
+   "not_covered": [
+    "放寬任何門檻或豁免（手壓床 50 mm、大衣豁免、weapon_body 1 mm 不變）",
+    "重開 r010",
+    "commit／push",
+    "清除中間版本",
+    "修改需求版本（r7）",
+    "改動放劍事件以外的需求時窗規則"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T07:46:30Z",
+   "text": "轉身速度用做法 a",
+   "covers": [
+    "依第三里程碑做法 B 回報的選項 (a)：先接受躺下 a08 第 50-57 幀（起床 a02 鏡像第 33-40 幀）坐床轉身的速度（約每秒 770 度，右手隨身體掃動最快 11.2 m/s），列為已接受的美術備註，不改動畫與需求",
+    "記錄決定並回報"
+   ],
+   "not_covered": [
+    "修改需求版本（r7）或拉長 LieDown/GetUp 幀數",
+    "第三里程碑整體美術驗收（總表審查仍待決定）",
+    "commit／push",
+    "清除中間版本",
+    "重開 r010",
+    "放寬任何門檻或豁免"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T07:50:36Z",
+   "text": "美術審查接受，commit 並 push",
+   "covers": [
+    "第三里程碑美術審查接受：使用者檢視 clips/milestone-03-sheet-r2.png 與 AN_RO_LieDown/a08-release-closeups/release-strip.png 後接受（施法 a04、躺下 a08、睡姿 a04、起床 a02）",
+    "把 worktree tmp/art-quality-loop（codex/art-quality-loop，與 origin 同步於 1002450）未提交的工作分批 commit：2026-10-05 推送紀錄、第三里程碑工具與測試、b19/b20 基礎與 QA、clip 與紀錄",
+    "推送到 origin 的 codex/art-quality-loop（含 Git LFS 物件），並做唯讀的遠端核對"
+   ],
+   "not_covered": [
+    "推送到 main 或其他分支、建立或合併 PR",
+    "force push 或改寫遠端歷史",
+    "變更 repo 可見性、購買或升級 LFS 額度",
+    "變更 gh 權杖範圍或憑證、修改全域 Git 設定或安裝 hook",
+    "刪除遠端或本機物件、清除中間版本",
+    "全新 clone 的 LFS 還原驗證（下載量約 2.6 GB，帳戶剩餘頻寬未知；比照 entry 15 不做）",
+    "重開 r010、修改需求版本"
+   ],
+   "authorization_envelope": {
+    "destination": "git@github.com:monkey1sai/mmo-asset-pipeline.git（2026-10-05 紀錄為公開 repo；推送前以 gh repo view 與 ls-remote 唯讀複核）的 refs/heads/codex/art-quality-loop 與其 LFS 儲存",
+    "purpose": "封存已通過技術驗證並經使用者美術審查接受的第三里程碑（工具、b19/b20 基礎、Cast／LieDown／Sleep／GetUp clip 與證據）及 2026-10-05 推送紀錄",
+    "allowed_operations": [
+     "git add（依核對過的路徑清單分批，不用 git add .）",
+     "git commit",
+     "git lfs push origin <commit>",
+     "git push origin <commit>:refs/heads/codex/art-quality-loop（只快轉）",
+     "唯讀 git ls-remote、gh repo view、git lfs push --all 的重複核對"
+    ],
+    "data_transmitted": "約 1,950 個檔案（約 2.9 GB；GLB、Blender 源檔、.bin 參考與 assets 貼圖走 LFS，runs/qa 證據截圖與 JSON 走一般 Git）；推送前做密鑰樣式掃描",
+    "forbidden_operations": [
+     "push 到 main",
+     "force push 或改寫遠端歷史",
+     "建立／合併 PR",
+     "變更 repo 可見性",
+     "購買或升級 LFS 額度",
+     "變更 gh 權杖範圍或憑證",
+     "修改全域 Git 設定或安裝 hook",
+     "刪除遠端物件"
+    ],
+    "stop_conditions": [
+     "密鑰樣式掃描或暫存核對有問題",
+     "遠端 codex/art-quality-loop 不是 1002450 或可見性與紀錄不符",
+     "LFS 回報配額不足或拒收",
+     "單次推送超過大小上限被拒（改成更小批次，不改內容）",
+     "非快轉被拒、驗證失敗或主機金鑰不符"
+    ]
+   }
   }
  ],
  "protected_zone": {

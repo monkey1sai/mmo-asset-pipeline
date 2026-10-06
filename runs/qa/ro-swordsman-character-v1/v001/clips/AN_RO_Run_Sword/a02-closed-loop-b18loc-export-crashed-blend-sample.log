@@ -1,0 +1,59 @@
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 4.5\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+19:06:40 | INFO: Starting glTF 2.0 export
+19:06:40 | INFO: Extracting primitive: model.008
+19:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+19:06:40 | INFO: Primitives created: 1
+19:06:40 | INFO: Extracting primitive: model.006
+19:06:40 | INFO: Primitives created: 1
+19:06:40 | INFO: Extracting primitive: model.002
+19:06:40 | INFO: Primitives created: 1
+19:06:40 | INFO: Extracting primitive: model
+19:06:40 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+19:06:40 | INFO: Primitives created: 1
+19:06:40 | INFO: Extracting primitive: model.004
+19:06:40 | INFO: Primitives created: 1
+19:06:40 | INFO: Extracting primitive: RO_hand_L
+19:06:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+19:06:41 | INFO: Primitives created: 1
+19:06:41 | INFO: Extracting primitive: RO_hand_R
+19:06:41 | INFO: Primitives created: 1
+19:06:41 | INFO: Extracting primitive: model.001
+19:06:41 | INFO: Primitives created: 1
+19:06:41 | INFO: Extracting primitive: model.005
+19:06:41 | INFO: Primitives created: 1
+19:06:41 | INFO: Extracting primitive: model.007
+19:06:41 | INFO: Primitives created: 1
+19:06:41 | INFO: Finished glTF 2.0 export in 1.4212794303894043 s
+
+19:06:42 | INFO: Starting glTF 2.0 export
+19:06:42 | INFO: Extracting primitive: model.008
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.006
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.002
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.004
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: RO_hand_L
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: RO_hand_R
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.001
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.005
+19:06:42 | INFO: Primitives created: 1
+19:06:42 | INFO: Extracting primitive: model.007
+19:06:42 | INFO: Primitives created: 1
+19:06:43 | INFO: Finished glTF 2.0 export in 0.7696995735168457 s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Read blend: "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\assets\processed\ro-swordsman-character-v1\v001\b18-clipfolds\ro_character_v001_b18-clipfolds.blend"
+
+
+Blender quit
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_export_clip.py", line 229, in <module>
+    pb.rotation_quaternion = Quaternion(poses[frame_a][pb.name]).slerp(Quaternion(poses[frame_b][pb.name]), 0.5)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: mathutils.Quaternion(): sequence index 2 expected a number, found 'tuple' type, 

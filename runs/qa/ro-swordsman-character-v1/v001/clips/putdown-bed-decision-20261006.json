@@ -1,0 +1,37 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T04:49:58Z",
+ "status": "pending_user_decision",
+ "finding": "At the put-down (LieDown) and pick-up (GetUp) the right hand holds the grip while the sword rests on the bed; with the only reachable hold the hand is under the grip and its fingers sink 45-50 mm into the bed proxy (bed-clearance limit 5 mm).",
+ "evidence": {
+  "per_frame": "clips/AN_RO_LieDown/a06-prep/clearance-draft3.json (frames 27-35: finger3.R_01 down to 49.9 mm, hand.R 38 mm below the bed top)",
+  "rolls_at_the_socket": "a06-prep/putdown-roll-probe.json: roll 160 (current socket) reachable, hand 47 mm deep whatever the swivel; rolls 340 and 70 out of reach (wrist 0.52-0.53 m from the shoulder, reach 0.443 m); roll 250 hand 9 mm deep but wrist flexion near 117 deg",
+  "hand_on_top_near_the_hip": "a06-prep/putdown-top-probe.json: rolls 320/340/0 out of reach at five grip spots",
+  "hilt_over_the_bed_edge": "a06-prep/putdown-edge-probe.json: reachable with good wrists, but the fingers wrap toward the bed and still reach 45-51 mm deep over the footprint",
+  "sword_leaning_tip_down": "a06-prep/putdown-lean-probe.json: every roll needs pronation near 170 deg or ulnar deviation near 67 deg",
+  "planted_tip_down": "clips/AN_RO_LieDown/socket-scan/planted-scan.json: least wrist bend 106 deg"
+ },
+ "why": "The verified r010 hold (frozen; r010 must not be reopened) and the request rule 'grasp until the put-down event' leave the hand wrapped around a grip that lies about 2 cm above a rigid bed top; any wrap passes under the grip.",
+ "options": [
+  {
+   "id": 1,
+   "recommended": true,
+   "title": "Treat the bed top as a mattress under the hand at the socket events",
+   "what": "Allow hand-region points (hand, fingers, thumb, wrist bones) to press up to 50 mm below the bed top over the footprint only within 6 frames of a sword-socket event (put-down, pick-up); every other point and frame keeps the 5 mm limit. Recorded as a coordinator assumption, measured and reported per sample.",
+   "needs": "your decision (it narrows the 5 mm bed-clearance check that entry 17 kept without exceptions)"
+  },
+  {
+   "id": 2,
+   "recommended": false,
+   "title": "A bedside prop for the sword",
+   "what": "Add a small stand or bench beside the bed and put the sword there; needs a request revision (props are not in r6) and a new interaction design.",
+   "needs": "your decision and a request revision"
+  },
+  {
+   "id": 3,
+   "recommended": false,
+   "title": "Keep the 5 mm limit everywhere",
+   "what": "Then LieDown and GetUp cannot pass with the current hold; the milestone stops here."
+  }
+ ]
+}

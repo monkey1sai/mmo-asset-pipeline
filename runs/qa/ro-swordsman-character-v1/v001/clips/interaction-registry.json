@@ -25,6 +25,70 @@
    "registered_utc": "2026-10-05T08:42:58Z",
    "reason": "before first measurement",
    "supersedes": null
+  },
+  {
+   "clip": "AN_RO_Cast_OpenPalm",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/interaction.json",
+   "sha256": "9dd5bf161b2c432fef3c4502ffe44efb77fe9334d2bff753ee271fd40d406ea7",
+   "registered_utc": "2026-10-05T10:36:12Z",
+   "reason": "before first measurement",
+   "supersedes": null
+  },
+  {
+   "clip": "AN_RO_Sleep_Loop",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "sha256": "f033d96988c7a937ca5a17b087c9e3ba3227eaed39f81772a8415316b5560d6e",
+   "registered_utc": "2026-10-05T11:30:28Z",
+   "reason": "before first measurement",
+   "supersedes": null
+  },
+  {
+   "clip": "AN_RO_LieDown",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "sha256": "1f3ade3350f35c1aa59fa4688a75ecbc8f79705183f090ae9ced8cddb19a12d5",
+   "registered_utc": "2026-10-05T11:46:02Z",
+   "reason": "before first measurement",
+   "supersedes": null
+  },
+  {
+   "clip": "AN_RO_Sleep_Loop",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "sha256": "7cf5ad49eb6c2ed22ed8717df51566896d6eb67b7e6f26126df22619deeea1d4",
+   "registered_utc": "2026-10-06T03:53:47Z",
+   "reason": "b20 (authorization entry 17): declare the lying state for the whole loop so the coat lying corrective is on; the a02 check on b19 with the new bed-clearance gate found the coat tails 169 mm inside the bed proxy",
+   "supersedes": "f033d96988c7a937ca5a17b087c9e3ba3227eaed39f81772a8415316b5560d6e"
+  },
+  {
+   "clip": "AN_RO_LieDown",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "sha256": "96db1720f6a7b532ef3025ab566489c6ed651877097993bc115009d2359266f1",
+   "registered_utc": "2026-10-06T04:37:59Z",
+   "reason": "b20 (authorization entry 17): declare the lying state for the bed-support window [63, 89] so the coat lying corrective comes on during the lie-back; windows otherwise unchanged",
+   "supersedes": "1f3ade3350f35c1aa59fa4688a75ecbc8f79705183f090ae9ced8cddb19a12d5"
+  },
+  {
+   "clip": "AN_RO_LieDown",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "sha256": "958340f02b78c720cf454ae5bfc3b4695d40565e7a50baabd75ed8a5356dcb14",
+   "registered_utc": "2026-10-06T05:27:57Z",
+   "reason": "user decisions 2026-10-06 (authorization entries 19 and 20): seated_on_bed [2, 62] - the coat may hang into the bed while seated and during the lie-back; other windows unchanged",
+   "supersedes": "96db1720f6a7b532ef3025ab566489c6ed651877097993bc115009d2359266f1"
+  },
+  {
+   "clip": "AN_RO_LieDown",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "sha256": "7552821be8d33ced9f3ee187824f067dfd8c7de9f95f59f556bb7a7211d6c186",
+   "registered_utc": "2026-10-06T06:10:16Z",
+   "reason": "authorization entry 20 encoding fix (2026-10-06): seated_on_bed [2, 62] -> [2, 63], ending on the bed support's first frame; scripts/cv1_interaction.py now lets a seated window meet a support window on that one shared frame and ends the exemption where the support covers it, so the approved lie-back is covered to the support establishment (the a06 check found the coat 29.8/19.3/8.7 mm below the bed top at 62.25/62.5/62.75, between the two windows); other windows unchanged",
+   "supersedes": "958340f02b78c720cf454ae5bfc3b4695d40565e7a50baabd75ed8a5356dcb14"
+  },
+  {
+   "clip": "AN_RO_GetUp",
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/interaction.json",
+   "sha256": "3f3eb4faba32e828968a3a4ae002226a5b59dd568a93161097c477d41da5a8a5",
+   "registered_utc": "2026-10-06T06:39:09Z",
+   "reason": "before first measurement",
+   "supersedes": null
   }
  ]
 }

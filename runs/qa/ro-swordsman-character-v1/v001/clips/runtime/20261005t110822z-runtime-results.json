@@ -1,0 +1,4476 @@
+{
+ "observed_utc": "2026-10-05T11:08:26.651Z",
+ "run": "20261005t110822z",
+ "check": "runtime-closed-loop",
+ "gate_m": 0.00001,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "runtime": {
+  "engine": "three.js",
+  "revision": "186",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/2.19675.0 Chrome/152.0.7977.130 Safari/537.36 MSIX",
+  "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "webgl_renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+ },
+ "inputs": {
+  "manifest": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-closed-loop-b18loc/runtime-manifest.json",
+   "bytes": 1865,
+   "sha256": "d3f832a1c0ce642c34c901c0d1dbba3325c7af0b1713b0b8b55185ec0f0249bf"
+  },
+  "harness": {
+   "candidate.html": {
+    "path": "tools/runtime-qa/three/candidate.html",
+    "bytes": 2952,
+    "sha256": "4314d253e8ef4ac513ed49ec7ac35f33815c4dea37269cf74e3acef88badb2c4"
+   },
+   "src/candidate.js": {
+    "path": "tools/runtime-qa/three/src/candidate.js",
+    "bytes": 15076,
+    "sha256": "25b9af601bc7d0ada064d0bd3159fae0c7e4d2b089d32a284dac6e3adb6bc550"
+   },
+   "src/cv1-runtime.js": {
+    "path": "tools/runtime-qa/three/src/cv1-runtime.js",
+    "bytes": 9738,
+    "sha256": "7ac153bffac3c3e63676d73a15b9559c1ffc4d821da0dda3fab76dac91dfe586"
+   },
+   "src/cv1-pose-rules.js": {
+    "path": "tools/runtime-qa/three/src/cv1-pose-rules.js",
+    "bytes": 8868,
+    "sha256": "382845fa98b4fdc27dd67c4d734ec3ed43a150a711469bdf5c69b989aae0108a"
+   }
+  },
+  "reference": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-closed-loop-b18loc/blender-reference.json",
+   "bytes": 189714,
+   "sha256": "71c87393d8cd47d36f08355ed5d15a929230d6921e28350afc6000f0076a6756"
+  },
+  "reference_binary": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-closed-loop-b18loc/blender-reference.f64.bin",
+   "bytes": 19510608,
+   "sha256": "924edad8fb147f98b8113539b74ace1f1fb24242ab1ca1471f3bc36fd7bafd14"
+  },
+  "rules": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/corrective-rules.json",
+   "bytes": 36350,
+   "sha256": "b909adefeb2d930f083e5b0f8196b3d79042b7cffd35bfaa7d81a4b5101e8188"
+  },
+  "glb": {
+   "runtime_owner": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b18loc/an_ro_walk_sword_a04_b18loc_runtime_owner_stripped_exact_weights.glb",
+    "bytes": 27970432,
+    "sha256": "e76d49779656ec1f041939a92b5e2f53cee77393a2347994b2b451fcfc0fb7ed"
+   },
+   "baked_owner": {
+    "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b18loc/an_ro_walk_sword_a04_b18loc_baked_owner_exact_weights.glb",
+    "bytes": 3317296,
+    "sha256": "6d25271b86b6a942e665cf75d363ed487e7c4cde3e4e0e23b5c316627fb3c4f3"
+   }
+  }
+ },
+ "evaluation_order": [
+  "AnimationMixer.update",
+  "helper bones follow their sources (rules.helpers)",
+  "final bone local rotations, rest-relative",
+  "rule evaluator writes morphTargetInfluences",
+  "updateMatrixWorld",
+  "engine morph then skin"
+ ],
+ "measurement": "SkinnedMesh.getVertexPosition (morph then skin) x matrixWorld, glTF->Blender axes, against the Blender-evaluated position of the same original vertex ID. CPU values, not GPU-frame evidence.",
+ "clip_key_times_s": {
+  "first": 0,
+  "last": 1,
+  "count": 61
+ },
+ "rest_from_inverse_bind_vs_node_default_max_deg": 0.03631426273342846,
+ "verdicts": {
+  "runtime_owner_gate": true,
+  "blend_gate": true,
+  "baked_owner_gate": true,
+  "all_blender_vertices_covered": true,
+  "rule_weights_match_blender": true,
+  "runtime_owner_clip_has_no_owned_morph_channel": true,
+  "runtime_owner_clip_has_no_helper_bone_channel": true,
+  "negative_controls_all_detected": true
+ },
+ "pass": true,
+ "summary": {
+  "runtime_owner_max_error_m": 0.000002034795621298591,
+  "blend_max_error_m": 9.360878819031353e-7,
+  "baked_owner_max_error_m": 0.000002034795621298591,
+  "frames": 25,
+  "max_rule_weight_difference": 0.000007773014614742557
+ },
+ "runtime_owner_samples": [
+  {
+   "frame": 0,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 9.31588756691859e-7,
+   "weight_max_abs_difference_vs_blender": 0.000004657943783459295,
+   "active_morphs": 35,
+   "reference_block": "all/frame-0",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018006013382835368,
+   "rms_error_m": 2.7148880617403744e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000018006013382835368
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9305165376270575e-7,
+     "rms_error_m": 1.0169058373231921e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.81562017416848e-7,
+     "rms_error_m": 1.0548266561171603e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.263804110134002e-7,
+     "rms_error_m": 5.844368490294914e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018006013382835368,
+     "rms_error_m": 5.091751697618881e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6648874305460215e-7,
+     "rms_error_m": 7.035243250061472e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2368507124486052e-7,
+     "rms_error_m": 1.2747269452866687e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.27216443235422e-7,
+     "rms_error_m": 1.555301147551563e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.514154992157208e-7,
+     "rms_error_m": 2.3592536425965121e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.735354223054011e-7,
+     "rms_error_m": 8.7004182756789e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6957868435336097e-7,
+     "rms_error_m": 2.040308807733921e-7
+    }
+   ]
+  },
+  {
+   "frame": 3,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000014678577967552897,
+   "weight_max_abs_difference_vs_blender": 0.0000073392889837764486,
+   "active_morphs": 35,
+   "reference_block": "all/frame-3",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015002336969671288,
+   "rms_error_m": 2.8342941411261476e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 162,
+    "error_m": 0.0000015002336969671288
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.296008123897053e-7,
+     "rms_error_m": 2.9708010872592765e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.103830343748157e-7,
+     "rms_error_m": 1.955909416109007e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0626732243769272e-7,
+     "rms_error_m": 4.366151716001928e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015002336969671288,
+     "rms_error_m": 4.496860354472856e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.554345538071865e-7,
+     "rms_error_m": 5.972332505707583e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.758785207572269e-7,
+     "rms_error_m": 2.384286205198732e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.040723863647847e-7,
+     "rms_error_m": 2.803535416157835e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.29444421449928e-7,
+     "rms_error_m": 2.1021540761421932e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.558636333261844e-7,
+     "rms_error_m": 4.2696901000412217e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.998041520202076e-7,
+     "rms_error_m": 2.182427460749025e-7
+    }
+   ]
+  },
+  {
+   "frame": 6,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000015546029229485114,
+   "weight_max_abs_difference_vs_blender": 0.000007773014614742557,
+   "active_morphs": 35,
+   "reference_block": "all/frame-6",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001082065632078653,
+   "rms_error_m": 2.2455948125500884e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5675,
+    "error_m": 0.000001082065632078653
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.469181868762642e-7,
+     "rms_error_m": 2.3207392991343932e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.0856940936591515e-7,
+     "rms_error_m": 2.0283079565611947e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6394467784174865e-7,
+     "rms_error_m": 7.145241170891528e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001082065632078653,
+     "rms_error_m": 3.7765558233723957e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6712465568834305e-7,
+     "rms_error_m": 6.512282682774996e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.494155415376362e-7,
+     "rms_error_m": 2.2010084668066963e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.488815476051638e-7,
+     "rms_error_m": 1.666219222083635e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.740572599018062e-7,
+     "rms_error_m": 2.490442058008064e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5025993066026103e-7,
+     "rms_error_m": 6.696190487276562e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.934185135632269e-7,
+     "rms_error_m": 2.0442453318231824e-7
+    }
+   ]
+  },
+  {
+   "frame": 9,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000010546747405415502,
+   "weight_max_abs_difference_vs_blender": 1.2448837993783712e-7,
+   "active_morphs": 33,
+   "reference_block": "all/frame-9",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011096985933027076,
+   "rms_error_m": 2.0291793065162539e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 889,
+    "error_m": 0.0000011096985933027076
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.715265551199744e-7,
+     "rms_error_m": 1.3830992448106264e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.629378092156186e-7,
+     "rms_error_m": 1.5600771236029268e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1883318061045566e-7,
+     "rms_error_m": 5.4983469378190944e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011096985933027076,
+     "rms_error_m": 3.64581971771377e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6944049924535048e-7,
+     "rms_error_m": 6.833278520425237e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.126301997454339e-7,
+     "rms_error_m": 1.3257091727844953e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2848346403924797e-7,
+     "rms_error_m": 1.2485243761433022e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.4416838779512393e-7,
+     "rms_error_m": 1.31149402975597e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.538659147352084e-7,
+     "rms_error_m": 1.3841293208286142e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.485773449989134e-7,
+     "rms_error_m": 1.8065744075139934e-7
+    }
+   ]
+  },
+  {
+   "frame": 12,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.000001212578999099101,
+   "weight_max_abs_difference_vs_blender": 1.7190079271145464e-7,
+   "active_morphs": 33,
+   "reference_block": "all/frame-12",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011463259216353072,
+   "rms_error_m": 2.307971351976045e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 889,
+    "error_m": 0.0000011463259216353072
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.869552430792501e-7,
+     "rms_error_m": 3.718809324953363e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0000836388843623e-7,
+     "rms_error_m": 1.1006638231561245e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0911582392308666e-7,
+     "rms_error_m": 3.810098110412382e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011463259216353072,
+     "rms_error_m": 3.6612859720855524e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.966348970344014e-7,
+     "rms_error_m": 8.57014352620141e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.319788947124713e-7,
+     "rms_error_m": 2.476814594984513e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.110300266970633e-7,
+     "rms_error_m": 1.4688417090943748e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.383401532956485e-7,
+     "rms_error_m": 2.103486969958443e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6729760370712693e-7,
+     "rms_error_m": 2.472417625324445e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.048247528075992e-7,
+     "rms_error_m": 1.7416307111521068e-7
+    }
+   ]
+  },
+  {
+   "frame": 15,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000018369170153853531,
+   "weight_max_abs_difference_vs_blender": 1.2799773518867852e-7,
+   "active_morphs": 35,
+   "reference_block": "all/frame-15",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000012801218638590058,
+   "rms_error_m": 3.3645983060273324e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 892,
+    "error_m": 0.0000012801218638590058
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.380036156409115e-7,
+     "rms_error_m": 5.101744066585931e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.941548035147956e-7,
+     "rms_error_m": 3.847909775462354e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.340612263742372e-7,
+     "rms_error_m": 5.5500547049525685e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000012801218638590058,
+     "rms_error_m": 4.370225044837384e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9732746000801847e-7,
+     "rms_error_m": 8.116057892293348e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.004669049084051e-7,
+     "rms_error_m": 4.1996139882116535e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.749733239426112e-7,
+     "rms_error_m": 4.3150272641168735e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.302959276295403e-7,
+     "rms_error_m": 4.02367655757811e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.349360142071644e-7,
+     "rms_error_m": 4.0948754990828137e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.019218091671716e-7,
+     "rms_error_m": 4.3364760170909374e-7
+    }
+   ]
+  },
+  {
+   "frame": 18,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 7.267964174939578e-7,
+   "weight_max_abs_difference_vs_blender": 9.769849329543945e-8,
+   "active_morphs": 35,
+   "reference_block": "all/frame-18",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015225237204271533,
+   "rms_error_m": 2.929429827724414e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5575,
+    "error_m": 0.0000015225237204271533
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.436236800312826e-7,
+     "rms_error_m": 2.149075916814465e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.8893421909246647e-7,
+     "rms_error_m": 9.538713539906157e-8
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.65843044633657e-7,
+     "rms_error_m": 6.080952928212662e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015225237204271533,
+     "rms_error_m": 5.140493225572182e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.417987643597813e-7,
+     "rms_error_m": 2.1090150468655254e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.180281767368428e-7,
+     "rms_error_m": 1.4029238523655263e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.5546812978336406e-7,
+     "rms_error_m": 1.932377212594223e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.7654764316858025e-7,
+     "rms_error_m": 2.4915035519402983e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0750365238916453e-7,
+     "rms_error_m": 1.2384304121799756e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.987312515775414e-7,
+     "rms_error_m": 2.1748785933282763e-7
+    }
+   ]
+  },
+  {
+   "frame": 21,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 4.420064161347881e-7,
+   "weight_max_abs_difference_vs_blender": 1.1257007048737222e-7,
+   "active_morphs": 35,
+   "reference_block": "all/frame-21",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018932621716385233,
+   "rms_error_m": 3.0053242154177016e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5571,
+    "error_m": 0.0000018932621716385233
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2119712537344488e-7,
+     "rms_error_m": 1.4462333082289634e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.607985114276317e-7,
+     "rms_error_m": 1.0461216135554826e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1819811958689497e-7,
+     "rms_error_m": 5.113034141023694e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018932621716385233,
+     "rms_error_m": 5.793054304152901e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.8256824196235415e-7,
+     "rms_error_m": 7.583150224722783e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.175340503184882e-7,
+     "rms_error_m": 2.127073454642788e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.1933929400556223e-7,
+     "rms_error_m": 1.7498089804013395e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5592241579800526e-7,
+     "rms_error_m": 6.281671005091582e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.1713487163577012e-7,
+     "rms_error_m": 1.2039706893658556e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.752274208845475e-7,
+     "rms_error_m": 2.0519354848739838e-7
+    }
+   ]
+  },
+  {
+   "frame": 24,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 5.081285527896995e-7,
+   "weight_max_abs_difference_vs_blender": 9.865956207555371e-8,
+   "active_morphs": 35,
+   "reference_block": "all/frame-24",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000019661238640522533,
+   "rms_error_m": 3.3218661058382423e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5576,
+    "error_m": 0.0000019661238640522533
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9584598520523517e-7,
+     "rms_error_m": 1.263950991405888e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.374072727139392e-7,
+     "rms_error_m": 2.2502802581947924e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1672586353564549e-7,
+     "rms_error_m": 4.686792436176887e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000019661238640522533,
+     "rms_error_m": 6.201301955874422e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0544069027355094e-7,
+     "rms_error_m": 8.998626890526301e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.795168685560102e-7,
+     "rms_error_m": 2.1490022537730224e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.49280675672897e-7,
+     "rms_error_m": 1.6397891700547332e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.8914495694517583e-7,
+     "rms_error_m": 1.7340741450244994e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.9713027614359406e-7,
+     "rms_error_m": 2.879037038531966e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7740882364511195e-7,
+     "rms_error_m": 1.2206373893361716e-7
+    }
+   ]
+  },
+  {
+   "frame": 27,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 5.426229869875954e-7,
+   "weight_max_abs_difference_vs_blender": 1.428106028988907e-7,
+   "active_morphs": 35,
+   "reference_block": "all/frame-27",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000002034795621298591,
+   "rms_error_m": 3.2704448296654834e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 630,
+    "error_m": 0.000002034795621298591
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.353686639151127e-7,
+     "rms_error_m": 1.3351787728745614e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.456132993848522e-7,
+     "rms_error_m": 1.5766007878337902e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4272702287035293e-7,
+     "rms_error_m": 5.733256411972422e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000002034795621298591,
+     "rms_error_m": 5.943173384451669e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7394674662617577e-7,
+     "rms_error_m": 1.5962591501543102e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.6845523564740516e-7,
+     "rms_error_m": 1.0673448870813303e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.3284665300075957e-7,
+     "rms_error_m": 2.479435311510805e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5935911192843956e-7,
+     "rms_error_m": 8.807248520825684e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6075967009570734e-7,
+     "rms_error_m": 2.399200466388526e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.951056759957809e-7,
+     "rms_error_m": 3.7318975864444346e-7
+    }
+   ]
+  },
+  {
+   "frame": 30,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 6.222274464562361e-7,
+   "weight_max_abs_difference_vs_blender": 8.637867743299665e-8,
+   "active_morphs": 33,
+   "reference_block": "all/frame-30",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017819834628185068,
+   "rms_error_m": 2.840713672542076e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5576,
+    "error_m": 0.0000017819834628185068
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7161073801802692e-7,
+     "rms_error_m": 8.389209775690429e-8
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2883962003298826e-7,
+     "rms_error_m": 1.270385707093462e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1615520379752078e-7,
+     "rms_error_m": 5.846251173781789e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017819834628185068,
+     "rms_error_m": 5.352901457446021e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.660894319309295e-7,
+     "rms_error_m": 7.019943958267764e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.383465074535952e-7,
+     "rms_error_m": 2.2332338608031118e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.104629415904874e-7,
+     "rms_error_m": 1.5556776474309713e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.735354223054011e-7,
+     "rms_error_m": 8.697791332024561e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.514154992157208e-7,
+     "rms_error_m": 2.357909171291155e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.1329239649852593e-7,
+     "rms_error_m": 1.5237664911503063e-7
+    }
+   ]
+  },
+  {
+   "frame": 33,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 7.548839372484295e-7,
+   "weight_max_abs_difference_vs_blender": 0.0000025352303406611654,
+   "active_morphs": 37,
+   "reference_block": "all/frame-33",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015026496556969572,
+   "rms_error_m": 2.855808549022229e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 630,
+    "error_m": 0.0000015026496556969572
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.821209860820337e-7,
+     "rms_error_m": 2.6266915819280193e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.1929563536055847e-7,
+     "rms_error_m": 3.1021009408536625e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1062928071751722e-7,
+     "rms_error_m": 4.399464674381244e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015026496556969572,
+     "rms_error_m": 4.575178692393073e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5414953508161514e-7,
+     "rms_error_m": 5.906718666610577e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.77403265925489e-7,
+     "rms_error_m": 1.6801218497145887e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.454454614019649e-7,
+     "rms_error_m": 2.5569859071100106e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.572913385043053e-7,
+     "rms_error_m": 4.2825055379857555e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.310707040763942e-7,
+     "rms_error_m": 2.1187013924556687e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.281709420306517e-7,
+     "rms_error_m": 1.506379322688096e-7
+    }
+   ]
+  },
+  {
+   "frame": 36,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000011218220644648724,
+   "weight_max_abs_difference_vs_blender": 1.2622784228977224e-7,
+   "active_morphs": 36,
+   "reference_block": "all/frame-36",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000010812685220026219,
+   "rms_error_m": 2.354200142871989e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5040,
+    "error_m": 0.0000010812685220026219
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.6873116421211947e-7,
+     "rms_error_m": 3.5550212732637515e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.3800838393021403e-7,
+     "rms_error_m": 1.4105555111196992e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6647354546129078e-7,
+     "rms_error_m": 7.279539081214092e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000010812685220026219,
+     "rms_error_m": 3.865128125556575e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7114161544910088e-7,
+     "rms_error_m": 6.686689340154761e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.198014989600348e-7,
+     "rms_error_m": 2.8669549574986303e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.4534151605113854e-7,
+     "rms_error_m": 2.077828201060854e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5356024218695813e-7,
+     "rms_error_m": 6.734198461515871e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.7784168425303317e-7,
+     "rms_error_m": 2.528840385851301e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.433269689069088e-7,
+     "rms_error_m": 1.6242323761583267e-7
+    }
+   ]
+  },
+  {
+   "frame": 39,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000019845583504318753,
+   "weight_max_abs_difference_vs_blender": 0.000004528762164723865,
+   "active_morphs": 38,
+   "reference_block": "all/frame-39",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011040835112166964,
+   "rms_error_m": 2.0502351530902868e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4529,
+    "error_m": 0.0000011040835112166964
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.3000341243625674e-7,
+     "rms_error_m": 5.148492265339689e-8
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.760998850024637e-7,
+     "rms_error_m": 1.6014772004027695e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1807281219513717e-7,
+     "rms_error_m": 4.671075405679506e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011040835112166964,
+     "rms_error_m": 3.6027233197600115e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.667786317483812e-7,
+     "rms_error_m": 6.604372094419656e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.719725032907931e-7,
+     "rms_error_m": 2.0994926432053148e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.142148657934665e-7,
+     "rms_error_m": 2.6316616606435434e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.527806923637055e-7,
+     "rms_error_m": 1.3640836550372156e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.4115405186383e-7,
+     "rms_error_m": 1.2841353702606986e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.6469752662965947e-7,
+     "rms_error_m": 1.7598288592143386e-7
+    }
+   ]
+  },
+  {
+   "frame": 42,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.0000014273100122919047,
+   "weight_max_abs_difference_vs_blender": 0.000003997947128908663,
+   "active_morphs": 37,
+   "reference_block": "all/frame-42",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001151957607957569,
+   "rms_error_m": 2.4229578605242536e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4521,
+    "error_m": 0.000001151957607957569
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.47700840447243e-7,
+     "rms_error_m": 4.1746836681141547e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.521847925890312e-7,
+     "rms_error_m": 2.379688428052321e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0763530354597844e-7,
+     "rms_error_m": 3.798017806579425e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001151957607957569,
+     "rms_error_m": 3.638722636060668e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0602920025285713e-7,
+     "rms_error_m": 8.602725768241966e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.554081491224182e-7,
+     "rms_error_m": 3.6501830723697374e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.9307185163654897e-7,
+     "rms_error_m": 1.405614111359702e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6718670602888325e-7,
+     "rms_error_m": 2.472459463394623e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.383024633529143e-7,
+     "rms_error_m": 2.1034421022158823e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.767404105568523e-7,
+     "rms_error_m": 1.618425392956743e-7
+    }
+   ]
+  },
+  {
+   "frame": 45,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.000001239888629323005,
+   "weight_max_abs_difference_vs_blender": 0.00000373973783940329,
+   "active_morphs": 37,
+   "reference_block": "all/frame-45",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001301033212976745,
+   "rms_error_m": 3.3325642894285585e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4528,
+    "error_m": 0.000001301033212976745
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 7.229428147062766e-7,
+     "rms_error_m": 5.997182798448884e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.015687523993226e-7,
+     "rms_error_m": 2.0713648075240034e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.3355386699526464e-7,
+     "rms_error_m": 5.550262882829328e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001301033212976745,
+     "rms_error_m": 4.393121325801834e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9732746000801847e-7,
+     "rms_error_m": 8.116292437025875e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 8.385420933651715e-7,
+     "rms_error_m": 5.26785235106549e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.6435525688785084e-7,
+     "rms_error_m": 3.0626449775505967e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.349360142071644e-7,
+     "rms_error_m": 4.093608784391423e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.302959276295403e-7,
+     "rms_error_m": 4.02503611836039e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.889104198187103e-7,
+     "rms_error_m": 3.7020585066210756e-7
+    }
+   ]
+  },
+  {
+   "frame": 48,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 6.918967137004017e-7,
+   "weight_max_abs_difference_vs_blender": 0.0000034594835685020087,
+   "active_morphs": 35,
+   "reference_block": "all/frame-48",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015969445974718721,
+   "rms_error_m": 3.0830304173400767e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000015969445974718721
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.595798458040013e-7,
+     "rms_error_m": 1.6773631648815898e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.101210517357767e-7,
+     "rms_error_m": 3.8380668624756316e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.645165272700916e-7,
+     "rms_error_m": 6.078940456114105e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015969445974718721,
+     "rms_error_m": 5.111179505786165e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.3346334993358547e-7,
+     "rms_error_m": 2.1040463292578626e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.8654030580605907e-7,
+     "rms_error_m": 2.509256827896791e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.405444422139171e-7,
+     "rms_error_m": 3.3611180160302333e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0750365331939345e-7,
+     "rms_error_m": 1.2375231846887096e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.765476401928957e-7,
+     "rms_error_m": 2.4905507754096984e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.259468955187505e-7,
+     "rms_error_m": 2.3206763569835665e-7
+    }
+   ]
+  },
+  {
+   "frame": 51,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 8.883961312156075e-7,
+   "weight_max_abs_difference_vs_blender": 8.56333089993555e-8,
+   "active_morphs": 33,
+   "reference_block": "all/frame-51",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018557535742509249,
+   "rms_error_m": 2.9668115306622546e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000018557535742509249
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.2549855250416204e-7,
+     "rms_error_m": 2.0038402082108155e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.104395797529239e-7,
+     "rms_error_m": 2.1718265703125667e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4785965383142318e-7,
+     "rms_error_m": 6.270294747698066e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018557535742509249,
+     "rms_error_m": 5.573729910582773e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.777468975000198e-7,
+     "rms_error_m": 7.337096672955853e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.535268697559382e-7,
+     "rms_error_m": 1.3124933634822092e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.635655786007444e-7,
+     "rms_error_m": 2.3232164239617524e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.220776127163654e-7,
+     "rms_error_m": 1.2479954909044794e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5028567971464106e-7,
+     "rms_error_m": 6.08692294206733e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.2084411330637404e-7,
+     "rms_error_m": 2.5687408276913544e-7
+    }
+   ]
+  },
+  {
+   "frame": 54,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.000001011548059648426,
+   "weight_max_abs_difference_vs_blender": 1.2488618372774596e-7,
+   "active_morphs": 33,
+   "reference_block": "all/frame-54",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000019596381513089814,
+   "rms_error_m": 3.324240263987894e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000019596381513089814
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.9820969524567584e-7,
+     "rms_error_m": 1.6325125357975115e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.619443027414078e-7,
+     "rms_error_m": 2.603332960292951e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.2025396333956046e-7,
+     "rms_error_m": 4.908274115671707e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000019596381513089814,
+     "rms_error_m": 5.950054005403938e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.079794228513151e-7,
+     "rms_error_m": 8.815038956011875e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.200299518962438e-7,
+     "rms_error_m": 3.148083434462751e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.7639158483987655e-7,
+     "rms_error_m": 3.208520618806363e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.967558282159894e-7,
+     "rms_error_m": 2.843654105306614e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.859680193446653e-7,
+     "rms_error_m": 1.7038407286072385e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.453967083236013e-7,
+     "rms_error_m": 2.534449770367548e-7
+    }
+   ]
+  },
+  {
+   "frame": 57,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 5.704849243004517e-7,
+   "weight_max_abs_difference_vs_blender": 0.0000021764781421573787,
+   "active_morphs": 35,
+   "reference_block": "all/frame-57",
+   "vertices_measured": 33054,
+   "max_error_m": 0.00000188625414596765,
+   "rms_error_m": 3.0656815941030807e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 162,
+    "error_m": 0.00000188625414596765
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.414997287771778e-7,
+     "rms_error_m": 1.4248640142923211e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.51089678726112e-7,
+     "rms_error_m": 1.4957170545142669e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4130600729915577e-7,
+     "rms_error_m": 5.737684416509565e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.00000188625414596765,
+     "rms_error_m": 5.372932925646467e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7472495928260815e-7,
+     "rms_error_m": 1.5932015208542822e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.168528935892533e-7,
+     "rms_error_m": 3.2586284440047525e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.315858775603635e-7,
+     "rms_error_m": 3.1240196589644355e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6155883464075286e-7,
+     "rms_error_m": 2.399365442752765e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5935911294402214e-7,
+     "rms_error_m": 8.808206620504989e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.1659470718170014e-7,
+     "rms_error_m": 3.193688465483841e-7
+    }
+   ]
+  },
+  {
+   "frame": 60,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 9.315887726790706e-7,
+   "weight_max_abs_difference_vs_blender": 0.000004657943863395353,
+   "active_morphs": 35,
+   "reference_block": "all/frame-60",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017188049051383127,
+   "rms_error_m": 2.67042959935109e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000017188049051383127
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.96994078420132e-7,
+     "rms_error_m": 1.0449559418969554e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0397516980738013e-7,
+     "rms_error_m": 1.2115126030678876e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7851914203641394e-7,
+     "rms_error_m": 6.451934609778487e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017188049051383127,
+     "rms_error_m": 4.960709396026716e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.667559139507701e-7,
+     "rms_error_m": 7.017575301471418e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2399734652139846e-7,
+     "rms_error_m": 1.3277865762349058e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.3652706658696906e-7,
+     "rms_error_m": 1.7337524183683428e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.590405698063724e-7,
+     "rms_error_m": 2.381148080188135e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7391326815677473e-7,
+     "rms_error_m": 8.694544560526333e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.629064252158412e-7,
+     "rms_error_m": 2.1106794407756252e-7
+    }
+   ]
+  },
+  {
+   "frame": 0.5,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 8.442651592277528e-7,
+   "weight_max_abs_difference_vs_blender": 0.000004221325796138764,
+   "active_morphs": 35,
+   "reference_block": "all/frame-0.5",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017636623618943201,
+   "rms_error_m": 2.5517291826860116e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000017636623618943201
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0816090368445077e-7,
+     "rms_error_m": 1.1196205198358014e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.486675687586734e-7,
+     "rms_error_m": 6.419797422124575e-8
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0554307805427025e-7,
+     "rms_error_m": 3.957386501759112e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017636623618943201,
+     "rms_error_m": 4.7336824521375485e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.5356185826404946e-7,
+     "rms_error_m": 1.2558671838645998e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.171322362654133e-7,
+     "rms_error_m": 1.6361434621544583e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.497822453663499e-7,
+     "rms_error_m": 2.0406152073524895e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2732529702955287e-7,
+     "rms_error_m": 1.2932063262311382e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.3067325199961593e-7,
+     "rms_error_m": 1.2542023384290987e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.948593358118364e-7,
+     "rms_error_m": 2.0486350992561248e-7
+    }
+   ]
+  },
+  {
+   "frame": 15.5,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 0.000001679610044824642,
+   "weight_max_abs_difference_vs_blender": 9.042153992222524e-8,
+   "active_morphs": 35,
+   "reference_block": "all/frame-15.5",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000013080911768998385,
+   "rms_error_m": 2.979227120889419e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 889,
+    "error_m": 0.0000013080911768998385
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.6294668971585624e-7,
+     "rms_error_m": 3.4610226430716937e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.031229780079743e-7,
+     "rms_error_m": 3.848133632458628e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.210664196568991e-7,
+     "rms_error_m": 5.355826287923787e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000013080911768998385,
+     "rms_error_m": 4.4067293023738715e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.955302647849992e-7,
+     "rms_error_m": 8.795042750411007e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.883156117687657e-7,
+     "rms_error_m": 1.984552105600232e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.682948457849191e-7,
+     "rms_error_m": 3.3222588858041987e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.424912115060463e-7,
+     "rms_error_m": 3.2135953503330525e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.987723484010473e-7,
+     "rms_error_m": 3.7361267505622894e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.633259331808966e-7,
+     "rms_error_m": 2.6639270329487997e-7
+    }
+   ]
+  },
+  {
+   "frame": 30.5,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 9.201871705721842e-7,
+   "weight_max_abs_difference_vs_blender": 6.31941149409343e-8,
+   "active_morphs": 35,
+   "reference_block": "all/frame-30.5",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017837424237141877,
+   "rms_error_m": 2.6061629156801067e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5575,
+    "error_m": 0.0000017837424237141877
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.23523638450316e-7,
+     "rms_error_m": 1.2707321874119768e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9906056812115925e-7,
+     "rms_error_m": 9.387182857838366e-8
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1502247173193705e-7,
+     "rms_error_m": 3.9776519580706586e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017837424237141877,
+     "rms_error_m": 4.928931964375627e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.438300204722095e-7,
+     "rms_error_m": 1.24460312312701e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.225750717825662e-7,
+     "rms_error_m": 1.2253142024571496e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.003671888104963e-7,
+     "rms_error_m": 1.6240427185830834e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.3016787060536114e-7,
+     "rms_error_m": 1.252345585554747e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2645594629183423e-7,
+     "rms_error_m": 1.2865794009276777e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0123413258743968e-7,
+     "rms_error_m": 1.2634187462615277e-7
+    }
+   ]
+  },
+  {
+   "frame": 45.5,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "state": {
+    "grasp.L": 0,
+    "grasp.R": 1
+   },
+   "driver_max_abs_difference_vs_blender": 9.211115606921894e-7,
+   "weight_max_abs_difference_vs_blender": 0.000004605557803460947,
+   "active_morphs": 37,
+   "reference_block": "all/frame-45.5",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001334415105459532,
+   "rms_error_m": 2.9583945489975637e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4520,
+    "error_m": 0.000001334415105459532
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.375599742389999e-7,
+     "rms_error_m": 4.1325166663782913e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.3826495033496807e-7,
+     "rms_error_m": 1.4591792044135017e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.2399233944177843e-7,
+     "rms_error_m": 5.332486285772648e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001334415105459532,
+     "rms_error_m": 4.393172256506588e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.948309409035538e-7,
+     "rms_error_m": 8.689404363507177e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.373753227363753e-7,
+     "rms_error_m": 4.5159522459311437e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.546314026936294e-7,
+     "rms_error_m": 2.385486976363275e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.002309463551632e-7,
+     "rms_error_m": 3.7491707240402205e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.439119846007432e-7,
+     "rms_error_m": 3.227286133310217e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.3476266083542847e-7,
+     "rms_error_m": 2.2020440107509143e-7
+    }
+   ]
+  }
+ ],
+ "blend_sample": {
+  "frames": [
+   0,
+   30
+  ],
+  "state": {
+   "grasp.L": 0,
+   "grasp.R": 1
+  },
+  "driver_max_abs_difference_vs_blender": 4.361740163494332e-7,
+  "weight_max_abs_difference_vs_blender": 9.045784588046502e-8,
+  "reference_block": "blend/frame-and-frame",
+  "vertices_measured": 33054,
+  "max_error_m": 9.360878819031353e-7,
+  "rms_error_m": 2.1791880433707288e-7,
+  "over_gate": 0,
+  "all_blender_vertices_covered": true,
+  "worst": {
+   "mesh": "SM_RO_core",
+   "blender_vertex": 892,
+   "error_m": 9.360878819031353e-7
+  },
+  "per_mesh": [
+   {
+    "mesh": "SM_RO_bracer.L",
+    "export_vertices": 1444,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 2.373358355853962e-7,
+    "rms_error_m": 1.2845687408095283e-7
+   },
+   {
+    "mesh": "SM_RO_bracer.R",
+    "export_vertices": 1560,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 1.5805353064346307e-7,
+    "rms_error_m": 6.516729511233194e-8
+   },
+   {
+    "mesh": "SM_RO_coat",
+    "export_vertices": 6888,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 1.248798392457932e-7,
+    "rms_error_m": 6.27841312470761e-8
+   },
+   {
+    "mesh": "SM_RO_core",
+    "export_vertices": 8014,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 9.360878819031353e-7,
+    "rms_error_m": 3.771509283367459e-7
+   },
+   {
+    "mesh": "SM_RO_cuirass",
+    "export_vertices": 6221,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 2.761170066559733e-7,
+    "rms_error_m": 1.627999546894724e-7
+   },
+   {
+    "mesh": "SM_RO_hand.L",
+    "export_vertices": 1106,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 3.634824199150506e-7,
+    "rms_error_m": 2.195545439083333e-7
+   },
+   {
+    "mesh": "SM_RO_hand.R",
+    "export_vertices": 1106,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 2.654649250526513e-7,
+    "rms_error_m": 1.3542560500139796e-7
+   },
+   {
+    "mesh": "SM_RO_pauldron.L",
+    "export_vertices": 2611,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 2.4468506457432216e-7,
+    "rms_error_m": 1.3195899544526604e-7
+   },
+   {
+    "mesh": "SM_RO_pauldron.R",
+    "export_vertices": 2611,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 2.4468506457432216e-7,
+    "rms_error_m": 1.3209562562267042e-7
+   },
+   {
+    "mesh": "SM_RO_sword",
+    "export_vertices": 1493,
+    "all_blender_vertices_covered": true,
+    "max_error_m": 3.19246298104501e-7,
+    "rms_error_m": 1.690091394537006e-7
+   }
+  ]
+ },
+ "baked_owner_samples": [
+  {
+   "frame": 0,
+   "weight_max_abs_difference_vs_blender": 2.7119800516395287e-8,
+   "reference_block": "all/frame-0",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018006013382835368,
+   "rms_error_m": 2.714679907374976e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000018006013382835368
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9305165376270575e-7,
+     "rms_error_m": 1.0169058373231921e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.81562017416848e-7,
+     "rms_error_m": 1.0548266561171603e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.263804110134002e-7,
+     "rms_error_m": 5.844368490294914e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018006013382835368,
+     "rms_error_m": 5.091751860761349e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6648874305460215e-7,
+     "rms_error_m": 7.035243250061472e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2368507124486052e-7,
+     "rms_error_m": 1.2750980956002918e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.27216443235422e-7,
+     "rms_error_m": 1.5440940257878438e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.514154992157208e-7,
+     "rms_error_m": 2.3592536425965121e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.735354223054011e-7,
+     "rms_error_m": 8.7004182756789e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6957868435336097e-7,
+     "rms_error_m": 2.040308807733921e-7
+    }
+   ]
+  },
+  {
+   "frame": 3,
+   "weight_max_abs_difference_vs_blender": 2.8168222865332382e-8,
+   "reference_block": "all/frame-3",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015002336969671288,
+   "rms_error_m": 2.8328702642575624e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 162,
+    "error_m": 0.0000015002336969671288
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.296008123897053e-7,
+     "rms_error_m": 2.9708010872592765e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.103830343748157e-7,
+     "rms_error_m": 1.955909416109007e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0626732243769272e-7,
+     "rms_error_m": 4.366151716001928e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015002336969671288,
+     "rms_error_m": 4.4968604184360917e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.554345538071865e-7,
+     "rms_error_m": 5.972332505707583e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.758785207572269e-7,
+     "rms_error_m": 2.3572143648731136e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.040723863647847e-7,
+     "rms_error_m": 2.783344529663929e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.29444421449928e-7,
+     "rms_error_m": 2.1021540761421932e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.558636333261844e-7,
+     "rms_error_m": 4.2696901000412217e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.998041520202076e-7,
+     "rms_error_m": 2.182427460749025e-7
+    }
+   ]
+  },
+  {
+   "frame": 6,
+   "weight_max_abs_difference_vs_blender": 2.6174905909392976e-8,
+   "reference_block": "all/frame-6",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001082065632078653,
+   "rms_error_m": 2.2443379282525888e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5675,
+    "error_m": 0.000001082065632078653
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.469181868762642e-7,
+     "rms_error_m": 2.3207392991343932e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.0856940936591515e-7,
+     "rms_error_m": 2.0283079565611947e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6394467784174865e-7,
+     "rms_error_m": 7.145241170891528e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001082065632078653,
+     "rms_error_m": 3.776556008644567e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6712465568834305e-7,
+     "rms_error_m": 6.512282682774996e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.494155415376362e-7,
+     "rms_error_m": 2.174149411327295e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.488815476051638e-7,
+     "rms_error_m": 1.6507974122190639e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.740572599018062e-7,
+     "rms_error_m": 2.490442058008064e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5025993066026103e-7,
+     "rms_error_m": 6.696190487276562e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.934185135632269e-7,
+     "rms_error_m": 2.0442453318231824e-7
+    }
+   ]
+  },
+  {
+   "frame": 9,
+   "weight_max_abs_difference_vs_blender": 2.213270244855181e-8,
+   "reference_block": "all/frame-9",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011096985933027076,
+   "rms_error_m": 2.0289788721323277e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 889,
+    "error_m": 0.0000011096985933027076
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.715265551199744e-7,
+     "rms_error_m": 1.3830992448106264e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.629378092156186e-7,
+     "rms_error_m": 1.5600771236029268e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1883318061045566e-7,
+     "rms_error_m": 5.4983469378190944e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011096985933027076,
+     "rms_error_m": 3.645819717217121e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6944049924535048e-7,
+     "rms_error_m": 6.833278520425237e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.126301997454339e-7,
+     "rms_error_m": 1.3133469589773884e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2848346403924797e-7,
+     "rms_error_m": 1.2518500518714114e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.4416838779512393e-7,
+     "rms_error_m": 1.31149402975597e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.538659147352084e-7,
+     "rms_error_m": 1.3841293208286142e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.485773449989134e-7,
+     "rms_error_m": 1.8065744075139934e-7
+    }
+   ]
+  },
+  {
+   "frame": 12,
+   "weight_max_abs_difference_vs_blender": 2.816822730622448e-8,
+   "reference_block": "all/frame-12",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011463259216353072,
+   "rms_error_m": 2.3071429849820935e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 889,
+    "error_m": 0.0000011463259216353072
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.869552430792501e-7,
+     "rms_error_m": 3.718809324953363e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0000836388843623e-7,
+     "rms_error_m": 1.1006638231561245e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0911582392308666e-7,
+     "rms_error_m": 3.810098110412382e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011463259216353072,
+     "rms_error_m": 3.661285969045391e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.966348970344014e-7,
+     "rms_error_m": 8.57014352620141e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.319788947124713e-7,
+     "rms_error_m": 2.462839234455654e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.110300266970633e-7,
+     "rms_error_m": 1.4533667299539077e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.383401532956485e-7,
+     "rms_error_m": 2.103486969958443e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6729760370712693e-7,
+     "rms_error_m": 2.472417625324445e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.048247528075992e-7,
+     "rms_error_m": 1.7416307111521068e-7
+    }
+   ]
+  },
+  {
+   "frame": 15,
+   "weight_max_abs_difference_vs_blender": 2.5574599327171654e-8,
+   "reference_block": "all/frame-15",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000012801218638590058,
+   "rms_error_m": 3.3631859709891373e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 892,
+    "error_m": 0.0000012801218638590058
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.380036156409115e-7,
+     "rms_error_m": 5.101744066585931e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.941548035147956e-7,
+     "rms_error_m": 3.847909775462354e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.340612263742372e-7,
+     "rms_error_m": 5.5500547049525685e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000012801218638590058,
+     "rms_error_m": 4.370225043321441e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9732746000801847e-7,
+     "rms_error_m": 8.116057892293348e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.004669049084051e-7,
+     "rms_error_m": 4.1801132058936816e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.749733239426112e-7,
+     "rms_error_m": 4.301034474558682e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.302959276295403e-7,
+     "rms_error_m": 4.02367655757811e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.349360142071644e-7,
+     "rms_error_m": 4.0948754990828137e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.019218091671716e-7,
+     "rms_error_m": 4.3364760170909374e-7
+    }
+   ]
+  },
+  {
+   "frame": 18,
+   "weight_max_abs_difference_vs_blender": 2.213270244855181e-8,
+   "reference_block": "all/frame-18",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015225237204271533,
+   "rms_error_m": 2.929253305605895e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5575,
+    "error_m": 0.0000015225237204271533
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.436236800312826e-7,
+     "rms_error_m": 2.149075916814465e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.8893421909246647e-7,
+     "rms_error_m": 9.538713539906157e-8
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.65843044633657e-7,
+     "rms_error_m": 6.080952928212662e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015225237204271533,
+     "rms_error_m": 5.140493242433424e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.417987643597813e-7,
+     "rms_error_m": 2.1090150468655254e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.180281767368428e-7,
+     "rms_error_m": 1.3794972257046958e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.5546812978336406e-7,
+     "rms_error_m": 1.941225226375416e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.7654764316858025e-7,
+     "rms_error_m": 2.4915035519402983e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0750365238916453e-7,
+     "rms_error_m": 1.2384304121799756e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.987312515775414e-7,
+     "rms_error_m": 2.1748785933282763e-7
+    }
+   ]
+  },
+  {
+   "frame": 21,
+   "weight_max_abs_difference_vs_blender": 1.758049505973247e-8,
+   "reference_block": "all/frame-21",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018932621716385233,
+   "rms_error_m": 3.005062880396676e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5571,
+    "error_m": 0.0000018932621716385233
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2119712537344488e-7,
+     "rms_error_m": 1.4462333082289634e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.607985114276317e-7,
+     "rms_error_m": 1.0461216135554826e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1819811958689497e-7,
+     "rms_error_m": 5.113034141023694e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018932621716385233,
+     "rms_error_m": 5.793054297859319e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.8256824196235415e-7,
+     "rms_error_m": 7.583150224722783e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.1752512429837387e-7,
+     "rms_error_m": 2.1215168956204486e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.1933929400556223e-7,
+     "rms_error_m": 1.7431284357348156e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5592241579800526e-7,
+     "rms_error_m": 6.281671005091582e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.1713487163577012e-7,
+     "rms_error_m": 1.2039706893658556e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.752274208845475e-7,
+     "rms_error_m": 2.0519354848739838e-7
+    }
+   ]
+  },
+  {
+   "frame": 24,
+   "weight_max_abs_difference_vs_blender": 2.3662436787752483e-8,
+   "reference_block": "all/frame-24",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000019661238640522533,
+   "rms_error_m": 3.3217647939552726e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5576,
+    "error_m": 0.0000019661238640522533
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9584598520523517e-7,
+     "rms_error_m": 1.263950991405888e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.374072727139392e-7,
+     "rms_error_m": 2.2502802581947924e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1672586353564549e-7,
+     "rms_error_m": 4.686792436176887e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000019661238640522533,
+     "rms_error_m": 6.201301952702361e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0544069027355094e-7,
+     "rms_error_m": 8.998626890526301e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.795168685560102e-7,
+     "rms_error_m": 2.141355443844133e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.49280675672897e-7,
+     "rms_error_m": 1.6436546700293757e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.8914495694517583e-7,
+     "rms_error_m": 1.7340741450244994e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.9713027614359406e-7,
+     "rms_error_m": 2.879037038531966e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7740882364511195e-7,
+     "rms_error_m": 1.2206373893361716e-7
+    }
+   ]
+  },
+  {
+   "frame": 27,
+   "weight_max_abs_difference_vs_blender": 2.9358362851894526e-8,
+   "reference_block": "all/frame-27",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000002034795621298591,
+   "rms_error_m": 3.270770571171833e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 630,
+    "error_m": 0.000002034795621298591
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.353686639151127e-7,
+     "rms_error_m": 1.3351787728745614e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.456132993848522e-7,
+     "rms_error_m": 1.5766007878337902e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4272702287035293e-7,
+     "rms_error_m": 5.733256411972422e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000002034795621298591,
+     "rms_error_m": 5.943173385167378e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7394674662617577e-7,
+     "rms_error_m": 1.5962591501543102e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.6845523564740516e-7,
+     "rms_error_m": 1.0854993929134871e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.3284665300075957e-7,
+     "rms_error_m": 2.4843903066720753e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5935911192843956e-7,
+     "rms_error_m": 8.807248520825684e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6075967009570734e-7,
+     "rms_error_m": 2.399200466388526e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.951056759957809e-7,
+     "rms_error_m": 3.7318975864444346e-7
+    }
+   ]
+  },
+  {
+   "frame": 30,
+   "weight_max_abs_difference_vs_blender": 2.5114614166099614e-8,
+   "reference_block": "all/frame-30",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017819834628185068,
+   "rms_error_m": 2.8413564763595746e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5576,
+    "error_m": 0.0000017819834628185068
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7161073801802692e-7,
+     "rms_error_m": 8.389209775690429e-8
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2883962003298826e-7,
+     "rms_error_m": 1.270385707093462e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1615520379752078e-7,
+     "rms_error_m": 5.846251173781789e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017819834628185068,
+     "rms_error_m": 5.352901463355498e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.660894319309295e-7,
+     "rms_error_m": 7.019943958267764e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.383465074535952e-7,
+     "rms_error_m": 2.2558953932720522e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.104629415904874e-7,
+     "rms_error_m": 1.5580627473928332e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.735354223054011e-7,
+     "rms_error_m": 8.697791332024561e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.514154992157208e-7,
+     "rms_error_m": 2.357909171291155e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.1329239649852593e-7,
+     "rms_error_m": 1.5237664911503063e-7
+    }
+   ]
+  },
+  {
+   "frame": 33,
+   "weight_max_abs_difference_vs_blender": 2.695976373257025e-7,
+   "reference_block": "all/frame-33",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015026496556969572,
+   "rms_error_m": 2.8543111721272455e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 630,
+    "error_m": 0.0000015026496556969572
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.821209860820337e-7,
+     "rms_error_m": 2.6266915819280193e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.1929563536055847e-7,
+     "rms_error_m": 3.1021009408536625e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1062928071751722e-7,
+     "rms_error_m": 4.399464674381244e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015026496556969572,
+     "rms_error_m": 4.5751786246997963e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5414953508161514e-7,
+     "rms_error_m": 5.906718666610577e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.77403265925489e-7,
+     "rms_error_m": 1.657802951587175e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.365202976851315e-7,
+     "rms_error_m": 2.5213385838564535e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.572913385043053e-7,
+     "rms_error_m": 4.2825055379857555e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.310707040763942e-7,
+     "rms_error_m": 2.1187013924556687e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.281709420306517e-7,
+     "rms_error_m": 1.506379322688096e-7
+    }
+   ]
+  },
+  {
+   "frame": 36,
+   "weight_max_abs_difference_vs_blender": 7.321641043445126e-8,
+   "reference_block": "all/frame-36",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000010812685220026219,
+   "rms_error_m": 2.3516012545390757e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5040,
+    "error_m": 0.0000010812685220026219
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.6873116421211947e-7,
+     "rms_error_m": 3.5550212732637515e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.3800838393021403e-7,
+     "rms_error_m": 1.4105555111196992e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.6647354546129078e-7,
+     "rms_error_m": 7.279539081214092e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000010812685220026219,
+     "rms_error_m": 3.8651281226022204e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7114161544910088e-7,
+     "rms_error_m": 6.686689340154761e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.8855412205902035e-7,
+     "rms_error_m": 2.808313965960457e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.4534151605113854e-7,
+     "rms_error_m": 2.0699447575670256e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5356024218695813e-7,
+     "rms_error_m": 6.734198461515871e-8
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.7784168425303317e-7,
+     "rms_error_m": 2.528840385851301e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.433269689069088e-7,
+     "rms_error_m": 1.6242323761583267e-7
+    }
+   ]
+  },
+  {
+   "frame": 39,
+   "weight_max_abs_difference_vs_blender": 2.1113654211785127e-7,
+   "reference_block": "all/frame-39",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000011040835112166964,
+   "rms_error_m": 2.0499741241092457e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4529,
+    "error_m": 0.0000011040835112166964
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.3000341243625674e-7,
+     "rms_error_m": 5.148492265339689e-8
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.760998850024637e-7,
+     "rms_error_m": 1.6014772004027695e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.1807281219513717e-7,
+     "rms_error_m": 4.671075405679506e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000011040835112166964,
+     "rms_error_m": 3.602723510540666e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.667786317483812e-7,
+     "rms_error_m": 6.604372094419656e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.719725032907931e-7,
+     "rms_error_m": 2.1026452718868304e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.142148657934665e-7,
+     "rms_error_m": 2.623051482775663e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.527806923637055e-7,
+     "rms_error_m": 1.3640836550372156e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.4115405186383e-7,
+     "rms_error_m": 1.2841353702606986e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.6469752662965947e-7,
+     "rms_error_m": 1.7598288592143386e-7
+    }
+   ]
+  },
+  {
+   "frame": 42,
+   "weight_max_abs_difference_vs_blender": 1.577713252820523e-7,
+   "reference_block": "all/frame-42",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001151957607957569,
+   "rms_error_m": 2.422129502382222e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4521,
+    "error_m": 0.000001151957607957569
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.47700840447243e-7,
+     "rms_error_m": 4.1746836681141547e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.521847925890312e-7,
+     "rms_error_m": 2.379688428052321e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.0763530354597844e-7,
+     "rms_error_m": 3.798017806579425e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001151957607957569,
+     "rms_error_m": 3.6387228396043336e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0602920025285713e-7,
+     "rms_error_m": 8.602725768241966e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.554081491224182e-7,
+     "rms_error_m": 3.6417421551181e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.9307185163654897e-7,
+     "rms_error_m": 1.3846819265702816e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6718670602888325e-7,
+     "rms_error_m": 2.472459463394623e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.383024633529143e-7,
+     "rms_error_m": 2.1034421022158823e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.767404105568523e-7,
+     "rms_error_m": 1.618425392956743e-7
+    }
+   ]
+  },
+  {
+   "frame": 45,
+   "weight_max_abs_difference_vs_blender": 2.5574599327171654e-8,
+   "reference_block": "all/frame-45",
+   "vertices_measured": 33054,
+   "max_error_m": 0.000001301033212976745,
+   "rms_error_m": 3.330907449578484e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4528,
+    "error_m": 0.000001301033212976745
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 7.229428147062766e-7,
+     "rms_error_m": 5.997182798448884e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.015687523993226e-7,
+     "rms_error_m": 2.0713648075240034e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.3355386699526464e-7,
+     "rms_error_m": 5.550262882829328e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.000001301033212976745,
+     "rms_error_m": 4.393121194747582e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.9732746000801847e-7,
+     "rms_error_m": 8.116292437025875e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 8.385420933651715e-7,
+     "rms_error_m": 5.246134429398565e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.6435525688785084e-7,
+     "rms_error_m": 3.046012661519884e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.349360142071644e-7,
+     "rms_error_m": 4.093608784391423e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.302959276295403e-7,
+     "rms_error_m": 4.02503611836039e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.889104198187103e-7,
+     "rms_error_m": 3.7020585066210756e-7
+    }
+   ]
+  },
+  {
+   "frame": 48,
+   "weight_max_abs_difference_vs_blender": 1.4222411595307682e-7,
+   "reference_block": "all/frame-48",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000015969445974718721,
+   "rms_error_m": 3.0830478399390524e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000015969445974718721
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.595798458040013e-7,
+     "rms_error_m": 1.6773631648815898e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.101210517357767e-7,
+     "rms_error_m": 3.8380668624756316e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.645165272700916e-7,
+     "rms_error_m": 6.078940456114105e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000015969445974718721,
+     "rms_error_m": 5.111179442224427e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.3346334993358547e-7,
+     "rms_error_m": 2.1040463292578626e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.8654030580605907e-7,
+     "rms_error_m": 2.5264112771891167e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.405444422139171e-7,
+     "rms_error_m": 3.34872297257842e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0750365331939345e-7,
+     "rms_error_m": 1.2375231846887096e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.765476401928957e-7,
+     "rms_error_m": 2.4905507754096984e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.259468955187505e-7,
+     "rms_error_m": 2.3206763569835665e-7
+    }
+   ]
+  },
+  {
+   "frame": 51,
+   "weight_max_abs_difference_vs_blender": 2.3873579557687208e-8,
+   "reference_block": "all/frame-51",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000018557535742509249,
+   "rms_error_m": 2.9665585893211573e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000018557535742509249
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.2549855250416204e-7,
+     "rms_error_m": 2.0038402082108155e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.104395797529239e-7,
+     "rms_error_m": 2.1718265703125667e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4785965383142318e-7,
+     "rms_error_m": 6.270294747698066e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000018557535742509249,
+     "rms_error_m": 5.573729910574989e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.777468975000198e-7,
+     "rms_error_m": 7.337096672955853e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.535268697559382e-7,
+     "rms_error_m": 1.290013010612108e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.635745038761921e-7,
+     "rms_error_m": 2.3261528224880096e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.220776127163654e-7,
+     "rms_error_m": 1.2479954909044794e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5028567971464106e-7,
+     "rms_error_m": 6.08692294206733e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.2084411330637404e-7,
+     "rms_error_m": 2.5687408276913544e-7
+    }
+   ]
+  },
+  {
+   "frame": 54,
+   "weight_max_abs_difference_vs_blender": 2.8168222865332382e-8,
+   "reference_block": "all/frame-54",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000019596381513089814,
+   "rms_error_m": 3.3254112086337234e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000019596381513089814
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.9820969524567584e-7,
+     "rms_error_m": 1.6325125357975115e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.619443027414078e-7,
+     "rms_error_m": 2.603332960292951e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.2025396333956046e-7,
+     "rms_error_m": 4.908274115671707e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000019596381513089814,
+     "rms_error_m": 5.950054012396064e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.079794228513151e-7,
+     "rms_error_m": 8.815038956011875e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.200299518962438e-7,
+     "rms_error_m": 3.182190181974036e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.7639158483987655e-7,
+     "rms_error_m": 3.211137348805405e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.967558282159894e-7,
+     "rms_error_m": 2.843654105306614e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.859680193446653e-7,
+     "rms_error_m": 1.7038407286072385e-7
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.453967083236013e-7,
+     "rms_error_m": 2.534449770367548e-7
+    }
+   ]
+  },
+  {
+   "frame": 57,
+   "weight_max_abs_difference_vs_blender": 1.0916791054471631e-7,
+   "reference_block": "all/frame-57",
+   "vertices_measured": 33054,
+   "max_error_m": 0.00000188625414596765,
+   "rms_error_m": 3.066634624541942e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 162,
+    "error_m": 0.00000188625414596765
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.414997287771778e-7,
+     "rms_error_m": 1.4248640142923211e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.51089678726112e-7,
+     "rms_error_m": 1.4957170545142669e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.4130600729915577e-7,
+     "rms_error_m": 5.737684416509565e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.00000188625414596765,
+     "rms_error_m": 5.372932862089415e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.7472495928260815e-7,
+     "rms_error_m": 1.5932015208542822e-7
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 5.168528935892533e-7,
+     "rms_error_m": 3.2765015543941357e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 6.315858775603635e-7,
+     "rms_error_m": 3.1332672076483086e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.6155883464075286e-7,
+     "rms_error_m": 2.399365442752765e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.5935911294402214e-7,
+     "rms_error_m": 8.808206620504989e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 4.1659470718170014e-7,
+     "rms_error_m": 3.193688465483841e-7
+    }
+   ]
+  },
+  {
+   "frame": 60,
+   "weight_max_abs_difference_vs_blender": 2.7119800516395287e-8,
+   "reference_block": "all/frame-60",
+   "vertices_measured": 33054,
+   "max_error_m": 0.0000017188049051383127,
+   "rms_error_m": 2.670180238654751e-7,
+   "over_gate": 0,
+   "all_blender_vertices_covered": true,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 5067,
+    "error_m": 0.0000017188049051383127
+   },
+   "per_mesh": [
+    {
+     "mesh": "SM_RO_bracer.L",
+     "export_vertices": 1444,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.96994078420132e-7,
+     "rms_error_m": 1.0449559418969554e-7
+    },
+    {
+     "mesh": "SM_RO_bracer.R",
+     "export_vertices": 1560,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.0397516980738013e-7,
+     "rms_error_m": 1.2115126030678876e-7
+    },
+    {
+     "mesh": "SM_RO_coat",
+     "export_vertices": 6888,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7851914203641394e-7,
+     "rms_error_m": 6.451934609778487e-8
+    },
+    {
+     "mesh": "SM_RO_core",
+     "export_vertices": 8014,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 0.0000017188049051383127,
+     "rms_error_m": 4.960709563937786e-7
+    },
+    {
+     "mesh": "SM_RO_cuirass",
+     "export_vertices": 6221,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.667559139507701e-7,
+     "rms_error_m": 7.017575301471418e-8
+    },
+    {
+     "mesh": "SM_RO_hand.L",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 2.2399734652139846e-7,
+     "rms_error_m": 1.3281667908309408e-7
+    },
+    {
+     "mesh": "SM_RO_hand.R",
+     "export_vertices": 1106,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.3652706658696906e-7,
+     "rms_error_m": 1.7219393474262167e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.L",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.590405698063724e-7,
+     "rms_error_m": 2.381148080188135e-7
+    },
+    {
+     "mesh": "SM_RO_pauldron.R",
+     "export_vertices": 2611,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 1.7391326815677473e-7,
+     "rms_error_m": 8.694544560526333e-8
+    },
+    {
+     "mesh": "SM_RO_sword",
+     "export_vertices": 1493,
+     "all_blender_vertices_covered": true,
+     "max_error_m": 3.629064252158412e-7,
+     "rms_error_m": 2.1106794407756252e-7
+    }
+   ]
+  }
+ ],
+ "negative_controls": {
+  "NC1_evaluator_off": {
+   "frame": 45,
+   "motion": "AN_RO_Walk_Sword",
+   "level": null,
+   "detected": true,
+   "max_error_m": 0.0030015475556946624,
+   "over_gate": 395,
+   "worst": {
+    "mesh": "SM_RO_hand.R",
+    "blender_vertex": 203,
+    "error_m": 0.0030015475556946624
+   }
+  },
+  "NC2_stale_pose": {
+   "frame": 45,
+   "stale_pose_from_frame": 33,
+   "detected": true,
+   "max_error_m": 0.0005657304417529704,
+   "over_gate": 7,
+   "worst": {
+    "mesh": "SM_RO_core",
+    "blender_vertex": 4245,
+    "error_m": 0.0005657304417529704
+   }
+  },
+  "NC3_baked_clip_in_runtime_owner_mode": {
+   "detected": true,
+   "conflicting_channels": 71,
+   "conflicting_helper_bones": 2
+  },
+  "NC4_missing_bone": {
+   "detected": true,
+   "raised": true,
+   "message": "MISSING_BONE:spine_02_not_in_skeleton"
+  },
+  "NC5_missing_interaction_state": {
+   "detected": true,
+   "raised": true,
+   "message": "MISSING_STATE:grasp.L"
+  }
+ },
+ "images": [
+  {
+   "frame": 0,
+   "view": "whole",
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t110822z-frame-000-whole.png",
+    "bytes": 289297,
+    "sha256": "88ee3df03bb62a1ae34f39362d4398e8f8b4cec5b8bf6db0681efd078ac37c4b"
+   }
+  },
+  {
+   "frame": 0,
+   "view": "hands",
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t110822z-frame-000-hands.png",
+    "bytes": 1044824,
+    "sha256": "edb4f3d3dec07b95a762aa34f641baab586e4252c2e3953193bf8b37c878a6ba"
+   }
+  },
+  {
+   "frame": 30,
+   "view": "whole",
+   "image": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t110822z-frame-030-whole.png",
+    "bytes": 309897,
+    "sha256": "b002b46f09e00b4fdbb045c84f79f2a4bf99f7ad64acbe345d6b71471a5a985f"
+   }
+  }
+ ],
+ "measurement_ms": 3967
+}

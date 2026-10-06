@@ -1,0 +1,49 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-05T11:12:00Z",
+ "subject": "clip export dropped bone location keys (pelvis root motion)",
+ "defect": "scripts/cv1_export_clip.py rebuilt the working action from the clip's rotations only and keyed every bone's location with whatever value it last held, so the pelvis translation was constant in every exported GLB. The Blender reference was computed from the same working action, so the runtime closed loop and readback agreed with the flattened export and could not see the loss.",
+ "evidence_before": {
+  "AN_RO_Walk_Sword/a04/export-b18": "pelvis translation over 61 keys: height span 0.0 m, x span 0.0 m (authored bob 0.012 m, sway 0.02 m)",
+  "AN_RO_Run_Sword/a02/export-b18": "pelvis translation span 0.0 m / 0.0 m"
+ },
+ "affected_claims": [
+  "milestone-02.json: Walk a04 and Run a02 runtime closed loop 1.977 / 2.170 um and readback 1.436 / 1.778 um verified the flattened exports, not the authored clips; those export-b18 GLBs are superseded and not deliverable"
+ ],
+ "not_affected": [
+  "clip-set checks (they evaluate the authored action in Blender)",
+  "Idle a03 and Cast_OpenPalm a04 exports (no bone location motion; export content identical before and after the fix)"
+ ],
+ "fix": {
+  "script": "scripts/cv1_export_clip.py",
+  "sha256": "8c8651946f323579586fa05ea7ec126e65067a3e9a9d38ce1d37db1d3728e714",
+  "changes": [
+   "the working action copies rotation, location and scale of every bone from the clip",
+   "self-check: every non-helper bone matrix of the working action equals the clip on every integer frame (<= 1e-6), else EXPORT_ACTION_DIFFERS_FROM_CLIP",
+   "blend sample: quaternion slerp plus linear location/scale, as a mixer blends"
+  ],
+  "crash_on_first_try": "the first re-export stopped at the blend sample (old rotation-only access); the partial outputs (5 GLBs and restore/strip records per clip, no measurements) were removed and the export logs kept as *-crashed-blend-sample.log"
+ },
+ "reverified": {
+  "AN_RO_Walk_Sword a04 (label b18loc)": {
+   "glb_pelvis_span_m": {
+    "height": 0.0239,
+    "x": 0.0399
+   },
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t110822z-runtime-results.json: pass, max 2.035 um (blend 0.936 um), negative controls caught",
+   "readback": "pass, max 1.439 um over 21 baked frames"
+  },
+  "AN_RO_Run_Sword a02 (label b18loc)": {
+   "glb_pelvis_span_m": {
+    "height": 0.04,
+    "x": 0.03
+   },
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t110850z-runtime-results.json: pass, max 2.176 um (blend 1.245 um), negative controls caught",
+   "readback": "pass, max 1.653 um over 21 baked frames"
+  }
+ },
+ "deliverable_exports": {
+  "AN_RO_Walk_Sword": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b18loc",
+  "AN_RO_Run_Sword": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/export-b18loc"
+ }
+}

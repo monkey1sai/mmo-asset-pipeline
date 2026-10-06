@@ -1,0 +1,131 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08-closed-loop/blender-reference.json",
+  "bytes": 131782,
+  "sha256": "017bb96e2a8a64ebea8bb31a118dfd39a432c495fcabf86abac0f50a8cd53751"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08-closed-loop/blender-reference.f64.bin",
+  "bytes": 12756936,
+  "sha256": "5c7c09496c6f756f601290f542046b15137702cfdbd936cc8f8ec215310633ca"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+  "bytes": 39213,
+  "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08/export/an_ro_liedown_a08_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 28155924,
+   "sha256": "8fd2d584d8b2908a587295def5c3686cdbcb54c86b465473e7accd8316b56469"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08/export/an_ro_liedown_a08_baked_owner_exact_weights.glb",
+   "bytes": 3512944,
+   "sha256": "f18fc0261cf057450b05c62f373d71b422813e3d2eea17989741e11e400b52cf"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   0,
+   "hands"
+  ],
+  [
+   48,
+   "whole"
+  ]
+ ],
+ "note": "Clip closed loop for AN_RO_LieDown a08 (scripts/cv1_clip_pipeline.py). Exact-weight GLBs; helper channels and the sword channel stripped from the runtime-owner GLB.",
+ "sword_socket": {
+  "initial": "hand",
+  "bed_socket": {
+   "head_m": [
+    -0.4,
+    0.32,
+    0.469597
+   ],
+   "quaternion_wxyz": [
+    0.12278781086206436,
+    0.6963642835617065,
+    -0.6963642239570618,
+    0.12278781086206436
+   ]
+  },
+  "switches": [
+   {
+    "event": "put_sword_down",
+    "to": "bed",
+    "frame": 30
+   }
+  ],
+  "bed_socket_matrix_blender": [
+   [
+    4.219276306116626e-08,
+    -1.0,
+    1.4637447698362394e-08,
+    -0.4000000059604645
+   ],
+   [
+    -0.9396926760673523,
+    -1.238334164099797e-07,
+    -0.342020183801651,
+    0.3199999928474426
+   ],
+   [
+    0.342020183801651,
+    1.4637447698362394e-08,
+    -0.9396926760673523,
+    0.4695970118045807
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "sword_rest_matrix_blender": [
+   [
+    0.49852490425109863,
+    -0.6889796257019043,
+    -0.526098906993866,
+    -0.40739306807518005
+   ],
+   [
+    -0.8620485067367554,
+    -0.330059677362442,
+    -0.3846203088760376,
+    -0.08269989490509033
+   ],
+   [
+    0.09135154634714127,
+    0.6452657580375671,
+    -0.7584770917892456,
+    0.8911656737327576
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "blend_frames": [
+   0,
+   29
+  ],
+  "channel": "sword bone keyed in both GLBs at export; strip it from the runtime-owner GLB so the runtime places the sword from the socket events (mixer -> sockets -> helpers -> correctives)"
+ }
+}
