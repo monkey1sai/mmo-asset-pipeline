@@ -87,7 +87,7 @@ class Hyper3DApiTests(unittest.TestCase):
         self.state = Path(self.directory.name) / "private-state"
         self.state.mkdir()
         (self.root / "requests").mkdir()
-        (self.root / "requests/character.json").write_text(json.dumps({"quality": {"dimensions": ["form"]}}), encoding="utf-8")
+        (self.root / "requests/character.json").write_text(json.dumps({"id": "character-r01", "quality": {"dimensions": ["form"]}}), encoding="utf-8")
         (self.root / "assets/raw/design").mkdir(parents=True)
         (self.root / "assets/raw/design/pose.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
         self.provider = FakeProvider()
@@ -278,6 +278,37 @@ class Hyper3DApiTests(unittest.TestCase):
         self.spec["request"] = "requests\\character.json"
         with self.assertRaisesRegex(api.SafeError, r"\ARECORDED_PATH_INVALID\Z"):
             self.prepare()
+
+    def test_prepare_requires_ledger_derivable_request_identity(self):
+        # Q5：帳本由 plan → 需求檔推導 request_id；無法推導的需求不得產生付費操作。
+        path = self.root / self.spec["request"]
+        for value, code in (({"quality": {}}, "REQUEST_ID_INVALID"), ({"id": "Bad Id"}, "REQUEST_ID_INVALID"),
+                            ({"id": "rock-r01", "catalog_asset_id": "a..b"}, "CATALOG_ASSET_ID_INVALID")):
+            path.write_text(json.dumps(value), encoding="utf-8")
+            with self.subTest(value=value), self.assertRaisesRegex(api.SafeError, code):
+                self.prepare()
+        self.assertFalse((self.root / "runs/hyper3d/plans").exists())
+
+    def test_invalid_ledger_record_blocks_submit_before_any_charge(self):
+        self.prepare()
+        (self.root / "runs/hyper3d/operations").mkdir(parents=True, exist_ok=True)
+        (self.root / "runs/hyper3d/operations/garbled.json").write_text("{", encoding="utf-8")
+        with self.assertRaisesRegex(api.SafeError, "UNRESOLVED_OPERATION_NEVER_RESUBMIT"):
+            self.submit()
+        self.assertEqual(self.provider.calls, [])
+        self.assertEqual(list(self.state.iterdir()), [])
+
+    def test_legacy_import_records_are_read_only(self):
+        operations = self.root / "runs/hyper3d/operations"
+        operations.mkdir(parents=True)
+        (operations / "bootstrap-old.json").write_text(json.dumps({
+            "schema_version": 1, "source": "legacy_import", "operation_id": "bootstrap-old", "state": "complete",
+            "request_id": None, "catalog_asset_id": "cl-brazier", "task_uuid": None, "consumed_credits": None,
+            "evidence": [{"path": "requests/character.json", "sha256": "0" * 64}], "imported_utc": "x", "note": "x"}), encoding="utf-8")
+        for command in (self.client.status, self.client.download):
+            with self.subTest(command=command.__name__), self.assertRaisesRegex(api.SafeError, "LEGACY_IMPORT_READ_ONLY"):
+                command("bootstrap-old")
+        self.assertEqual(self.provider.calls, [])
 
     def test_legacy_hash_aliases_match_identity(self):
         # codex/art-quality-loop 的 RO 腳本仍匯入 file_sha、sha、canonical。

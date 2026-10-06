@@ -10,6 +10,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import identity  # noqa: E402
+import ledger  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 TASKS = {"static_prop", "interactive_prop", "modular_environment", "rigged_character"}
@@ -141,6 +142,9 @@ def validate_request(request: dict) -> list[str]:
             errors.append("standalone scope must not claim a target environment")
         if delivery["scope"] == "target_environment" and (not isinstance(target, dict) or any(not text_value(target.get(key)) for key in ("name", "version", "verification_context"))):
             errors.append("target environment requires name, version and verification_context")
+    # 選填：連到 catalog 需求；是否存在於 catalog 由 pipeline.py validate 交叉核對。
+    if request.get("catalog_asset_id") is not None and not identity.is_asset_id(request["catalog_asset_id"]):
+        errors.append("invalid catalog_asset_id")
     source = request.get("provenance")
     if not isinstance(source, dict) or not isinstance(source.get("kind"), str) or source["kind"] not in {"user_brief", "project_source", "example"} or not text_value(source.get("reference")):
         errors.append("traceable provenance missing")
@@ -587,6 +591,15 @@ def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
     return result
 
 
+def ledger_view(request_id: str, root: Path = ROOT) -> dict:
+    """提交前查歷史操作：本需求已有的操作，以及目前阻擋規劃的操作。"""
+    entries = ledger.load(root)
+    blocking = entries.blocking()
+    return {"operations_for_request": [op.summary() for op in entries.for_request(request_id)],
+            "blocking": [op.summary() for op in blocking], "planning_blocked": bool(blocking),
+            "note": "帳本只讀；pending／unknown／無效紀錄須先核對原操作，不得另造 ID 重送"}
+
+
 def search_library(index: dict, query: str, project: str | None = None) -> list[dict]:
     if not isinstance(index, dict) or index.get("schema_version") != 1 or not isinstance(index.get("entries"), list):
         raise ValueError("invalid library index")
@@ -648,6 +661,7 @@ def main(argv: list[str] | None = None) -> int:
                 result = {"status": "valid_request", "request_id": request["id"], "request_sha256": identity.json_digest(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
             elif args.command == "plan":
                 result = production_plan(request)
+                result["ledger"] = ledger_view(request["id"])
             elif args.command == "compare":
                 result = compare_quality(request, identity.read_json(identity.command_path(ROOT, args.ledger)))
             else:

@@ -9,7 +9,7 @@ Hyper3D API 是美術工程師接到需求後的候選製作工具。委託者�
 3. 工程師撰寫單件／單部件 prompt，選取原創或已獲准上傳的參考圖。圖生 adapter 需要圖片時，由工程師準備或選用設計圖；準備工具若需付費，沿用該工具的具體授權，不能默認免費。文字生成只選當下確實提供文字接口的工具。
 4. 核對可見工具 schema 與非扣點連線，再將設計轉成該 backend 的參數。不能從歷史工具名稱推定本次可用，也不能把固定 30k 候選說成已符合 1,500 面交付需求；差距進入後製計畫。
 5. 沿用已有的具體預算／候選數／資料上傳授權。只有真正缺少授權才請委託者補上；「API 給美術工程師創作」指定工具用途，沒有自動設定無限花費。月訂限制依 AGENTS 與 production-runbook；API 總額不可當作月訂分項。網站可以補充額度證據，模型仍透過 API 提交。
-6. 在 `runs/` 保存唯一 operation ID、需求雜湊、輸入檔雜湊、工具／参数、費用與 Authorization Envelope，完成檢查後才將 `prepared` 送到 API。`plan` 的 null prompt／operation ID 必須先補齊，不能直接提交。查歷史 operation，禁止替 unknown／pending 另造 ID 重送。
+6. 在 `runs/` 保存唯一 operation ID、需求雜湊、輸入檔雜湊、工具／参数、費用與 Authorization Envelope，完成檢查後才將 `prepared` 送到 API。`plan` 的 null prompt／operation ID 必須先補齊，不能直接提交。查歷史 operation（`workbench.py plan` 輸出的 `ledger` 區塊列出本需求既有操作與阻擋規劃的操作），禁止替 unknown／pending 另造 ID 重送。
 7. 查同一任務，依工具要求退避輪詢。完成後下載到新的 `assets/raw/<id>/<version>/`，記錄任務 ID、實際扣點、檔案與 SHA-256；原 master 保留。
 8. 保存下載原始檔及來源雜湊，先建立完整 baseline；再由 Blender 技能修改、優化、綁骨與製作指定動畫。每輪使用固定視角／光照、功能檢查與逐維比較；未達標且有修訂預算才修訂當前最佳版本，必要驗收通過才進入交付審查。生成完成不是交付完成。
 
