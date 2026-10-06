@@ -3,17 +3,19 @@ from __future__ import annotations
 
 import argparse
 from copy import deepcopy
-import hashlib
 import json
 from pathlib import Path
 import re
 import sys
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import identity  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
-ID = re.compile(r"[a-z0-9][a-z0-9._-]*\Z")
 TASKS = {"static_prop", "interactive_prop", "modular_environment", "rigged_character"}
 ROUTES = {"review_existing", "reuse", "modify", "generate", "split_then_generate"}
 FORMATS = {"glb", "gltf", "fbx", "obj", "blend", "usd", "usdz"}
+QUALITY_CONTENT_FORMATS = FORMATS | {"bin", "mtl", "png", "jpg", "jpeg", "webp", "tga", "tif", "tiff", "exr", "hdr", "psd", "zip"}
 CHECKS = {
     "art_match": ("art", "造型、比例、風格與材質符合需求及參考"),
     "scale_pivot": ("technical", "實際尺寸、軸向與 pivot 符合規格"),
@@ -36,10 +38,6 @@ TASK_CHECKS = {
 }
 
 
-def safe_id(value: object) -> bool:
-    return isinstance(value, str) and bool(ID.fullmatch(value)) and ".." not in value
-
-
 def text_value(value: object) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
@@ -48,21 +46,22 @@ def positive_int(value: object) -> bool:
     return type(value) is int and value > 0
 
 
-def read_json(path: Path) -> dict:
+# 已棄用：codex/art-quality-loop 的 RO 腳本仍匯入下列名稱；遷移到 identity 後移除。
+def request_sha256(request: dict) -> str:
+    return identity.json_digest(request)
+
+
+def quality_sha256(request: dict) -> str:
+    return identity.json_digest(request["quality"])
+
+
+def read_json(path: Path) -> object:
+    # 保留舊的寬鬆行為（含頂層陣列）；新程式改用 identity.read_json。
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def local_path(value: str, root: Path = ROOT) -> Path:
-    root = root.resolve()
-    path = Path(value)
-    path = (root / path).resolve() if not path.is_absolute() else path.resolve()
-    if not path.is_relative_to(root):
-        raise ValueError("path must stay inside this repository")
-    return path
-
-
 def evidence_file(value: str, root: Path = ROOT) -> Path:
-    path = local_path(value, root)
+    path = identity.recorded_path(root, value)
     relative = path.relative_to(root.resolve())
     # 只讀素材及驗收儲存區；需求或參考不能使工具讀取憑證、Git 或全域設定。
     allowed = relative.parts[0:1] in {("assets",), ("deliveries",)} or relative.parts[0:2] in {
@@ -74,15 +73,11 @@ def evidence_file(value: str, root: Path = ROOT) -> Path:
     return path
 
 
-def request_sha256(request: dict) -> str:
-    return hashlib.sha256(json.dumps(request, sort_keys=True, ensure_ascii=False, allow_nan=False, separators=(",", ":")).encode()).hexdigest()
-
-
 def validate_request(request: dict) -> list[str]:
     if not isinstance(request, dict) or request.get("schema_version") != 1:
         return ["request schema_version must be 1"]
     errors: list[str] = []
-    if not safe_id(request.get("id")):
+    if not identity.is_asset_id(request.get("id")):
         errors.append("invalid request id")
     for key in ("title", "brief", "purpose"):
         if not text_value(request.get(key)):
@@ -91,7 +86,7 @@ def validate_request(request: dict) -> list[str]:
         errors.append("unknown task_type")
     if not isinstance(request.get("status"), str) or request["status"] not in {"draft", "specified"}:
         errors.append("status must be draft or specified")
-    if request.get("project") is not None and not safe_id(request["project"]):
+    if request.get("project") is not None and not identity.is_asset_id(request["project"]):
         errors.append("invalid optional project")
     style = request.get("style")
     if not isinstance(style, dict) or not text_value(style.get("description")):
@@ -122,7 +117,7 @@ def validate_request(request: dict) -> list[str]:
             errors.append("parts must be a list")
         else:
             for part in parts:
-                if not isinstance(part, dict) or not safe_id(part.get("id")) or part.get("id") in seen or not text_value(part.get("pivot")):
+                if not isinstance(part, dict) or not identity.is_asset_id(part.get("id")) or part.get("id") in seen or not text_value(part.get("pivot")):
                     errors.append("invalid or duplicate part")
                 else:
                     seen.add(part["id"])
@@ -152,11 +147,13 @@ def validate_request(request: dict) -> list[str]:
     production = request.get("production")
     if not isinstance(production, dict) or not isinstance(production.get("route"), str) or production["route"] not in ROUTES or not text_value(production.get("reason")):
         errors.append("invalid production route/reason")
-    elif type(production.get("max_revisions")) is not int or production["max_revisions"] < 0 or not isinstance(production.get("reuse_candidates"), list) or any(not safe_id(v) for v in production["reuse_candidates"]):
+    elif type(production.get("max_revisions")) is not int or production["max_revisions"] < 0 or not isinstance(production.get("reuse_candidates"), list) or any(not identity.is_asset_id(v) for v in production["reuse_candidates"]):
         errors.append("invalid revision budget or reuse candidates")
     for key in ("assumptions", "open_questions"):
         if not isinstance(request.get(key), list) or any(not text_value(v) for v in request[key]):
             errors.append(f"{key} must be a text list")
+    if "quality" in request:
+        errors.extend(validate_quality(request["quality"]))
     custom = request.get("additional_checks", [])
     reserved_ids = set(CHECKS) | {key for checks in TASK_CHECKS.values() for key in checks} | {"animation", "target_environment"}
     seen_checks = set()
@@ -164,10 +161,51 @@ def validate_request(request: dict) -> list[str]:
         errors.append("additional_checks must be a list")
     else:
         for check in custom:
-            if not isinstance(check, dict) or not safe_id(check.get("id")) or check["id"] in reserved_ids | seen_checks or not isinstance(check.get("area"), str) or check["area"] not in {"art", "technical", "delivery", "target_environment"} or not text_value(check.get("description")):
+            if not isinstance(check, dict) or not identity.is_asset_id(check.get("id")) or check["id"] in reserved_ids | seen_checks or not isinstance(check.get("area"), str) or check["area"] not in {"art", "technical", "delivery", "target_environment"} or not text_value(check.get("description")):
                 errors.append("invalid, duplicate or overriding additional check")
             else:
                 seen_checks.add(check["id"])
+    return errors
+
+
+def validate_quality(quality: object) -> list[str]:
+    """Optional frozen comparison contract; existing requests remain compatible."""
+    if not isinstance(quality, dict) or type(quality.get("schema_version")) is not int or quality["schema_version"] != 1:
+        return ["quality schema_version must be 1"]
+    errors = []
+    if not isinstance(quality.get("status"), str) or quality["status"] not in {"draft", "frozen"}:
+        errors.append("quality status must be draft or frozen")
+    protocol = quality.get("protocol")
+    if not isinstance(protocol, dict):
+        errors.append("quality protocol missing")
+    else:
+        views = protocol.get("views")
+        if not isinstance(views, list) or not views or any(not identity.is_asset_id(v) for v in views) or len(set(views)) != len(views):
+            errors.append("quality views must be unique IDs")
+        for key in ("lighting", "background", "framing", "tool_version", "inspection_context"):
+            if not text_value(protocol.get(key)):
+                errors.append(f"quality protocol {key} missing")
+    references = quality.get("reference_artifacts")
+    if not isinstance(references, list) or not references or any(not isinstance(v, dict) or not text_value(v.get("path")) or not isinstance(v.get("sha256"), str) or not re.fullmatch(r"[a-f0-9]{64}", v["sha256"]) for v in references):
+        errors.append("quality needs reference artifacts with SHA-256")
+    dimensions = quality.get("dimensions")
+    if not isinstance(dimensions, list) or not dimensions:
+        errors.append("quality dimensions missing")
+    else:
+        seen = set()
+        for dimension in dimensions:
+            if not isinstance(dimension, dict) or not identity.is_asset_id(dimension.get("id")) or dimension["id"] in seen:
+                errors.append("invalid or duplicate quality dimension")
+                continue
+            seen.add(dimension["id"])
+            if not text_value(dimension.get("criterion")) or type(dimension.get("target")) is not int or not 1 <= dimension["target"] <= 5:
+                errors.append("quality dimension needs criterion and target 1..5")
+            anchors = dimension.get("anchors")
+            if not isinstance(anchors, list) or len(anchors) != 6 or any(not text_value(v) for v in anchors) or len(set(anchors)) != 6:
+                errors.append("quality dimension needs six distinct anchors for 0..5")
+    budget = quality.get("budget")
+    if not isinstance(budget, dict) or not positive_int(budget.get("trial_seconds")) or not positive_int(budget.get("total_seconds")) or budget["total_seconds"] < budget["trial_seconds"]:
+        errors.append("quality needs finite positive trial/total seconds budgets")
     return errors
 
 
@@ -187,6 +225,8 @@ def required_checks(request: dict) -> list[dict]:
 
 def readiness(request: dict) -> list[str]:
     pending = list(request["open_questions"])
+    if "quality" in request and request["quality"].get("status") != "frozen":
+        pending.append("品質契約仍是 draft，需整理參考、評分錨點與實測條件後凍結")
     if request["status"] == "draft":
         pending.append("需求仍是 draft，需整理為 specified")
     if request["spec"].get("size_m") is None:
@@ -201,9 +241,9 @@ def readiness(request: dict) -> list[str]:
 
 
 def make_draft(aid: str, brief: str, task_type: str, profile: dict | None = None) -> dict:
-    if not safe_id(aid) or not text_value(brief) or task_type not in TASKS:
+    if not identity.is_asset_id(aid) or not text_value(brief) or task_type not in TASKS:
         raise ValueError("invalid intake id, brief or task_type")
-    if profile is not None and (not isinstance(profile, dict) or not safe_id(profile.get("id")) or not isinstance(profile.get("defaults"), dict) or not isinstance(profile.get("constraints"), list) or any(not text_value(v) for v in profile["constraints"])):
+    if profile is not None and (not isinstance(profile, dict) or not identity.is_asset_id(profile.get("id")) or not isinstance(profile.get("defaults"), dict) or not isinstance(profile.get("constraints"), list) or any(not text_value(v) for v in profile["constraints"])):
         raise ValueError("invalid project profile")
     defaults = (profile or {}).get("defaults", {})
     return {
@@ -278,7 +318,7 @@ def production_plan(request: dict) -> dict:
         "split_then_generate": "先制定各部件、pivot 與活動規格，再分別製作及組裝",
     }[route]
     result = {
-        "mode": "offline_plan_only", "request_id": request["id"], "request_sha256": request_sha256(request),
+        "mode": "offline_plan_only", "request_id": request["id"], "request_sha256": identity.json_digest(request),
         "project": request.get("project"), "route": route, "reason": request["production"]["reason"],
         "pending": readiness(request), "reuse_candidates": request["production"]["reuse_candidates"],
         "steps": ["理解需求與交付承諾", "制定設計、參考與可修訂預設", action,
@@ -291,6 +331,15 @@ def production_plan(request: dict) -> dict:
         result["creation_workflow"] = api_creation_plan(request)
         if route == "split_then_generate" and not request["spec"]["parts"]:
             result["pending"].append("拆件生成前需定義部件")
+    if "quality" in request:
+        result["quality_loop"] = {
+            "protocol_sha256": identity.json_digest(request["quality"]),
+            "max_candidate_trials": request["production"]["max_revisions"],
+            "budget": deepcopy(request["quality"]["budget"]),
+            "retention_rule": "no_dimension_regression_and_gain_or_required_gate_repair",
+            "delivery_rule": "all_dimension_targets_and_required_checks",
+            "automation": "offline_declarations_only",
+        }
     return result
 
 
@@ -299,19 +348,19 @@ def check_artifact(item: dict, root: Path) -> str | None:
         return "artifact requires path and SHA-256"
     try:
         path = evidence_file(item["path"], root)
-        if hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
+        if identity.file_digest(path) != item["sha256"]:
             return f"artifact hash mismatch: {item['path']}"
     except (OSError, ValueError) as exc:
         return str(exc)
     return None
 
 
-def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
+def _assess_contract(request: dict, evidence: dict, root: Path = ROOT) -> dict:
     checks = required_checks(request)
     if not isinstance(evidence, dict):
         raise ValueError("evidence must be an object")
     blockers = readiness(request)
-    digest = request_sha256(request)
+    digest = identity.json_digest(request)
     if evidence.get("request_id") != request["id"] or evidence.get("request_sha256") != digest:
         blockers.append("evidence does not match current request ID/specification hash")
     registered = evidence.get("checks", {})
@@ -357,10 +406,177 @@ def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
     }
 
 
+def compare_quality(request: dict, ledger: dict, root: Path = ROOT) -> dict:
+    """Recompute a bounded best-version history; never edit models or trust keep labels."""
+    errors = validate_request(request)
+    if errors or "quality" not in request:
+        raise ValueError("; ".join(errors or ["request has no quality contract"]))
+    quality = request["quality"]
+    digest = identity.json_digest(request)
+    protocol_digest = identity.json_digest(request["quality"])
+    if not isinstance(ledger, dict) or type(ledger.get("schema_version")) is not int or ledger["schema_version"] != 1:
+        raise ValueError("quality ledger schema_version must be 1")
+    blockers = readiness(request)
+    if ledger.get("request_id") != request["id"] or ledger.get("request_sha256") != digest or ledger.get("protocol_sha256") != protocol_digest:
+        blockers.append("quality ledger does not match current request/protocol hash")
+    for item in quality["reference_artifacts"]:
+        if error := check_artifact(item, root):
+            blockers.append(error)
+    trials = ledger.get("trials")
+    if not isinstance(trials, list):
+        raise ValueError("quality trials must be a list")
+    if not trials:
+        blockers.append("quality baseline not recorded")
+    budget = quality["budget"]
+    max_trials = request["production"]["max_revisions"]
+    best = None
+    results = []
+    seen = set()
+    elapsed = 0
+    terminal = False
+    dimensions = {d["id"]: d for d in quality["dimensions"]}
+    for index, trial in enumerate(trials):
+        if not isinstance(trial, dict) or not identity.is_asset_id(trial.get("id")) or trial["id"] in seen:
+            raise ValueError("invalid or duplicate quality trial ID")
+        seen.add(trial["id"])
+        issues = []
+        gate_failures = []
+        status = trial.get("status")
+        if not isinstance(status, str) or status not in {"completed", "failed", "blocked", "pending", "unknown"}:
+            raise ValueError("unknown quality trial status")
+        seconds = trial.get("elapsed_seconds")
+        if type(seconds) not in (int, float) or not 0 <= seconds < float("inf"):
+            raise ValueError("quality elapsed_seconds must be finite and nonnegative")
+        elapsed += seconds
+        if terminal:
+            issues.append("trial recorded after a required stop")
+        if index > max_trials or seconds > budget["trial_seconds"] or elapsed > budget["total_seconds"]:
+            issues.append("quality experiment budget exceeded")
+        expected_parent = best["id"] if best else None
+        if trial.get("parent_id") != expected_parent:
+            issues.append("trial parent must be the current best version")
+        if index and (not text_value(trial.get("hypothesis")) or not text_value(trial.get("change"))):
+            issues.append("candidate needs hypothesis and one scoped change")
+        if trial.get("protocol_sha256") != protocol_digest:
+            issues.append("trial comparison protocol changed")
+        if not text_value(trial.get("reviewer")):
+            issues.append("trial reviewer missing")
+        evidence = trial.get("evidence")
+        assessment = None
+        scores = trial.get("scores")
+        if status == "completed":
+            if not isinstance(evidence, dict):
+                issues.append("completed trial needs acceptance evidence")
+            else:
+                assessment = _assess_contract(request, evidence, root)
+                contents = [item for item in evidence.get("deliverables", []) if isinstance(item, dict) and text_value(item.get("path")) and Path(item["path"]).suffix.lower().lstrip(".") in QUALITY_CONTENT_FORMATS]
+                if not any(Path(v["path"]).suffix.lower().lstrip(".") in FORMATS for v in contents) or evidence.get("subject_artifacts") != contents:
+                    issues.append("trial evidence must bind subject_artifacts to model and dependency deliverables")
+                if evidence.get("request_id") != request["id"] or evidence.get("request_sha256") != digest:
+                    issues.append("trial evidence specification changed")
+                for item in evidence.get("deliverables", []):
+                    if error := check_artifact(item, root):
+                        issues.append(error)
+                for check in assessment["checks"]:
+                    record = evidence.get("checks", {}).get(check["id"], {})
+                    # Baseline may fail gates; all completed trials still need actual review evidence.
+                    if record.get("status") not in {"pass", "fail"} or not text_value(record.get("method")) or not isinstance(record.get("artifacts"), list) or not record["artifacts"]:
+                        issues.append(f"{check['id']}: completed trial needs reviewed evidence")
+                    else:
+                        issues.extend(error for item in record["artifacts"] if (error := check_artifact(item, root)))
+                    if check["area"] != "art" and record.get("status") == "fail":
+                        gate_failures.append(check["id"])
+                gate_failures.extend(issue for issue in assessment["blockers"] if issue.startswith("missing requested format:") or issue == "no delivery files registered")
+            previews = trial.get("previews")
+            if not isinstance(previews, dict) or set(previews) != set(quality["protocol"]["views"]):
+                issues.append("trial must supply every fixed comparison view")
+            else:
+                for item in previews.values():
+                    if not isinstance(item, dict) or not text_value(item.get("path")) or Path(item["path"]).suffix.lower() not in {".png", ".jpg", ".jpeg", ".webp"}:
+                        issues.append("comparison previews must be image artifacts")
+                    elif error := check_artifact(item, root):
+                        issues.append(error)
+            if not isinstance(scores, dict) or set(scores) != set(dimensions):
+                issues.append("trial scores must cover every quality dimension")
+            else:
+                for score in scores.values():
+                    if not isinstance(score, dict) or type(score.get("value")) is not int or not 0 <= score["value"] <= 5 or not text_value(score.get("reason")):
+                        issues.append("quality scores need integer 0..5 and an observed reason")
+        else:
+            if not text_value(trial.get("failure_reason")):
+                issues.append("unfinished trial needs failure_reason")
+            if index == 0 or status in {"blocked", "pending", "unknown"}:
+                issues.append("baseline unavailable or operation unresolved; stop")
+                terminal = True
+        if issues:
+            decision = "blocked"
+            blockers.extend(f"{trial['id']}: {issue}" for issue in issues)
+            terminal = True
+        elif status == "failed":
+            decision = "failed"
+        elif best is None:
+            best = trial
+            decision = "baseline"
+        elif gate_failures:
+            decision = "discard"
+        else:
+            differences = [scores[key]["value"] - best["scores"][key]["value"] for key in dimensions]
+            previous = _assess_contract(request, best["evidence"], root)
+            repaired_gate = any(c["area"] != "art" and c["declared_status"] == "fail" for c in previous["checks"]) or any(issue.startswith("missing requested format:") for issue in previous["blockers"])
+            if min(differences) >= 0 and max(differences) > 0:
+                best = trial
+                decision = "keep_for_iteration"
+            elif min(differences) >= 0 and repaired_gate:
+                best = trial
+                decision = "keep_for_gate_repair"
+            else:
+                decision = "discard"
+        results.append({"id": trial["id"], "decision": decision, "issues": issues, "failed_gates": gate_failures})
+    target_met = bool(best) and not blockers and all(best["scores"][key]["value"] >= dimension["target"] for key, dimension in dimensions.items())
+    if target_met:
+        target_met = not _assess_contract(request, best["evidence"], root)["blockers"]
+    exhausted = bool(trials) and (len(trials) - 1 >= max_trials or elapsed >= budget["total_seconds"])
+    return {
+        "mode": "declared_quality_comparison_only", "request_id": request["id"],
+        "request_sha256": digest, "protocol_sha256": protocol_digest,
+        "trials": results, "blockers": blockers,
+        "best_trial_id": best["id"] if best else None,
+        "best_content_artifacts": best["evidence"]["subject_artifacts"] if best else [],
+        "quality_target_met": target_met, "elapsed_seconds": elapsed,
+        "candidate_trials_used": max(0, len(trials) - 1),
+        "next_action": "stop_blocked" if blockers else "delivery_review" if target_met else "stop_budget" if exhausted else "revise_current_best",
+        "note": "雜湊與比較規則已核對；分數、實測及固定視角內容仍為檢查者申報，不自動證明頂尖美術或已交付。",
+    }
+
+
+def assess(request: dict, evidence: dict, root: Path = ROOT) -> dict:
+    result = _assess_contract(request, evidence, root)
+    if "quality" in request:
+        item = evidence.get("quality_ledger")
+        error = check_artifact(item, root)
+        if error:
+            result["blockers"].append(f"quality ledger: {error}")
+        elif Path(item["path"]).suffix.lower() != ".json":
+            result["blockers"].append("quality ledger must be a JSON artifact")
+        else:
+            comparison = compare_quality(request, identity.read_json(evidence_file(item["path"], root)), root)
+            result["quality_comparison"] = comparison
+            result["blockers"].extend(comparison["blockers"])
+            if not comparison["quality_target_met"]:
+                result["blockers"].append("quality targets or required best-version checks not satisfied")
+            delivered_contents = [v for v in evidence.get("deliverables", []) if isinstance(v, dict) and text_value(v.get("path")) and Path(v["path"]).suffix.lower().lstrip(".") in QUALITY_CONTENT_FORMATS]
+            # A package may copy identical bytes, but changed exports/textures need re-evaluation.
+            signature = lambda items: sorted((Path(v["path"]).suffix.lower(), str(v.get("sha256", ""))) for v in items)
+            if signature(delivered_contents) != signature(comparison["best_content_artifacts"]):
+                result["blockers"].append("delivery model/dependencies do not match the evaluated best version")
+        result["decision"] = "not_ready" if result["blockers"] else "eligible_for_delivery_review"
+    return result
+
+
 def search_library(index: dict, query: str, project: str | None = None) -> list[dict]:
     if not isinstance(index, dict) or index.get("schema_version") != 1 or not isinstance(index.get("entries"), list):
         raise ValueError("invalid library index")
-    if project is not None and not safe_id(project):
+    if project is not None and not identity.is_asset_id(project):
         raise ValueError("invalid project filter")
     words = query.casefold().split()
     matches = []
@@ -379,11 +595,14 @@ def main(argv: list[str] | None = None) -> int:
     intake.add_argument("--brief", required=True)
     intake.add_argument("--type", choices=sorted(TASKS), default="static_prop")
     intake.add_argument("--profile")
-    for name in ("validate", "plan", "assess"):
+    intake.add_argument("--quality", action="store_true", help="附上待整理的固定品質契約草稿")
+    for name in ("validate", "plan", "assess", "compare"):
         command = commands.add_parser(name)
         command.add_argument("request")
         if name == "assess":
             command.add_argument("--evidence", required=True)
+        if name == "compare":
+            command.add_argument("--ledger", required=True)
     search = commands.add_parser("search")
     search.add_argument("query")
     search.add_argument("--project")
@@ -392,29 +611,33 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "intake":
             profile = None
             if args.profile:
-                if not safe_id(args.profile):
+                if not identity.is_asset_id(args.profile):
                     raise ValueError("invalid profile id")
-                profile_path = local_path(f"projects/{args.profile}.json")
-                if not profile_path.is_relative_to(local_path("projects")):
+                profile_path = identity.command_path(ROOT, f"projects/{args.profile}.json")
+                if not profile_path.is_relative_to(identity.command_path(ROOT, "projects")):
                     raise ValueError("profile must stay in projects directory")
-                profile = read_json(profile_path)
+                profile = identity.read_json(profile_path)
                 if not isinstance(profile, dict) or profile.get("schema_version") != 1 or profile.get("id") != args.profile:
                     raise ValueError("profile identity mismatch")
             # 只輸出草稿，協調者以一般檔案工具保存；不默默改寫現有需求。
             result = make_draft(args.id, args.brief, args.type, profile)
+            if args.quality:
+                result["quality"] = identity.read_json(identity.command_path(ROOT, "templates/quality-contract.json"))
         elif args.command == "search":
-            result = {"mode": "metadata_search_only", "matches": search_library(read_json(local_path("library/index.json")), args.query, args.project)}
+            result = {"mode": "metadata_search_only", "matches": search_library(identity.read_json(identity.command_path(ROOT, "library/index.json")), args.query, args.project)}
         else:
-            request = read_json(local_path(args.request))
+            request = identity.read_json(identity.command_path(ROOT, args.request))
             errors = validate_request(request)
             if errors:
                 raise ValueError("; ".join(errors))
             if args.command == "validate":
-                result = {"status": "valid_request", "request_id": request["id"], "request_sha256": request_sha256(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
+                result = {"status": "valid_request", "request_id": request["id"], "request_sha256": identity.json_digest(request), "pending": readiness(request), "note": "結構有效不表示已核准製作或驗收通過"}
             elif args.command == "plan":
                 result = production_plan(request)
+            elif args.command == "compare":
+                result = compare_quality(request, identity.read_json(identity.command_path(ROOT, args.ledger)))
             else:
-                result = assess(request, read_json(local_path(args.evidence)))
+                result = assess(request, identity.read_json(identity.command_path(ROOT, args.evidence)))
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except (ValueError, OSError, KeyError, TypeError, IndexError) as exc:

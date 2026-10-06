@@ -9,6 +9,7 @@
 - 保存自然語言原文為需求草稿，整理規格、來源、預設、待確認項目與交付範圍。
 - 搜尋素材庫，制定重用／修改／生成／拆件計畫；依資產類型產生必要驗收項目。
 - 核對證據是否對應目前需求及檔案雜湊，列出未驗或失敗項目；輸出待交付審查結果。
+- 固定品質標竿與評估條件，從基準開始比較有界修訂；不允許其他高分抵銷任一維度退步，交付核對已評估版本及全部品質目標。
 - 保留既有 39 筆模型候選需求、月訂規劃、操作紀錄與局部 GLB 結構清點。
 
 這些工具不連網、不呼叫生成或 Blender、不花點數。`intake` 不會自動解讀出完整尺寸與功能；`assess` 檢查申報證據的完整性，不代替外觀判斷、幾何實測或引擎實測。
@@ -24,7 +25,7 @@
 換電腦時先備妥 Git、Git LFS 與 Python，clone 本 repo 後在根目錄執行 `git lfs pull`，取得大型資產的實際內容；只有 LFS 指標時，模型還不能使用。Repo 內的 `.agents/skills/art-engineer/`、需求、素材庫、工具與資產一起搬移，不需把 skill 複製到全域個人目錄。啟用支援 repo skills 的代理後使用 `$art-engineer`；新機的製作工具、憑證及客戶來源位置仍需各自核對。
 
 ```powershell
-python -B scripts/workbench.py intake --id wood-gate --brief "木製城門，兩扇門可開關" --type interactive_prop
+python -B scripts/workbench.py intake --id wood-gate --brief "木製城門，兩扇門可開關" --type interactive_prop --quality
 python -B scripts/workbench.py search "火盆"
 python -B scripts/workbench.py validate requests/examples/standalone-stone.json
 python -B scripts/workbench.py plan requests/examples/openable-gate.json
@@ -37,6 +38,8 @@ python -B -m unittest discover -s tests -v
 `intake` 只輸出 JSON 草稿，由協調者保存及補齊。`--profile evoloot` 等參數選用客戶設定；增加客戶只需建立規格檔，不修改核心專案枚舉。`requests/examples/` 是流程範例，不是待扣點工作。
 
 ## 檔案位置
+
+美術工程師的新製作／品質修訂採 [品質實驗流程](docs/art-quality-loop.md)，將 autoresearch 的固定評估、baseline、假設、比較與保留紀錄導入模型製作。以 [品質契約](templates/quality-contract.json) 補入需求 `quality`，保存 [實驗紀錄](templates/quality-ledger.json)，再用 `workbench.py compare <request> --ledger <ledger>` 重算結果。工具核對申報證據與規則，不渲染、不評分、不修改模型；美術品質仍須看實際資產。既有未帶 `quality` 的需求保持相容。
 
 | 位置 | 用途 |
 | --- | --- |

@@ -1,0 +1,19 @@
+{
+  "operation_id": "pipeline-smoke-20261005-r01",
+  "request": "requests/pipeline-smoke-20261005.json",
+  "images": [],
+  "output_directory": "assets/raw/pipeline-smoke-20261005/v001",
+  "parameters": {
+    "tier": "Gen-2.5-Low",
+    "mesh_mode": "Raw",
+    "quality_override": 1500,
+    "geometry_file_format": "glb",
+    "material": "PBR",
+    "prompt": "A single stylized low-poly gray rock, isolated object, flat stable base so it can stand on its own, clean readable silhouette, neutral gray stone material, no ground plane, no text, no logo, no characters, no scene."
+  },
+  "authorization": {
+    "spending_scope": "使用者 2026-10-05 於對話明確授權：以既有月訂或普通點數提交一筆管線驗收生成，上限 0.5 點；不加購、不升級",
+    "credit_pool": "existing_monthly_or_regular",
+    "no_topup_or_upgrade": true
+  }
+}

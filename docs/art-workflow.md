@@ -8,7 +8,10 @@ flowchart LR
   B --> C[查素材庫與需求差距]
   C --> D[重用／修改／生成／拆件]
   D --> E[必要後製]
-  E --> F[美術與技術驗收]
+  E --> J[固定評估與基準比較]
+  J -->|有證據的改進且未達標| E
+  J -->|達品質目標| F[美術與技術驗收]
+  E -->|既有未帶品質契約| F
   F --> G[需求指定的環境實測]
   F --> H[獨立資產交付]
   G --> H
@@ -28,6 +31,7 @@ flowchart LR
 | `style` | 風格、參考、必須／禁止元素 |
 | `spec` | 尺寸、公尺／軸向、面數、貼圖、部件 pivot／動作、骨架與動畫 |
 | `production` | 路徑、理由、重用候選及修訂上限 |
+| 選用 `quality` | 固定標竿、評分錨點、比較條件與時間上限；新製作／品質修訂由美術工程師補齊 |
 | `delivery` | 指定格式、standalone 或明確環境的版本與實測情境 |
 | `additional_checks` | 需求指定 LOD、穿插、掛點等額外檢查，不能覆寫基本檢查 |
 | `assumptions`／`open_questions` | 可修訂預設與真正需要補齊的缺項 |
@@ -38,7 +42,9 @@ flowchart LR
 
 ## 製作選擇與工具
 
-先搜 `library/index.json` 並查看實際檔案、版本、QA 和未解問題。搜尋是文字 metadata 比對，不是自動形狀相似度。相符就重用；小差距修改衍生版本；主要輪廓不符才重估生成；可互動或組合資產先拆件。修訂上限是規劃欄位，目前不會自動計算已用次數或強制執行。
+先搜 `library/index.json` 並查看實際檔案、版本、QA 和未解問題。搜尋是文字 metadata 比對，不是自動形狀相似度。相符就重用；小差距修改衍生版本；主要輪廓不符才重估生成；可互動或組合資產先拆件。有 `quality` 的需求，`compare` 從紀錄核對修訂次數與時間；沒有品質紀錄的舊需求仍只保存修訂上限。工具不控制 DCC 或付費提交，不能把事後核對宣稱為執行時強制停止。
+
+新製作及品質修訂採 [品質實驗流程](art-quality-loop.md)：凍結用途與標竿、建立 baseline、每輪一個假設、同條件比較、保留有證據的改進。各項目標與適用功能／技術門檻分開；任何品質維度退步都不能靠其他高分抵銷。需求的 `quality` 仍是選用擴充，以保持舊需求相容；美術工程師處理新品質任務時負責補齊。
 
 `tools/capabilities.json` 是能力登記，不是插件執行器或授權。核心計畫描述「候選生成、模型編輯、格式輸出」，協調者才選目前可用工具。Hyper3D 操作及月訂範圍依 [製作流程](production-runbook.md)；Blender 等未驗能力保持未驗，不宣稱一鍵產製。
 
@@ -57,7 +63,7 @@ flowchart LR
 
 每件都有造型符合度、尺寸／pivot、幾何／指定材質、交付完整性。LOD 及其他要求明確放入 additional_checks；`target_environment` 需 name、version、verification_context 及該環境證據。
 
-`plan` 回傳 `request_sha256`，以排序鍵、UTF-8、無多餘空白的 JSON 計算規格雜湊；需求改變後舊證據不再相符。證據格式參考 `templates/acceptance-evidence.json`：填入實際 request ID／雜湊；每項 `pass` 必須記方法及至少一份存在的檔案／SHA-256；未做是 `not_run`，失敗是 `fail`。輸出格式必須有相符交付檔。
+`plan` 回傳 `request_sha256`（Request digest，見 [CONTEXT.md](../CONTEXT.md)），以排序鍵、UTF-8、無多餘空白的 JSON 計算規格雜湊；需求改變後舊證據不再相符。需求、證據與 ledger JSON 不得有重複鍵或 NaN／Infinity；證據內 `path` 須為 repo 相對 POSIX 路徑（不接受絕對路徑或反斜線），重新 clone 後才能核對。證據格式參考 `templates/acceptance-evidence.json`：填入實際 request ID／雜湊；每項 `pass` 必須記方法及至少一份存在的檔案／SHA-256；未做是 `not_run`，失敗是 `fail`。輸出格式必須有相符交付檔。
 
 ```powershell
 python -B scripts/workbench.py plan requests/examples/standalone-stone.json
@@ -69,6 +75,8 @@ python -B scripts/workbench.py assess requests/examples/standalone-stone.json --
 證據內容仍由實際檢查者負責；SHA-256 只能證明內容一致，不能證明造型正確、物理尺寸或效能。工具只讀 repo 內的 assets、deliveries、runs/qa、runs/evidence 檔案，拒絕跳出 repo 及設定／憑證區。它不自動解析 glTF／OBJ 依賴圖；依賴需在交付列表登記並實際驗證引用。
 
 ## 交付與工程師資產
+
+有 `quality` 的需求在交付證據附 `quality_ledger: {path, sha256}`。`assess` 會重算最佳版本，核對全部維度目標、原有適用驗收，以及交付模型／已登記相依素材的內容一致性。缺少紀錄、未達標、預算違反或交付內容不同都維持 `not_ready`；仍須實際美術與交付審查。
 
 按 `deliveries/README.md` 保存交付包與 manifest，實際審查後才在素材庫登記 `delivered` 及完成範圍。獨立資產可以完成交付，同時保持目標環境 `not_requested`；如後續要求 Unity，另開目標版本任務並驗證。
 

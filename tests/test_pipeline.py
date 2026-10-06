@@ -1,6 +1,8 @@
+import contextlib
 from copy import deepcopy
 from decimal import Decimal
 import importlib.util
+import io
 import json
 from pathlib import Path
 import struct
@@ -172,8 +174,9 @@ class GlbTests(unittest.TestCase):
         self.assertTrue(report["warnings"])
 
     def test_outside_workspace_rejected(self):
-        with self.assertRaises(ValueError):
-            pipeline.workspace_path("../outside.glb")
+        with contextlib.redirect_stderr(io.StringIO()) as error:
+            self.assertEqual(pipeline.main(["inspect", "../outside.glb"]), 2)
+        self.assertIn("PATH_OUTSIDE_WORKSPACE", error.getvalue())
 
 
 if __name__ == "__main__":

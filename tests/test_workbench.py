@@ -1,7 +1,5 @@
-from copy import deepcopy
 import hashlib
 import importlib.util
-import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -10,6 +8,7 @@ REPO = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("workbench", REPO / "scripts" / "workbench.py")
 workbench = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(workbench)
+identity = workbench.identity
 
 
 def specified(task_type="static_prop"):
@@ -66,7 +65,7 @@ class RequestTests(unittest.TestCase):
                 workbench.search_library(index, "rock")
 
     def test_profile_does_not_force_target_environment(self):
-        profile = workbench.read_json(REPO / "projects" / "changshan-longdan.json")
+        profile = identity.read_json(REPO / "projects" / "changshan-longdan.json")
         request = workbench.make_draft("gate", "城門", "interactive_prop", profile)
         self.assertEqual(request["project"], profile["id"])
         self.assertEqual(request["delivery"]["scope"], "standalone")
@@ -81,7 +80,7 @@ class RequestTests(unittest.TestCase):
         self.assertTrue(workbench.validate_request(request))
 
     def test_interactive_template_includes_parts_and_motion(self):
-        request = workbench.read_json(REPO / "requests" / "examples" / "openable-gate.json")
+        request = identity.read_json(REPO / "requests" / "examples" / "openable-gate.json")
         self.assertEqual(workbench.validate_request(request), [])
         self.assertEqual(workbench.production_plan(request)["pending"], [])
         self.assertTrue({"separate_parts", "articulation", "clearance"} <= {c["id"] for c in workbench.required_checks(request)})
@@ -117,12 +116,28 @@ class RequestTests(unittest.TestCase):
         self.assertTrue(workbench.validate_request(request))
 
     def test_library_reports_revision_gaps(self):
-        index = workbench.read_json(REPO / "library" / "index.json")
+        index = identity.read_json(REPO / "library" / "index.json")
         matches = workbench.search_library(index, "火盆")
         self.assertEqual(len(matches), 1)
         self.assertEqual(matches[0]["status"], "needs_revision")
         self.assertEqual(matches[0]["acceptance"]["delivery"], "not_delivered")
         self.assertEqual(workbench.search_library(index, "sword", "changshan-longdan"), [])
+
+
+class DeprecatedAliasTests(unittest.TestCase):
+    """codex/art-quality-loop 的 RO 腳本仍匯入這些名稱；遷移完成前不得移除。"""
+
+    def test_digest_aliases_match_identity(self):
+        request = specified()
+        request["quality"] = {"schema_version": 1, "status": "draft"}
+        self.assertEqual(workbench.request_sha256(request), identity.json_digest(request))
+        self.assertEqual(workbench.quality_sha256(request), identity.json_digest(request["quality"]))
+
+    def test_read_json_alias_keeps_legacy_leniency(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "events.json"
+            path.write_text('[{"a": 1}]', encoding="utf-8-sig")
+            self.assertEqual(workbench.read_json(path), [{"a": 1}])
 
 
 class EvidenceTests(unittest.TestCase):
@@ -152,7 +167,7 @@ class EvidenceTests(unittest.TestCase):
 
     def evidence(self, request):
         report = self.artifact("runs/qa/report.md")
-        return {"request_id": request["id"], "request_sha256": workbench.request_sha256(request),
+        return {"request_id": request["id"], "request_sha256": identity.json_digest(request),
                 "checks": {c["id"]: {"status": "pass", "method": "unit fixture declaration", "artifacts": [report]} for c in workbench.required_checks(request)},
                 "deliverables": [self.artifact("assets/processed/rock.glb")]}
 
@@ -193,7 +208,7 @@ class EvidenceTests(unittest.TestCase):
         request = specified()
         evidence = self.evidence(request)
         request["delivery"] = {"scope": "target_environment", "formats": ["glb"], "target_environment": {"name": "Unity", "version": "unit version", "verification_context": "unit scene"}}
-        evidence["request_sha256"] = workbench.request_sha256(request)
+        evidence["request_sha256"] = identity.json_digest(request)
         self.assertIn("target_environment: not_run", workbench.assess(request, evidence, self.root)["blockers"])
 
     def test_character_cannot_skip_rig_evidence(self):
@@ -206,6 +221,12 @@ class EvidenceTests(unittest.TestCase):
         for path in ("../outside.glb", ".git/config", "requests/secret.json", "assets/.env"):
             item = {"path": path, "sha256": "a" * 64}
             self.assertIsNotNone(workbench.check_artifact(item, self.root))
+
+    def test_absolute_or_backslash_artifact_paths_are_not_portable(self):
+        # 重新 clone 後仍要能核對，證據內路徑只能是 repo 相對 POSIX。
+        for path in (str(self.root / "runs/qa/report.md"), "runs\\qa\\report.md"):
+            item = {"path": path, "sha256": self.artifact("runs/qa/report.md")["sha256"]}
+            self.assertEqual(workbench.check_artifact(item, self.root), "RECORDED_PATH_INVALID")
 
     def test_missing_requested_format_is_blocked(self):
         request = specified()

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "purpose": "驗證 Workspace identity 重構後的 Hyper3D 付費路徑端到端（prepare → submit → status → download）",
+  "authorization": {
+    "source": "使用者 2026-10-05 於對話明確授權付費 API；選定新建管線驗收需求、existing_monthly_or_regular、上限 0.5 點",
+    "envelope": {
+      "destination": "https://api.hyper3d.com/api/v2/rodin（經釘選 provider）",
+      "allowed_operations": ["一次 /rodin 提交", "同任務 /status", "完成結果 /download 至 assets/raw/pipeline-smoke-20261005/v001"],
+      "data_transmitted": ["prompt 文字", "已驗證生成參數"],
+      "forbidden_operations": ["加購", "升級", "第二筆生成", "pending／unknown 重送", "push 或發布"],
+      "stop_conditions": ["unknown／failed 提交", "consumed 超過 0.5", "非預期目的地", "檔案衝突"]
+    }
+  },
+  "request": {"path": "requests/pipeline-smoke-20261005.json", "request_sha256": "0c663d57f36c27732db2468da03d7d3ec7e042d5adaf1d41862c449e5ad885d9"},
+  "operation": {
+    "operation_id": "pipeline-smoke-20261005-r01",
+    "plan_schema_version": 2,
+    "plan_request_sha256_equals_workbench_plan": true,
+    "task_uuid": "62a218eb-4c3c-40af-9122-5f91f584f8dd",
+    "state": "downloaded",
+    "estimated_credits": 0.5,
+    "consumed_credits": 0.5,
+    "cost_state": "service_reported",
+    "balance_observed": {"before_submit": 224.5, "after_download": 224, "note": "餘額差可能含其他任務；成本以服務回報 consumed 為準；provider 未回傳月訂／普通分項"}
+  },
+  "downloads": [{"path": "assets/raw/pipeline-smoke-20261005/v001/base_basic_pbr.glb", "bytes": 362084, "sha256": "cf0e1b43a94b3ff92625297c3a78fdc810b010300e1b9349dfcc88d898e4a7ef"}],
+  "checks": {
+    "provider_pin_and_auth": "pass：capabilities／balance 以 identity.file_digest 核對釘選 SHA 並認證，charged=false",
+    "request_digest_join": "pass：plan.request.request_sha256 與 workbench plan 的 request_sha256 相同",
+    "download_hash": "pass：identity.file_digest 重算與下載紀錄相同",
+    "structural_inventory": "inventory.json：1 mesh、1408 三角形、1 材質、3 張內嵌貼圖、無外部依賴；僅結構清點",
+    "secret_scan": "pass：runs/hyper3d 與本目錄無 subscription key、signed URL 或 token"
+  },
+  "status": {"generated": true, "downloaded": true, "technical_checked": false, "art_accepted": false, "delivered": false},
+  "not_verified": ["視覺品質與造型", "尺寸與 pivot", "可站立底面", "拓樸與 UV", "DCC／引擎匯入"]
+}

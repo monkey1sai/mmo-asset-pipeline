@@ -1,0 +1,87 @@
+{
+  "entry": "C:\\Repos\\mmo-asset-pipeline\\scripts\\hyper3d_api.py",
+  "status": "real_generation_status_recovery_download_verified_art_unaccepted",
+  "verified": {
+    "entry_collision_before_creation": false,
+    "root_entry_balance": {
+      "authenticated": true,
+      "balance": 228.5,
+      "observed_utc": "2026-10-02T15:37:23.915663+00:00",
+      "charged": false,
+      "pool_breakdown": "not_returned"
+    },
+    "new_api_fault_tests": 22,
+    "isolated_full_test_suite": {"tests": 115, "elapsed_seconds": 1.853, "exit_code": 0},
+    "independent_review": {
+      "status": "focused_revision_verified_no_remaining_blocking_finding_in_reviewed_scope",
+      "fixed_finding": "P1: known task UUID lost when consumed was missing or private state save failed",
+      "reviewer_observed": [
+        "Missing consumed preserves public UUID, recoverable private status state, and null/unverified cost through complete.",
+        "Private save failure preserves public UUID, reported0.5 cost and failure_stage; unknown blocks changed operation/seed resubmission.",
+        "Each synthetic fault path makes exactly one /rodin call and public records contain no test secret.",
+        "Root and isolated entry/test/document hashes match."
+      ],
+      "limits": "Read-only code review and synthetic fault reproduction; no real private state, credential, network or charged task. Does not replace platform approval."
+    },
+    "root_full_test_suite": {
+      "tests": 111,
+      "elapsed_seconds": 1.851,
+      "exit_code": 0,
+      "artifact": "runs/qa/hyper3d-api-entry-20261002/tool-tests.txt"
+    },
+    "root_full_test_rerun_after_live_roundtrip": {"tests": 111, "elapsed_seconds": 1.719, "exit_code": 0},
+    "post_global_write_doctor": {"version": "0.160.0", "exit_code": 0, "ok": 19, "notes": 8, "warn": 6, "fail": 0, "status": "degraded", "limits": "Read-only health summary; optional MCP and thread issues remain. Sandbox helper execution was not verified; no security/configuration repair performed."},
+    "pipeline_validate": {"status": "valid", "assets": 39, "scope": "schema only"},
+    "git_diff_check": "passed",
+    "supported_provider_sha256": "45247a8def85815d03bb296767aec5f79699a518489f2e68bddad3ff39b09e3a",
+    "old_authorization_file_sha256_unchanged": "431e94888757628d6d7e6dcc42938bb5f0e2a2b1920a9fd9b7fd9cbf80e4ca10"
+  },
+  "authorized_global_task_file": {
+    "path": "C:\\Users\\IOT\\.codex\\tools\\hyper3d-api\\state\\ro-swordsman-apose-20261002-001.dpapi",
+    "exists_before": false,
+    "human_answer": "同意授權",
+    "result": "Created and updated only this new DPAPI task file; actual status recovery and download completed.",
+    "necessary_change": "Exclusive create a new Windows DPAPI CurrentUser protected reservation, then update only this file with this operation's task UUID and subscription identifier. Internal same-task recovery reads; no raw secret output.",
+    "no_global_temporary_files": true,
+    "old_files_modified": false,
+    "api_master_key_in_this_file": false,
+    "reason": "Recoverable /status needs the service's subscription identifier; repository must not contain it. User explicitly requests precise authorization for any repo-external write."
+  },
+  "verified_operation": {
+    "operation_id": "ro-swordsman-apose-20261002-001",
+    "workspace": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop",
+    "plan": "runs/hyper3d/plans/ro-swordsman-apose-20261002-001.json",
+    "estimated_credits": 0.5,
+    "charged_request_count": 1,
+    "new_task_uuid": "b51afd35-409d-48e6-b2a0-4c4e0b844904",
+    "submitted_utc": "2026-10-02T15:46:36.943118+00:00",
+    "completed_utc": "2026-10-02T15:52:14.474271+00:00",
+    "downloaded_utc": "2026-10-02T15:52:38.230303+00:00",
+    "actual_consumed_credits": 0.5,
+    "cost_state": "service_reported",
+    "status_queries": 4,
+    "all_jobs_done": 7,
+    "final_balance": {"value": 228, "observed_utc": "2026-10-02T15:53:17.681670+00:00", "charged": false, "pool_breakdown": "not_returned"},
+    "journal": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\runs\\hyper3d\\operations\\ro-swordsman-apose-20261002-001.json",
+    "download_directory": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\assets\\raw\\ro-swordsman-combo\\rodin-v002",
+    "downloads": [
+      {"name": "base_basic_pbr.glb", "bytes": 11818820, "sha256": "da418afbd90bf95d7994e6642460891b0a3e85699713769db7cbaed1a98a4b98"},
+      {"name": "preview.webp", "bytes": 4330, "sha256": "354976db5d7189c59024c5c7062902fc177b64dfe9ca4dddb757db28d93bfd3d"},
+      {"name": "render.jpg", "bytes": 12117, "sha256": "26c5c8427b55ed0ebac0a7af3b0b20df7e8a7dfc19de37f377f9911c669f425e"}
+    ],
+    "original_denied_attempt_preserved": true,
+    "parameters": "Gen-2.5 High / Quad18k / GLB / PBR-high / TAPose / symmetric / front image / seed3417 / preview",
+    "rationale": "Neutral separate-hand design replaces the previously fused static pose; test Quad and rest-pose conditioning before Blender detail refinement. Does not prove suitable topology, rig, or animation."
+  },
+  "limitations": [
+    "Real charged roundtrip is verified for this single image-generation operation only; other parameter combinations remain schema/offline-test evidence.",
+    "Private state after-response update is fsync but not atomic; interruption can require unknown-state review, never automatic resubmission.",
+    "Provider transport lacks BANG, texture-only and agentic endpoints; no allowlist changes.",
+    "RO character, rig and continuous animation remain unaccepted; prior failed candidates and trial budgets retained.",
+    "Sandbox provisioning failure requires reviewed host execution, not a product defect; no sandbox/ACL/global configuration changes."
+  ],
+  "git": {"stage": false, "commit": false, "push": false},
+  "final_tool_checks": {"api_fault_tests": 23, "root_tests": 112, "root_elapsed_seconds": 1.816, "isolated_tests": 116, "isolated_elapsed_seconds": 1.821, "exit_codes": [0,0], "download_lifecycle_regression": "Reproduced complete!=downloaded/download_partial before fix; current status returns local_download_record/live_query=false, preserves journal bytes/manifests, no transport/private read. Independently reviewed with actual synthetic302 partial and refused retry."},
+  "art_preflight": {"status": "NO_SHIP", "quality_scores": [3,3,2,3,2,0], "all_targets": 4, "form_regression": "baseline3_to_candidate2", "bones": 46, "triangles": 39946, "animations": 0, "report": "C:\\Repos\\mmo-asset-pipeline\\tmp\\art-quality-loop\\runs\\qa\\ro-swordsman-combo-r003\\assessment-final.json", "remaining": "Hand/wrist/thumb/armor deformation, complete continuous300frames and VFX; no accepted delivery."},
+  "background_generation_running": false
+}
