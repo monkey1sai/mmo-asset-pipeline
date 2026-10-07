@@ -27,3 +27,12 @@
 - 角色動作先比較已授權動作來源與重定向，不只調平滑曲線。保留 target rig／rest pose／拓樸／權重及既有 cv1 runtime QA；重新綁骨不是預設解法。靜態道具不強制動畫。
 - 本 repo 公開。商業專案使用權與原始素材公開再散布權分開審查；未知即不匯入、不 commit/push，不偷偷改可見性或繞過原資產保存規範。
 - `scripts/art_sources.py` 只做本機來源檢查及明確 `--apply` 的新版本複製，不驗美術或動作；`scripts/blender_art_preview.py` 需獨立安全 Blender session 與凍結預覽協定；`tools/art-validation/validate-glb.mjs` 需真正 Khronos validator。三者都不能替代既有 `assess`、目標 runtime、美術或交付審查。
+
+<!-- git-management-v1 -->
+## Git 管理原則
+
+- 具體流程依 [Git 管理與工程 checkpoint](docs/git-workflow.md)。預設 feature branch；dirty、平行或品質實驗使用隔離 worktree，一個 commit 只處理一個主題。
+- commit 前核對 status、diff、相關測試、staged diff 與清單；只 stage 本任務檔案及區塊。保留他人 staged／unstaged 修改，混入無關內容時先隔離本任務，不擅自移除或提交他人修改。
+- 已驗工作先形成可回復 checkpoint，再做高風險實驗。只在具體目的地／branch 的人類授權內 commit／push，push 前重查範圍與必要 review，push 後確認同一 SHA 的 CI；feature push、CI 綠燈不授權 merge。
+- PASS、FAIL、NOT_RUN 分開記錄；已執行但結果不可核實則 UNVERIFIED。依賴缺少、受阻或 skipped 不算 PASS，commit／push 不代表 runtime 通過。
+- 實驗保留 baseline、candidate、凍結條件、失敗與 evidence；安全回退遵循授權。禁止未授權 reset --hard、clean -fd、force push、證據刪除、權限／protection 修改。main/master 保持可使用、可驗證、可回復。
