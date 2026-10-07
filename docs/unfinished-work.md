@@ -14,3 +14,5 @@
 失敗候選程式只封存於角色 QA 的 `candidate-01-source/` 與 patch，不接入正式 runtime。原角色、骨架、權重、morph、reference、fixture 與 gate 未修改；局部數值改善與工具測試不得當作完整角色接受。
 
 角色階段時計已結束：最多 2 小時／1 候選，實際約 30.6 分鐘、1/1 已用完。提交、push 及 worktree 清理由後續使用者明確授權執行，屬保存與維護，不新增角色試作。
+
+主分支更新與兩個本次 worktree 的清理結果已記錄於 [維護紀錄](../runs/qa/repo-delivery-20261007/README.md)；其他工作與未知檔案保留。
