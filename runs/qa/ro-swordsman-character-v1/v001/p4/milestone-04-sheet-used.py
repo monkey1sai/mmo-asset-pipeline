@@ -1,5 +1,5 @@
 """Milestone 4 review sheet (report only): transitions in the Three.js QA scene (tools/runtime-qa/three/p4.html, run-04
-manifest; gates from run-05), five instants per row, each tile labelled with its time and the foot-lock mode of each foot.
+manifest; gates from run-07), five instants per row, each tile labelled with its time and the foot-lock mode of each foot.
 
 Run (worktree root): python -B runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet-used.py <out.png>
 """
@@ -15,10 +15,10 @@ import cv1_foot_lock as fl  # noqa: E402
 
 P = ROOT / "runs/qa/ro-swordsman-character-v1/v001/p4"
 SHOTS = P / "runtime"
-spec = json.loads((P / "transitions-04.json").read_text(encoding="utf-8"))
+spec = json.loads((P / "transitions-05.json").read_text(encoding="utf-8"))
 by_id = {s["id"]: s for s in spec["scenarios"]}
-check = {s["id"]: s for s in json.loads((P / "run-05/merged/transition-check.json").read_text(encoding="utf-8"))["scenarios"]}
-recheck = {s["id"]: s for s in json.loads((P / "run-05/merged/feet-recheck.json").read_text(encoding="utf-8"))["scenarios"]}
+check = {s["id"]: s for s in json.loads((P / "run-07/merged/transition-check.json").read_text(encoding="utf-8"))["scenarios"]}
+recheck = {s["id"]: s for s in json.loads((P / "run-07/merged/feet-recheck.json").read_text(encoding="utf-8"))["scenarios"]}
 # Captures of one uninterrupted pass (whole-body and feet cameras); the side views of that hour were taken by two
 # overlapping loops in a throttled hidden page and are not used.
 WALK, IDLE_WALK, WALK_RUN = [0.45, 0.55, 0.65, 0.8, 0.95], [0.45, 0.55, 0.65, 0.8, 0.96], [0.45, 0.55, 0.6, 0.65, 0.75]

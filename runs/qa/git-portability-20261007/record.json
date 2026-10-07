@@ -1,0 +1,38 @@
+{
+ "recorded_utc": "2026-10-07T02:30:00Z",
+ "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 27",
+ "remote": "git@github.com:monkey1sai/mmo-asset-pipeline.git (PUBLIC; checked read-only with gh repo view and git ls-remote)",
+ "remote_before": "50daee36d3c520a4e1588412465a7708adaa45df",
+ "remote_after": "75b8950f4ffd14ef990899714116877ef46495f4",
+ "commits": [
+  "38c03ca chore(art): records, authorizations 24-27, clocks",
+  "14fb448 feat(art): transition tools and P4 QA scene",
+  "3b7e4a5 feat(art): P4 Blender matrix runs (30 LFS objects, 314,770,728 bytes)",
+  "75b8950 feat(art): milestone 4 runtime and records"
+ ],
+ "precommit": {
+  "report": "precommit-check.json",
+  "secret_pattern_hits": "2, both the pattern definitions inside precommit-check-used.py itself",
+  "crlf_fixed": [
+   "run-04/merged/collapse-classes.json",
+   "run-05/merged/collapse-classes.json (print on Windows wrote CRLF; converted to LF before staging)"
+  ]
+ },
+ "staging_verification": "runs/qa/git-portability-20261005/verify-stage-used.py per group (0 problems)",
+ "push_log": "push-log.txt (LFS objects first, fast-forward per commit)",
+ "pull_request": {
+  "url": "https://github.com/monkey1sai/mmo-asset-pipeline/pull/7",
+  "base": "main",
+  "head": "codex/art-quality-loop",
+  "body": "pr-body.md",
+  "merge": "merged by the coordinator on the user's instruction (2026-10-07T02:34:00Z 合併 PR 7), merge commit 08c454e6c6e7566f7a7625953773b6eb18693f5c, main not protected (checked read-only), merge method: merge commit",
+  "merged_at": "2026-10-07T02:34:20Z"
+ },
+ "written_after_commit": [
+  "push-batches-used.sh",
+  "push-log.txt",
+  "pr-body.md",
+  "record.json"
+ ],
+ "fresh_clone_restore": "not verified (as entries 15 and 23)"
+}

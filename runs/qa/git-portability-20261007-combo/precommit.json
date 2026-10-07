@@ -1,0 +1,21 @@
+{
+ "pending": 372,
+ "modified_tracked": 8,
+ "untracked": 364,
+ "pattern_source": "runs/qa/git-portability-20261007/precommit-check-used.py",
+ "text_scanned": 152,
+ "excluded": {
+  "lfs": 64,
+  "binary": 155,
+  "over_8mb": 1
+ },
+ "crlf_in_text_rule_files": [
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/arm-pose-table.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/blade-solve-a01.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/roll-solve-a01.json",
+  "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/collapse-classes.json"
+ ],
+ "text_like_without_rule": [],
+ "secret_pattern_hits": [],
+ "scope": "Pattern scan of text-like pending files <=8MB; binary and LFS content not inspected for secrets."
+}

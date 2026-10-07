@@ -1,18 +1,28 @@
 {
  "schema_version": 1,
- "recorded_utc": "2026-10-07T02:03:02Z",
+ "recorded_utc": "2026-10-07T05:57:27Z",
  "milestone": 4,
- "status": "numerically closed with known failures (entry 26: D2, G1): run-05 115/164 scenarios pass; the others fail the collapse gate at crease regions, five also the feet gate at the leg's reach; runtime P4 passes; art review accepted by the user (entry 27); not committed",
- "authorization": "entries 24 (P4), 25 (A1 B1 C1, E keep, F agreed) and 26 (D2, G1, v001 trial cap 129,600 s) in runs/qa/ro-swordsman-character-v1/authorizations.json",
+ "status": "run-07 with Idle<->Combo (combo a07, entry 29): 126/191 scenarios pass; known failures per entries 26 and 29 preserved; background runtime completed with closed_loop_gate FAIL (2/118 blocks, 18.731 um > 10 um), other 7 verdicts pass; review sheet accepted by user (entry 30); commit/push authorized (entry 31), archival pending verification",
+ "authorization": "entries 24-26 (P4, A1 B1 C1, D2 G1), 29 (combo a07 closed with known failures; transitions added), 30 (review sheets accepted) and 31 (commit/push authorized) in runs/qa/ro-swordsman-character-v1/authorizations.json",
  "previous_records": [
   "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run01.json",
-  "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run04.json"
+  "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run04.json",
+  "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run05.json"
  ],
  "known_failures": {
   "D2": "collapse gate kept strict; crease sites recorded for the next foundation revision (see findings collapse_classes and p4-decisions-d-20261006.json)",
-  "G1": "feet gate kept strict; Run->Walk at 1.5x (100/400 ms) and the Walk<->Run repeated switch exceed the leg's reach"
+  "G1": "feet gate kept strict; Run->Walk at 1.5x (100/400 ms) and the Walk<->Run repeated switch exceed the leg's reach",
+  "combo (entry 29)": "Idle->Combo and Combo->Idle: collapse at the frozen guard pose / crease regions; at 400 ms x 1.0/1.5 the entry fade spans the combo's step-out (frames 10-38) while Idle keeps both feet planted, so the lock releases onto the combo's new foot spot (130-222 mm); the 400 ms x 1.5 exit fade spans the victory release of the left hand (grasp penetration 42 mm). A stance-aware fade rule or a 40-frame Idle hold at the combo start would remove the feet/grasp cases; not done (H1)"
  },
  "review_sheet": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet.png",
+ "art_review": {
+  "status": "accepted_by_user",
+  "recorded_utc": "2026-10-07T05:57:27Z",
+  "authorization_entry": 30,
+  "scope": "run-07 milestone-04-sheet.png shown in this chat",
+  "artifact_sha256": "7ea2c345055da2d3b14d9050cc27935bb14bef2d4fe721159e554bf5f90efe95",
+  "technical_gate_waiver": false
+ },
  "runs": {
   "run_01": {
    "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-01/merged/transition-check.json",
@@ -47,13 +57,26 @@
   },
   "run_05": {
    "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-05/merged/transition-check.json",
-   "scenarios_file": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions-04.json",
-   "feet_recheck_agrees": "runs/qa/ro-swordsman-character-v1/v001/p4/run-05/merged/feet-recheck.json",
-   "passed": "115/164",
+   "note": "P4 closure before the combo: 115/164"
+  },
+  "run_06": {
+   "note": "combo pairs only (27 scenarios, 11 pass) on transitions-05; superseded by run-07",
+   "shards": [
+    "runs/qa/ro-swordsman-character-v1/v001/p4/run-06/shard-0/transition-check.json",
+    "runs/qa/ro-swordsman-character-v1/v001/p4/run-06/shard-1/transition-check.json"
+   ]
+  },
+  "run_07": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/transition-check.json",
+   "scenarios_file": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions-05.json",
+   "feet_recheck_agrees": "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/feet-recheck.json",
+   "passed": "126/191",
    "by_pair": {
     "Cast->Idle": "9/9",
+    "Combo->Idle": "5/9 failing {'no_collapse': 4, 'grasp': 2, 'feet_slide': 1}",
     "GetUp->Idle": "5/9 failing {'no_collapse': 4}",
     "Idle->Cast": "18/18",
+    "Idle->Combo": "6/18 failing {'no_collapse': 12, 'feet_slide': 4}",
     "Idle->LieDown": "12/18 failing {'no_collapse': 6}",
     "Idle->Walk": "12/18 failing {'no_collapse': 6}",
     "Idle<->Walk repeated": "0/1 failing {'no_collapse': 1}",
@@ -125,10 +148,14 @@
   }
  },
  "findings_run_04": {
+  "source_run": "run-07",
+  "legacy_key_note": "The historical generator retained this run-04 key; the values in this current progress record describe run-07. Earlier snapshots are preserved separately.",
   "feet_slide_worst_mm": {
    "Cast->Idle": 0.0,
+   "Combo->Idle": 11.65,
    "GetUp->Idle": 0.74,
    "Idle->Cast": 0.0,
+   "Idle->Combo": 222.05,
    "Idle->LieDown": 0.0,
    "Idle->Walk": 6.08,
    "Idle<->Walk repeated": 4.24,
@@ -141,14 +168,16 @@
    "Walk<->Run repeated": 53.14
   },
   "settle_steps": {
-   "count": 83,
+   "count": 101,
    "lift_mm_max": 97.5,
    "travel_mm_max": 354.8
   },
   "contact_slide_diagnostic_worst_mm": {
    "Cast->Idle": 0.0,
+   "Combo->Idle": 1.5,
    "GetUp->Idle": 194.4,
    "Idle->Cast": 0.0,
+   "Idle->Combo": 250.1,
    "Idle->LieDown": 203.0,
    "Idle->Walk": 83.7,
    "Idle<->Walk repeated": 18.8,
@@ -162,8 +191,12 @@
   },
   "contact_diagnostic_note": "not a gate: sole near the floor whatever the stance windows say; includes the clips' own pivot turns and swing feet blended with a planted foot",
   "collapse_classes": {
+   "Combo->Idle|blend": 3,
+   "Combo->Idle|folded_in_clip": 1,
    "GetUp->Idle|folded_in_clip": 2,
    "GetUp->Idle|foot_lock": 6,
+   "Idle->Combo|folded_in_clip": 23,
+   "Idle->Combo|foot_lock": 10,
    "Idle->LieDown|blend": 2,
    "Idle->LieDown|folded_in_clip": 5,
    "Idle->LieDown|foot_lock": 2,
@@ -184,10 +217,24 @@
   "collapse_class_definitions": "foot_lock: under 5 % only with the lock; folded_in_clip: under 5 % without the lock too and some layer alone has the triangle folded or under 5 %; blend: under 5 % without the lock while every layer alone is open and above 5 %"
  },
  "runtime": {
-  "results": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t015832z-p4-results.json",
-  "pass": true,
+  "results": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-p4-results.json",
+  "results_sha256": "86310028b5272e322a662f918361e5ac2ed16d414fbbc3097787bcd3f906ac0f",
+  "previous_result": {
+   "run": "run-05",
+   "results": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t015832z-p4-results.json",
+   "pass": true,
+   "blocks": 99,
+   "max_error_um": 4.217
+  },
+  "execution": {
+   "mode": "headless_background",
+   "record": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-background-execution.json",
+   "screenshot": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-background-browser.png",
+   "basis": "User requested background execution without foreground, full-screen or visible opening in this chat on 2026-10-07; background runtime evidence, not visible-pane art acceptance."
+  },
+  "pass": false,
   "verdicts": {
-   "closed_loop_gate": true,
+   "closed_loop_gate": false,
    "closed_loop_frames_weights_match": true,
    "foot_lock_targets_match": true,
    "sockets_match": true,
@@ -197,9 +244,30 @@
    "negative_controls_detected": true
   },
   "closed_loop": {
-   "blocks": 99,
-   "max_error_um": 4.217,
-   "foot_target_max_diff_m": 1.2269188232050254e-06
+   "blocks": 118,
+   "passed_blocks": 116,
+   "max_error_um": 18.731347653251667,
+   "gate_um": 10,
+   "all_blender_vertices_covered": true,
+   "foot_target_max_diff_m": 1.2269188232050254e-06,
+   "failure_class": "TEST_FAILURE",
+   "cause_status": "unverified; closed-loop consistency failure isolated to core mesh at two equivalent Combo/Idle 50:50 poses; no foundation or gate change",
+   "failing_blocks": [
+    {
+     "block": "transition/combo-idle-end-b100-s1.0@0.55",
+     "max_error_um": 18.731347653251667,
+     "over_gate_export_vertices": 1751,
+     "worst_mesh": "SM_RO_core",
+     "worst_blender_vertex": 5297
+    },
+    {
+     "block": "transition/combo-idle-end-b200-s0.5@0.6",
+     "max_error_um": 18.731347653251667,
+     "over_gate_export_vertices": 1751,
+     "worst_mesh": "SM_RO_core",
+     "worst_blender_vertex": 5297
+    }
+   ]
   },
   "determinism": {
    "comparisons": 150,
@@ -226,49 +294,42 @@
   },
   "cost": {
    "evaluate": {
-    "mean_ms": 0.5641666670019428,
-    "p95_ms": 0.8999999985098839,
-    "max_ms": 2.100000001490116
+    "mean_ms": 0.6666666665424903,
+    "p95_ms": 0.800000011920929,
+    "max_ms": 1.7000000029802322
    },
    "render_960": {
-    "mean_ms": 0.3683333331098159,
-    "p95_ms": 0.8999999985098839,
-    "max_ms": 6.600000001490116
+    "mean_ms": 0.48166666689018406,
+    "p95_ms": 0.7999999970197678,
+    "max_ms": 1.3999999910593033
    },
-   "note": "This machine in the desktop browser pane; test condition, not a performance promise."
+   "note": "This machine in headless background Chrome 154 with NVIDIA WebGL; test condition, not a performance promise. The raw harness result retains its original desktop-pane cost label; execution record identifies the actual mode."
   },
   "machine": {
    "three": "186",
-   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/2.19675.1 Chrome/152.0.7977.130 Safari/537.36 MSIX",
+   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
    "hardware_concurrency": 20,
    "device_memory_gb": 32,
    "webgl": {
     "vendor": "Google Inc. (NVIDIA)",
     "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
    }
-  }
+  },
+  "note": "run-07 executed through the existing P4 page button in an isolated background browser per the user's latest instruction: 8 clips, 191 transition scenarios, 118 reference blocks including 19 Combo blocks. All 19 input-file byte counts and SHA256 values match. closed_loop_gate FAIL at 2 blocks; other seven verdicts and four negative controls pass. Original 10 um gate and D2/G1/H1 failures remain unchanged. Visible-pane runtime/art review was not performed.",
+  "run_07_pending": false,
+  "run_07_status": "completed_with_gate_failure"
  },
  "not_done": [
   "foundation fix of the crease regions (D1, not chosen)",
-  "Idle->Combo->Idle (combo clip: P3 remainder, not authorised)",
-  "art review of the transitions (milestone-04-sheet.png)",
+  "run-07 runtime closed-loop gate repair: 2/118 blocks exceed 10 um; cause not yet established, not covered by D2/G1/H1",
   "independent gray grasp acceptance (not planned in P4)",
-  "commit/push (not covered by entries 24-26)"
+  "commit/push authorized by entry 31; archival and remote verification in progress"
  ],
  "evidence_scripts": {
-  "generator": "runs/qa/ro-swordsman-character-v1/v001/p4/progress-06-used.py",
+  "generator": "runs/qa/ro-swordsman-character-v1/v001/p4/progress-07-used.py",
   "compare": "runs/qa/ro-swordsman-character-v1/v001/p4/compare-runs-used.py",
   "collapse_classes": "runs/qa/ro-swordsman-character-v1/v001/p4/classify-collapse-used.py",
   "feet_recheck": "runs/qa/ro-swordsman-character-v1/v001/p4/feet-recheck-used.py",
   "sheet": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet-used.py"
- },
- "art_review": {
-  "accepted_utc": "2026-10-07T02:22:49Z",
-  "user_text": "接受第四里程碑的轉場",
-  "authorization": "entry 27",
-  "reviewed": [
-   "p4/milestone-04-sheet.png",
-   "QA scene p4.html run-05 manifest"
-  ]
  }
 }

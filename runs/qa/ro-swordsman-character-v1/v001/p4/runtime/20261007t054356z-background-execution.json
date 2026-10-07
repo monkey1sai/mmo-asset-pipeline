@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "runner": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-background-runner.cjs",
+    "sha256": "c45f080183c79bd9ad6608d0006bac0ae633186c8b68e8409322e2f4da1ee0a3",
+    "original_execution_path": "tmp/run07-background-qa.cjs",
+    "original_working_directory": "C:/Repos/mmo-asset-pipeline/tmp/art-quality-loop",
+    "replay_note": "The archived file preserves the executed bytes. Its __dirname/.. root assumes the original tmp/ location; restore a copy there before replay. The archive location is not a direct replay entry point. No replay was performed during commit/push preparation.",
+    "node_executable": "C:/Users/IOT/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe"
+  },
+  "verification": {
+    "input_file_bytes_and_sha256": { "files": 19, "all_match": true },
+    "closed_loop_vertices": { "blocks": 118, "all_blender_vertices_covered": true },
+    "unit_tests": { "command": "python -B -m unittest discover -s tests -v", "tests": 183, "result": "OK" },
+    "catalog": { "command": "python -B scripts/pipeline.py validate", "status": "valid", "assets": 39, "scope": "schema only" },
+    "diagnostic": {
+      "failure_class": "TEST_FAILURE",
+      "pose": "Combo frame 296 / Idle frame 3; upper/lower weights 50:50",
+      "worst_mesh": "SM_RO_core",
+      "worst_blender_vertex": 5297,
+      "over_gate_export_vertices_per_block": 1751,
+      "note": "Two blocks sample the same pose. Export vertex counts can include UV/normal splits. Root cause is unverified; core morph/skin or data-version consistency is the next hypothesis to isolate."
+    }
+  },
+  "start_utc": "2026-10-07T05:43:52.227Z",
+  "end_utc": "2026-10-07T05:44:21.634Z",
+  "mode": "headless_background",
+  "user_instruction": "你幫我執行, 但不要用前景, 全螢幕, 打開,",
+  "url": "http://localhost:8772/tools/runtime-qa/three/p4.html?manifest=/runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/p4-manifest.json",
+  "input_counts": {
+    "clips": 8,
+    "blocks": 118,
+    "visibility": "visible"
+  },
+  "screenshot": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-background-browser.png",
+  "status": "P4 runtime：未通過\n閉環 118 點 max 18.731 µm（≤ 10.000 µm）\n確定性 max 0.00e+0 m\nloop 接縫 Idle 0.051°、Walk 0.036°、Run 0.031°、Sleep 0.056°\n反例：NC_correctives_off=抓到、NC_missing_bone_mapping=抓到、NC_stateful_crossfade=抓到、NC_foot_lock_off=抓到\n求值 0.67 ms（p95 0.80）\n已存：runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-p4-results.json",
+  "summary": {
+    "run": "20261007t054356z",
+    "saved_as": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-p4-results.json",
+    "pass": false,
+    "verdicts": {
+      "closed_loop_gate": false,
+      "closed_loop_frames_weights_match": true,
+      "foot_lock_targets_match": true,
+      "sockets_match": true,
+      "determinism": true,
+      "loop_seams": true,
+      "repeated_switch_continuous": true,
+      "negative_controls_detected": true
+    },
+    "blocks": 118,
+    "max_error_um": 18.731347653251667,
+    "determinism_comparisons": 150,
+    "determinism_max_m": 0,
+    "negative_controls": {
+      "NC_correctives_off": true,
+      "NC_missing_bone_mapping": true,
+      "NC_stateful_crossfade": true,
+      "NC_foot_lock_off": true
+    },
+    "runtime": {
+      "three": "186",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "hardware_concurrency": 20,
+      "device_memory_gb": 32,
+      "webgl": {
+        "vendor": "Google Inc. (NVIDIA)",
+        "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      }
+    },
+    "measurement_ms": 25329.70000000298
+  },
+  "page_errors": [],
+  "note": "Background Chrome CPU/WebGL runtime evidence. No visible pane or foreground interaction. The page cost note mentions a desktop pane; actual execution mode is recorded here."
+}

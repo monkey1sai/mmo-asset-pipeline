@@ -1,0 +1,1260 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-07T05:57:27Z",
+ "clip": "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory",
+ "current_attempt": "a07",
+ "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entries 27 (Hyper3D paid allowed), 28 (start the combo) and 29 (H1: close a07 with known failures, then export, runtime, transitions, art review)",
+ "status": "a07 closed with known failures per entry 29 (collapse 254/671 samples, 184 of them the frozen guard pose's own triangle; grasp 3 transitional samples); standalone export, readback and runtime closed loop pass; Idle<->Combo transitions recorded in P4 run-07; P4 background runtime closed_loop_gate FAIL (2/118 blocks, 18.731 um > 10 um); combo review sheet accepted by user (entry 30); commit/push authorized (entry 31), archival pending verification",
+ "art_review": {
+  "status": "accepted_by_user",
+  "recorded_utc": "2026-10-07T05:57:27Z",
+  "authorization_entry": 30,
+  "scope": "a07 combo-review-sheet.png shown in this chat",
+  "artifact_sha256": "bfab13c9250a8280fccd25e9f4eb021ebfe0e1efdfcbb43cf82733062aac2a37",
+  "technical_gate_waiver": false
+ },
+ "plan": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/combo-plan.md",
+ "interaction_config": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/interaction.json",
+  "registry": "runs/qa/ro-swordsman-character-v1/v001/clips/interaction-registry.json"
+ },
+ "attempts": {
+  "a01": {
+   "author": {
+    "spec_sha256": "36c2d187417570ba3d8bf2d4d658d787ffbc9e86b0b0c238986925174a38ab24",
+    "ik": {
+     "frames_with_arm_ik": 300,
+     "max_wrist_error_mm": 0.0002744606205283681,
+     "wrist_bend_deg_range": [
+      11.276387895144468,
+      179.5336260320495
+     ],
+     "elbow_angle_deg_range": [
+      31.876735328165044,
+      153.19692202647894
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004501199067281058,
+     "knee_angle_deg_range": [
+      88.05888323292805,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a01/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a01-check-b20/clip-check.json",
+    "script_sha256": "5c6482d6c0f2f07745aa7528dcacfd8ee4dd3e437b5d4a26aa4d8020981c28d1",
+    "samples": 671,
+    "gates": {
+     "clip_time_origin_zero": true,
+     "helper_bones_not_keyed": true,
+     "no_collapse": false,
+     "hand_self_intersection_zero": false,
+     "hand_other_new_intersection_zero": false,
+     "feet_slide": false,
+     "feet_penetration": true,
+     "feet_float": true,
+     "weapon_body_penetration": false,
+     "grasp_functional": false
+    },
+    "collapse_samples": 427,
+    "min_area_ratio": 0.0008,
+    "collapse_ranges": [
+     [
+      18.5,
+      23.0,
+      0.0019
+     ],
+     [
+      25.75,
+      31.5,
+      0.0073
+     ],
+     [
+      34.5,
+      56.0,
+      0.0305
+     ],
+     [
+      61.5,
+      89.0,
+      0.0191
+     ],
+     [
+      95.0,
+      100.5,
+      0.018
+     ],
+     [
+      102.0,
+      102.25,
+      0.0493
+     ],
+     [
+      104.0,
+      105.0,
+      0.0316
+     ],
+     [
+      107.0,
+      107.5,
+      0.0388
+     ],
+     [
+      109.0,
+      110.5,
+      0.0391
+     ],
+     [
+      137.5,
+      250.5,
+      0.0011
+     ],
+     [
+      252.0,
+      253.0,
+      0.0092
+     ],
+     [
+      256.5,
+      256.75,
+      0.0285
+     ],
+     [
+      260.0,
+      260.0,
+      0.0209
+     ],
+     [
+      267.0,
+      269.25,
+      0.0072
+     ],
+     [
+      271.0,
+      272.5,
+      0.0106
+     ],
+     [
+      282.5,
+      283.5,
+      0.0377
+     ],
+     [
+      285.0,
+      286.0,
+      0.0008
+     ],
+     [
+      288.0,
+      288.0,
+      0.0452
+     ],
+     [
+      296.0,
+      296.0,
+      0.0368
+     ]
+    ],
+    "collapse_sites": {
+     "28476 upper_arm.R": 220,
+     "27505 clavicle.L": 67,
+     "20964 clavicle.R/upper_arm.R": 62,
+     "17737 upper_leg.R": 50,
+     "20752 clavicle.R/upper_arm.R": 49,
+     "29014 clavicle.R": 36,
+     "44623 hand.R": 24,
+     "17740 upper_leg.R": 18
+    },
+    "hand_fail_samples": 560,
+    "hand_pairs": {
+     "thumb.L_01 vs finger4.L_02+finger4.L_03": 409,
+     "thumb.L_01 vs finger4.L_03": 217,
+     "hand.R+wrist_transition.R_twist vs hand.R+wrist_transition.R_twist": 169,
+     "hand.R+wrist_transition.R_twist vs hand.R": 141,
+     "hand.R vs hand.R+wrist_transition.R_twist": 128,
+     "wrist_transition.R+wrist_transition.R_twist vs hand.R": 127
+    },
+    "grasp_fail_samples": 470,
+    "weapon_body_max_m": 0.009124618081841618,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        0,
+        10
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 0.0,
+       "float_m": 8.092309872154146e-05
+      },
+      {
+       "window": [
+        26,
+        88
+       ],
+       "slide_m": 0.01728559583287502,
+       "penetration_m": 0.0,
+       "float_m": 4.390242975205183e-05
+      },
+      {
+       "window": [
+        102,
+        150
+       ],
+       "slide_m": 0.009897131155708668,
+       "penetration_m": 0.00015931305824778974,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        256
+       ],
+       "slide_m": 6.771142738581565e-05,
+       "penetration_m": 4.096007614862174e-06,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        270,
+        299
+       ],
+       "slide_m": 1.639133827241486e-05,
+       "penetration_m": 0.0004861899942625314,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        22
+       ],
+       "slide_m": 5.728193205853539e-06,
+       "penetration_m": 8.24544404167682e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        38,
+        150
+       ],
+       "slide_m": 0.020274579461823497,
+       "penetration_m": 5.436252467916347e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        264
+       ],
+       "slide_m": 6.431789640530829e-05,
+       "penetration_m": 5.8051540690939873e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        278,
+        299
+       ],
+       "slide_m": 1.6424028840643097e-05,
+       "penetration_m": 0.0005676495493389666,
+       "float_m": 0.0
+      }
+     ]
+    }
+   },
+   "fx": {
+    "glb": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a01/fx/ro_skill_effects.glb",
+     "bytes": 46908,
+     "sha256": "694b00a636e61631c6ec544f5581ef74a1b39e003a4269975100b0a9ed9c1f18"
+    },
+    "objects": 25,
+    "triangles": 344,
+    "windows": {
+     "bash_arc": [
+      98,
+      126
+     ],
+     "magnum": [
+      172,
+      200
+     ],
+     "endure": [
+      205,
+      258
+     ],
+     "victory": [
+      268,
+      289
+     ]
+    }
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a01-used.py"
+  },
+  "a02": {
+   "author": {
+    "spec_sha256": "669f6650a27a7147cf69fcd730e46e7cdf9833b23c11accfb813aa443c93af0f",
+    "ik": {
+     "frames_with_arm_ik": 156,
+     "max_wrist_error_mm": 0.00021086591032273928,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      62.536201172639586
+     ],
+     "elbow_angle_deg_range": [
+      120.67419765189784,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004501199067281058,
+     "knee_angle_deg_range": [
+      88.05888323292805,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a02/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a02-check-b20/clip-check.json",
+    "script_sha256": "5c6482d6c0f2f07745aa7528dcacfd8ee4dd3e437b5d4a26aa4d8020981c28d1",
+    "samples": 671,
+    "gates": {
+     "clip_time_origin_zero": true,
+     "helper_bones_not_keyed": true,
+     "no_collapse": false,
+     "hand_self_intersection_zero": false,
+     "hand_other_new_intersection_zero": false,
+     "feet_slide": false,
+     "feet_penetration": true,
+     "feet_float": true,
+     "weapon_body_penetration": true,
+     "grasp_functional": false
+    },
+    "collapse_samples": 248,
+    "min_area_ratio": 0.0044,
+    "collapse_ranges": [
+     [
+      18.5,
+      19.5,
+      0.0422
+     ],
+     [
+      25.75,
+      27.0,
+      0.0073
+     ],
+     [
+      29.0,
+      29.0,
+      0.046
+     ],
+     [
+      31.0,
+      31.5,
+      0.0119
+     ],
+     [
+      34.5,
+      34.5,
+      0.0305
+     ],
+     [
+      61.5,
+      62.0,
+      0.0318
+     ],
+     [
+      64.0,
+      67.0,
+      0.0334
+     ],
+     [
+      111.0,
+      124.5,
+      0.0048
+     ],
+     [
+      142.5,
+      142.5,
+      0.0315
+     ],
+     [
+      147.5,
+      153.0,
+      0.0149
+     ],
+     [
+      155.25,
+      158.5,
+      0.0221
+     ],
+     [
+      160.5,
+      162.0,
+      0.022
+     ],
+     [
+      164.0,
+      166.0,
+      0.0458
+     ],
+     [
+      171.25,
+      171.75,
+      0.0074
+     ],
+     [
+      188.5,
+      207.0,
+      0.0044
+     ],
+     [
+      215.5,
+      244.5,
+      0.047
+     ],
+     [
+      248.25,
+      254.5,
+      0.0172
+     ],
+     [
+      267.0,
+      269.25,
+      0.0072
+     ],
+     [
+      270.75,
+      280.5,
+      0.0106
+     ],
+     [
+      282.0,
+      283.5,
+      0.0347
+     ],
+     [
+      285.0,
+      286.0,
+      0.006
+     ],
+     [
+      296.0,
+      296.0,
+      0.0371
+     ]
+    ],
+    "collapse_sites": {
+     "27505 clavicle.L": 67,
+     "17737 upper_leg.R": 50,
+     "28944 upper_arm.R": 33,
+     "28474 clavicle.R/upper_arm.R": 32,
+     "20807 upper_arm.R": 25,
+     "17740 upper_leg.R": 18,
+     "14049 coat.R/pelvis": 11,
+     "24612 foot.R/lower_leg.R": 10
+    },
+    "hand_fail_samples": 368,
+    "hand_pairs": {
+     "thumb.L_01 vs finger4.L_02+finger4.L_03": 408,
+     "thumb.L_01 vs finger4.L_03": 217,
+     "lower_arm.R vs wrist_transition.R": 200,
+     "finger2.L_02 vs finger3.L_02": 58,
+     "finger3.L_01+finger3.L_02 vs finger4.L_02": 51,
+     "finger2.L_02 vs hand.L": 41
+    },
+    "grasp_fail_samples": 470,
+    "weapon_body_max_m": 0.0,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        0,
+        10
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 0.0,
+       "float_m": 8.092309872154146e-05
+      },
+      {
+       "window": [
+        26,
+        88
+       ],
+       "slide_m": 0.01728559583287502,
+       "penetration_m": 0.0,
+       "float_m": 4.390242975205183e-05
+      },
+      {
+       "window": [
+        102,
+        150
+       ],
+       "slide_m": 0.009897131155708668,
+       "penetration_m": 0.00015931305824778974,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        256
+       ],
+       "slide_m": 6.771142738581565e-05,
+       "penetration_m": 4.096007614862174e-06,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        270,
+        299
+       ],
+       "slide_m": 1.639133827241486e-05,
+       "penetration_m": 0.0004861899942625314,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        22
+       ],
+       "slide_m": 5.728193205853539e-06,
+       "penetration_m": 8.24544404167682e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        38,
+        150
+       ],
+       "slide_m": 0.020274579461823497,
+       "penetration_m": 5.436252467916347e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        264
+       ],
+       "slide_m": 6.431789640530829e-05,
+       "penetration_m": 5.8051540690939873e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        278,
+        299
+       ],
+       "slide_m": 1.6424028840643097e-05,
+       "penetration_m": 0.0005676495493389666,
+       "float_m": 0.0
+      }
+     ]
+    }
+   },
+   "fx": {
+    "glb": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a02/fx/ro_skill_effects.glb",
+     "bytes": 46980,
+     "sha256": "e3f49f7554f436a7ae248b68a1d55c200a9162be2113ca3eadd635c2168d3930"
+    },
+    "objects": 25,
+    "triangles": 344,
+    "windows": {
+     "bash_arc": [
+      98,
+      126
+     ],
+     "magnum": [
+      172,
+      200
+     ],
+     "endure": [
+      205,
+      258
+     ],
+     "victory": [
+      268,
+      289
+     ]
+    }
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a02-used.py"
+  },
+  "a03": {
+   "author": {
+    "spec_sha256": "8285bb910fdd37a0bb867386030da8c6bf21a6ef717876cc5769721b6712d719",
+    "ik": {
+     "frames_with_arm_ik": 156,
+     "max_wrist_error_mm": 0.00024405627480386492,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      62.00664294591016
+     ],
+     "elbow_angle_deg_range": [
+      120.67419765189784,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004014929782877907,
+     "knee_angle_deg_range": [
+      97.51728138423752,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a03/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a03-check-b20/clip-check.json",
+    "script_sha256": "5c6482d6c0f2f07745aa7528dcacfd8ee4dd3e437b5d4a26aa4d8020981c28d1",
+    "samples": 671,
+    "gates": {
+     "clip_time_origin_zero": true,
+     "helper_bones_not_keyed": true,
+     "no_collapse": false,
+     "hand_self_intersection_zero": false,
+     "hand_other_new_intersection_zero": false,
+     "feet_slide": false,
+     "feet_penetration": true,
+     "feet_float": true,
+     "weapon_body_penetration": true,
+     "grasp_functional": false
+    },
+    "collapse_samples": 162,
+    "min_area_ratio": 0.006,
+    "collapse_ranges": [
+     [
+      18.5,
+      19.5,
+      0.0422
+     ],
+     [
+      25.75,
+      26.75,
+      0.032
+     ],
+     [
+      30.5,
+      30.5,
+      0.0476
+     ],
+     [
+      61.5,
+      62.0,
+      0.0318
+     ],
+     [
+      64.0,
+      67.0,
+      0.0334
+     ],
+     [
+      109.5,
+      109.5,
+      0.04
+     ],
+     [
+      125.5,
+      125.5,
+      0.0402
+     ],
+     [
+      142.5,
+      142.5,
+      0.0315
+     ],
+     [
+      147.5,
+      153.0,
+      0.0149
+     ],
+     [
+      155.25,
+      158.5,
+      0.0221
+     ],
+     [
+      160.5,
+      162.0,
+      0.022
+     ],
+     [
+      170.5,
+      170.5,
+      0.0415
+     ],
+     [
+      193.0,
+      194.5,
+      0.0489
+     ],
+     [
+      215.5,
+      244.5,
+      0.047
+     ],
+     [
+      248.25,
+      254.5,
+      0.0172
+     ],
+     [
+      267.75,
+      269.25,
+      0.0072
+     ],
+     [
+      270.75,
+      280.5,
+      0.0106
+     ],
+     [
+      282.0,
+      282.0,
+      0.0347
+     ],
+     [
+      286.0,
+      286.0,
+      0.006
+     ],
+     [
+      296.0,
+      296.0,
+      0.0371
+     ]
+    ],
+    "collapse_sites": {
+     "27505 clavicle.L": 67,
+     "20807 upper_arm.R": 25,
+     "28944 upper_arm.R": 18,
+     "17737 upper_leg.R": 13,
+     "14049 coat.R/pelvis": 11,
+     "28522 upper_arm.R": 8,
+     "21830 lower_arm.L/upper_arm.L": 7,
+     "21225 clavicle.R/upper_arm.R": 7
+    },
+    "hand_fail_samples": 306,
+    "hand_pairs": {
+     "thumb.L_01 vs finger4.L_02+finger4.L_03": 408,
+     "thumb.L_01 vs finger4.L_03": 215,
+     "lower_arm.R vs wrist_transition.R": 79,
+     "finger2.L_02+finger2.L_03 vs finger3.L_02+finger3.L_03": 62,
+     "finger3.L_02 vs finger4.L_02": 45,
+     "finger2.L_02 vs finger3.L_02": 40
+    },
+    "grasp_fail_samples": 4,
+    "weapon_body_max_m": 0.0,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        0,
+        10
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 0.0,
+       "float_m": 8.092309872154146e-05
+      },
+      {
+       "window": [
+        26,
+        88
+       ],
+       "slide_m": 0.01728559583287502,
+       "penetration_m": 0.0,
+       "float_m": 4.390242975205183e-05
+      },
+      {
+       "window": [
+        102,
+        150
+       ],
+       "slide_m": 0.009897131155708668,
+       "penetration_m": 0.00015931305824778974,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        256
+       ],
+       "slide_m": 2.453895066136556e-05,
+       "penetration_m": 0.0,
+       "float_m": 3.89665256079752e-05
+      },
+      {
+       "window": [
+        270,
+        299
+       ],
+       "slide_m": 1.639133827241486e-05,
+       "penetration_m": 0.0004861899942625314,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        22
+       ],
+       "slide_m": 5.728193205853539e-06,
+       "penetration_m": 8.24544404167682e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        38,
+        150
+       ],
+       "slide_m": 0.020274579461823497,
+       "penetration_m": 5.436252467916347e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        264
+       ],
+       "slide_m": 2.6071490397167524e-05,
+       "penetration_m": 2.341149956919253e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        278,
+        299
+       ],
+       "slide_m": 1.6424028840643097e-05,
+       "penetration_m": 0.0005676495493389666,
+       "float_m": 0.0
+      }
+     ]
+    }
+   },
+   "fx": {
+    "glb": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a03/fx/ro_skill_effects.glb",
+     "bytes": 47012,
+     "sha256": "73aa9350037040ecea1de07de36255cfa3a0d6a002c81395c9ebf3ebf4397558"
+    },
+    "objects": 25,
+    "triangles": 344,
+    "windows": {
+     "bash_arc": [
+      98,
+      126
+     ],
+     "magnum": [
+      172,
+      200
+     ],
+     "endure": [
+      205,
+      258
+     ],
+     "victory": [
+      268,
+      289
+     ]
+    }
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a03-used.py"
+  },
+  "a04": {
+   "author": {
+    "spec_sha256": "a6359dbaf0f27ebae43afa729eadcf2275519513a4404f800ed96fa34f1e61cf",
+    "ik": {
+     "frames_with_arm_ik": 156,
+     "max_wrist_error_mm": 0.00024405627480386492,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      62.00664294591016
+     ],
+     "elbow_angle_deg_range": [
+      120.67419765189784,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004014929782877907,
+     "knee_angle_deg_range": [
+      97.51728138423752,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a04/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": "stopped before completion (superseded by a07); folders removed",
+   "fx": {
+    "glb": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a04/fx/ro_skill_effects.glb",
+     "bytes": 47016,
+     "sha256": "90d2dff2b28b5f5e7acaf989e7138c6a21d5b1b9d343f01d735b2622dfc4df04"
+    },
+    "objects": 25,
+    "triangles": 344,
+    "windows": {
+     "bash_arc": [
+      98,
+      126
+     ],
+     "magnum": [
+      172,
+      200
+     ],
+     "endure": [
+      205,
+      258
+     ],
+     "victory": [
+      268,
+      289
+     ]
+    }
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a04-used.py"
+  },
+  "a05": {
+   "author": {
+    "spec_sha256": "07defac34c4e3ed3aa9c3e867a91ee25ccb2cbe475b399bc85352d0e0be3e047",
+    "ik": {
+     "frames_with_arm_ik": 156,
+     "max_wrist_error_mm": 0.00024405627480386492,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      62.00664294591016
+     ],
+     "elbow_angle_deg_range": [
+      120.67419765189784,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004014929782877907,
+     "knee_angle_deg_range": [
+      97.51728138423752,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a05/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": "stopped before completion (superseded by a07); folders removed",
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a05-used.py"
+  },
+  "a06": {
+   "author": {
+    "spec_sha256": "b9a7a2474ce7279ab3dd72a2335c4d7ca94d4320bcdcb2f7f7ae88f550ab2d99",
+    "ik": {
+     "frames_with_arm_ik": 35,
+     "max_wrist_error_mm": 0.00012338530392705794,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      15.519446549076253
+     ],
+     "elbow_angle_deg_range": [
+      147.2641650718925,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004014929782877907,
+     "knee_angle_deg_range": [
+      97.51728138423752,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a06/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a06-used.py"
+  },
+  "a07": {
+   "author": {
+    "spec_sha256": "e00c33c59991bff71c6ec30294ad5e4b906e1df13412e1c0b4c4889aff5696a8",
+    "ik": {
+     "frames_with_arm_ik": 35,
+     "max_wrist_error_mm": 0.00012338530392705794,
+     "wrist_bend_deg_range": [
+      12.964996780626503,
+      15.519446549076253
+     ],
+     "elbow_angle_deg_range": [
+      147.2641650718925,
+      154.51506657402135
+     ],
+     "arm_solver": "swing",
+     "frames_with_leg_ik": 568,
+     "max_ankle_error_mm": 0.004014929782877907,
+     "knee_angle_deg_range": [
+      97.51728138423752,
+      177.80198183215452
+     ]
+    },
+    "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend"
+   },
+   "check": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07-check-b20/clip-check.json",
+    "script_sha256": "5c6482d6c0f2f07745aa7528dcacfd8ee4dd3e437b5d4a26aa4d8020981c28d1",
+    "samples": 671,
+    "gates": {
+     "clip_time_origin_zero": true,
+     "helper_bones_not_keyed": true,
+     "no_collapse": false,
+     "hand_self_intersection_zero": true,
+     "hand_other_new_intersection_zero": true,
+     "feet_slide": true,
+     "feet_penetration": true,
+     "feet_float": true,
+     "weapon_body_penetration": true,
+     "grasp_functional": false
+    },
+    "collapse_samples": 254,
+    "min_area_ratio": 0.0023,
+    "collapse_ranges": [
+     [
+      18.5,
+      19.5,
+      0.0422
+     ],
+     [
+      28.0,
+      30.5,
+      0.0317
+     ],
+     [
+      59.5,
+      60.5,
+      0.0317
+     ],
+     [
+      64.0,
+      67.0,
+      0.0334
+     ],
+     [
+      109.5,
+      109.5,
+      0.04
+     ],
+     [
+      125.5,
+      125.5,
+      0.0402
+     ],
+     [
+      150.75,
+      252.5,
+      0.0023
+     ],
+     [
+      267.75,
+      272.5,
+      0.0072
+     ],
+     [
+      286.0,
+      286.0,
+      0.006
+     ],
+     [
+      296.0,
+      296.0,
+      0.0371
+     ]
+    ],
+    "collapse_sites": {
+     "28476 upper_arm.R": 212,
+     "17737 upper_leg.R": 13,
+     "27505 clavicle.L": 11,
+     "14049 coat.R/pelvis": 11,
+     "21830 lower_arm.L/upper_arm.L": 7,
+     "21225 clavicle.R/upper_arm.R": 7,
+     "29059 upper_arm.R": 7,
+     "14581 coat.R/pelvis": 6
+    },
+    "hand_fail_samples": 0,
+    "hand_pairs": {},
+    "grasp_fail_samples": 3,
+    "weapon_body_max_m": 0.0,
+    "feet": {
+     "L": [
+      {
+       "window": [
+        0,
+        10
+       ],
+       "slide_m": 0.0,
+       "penetration_m": 0.0,
+       "float_m": 8.092309872154146e-05
+      },
+      {
+       "window": [
+        26,
+        88
+       ],
+       "slide_m": 2.5050992643041917e-05,
+       "penetration_m": 0.0,
+       "float_m": 4.3876458221348e-05
+      },
+      {
+       "window": [
+        102,
+        150
+       ],
+       "slide_m": 5.926794829141257e-05,
+       "penetration_m": 0.00015927109052427113,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        256
+       ],
+       "slide_m": 2.453895066136556e-05,
+       "penetration_m": 0.0,
+       "float_m": 3.89665256079752e-05
+      },
+      {
+       "window": [
+        270,
+        299
+       ],
+       "slide_m": 1.639133827241486e-05,
+       "penetration_m": 0.0004861899942625314,
+       "float_m": 0.0
+      }
+     ],
+     "R": [
+      {
+       "window": [
+        0,
+        22
+       ],
+       "slide_m": 5.728193205853539e-06,
+       "penetration_m": 8.24544404167682e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        38,
+        150
+       ],
+       "slide_m": 4.669238617034873e-05,
+       "penetration_m": 5.4412968893302605e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        172,
+        264
+       ],
+       "slide_m": 2.6071490397167524e-05,
+       "penetration_m": 2.341149956919253e-05,
+       "float_m": 0.0
+      },
+      {
+       "window": [
+        278,
+        299
+       ],
+       "slide_m": 1.6424028840643097e-05,
+       "penetration_m": 0.0005676495493389666,
+       "float_m": 0.0
+      }
+     ]
+    }
+   },
+   "fx": {
+    "glb": {
+     "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07/fx/ro_skill_effects.glb",
+     "bytes": 47008,
+     "sha256": "950bada6eccb5ebac233918166d8f3ec1e806df15da166557ceaaf21ac0b6360"
+    },
+    "objects": 25,
+    "triangles": 344,
+    "windows": {
+     "bash_arc": [
+      98,
+      126
+     ],
+     "magnum": [
+      172,
+      200
+     ],
+     "endure": [
+      205,
+      258
+     ],
+     "victory": [
+      268,
+      289
+     ]
+    }
+   },
+   "closed_loop": {
+    "export_manifest": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07-closed-loop/runtime-manifest.json",
+    "readback": {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07-closed-loop/roundtrip-an_ro_combo_provoke_bash_magnum_endure_victory_a07_baked_owner_exact_weights.json",
+     "pass": true
+    },
+    "runtime": {
+     "results": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261007t040116z-runtime-results.json",
+     "pass": true,
+     "summary": {
+      "runtime_owner_max_error_m": 6.032500574846547e-06,
+      "blend_max_error_m": 1.7489106766804566e-06,
+      "baked_owner_max_error_m": 6.032500574846547e-06,
+      "frames": 54,
+      "max_rule_weight_difference": 9.224545522990013e-06
+     }
+    }
+   },
+   "spec_generator": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a07-used.py"
+  }
+ },
+ "tool_changes": [
+  "scripts/cv1_author_clip.py: a partial named pose blends from the bone's current rotation (an earlier pose), not from rest",
+  "scripts/cv1_fx_layer.py: new separate effects layer builder (procedural FX meshes keyed to the clip events)",
+  "scripts/cv1_p4_scenarios.py / cv1_p4_manifest.py: Idle->Combo and Combo->Idle pairs, Combo clip export mapping"
+ ],
+ "diagnostics": [
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/arm-pose-probe-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/blade-solve-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/chop-sword-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/clip-frame-probe-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/guard-collapse-probe-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/guard-collapse-probe2-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/reach-probe-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/roll-solve-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a01-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a02-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a03-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a04-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a05-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a06-used.py",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/prep/spec-a07-used.py"
+ ],
+ "hyper3d": {
+  "used": false,
+  "balance_readonly": {
+   "observed_utc": "2026-10-07T02:36:09Z",
+   "balance": 224,
+   "charged": false
+  },
+  "reason": "the combo is a skeletal clip and the effects are procedural meshes; no generation input was needed"
+ },
+ "known_deviations": [
+  "slash end sweeps down to the front-right instead of the action sheet's forward-down cut: the frozen grasp holds the blade roughly opposite the forearm",
+  "the magnum chop is the raised two-hand guard pressed down by a 45 deg body lean; the blade ends near horizontal, not into the ground",
+  "the frozen two_hand_chop pose alone collapses triangle 28476 (upper_arm.R, area ratio 0.047) on b20 with the correctives on: every guard sample carries it"
+ ]
+}

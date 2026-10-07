@@ -561,6 +561,99 @@
      "驗證失敗"
     ]
    }
+  },
+  {
+   "utc_date": "2026-10-07",
+   "recorded_utc": "2026-10-07T02:34:00Z",
+   "text": "合併 PR 7; 案照建議做",
+   "covers": [
+    "合併 PR #7（codex/art-quality-loop → main，merge commit 08c454e）",
+    "依建議開始連段片段（P3 剩餘項）：規格整理、Hyper3D 餘額唯讀查詢，付費提交前保存 operation ID 並回報預計扣點；連段完成後再決定 P5"
+   ],
+   "not_covered": [
+    "push 到 main 的其他變更、force push、刪除分支",
+    "Hyper3D 加購或升級方案",
+    "放寬門檻或豁免、重開 r010、r7"
+   ]
+  },
+  {
+   "utc_date": "2026-10-07",
+   "recorded_utc": "2026-10-07T03:59:08Z",
+   "text": "h1",
+   "covers": [
+    "連段 a07 以已知失敗結案（比照第 26 筆 D2）：collapse 254/671 取樣（184 個是凍結 two_hand_chop 姿勢在 b20 自帶的三角形 28476，面積比 0.047；其餘為皺褶區）、握持 3 個過渡取樣（單點穿入 6–40 mm）；門檻不放寬，位置與原因記錄給下一版 foundation",
+    "接著做連段的匯出、runtime 閉環、P4 轉場表補 Idle->Combo->Idle，再送美術審查"
+   ],
+   "not_covered": [
+    "H2 的進一步修訂、修改凍結姿勢或 foundation",
+    "commit／push",
+    "P5",
+    "放寬任何門檻"
+   ]
+  },
+  {
+   "utc_date": "2026-10-07",
+   "recorded_utc": "2026-10-07T05:57:27Z",
+   "text": "可接受",
+   "covers": [
+    "使用者接受本 chat 呈現的連段 a07 combo-review-sheet.png 與 run-07 milestone-04-sheet.png 的美術審查圖；接受範圍為這兩張審查圖，D2／G1／H1 已知失敗保留",
+    "記錄美術接受狀態，整理具體 commit／push 分組供使用者下一步授權"
+   ],
+   "art_review_artifacts": [
+    {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/combo-review-sheet.png",
+     "sha256": "bfab13c9250a8280fccd25e9f4eb021ebfe0e1efdfcbb43cf82733062aac2a37"
+    },
+    {
+     "path": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet.png",
+     "sha256": "7ea2c345055da2d3b14d9050cc27935bb14bef2d4fe721159e554bf5f90efe95"
+    }
+   ],
+   "not_covered": [
+    "stage／commit／push／PR／merge",
+    "P5 凍結／holdout",
+    "runtime closed_loop_gate 18.731 µm > 10 µm 的失敗改判、豁免或門檻放寬",
+    "修改 b20 foundation、two_hand_chop、重開 r010 或 r7",
+    "將審查圖接受宣稱為逐幀影片、可見 runtime 操作或完整技術驗收通過"
+   ]
+  },
+  {
+   "utc_date": "2026-10-07",
+   "recorded_utc": "2026-10-07T06:09:37Z",
+   "text": "授權 commit／push",
+   "covers": [
+    "依六組清單分組 stage／commit 現有連段工具、a01–a07 產物、Combo QA／runtime、P4 run-06／run-07 與背景 runtime、PR #7 封存紀錄、美術接受與延續時鐘；包含必要提交檢查與本次推送收據",
+    "Git 與 LFS 推送至 origin 的 codex/art-quality-loop；封存失敗證據，不代表 runtime 或完整技術驗收通過"
+   ],
+   "authorization_envelope": {
+    "destination": "git@github.com:monkey1sai/mmo-asset-pipeline.git refs/heads/codex/art-quality-loop 與其 LFS 儲存；PUBLIC repo 已於本次唯讀核對",
+    "purpose": "封存使用者已接受的 a07／P4 審查圖、現有產物與完整失敗證據",
+    "allowed_operations": [
+     "git add 明確分組清單",
+     "git commit",
+     "git lfs push origin <commit>",
+     "git push origin <commit>:refs/heads/codex/art-quality-loop（只快轉）",
+     "唯讀 git ls-remote、gh repo view 與 Git／LFS 狀態核對",
+     "必要提交檢查、授權／時鐘及推送收據的封存提交"
+    ],
+    "data_transmitted": "已核對清單的程式、BLEND／GLB／PNG／float32 參考、規格、QA JSON、失敗紀錄、授權與時鐘；不包含憑證或 signed URL",
+    "forbidden_operations": [
+     "push 到 main、force push、PR 建立或合併",
+     "修改可見性、額度、憑證、全域 Git 設定、hook 或權限",
+     "P5、foundation／two_hand_chop／r010 變更、門檻放寬或失敗改判"
+    ],
+    "stop_conditions": [
+     "首筆推送前 origin 分支不在 75b8950f4ffd14ef990899714116877ef46495f4",
+     "未解釋的密鑰樣式命中或獨立審查 HIGH／CRITICAL 阻礙",
+     "stage 與工作檔的 byte／LFS hash 不符、非快轉或 LFS 配額／大小被拒",
+     "提交檢查失敗；已明列且不改判的 D2／G1／H1 與 runtime gate 失敗屬封存內容"
+    ]
+   },
+   "not_covered": [
+    "PR／merge／main push／force push",
+    "P5 凍結／holdout",
+    "任何技術失敗的豁免、門檻放寬或 release 宣稱"
+   ]
   }
  ],
  "protected_zone": {

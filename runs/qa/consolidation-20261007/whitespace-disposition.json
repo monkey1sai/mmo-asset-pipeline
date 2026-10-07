@@ -1,0 +1,10 @@
+{
+  "standard_check": "git -c core.whitespace=cr-at-eol diff --cached --check",
+  "exit_code": 2,
+  "findings": [
+    {"path": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-30.json", "line": 144, "finding": "new blank line at EOF"},
+    {"path": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-31.json", "line": 159, "finding": "new blank line at EOF"}
+  ],
+  "disposition": "Preserve these two historical records byte for byte; do not rewrite SHA-bound original evidence for whitespace cleanup. Check all other staged paths with the ordinary whitespace rules. No repo/global Git configuration change.",
+  "classification": "Historical formatting findings, not new application defects or art/runtime acceptance."
+}

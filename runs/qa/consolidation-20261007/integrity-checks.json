@@ -1,0 +1,51 @@
+{
+  "artifact_checks": [
+    {
+      "manifest": "deliveries/cl-barracks-set-v1/v1/manifest.json",
+      "unique_artifacts": 16,
+      "problems": []
+    },
+    {
+      "manifest": "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/p4-manifest.json",
+      "unique_artifacts": 12,
+      "problems": []
+    },
+    {
+      "manifest": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-p4-results.json",
+      "unique_artifacts": 21,
+      "problems": []
+    },
+    {
+      "manifest": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t054356z-background-execution.json",
+      "unique_artifacts": 1,
+      "problems": []
+    }
+  ],
+  "scan_dispositions": [
+    {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/merged/transition-reference.f32.bin",
+      "offset": 34293239,
+      "pattern": "signed_url",
+      "match_bytes": 94,
+      "nonprintable_bytes": 55,
+      "utf8_valid": false,
+      "http_scheme_in_surrounding_1k": false,
+      "match_sha256": "f210a7755a01ef92b3af13d2d131608d9ecdc97cadb0ee4d9d61aea2038b1c84",
+      "disposition": "binary float32 regex false positive"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/p4/run-07/shard-4/transition-reference.f32.bin",
+      "offset": 6782063,
+      "pattern": "signed_url",
+      "match_bytes": 94,
+      "nonprintable_bytes": 55,
+      "utf8_valid": false,
+      "http_scheme_in_surrounding_1k": false,
+      "match_sha256": "f210a7755a01ef92b3af13d2d131608d9ecdc97cadb0ee4d9d61aea2038b1c84",
+      "disposition": "binary float32 regex false positive"
+    }
+  ],
+  "assessment_decision": "eligible_for_delivery_review",
+  "assessment_blockers": [],
+  "scope": "Local byte/hash/evidence-contract checks only; historical failures and runtime/art claims unchanged."
+}

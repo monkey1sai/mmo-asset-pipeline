@@ -1,0 +1,52 @@
+{
+ "request": {
+  "path": "requests/ro-swordsman-character-v1-r6.json",
+  "bytes": 52961,
+  "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+ },
+ "gate_m": 1e-05,
+ "gate_source": "requests/ro-swordsman-character-v1-r6.json#runtime_contract.tolerances_m.runtime_cpu_evaluated_world",
+ "reference": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07-closed-loop/blender-reference.json",
+  "bytes": 424567,
+  "sha256": "e3ec47ab6e18dd64b31271fbbb5f40cfd322b11f3aebbf61ae819bff80bc1458"
+ },
+ "reference_binary": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07-closed-loop/blender-reference.f64.bin",
+  "bytes": 41272440,
+  "sha256": "e1fd8e6bf0a65d77236c9d4c0bf632c24a0e0720a66cf6dac5d8732072855bc9"
+ },
+ "rules": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+  "bytes": 39213,
+  "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+ },
+ "glb": {
+  "runtime_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07/export/an_ro_combo_provoke_bash_magnum_endure_victory_a07_runtime_owner_stripped_exact_weights.glb",
+   "bytes": 28673028,
+   "sha256": "f1c2a36d6e610be3ed9ea658df368367b60b0d0e7459110b3b8b38a09f514502"
+  },
+  "baked_owner": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a07/export/an_ro_combo_provoke_bash_magnum_endure_victory_a07_baked_owner_exact_weights.glb",
+   "bytes": 4092752,
+   "sha256": "35a0b17192e9926bf5fa60d1fb176e1f15a3a2c1cb54b26c9b2b61201c74e660"
+  }
+ },
+ "capture": [
+  [
+   0,
+   "whole"
+  ],
+  [
+   0,
+   "hands"
+  ],
+  [
+   150,
+   "whole"
+  ]
+ ],
+ "note": "Clip closed loop for AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory a07 (scripts/cv1_clip_pipeline.py). Exact-weight GLBs; helper channels stripped from the runtime-owner GLB.",
+ "sword_socket": null
+}

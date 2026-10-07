@@ -1,0 +1,274 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-07T02:03:02Z",
+ "milestone": 4,
+ "status": "numerically closed with known failures (entry 26: D2, G1): run-05 115/164 scenarios pass; the others fail the collapse gate at crease regions, five also the feet gate at the leg's reach; runtime P4 passes; art review accepted by the user (entry 27); not committed",
+ "authorization": "entries 24 (P4), 25 (A1 B1 C1, E keep, F agreed) and 26 (D2, G1, v001 trial cap 129,600 s) in runs/qa/ro-swordsman-character-v1/authorizations.json",
+ "previous_records": [
+  "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run01.json",
+  "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress-run04.json"
+ ],
+ "known_failures": {
+  "D2": "collapse gate kept strict; crease sites recorded for the next foundation revision (see findings collapse_classes and p4-decisions-d-20261006.json)",
+  "G1": "feet gate kept strict; Run->Walk at 1.5x (100/400 ms) and the Walk<->Run repeated switch exceed the leg's reach"
+ },
+ "review_sheet": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet.png",
+ "runs": {
+  "run_01": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-01/merged/transition-check.json",
+   "passed": "61/164",
+   "by_pair": {
+    "Cast->Idle": "9/9",
+    "GetUp->Idle": "0/9 failing {'bed_clearance': 9, 'no_collapse': 1, 'feet_slide': 3, 'weapon_body': 1, 'grasp': 1}",
+    "Idle->Cast": "18/18",
+    "Idle->LieDown": "0/18 failing {'bed_clearance': 18, 'no_collapse': 4, 'feet_slide': 6, 'weapon_body': 2, 'grasp': 2}",
+    "Idle->Walk": "0/18 failing {'feet_slide': 18}",
+    "Idle<->Walk repeated": "0/1 failing {'feet_slide': 1, 'continuity': 1}",
+    "LieDown->Sleep": "8/9 failing {'weapon_body': 1, 'bed_clearance': 1}",
+    "Run->Walk": "0/18 failing {'no_collapse': 9, 'feet_slide': 18}",
+    "Sleep->GetUp": "8/9 failing {'no_collapse': 1, 'weapon_body': 1, 'bed_clearance': 1}",
+    "Walk->Cast(upper)->Walk": "18/18",
+    "Walk->Idle": "0/18 failing {'no_collapse': 4, 'feet_slide': 18}",
+    "Walk->Run": "0/18 failing {'no_collapse': 7, 'feet_slide': 18}",
+    "Walk<->Run repeated": "0/1 failing {'no_collapse': 1, 'feet_slide': 1, 'continuity': 1}"
+   }
+  },
+  "run_02": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-02/merged/transition-check.json",
+   "note": "A1 first version: a lock released when a fading-out layer lifted the foot (slides up to 40 mm) and Idle's straight knee bent sideways; superseded"
+  },
+  "run_03": {
+   "note": "stopped at about 10:29 after the knee fix (superseded by run-04); its shard folders stay empty"
+  },
+  "run_04": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/transition-check.json",
+   "feet_recheck": "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/feet-recheck.json",
+   "note": "115/164 after the corrected feet rule (stored 117: the stored rule let lifted locked feet leave their runs); superseded by run-05"
+  },
+  "run_05": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-05/merged/transition-check.json",
+   "scenarios_file": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions-04.json",
+   "feet_recheck_agrees": "runs/qa/ro-swordsman-character-v1/v001/p4/run-05/merged/feet-recheck.json",
+   "passed": "115/164",
+   "by_pair": {
+    "Cast->Idle": "9/9",
+    "GetUp->Idle": "5/9 failing {'no_collapse': 4}",
+    "Idle->Cast": "18/18",
+    "Idle->LieDown": "12/18 failing {'no_collapse': 6}",
+    "Idle->Walk": "12/18 failing {'no_collapse': 6}",
+    "Idle<->Walk repeated": "0/1 failing {'no_collapse': 1}",
+    "LieDown->Sleep": "9/9",
+    "Run->Walk": "4/18 failing {'no_collapse': 12, 'feet_slide': 4}",
+    "Sleep->GetUp": "9/9",
+    "Walk->Cast(upper)->Walk": "18/18",
+    "Walk->Idle": "7/18 failing {'no_collapse': 11}",
+    "Walk->Run": "12/18 failing {'no_collapse': 6}",
+    "Walk<->Run repeated": "0/1 failing {'no_collapse': 1, 'feet_slide': 1}"
+   },
+   "script_sha256": "46031575b4cbed96682de0b788605154b4ea8667f09431c1650e064a407455db",
+   "modules": {
+    "cv1_interaction.py": "09d2ce6cf5ebcf9c40fe875d57dc1d4ffa2859a32f505c259d6bf77ecf0c5d30",
+    "cv1_pose_rules.py": "04121ff0b7f72ea65dc26a307606cf56fc2688d25bf1cbd6a7b8e28e9fc158d2",
+    "cv1_transition.py": "d10c6917851d35c8524c9f1cc0ec1515e984849cd4766d55ae9a54d571797f2d",
+    "cv1_foot_lock.py": "a2db2dc937622e852e4a3a33b19285ec01e8c8cc40c0439bb8fcdb2f5dc18615",
+    "cv1_soup.py": "384b8664cf5863226a32f3076c2e4e70bf4cfa488ef1d03c4a2ad70c6be22440",
+    "cv1_contract_pose.py": "1855f8b0dad546630ebcc281d6552fa6e05785928bbdc63c90f66cb375b35b99",
+    "ro_certified_grasp_gate.py": "3bf87eeecf4db8d37a7f5fe40887a135ac1c2bd487bfd7be4f60089176527872"
+   }
+  }
+ },
+ "decisions_applied": {
+  "A1": "scripts/cv1_foot_lock.py + src/cv1-foot-lock.js: lock while every leg layer has the foot in stance during a fade; held while any leg layer keeps it down; released over 0.12 s in the air; settle step (0.3 s, lift min(40 mm, half the offset)) when the remaining layer never lifts the foot; knee hinge = leg plane + 0.2 x toe-pole plane (Idle's 178 deg knee bends towards the toes); Idle->Walk enters Walk at the right foot's mid-stance (as Walk<->Run match feet)",
+  "B1": "coat exemption when every bed-clip leg layer is seated (other layers neutral)",
+  "C1": {
+   "rule": "entry fades end by the target's first socket/bed event; exit fades from non-loop clips start after the last event",
+   "changed": [
+    {
+     "id": "idle-liedown-p0-b400-s1.5",
+     "nominal_blend_s": 0.4,
+     "rule": "C1 (authorization entry 25)",
+     "shortened_from_s": 0.4,
+     "target_event_frame": 30,
+     "blend_s": 0.3333333333333333
+    },
+    {
+     "id": "idle-liedown-p60-b400-s1.5",
+     "nominal_blend_s": 0.4,
+     "rule": "C1 (authorization entry 25)",
+     "shortened_from_s": 0.4,
+     "target_event_frame": 30,
+     "blend_s": 0.3333333333333333
+    },
+    {
+     "id": "liedown-sleep-end-b400-s1.5",
+     "nominal_blend_s": 0.4,
+     "rule": "C1 (authorization entry 25)",
+     "exit_moved_from_frame": 53.0,
+     "blend_s": 0.4
+    },
+    {
+     "id": "getup-idle-end-b400-s1.5",
+     "nominal_blend_s": 0.4,
+     "rule": "C1 (authorization entry 25)",
+     "exit_moved_from_frame": 53.0,
+     "blend_s": 0.4
+    },
+    {
+     "id": "sleep-getup-wrap-b400-s1.5",
+     "nominal_blend_s": 0.4,
+     "rule": "C1 (authorization entry 25)",
+     "shortened_from_s": 0.4,
+     "target_event_frame": 27,
+     "blend_s": 0.3
+    }
+   ]
+  }
+ },
+ "findings_run_04": {
+  "feet_slide_worst_mm": {
+   "Cast->Idle": 0.0,
+   "GetUp->Idle": 0.74,
+   "Idle->Cast": 0.0,
+   "Idle->LieDown": 0.0,
+   "Idle->Walk": 6.08,
+   "Idle<->Walk repeated": 4.24,
+   "LieDown->Sleep": 0.0,
+   "Run->Walk": 33.96,
+   "Sleep->GetUp": 0.0,
+   "Walk->Cast(upper)->Walk": 0.05,
+   "Walk->Idle": 2.61,
+   "Walk->Run": 0.26,
+   "Walk<->Run repeated": 53.14
+  },
+  "settle_steps": {
+   "count": 83,
+   "lift_mm_max": 97.5,
+   "travel_mm_max": 354.8
+  },
+  "contact_slide_diagnostic_worst_mm": {
+   "Cast->Idle": 0.0,
+   "GetUp->Idle": 194.4,
+   "Idle->Cast": 0.0,
+   "Idle->LieDown": 203.0,
+   "Idle->Walk": 83.7,
+   "Idle<->Walk repeated": 18.8,
+   "LieDown->Sleep": 0.0,
+   "Run->Walk": 50.3,
+   "Sleep->GetUp": 0.0,
+   "Walk->Cast(upper)->Walk": 23.1,
+   "Walk->Idle": 62.6,
+   "Walk->Run": 50.5,
+   "Walk<->Run repeated": 2.1
+  },
+  "contact_diagnostic_note": "not a gate: sole near the floor whatever the stance windows say; includes the clips' own pivot turns and swing feet blended with a planted foot",
+  "collapse_classes": {
+   "GetUp->Idle|folded_in_clip": 2,
+   "GetUp->Idle|foot_lock": 6,
+   "Idle->LieDown|blend": 2,
+   "Idle->LieDown|folded_in_clip": 5,
+   "Idle->LieDown|foot_lock": 2,
+   "Idle->Walk|foot_lock": 10,
+   "Idle<->Walk repeated|foot_lock": 1,
+   "Run->Walk|blend": 2,
+   "Run->Walk|folded_in_clip": 10,
+   "Run->Walk|foot_lock": 4,
+   "Walk->Idle|blend": 1,
+   "Walk->Idle|folded_in_clip": 3,
+   "Walk->Idle|foot_lock": 10,
+   "Walk->Run|blend": 3,
+   "Walk->Run|folded_in_clip": 3,
+   "Walk->Run|foot_lock": 2,
+   "Walk<->Run repeated|blend": 1,
+   "Walk<->Run repeated|folded_in_clip": 1
+  },
+  "collapse_class_definitions": "foot_lock: under 5 % only with the lock; folded_in_clip: under 5 % without the lock too and some layer alone has the triangle folded or under 5 %; blend: under 5 % without the lock while every layer alone is open and above 5 %"
+ },
+ "runtime": {
+  "results": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261007t015832z-p4-results.json",
+  "pass": true,
+  "verdicts": {
+   "closed_loop_gate": true,
+   "closed_loop_frames_weights_match": true,
+   "foot_lock_targets_match": true,
+   "sockets_match": true,
+   "determinism": true,
+   "loop_seams": true,
+   "repeated_switch_continuous": true,
+   "negative_controls_detected": true
+  },
+  "closed_loop": {
+   "blocks": 99,
+   "max_error_um": 4.217,
+   "foot_target_max_diff_m": 1.2269188232050254e-06
+  },
+  "determinism": {
+   "comparisons": 150,
+   "max_m": 0,
+   "diagnostic_mixer_time_advance_vs_lock_free_seek_max_m": 1.5991228341505348e-08
+  },
+  "negative_controls": {
+   "NC_correctives_off": {
+    "expected_failing_gate": "closed_loop",
+    "detected": true
+   },
+   "NC_missing_bone_mapping": {
+    "expected_failing_gate": "closed_loop",
+    "detected": true
+   },
+   "NC_stateful_crossfade": {
+    "expected_failing_gate": "determinism",
+    "detected": true
+   },
+   "NC_foot_lock_off": {
+    "expected_failing_gate": "closed_loop",
+    "detected": true
+   }
+  },
+  "cost": {
+   "evaluate": {
+    "mean_ms": 0.5641666670019428,
+    "p95_ms": 0.8999999985098839,
+    "max_ms": 2.100000001490116
+   },
+   "render_960": {
+    "mean_ms": 0.3683333331098159,
+    "p95_ms": 0.8999999985098839,
+    "max_ms": 6.600000001490116
+   },
+   "note": "This machine in the desktop browser pane; test condition, not a performance promise."
+  },
+  "machine": {
+   "three": "186",
+   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/2.19675.1 Chrome/152.0.7977.130 Safari/537.36 MSIX",
+   "hardware_concurrency": 20,
+   "device_memory_gb": 32,
+   "webgl": {
+    "vendor": "Google Inc. (NVIDIA)",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+   }
+  }
+ },
+ "not_done": [
+  "foundation fix of the crease regions (D1, not chosen)",
+  "Idle->Combo->Idle (combo clip: P3 remainder, not authorised)",
+  "art review of the transitions (milestone-04-sheet.png)",
+  "independent gray grasp acceptance (not planned in P4)",
+  "commit/push (not covered by entries 24-26)"
+ ],
+ "evidence_scripts": {
+  "generator": "runs/qa/ro-swordsman-character-v1/v001/p4/progress-06-used.py",
+  "compare": "runs/qa/ro-swordsman-character-v1/v001/p4/compare-runs-used.py",
+  "collapse_classes": "runs/qa/ro-swordsman-character-v1/v001/p4/classify-collapse-used.py",
+  "feet_recheck": "runs/qa/ro-swordsman-character-v1/v001/p4/feet-recheck-used.py",
+  "sheet": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-sheet-used.py"
+ },
+ "art_review": {
+  "accepted_utc": "2026-10-07T02:22:49Z",
+  "user_text": "接受第四里程碑的轉場",
+  "authorization": "entry 27",
+  "reviewed": [
+   "p4/milestone-04-sheet.png",
+   "QA scene p4.html run-05 manifest"
+  ]
+ }
+}

@@ -1,0 +1,96 @@
+{
+  "mode": "evidence_contract_check_only",
+  "request_id": "cl-barracks-set-v1",
+  "request_sha256": "60573438cc8eb6dfca0235fb574e48635b5651a0d8ae870d6c543fcfe7a27ecf",
+  "delivery_scope": "target_environment",
+  "checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "module_fit",
+      "area": "technical",
+      "description": "模組接合邊、間隙及重用規格經檢查",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "target_environment",
+      "area": "target_environment",
+      "description": "指定目標環境版本及情境實測通過",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "roof-separable",
+      "area": "technical",
+      "description": "GLB 內屋頂為獨立命名節點 barracks-roof，遊戲端可單獨 SetActive(false) 而牆身不受影響",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "footprint-matches-layout",
+      "area": "technical",
+      "description": "牆身腳印 = layout.ts 矩形（13×15 m）每邊內縮 0.3 m（castle.ts buildBarracks 的 span），即 12.4×14.4 m ±0.1；屋頂外框超出矩形每邊 1.225 m（BARRACKS_ROOF_OVERHANG，含角飾）±0.05；屋脊頂 7.57 m ±0.1；火盆底面落在 1.2 m 碰撞矩形內",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "pivot-ground-centre",
+      "area": "technical",
+      "description": "每個資產原點在腳印中心、y=0；向上 +Y、前方 +Z，匯入 Unity 後不需額外旋轉／縮放",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "no-external-deps",
+      "area": "technical",
+      "description": "GLB 不引用外部貼圖／bin；無 extensionsRequired；材質數 ≤ 8",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "budget-measured",
+      "area": "technical",
+      "description": "以 scripts/pipeline.py inspect 量實際三角形與材質數，記入交付 manifest",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    },
+    {
+      "id": "camera-route-regression",
+      "area": "target_environment",
+      "description": "Unity 場景替換後，E09 鏡頭路線三種解析度錄影仍通過檢查（屋頂剖開／恢復、鏡頭不進建築）",
+      "declared_status": "pass",
+      "evidence_integrity": "valid"
+    }
+  ],
+  "blockers": [],
+  "decision": "eligible_for_delivery_review",
+  "target_environment_claim": "registered_evidence_only",
+  "note": "只核對已登記證據及檔案完整性；不自行判斷外觀、骨架或引擎可用，也不宣稱已交付。"
+}
