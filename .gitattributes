@@ -71,3 +71,12 @@ runs/qa/ro-swordsman-combo-r010/**/*.npz filter=lfs diff=lfs merge=lfs -text
 /scripts/build_ro_index_pulp.py -text
 /scripts/solve_ro_collision_constrained_contact.py -text
 /scripts/solve_ro_moving_target_contact.py -text
+# 常山營房交付的來源與 QA 已按原始位元組記錄 SHA；保存 CRLF，避免 clone 後證據失效。
+/assets/raw/cl-barracks-set-v1/** -text
+/assets/processed/cl-barracks-set-v1/** -text
+/deliveries/cl-barracks-set-v1/** -text
+/runs/qa/cl-barracks-set-v1/** -text
+/requests/cl-barracks-set-v1.json -text
+/runs/cl-barracks-set-v1-plan.json -text
+# 本次收斂的檢查收據保留執行時的 bytes。
+/runs/qa/consolidation-20261007/** -text
