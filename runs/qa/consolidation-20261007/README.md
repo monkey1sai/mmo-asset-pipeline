@@ -1,6 +1,6 @@
 # 2026-10-07 目前成果收斂
 
-使用者要求：「先將目前成果收斂到 origin master上」。即時查詢 origin 的預設分支為 main，master 不存在；推送目標須由使用者確認。此目錄記錄本機準備，不代表已推送。
+使用者要求：「先將目前成果收斂到 origin master上」，查明預設分支為 main 後，使用者明確選擇 `origin/main`。此目錄保存本機準備與確認後的同步範圍；授權見 target-choice.json，實際遠端同步與還原結果以執行收據為準。
 
 基準為 origin/main `08c454e6c6e7566f7a7625953773b6eb18693f5c`，已包含角色分支 `75b8950` 的既有提交。新增成果從 root 與 `tmp/art-quality-loop` 擷取，共 411 檔、374,533,881 bytes；逐檔來源、大小與 SHA-256 見 source-manifest.json。原始需求、失敗紀錄與產製 bytes 保留，不重製資產或放寬門檻。`.claude/launch.json` 是本機預覽設定，未納入。
 
@@ -25,4 +25,4 @@
 
 ## 同步邊界
 
-origin 已確認為 GitHub 公開倉庫 monkey1sai/mmo-asset-pipeline。經目標確認後，只允許正常 Git 與 LFS 同步本批成果；不 force push、不改 default branch／可見性／配額／hook／全域設定，不進行付費生成、遊戲部署或 P5。remote SHA readback 與隔離還原結果以實際同步收據為準。
+origin 已確認為 GitHub 公開倉庫 monkey1sai/mmo-asset-pipeline，使用者選擇的目的地為 `refs/heads/main`。只允許正常 Git 與 LFS 同步本批成果；不 force push、不改 default branch／可見性／配額／hook／全域設定，不進行付費生成、遊戲部署或 P5。remote SHA readback 與隔離還原結果以實際同步收據為準。

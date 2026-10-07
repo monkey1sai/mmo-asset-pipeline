@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "human_request": "先將目前成果收斂到 origin master上",
+  "human_target_confirmation": "origin/main",
+  "destination": "git@github.com:monkey1sai/mmo-asset-pipeline.git, refs/heads/main; GitHub LFS for this repository",
+  "purpose": "Consolidate the reviewed current project results into the existing main branch, preserving source bytes and failure evidence.",
+  "allowed_operations": [
+    "Task-local receipt edits and commits in the isolated consolidation worktree",
+    "git lfs push origin <fixed-commit>",
+    "Normal git push origin <fixed-commit>:refs/heads/main without force",
+    "Read-only GitHub/ref checks and a separate sparse clone with empty local LFS storage to restore the current 411-file batch",
+    "Safe fast-forward of the primary local main checkout after successful remote verification, preserving local untracked configuration and the original production worktree"
+  ],
+  "data_transmitted": "Reviewed code, models, images, float32 references, specs, QA and known failure records, authorization and consolidation receipts; no credentials or signed URLs.",
+  "forbidden_operations": [
+    "Force push, deletion, PR mutation, branch protection or visibility/default-branch changes",
+    "Quota purchase, paid generation, deployment, scheduling, P5 or technical gate waiver",
+    "Reading credentials, changing global Git settings, installing/enabling hooks, ACL or ownership changes",
+    "Resetting, cleaning or stashing unrelated work in the two original checkouts"
+  ],
+  "stop_conditions": [
+    "Unexpected remote main change from 08c454e6c6e7566f7a7625953773b6eb18693f5c before the initial push, or protected workflow required",
+    "Unexpected local/source change, Git/LFS byte mismatch, new unexplained sensitive pattern, or independent HIGH/CRITICAL finding",
+    "Non-fast-forward rejection, LFS quota/provider/auth failure, or wrong endpoint/shared storage in the restore clone",
+    "Primary checkout update would overwrite or conflict with existing local work"
+  ],
+  "preflight": {
+    "remote_main": "08c454e6c6e7566f7a7625953773b6eb18693f5c",
+    "protected": false,
+    "reviewed_candidate_before_target_receipt": "84417c8c0c8983306d3a70cbac70dae8fb7c0f0b"
+  },
+  "verification_scope": "Restore this current 411-file batch from GitHub with 341 ordinary Git blobs and 70 LFS paths; do not claim a full-history/all-assets restore."
+}
