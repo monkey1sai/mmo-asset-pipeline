@@ -1,0 +1,187 @@
+{
+  "schema": "e09-camera-video/v1",
+  "started": "2026-10-07T06:13:31.147Z",
+  "ended": "2026-10-07T06:16:07.628Z",
+  "player": "C:\\Repos\\changshan-longdan\\.worktrees\\_clones\\e10-d\\release\\e02\\e10-d\\build\\player\\ChangshanLongdan.exe",
+  "playerSha256": "437691663c5fb21231524f4886e60a10b1841f13e42fbbc93ee39fbd827930cd",
+  "mode": "e09",
+  "recordings": [
+    {
+      "size": "800x600",
+      "frames": 1005,
+      "frameRate": 30,
+      "resolution": "800x600",
+      "route": {
+        "file": "800x600\\route.json",
+        "sha256": "0d41f354c98103cf8ac1f68cd0f4c91774b613ae9adb80dadea25c565994c694",
+        "duration": 33.5,
+        "finalSimTime": 33.50000000000066,
+        "states": [
+          "Move",
+          "Jump",
+          "Attack",
+          "Musou",
+          "Down"
+        ],
+        "moves": [
+          "JA",
+          "MUSOU"
+        ]
+      },
+      "video": {
+        "file": "800x600\\route.mp4",
+        "bytes": 3986023,
+        "sha256": "683bd8967f8796f7168520b9b98d348d7e93e9edf0be8e90a9d1b230ac0a6f73"
+      },
+      "camera": {
+        "viewport": [
+          800,
+          600
+        ],
+        "renderScale": 1,
+        "blockers": 26,
+        "castleAssets": "Ready",
+        "shortenedFrames": 445,
+        "yawSpan": 2.8800000000000017,
+        "unframedFrames": 0,
+        "roofCutFrames": 74
+      },
+      "audio": {
+        "file": "800x600\\audio.wav",
+        "sha256": "261ad7fdb66b86e1dbd5794c742b20b4b22801b216f007abe2263a98a6142516",
+        "rate": 48000,
+        "samples": 1608000,
+        "check": {
+          "peak": 0.92138671875,
+          "framesWithSoundCues": 14,
+          "framesAudibleWithin100ms": 14
+        },
+        "clock": "each frame's sounds start at that frame's first sample"
+      },
+      "feedback": null,
+      "contactSheet": {
+        "file": "800x600\\contact.png",
+        "sha256": "ccb8d683597723499f9d9733f01ca306e7ceaf13601f221b9039e319be25f8b1",
+        "everySeconds": 2
+      }
+    },
+    {
+      "size": "1440x900",
+      "frames": 1005,
+      "frameRate": 30,
+      "resolution": "1440x900",
+      "route": {
+        "file": "1440x900\\route.json",
+        "sha256": "b696d73620360b51482ef8230bcc8d733d744fd7219df78e63c75e2e13aa0a87",
+        "duration": 33.5,
+        "finalSimTime": 33.50000000000066,
+        "states": [
+          "Move",
+          "Jump",
+          "Attack",
+          "Musou",
+          "Down"
+        ],
+        "moves": [
+          "JA",
+          "MUSOU"
+        ]
+      },
+      "video": {
+        "file": "1440x900\\route.mp4",
+        "bytes": 7050440,
+        "sha256": "f6c2d06e4de8a53050ffa0d92bfbd18d696519a5b98d9406205853c861968555"
+      },
+      "camera": {
+        "viewport": [
+          1440,
+          900
+        ],
+        "renderScale": 1,
+        "blockers": 26,
+        "castleAssets": "Ready",
+        "shortenedFrames": 445,
+        "yawSpan": 2.8800000000000017,
+        "unframedFrames": 0,
+        "roofCutFrames": 74
+      },
+      "audio": {
+        "file": "1440x900\\audio.wav",
+        "sha256": "a166cfc943ee3cc598eec882604c08eccc8fc4a4126dbff81f611072e2f264db",
+        "rate": 48000,
+        "samples": 1608000,
+        "check": {
+          "peak": 0.92138671875,
+          "framesWithSoundCues": 14,
+          "framesAudibleWithin100ms": 14
+        },
+        "clock": "each frame's sounds start at that frame's first sample"
+      },
+      "feedback": null,
+      "contactSheet": {
+        "file": "1440x900\\contact.png",
+        "sha256": "a6b67fa3e8e23bc1ff025ac74bd1a2092562584daf7b3f3013d4896da01b12cf",
+        "everySeconds": 2
+      }
+    },
+    {
+      "size": "1920x1080",
+      "frames": 1005,
+      "frameRate": 30,
+      "resolution": "1920x1080",
+      "route": {
+        "file": "1920x1080\\route.json",
+        "sha256": "0c71f8be6ba087f8699b437899f206d5e7157010e1cf18a7ec24a04bf41d2a69",
+        "duration": 33.5,
+        "finalSimTime": 33.50000000000066,
+        "states": [
+          "Move",
+          "Jump",
+          "Attack",
+          "Musou",
+          "Down"
+        ],
+        "moves": [
+          "JA",
+          "MUSOU"
+        ]
+      },
+      "video": {
+        "file": "1920x1080\\route.mp4",
+        "bytes": 9238263,
+        "sha256": "fe3565d5da7b189892d0d9df2ab158dc05acff1ccae5e37cd9398108595ea151"
+      },
+      "camera": {
+        "viewport": [
+          1920,
+          1080
+        ],
+        "renderScale": 1,
+        "blockers": 26,
+        "castleAssets": "Ready",
+        "shortenedFrames": 445,
+        "yawSpan": 2.8800000000000017,
+        "unframedFrames": 0,
+        "roofCutFrames": 74
+      },
+      "audio": {
+        "file": "1920x1080\\audio.wav",
+        "sha256": "261ad7fdb66b86e1dbd5794c742b20b4b22801b216f007abe2263a98a6142516",
+        "rate": 48000,
+        "samples": 1608000,
+        "check": {
+          "peak": 0.92138671875,
+          "framesWithSoundCues": 14,
+          "framesAudibleWithin100ms": 14
+        },
+        "clock": "each frame's sounds start at that frame's first sample"
+      },
+      "feedback": null,
+      "contactSheet": {
+        "file": "1920x1080\\contact.png",
+        "sha256": "bf09584c88a7e0cf4faa7b294685a631f830ab7523399f8946f5410dd248515c",
+        "everySeconds": 2
+      }
+    }
+  ]
+}

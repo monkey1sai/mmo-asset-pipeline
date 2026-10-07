@@ -1,0 +1,39 @@
+{
+  "blender": "4.5.5 LTS",
+  "spec": "C:\\Repos\\mmo-asset-pipeline\\assets\\raw\\cl-barracks-set-v1\\v1\\spec.json",
+  "assets": [
+    {
+      "asset_id": "cl-barracks",
+      "file": "assets/processed/cl-barracks-set-v1/v1\\cl-barracks.glb",
+      "parts": [
+        "barracks-body",
+        "barracks-roof"
+      ],
+      "quads": 180,
+      "triangles_expected": 360,
+      "materials": 8
+    },
+    {
+      "asset_id": "cl-brazier",
+      "file": "assets/processed/cl-barracks-set-v1/v1\\cl-brazier.glb",
+      "parts": [
+        "brazier-body",
+        "brazier-coals"
+      ],
+      "quads": 18,
+      "triangles_expected": 36,
+      "materials": 3
+    },
+    {
+      "asset_id": "cl-wreck",
+      "file": "assets/processed/cl-barracks-set-v1/v1\\cl-wreck.glb",
+      "parts": [
+        "wreck-debris",
+        "wreck-embers"
+      ],
+      "quads": 144,
+      "triangles_expected": 288,
+      "materials": 3
+    }
+  ]
+}

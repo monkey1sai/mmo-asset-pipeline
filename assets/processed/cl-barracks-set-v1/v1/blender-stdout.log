@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "C:\Program Files\Blender Foundation\Blender 4.5\4.5\scripts\modules\addon_utils.py", line 515, in enable
+    mod.register()
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\blender_org\bonsai\__init__.py", line 305, in register
+    import bonsai.bim
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\bonsai\bim\__init__.py", line 28, in <module>
+    from . import handler, operator, prop, ui
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\bonsai\bim\handler.py", line 26, in <module>
+    import ifcopenshell.api.owner.settings
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\owner\__init__.py", line 28, in <module>
+    from .add_actor import add_actor
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\owner\add_actor.py", line 23, in <module>
+    import ifcopenshell.api.root
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\root\__init__.py", line 30, in <module>
+    from .copy_class import copy_class
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\root\copy_class.py", line 21, in <module>
+    import ifcopenshell.api.geometry
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\geometry\__init__.py", line 29, in <module>
+    from .add_boolean import add_boolean
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\api\geometry\add_boolean.py", line 23, in <module>
+    import ifcopenshell.util.element
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\util\element.py", line 26, in <module>
+    import ifcopenshell.util.representation
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\util\representation.py", line 28, in <module>
+    import ifcopenshell.util.shape
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\ifcopenshell\util\shape.py", line 26, in <module>
+    import shapely
+  File "C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\.local\lib\python3.11\site-packages\shapely\__init__.py", line 15, in <module>
+    from shapely.lib import GEOSException
+ImportError: DLL load failed while importing lib: 找不到指定的模組。
+Exception in module register(): C:\Users\IOT\AppData\Roaming\Blender Foundation\Blender\4.5\extensions\blender_org\bonsai\__init__.py
+Reloading external rigs...
+Reloading external metarigs...
+BlenderMCP addon registered
+BlenderMCP addon unregistered
+Failed to remove: (<built-in function unlink>, 'C:\\Users\\IOT\\AppData\\Roaming\\Blender Foundation\\Blender\\4.5\\extensions\\.local\\lib\\python3.11\\site-packages\\charset_normalizer\\cd.cp311-win_amd64.pyd', (<class 'PermissionError'>, PermissionError(13, '存取被拒。'), <traceback object at 0x000001C5D87AAFC0>))
+Failed to remove: (<built-in function rmdir>, 'C:\\Users\\IOT\\AppData\\Roaming\\Blender Foundation\\Blender\\4.5\\extensions\\.local\\lib\\python3.11\\site-packages\\charset_normalizer', (<class 'OSError'>, OSError(41, '目錄不是空的。'), <traceback object at 0x000001C5D87A8800>))
+Failed to remove: (<built-in function unlink>, 'C:\\Users\\IOT\\AppData\\Roaming\\Blender Foundation\\Blender\\4.5\\extensions\\.local\\lib\\python3.11\\site-packages\\ifcopenshell\\_ifcopenshell_wrapper.cp311-win_amd64.pyd', (<class 'PermissionError'>, PermissionError(13, '存取被拒。'), <traceback object at 0x000001C5D7D86E40>))
+Failed to remove: (<built-in function rmdir>, 'C:\\Users\\IOT\\AppData\\Roaming\\Blender Foundation\\Blender\\4.5\\extensions\\.local\\lib\\python3.11\\site-packages\\ifcopenshell', (<class 'OSError'>, OSError(41, '目錄不是空的。'), <traceback object at 0x000001C5D7D86E40>))
+INFO Draco mesh compression is available, use library at C:\Program Files\Blender Foundation\Blender 4.5\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+13:32:30 | INFO: Starting glTF 2.0 export
+13:32:30 | INFO: Extracting primitive: barracks-body
+13:32:30 | INFO: Primitives created: 4
+13:32:30 | INFO: Extracting primitive: barracks-roof
+13:32:30 | INFO: Primitives created: 4
+13:32:30 | INFO: Finished glTF 2.0 export in 0.03746795654296875 s
+
+13:32:30 | INFO: Starting glTF 2.0 export
+13:32:30 | INFO: Extracting primitive: brazier-body
+13:32:30 | INFO: Primitives created: 2
+13:32:30 | INFO: Extracting primitive: brazier-coals
+13:32:30 | INFO: Primitives created: 1
+13:32:30 | INFO: Finished glTF 2.0 export in 0.009156227111816406 s
+
+13:32:30 | INFO: Starting glTF 2.0 export
+13:32:30 | INFO: Extracting primitive: wreck-debris
+13:32:30 | INFO: Primitives created: 2
+13:32:30 | INFO: Extracting primitive: wreck-embers
+13:32:30 | INFO: Primitives created: 1
+13:32:30 | INFO: Finished glTF 2.0 export in 0.012065410614013672 s
+
+BUILD_BOX_ASSETS_OK {"blender": "4.5.5 LTS", "spec": "C:\\Repos\\mmo-asset-pipeline\\assets\\raw\\cl-barracks-set-v1\\v1\\spec.json", "assets": [{"asset_id": "cl-barracks", "file": "assets/processed/cl-barracks-set-v1/v1\\cl-barracks.glb", "parts": ["barracks-body", "barracks-roof"], "quads": 180, "triangles_expected": 360, "materials": 8}, {"asset_id": "cl-brazier", "file": "assets/processed/cl-barracks-set-v1/v1\\cl-brazier.glb", "parts": ["brazier-body", "brazier-coals"], "quads": 18, "triangles_expected": 36, "materials": 3}, {"asset_id": "cl-wreck", "file": "assets/processed/cl-barracks-set-v1/v1\\cl-wreck.glb", "parts": ["wreck-debris", "wreck-embers"], "quads": 144, "triangles_expected": 288, "materials": 3}]}
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+
+Blender quit
