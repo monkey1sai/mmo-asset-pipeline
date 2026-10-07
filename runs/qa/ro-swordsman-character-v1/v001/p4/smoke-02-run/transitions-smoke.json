@@ -1,0 +1,813 @@
+{
+ "schema_version": 2,
+ "source": "requests/ro-swordsman-character-v1-r6.json#transition_matrix",
+ "fps_grid": 120,
+ "switch_s": 0.5,
+ "decisions": "authorization entry 25: A1 foot lock (scripts/cv1_foot_lock.py), B1 coat exemption in transitions, C1 fade timing",
+ "clips": {
+  "Idle": {
+   "clip": "AN_RO_Idle_Sword",
+   "attempt": "a03",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/a03/AN_RO_Idle_Sword.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Idle_Sword/interaction.json",
+   "frames": 120,
+   "loop": true,
+   "fps": 60,
+   "nominal_speed_m_s": 0.0,
+   "stance": {
+    "L": [
+     [
+      0,
+      119
+     ]
+    ],
+    "R": [
+     [
+      0,
+      119
+     ]
+    ]
+   },
+   "interaction_events": []
+  },
+  "Walk": {
+   "clip": "AN_RO_Walk_Sword",
+   "attempt": "a04",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/AN_RO_Walk_Sword.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/interaction.json",
+   "frames": 60,
+   "loop": true,
+   "fps": 60,
+   "nominal_speed_m_s": 1.4,
+   "stance": {
+    "L": [
+     [
+      30,
+      54
+     ]
+    ],
+    "R": [
+     [
+      0,
+      24
+     ]
+    ]
+   },
+   "interaction_events": []
+  },
+  "Run": {
+   "clip": "AN_RO_Run_Sword",
+   "attempt": "a02",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/a02/AN_RO_Run_Sword.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Run_Sword/interaction.json",
+   "frames": 40,
+   "loop": true,
+   "fps": 60,
+   "nominal_speed_m_s": 3.5,
+   "stance": {
+    "L": [
+     [
+      20,
+      29
+     ]
+    ],
+    "R": [
+     [
+      0,
+      9
+     ]
+    ]
+   },
+   "interaction_events": []
+  },
+  "Cast": {
+   "clip": "AN_RO_Cast_OpenPalm",
+   "attempt": "a04",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/a04/AN_RO_Cast_OpenPalm.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/interaction.json",
+   "frames": 90,
+   "loop": false,
+   "fps": 60,
+   "nominal_speed_m_s": 0.0,
+   "stance": {
+    "L": [
+     [
+      0,
+      89
+     ]
+    ],
+    "R": [
+     [
+      0,
+      89
+     ]
+    ]
+   },
+   "interaction_events": []
+  },
+  "LieDown": {
+   "clip": "AN_RO_LieDown",
+   "attempt": "a08",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08/AN_RO_LieDown.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/interaction.json",
+   "frames": 90,
+   "loop": false,
+   "fps": 60,
+   "nominal_speed_m_s": 0.0,
+   "stance": {
+    "L": [
+     [
+      16,
+      32
+     ]
+    ],
+    "R": [
+     [
+      16,
+      32
+     ]
+    ]
+   },
+   "interaction_events": [
+    30,
+    63
+   ]
+  },
+  "Sleep": {
+   "clip": "AN_RO_Sleep_Loop",
+   "attempt": "a04",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a04/AN_RO_Sleep_Loop.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "frames": 180,
+   "loop": true,
+   "fps": 60,
+   "nominal_speed_m_s": 0.0,
+   "stance": {
+    "L": [],
+    "R": []
+   },
+   "interaction_events": []
+  },
+  "GetUp": {
+   "clip": "AN_RO_GetUp",
+   "attempt": "a02",
+   "blend": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/a02/AN_RO_GetUp.blend",
+   "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/interaction.json",
+   "frames": 90,
+   "loop": false,
+   "fps": 60,
+   "nominal_speed_m_s": 0.0,
+   "stance": {
+    "L": [
+     [
+      58,
+      73
+     ]
+    ],
+    "R": [
+     [
+      58,
+      73
+     ]
+    ]
+   },
+   "interaction_events": [
+    27,
+    60
+   ]
+  }
+ },
+ "scenarios": [
+  {
+   "id": "idle-walk-p0-b200-s1.0",
+   "pair": "Idle->Walk",
+   "blend_s": 0.2,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "Idle",
+     "clip": "Idle",
+     "entry_frame": 90.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "Walk",
+     "clip": "Walk",
+     "entry_frame": 0.0,
+     "speed": 1.0,
+     "blend_s": 0.2
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.7
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    1.0283333333333333
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333,
+    0.733333333,
+    0.766666667,
+    0.8,
+    0.833333333,
+    0.866666667,
+    0.891666667,
+    0.9,
+    0.908333333,
+    0.916666667,
+    0.925,
+    0.933333333,
+    0.941666667,
+    0.95,
+    0.958333333,
+    0.966666667,
+    0.975,
+    0.983333333,
+    0.991666667,
+    1.0,
+    1.008333333,
+    1.016666667,
+    1.025
+   ],
+   "foot_lock_end": 1.02,
+   "fade_timing": {
+    "nominal_blend_s": 0.2,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.2
+   },
+   "reference_times": [
+    0.6,
+    0.8,
+    0.958333333
+   ]
+  },
+  {
+   "id": "idle-cast-p0-b200-s1.0",
+   "pair": "Idle->Cast",
+   "blend_s": 0.2,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "Idle",
+     "clip": "Idle",
+     "entry_frame": 90.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "Cast",
+     "clip": "Cast",
+     "entry_frame": 0.0,
+     "speed": 1.0,
+     "blend_s": 0.2
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.7
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    1.0083333333333333
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333,
+    0.716666667,
+    0.725,
+    0.733333333,
+    0.741666667,
+    0.75,
+    0.758333333,
+    0.766666667,
+    0.775,
+    0.783333333,
+    0.791666667,
+    0.8,
+    0.808333333,
+    0.816666667,
+    0.825,
+    0.833333333,
+    0.841666667,
+    0.85,
+    0.858333333,
+    0.866666667,
+    0.875,
+    0.883333333,
+    0.891666667,
+    0.9,
+    0.908333333,
+    0.916666667,
+    0.925,
+    0.933333333,
+    0.941666667,
+    0.95,
+    0.958333333,
+    0.966666667,
+    0.975,
+    0.983333333,
+    0.991666667,
+    1.0,
+    1.008333333
+   ],
+   "foot_lock_end": 1.0,
+   "fade_timing": {
+    "nominal_blend_s": 0.2,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.2
+   },
+   "reference_times": [
+    0.6,
+    0.85
+   ]
+  },
+  {
+   "id": "walk-idle-r-b200-s1.0",
+   "pair": "Walk->Idle",
+   "blend_s": 0.2,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "Walk",
+     "clip": "Walk",
+     "entry_frame": 42.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "Idle",
+     "clip": "Idle",
+     "entry_frame": 0.0,
+     "speed": 1.0,
+     "blend_s": 0.2
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.7
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    1.0083333333333333
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333,
+    0.716666667,
+    0.725,
+    0.733333333,
+    0.741666667,
+    0.75,
+    0.758333333,
+    0.766666667,
+    0.775,
+    0.783333333,
+    0.791666667,
+    0.8,
+    0.808333333,
+    0.816666667,
+    0.825,
+    0.833333333,
+    0.841666667,
+    0.85,
+    0.858333333,
+    0.866666667,
+    0.875,
+    0.883333333,
+    0.891666667,
+    0.9,
+    0.908333333,
+    0.916666667,
+    0.925,
+    0.933333333,
+    0.941666667,
+    0.95,
+    0.958333333,
+    0.966666667,
+    0.975,
+    0.983333333,
+    0.991666667,
+    1.0,
+    1.008333333
+   ],
+   "foot_lock_end": 1.0,
+   "fade_timing": {
+    "nominal_blend_s": 0.2,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.2
+   },
+   "reference_times": [
+    0.6,
+    0.85
+   ]
+  },
+  {
+   "id": "walk-run-r-b200-s1.0",
+   "pair": "Walk->Run",
+   "blend_s": 0.2,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "Walk",
+     "clip": "Walk",
+     "entry_frame": 42.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "Run",
+     "clip": "Run",
+     "entry_frame": 4.5,
+     "speed": 1.0,
+     "blend_s": 0.2
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.7
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    0.7083333333333333
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333
+   ],
+   "foot_lock_end": 0.7,
+   "fade_timing": {
+    "nominal_blend_s": 0.2,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.2
+   },
+   "reference_times": [
+    0.6,
+    0.633333333
+   ]
+  },
+  {
+   "id": "idle-liedown-p0-b400-s1.0",
+   "pair": "Idle->LieDown",
+   "blend_s": 0.4,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "Idle",
+     "clip": "Idle",
+     "entry_frame": 90.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "LieDown",
+     "clip": "LieDown",
+     "entry_frame": 0.0,
+     "speed": 1.0,
+     "blend_s": 0.4
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.9
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    1.1616666666666666
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333,
+    0.716666667,
+    0.725,
+    0.733333333,
+    0.741666667,
+    0.75,
+    0.758333333,
+    0.766666667,
+    0.775,
+    0.783333333,
+    0.791666667,
+    0.8,
+    0.808333333,
+    0.816666667,
+    0.825,
+    0.833333333,
+    0.841666667,
+    0.85,
+    0.858333333,
+    0.866666667,
+    0.875,
+    0.883333333,
+    0.891666667,
+    0.9,
+    0.908333333,
+    0.933333333,
+    0.966666667,
+    1.0,
+    1.025,
+    1.033333333,
+    1.041666667,
+    1.05,
+    1.058333333,
+    1.066666667,
+    1.075,
+    1.083333333,
+    1.091666667,
+    1.1,
+    1.108333333,
+    1.116666667,
+    1.125,
+    1.133333333,
+    1.141666667,
+    1.15,
+    1.158333333
+   ],
+   "foot_lock_end": 1.1533333333333333,
+   "fade_timing": {
+    "nominal_blend_s": 0.4,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.4
+   }
+  },
+  {
+   "id": "getup-idle-end-b400-s1.0",
+   "pair": "GetUp->Idle",
+   "blend_s": 0.4,
+   "speed": 1.0,
+   "events": [
+    {
+     "t": 0.0,
+     "layer": "GetUp",
+     "clip": "GetUp",
+     "entry_frame": 35.0,
+     "speed": 1.0
+    },
+    {
+     "t": 0.5,
+     "layer": "Idle",
+     "clip": "Idle",
+     "entry_frame": 0.0,
+     "speed": 1.0,
+     "blend_s": 0.4
+    }
+   ],
+   "fades": [
+    [
+     0.5,
+     0.9
+    ]
+   ],
+   "sample_window": [
+    0.49166666666666664,
+    0.9083333333333333
+   ],
+   "samples": [
+    0.491666667,
+    0.5,
+    0.508333333,
+    0.516666667,
+    0.525,
+    0.533333333,
+    0.541666667,
+    0.55,
+    0.558333333,
+    0.566666667,
+    0.575,
+    0.583333333,
+    0.591666667,
+    0.6,
+    0.608333333,
+    0.616666667,
+    0.625,
+    0.633333333,
+    0.641666667,
+    0.65,
+    0.658333333,
+    0.666666667,
+    0.675,
+    0.683333333,
+    0.691666667,
+    0.7,
+    0.708333333,
+    0.716666667,
+    0.725,
+    0.733333333,
+    0.741666667,
+    0.75,
+    0.758333333,
+    0.766666667,
+    0.775,
+    0.783333333,
+    0.791666667,
+    0.8,
+    0.808333333,
+    0.816666667,
+    0.825,
+    0.833333333,
+    0.841666667,
+    0.85,
+    0.858333333,
+    0.866666667,
+    0.875,
+    0.883333333,
+    0.891666667,
+    0.9,
+    0.908333333
+   ],
+   "foot_lock_end": 0.9,
+   "fade_timing": {
+    "nominal_blend_s": 0.4,
+    "rule": "C1 (authorization entry 25)",
+    "blend_s": 0.4
+   }
+  }
+ ],
+ "fade_timing_changed": [
+  {
+   "id": "idle-liedown-p0-b400-s1.5",
+   "nominal_blend_s": 0.4,
+   "rule": "C1 (authorization entry 25)",
+   "shortened_from_s": 0.4,
+   "target_event_frame": 30,
+   "blend_s": 0.3333333333333333
+  },
+  {
+   "id": "idle-liedown-p60-b400-s1.5",
+   "nominal_blend_s": 0.4,
+   "rule": "C1 (authorization entry 25)",
+   "shortened_from_s": 0.4,
+   "target_event_frame": 30,
+   "blend_s": 0.3333333333333333
+  },
+  {
+   "id": "liedown-sleep-end-b400-s1.5",
+   "nominal_blend_s": 0.4,
+   "rule": "C1 (authorization entry 25)",
+   "exit_moved_from_frame": 53.0,
+   "blend_s": 0.4
+  },
+  {
+   "id": "getup-idle-end-b400-s1.5",
+   "nominal_blend_s": 0.4,
+   "rule": "C1 (authorization entry 25)",
+   "exit_moved_from_frame": 53.0,
+   "blend_s": 0.4
+  },
+  {
+   "id": "sleep-getup-wrap-b400-s1.5",
+   "nominal_blend_s": 0.4,
+   "rule": "C1 (authorization entry 25)",
+   "shortened_from_s": 0.4,
+   "target_event_frame": 27,
+   "blend_s": 0.3
+  }
+ ],
+ "pending": [
+  "Idle->Combo->Idle (combo clip not made yet)"
+ ],
+ "scope": "smoke subset of transitions-02.json"
+}
