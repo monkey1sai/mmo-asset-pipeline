@@ -1,0 +1,83 @@
+15:36:14 | INFO: Data are loaded, start creating Blender stuff
+15:36:14 | INFO: Blender create Mesh node brazier-body
+15:36:14 | INFO: Blender create Mesh node brazier-coals
+15:36:14 | INFO: glTF import finished in 0.01s
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Fra:1 Mem:43.79M (Peak 43.81M) | Time:00:00.99 | Rendering 1 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.81M) | Time:00:01.03 | Rendering 25 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.81M) | Time:00:01.08 | Rendering 50 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.81M) | Time:00:01.11 | Rendering 64 / 64 samples
+Saved: 'C:\Repos\mmo-asset-pipeline\tmp\art-tools-upgrade-20261007\runs\qa\art-tools-upgrade-20261007\.art-preview-007es58e\beauty-00.png'
+Time: 00:01.28 (Saving: 00:00.14)
+
+Fra:1 Mem:43.79M (Peak 43.79M) | Time:00:00.04 | Rendering 1 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.79M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.79M) | Time:00:00.13 | Rendering 50 / 64 samples
+Fra:1 Mem:43.79M (Peak 43.79M) | Time:00:00.15 | Rendering 64 / 64 samples
+Saved: 'C:\Repos\mmo-asset-pipeline\tmp\art-tools-upgrade-20261007\runs\qa\art-tools-upgrade-20261007\.art-preview-007es58e\beauty-01.png'
+Time: 00:00.19 (Saving: 00:00.02)
+
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.04 | Rendering 1 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.13 | Rendering 50 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.15 | Rendering 64 / 64 samples
+Saved: 'C:\Repos\mmo-asset-pipeline\tmp\art-tools-upgrade-20261007\runs\qa\art-tools-upgrade-20261007\.art-preview-007es58e\clay-00.png'
+Time: 00:00.19 (Saving: 00:00.01)
+
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.04 | Rendering 1 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.08 | Rendering 25 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.13 | Rendering 50 / 64 samples
+Fra:1 Mem:43.61M (Peak 43.61M) | Time:00:00.15 | Rendering 64 / 64 samples
+Saved: 'C:\Repos\mmo-asset-pipeline\tmp\art-tools-upgrade-20261007\runs\qa\art-tools-upgrade-20261007\.art-preview-007es58e\clay-01.png'
+Time: 00:00.19 (Saving: 00:00.02)
+
+{
+  "schema_version": 1,
+  "decision": "preview_capture_completed",
+  "art_accepted": false,
+  "technical_accepted": false,
+  "asset": "deliveries/cl-barracks-set-v1/v1/cl-brazier.glb",
+  "asset_sha256": "a31c49de3412e5654f860c959111b82ae25511704d57d06c2c353cc434d91daf",
+  "protocol_sha256": "cf4ee5ba9016fa390b1e02789448c783d29ddccfb57c46bc307c7c5b9235edba",
+  "script_sha256": "294e99ff315f747326dc6aee7168cd9fd301af623aaad28681bf79e25a576ef4",
+  "blender_version": "4.5.5",
+  "metrics_scope": "source mesh inventory; not deformation validation",
+  "mesh_inventory": [
+    {
+      "mesh": "brazier-body",
+      "vertices": 48,
+      "triangles": 24,
+      "uv_layers": 0,
+      "material_slots": 2
+    },
+    {
+      "mesh": "brazier-coals",
+      "vertices": 24,
+      "triangles": 12,
+      "uv_layers": 0,
+      "material_slots": 1
+    }
+  ],
+  "files": [
+    {
+      "path": "beauty-00.png",
+      "sha256": "51edce29ed92e2539d9b0389e9ad0ff759e906d841e27cde3bbcd311e676afc3"
+    },
+    {
+      "path": "beauty-01.png",
+      "sha256": "1d6d690e737287b3fc6b18b165efc3f3a068d812f0065af384ab99294897eda3"
+    },
+    {
+      "path": "clay-00.png",
+      "sha256": "8be86b003149f96bd13ea27a2c98359b2f039ac4c4b2871be83cb8ba0328d079"
+    },
+    {
+      "path": "clay-01.png",
+      "sha256": "3be28f0d3a52eaf1ada2b10657f778cfa9b869415a642d48e2becb814cfbdbb9"
+    }
+  ],
+  "limitations": [
+    "Neutral rest-pose stills only.",
+    "No animation naturalness, external dependency, UV quality or game-ready certification."
+  ]
+}

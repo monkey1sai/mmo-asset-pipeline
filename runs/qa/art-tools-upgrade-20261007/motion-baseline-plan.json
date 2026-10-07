@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "read_only_route_design_not_a_quality_trial",
+  "request": {
+    "path": "requests/ro-swordsman-character-v1-r6.json",
+    "id": "ro-swordsman-character-v1-r6",
+    "sha256": "4e48344261912e00dcf9e32fa657cbfbb43124cd639be7d026f081aeb7a93cbb"
+  },
+  "question": "Can a rights-cleared source or authorized revision improve natural walk on the same frozen target?",
+  "baseline_a": {
+    "candidate": "Walk a04 on b20-coatlie3",
+    "glb": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b20/an_ro_walk_sword_a04_b20_baked_owner_exact_weights.glb",
+    "sha256": "d4918618acd160b38409edcf3767017aa456d329f6a29b80cc02194181a0db08",
+    "source_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-check-b20/clip-check.json",
+    "scope": "Existing artifact/read-only records; no fresh animation execution"
+  },
+  "candidate_b": null,
+  "required_before_trial": [
+    "Reconcile request revisions, trial identity and all clock intervals after v001-pause-31; do not infer unused budget from r6 ledger",
+    "Verify current trial/time authorization includes this comparison",
+    "Bind target rig/rest/mesh/weights and source clip fingerprint; retain existing cv1 transition/foot-lock checks",
+    "Choose held motion with public raw redistribution evidence or an authorized revision of the original clip",
+    "Freeze camera, lighting, ground, viewing scale, normal/slow speed and comparison moments before B",
+    "Confirm unit proportions, bone axes, root/in-place policy, stride length and movement speed before retarget/bake"
+  ],
+  "visual_criteria": ["Weight transfer", "Heel/toe roll", "Body/arm phase", "Start/stop", "Stride-to-speed consistency"],
+  "known_failures_preserved": {
+    "source": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress.json",
+    "scenario_passes": "126/191",
+    "D2": "Crease/collapse gate remains strict",
+    "G1": "High-speed/repeated walk-run reach and feet failures",
+    "H1": "Combo transition collapse/feet/grasp failures",
+    "runtime": "116/118 blocks pass, 18.731 um maximum exceeds 10 um gate"
+  },
+  "p5": "Not started; outside latest recorded archival authorization; no freeze or holdout run",
+  "trial_created": false,
+  "retargeted_or_baked": false,
+  "scores_assigned": false,
+  "paid_calls": 0
+}

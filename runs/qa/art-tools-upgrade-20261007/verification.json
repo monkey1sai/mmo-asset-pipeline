@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "run_id": "art-tools-upgrade-20261007-01a1153c",
+  "date": "2026-10-07",
+  "timezone": "Asia/Taipei",
+  "status": "local_tool_upgrade_completed_with_explicit_not_run_gates",
+  "repository": "C:/Repos/mmo-asset-pipeline",
+  "base_head": "1ae4f330b2f30ba863785801634e4a803de04b5c",
+  "kit": {
+    "path": "C:/Users/IOT/Downloads/art-engineer-upgrade-20261007.zip",
+    "sha256": "1a157c0448b660c784f5c07acd7d138540ef72028436364324b3bcdbfac69cf0",
+    "declared_baseline": "08c454e6c6e7566f7a7625953773b6eb18693f5c",
+    "original_manifest_modified": false,
+    "compatibility_preflight": "ready_for_local_apply",
+    "new_files": 13,
+    "append_only_existing_files": ["AGENTS.md", ".agents/skills/art-engineer/SKILL.md"]
+  },
+  "implementation": {
+    "staging_worktree": "C:/Repos/mmo-asset-pipeline/tmp/art-tools-upgrade-20261007",
+    "installed_in_primary_checkout": true,
+    "readback_files": 15,
+    "readback_matches_verified_worktree": true,
+    "installed_file_manifest": "installed-files.json",
+    "derived_hardening": [
+      "Preview checks extensionsUsed, extensionsRequired and all nested extension keys with consistent declarations",
+      "Validator loads only its local node_modules/gltf-validator entry; rejects links, ancestor/NODE_PATH entries, parent/sibling and Windows cross-drive paths",
+      "Added seven deterministic regression tests for these boundaries"
+    ],
+    "baseline_guards_match": {"scripts/identity.py": true, "scripts/workbench.py": true},
+    "original_agents_and_skill_prefixes_preserved": true,
+    "protected_cv1_request_asset_and_three_package_diff": "none"
+  },
+  "tests": {
+    "original_kit_on_windows": {
+      "component_run": 56,
+      "installer_run": 14,
+      "passed": 70,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "log": "kit-reproduction.log"
+    },
+    "full_upgraded_worktree": {"run": 306, "passed": 306, "failed": 0, "skipped": 0, "exit_code": 0},
+    "full_primary_checkout": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "run": 306,
+      "passed": 306,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "reported_seconds": 6.650,
+      "log": "main-unittest.log"
+    },
+    "pipeline_validate": {
+      "command": "python -B scripts/pipeline.py validate",
+      "exit_code": 0,
+      "status": "valid",
+      "catalog_assets": 39,
+      "operations": 11,
+      "log": "main-validate.log",
+      "scope": "Schema, catalog links and ledger evidence; not source freshness or runtime"
+    }
+  },
+  "dcc_smoke": {
+    "status": "executed_and_visually_inspected",
+    "execution_location": "isolated_worktree",
+    "evidence_copied_to_primary_checkout": true,
+    "blender_version": "4.5.5 LTS",
+    "exit_code": 0,
+    "safe_flags": ["--background", "--factory-startup", "--disable-autoexec", "--python-exit-code 2"],
+    "asset": "deliveries/cl-barracks-set-v1/v1/cl-brazier.glb",
+    "asset_sha256_before_and_after": "a31c49de3412e5654f860c959111b82ae25511704d57d06c2c353cc434d91daf",
+    "protocol_sha256": "cf4ee5ba9016fa390b1e02789448c783d29ddccfb57c46bc307c7c5b9235edba",
+    "script_sha256": "294e99ff315f747326dc6aee7168cd9fd301af623aaad28681bf79e25a576ef4",
+    "views": 2,
+    "png_count": 4,
+    "resolution": [512, 512],
+    "capture": "capture-v001/capture.json",
+    "protocol": "preview-protocol.json",
+    "log": "blender-smoke.log",
+    "hash_readback_verified": true,
+    "observations": "Beauty shows the existing stone/metal/emissive materials; clay shows the same geometry without those material differences",
+    "limitations": ["Static, untextured existing asset only", "No animation, UV/texture sampling, retargeting, art acceptance or game-ready claim"]
+  },
+  "official_validator": {
+    "decision": "not_run",
+    "reason": "KHRONOS_VALIDATOR_UNAVAILABLE",
+    "exit_code": 3,
+    "executed_wrapper_location": "isolated_worktree",
+    "report": "official-validator.json",
+    "dependency_installed": false
+  },
+  "gait": {
+    "scope": "Read-only current baseline and route design; no trial",
+    "plan": "motion-baseline-plan.json",
+    "walk_candidate": "a04 on b20-coatlie3",
+    "known_p4": "Existing run-07 126/191 scenarios passed; D2/G1/H1 failures preserved",
+    "historical_runtime": "Closed-loop 116/118 blocks passed; maximum 18.731 um exceeds 10 um gate",
+    "p5": "not_started_not_authorized",
+    "remaining_budget": "unverified_requires_clock_reconciliation"
+  },
+  "independent_reviews": {
+    "security_auditor": "accept; original medium findings and cross-drive follow-up resolved; no remaining HIGH/CRITICAL/Medium found in scoped helper review",
+    "architecture_reviewer": "accept for one scoped host Blender retry after environment startup failure",
+    "limitations": "Advisory model review; not human licensing, paid entitlement, art or runtime approval"
+  },
+  "environment_events": [
+    "Sandbox Git dubious ownership; reviewed host read only; no safe.directory or ACL change",
+    "Sandbox orchestrator_helper_incomplete blocked process startup; wrapper test retry succeeded",
+    "Blender startup environment failure; reviewed single host retry succeeded; existing user Blender process preserved",
+    "HEAD advanced from 7423acdf to 1ae4f330 during preflight; current baseline rerun and worktree pinned to 1ae4f330",
+    "Multi-file patch tool reported an error after partial application; actual bytes inspected and remaining patch applied before testing"
+  ],
+  "authority_and_cost": {
+    "source_asset_imports": 0,
+    "new_art_trials": 0,
+    "cloud_generation_calls": 0,
+    "paid_calls": 0,
+    "actual_spend": 0,
+    "global_tool_or_plugin_installations": 0,
+    "remote_writes": 0,
+    "stage_commit_push_pr_merge": 0,
+    "index_diff_exit": 0,
+    "credential_provider_only": "Supported Hyper3D status reports configured=true, DPAPI CurrentUser; no account/balance/entitlement probe"
+  },
+  "not_run": ["Official Khronos validation on GLB", "Retarget addon functionality", "New natural-walk A/B trial", "P5 holdout", "New art/runtime/target-engine acceptance", "Remote synchronization or restore"],
+  "background_jobs": "none_task_owned"
+}

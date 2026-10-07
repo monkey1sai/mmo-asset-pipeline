@@ -151,3 +151,19 @@ python -B scripts/workbench.py assess requests/wood-gate.json --evidence runs/qa
 原始、後製與交付檔皆跟 repo。依 `.gitattributes` 保存大型模型／貼圖，索引與說明用一般 Git。於既有授權範圍只 `git add -- <明確檔案>`，核對工作區 SHA／大小、index LFS 指標和本機 LFS 物件一致；不要盲目 `git add .`。本機納管、commit、遠端 Git／LFS 同步、重新 clone 還原是各自的證據，外部寫入須有對應授權。
 
 交付報告連結需求、模型／預覽、manifest 及驗收證據，說清楚完成範圍、缺口、實際扣點與保存狀態。若未交付，明列目前候選及續作條件；背景工作只有真的在執行時才回報為進行中。
+
+<!-- art-production-upgrade-v1 -->
+## 外部資源與專業製作路徑
+
+新素材與品質修訂讀 [資源支援的製作增補](../../../docs/art-production-upgrade.md)，依 [研究清單](../../../docs/references/game-art-tool-research-20261007.md) 選取適用來源與工具；不是全安裝清單。先沿用既有 master、品質契約和已驗工具。下列是增補入口，不會改寫前述流程或提供花費、安裝、外部 repo、Git 寫入授權。
+
+```powershell
+python -B scripts/art_sources.py catalog --kind motion
+python -B scripts/art_sources.py check --request requests/REQUEST.json --receipt requests/source-receipts/SOURCE.json --source-root AUTHORIZED_LOCAL_DIRECTORY
+```
+
+完成已授權來源、用途及公開再散布審查後才考慮 `import-local --apply`。未知權利、未核對檔案或付費狀態一律不靠猜測推進。匯入結果只能是 `imported_unverified`，還要完成需求適用的後製、固定條件比較及交付驗收。
+
+角色品質問題先分清來源動作、rest pose／比例／骨軸、retarget、root motion、接觸、變形與 runtime 各層。依 `templates/motion-source-benchmark.json` 建立獨立比較計畫，保留凍結 target 與現有 cv1 驗收；不為改善單一動作而任意重建整個 rig。以實際視角、正常／慢速播放和接觸證據核對自然度，不以數值閉環代替觀感。
+
+固定 neutral beauty／clay 預覽可用 `templates/art-preview-protocol.json` 與 `scripts/blender_art_preview.py`，需要當前 Blender 實測，無 Blender 時保持 `not_run`。GLB 結構用真正官方驗證器；包內 wrapper 未安裝依賴時明確 `not_run`。影片可補充人工 review，但既有 `assess` 不接受的副檔名不能冒稱已受其雜湊／交付規則驗證。

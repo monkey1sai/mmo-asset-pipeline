@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "status": "draft",
+  "purpose": "比較來源動作與重定向；不是已執行報告或新付費授權",
+  "request": {
+    "id": "REPLACE",
+    "sha256": "REPLACE"
+  },
+  "target_freeze": {
+    "model_sha256": "REPLACE",
+    "skeleton_sha256": "REPLACE",
+    "rest_pose_sha256": "REPLACE",
+    "weights_sha256": "REPLACE",
+    "geometry_sha256": "REPLACE",
+    "allowed_changes": [
+      "source_clip",
+      "retarget_mapping_within_frozen_contract"
+    ]
+  },
+  "baseline": {
+    "clip": "CURRENT_ACCEPTED_BASELINE",
+    "sha256": "REPLACE",
+    "known_failures": []
+  },
+  "candidate": {
+    "source_receipt": "NOT_YET_APPROVED",
+    "clip": "NOT_YET_IMPORTED",
+    "sha256": null,
+    "retarget_tool_version": null,
+    "root_motion_policy": null
+  },
+  "comparison": {
+    "fixed_camera_protocol": null,
+    "playback_speeds": "ONLY_EXISTING_REQUEST_APPROVED_SPEEDS",
+    "contact_intervals": null,
+    "visual_review": [
+      "weight_transfer",
+      "foot_roll_and_contact",
+      "stride_speed_match",
+      "pelvis_torso_arm_phase",
+      "start_stop_and_turn_if_required"
+    ],
+    "numerical_gates": "EXISTING_CV1_CONTRACT_UNCHANGED",
+    "evidence": [
+      "normal_speed_and_slow_playback",
+      "png_contact_sheets",
+      "measured_json",
+      "same_asset_hash_runtime_results"
+    ]
+  },
+  "budget": "REUSE_OR_REQUEST_EXPLICIT_EXISTING_TRIAL_BUDGET_DO_NOT_RESET",
+  "decision": "not_run",
+  "art_accepted": false,
+  "technical_accepted": false
+}

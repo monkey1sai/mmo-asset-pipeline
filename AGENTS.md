@@ -18,3 +18,12 @@
 - `generated`、`downloaded`、`technical_checked`、`art_accepted`、`technical_accepted`、`delivered`、目標遊戲 `game_ready` 是不同狀態。只做 inventory 不得宣稱完整技術通過；未完成指定骨架／動畫／LOD／引擎驗收不得宣稱該目標可用。
 - 使用 `python -B -m unittest discover -s tests -v` 驗證工具；`python -B scripts/pipeline.py validate` 驗證既有清單。不得把其他 repo 的歷史測試當本次證據。
 - 一個協調者負責寫入；獨立子任務預設唯讀。尚無 HEAD 時先保留可審查的變更與暫存，核對遠端歷史；只有當次明確授權才建立提交，不修改 Git 權限。保留既有 Unity 專用工具與測試，一般資產需求使用 `$art-engineer`。
+
+<!-- art-production-upgrade-v1 -->
+## 資源支援的美術製作增補
+
+- 新需求／品質修訂另讀 `docs/art-production-upgrade.md` 與 `docs/references/game-art-tool-research-20261007.md`。保留既有核心規格、品質門檻、凍結需求與授權，不用此增補覆寫它們。
+- 工具／來源清單在 `tools/art-sources/catalog.json`：文件能力、當前可用、實際執行、驗收通過分開記錄。先查本庫，再比較外部來源、修改與生成；不把每件素材強制套用同一風格、遊戲、引擎或整套工具。
+- 角色動作先比較已授權動作來源與重定向，不只調平滑曲線。保留 target rig／rest pose／拓樸／權重及既有 cv1 runtime QA；重新綁骨不是預設解法。靜態道具不強制動畫。
+- 本 repo 公開。商業專案使用權與原始素材公開再散布權分開審查；未知即不匯入、不 commit/push，不偷偷改可見性或繞過原資產保存規範。
+- `scripts/art_sources.py` 只做本機來源檢查及明確 `--apply` 的新版本複製，不驗美術或動作；`scripts/blender_art_preview.py` 需獨立安全 Blender session 與凍結預覽協定；`tools/art-validation/validate-glb.mjs` 需真正 Khronos validator。三者都不能替代既有 `assess`、目標 runtime、美術或交付審查。
