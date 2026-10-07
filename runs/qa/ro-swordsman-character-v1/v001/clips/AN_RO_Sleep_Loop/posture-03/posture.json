@@ -1,0 +1,389 @@
+{
+ "observed_utc": "2026-10-06T03:10:42.088109+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "b601f98406ba658ef6b67b7f71f41ab2cacd06192275cf5cf7c5add8aad79895",
+ "foundation": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/ro_character_v001_b19-crotch.blend",
+  "sha256": "3280f4b186a17d1ce69bdcb5649ea6ba988ffa876078a4ce739c75370feb0963",
+  "saved": false
+ },
+ "inputs": {
+  "contract": {
+   "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+   "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+  },
+  "rules": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+   "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+  },
+  "fixtures": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/contact-fixtures.json",
+   "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331"
+  },
+  "base": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/posture-03/base.json",
+   "sha256": "af76fdafcd7786932a7d7af4a2bf0af700c3236a48c49812dd2fa4d7c8a8d62c"
+  }
+ },
+ "bed_top_z_m": 0.45,
+ "pelvis": {
+  "turn": {
+   "axis": "x",
+   "degrees": -90.0
+  },
+  "head_rest_m": [
+   0.0,
+   0.03999999910593033,
+   0.8899999856948853
+  ],
+  "lift_m": -0.29180661344528197,
+  "location_m": [
+   0.0,
+   0.03999999910593033,
+   0.5981934070587158
+  ]
+ },
+ "angles_deg": {
+  "spine": -12.651183307170868,
+  "head": 34.88370034843683,
+  "hip.L": 2.609589658677578,
+  "hip.R": 2.5531861558556557,
+  "arm.L": -14.528516605496407,
+  "arm.R": -14.398373141884804,
+  "coat.L": 29.062969014048576,
+  "coat.R": 28.96902285516262,
+  "foot.L": -20.0,
+  "foot.R": -20.0
+ },
+ "solved_steps": [
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": -12.651183307170868
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 17.441850174218416
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 17.441850174218416
+  },
+  {
+   "bone": "upper_leg.L",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 2.609589658677578,
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -14.528516605496407,
+   "side": "L"
+  },
+  {
+   "bone": "coat.L",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": 29.062969014048576,
+   "side": "L"
+  },
+  {
+   "bone": "foot.L",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": -20.0,
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 2.5531861558556557,
+   "side": "R"
+  },
+  {
+   "bone": "upper_arm.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -14.398373141884804,
+   "side": "R"
+  },
+  {
+   "bone": "coat.R",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": 28.96902285516262,
+   "side": "R"
+  },
+  {
+   "bone": "foot.R",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": -20.0,
+   "side": "R"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -3.094041645526886
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 19.784775786101818
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 5.341351144015789
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -22.621592804789543
+    },
+    {
+     "key": "coat.L",
+     "bracketed": true,
+     "degrees": 22.743867859244347
+    },
+    {
+     "key": "foot.L",
+     "bracketed": false,
+     "f_low_m": 0.038520872592926025,
+     "f_high_m": 0.04141515493392944
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 5.266506113111973
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -22.389572337269783
+    },
+    {
+     "key": "coat.R",
+     "bracketed": true,
+     "degrees": 24.81088675558567
+    },
+    {
+     "key": "foot.R",
+     "bracketed": false,
+     "f_low_m": 0.05502164363861084,
+     "f_high_m": 0.06609362363815308
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -9.836681187152863
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 29.995252452790737
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 3.2630616053938866
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -16.603910699486732
+    },
+    {
+     "key": "coat.L",
+     "bracketed": true,
+     "degrees": 26.72604449093342
+    },
+    {
+     "key": "foot.L",
+     "bracketed": false,
+     "f_low_m": 0.02722322940826416,
+     "f_high_m": 0.035640716552734375
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 2.984020672738552
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -16.008044555783272
+    },
+    {
+     "key": "coat.R",
+     "bracketed": true,
+     "degrees": 27.41334117949009
+    },
+    {
+     "key": "foot.R",
+     "bracketed": false,
+     "f_low_m": 0.02592456340789795,
+     "f_high_m": 0.04356968402862549
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -11.827763020992279
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 33.45928128808737
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 2.805001325905323
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -15.144556984305382
+    },
+    {
+     "key": "coat.L",
+     "bracketed": true,
+     "degrees": 28.36718998849392
+    },
+    {
+     "key": "foot.L",
+     "bracketed": false,
+     "f_low_m": 0.023061692714691162,
+     "f_high_m": 0.032695114612579346
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 2.682412974536419
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -14.87457387149334
+    },
+    {
+     "key": "coat.R",
+     "bracketed": true,
+     "degrees": 28.503793999552727
+    },
+    {
+     "key": "foot.R",
+     "bracketed": false,
+     "f_low_m": 0.023192226886749268,
+     "f_high_m": 0.04170411825180054
+    }
+   ]
+  },
+  {
+   "round": 3,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -12.651183307170868
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 34.88370034843683
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 2.609589658677578
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -14.528516605496407
+    },
+    {
+     "key": "coat.L",
+     "bracketed": true,
+     "degrees": 29.062969014048576
+    },
+    {
+     "key": "foot.L",
+     "bracketed": false,
+     "f_low_m": 0.021289050579071045,
+     "f_high_m": 0.03144103288650513
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 2.5531861558556557
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -14.398373141884804
+    },
+    {
+     "key": "coat.R",
+     "bracketed": true,
+     "degrees": 28.96902285516262
+    },
+    {
+     "key": "foot.R",
+     "bracketed": false,
+     "f_low_m": 0.02202284336090088,
+     "f_high_m": 0.040905892848968506
+    }
+   ]
+  }
+ ],
+ "support_lowest_above_top_mm": {
+  "back": 1.0,
+  "pelvis": 1.705,
+  "head_back": 1.0,
+  "calf.L": 1.0,
+  "calf.R": 1.526
+ },
+ "hands_lowest_above_top_mm": {
+  "L": 15.22,
+  "R": 15.922
+ },
+ "parts_lowest_above_top_mm": {
+  "arm.L": 4.0,
+  "coat.L": 1.526,
+  "foot.L": -19.763,
+  "arm.R": 4.526,
+  "coat.R": 1.705,
+  "foot.R": -20.317
+ },
+ "body_lowest_above_top_mm": -20.317,
+ "body_lowest": {
+  "mesh": "SM_RO_core",
+  "dominant": "foot.R"
+ },
+ "scope": "Supine posture relative to the pelvis with the head towards +Y; yaw and bed placement are applied per clip."
+}

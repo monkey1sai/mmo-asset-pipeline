@@ -1,0 +1,143 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-05T10:52:00Z",
+ "status": "remote_branch_and_lfs_objects_received; fresh_clone_restore_not_verified",
+ "authorization": {
+  "user_text": "先commit , push; 再繼續下一個里程碑",
+  "record": "runs/qa/ro-swordsman-character-v1/authorizations.json",
+  "entry": 15,
+  "envelope": "entry 15 authorization_envelope (destination, purpose, allowed and forbidden operations, data, stop conditions) recorded before the first push"
+ },
+ "remote_before_sync": {
+  "repository": "git@github.com:monkey1sai/mmo-asset-pipeline.git",
+  "visibility": "PUBLIC (gh repo view)",
+  "default_branch": "main",
+  "heads": {
+   "refs/heads/main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4"
+  },
+  "branch_codex_art_quality_loop": "absent"
+ },
+ "local": {
+  "worktree": "tmp/art-quality-loop",
+  "branch": "codex/art-quality-loop",
+  "base": "c990639",
+  "pending_before": {
+   "files": 8316,
+   "modified_tracked": 11,
+   "untracked": 8305
+  }
+ },
+ "pre_commit_checks": {
+  "secret_patterns": "1,713 text files scanned (subscription_key values, bearer tokens, cookies, signed-URL parameters, GitHub/AWS/sk- keys, PEM private keys, api_key values): only policy text, field names in scripts/hyper3d_api.py and the test placeholder; long strings in operation records are paths, Hyper3D task UUIDs and operation IDs",
+  "unittest": "python -B -m unittest discover -s tests: 156 tests OK",
+  "validate": "python -B scripts/pipeline.py validate: schema verified (source freshness and runtime not checked)",
+  "line_endings": "495 pending text files were written with CRLF; 307 of them have their CRLF-byte SHA-256 recorded in evidence; 6 runtime-QA harness files (LF) have their SHA-256 in closed-loop records while core.autocrlf=true",
+  "gitattributes_changes": [
+   "*.blend1 -> LFS (Blender save backup listed in runs/qa/ro-swordsman-combo-r002/archive-manifest.json)",
+   "*.pdf binary",
+   "*.js / *.mjs / *.html / *.css text eol=lf",
+   "-text (byte-exact) for the evidence areas holding CRLF files: runs/qa/ro-swordsman-combo*/**, runs/qa/ro-swordsman-character-v1*/**, runs/handoffs/**, runs/ro-swordsman-api-*.json, assets/raw/ro-swordsman-combo/**, assets/processed/ro-swordsman-combo*/**, requests/ro-swordsman-combo*.json, library/index.json and 3 scripts"
+  ],
+  "after_attributes": "no pending text file without a line-ending rule; no text-set file containing CRLF"
+ },
+ "commits": [
+  {
+   "sha": "ab8338e",
+   "topic": "workbench, quality loop, Hyper3D API entry, tools, references, .gitattributes",
+   "files": 236,
+   "regular": 236,
+   "lfs": 0
+  },
+  {
+   "sha": "78fae61",
+   "topic": "RO combo base through r004 (assets, Hyper3D operations, QA)",
+   "files": 2192,
+   "regular": 2071,
+   "lfs": 121,
+   "lfs_bytes": 687066487
+  },
+  {
+   "sha": "0b7c7c7",
+   "topic": "RO combo r005-r010 and library index",
+   "files": 1372,
+   "regular": 1293,
+   "lfs": 79,
+   "lfs_bytes": 1419550298
+  },
+  {
+   "sha": "1002450",
+   "topic": "character animation V1 r1-r6, v001 foundation b18, Idle/Walk/Run",
+   "files": 4516,
+   "regular": 4425,
+   "lfs": 91,
+   "lfs_bytes": 1785137611
+  }
+ ],
+ "staging_verification": "verify-stage-used.py per commit group: staged set == group list; every regular blob == git hash-object --no-filters of the working file; every LFS pointer oid/size == working-file SHA-256/size with the local object present; 0 problems in all four groups",
+ "push": {
+  "method": "push-batches-used.sh: per commit, git lfs push origin <sha> then git push origin <sha>:refs/heads/codex/art-quality-loop (new branch, then fast-forwards); hooks not installed",
+  "batches": [
+   {
+    "commit": "ab8338e",
+    "lfs_upload": "none",
+    "git": "[new branch]",
+    "utc": [
+     "10:28:57",
+     "10:29:26"
+    ]
+   },
+   {
+    "commit": "78fae61",
+    "lfs_upload": "115 objects, 624 MB",
+    "git": "ab8338e..78fae61",
+    "utc": [
+     "10:29:26",
+     "10:35:30"
+    ]
+   },
+   {
+    "commit": "0b7c7c7",
+    "lfs_upload": "68 objects, 1.1 GB",
+    "git": "78fae61..0b7c7c7",
+    "utc": [
+     "10:35:30",
+     "10:42:25"
+    ]
+   },
+   {
+    "commit": "1002450",
+    "lfs_upload": "81 objects, 1.6 GB",
+    "git": "0b7c7c7..1002450",
+    "utc": [
+     "10:42:25",
+     "10:47:52"
+    ]
+   }
+  ],
+  "quota_or_size_refusals": "none reported",
+  "log": "push-log.txt"
+ },
+ "remote_readback": {
+  "refs/heads/codex/art-quality-loop": "10024506e332f75f6f9b8577fe377fd4796c1b1b",
+  "refs/heads/main": "e077e22ba57447031b7cc89e3d37bd9cef47daf4 (unchanged)",
+  "local_upstream": "codex/art-quality-loop tracks origin/codex/art-quality-loop; HEAD == origin/codex/art-quality-loop"
+ },
+ "lfs_server_presence": "git lfs push --all origin codex/art-quality-loop repeated after the push: 269/269 unique objects, 3.4 GB, 0 B/s, 10 s (the server already held every object; nothing re-uploaded, nothing downloaded); git lfs ls-files at HEAD: 296 files / 269 unique objects",
+ "not_verified": [
+  "Fresh clone with git lfs pull and hash comparison on another checkout: not run, it would download about 3.4 GB of LFS bandwidth from an account whose remaining quota is unknown",
+  "Account LFS storage/bandwidth quota: the gh token has no user scope (billing usage endpoint 404); scopes were not changed"
+ ],
+ "not_done": [
+  "no push to main, no force push, no PR, no merge, no visibility change, no quota purchase, no credential or global Git/hook change"
+ ],
+ "divergence_from_main": "main has e077e22 (Hyper3D API creation routing: SKILL.md, AGENTS.md, docs/api-creation-workflow.md, docs/art-workflow.md, docs/production-runbook.md, scripts/workbench.py, tests/test_api_creation.py) which this branch (based on c990639) does not contain; a later merge needs reconciliation of those files.",
+ "files": {
+  "commit-message-1.txt": "6313cd0b8eacb4147ece57f85259beac2436998f6b0e4eaab668a29eda0a7ddb",
+  "commit-message-2.txt": "73c2701eb9c7cf2c434179d100bf75a593a22dd9dd3252d91a7299eeaa4165ce",
+  "commit-message-3.txt": "a997c925c9da4c89b329d28bb93929b650aadd6da9ab3fa56c79c2d17d4b0ea1",
+  "commit-message-4.txt": "f4af8870fb5d5fcea08e71f6f8d10ef79e326544cba45a06fd1a8ffea01ab2ab",
+  "push-batches-used.sh": "37d96bd2f7110aa9405feba7a843402010579544ac500dda413b01f0e4c5e5ca",
+  "push-log.txt": "b0958f0dd782b176fd69d2cd24b1ed84dcc9ee3e03a491c048a5c934a0fbd480",
+  "verify-stage-used.py": "f60438aef512a2f4567fd9916dbec53d83d8f85f8d093285ec7eb17b6e88fc2c"
+ }
+}

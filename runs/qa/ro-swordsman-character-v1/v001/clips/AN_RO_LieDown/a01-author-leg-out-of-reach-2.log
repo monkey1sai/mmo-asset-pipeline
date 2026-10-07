@@ -1,0 +1,20 @@
+Blender 4.5.5 LTS (hash 836beaaf597a built 2025-11-18 01:33:26)
+Read blend: "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\assets\processed\ro-swordsman-character-v1\v001\b18-clipfolds\ro_character_v001_b18-clipfolds.blend"
+Traceback (most recent call last):
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_author_clip.py", line 233, in <module>
+    solved = pose_frame(f, roll, swivel)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_author_clip.py", line 183, in pose_frame
+    solved[f"leg.{side}"] = blend_ik(LEG_CHAIN[side], w, lambda: leg_ik.solve(side, target, wave(legs_spec.get("pole_yaw_deg", 0.0), f)))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_author_clip.py", line 156, in blend_ik
+    result = solve()
+             ^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_author_clip.py", line 183, in <lambda>
+    solved[f"leg.{side}"] = blend_ik(LEG_CHAIN[side], w, lambda: leg_ik.solve(side, target, wave(legs_spec.get("pole_yaw_deg", 0.0), f)))
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Repos\mmo-asset-pipeline\tmp\art-quality-loop\scripts\cv1_arm_ik.py", line 137, in solve
+    raise ValueError(f"LEG_OUT_OF_REACH {side} {(ankle - hip).length:.4f} > {self.max_length(side):.4f}")
+ValueError: LEG_OUT_OF_REACH L 0.7870 > 0.7863
+
+Blender quit

@@ -1,0 +1,8 @@
+feat(art): 角色動畫 V1 轉場工具——權重控制器、著地腳鎖定、Blender 轉場檢查與 P4 QA 場景
+
+- scripts/cv1_transition.py／cv1_foot_lock.py 與 tools/runtime-qa/three/src 的 JS 雙實作（單元測試含 node 比對）
+- scripts/cv1_transition_check.py：r6 transition_matrix 關卡、腳鎖定、C1 淡化時間、B1 坐姿豁免、反例、探針、continuity-only
+- scripts/cv1_p4_scenarios.py／cv1_p4_manifest.py：情境矩陣與 runtime manifest（記錄模組雜湊）
+- tools/runtime-qa/three/p4.html＋src/p4.js：可操作 QA 場景、閉環、確定性、接縫、反覆切換、反例、耗時
+
+Co-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>

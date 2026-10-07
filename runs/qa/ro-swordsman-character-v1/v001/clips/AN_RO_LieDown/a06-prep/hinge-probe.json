@@ -1,0 +1,132 @@
+{
+ "geometry": {
+  "R": {
+   "straight_arm_hinge_deg_grid": -23.0,
+   "distance_rest_m": 0.4430376094550466,
+   "distance_extreme_m": 0.22370914053066163,
+   "distance_straight_m": 0.450168498015416,
+   "rest_elbow_angle_deg": 158.84975050812156,
+   "hinge_axis_vs_forearm_deg": 64.97860168775527,
+   "segment_lengths_m": [
+    0.2147853277638331,
+    0.2358900543927262
+   ]
+  },
+  "L": {
+   "straight_arm_hinge_deg_grid": -23.0,
+   "distance_rest_m": 0.4430376094550466,
+   "distance_extreme_m": 0.22370914053066163,
+   "distance_straight_m": 0.450168498015416,
+   "rest_elbow_angle_deg": 158.84975050812156,
+   "hinge_axis_vs_forearm_deg": 115.02139649101188,
+   "segment_lengths_m": [
+    0.2147853277638331,
+    0.2358900543927262
+   ]
+  }
+ },
+ "round_trip_max_error_deg": {
+  "R": 4.738018139338607e-05,
+  "L": 4.738018139338607e-05
+ },
+ "random": {
+  "R": {
+   "count": 60,
+   "ranges": {
+    "flexion_deg": [
+     6.072143977442955,
+     129.6936510721009
+    ],
+    "wrist_error_mm": [
+     0.0,
+     0.00017881393432617188
+    ],
+    "lower_frame_error_deg": [
+     0.0,
+     0.0
+    ],
+    "hand_error_deg": [
+     0.0,
+     0.0
+    ],
+    "elbow_vs_swing_solver_mm": [
+     0.0,
+     0.00013657139822709083
+    ],
+    "lower_arm_axis_off_hinge_deg": [
+     0.0,
+     0.0
+    ],
+    "a05_metric_hinge": [
+     25.05225961139301,
+     47.67862727489425
+    ],
+    "pronation_deg": [
+     -176.10965968021546,
+     171.96073866162124
+    ],
+    "wrist_swing_deg": [
+     20.55283834470126,
+     158.5004136528321
+    ],
+    "a05_metric_swing": [
+     25.021942109214613,
+     88.3063000054226
+    ],
+    "swing_lower_arm_axis_off_hinge_deg": [
+     25.021950646951076,
+     88.3063000054226
+    ]
+   }
+  },
+  "L": {
+   "count": 60,
+   "ranges": {
+    "flexion_deg": [
+     6.494822037611731,
+     126.30964840919873
+    ],
+    "wrist_error_mm": [
+     0.0,
+     0.00022745635393967847
+    ],
+    "lower_frame_error_deg": [
+     0.0,
+     0.0
+    ],
+    "hand_error_deg": [
+     0.0,
+     0.0
+    ],
+    "elbow_vs_swing_solver_mm": [
+     0.0,
+     0.00024665810700128746
+    ],
+    "lower_arm_axis_off_hinge_deg": [
+     0.0,
+     0.0
+    ],
+    "a05_metric_hinge": [
+     25.056711187184565,
+     45.947085527836805
+    ],
+    "pronation_deg": [
+     -179.66875792892276,
+     178.00371801584498
+    ],
+    "wrist_swing_deg": [
+     3.5848461302223487,
+     157.88852432584733
+    ],
+    "a05_metric_swing": [
+     25.022305816787917,
+     85.1041502281697
+    ],
+    "swing_lower_arm_axis_off_hinge_deg": [
+     25.022305816787917,
+     85.1041502281697
+    ]
+   }
+  }
+ }
+}

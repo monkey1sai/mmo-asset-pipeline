@@ -1,0 +1,222 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Idle_Sword",
+ "fps": 60,
+ "frames": 120,
+ "loop": true,
+ "mode": "procedural",
+ "intent": "Ready stance close to the rest grip: feet planted, upper arms near their rest direction (static pauldrons), sword raised forward-out at 40 degrees, one slow breath per loop; left arm relaxed.",
+ "poses": [
+  "grasp.R"
+ ],
+ "steps": [
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      0.8,
+      1,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      0.5,
+      1,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "forward",
+   "degrees": {
+    "base": 1.0,
+    "waves": [
+     [
+      0.5,
+      1,
+      0.15
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "clavicle.R",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      0.7,
+      1,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "clavicle.L",
+   "kind": "swing",
+   "toward": "up",
+   "degrees": {
+    "base": 0.0,
+    "waves": [
+     [
+      0.7,
+      1,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "forward",
+   "degrees": {
+    "base": -5.0,
+    "waves": [
+     [
+      0.6,
+      1,
+      0.1
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "lower_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": {
+    "base": 15.0,
+    "waves": [
+     [
+      1.0,
+      1,
+      0.15
+     ]
+    ]
+   },
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 15,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 21,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 24,
+   "side": "L"
+  },
+  {
+   "bone": "finger1.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 18,
+   "side": "L"
+  },
+  {
+   "bone": "finger2.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 22,
+   "side": "L"
+  },
+  {
+   "bone": "finger3.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 25,
+   "side": "L"
+  },
+  {
+   "bone": "finger4.L_02",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 28,
+   "side": "L"
+  },
+  {
+   "bone": "thumb.L_01",
+   "kind": "swing",
+   "toward": "palmar",
+   "degrees": 10,
+   "side": "L"
+  }
+ ],
+ "sword": {
+  "grip": {
+   "base": [
+    -0.38,
+    -0.1,
+    0.9
+   ],
+   "waves": [
+    [
+     [
+      0.0,
+      0.0,
+      0.003
+     ],
+     1,
+     0.05
+    ]
+   ]
+  },
+  "blade": [
+   -0.587,
+   -0.492,
+   0.643
+  ],
+  "pitch_deg": {
+   "base": 0.0,
+   "waves": [
+    [
+     0.8,
+     1,
+     0.1
+    ]
+   ]
+  },
+  "roll_deg": 170,
+  "swivel_deg": -10
+ },
+ "search_note": "a03: grip, blade and roll/swivel from a search minimising wrist bend plus upper-arm deviation from rest (bend 13.3 deg, deviation 1.6 deg); a02 lowered the arms and pushed the upper arms into the static pauldrons and the hand into the coat."
+}

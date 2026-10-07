@@ -1,0 +1,36 @@
+{
+ "pending": 1950,
+ "modified_tracked": 11,
+ "untracked": 1939,
+ "text_scanned": 822,
+ "crlf_in_text_rule_files": [
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/coat-scan-hipline.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/coat-scan-lieback.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/coat-scan-right-fine.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/coat-scan-right.json",
+  "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a06-prep/coat-scan-tuck.json"
+ ],
+ "text_like_without_rule": [
+  "runs/qa/git-portability-20261005/commit-message-1.txt",
+  "runs/qa/git-portability-20261005/commit-message-2.txt",
+  "runs/qa/git-portability-20261005/commit-message-3.txt",
+  "runs/qa/git-portability-20261005/commit-message-4.txt",
+  "runs/qa/git-portability-20261005/push-batches-used.sh",
+  "runs/qa/git-portability-20261005/push-log.txt"
+ ],
+ "text_like_without_rule_count": 6,
+ "secret_pattern_hits": [
+  {
+   "file": "runs/qa/git-portability-20261006/precommit-check-used.py",
+   "line": 28,
+   "pattern": "signed_url",
+   "text": "   \"signed_url\": re.compile(r\"X-Amz-Signature|X-Goog-Signature|[?&](Signatu"
+  },
+  {
+   "file": "runs/qa/git-portability-20261006/precommit-check-used.py",
+   "line": 28,
+   "pattern": "signed_url",
+   "text": " re.compile(r\"X-Amz-Signature|X-Goog-Signature|[?&](Signature|sig|token|Expi"
+  }
+ ]
+}

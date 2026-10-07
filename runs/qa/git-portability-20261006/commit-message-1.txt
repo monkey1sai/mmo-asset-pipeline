@@ -1,0 +1,8 @@
+chore(art): 2026-10-05 推送紀錄與推送紀錄的換行規則
+
+- runs/qa/git-portability-20261005：上次分四批推送的紀錄、提交訊息、推送腳本、暫存核對腳本與推送日誌
+- runs/qa/git-portability-20261006：本次推送前的換行與密鑰樣式檢查、分組腳本
+- .gitattributes：/runs/qa/git-portability-*/** 照原位元組保存，record.json 記錄的
+  SHA-256 在 Windows（autocrlf）clone 後不變
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

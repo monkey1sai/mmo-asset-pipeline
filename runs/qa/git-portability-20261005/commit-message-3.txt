@@ -1,0 +1,10 @@
+feat(art): RO 劍士連段 r005–r010 手部與握劍修訂、素材庫索引
+
+- requests：r005–r010（含 r005 preflight）
+- assets/processed：r005–r010 的 master、手部來源與後製
+- runs/qa：r005–r010 的檢查紀錄、截圖與 r010 回讀點陣列（npz 走 LFS）
+- library/index.json：新增連段 r002–r010 與其他專案條目；照原位元組保存，與 r010 完整性紀錄的雜湊一致
+
+本批為先前 Codex 工作階段產出、尚未提交的紀錄，內容未修改；r010 維持關閉，不重開。
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

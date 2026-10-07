@@ -1,0 +1,39 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T05:26:59Z",
+ "status": "decided",
+ "question": "Does the seated coat exemption (entry 19) also cover the lie-back, i.e. from the start of the lie-back (frame 56) until the lying support is established (frame 63)?",
+ "context": "Entry 19 recorded the coordinator reading 'the window ends where the lie-back starts'. During the 7-frame lie-back the coat goes from hanging (seated) to flat under the body (b20 lying corrective, fully on at 63).",
+ "evidence": {
+  "coat_hanging_through_the_lie_back": "a06-prep/clearance-draft5-lying63.json: no sword crossing anywhere; the only remaining problem is the coat 28-272 mm below the bed top at 57-62",
+  "coat_lifted_by_forward_swing": "a06-prep/settle-draft8-forward.json: the coat tails need about 87 deg of forward swing right after 56 (tabard about 45); drafts 6-10 (clearance-draft6..10.json) then pass the bed everywhere but the swinging coat crosses the socketed sword's grip by 2.5-9 mm (left half-skirt side, tabard, right half-skirt), which no clip-level tuck or timing removed (cross-list-draft9.json)"
+ },
+ "options": [
+  {
+   "id": 1,
+   "recommended": true,
+   "title": "Extend the seated window to the lie-back",
+   "what": "seated_on_bed for LieDown becomes [2, 62]; the coat hangs (as in draft5) and slides under the body until the b20 lying corrective takes over at 63; GetUp mirrors it (from leaving the lying support until standing).",
+   "needs": "your confirmation (a wider exemption than the recorded reading)"
+  },
+  {
+   "id": 2,
+   "recommended": false,
+   "title": "Move the bed socket away from the hip",
+   "what": "Re-place the sword further toward the foot end (new socket, re-registered LieDown/Sleep configs, Sleep re-check, a new put-down reach study); uncertain whether the arm still reaches.",
+   "needs": "no new exemption; more rework"
+  }
+ ],
+ "resolution": {
+  "decided_utc": "2026-10-06T05:27:56Z",
+  "user_text": "往後躺大衣用做法 1",
+  "option": 1,
+  "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 20",
+  "encoding": [
+   "LieDown seated_on_bed [2, 62], registered 958340f02b78 (2026-10-06T05:27:57Z)",
+   "corrected to [2, 63] (registry 7552821be8d3, 2026-10-06): the a06 check found the coat 29.8/19.3/8.7 mm below the bed top at 62.25/62.5/62.75, quarter frames between the two windows inside the approved lie-back; scripts/cv1_interaction.py now lets a seated window meet a bed-support window on that one shared frame and ends the exemption where the support covers t, so the exemption runs to the support establishment and frame 63 itself is measured",
+   "GetUp seated_on_bed [27, 87] (registry 3f3eb4faba32): from leave_bed, where the support window ends, until standing (mirror of LieDown 2..63)"
+  ],
+  "unchanged": "weapon_body 1 mm (the coat must not cross the sword: solved in LieDown a07 with a 19 deg body-right coat swing, no exemption); bed clearance of every other mesh"
+ }
+}

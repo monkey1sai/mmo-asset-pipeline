@@ -1,0 +1,71 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Sleep_Loop",
+ "fps": 60,
+ "frames": 180,
+ "loop": true,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": []
+  },
+  "grasp.L": {
+   "windows": []
+  },
+  "lying": {
+   "windows": [
+    [
+     0,
+     179
+    ]
+   ]
+  }
+ },
+ "stance": {
+  "L": [],
+  "R": []
+ },
+ "events": [],
+ "nominal_speed_m_s": 0.0,
+ "bed": {
+  "centre_m": [
+   0.0,
+   0.65
+  ],
+  "top_z_m": 0.45,
+  "size_m": [
+   2.0,
+   0.9
+  ],
+  "yaw_deg": 0
+ },
+ "bed_support": {
+  "windows": [
+   [
+    0,
+    179
+   ]
+  ],
+  "establishment_frames": [
+   0
+  ]
+ },
+ "sword_socket": {
+  "initial": "bed",
+  "switches": [],
+  "bed_socket": {
+   "head_m": [
+    -0.4,
+    0.32,
+    0.469597
+   ],
+   "quaternion_wxyz": [
+    0.12278781086206436,
+    0.6963642835617065,
+    -0.6963642239570618,
+    0.12278781086206436
+   ]
+  }
+ },
+ "note": "Bed support for the whole loop (contact_window_rules.bed_support); hands relaxed, no grasp (clip_contracts); the sword lies on the shared bed socket (runs/qa/ro-swordsman-character-v1/v001/clips/bed-interaction-design.json). lying (2026-10-06): whole loop, drives the b20 coat lying corrective (SKC_coat_lying)."
+}

@@ -1,0 +1,46 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Cast_OpenPalm",
+ "fps": 60,
+ "frames": 90,
+ "loop": false,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     0,
+     89
+    ]
+   ],
+   "establishment_frames": [
+    0
+   ]
+  },
+  "grasp.L": {
+   "windows": []
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    0,
+    89
+   ]
+  ],
+  "R": [
+   [
+    0,
+    89
+   ]
+  ]
+ },
+ "events": [
+  {
+   "name": "release",
+   "frame": 36
+  }
+ ],
+ "nominal_speed_m_s": 0.0,
+ "note": "Grasp window covers the whole clip and both feet stand for the whole clip (contact_window_rules.grasp_R, foot_stance); one release event when the open palm has arrived (clip_contracts: 釋放事件1個). The left open palm has no contact corrective."
+}

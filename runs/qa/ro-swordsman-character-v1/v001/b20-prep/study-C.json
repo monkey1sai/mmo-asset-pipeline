@@ -1,0 +1,107 @@
+{
+ "observed_utc": "2026-10-06T03:57:36.003106+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "5e3b36bebfe0edbed73eae70d8a8a0cb8493c0d74a2f461fa2a8b26996c3cc2a",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/ro_character_v001_b19-crotch.blend",
+  "sha256": "3280f4b186a17d1ce69bdcb5649ea6ba988ffa876078a4ce739c75370feb0963"
+ },
+ "inputs": {
+  "contract": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "rules_in": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+   "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+  },
+  "clip_blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03/AN_RO_Sleep_Loop.blend",
+   "sha256": "b4bfd82fc7ae939dc89d9746ebf9fc4ee2cb52128c5f9333fb1351d0dff2f5e6"
+  },
+  "action": "AN_RO_Sleep_Loop",
+  "frame": 0.0,
+  "interaction": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "sha256": "7cf5ad49eb6c2ed22ed8717df51566896d6eb67b7e6f26126df22619deeea1d4"
+  },
+  "states_at_frame": {
+   "grasp.R": 0.0,
+   "grasp.L": 0.0
+  }
+ },
+ "morph": "SKC_coat_lying",
+ "state": "lying",
+ "bed_top_z_m": 0.45,
+ "offsets_m": {
+  "outer": 0.002,
+  "inner": 0.025
+ },
+ "smooth_iterations": 6,
+ "frozen_region": {
+  "pelvis_weight_at_least": 0.5,
+  "in_front_of_y_m": 0.12,
+  "vertices": 5950,
+  "coat_support_vertices": [
+   1210,
+   1211,
+   1216,
+   6875,
+   6876
+  ]
+ },
+ "skin_matrix_check_m": 2.2302015940987714e-07,
+ "sunk_before": {
+  "vertices": 515,
+  "lowest_below_top_mm": 168.86
+ },
+ "after_lying_key": {
+  "lowest_over_bed_above_top_mm": 1.0,
+  "vertices_below_top": 0
+ },
+ "anchored_below_goal": [
+  {
+   "vertex": 1211,
+   "below_goal_mm": 1.0,
+   "above_top_mm": 1.0
+  },
+  {
+   "vertex": 6875,
+   "below_goal_mm": 0.05,
+   "above_top_mm": 1.95
+  }
+ ],
+ "anchored_below_goal_count": 2,
+ "weak_direction": [],
+ "weak_direction_count": 0,
+ "lift": {
+  "vertices": 938,
+  "max_rest_offset_mm": 193.91
+ },
+ "support_vertices_offset_mm": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "coat_triangle_area_ratio_in_pose": {
+  "min_without_key": 0.1824,
+  "min_with_key": 0.1487,
+  "max_with_key": 11.8984,
+  "worst_triangle": {
+   "index": 8405,
+   "rest_centre_m": [
+    0.2329,
+    0.2467,
+    0.5174
+   ]
+  },
+  "triangles_below_0.05": 0,
+  "triangles_below_0.10": 0,
+  "max_without_key": 11.8984
+ },
+ "flipped_when_key_on": 47,
+ "inner_side_lifted": {
+  "vertices": 311,
+  "max_above_top_mm": 89.7
+ },
+ "scope": "Coat only. Zero in every pose whose interaction state is zero (every frozen contract pose and every clip that does not declare the state)."
+}

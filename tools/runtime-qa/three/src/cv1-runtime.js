@@ -123,6 +123,45 @@ export function setInfluence(model, mesh, morph, weight) {
   object.morphTargetInfluences[index] = weight;
 }
 
+// Sword socket at a clip frame: the initial socket, switched from each event frame on (scripts/cv1_interaction.py socket_at).
+export function socketAt(socket, frame) {
+  let current = socket.initial;
+  for (const s of [...socket.switches].sort((a, b) => a.frame - b.frame)) if (frame >= s.frame) current = s.to;
+  return current;
+}
+
+// The bed socket in glTF world space. Call at rest, before the mixer runs: the sword joint's rest world matrix in the
+// GLB against Blender's rest bone matrix gives the axis change, which then carries the Blender socket matrix over.
+export function prepareSocket(model, socket) {
+  if (!socket) return null;
+  const blenderToGltf = new THREE.Matrix4().set(1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 1);
+  const fromRows = (rows) => new THREE.Matrix4().set(...rows.flat());
+  model.root.updateMatrixWorld(true);
+  const sword = model.bones.sword;
+  const restGltf = sword.matrixWorld.clone();
+  const correction = blenderToGltf.clone().multiply(fromRows(socket.sword_rest_matrix_blender)).invert().multiply(restGltf);
+  return { ...socket, worldGltf: blenderToGltf.clone().multiply(fromRows(socket.bed_socket_matrix_blender)).multiply(correction),
+           handLocal: { position: sword.position.clone(), quaternion: sword.quaternion.clone(), scale: sword.scale.clone() } };
+}
+
+// Socket step: runs after the mixer, before the helpers. On the bed socket the sword joint leaves hand.R's motion and
+// holds the fixed socket transform; on the hand socket the clip's (rest) attachment to hand.R applies. A socketed clip has
+// no sword channel, so the mixer never resets the joint: the hand socket restores the rest attachment, otherwise a bed
+// placement from an earlier sample would carry over.
+export function applySocket(model, socket, frame) {
+  if (!socket) return 'hand';
+  const sword = model.bones.sword;
+  if (socketAt(socket, frame) !== 'bed') {
+    sword.position.copy(socket.handLocal.position);
+    sword.quaternion.copy(socket.handLocal.quaternion);
+    sword.scale.copy(socket.handLocal.scale);
+    return 'hand';
+  }
+  model.root.updateMatrixWorld(true);
+  sword.parent.matrixWorld.clone().invert().multiply(socket.worldGltf).decompose(sword.position, sword.quaternion, sword.scale);
+  return 'bed';
+}
+
 // Helper bones follow their sources; runs after the mixer, before the morph rules.
 export function applyHelpers(model, rules) {
   const rotations = helperRotations(rules, model.poseRel(), model.restLocalWxyz, model.parents);

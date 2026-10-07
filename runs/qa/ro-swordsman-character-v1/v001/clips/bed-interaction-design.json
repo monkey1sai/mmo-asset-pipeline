@@ -1,0 +1,72 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-05T11:35:00Z",
+ "status": "coordinator defaults (assumptions), open to the user's change; locked per clip with each registered interaction config",
+ "bed": {
+  "centre_m": [
+   0.0,
+   0.65
+  ],
+  "top_z_m": 0.45,
+  "size_m": [
+   2.0,
+   0.9
+  ],
+  "yaw_deg": 0,
+  "note": "Behind the standing character, long axis along X; near edge y 0.20 (35 mm behind the rearmost calf point 0.165); covers the lying body x -0.92..0.85."
+ },
+ "lying": {
+  "orientation": "supine, head towards +X (pelvis turns: x -90 then z -90 deg), pelvis head at x 0, y 0.65 (bed centre line)",
+  "posture": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/posture-01/posture.json (five support sets 1.0 mm above the bed top)"
+ },
+ "sword_bed_socket": {
+  "head_m": [
+   -0.4,
+   0.32,
+   0.469597
+  ],
+  "quaternion_wxyz": [
+   0.12278781086206436,
+   0.6963642835617065,
+   -0.6963642239570618,
+   0.12278781086206436
+  ],
+  "description": "sword lying flat on the bed top right of the seated hip, blade towards -X (tip 0.335 m past the bed end, centre of mass over the bed)",
+  "extent_m": {
+   "x": [
+    -1.3350000381469727,
+    -0.2649998664855957
+   ],
+   "y": [
+    0.22501561045646667,
+    0.41501352190971375
+   ],
+   "z": [
+    0.45100000500679016,
+    0.4882499575614929
+   ]
+  },
+  "source": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/socket-scan/bed-socket.json"
+ },
+ "why_this_socket": [
+  "arm reach is short: upper arm 0.215 m + forearm 0.236 m, wrist at most 0.444 m from the shoulder (seated-lean-scan.json)",
+  "standing: blade-down holds are out of reach; only Idle-like (16.5 deg) or outward (34.4 deg) holds near the hip (socket-scan/scan.json)",
+  "seated upright: no bed-top grip right of the hip is reachable (seated-scan.json, 0 of 54)",
+  "supine beside the hand: least wrist bend 61 deg with the sword touching the body (supine-scan.json)",
+  "seated with spine_02 15 deg right lean and clavicle.R 10 deg down: grip (-0.40, 0.32) reachable at 95% of the arm, wrist bend 37.9 deg, 18 mm from the coat (seated-lean-scan.json)"
+ ],
+ "consequences": [
+  "LieDown: sit, lean right and lay the sword down (put_sword_down), then lie back with the head towards +X while the legs swing high over the sword to the -X half",
+  "GetUp: sit up with the legs swinging back over the sword, lean right and pick the sword up (pick_sword_up), stand to Idle",
+  "Sleep_Loop: sword on the bed socket for the whole loop; no grasp"
+ ],
+ "other_assumptions": {
+  "bed_support_window": "one establishment frame for all five support sets (stricter reading of r6 line 132)",
+  "socket_pop": "1 mm / 1 degree at each switch (equal to the loop-seam limits; r6 states only 'no per-frame weapon drift')",
+  "transitions": "for P4: neighbouring clips in a chain share the socket at their joined ends; blends happen only at clip ends",
+  "stance_windows": "LieDown/GetUp declare stance windows where the feet are planted (standing, seated), so touchdown/lift-off are refined to quarter frames",
+  "head_extension": "no pillow in the request's bed proxy: lying flat needs about 19 deg neck+head extension (posture-01); a pillow would need a new request version (r6 line 255)",
+  "bed_proxy_in_delivery": "r6 lists bed-proxy as a part (pivot at the bed centre, outside the character triangle budget); the delivery GLB will carry it as a separate node"
+ },
+ "review": "runs: independent read-only review 2026-10-05 (advisory) raised the user-owned choices listed here; defaults taken so production continues"
+}

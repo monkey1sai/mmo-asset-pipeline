@@ -1,0 +1,76 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T10:55:19Z",
+ "status": "decided",
+ "question": "P4 run-04 (decisions of entry 25 applied): 115/164 scenarios pass. How should the remaining collapse failures at crease regions (D) and the five foot-reach failures (G) be handled?",
+ "evidence": {
+  "progress": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress.json",
+  "run_04": "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/transition-check.json",
+  "feet_recheck": "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/feet-recheck.json",
+  "collapse_classes": "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/collapse-classes.json (Blender probe runs/qa/ro-swordsman-character-v1/v001/p4/diag-05/probe.json)",
+  "runtime": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261006t105252z-p4-results.json"
+ },
+ "facts": {
+  "collapse_failing_scenarios": 47,
+  "feet_failing_scenarios": 5,
+  "collapse_cases_by_class": {
+   "foot_lock": 35,
+   "folded_in_clip": 24,
+   "blend": 9
+  },
+  "crease_sites": {
+   "groin / front of the hip (pelvis + upper_leg)": [
+    23463,
+    23466,
+    23549,
+    23585,
+    22735,
+    25600
+   ],
+   "back of the right thigh above the knee (upper_leg.R + lower_leg.R)": [
+    17737,
+    17740
+   ],
+   "armpits (spine + upper_arm)": [
+    28926,
+    29049,
+    21489
+   ]
+  },
+  "note": "Most foot_lock cases are settle steps or held feet moving the hip through groin triangles that the Walk clip itself already folds (area large, normal reversed: the clip check gates area only and reports flips). folded_in_clip: a source clip has the triangle folded or under 5 %. blend: both clips open, the blend compresses it.",
+  "feet_reach_limit": "Run->Walk at 1.5x (100 and 400 ms, both feet variants) and the Walk<->Run repeated switch: running at 5.25 m/s the body passes the locked foot faster than the leg can reach; the foot is dragged 15-53 mm",
+  "budget": "active time at pause-25 recorded in runs/qa/ro-swordsman-character-v1/v001/v001-pause-25.json"
+ },
+ "decisions": [
+  {
+   "id": "D",
+   "topic": "collapse at crease regions",
+   "recommended": "D2",
+   "options": {
+    "D1": "fix the crease regions in the foundation (b21: skin weights or correctives at the groin, the back of the knee and the armpits), add a fold gate to the clip check, re-verify all seven clips and P4; estimated 3-5 h, which would use most of the remaining trial budget before the combo clip and P5",
+    "D2": "keep the collapse gate strict: close P4 with these scenarios listed as known failures and the crease sites recorded for the next foundation revision, then decide the combo clip and P5",
+    "D3": "judge transition collapse only on triangles open and above 5 % in every active source clip (gate-scope change); the foot_lock and blend cases would still fail"
+   }
+  },
+  {
+   "id": "G",
+   "topic": "foot reach limit at the fastest settings",
+   "recommended": "G1",
+   "options": {
+    "G1": "keep the feet gate strict and list the five scenarios as known failures (the physical limit of in-place cross-fades at 1.5x running)",
+    "G2": "add a re-plant step when the leg runs out of reach (about 1 h; more leg motion through the crease regions)",
+    "G3": "take Run->Walk at 1.5x with these blends out of the transition table (scope change)"
+   }
+  }
+ ],
+ "resolution": {
+  "decided_utc": "2026-10-06T11:17:00Z",
+  "user_text": "D2; 允許將時間擴充至 36小時 / G1 列為已知失敗 (Recommended)",
+  "options": {
+   "D": "D2",
+   "G": "G1"
+  },
+  "budget": "v001 trial cap 64,800 s -> 129,600 s (36 h)",
+  "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 26"
+ }
+}

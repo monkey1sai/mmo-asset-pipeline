@@ -18,9 +18,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BLENDER = r"C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"
-FOUNDATION = "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/ro_character_v001_b18-clipfolds.blend"
-RULES = "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/corrective-rules.json"
-SNAPSHOT = "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/weights-snapshot.json"
+FOUNDATION = "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend"
+RULES = "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json"
+SNAPSHOT = "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/weights-snapshot.json"
 REGISTRY = "runs/qa/ro-swordsman-character-v1/v001/clips/interaction-registry.json"
 GATE_MANIFEST = "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/runtime-manifest.json"
 HELPERS = "wrist_transition.R_twist,wrist_transition.L_twist"
@@ -56,8 +56,10 @@ def main():
                      "--rules", RULES, "--tag", tag, "--asset-dir", export, "--qa-dir", qa,
                      "--every", options.get("--every", "6"), "--half", options.get("--half", "")], log=f"{qa}-export.log")
         print(*lines, sep="\n")
+        # A clip with sword sockets also loses its sword channel: the runtime places the sword from the socket events.
+        socketed = "sword_socket" in json.loads((ROOT / assets / "interaction.json").read_text(encoding="utf-8"))
         print(*run([sys.executable, "-B", "scripts/cv1_strip_bone_channels.py", f"{export}/{tag}_runtime_owner.glb", f"{export}/{tag}_runtime_owner_stripped.glb",
-                    HELPERS, f"{qa}/strip-runtime_owner.json"]), sep="\n")
+                    HELPERS + (",sword" if socketed else ""), f"{qa}/strip-runtime_owner.json"]), sep="\n")
         for kind in ("runtime_owner_stripped", "baked_owner"):
             run([sys.executable, "-B", "scripts/cv1_restore_glb_weights.py", f"{export}/{tag}_{kind}.glb", SNAPSHOT, f"{export}/{tag}_{kind}_exact_weights.glb",
                  f"{qa}/restore-{kind}.json"])
@@ -67,7 +69,9 @@ def main():
         manifest.update({"reference": info(f"{qa}/blender-reference.json"), "reference_binary": info(f"{qa}/blender-reference.f64.bin"), "rules": info(RULES),
                          "glb": {"runtime_owner": info(f"{export}/{tag}_runtime_owner_stripped_exact_weights.glb"), "baked_owner": info(f"{export}/{tag}_baked_owner_exact_weights.glb")},
                          "capture": [[sampled[0], "whole"], [sampled[0], "hands"], [sampled[len(sampled) // 2], "whole"]],
-                         "note": f"Clip closed loop for {clip} {attempt} (scripts/cv1_clip_pipeline.py). Exact-weight GLBs; helper channels stripped from the runtime-owner GLB."})
+                         "sword_socket": reference.get("sword_socket"),
+                         "note": f"Clip closed loop for {clip} {attempt} (scripts/cv1_clip_pipeline.py). Exact-weight GLBs; helper channels"
+                                 + (" and the sword channel" if socketed else "") + " stripped from the runtime-owner GLB."})
         (ROOT / qa / "runtime-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
         print(f"MANIFEST {qa}/runtime-manifest.json")
     elif command == "readback":

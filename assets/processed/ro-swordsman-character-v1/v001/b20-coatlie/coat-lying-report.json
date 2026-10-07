@@ -1,0 +1,115 @@
+{
+ "observed_utc": "2026-10-06T03:48:17.512861+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "f5719cdd614bfb6578556601a172f919494677d412896cd0f1d0734135a7b03b",
+ "source": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/ro_character_v001_b19-crotch.blend",
+  "sha256": "3280f4b186a17d1ce69bdcb5649ea6ba988ffa876078a4ce739c75370feb0963"
+ },
+ "inputs": {
+  "contract": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+  "rules_in": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/corrective-rules.json",
+   "sha256": "70393697cfbccbc1e0d43f7134cf9e4f4a446136d7fee89c12a5b6cff90a7dba"
+  },
+  "clip_blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a03/AN_RO_Sleep_Loop.blend",
+   "sha256": "b4bfd82fc7ae939dc89d9746ebf9fc4ee2cb52128c5f9333fb1351d0dff2f5e6"
+  },
+  "action": "AN_RO_Sleep_Loop",
+  "frame": 0.0,
+  "interaction": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/interaction.json",
+   "sha256": "f033d96988c7a937ca5a17b087c9e3ba3227eaed39f81772a8415316b5560d6e"
+  },
+  "states_at_frame": {
+   "grasp.R": 0.0,
+   "grasp.L": 0.0
+  }
+ },
+ "morph": "SKC_coat_lying",
+ "state": "lying",
+ "margin_m": 0.002,
+ "bed_top_z_m": 0.45,
+ "hinge_rest_m": [
+  0.0,
+  0.20712009072303772,
+  0.7699999809265137
+ ],
+ "frozen_region": {
+  "pelvis_weight_at_least": 0.5,
+  "above_hinge_z_m": 0.77,
+  "in_front_of_y_m": 0.12,
+  "vertices": 5950,
+  "coat_support_vertices": [
+   1210,
+   1211,
+   1216,
+   6875,
+   6876
+  ]
+ },
+ "skin_matrix_check_m": 2.2302015940987714e-07,
+ "field_iterations": 409,
+ "field_last_change_rad": 9.703258474491605e-10,
+ "sunk_before": {
+  "vertices": 515,
+  "lowest_below_top_mm": 168.86
+ },
+ "after_lying_key": {
+  "lowest_over_bed_above_top_mm": 1.0,
+  "vertices_below_target": 2
+ },
+ "anchored_but_sunk": [
+  {
+   "vertex": 1211,
+   "depth_mm": 1.0
+  },
+  {
+   "vertex": 6875,
+   "depth_mm": 0.05
+  }
+ ],
+ "anchored_but_sunk_count": 2,
+ "unreachable": [],
+ "unreachable_count": 0,
+ "bend": {
+  "vertices": 938,
+  "max_deg": 66.35,
+  "max_rest_offset_mm": 177.89
+ },
+ "support_vertices_offset_mm": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "coat_triangle_area_ratio_in_pose": {
+  "min_without_key": 0.1824,
+  "min_with_key": 0.0221,
+  "max_with_key": 11.8984
+ },
+ "scope": "Coat only. Zero in every pose whose interaction state is zero (every frozen contract pose and every clip that does not declare the state).",
+ "output": {
+  "blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie/ro_character_v001_b20-coatlie.blend",
+   "sha256": "bbf83f9c9c31e9afcfeaa2559d3c9884875c82f593a225267932e04cf209baff"
+  },
+  "rules": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie/corrective-rules.json",
+   "sha256": "05221302e9eae5129f8d9f986c3d5a9d0ceaaf4ed3549c2f2771a21158c2073b"
+  },
+  "copied": {
+   "poses.json": {
+    "from": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/poses.json",
+    "sha256": "90cd8e742a93140912f264b21d321f93d3f7914c6dac80577a03a325c0c56b21"
+   },
+   "contact-fixtures.json": {
+    "from": "assets/processed/ro-swordsman-character-v1/v001/b19-crotch/contact-fixtures.json",
+    "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331"
+   }
+  }
+ },
+ "source_sha256_after": "3280f4b186a17d1ce69bdcb5649ea6ba988ffa876078a4ce739c75370feb0963"
+}

@@ -1,0 +1,155 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T08:24:05Z",
+ "milestone": 3,
+ "status": "accepted: numerically complete on b20 (Cast a04, LieDown a08, Sleep_Loop a04, GetUp a02 pass the clip check, the runtime closed loop and the readback) and art review accepted by the user (entry 23); independent gray grasp acceptance not separately presented; not in the ledger",
+ "authorization": "entries 14 (milestone 3) and 15 (commit/push first) in runs/qa/ro-swordsman-character-v1/authorizations.json; entry 16 (b19 and the rest of milestone 3 on b19); entry 17 (b20 coat lying corrective, then the rest of milestone 3); entry 18 (hand presses into the bed within 6 frames of a socket event, up to 50 mm); entry 19 (seated coat may hang into the bed); entry 20 (the coat may hang into the bed through the lie-back until the bed support is established; GetUp mirrors it); entry 21 (option B: slower end of the release in LieDown, mirrored in GetUp); entry 22 (option a: the seat-turn speed is accepted for now); entry 23 (art review accepted; commit and push of milestone 3)",
+ "done": {
+  "AN_RO_Cast_OpenPalm a04": {
+   "clip_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Cast_OpenPalm/a04-check-b18/clip-check.json (0 failures, min area ratio 0.0619)",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261005t105227z-runtime-results.json (0.830 um); harness regression re-run 20261005t111306z",
+   "readback": "1.150 um over 16 baked frames",
+   "route_note": "a01-a03 folded left-armpit triangles; a03-diag-grid mapped abduction x flexion and a04 routes the arm around the fold band",
+   "art_review": "accepted by the user 2026-10-06 with the milestone (entry 23)"
+  },
+  "AN_RO_Sleep_Loop a02": {
+   "clip_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a02-check-b18/clip-check.json (0 failures; bed support all five sets within -2.02..+4.03 mm)",
+   "runtime": "20261005t113825z (0.996 um, sword on the bed socket placed by the runtime); first run 20261005t113720z failed only its vacuous stale-pose control and is kept",
+   "readback": "1.472 um over 21 baked frames",
+   "posture": "posture-02 (coat tails tucked 15 deg; a01 crossed the socketed sword with coat.L)",
+   "superseded_finding_20261006": "fails the new bed_clearance gate (coat tails 169 mm inside the bed proxy, heels 18 mm, bracers 6 mm); see a03 and the decision record"
+  },
+  "AN_RO_Sleep_Loop a03": {
+   "check": "clips/AN_RO_Sleep_Loop/a03-check-b20-coatlie3/clip-check.json (every gate, bed clearance worst 3.0 mm)",
+   "runtime": "clips/runtime/20261006t043654z-runtime-results.json (1.032 um; coat lying corrective at 1.0, weights within 1e-7)",
+   "readback": "1.673 um",
+   "posture": "posture-06 + b20 coat lying corrective",
+   "art_review": "pending",
+   "superseded_20261006": "a04 (coat tails untucked, see a04)"
+  },
+  "AN_RO_Sleep_Loop a04": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a04-check-b20/clip-check.json (365 samples, every gate; min area 0.1583 vs a03 0.1485; flipped at most 10 vs 27; other new pairs at most 2353 vs 2960; bed support -2.02..+4.86 mm; bed clearance worst 3.0 mm)",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t063651z-runtime-results.json (1.032 um, fixed harness); first run 20261006t063242z (same numbers, earlier harness)",
+   "readback": "1.673 um",
+   "change": "coat tails untucked (the 15 deg tuck came from a02 for b18/b19; on b20 the untucked coat is clear of the sword and the bed top, and the tuck folded the back seam and could not be reached from LieDown without collapse)",
+   "art_review": "accepted by the user 2026-10-06 (entry 23; clips/milestone-03-sheet-r2.png, AN_RO_LieDown/a08-release-closeups/release-strip.png)",
+   "final_tool_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/a04-check-b20-final/clip-check.json: every gate with the final scripts/cv1_clip_check.py (sha 5c6482d6c0f2...), every sample identical to the check listed above",
+   "export_tool_note": "bed socket throughout: the hand-socket reset never runs"
+  },
+  "AN_RO_LieDown a07": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a07-check-b20/clip-check.json (203 samples, every gate; hand into the bed at most 47.53 of 50 mm; other points 3.0 mm; weapon_body 0; min area 0.0538 at 19.5, unchanged since a06, sitting down); re-check with the socket fix a07-check-b20-socketfix: every sample identical",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t063621z-runtime-results.json (runtime 6.18 um, blend 1.29 um, baked 6.18 um); first run 20261006t063408z failed only the blend sample (sword 2.29 m) through a harness state leak, kept",
+   "readback": "4.62 um (frame 54)",
+   "continuity": "frame 89 equals Sleep_Loop a04 frame 0 (every keyed bone 0.0 deg / 0.0 m, a07-end-vs-sleep-a04.json)",
+   "spec": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/clip.json (a07 revision note); drafts 11-19 and probes in a06-prep",
+   "art_review": "pending",
+   "final_tool_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a07-check-b20-final/clip-check.json: every gate with the final scripts/cv1_clip_check.py (sha 5c6482d6c0f2...), every sample identical to the check listed above",
+   "export_tool_note": "exported before the hand-socket reset in scripts/cv1_export_clip.py; for this clip the reset is a no-op (hand frames come before the bed frames and the blend uses hand frames; INFERRED from the code path, consistent with the runtime and readback passes)",
+   "superseded": "a08 (entry 21: slower end of the release)"
+  },
+  "AN_RO_GetUp a01": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/a01-check-b20-socketfix/clip-check.json (203 samples, every gate; pick-up pop 7e-8 m; hand into the bed at most 47.53 mm); the first check a01-check-b20 failed the grasp gate 60-89 through the clip check's stale sword placement (0.1-0.2 mm), kept",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t064516z-runtime-results.json (runtime 6.18 um, blend 1.56 um, baked 6.18 um)",
+   "readback": "4.62 um (frame 36)",
+   "continuity": "frame 0 equals Sleep_Loop a04 frame 0 and frame 89 equals LieDown a07 frame 0 (0.0 deg / 0.0 m, prep/up0-vs-sleep0.json, prep/up89-vs-lie0.json)",
+   "spec": "time reversal of LieDown a07 (prep/mirror-spec-used.py; LieDown 89/63/30/0 -> GetUp 0/27/60/89); interaction config registered 3f3eb4faba32 (leave_bed 27, pick_sword_up 60, grasp 60-89, stance 58-73, seated_on_bed 27-87)",
+   "art_review": "pending",
+   "final_tool_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/a01-check-b20-final/clip-check.json: every gate with the final scripts/cv1_clip_check.py (sha 5c6482d6c0f2...), every sample identical to the check listed above",
+   "export_tool_note": "exported with the hand-socket reset; the final export script differs only by the start-up refusals (sword keyed in a socketed clip, sword rotation mode), which this clip does not trigger",
+   "superseded": "a02 (mirror of LieDown a08)"
+  },
+  "AN_RO_LieDown a08": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08-check-b20/clip-check.json (203 samples, every gate; hand into the bed at most 47.53 mm; other points 3.0 mm; weapon_body 0; pop 7e-8 m; min area 0.0538 at 19.5 as before; final scripts)",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t071729z-runtime-results.json (runtime 6.18 um, blend 1.29 um, baked 6.18 um)",
+   "readback": "4.62 um",
+   "continuity": "frame 89 equals Sleep_Loop a04 frame 0 (a08-end-vs-sleep-a04.json, 0.0 deg / 0.0 m)",
+   "release": "hand grip-point speed 36-47 peaks at 3.69 m/s at 36 (lift off the bed) and stays at or under 2.53 m/s from 38 (a07: 9.25 m/s at 43, the IK fade swinging the hand out); the hand meets the free arm's wrist and elbow at 47 (elbow within 0.14 cm) and the arm IK fades 47-50; wrist swing at most 52.3 deg (contract 60); a08-hand-path.json, a06-prep/hand-path-a07.json",
+   "spec": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/clip.json (a08 revision note); drafts 20-23 in a06-prep",
+   "art_review": "accepted by the user 2026-10-06 (entry 23; clips/milestone-03-sheet-r2.png, AN_RO_LieDown/a08-release-closeups/release-strip.png)"
+  },
+  "AN_RO_GetUp a02": {
+   "check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/a02-check-b20/clip-check.json (203 samples, every gate; pick-up pop 7e-8 m; final scripts)",
+   "runtime": "runs/qa/ro-swordsman-character-v1/v001/clips/runtime/20261006t071806z-runtime-results.json (runtime 6.18 um, blend 1.56 um, baked 6.18 um)",
+   "readback": "4.62 um",
+   "continuity": "frame 0 equals Sleep_Loop a04 frame 0, frame 60 equals LieDown a08 frame 30, frame 89 equals LieDown a08 frame 0 (0.0 deg / 0.0 m)",
+   "reach": "mirror of the a08 release: grip-point speed peaks at 3.29 m/s (54) while the hand leaves the free arm (40-43) and reaches the grip (a02-hand-path.json)",
+   "spec": "time reversal of LieDown a08 (prep/mirror-spec-used.py)",
+   "art_review": "accepted by the user 2026-10-06 (entry 23; clips/milestone-03-sheet-r2.png, AN_RO_LieDown/a08-release-closeups/release-strip.png)"
+  }
+ },
+ "toolchain": [
+  "cv1_author_clip.py: keys mode (non-loop), pelvis block, weighted named poses, IK/FK blending for the sword arm and both legs, configurable leg reach, failing-frame reports; regression: Cast a04 and Idle a03 re-authored bit-identical",
+  "cv1_interaction.py: Cast single release event, generic bed proxy and sword-socket schema (holdout-safe), socket_at, exact percent frames (70% of 90 = 63)",
+  "cv1_clip_check.py: bed support gate, bed proxy previews, sword sockets with pop gate (1 mm / 1 deg, assumption)",
+  "cv1_export_clip.py: location keys exported (correction), self-check, socket-aware reference and blend frames; cv1_clip_pipeline.py strips the sword channel for socketed clips",
+  "runtime-qa: socket step after the mixer (prepareSocket/applySocket), no-sword-channel verdict, stale-pose control falls back to the rest pose for near-static clips",
+  "cv1_bed_posture.py: supine posture solver for the five support sets",
+  "cv1_arm_ik.py: solve_hinge (elbow bends only about the contract flexion axis, same elbow point as solve; pronation and humeral turn reported against the contract), hand relax; old solve bit-identical (Idle a03 and Cast a04 re-authored, max difference 0)",
+  "cv1_author_clip.py: sword 'ik': 'hinge' and 'hand_relax'; per-frame arm diagnostics in the author report",
+  "cv1_clip_check.py: bed_clearance gate (whole body over the bed footprint within 5 mm of the bed top; coordinator assumption)",
+  "cv1_bed_posture.py: forearm-wide arm measure, fixed ankle dorsiflexion with a heel allowance in the hip solve, optional posterior pelvic tilt; whole-body lowest point reported",
+  "cv1_clip_check.py: bed clearance reports hand and other points apart; hand allowance 50 mm within 6 frames of a sword-socket event (entry 18); cv1_interaction.near_socket_event with a test",
+  "cv1_coat_lying.py: fold mode (study only so far)",
+  "cv1_interaction.py: seated_on_bed windows (validation, boundaries, seated_on_bed()) with a test; cv1_clip_check.py: coat exempt inside them (reported)",
+  "cv1_interaction.py: windows_overlap; seated_on_bed() false inside bed-support windows (entry 20 encoding) with tests",
+  "cv1_clip_check.py / cv1_export_clip.py / runtime-qa cv1-runtime.js: hand-socket rest attachment for clips that do not key the sword"
+ ],
+ "corrections": [
+  "runs/qa/ro-swordsman-character-v1/v001/clips/export-location-fix-20261005.json (Walk/Run deliverable exports had lost the pelvis motion; re-exported and re-verified)",
+  "2026-10-06: socketed clips' hand socket restores the sword's rest attachment in scripts/cv1_clip_check.py, scripts/cv1_export_clip.py and tools/runtime-qa/three/src/cv1-runtime.js (an earlier bed placement carried over to later hand-socket samples; LieDown a07 re-check identical; GetUp a01 and LieDown blend runs failed before the fix and are kept)",
+  "2026-10-06: seated_on_bed windows may meet a bed-support window on one shared frame and the exemption ends where the support covers t (scripts/cv1_interaction.py with tests; also refuses a seated window inside a support window, which the end-point check missed); LieDown config re-registered 7552821be8d3",
+  "2026-10-06: advisory review of the tool changes (read-only reviewer): no blocking issue; acted on: the scripts now refuse a socketed clip that keys the sword and a non-quaternion sword bone (the reset relies on both), and the exemption wording covers GetUp; kept: wrapping windows compare end frames only (stricter, loop clips with seated windows only), the preview slider in candidate.js uses the block index as the frame (preview only, pre-existing), malformed windows raise TypeError as elsewhere"
+ ],
+ "design_defaults": "runs/qa/ro-swordsman-character-v1/v001/clips/bed-interaction-design.json",
+ "liedown_attempts": {
+  "a01": "collapse (right knee back while seated, right elbow crease, left groin, coat panel), sword-body (coat tails), grasp after put-down (fading IK dragged the hand through the grip)",
+  "a02": "knees/groin clean; coat tails over the socket (coat.R 46-52, coat.L 57-59); lifting the hand straight up crossed the grip; coat panel collapse",
+  "a03": "grasp only 41.5-42.5; right elbow crease 37-40.5; coat.R crossing 45.5-49; coat panel collapse 50-56.5",
+  "a04 (scoot first)": "grasp passes, coat panel clean; legs came down over the socket 53.5-61; elbow crease and palm self-crossing during the release (wrist bend 86 deg)",
+  "a05": "grasp passes; legs/coat crossing reduced to 52-56.5; left groin collapse back at 53-59 (hip 70 deg held during the turn); elbow crease 36.5-45 and palm self-crossing 39-42.5",
+  "a06": "first b20 attempt (hinge arm, seat +25 mm, new path after the put-down): grasp crossings 31.25-35 (hand lifted with the fingers closed), back-seam collapse 54-61 (both half-skirts tucked in), coat 8.7-29.8 mm in the bed at 62.25-62.75 (between the seated and lying windows)",
+  "a07": "passes: release by withdrawing (fingers to 0.84 with a 6 deg roll, slide 6 cm back under the grip, open while lifting, rise over the grip, lean returns 36-42); coat swings 19 deg to the body right about one shared axis 52-57 and settles 63-75; seated window [2, 63]",
+  "a08": "passes (entry 21): from 36.5 the hand passes over the grip (40) and travels on to the free arm pose, meeting its wrist and elbow at 47 (keys on the wrist, swivel 10 -> -22), IK fade 47-50, hand relax 0 -> 0.6 (35-38) -> 1 (44)"
+ },
+ "recurring_causes": [
+  "right inner-elbow crease: re-attributed on 2026-10-06 to the swing arm solver bending the elbow 25-88 deg off its hinge axis (a06-prep/hinge-probe.json); the hinge solver keeps it on the contract axis",
+  "left groin at bilateral hip flexion: fixed in b19 (three crotch micro-correctives)",
+  "right palm self-crossing while the grip opens: wrist relation far outside the contract (pronation up to 123 deg with the a05 keys); hand_relax returns the wrist to neutral after the put-down",
+  "coat tails inside the bed (new gate): see the decision record",
+  "the bed (0.9 m) leaves little room between the socket beside the seated hip and the lying legs/coat",
+  "both coat half-skirts swinging in (towards each other) pinch the back-centre seam: collapse during any transition and folded triangles at rest (coat-fold-a06.json, coat-scan-tuck-f63.json); one shared rotation for both halves (body right) avoids it",
+  "releasing a grip that lies on the bed: the fingers wrap under the grip, so the hand must open part way, withdraw under it, then open and lift (draft11-19)",
+  "unkeyed sword joint keeps an earlier bed placement on later hand-socket samples (clip check, export, runtime harness): fixed by restoring the rest attachment"
+ ],
+ "not_done": [
+  "Idle ends of LieDown/GetUp: frame 0 / 89 differ from Idle a03 frame 0 by up to 10.6 deg (right upper arm; hinge vs swing arm solver) and 2.4 deg (shins, since a05) - for the transition work (P4), the request's continuity gate applies to the blended transition",
+  "clean-up of drafts and probes (only on request)",
+  "independent gray grasp acceptance: not separately presented in milestone 3 (batched, as in milestone 2)"
+ ],
+ "foundation": "b20-coatlie3 (runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/build-record.json); Idle, Walk, Run, Cast, Sleep a03 verified on b20 (clips/b20-reverification.json)",
+ "in_progress": {},
+ "art_notes": [
+  "release (a08, entry 21): grip-point speed 3.69 m/s at 36 (lift off the bed, held by the hand allowance that ends at 36), at or under 2.53 m/s from 38 to 47 (a07: 6.7 m/s at 39 and 9.25 m/s at 43)",
+  "wrist swing at most 52.3 deg at LieDown 36 / GetUp 54 (contract 60)",
+  "coat swing 19 deg to the body right during the turn and lie-back, settling 63-75 while lying (GetUp mirrors)",
+  "hand presses up to 47.5 mm into the bed beside the grip (entry 18 allows 50)",
+  "sitting down: min triangle area ratio 0.0538 at LieDown 19.5 (GetUp 0.0541), above the 0.05 gate",
+  "head extension about 19.8 deg on the bed without a pillow; b20 coat-core pairs as before",
+  "turn on the seat (LieDown 50-57, GetUp 33-40): the body yaws 90 deg in 7 frames (about 770 deg/s) and the right hand sweeps with it at up to 11.2 m/s; unchanged since a06 and outside entry 21; slowing it needs more frames than the 90-frame clip contract leaves between the put-down (>= 25%) and the bed support (<= 70%); accepted by the user for now (entry 22, clips/turn-speed-decision-20261006.json)"
+ ],
+ "preview_sheet": "runs/qa/ro-swordsman-character-v1/v001/clips/milestone-03-sheet-r2.png (first sheet milestone-03-sheet.png kept)",
+ "archived": {
+  "authorization": "entry 23",
+  "commits": [
+   "7b73d60",
+   "86091bf",
+   "3a04b55",
+   "9d2a4fc",
+   "50daee3"
+  ],
+  "remote": "origin/codex/art-quality-loop at 50daee36d3c520a4e1588412465a7708adaa45df (main untouched)",
+  "lfs": "445/445 unique objects held by the LFS server after the push (0 B re-uploaded); fresh clone restore not verified",
+  "record": "runs/qa/git-portability-20261006/record.json",
+  "note": "this progress update, the push record and v001-pause-23 were written after the last commit and wait for the next authorized commit"
+ }
+}

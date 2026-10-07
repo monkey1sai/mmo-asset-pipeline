@@ -1,0 +1,31 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T07:46:30Z",
+ "status": "decided",
+ "question": "The seat turn in LieDown a08 (50-57) and GetUp a02 (33-40) yaws the body 90 deg in 7 frames (about 770 deg/s); the right hand sweeps with it at up to 11.2 m/s. Accept it, or revise the request for longer LieDown/GetUp clips?",
+ "evidence": {
+  "hand_path": [
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_LieDown/a08-hand-path.json (grip point 11.16 m/s at 54)",
+   "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_GetUp/a02-hand-path.json (11.16 m/s at 37)"
+  ],
+  "cause": "the request's 90-frame clip contract (1.5 s) holds sit, put-down (>= 25%), release, scoot, knee straightening, turn and lie-back (bed support <= 70%)"
+ },
+ "options": [
+  {
+   "id": "a",
+   "title": "Accept for now",
+   "what": "keep LieDown a08 / GetUp a02 unchanged; the turn speed stays an accepted art note"
+  },
+  {
+   "id": "b",
+   "title": "Request revision (r7)",
+   "what": "longer LieDown/GetUp clips (e.g. 150-180 frames) so the turn and the rest of the choreography can slow down; needs a request change and new attempts"
+  }
+ ],
+ "resolution": {
+  "decided_utc": "2026-10-06T07:46:30Z",
+  "user_text": "轉身速度用做法 a",
+  "option": "a",
+  "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 22"
+ }
+}

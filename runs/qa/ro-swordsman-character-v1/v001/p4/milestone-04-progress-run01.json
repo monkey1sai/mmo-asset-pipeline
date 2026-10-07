@@ -1,0 +1,552 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T09:31:21Z",
+ "milestone": 4,
+ "status": "in_progress: QA scene, Blender transition matrix and runtime checks run; 61/164 scenarios pass run-01; user decisions requested (p4-decisions-20261006.json) before run-02",
+ "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 24 (P4; no commit/push, no relaxation of any gate or exemption)",
+ "done": {
+  "controller": "scripts/cv1_transition.py + tools/runtime-qa/three/src/cv1-transition.js (twin; tests/test_cv1_transition.py incl. the node comparison); blended interaction states clamped to [0, 1] (weights summing to 1 + ulp)",
+  "blender_matrix_run_01": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/run-01/merged/transition-check.json",
+   "scenarios": 164,
+   "passed": 61,
+   "note": "continuity in run-01 used a superseded definition; see continuity_03"
+  },
+  "continuity_03": {
+   "result": "runs/qa/ro-swordsman-character-v1/v001/p4/continuity-03/continuity-check.json",
+   "summary": {
+    "scenarios": 164,
+    "passed": 164
+   },
+   "definition": "r6 wording: fade start against the source clips, fade end against the target clips, both straight from the clips; interrupts against the pose just before"
+  },
+  "counterexamples_blender": {
+   "scenario": "walk-castupper-walk-r-b200-s1.0",
+   "runs": {
+    "clean": {
+     "fault": null,
+     "pass": true,
+     "failing_gates": []
+    },
+    "weapon-in-hand": {
+     "fault": "weapon-in-hand",
+     "pass": false,
+     "failing_gates": [
+      "grasp"
+     ]
+    },
+    "stance-window-walk": {
+     "fault": "stance-window:Walk",
+     "pass": false,
+     "failing_gates": [
+      "feet_slide"
+     ]
+    }
+   },
+   "expected": {
+    "weapon-in-hand": [
+     "grasp"
+    ],
+    "stance-window-walk": [
+     "feet_slide"
+    ]
+   }
+  },
+  "runtime": {
+   "results": "runs/qa/ro-swordsman-character-v1/v001/p4/runtime/20261006t092518z-p4-results.json",
+   "pass": true,
+   "verdicts": {
+    "closed_loop_gate": true,
+    "closed_loop_frames_weights_match": true,
+    "sockets_match": true,
+    "determinism": true,
+    "loop_seams": true,
+    "repeated_switch_continuous": true,
+    "negative_controls_detected": true
+   },
+   "closed_loop": {
+    "blocks": 40,
+    "max_error_um": 1.747,
+    "gate_um": 10
+   },
+   "determinism": {
+    "comparisons": 54,
+    "max_play_or_pause_vs_seek_m": 0,
+    "gate_m": 1e-09,
+    "diagnostic_mixer_time_advance_max_m": 1.5613854875695665e-08
+   },
+   "loop_seams_deg": {
+    "Idle": 0.051,
+    "Walk": 0.036,
+    "Run": 0.031,
+    "Sleep": 0.056
+   },
+   "negative_controls": {
+    "NC_correctives_off": {
+     "expected_failing_gate": "closed_loop",
+     "detected": true
+    },
+    "NC_missing_bone_mapping": {
+     "expected_failing_gate": "closed_loop",
+     "detected": true
+    },
+    "NC_stateful_crossfade": {
+     "expected_failing_gate": "determinism",
+     "detected": true
+    }
+   },
+   "cost": {
+    "evaluate": {
+     "mean_ms": 1.1583333333876604,
+     "p95_ms": 1.7999999998137355,
+     "max_ms": 17.90000000037253
+    },
+    "render_960": {
+     "mean_ms": 0.48249999994877724,
+     "p95_ms": 1.199999999254942,
+     "max_ms": 6.7999999998137355
+    },
+    "note": "This machine in the desktop browser pane; test condition, not a performance promise."
+   },
+   "machine": {
+    "three": "186",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/2.19675.1 Chrome/152.0.7977.130 Safari/537.36 MSIX",
+    "hardware_concurrency": 20,
+    "device_memory_gb": 32,
+    "webgl": {
+     "vendor": "Google Inc. (NVIDIA)",
+     "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+   }
+  },
+  "operable_scene": "tools/runtime-qa/three/p4.html?manifest=/runs/qa/ro-swordsman-character-v1/v001/p4/run-01/merged/p4-manifest.json (164 scenarios, seek slider, play/pause at 30/60/120 fps, corrective toggle, whole/hands/feet cameras)",
+  "playback_contract": "the controller owns an integer step clock and sets every action time from the layer frames (mixer.update(0)); mixer-advanced time lands a hair off a key, where three.js returns the raw float32 key versus a normalised slerp (1.56e-8 m), so it is reported as a diagnostic only"
+ },
+ "findings": {
+  "feet_slide_worst_mm_by_pair": {
+   "Cast->Idle": 0.0,
+   "GetUp->Idle": 113.6,
+   "Idle->Cast": 0.0,
+   "Idle->LieDown": 118.5,
+   "Idle->Walk": 256.7,
+   "Idle<->Walk repeated": 127.3,
+   "LieDown->Sleep": 0.0,
+   "Run->Walk": 63.1,
+   "Sleep->GetUp": 0.0,
+   "Walk->Cast(upper)->Walk": 0.1,
+   "Walk->Idle": 128.3,
+   "Walk->Run": 61.9,
+   "Walk<->Run repeated": 89.1
+  },
+  "feet_cause": "cross-fading in-place clips: the stance foot moves in clip space while its weight ramps (residual about v*D/2 plus the placement difference); Idle->LieDown and GetUp->Idle long fades overlap LieDown 16-32 / GetUp 58-73, where the two clips plant the feet at different spots",
+  "bed_clearance_failing_samples_by_pair": {
+   "GetUp->Idle": 151,
+   "Idle->LieDown": 300,
+   "LieDown->Sleep": 13,
+   "Sleep->GetUp": 11
+  },
+  "bed_cause": "probed samples: the deepest point under the bed top is SM_RO_coat at about the bed clip's own exempted depth (e.g. 168 mm in the blend vs 176 mm for LieDown alone); the seated exemption of the clip does not carry into a transition because the other layer is not seated",
+  "collapse_failing_samples_by_pair": {
+   "GetUp->Idle": 1,
+   "Idle->LieDown": 4,
+   "Run->Walk": 36,
+   "Sleep->GetUp": 1,
+   "Walk->Idle": 6,
+   "Walk->Run": 32,
+   "Walk<->Run repeated": 17
+  },
+  "collapse_cause": "crease regions (armpits spine/upper_arm, back of the right thigh, pelvis/upper_leg): most collapsing triangles are already folded or near-degenerate in a source clip (clip checks gate area only; flips are report-only), so a blend passes through zero area; one left-armpit case is compression by the blend itself; one coat case is the corrective response to the Sleep/GetUp blend (correctives off: no collapse)",
+  "weapon_grasp_failing_scenarios": {
+   "getup-idle-end-b400-s1.5": 8,
+   "idle-liedown-p0-b400-s1.5": 5,
+   "idle-liedown-p60-b400-s1.5": 5,
+   "liedown-sleep-end-b400-s1.5": 1,
+   "sleep-getup-wrap-b400-s1.5": 1
+  },
+  "weapon_cause": "only 400 ms x 1.5 fades: the fade spans the put-down (LieDown 30) or the pick-up (GetUp 60), or blends a lying or sitting pose against the sword on the bed",
+  "idle_linkage_entry_24": "the 10.6 deg Idle vs LieDown/GetUp endpoint difference is absorbed by the fades: continuity passes in every Idle->LieDown and GetUp->Idle scenario; their failures come from the causes above",
+  "probes": [
+   {
+    "sample": "repeat-walk-run@0.866666667",
+    "triangle": 17737,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "upper_leg.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.00522,
+      -0.9308
+     ],
+     "blend_correctives_off": [
+      0.00522,
+      -0.9308
+     ],
+     "only:Run": [
+      0.14723,
+      0.033
+     ],
+     "only:Walk": [
+      0.07965,
+      -0.0494
+     ]
+    },
+    "bed_depth_by_mesh_m": {}
+   },
+   {
+    "sample": "run-walk-l-b100-s0.5@0.541666667",
+    "triangle": 17737,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "upper_leg.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.00482,
+      -0.9916
+     ],
+     "blend_correctives_off": [
+      0.00482,
+      -0.9916
+     ],
+     "only:Run": [
+      0.16353,
+      0.0608
+     ],
+     "only:Walk": [
+      0.2317,
+      0.519
+     ]
+    },
+    "bed_depth_by_mesh_m": {}
+   },
+   {
+    "sample": "walk-run-r-b400-s1.5@0.7",
+    "triangle": 17737,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "upper_leg.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.01224,
+      -0.2173
+     ],
+     "blend_correctives_off": [
+      0.01224,
+      -0.2173
+     ],
+     "only:Run": [
+      0.27085,
+      0.2805
+     ],
+     "only:Walk": [
+      0.30062,
+      0.5964
+     ]
+    },
+    "bed_depth_by_mesh_m": {}
+   },
+   {
+    "sample": "idle-liedown-p0-b400-s1.0@0.691666667",
+    "triangle": 29049,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "spine_02",
+     "upper_arm.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.01949,
+      0.2725
+     ],
+     "blend_correctives_off": [
+      0.01949,
+      0.2725
+     ],
+     "only:Idle": [
+      1.18598,
+      0.9618
+     ],
+     "only:LieDown": [
+      1.71942,
+      -0.9964
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.07688
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.07688
+     },
+     "only:LieDown": {
+      "SM_RO_coat": 0.17619
+     }
+    }
+   },
+   {
+    "sample": "walk-idle-l-b400-s1.5@0.683333333",
+    "triangle": 21489,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "spine_01",
+     "upper_arm.L"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.03574,
+      0.8148
+     ],
+     "blend_correctives_off": [
+      0.03574,
+      0.8148
+     ],
+     "only:Idle": [
+      0.71661,
+      0.0861
+     ],
+     "only:Walk": [
+      0.55455,
+      0.2966
+     ]
+    },
+    "bed_depth_by_mesh_m": {}
+   },
+   {
+    "sample": "walk-idle-l-b100-s0.5@0.558333333",
+    "triangle": 23466,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "pelvis",
+     "upper_leg.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.0393,
+      0.0329
+     ],
+     "blend_correctives_off": [
+      0.0393,
+      0.0329
+     ],
+     "only:Idle": [
+      1.0,
+      0.9952
+     ],
+     "only:Walk": [
+      1.29829,
+      -0.9328
+     ]
+    },
+    "bed_depth_by_mesh_m": {}
+   },
+   {
+    "sample": "getup-idle-end-b200-s0.5@0.508333333",
+    "triangle": 28926,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "spine_01",
+     "upper_arm.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.02618,
+      -0.0883
+     ],
+     "blend_correctives_off": [
+      0.02618,
+      -0.0883
+     ],
+     "only:GetUp": [
+      0.07911,
+      -0.1262
+     ],
+     "only:Idle": [
+      1.00055,
+      0.8358
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.04185
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.04185
+     },
+     "only:GetUp": {
+      "SM_RO_coat": 0.04432
+     }
+    }
+   },
+   {
+    "sample": "sleep-getup-wrap-b400-s1.5@0.841666667",
+    "triangle": 5357,
+    "mesh": "SM_RO_coat",
+    "dominant": [
+     "coat.L",
+     "coat.R"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.02595,
+      0.6405
+     ],
+     "blend_correctives_off": [
+      0.94753,
+      0.8648
+     ],
+     "only:GetUp": [
+      0.3058,
+      0.5919
+     ],
+     "only:Sleep": [
+      0.88179,
+      0.9997
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.27344
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.37623
+     },
+     "only:GetUp": {
+      "SM_RO_coat": 0.30227
+     },
+     "only:Sleep": {
+      "SM_RO_coat": 0.00046,
+      "SM_RO_core": 0.003
+     }
+    }
+   },
+   {
+    "sample": "getup-idle-end-b200-s1.0@0.508333333",
+    "triangle": 22868,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "pelvis"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.09597,
+      -0.1381
+     ],
+     "blend_correctives_off": [
+      0.09597,
+      -0.1381
+     ],
+     "only:GetUp": [
+      0.11832,
+      0.3381
+     ],
+     "only:Idle": [
+      1.0,
+      0.9469
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.18223
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.18223
+     },
+     "only:GetUp": {
+      "SM_RO_coat": 0.19075
+     }
+    }
+   },
+   {
+    "sample": "idle-liedown-p0-b200-s1.0@0.691666667",
+    "triangle": 22868,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "pelvis"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.0918,
+      -0.4218
+     ],
+     "blend_correctives_off": [
+      0.0918,
+      -0.4218
+     ],
+     "only:Idle": [
+      1.0,
+      0.9469
+     ],
+     "only:LieDown": [
+      0.10481,
+      0.1298
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.16828
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.16828
+     },
+     "only:LieDown": {
+      "SM_RO_coat": 0.17619
+     }
+    }
+   },
+   {
+    "sample": "liedown-sleep-end-b400-s1.5@0.541666667",
+    "triangle": 22873,
+    "mesh": "SM_RO_core",
+    "dominant": [
+     "pelvis"
+    ],
+    "area_ratio_and_neighbour_agreement": {
+     "blend": [
+      0.09307,
+      0.8686
+     ],
+     "blend_correctives_off": [
+      0.05477,
+      0.8497
+     ],
+     "only:LieDown": [
+      0.186,
+      0.9649
+     ],
+     "only:Sleep": [
+      1.04815,
+      0.9939
+     ]
+    },
+    "bed_depth_by_mesh_m": {
+     "blend": {
+      "SM_RO_coat": 0.35253
+     },
+     "blend_correctives_off": {
+      "SM_RO_coat": 0.38166
+     },
+     "only:LieDown": {
+      "SM_RO_coat": 0.34552
+     },
+     "only:Sleep": {
+      "SM_RO_coat": 0.00046,
+      "SM_RO_core": 0.003
+     }
+    }
+   }
+  ]
+ },
+ "not_done": [
+  "run-02 after the decisions",
+  "extra reference points per blend x speed and for the return fade (needs the run-02 transitions.json)",
+  "Idle->Combo->Idle (combo clip not authorised: P3 remainder)",
+  "independent gray grasp acceptance (not planned in P4)",
+  "art review of the transitions",
+  "commit/push (not covered by entry 24)"
+ ],
+ "evidence_scripts": {
+  "generator": "runs/qa/ro-swordsman-character-v1/v001/p4/progress-04-used.py"
+ }
+}

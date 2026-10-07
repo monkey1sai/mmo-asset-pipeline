@@ -1,0 +1,256 @@
+{
+ "observed_utc": "2026-10-05T11:33:53.676640+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "9c30b6be29351efb22b38f2cf7d6ffd1ab346d1b44b9b53dcb92a8bea2f317ea",
+ "foundation": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/ro_character_v001_b18-clipfolds.blend",
+  "sha256": "3bd261c386b5f92c652be536696a3fc1a267ede455c8171f9bddaca9bd234ff1",
+  "saved": false
+ },
+ "inputs": {
+  "contract": {
+   "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+   "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+  },
+  "rules": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/corrective-rules.json",
+   "sha256": "b909adefeb2d930f083e5b0f8196b3d79042b7cffd35bfaa7d81a4b5101e8188"
+  },
+  "fixtures": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b18-clipfolds/contact-fixtures.json",
+   "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331"
+  },
+  "base": {
+   "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Sleep_Loop/posture-02/base.json",
+   "sha256": "9e68a9d4b30e5493fd42e2755580285703f53787b8083754f70a4999a0cd46bb"
+  }
+ },
+ "bed_top_z_m": 0.45,
+ "pelvis": {
+  "turn": {
+   "axis": "x",
+   "degrees": -90.0
+  },
+  "head_rest_m": [
+   0.0,
+   0.03999999910593033,
+   0.8899999856948853
+  ],
+  "lift_m": -0.26902649307250975,
+  "location_m": [
+   0.0,
+   0.03999999910593033,
+   0.6209734678268433
+  ]
+ },
+ "angles_deg": {
+  "spine": -3.094041645526886,
+  "head": 19.784775786101818,
+  "hip.L": 5.341351144015789,
+  "hip.R": 5.383193604648113,
+  "arm.L": -25.06458766758442,
+  "arm.R": -25.06458766758442
+ },
+ "solved_steps": [
+  {
+   "bone": "spine_02",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": -3.094041645526886
+  },
+  {
+   "bone": "neck",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 9.892387893050909
+  },
+  {
+   "bone": "head",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 9.892387893050909
+  },
+  {
+   "bone": "upper_leg.L",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 5.341351144015789,
+   "side": "L"
+  },
+  {
+   "bone": "upper_arm.L",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -25.06458766758442,
+   "side": "L"
+  },
+  {
+   "bone": "upper_leg.R",
+   "kind": "swing",
+   "toward": "back",
+   "degrees": 5.383193604648113,
+   "side": "R"
+  },
+  {
+   "bone": "upper_arm.R",
+   "kind": "twist",
+   "about": "right",
+   "degrees": -25.06458766758442,
+   "side": "R"
+  }
+ ],
+ "rounds": [
+  {
+   "round": 0,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -3.094041645526886
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 19.784775786101818
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 5.341351144015789
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 5.383193604648113
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    }
+   ]
+  },
+  {
+   "round": 1,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -3.094041645526886
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 19.784775786101818
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 5.341351144015789
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 5.383193604648113
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    }
+   ]
+  },
+  {
+   "round": 2,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -3.094041645526886
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 19.784775786101818
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 5.341351144015789
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 5.383193604648113
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    }
+   ]
+  },
+  {
+   "round": 3,
+   "entries": [
+    {
+     "key": "spine",
+     "bracketed": true,
+     "degrees": -3.094041645526886
+    },
+    {
+     "key": "head",
+     "bracketed": true,
+     "degrees": 19.784775786101818
+    },
+    {
+     "key": "hip.L",
+     "bracketed": true,
+     "degrees": 5.341351144015789
+    },
+    {
+     "key": "arm.L",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    },
+    {
+     "key": "hip.R",
+     "bracketed": true,
+     "degrees": 5.383193604648113
+    },
+    {
+     "key": "arm.R",
+     "bracketed": true,
+     "degrees": -25.06458766758442
+    }
+   ]
+  }
+ ],
+ "support_lowest_above_top_mm": {
+  "back": 1.0,
+  "pelvis": 1.0,
+  "head_back": 1.0,
+  "calf.L": 1.0,
+  "calf.R": 1.0
+ },
+ "hands_lowest_above_top_mm": {
+  "L": 4.0,
+  "R": 4.0
+ },
+ "scope": "Supine posture relative to the pelvis with the head towards +Y; yaw and bed placement are applied per clip."
+}

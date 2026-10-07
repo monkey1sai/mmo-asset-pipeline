@@ -1,0 +1,4727 @@
+{
+ "observed_utc": "2026-10-06T09:11:34.312311+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "af6c0a5de5f9203a6b1d5b8f3c0e14995ffd45f27f7f405597e802bf8e2af20c",
+ "scenarios": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions.json",
+  "sha256": "6ba3bfd4dc42bd0d44e82ab4cfe2b73de3f4571c7b3db450386e9ac5ec8eb1fe"
+ },
+ "scope": "Diagnostic probe only; not a result.",
+ "probes": [
+  {
+   "id": "repeat-walk-run",
+   "t": 0.866666667,
+   "watch": [
+    17732,
+    17735,
+    17737,
+    17740,
+    23752,
+    25600
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Walk": 34.00000001999999,
+      "Run": 26.500000019999998
+     },
+     "weights": {
+      "upper": {
+       "Run": 0.41666666562500054,
+       "Walk": 0.5833333343749995
+      },
+      "lower": {
+       "Run": 0.41666666562500054,
+       "Walk": 0.5833333343749995
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_01": 0.0,
+      "SM_RO_core/SKC_core_fold_02": 0.020313,
+      "SM_RO_core/SKC_core_fold_04": 0.016953,
+      "SM_RO_core/SKC_core_fold_06": 0.016927,
+      "SM_RO_core/SKC_core_fold_07": 0.033785,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086054,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.393345,
+      "SM_RO_core/SKC_core_fold_27": 0.611132,
+      "SM_RO_core/SKC_core_fold_28": 0.573528
+     },
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.00522,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.06188,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.06972,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.08223,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.0955,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.13339,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.21779,
+      "17735": 0.06972,
+      "17737": 0.00522,
+      "17740": 0.06188,
+      "23752": 0.20556,
+      "25600": 0.44928
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Walk": 34.00000001999999,
+      "Run": 26.500000019999998
+     },
+     "weights": {
+      "upper": {
+       "Run": 0.41666666562500054,
+       "Walk": 0.5833333343749995
+      },
+      "lower": {
+       "Run": 0.41666666562500054,
+       "Walk": 0.5833333343749995
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.00522,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.06188,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.06972,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.07472,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.09017,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.11427,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.21779,
+      "17735": 0.06972,
+      "17737": 0.00522,
+      "17740": 0.06188,
+      "23752": 0.20556,
+      "25600": 0.44928
+     }
+    },
+    "only:Run": {
+     "frames": {
+      "Walk": 34.00000001999999,
+      "Run": 26.500000019999998
+     },
+     "weights": {
+      "upper": {
+       "Run": 1.0
+      },
+      "lower": {
+       "Run": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.044717,
+      "SM_RO_core/SKC_core_fold_04": 0.016623,
+      "SM_RO_core/SKC_core_fold_06": 0.037264,
+      "SM_RO_core/SKC_core_fold_07": 0.03299,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086061,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger2.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.678226
+     },
+     "lowest": [
+      {
+       "triangle": 23752,
+       "ratio": 0.11076,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.12073,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17732,
+       "ratio": 0.12326,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.12528,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23749,
+       "ratio": 0.14036,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17737,
+       "ratio": 0.14723,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.12326,
+      "17735": 0.21567,
+      "17737": 0.14723,
+      "17740": 0.20967,
+      "23752": 0.11076,
+      "25600": 0.12073
+     }
+    },
+    "only:Walk": {
+     "frames": {
+      "Walk": 34.00000001999999,
+      "Run": 26.500000019999998
+     },
+     "weights": {
+      "upper": {
+       "Walk": 1.0
+      },
+      "lower": {
+       "Walk": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_01": 0.0,
+      "SM_RO_core/SKC_core_fold_02": 0.002882,
+      "SM_RO_core/SKC_core_fold_04": 0.017189,
+      "SM_RO_core/SKC_core_fold_06": 0.002402,
+      "SM_RO_core/SKC_core_fold_07": 0.034352,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086049,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_03": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_30": 0.413041,
+      "SM_RO_core/SKC_core_fold_35": 0.204833
+     },
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.07965,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.09865,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.10657,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.10753,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.17522,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.19781,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.30842,
+      "17735": 0.10657,
+      "17737": 0.07965,
+      "17740": 0.09865,
+      "23752": 0.29569,
+      "25600": 0.73296
+     }
+    }
+   }
+  },
+  {
+   "id": "run-walk-l-b100-s0.5",
+   "t": 0.541666667,
+   "watch": [
+    17732,
+    17735,
+    17737,
+    17740,
+    23453,
+    23752,
+    25600
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Run": 25.75000001,
+      "Walk": 43.25000001
+     },
+     "weights": {
+      "upper": {
+       "Run": 0.5833333300000001,
+       "Walk": 0.4166666699999999
+      },
+      "lower": {
+       "Run": 0.5833333300000001,
+       "Walk": 0.4166666699999999
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.032179,
+      "SM_RO_core/SKC_core_fold_04": 0.013705,
+      "SM_RO_core/SKC_core_fold_06": 0.026816,
+      "SM_RO_core/SKC_core_fold_07": 0.026855,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.085581,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.402188,
+      "SM_RO_core/SKC_core_fold_28": 0.002715
+     },
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.00482,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.06477,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.07275,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.07525,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.10097,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23718,
+       "ratio": 0.18162,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.2098,
+      "17735": 0.07275,
+      "17737": 0.00482,
+      "17740": 0.06477,
+      "23453": 0.29265,
+      "23752": 0.1978,
+      "25600": 0.22102
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Run": 25.75000001,
+      "Walk": 43.25000001
+     },
+     "weights": {
+      "upper": {
+       "Run": 0.5833333300000001,
+       "Walk": 0.4166666699999999
+      },
+      "lower": {
+       "Run": 0.5833333300000001,
+       "Walk": 0.4166666699999999
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.00482,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.06477,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.07275,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.07914,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.082,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23718,
+       "ratio": 0.18079,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.2098,
+      "17735": 0.07275,
+      "17737": 0.00482,
+      "17740": 0.06477,
+      "23453": 0.29265,
+      "23752": 0.1978,
+      "25600": 0.22102
+     }
+    },
+    "only:Run": {
+     "frames": {
+      "Run": 25.75000001,
+      "Walk": 43.25000001
+     },
+     "weights": {
+      "upper": {
+       "Run": 1.0
+      },
+      "lower": {
+       "Run": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.035689,
+      "SM_RO_core/SKC_core_fold_04": 0.019049,
+      "SM_RO_core/SKC_core_fold_06": 0.029741,
+      "SM_RO_core/SKC_core_fold_07": 0.038117,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086389,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.682711,
+      "SM_RO_core/SKC_core_fold_25": 0.00886
+     },
+     "lowest": [
+      {
+       "triangle": 25600,
+       "ratio": 0.09337,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23752,
+       "ratio": 0.10867,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17732,
+       "ratio": 0.12108,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.13352,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23749,
+       "ratio": 0.13522,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23757,
+       "ratio": 0.1462,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.12108,
+      "17735": 0.22945,
+      "17737": 0.16353,
+      "17740": 0.22293,
+      "23453": 0.57643,
+      "23752": 0.10867,
+      "25600": 0.09337
+     }
+    },
+    "only:Walk": {
+     "frames": {
+      "Run": 25.75000001,
+      "Walk": 43.25000001
+     },
+     "weights": {
+      "upper": {
+       "Walk": 1.0
+      },
+      "lower": {
+       "Walk": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.027264,
+      "SM_RO_core/SKC_core_fold_04": 0.006217,
+      "SM_RO_core/SKC_core_fold_06": 0.02272,
+      "SM_RO_core/SKC_core_fold_07": 0.011073,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.08431,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_finger4.L_03": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_27": 0.639849,
+      "SM_RO_core/SKC_core_fold_28": 0.598981
+     },
+     "lowest": [
+      {
+       "triangle": 23453,
+       "ratio": 0.12641,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.19899,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.20661,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.20739,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22191,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 17737,
+       "ratio": 0.2317,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17732": 0.38632,
+      "17735": 0.20661,
+      "17737": 0.2317,
+      "17740": 0.19899,
+      "23453": 0.12641,
+      "23752": 0.37489,
+      "25600": 0.46835
+     }
+    }
+   }
+  },
+  {
+   "id": "walk-run-r-b400-s1.5",
+   "t": 0.7,
+   "watch": [
+    17735,
+    17737,
+    17740,
+    22859,
+    23749,
+    23752,
+    23757,
+    25827,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Walk": 30.0,
+      "Run": 22.499999999999993
+     },
+     "weights": {
+      "upper": {
+       "Walk": 0.5000000000000001,
+       "Run": 0.4999999999999999
+      },
+      "lower": {
+       "Walk": 0.5000000000000001,
+       "Run": 0.4999999999999999
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_01": 0.0,
+      "SM_RO_core/SKC_core_fold_02": 0.003685,
+      "SM_RO_core/SKC_core_fold_04": 0.022577,
+      "SM_RO_core/SKC_core_fold_06": 0.003071,
+      "SM_RO_core/SKC_core_fold_07": 0.045654,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086785,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.335717
+     },
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.01224,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.05333,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.06071,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.08144,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.10487,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.15468,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17735": 0.06071,
+      "17737": 0.01224,
+      "17740": 0.05333,
+      "22859": 0.15468,
+      "23749": 0.28469,
+      "23752": 0.22747,
+      "23757": 0.30408,
+      "25827": 0.18013,
+      "43911": 0.22188
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Walk": 30.0,
+      "Run": 22.499999999999993
+     },
+     "weights": {
+      "upper": {
+       "Walk": 0.5000000000000001,
+       "Run": 0.4999999999999999
+      },
+      "lower": {
+       "Walk": 0.5000000000000001,
+       "Run": 0.4999999999999999
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 17737,
+       "ratio": 0.01224,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.05333,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.06071,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 30507,
+       "ratio": 0.06663,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23717,
+       "ratio": 0.11421,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.15468,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17735": 0.06071,
+      "17737": 0.01224,
+      "17740": 0.05333,
+      "22859": 0.15468,
+      "23749": 0.28469,
+      "23752": 0.22747,
+      "23757": 0.30408,
+      "25827": 0.18013,
+      "43911": 0.18927
+     }
+    },
+    "only:Run": {
+     "frames": {
+      "Walk": 30.0,
+      "Run": 22.499999999999993
+     },
+     "weights": {
+      "upper": {
+       "Run": 1.0
+      },
+      "lower": {
+       "Run": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.00737,
+      "SM_RO_core/SKC_core_fold_04": 0.026665,
+      "SM_RO_core/SKC_core_fold_06": 0.006142,
+      "SM_RO_core/SKC_core_fold_07": 0.054194,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.087292,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger2.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_22": 0.410498,
+      "SM_RO_core/SKC_core_fold_25": 0.440052,
+      "SM_RO_core/SKC_core_fold_27": 0.02735,
+      "SM_RO_core/SKC_core_fold_28": 0.07494
+     },
+     "lowest": [
+      {
+       "triangle": 23749,
+       "ratio": 0.09736,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23757,
+       "ratio": 0.10954,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R"
+       ]
+      },
+      {
+       "triangle": 23752,
+       "ratio": 0.13216,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17732,
+       "ratio": 0.1457,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "lower_leg.R",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.16731,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25827,
+       "ratio": 0.19749,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17735": 0.33371,
+      "17737": 0.27085,
+      "17740": 0.32258,
+      "22859": 0.16731,
+      "23749": 0.09736,
+      "23752": 0.13216,
+      "23757": 0.10954,
+      "25827": 0.19749,
+      "43911": 0.22189
+     }
+    },
+    "only:Walk": {
+     "frames": {
+      "Walk": 30.0,
+      "Run": 22.499999999999993
+     },
+     "weights": {
+      "upper": {
+       "Walk": 1.0
+      },
+      "lower": {
+       "Walk": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_01": 0.0,
+      "SM_RO_core/SKC_core_fold_02": 0.0,
+      "SM_RO_core/SKC_core_fold_03": 0.0,
+      "SM_RO_core/SKC_core_fold_04": 0.018486,
+      "SM_RO_core/SKC_core_fold_06": 0.0,
+      "SM_RO_core/SKC_core_fold_07": 0.037105,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.086232,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 22859,
+       "ratio": 0.14445,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25827,
+       "ratio": 0.17384,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 22773,
+       "ratio": 0.27202,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 17740,
+       "ratio": 0.28662,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 17735,
+       "ratio": 0.28961,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "17735": 0.28961,
+      "17737": 0.30062,
+      "17740": 0.28662,
+      "22859": 0.14445,
+      "23749": 0.50183,
+      "23752": 0.45679,
+      "23757": 0.52302,
+      "25827": 0.17384,
+      "43911": 0.22189
+     }
+    }
+   }
+  },
+  {
+   "id": "idle-liedown-p0-b400-s1.0",
+   "t": 0.691666667,
+   "watch": [
+    22868,
+    22881,
+    23453,
+    25600,
+    29049,
+    43739,
+    43759,
+    43782,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 0.5208333325,
+       "LieDown": 0.47916666750000003
+      },
+      "lower": {
+       "Idle": 0.5208333325,
+       "LieDown": 0.47916666750000003
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_finger4.L_03": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 29049,
+       "ratio": 0.01949,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_02",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.26565,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23161,
+       "ratio": 0.31506,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23158,
+       "ratio": 0.32682,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32698,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.07688
+     },
+     "watch_ratios": {
+      "22868": 0.52949,
+      "22881": 0.53114,
+      "23453": 0.26565,
+      "25600": 0.6555,
+      "29049": 0.01949,
+      "43739": 0.36133,
+      "43759": 0.34272,
+      "43782": 0.32698,
+      "43911": 0.22189
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 0.5208333325,
+       "LieDown": 0.47916666750000003
+      },
+      "lower": {
+       "Idle": 0.5208333325,
+       "LieDown": 0.47916666750000003
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 29049,
+       "ratio": 0.01949,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_02",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.18927,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.21878,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.26565,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43756,
+       "ratio": 0.28015,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43787,
+       "ratio": 0.30792,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.07688
+     },
+     "watch_ratios": {
+      "22868": 0.52949,
+      "22881": 0.53114,
+      "23453": 0.26565,
+      "25600": 0.6555,
+      "29049": 0.01949,
+      "43739": 0.21878,
+      "43759": 0.52201,
+      "43782": 0.42447,
+      "43911": 0.18927
+     }
+    },
+    "only:Idle": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 1.0
+      },
+      "lower": {
+       "Idle": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.079494,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32699,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.34269,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35733,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.36132,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 43788,
+       "ratio": 0.38565,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "22868": 1.0,
+      "22881": 1.0,
+      "23453": 1.0,
+      "25600": 1.0002,
+      "29049": 1.18598,
+      "43739": 0.36132,
+      "43759": 0.34269,
+      "43782": 0.32699,
+      "43911": 0.22189
+     }
+    },
+    "only:LieDown": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "LieDown": 1.0
+      },
+      "lower": {
+       "LieDown": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.10481,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.11644,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13527,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.14693,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.16992,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 22882,
+       "ratio": 0.20118,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.17619
+     },
+     "watch_ratios": {
+      "22868": 0.10481,
+      "22881": 0.13527,
+      "23453": 0.81252,
+      "25600": 0.11644,
+      "29049": 1.71942,
+      "43739": 0.36133,
+      "43759": 0.3427,
+      "43782": 0.32698,
+      "43911": 0.22188
+     }
+    }
+   }
+  },
+  {
+   "id": "walk-idle-l-b400-s1.5",
+   "t": 0.683333333,
+   "watch": [
+    21489,
+    21492,
+    23453,
+    43739,
+    43759,
+    43782,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Walk": 58.499999970000005,
+      "Idle": 16.499999969999998
+     },
+     "weights": {
+      "upper": {
+       "Walk": 0.5416666675,
+       "Idle": 0.45833333249999997
+      },
+      "lower": {
+       "Walk": 0.5416666675,
+       "Idle": 0.45833333249999997
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.035552,
+      "SM_RO_core/SKC_core_fold_06": 0.02969,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.08044,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 21489,
+       "ratio": 0.03574,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.2219,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32698,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 23158,
+       "ratio": 0.34043,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.34272,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35735,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "21489": 0.03574,
+      "21492": 0.52486,
+      "23453": 0.4419,
+      "43739": 0.36134,
+      "43759": 0.34272,
+      "43782": 0.32698,
+      "43911": 0.2219
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Walk": 58.499999970000005,
+      "Idle": 16.499999969999998
+     },
+     "weights": {
+      "upper": {
+       "Walk": 0.5416666675,
+       "Idle": 0.45833333249999997
+      },
+      "lower": {
+       "Walk": 0.5416666675,
+       "Idle": 0.45833333249999997
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 21489,
+       "ratio": 0.03574,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.18927,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.21879,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 43756,
+       "ratio": 0.28016,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43787,
+       "ratio": 0.30792,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43680,
+       "ratio": 0.31118,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "finger3.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "21489": 0.03574,
+      "21492": 0.52486,
+      "23453": 0.4419,
+      "43739": 0.21879,
+      "43759": 0.52201,
+      "43782": 0.42448,
+      "43911": 0.18927
+     }
+    },
+    "only:Idle": {
+     "frames": {
+      "Walk": 58.499999970000005,
+      "Idle": 16.499999969999998
+     },
+     "weights": {
+      "upper": {
+       "Idle": 1.0
+      },
+      "lower": {
+       "Idle": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.079757,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 43911,
+       "ratio": 0.2219,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32698,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.34271,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35736,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.36134,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 43788,
+       "ratio": 0.38564,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "21489": 0.71661,
+      "21492": 0.96908,
+      "23453": 1.0,
+      "43739": 0.36134,
+      "43759": 0.34271,
+      "43782": 0.32698,
+      "43911": 0.2219
+     }
+    },
+    "only:Walk": {
+     "frames": {
+      "Walk": 58.499999970000005,
+      "Idle": 16.499999969999998
+     },
+     "weights": {
+      "upper": {
+       "Walk": 1.0
+      },
+      "lower": {
+       "Walk": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_02": 0.066211,
+      "SM_RO_core/SKC_core_fold_06": 0.055176,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.080863,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_27": 0.442154,
+      "SM_RO_core/SKC_core_fold_28": 0.466887
+     },
+     "lowest": [
+      {
+       "triangle": 23453,
+       "ratio": 0.19673,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 21492,
+       "ratio": 0.20926,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32699,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 23457,
+       "ratio": 0.32828,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23462,
+       "ratio": 0.3339,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "21489": 0.55455,
+      "21492": 0.20926,
+      "23453": 0.19673,
+      "43739": 0.36132,
+      "43759": 0.3427,
+      "43782": 0.32699,
+      "43911": 0.22189
+     }
+    }
+   }
+  },
+  {
+   "id": "getup-idle-end-b200-s0.5",
+   "t": 0.508333333,
+   "watch": [
+    23453,
+    28926,
+    28927,
+    43759,
+    43782,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "GetUp": 83.24999999,
+      "Idle": 0.24999999000000162
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      },
+      "lower": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.000688,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 28926,
+       "ratio": 0.02618,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 28927,
+       "ratio": 0.13549,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.20699,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.29797,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23161,
+       "ratio": 0.32358,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.04185
+     },
+     "watch_ratios": {
+      "23453": 0.20699,
+      "28926": 0.02618,
+      "28927": 0.13549,
+      "43759": 0.34273,
+      "43782": 0.32698,
+      "43911": 0.22189
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "GetUp": 83.24999999,
+      "Idle": 0.24999999000000162
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      },
+      "lower": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 28926,
+       "ratio": 0.02618,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 28927,
+       "ratio": 0.13549,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.18925,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.20699,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.21879,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 43756,
+       "ratio": 0.28014,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.04185
+     },
+     "watch_ratios": {
+      "23453": 0.20699,
+      "28926": 0.02618,
+      "28927": 0.13549,
+      "43759": 0.52202,
+      "43782": 0.42447,
+      "43911": 0.18925
+     }
+    },
+    "only:GetUp": {
+     "frames": {
+      "GetUp": 83.24999999,
+      "Idle": 0.24999999000000162
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 1.0
+      },
+      "lower": {
+       "GetUp": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_27": 0.074117,
+      "SM_RO_core/SKC_core_fold_28": 0.02749
+     },
+     "lowest": [
+      {
+       "triangle": 28926,
+       "ratio": 0.07911,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 28927,
+       "ratio": 0.16757,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_01",
+        "spine_02",
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 23453,
+       "ratio": 0.16923,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.27184,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 29049,
+       "ratio": 0.29629,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_02",
+        "upper_arm.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.04432
+     },
+     "watch_ratios": {
+      "23453": 0.16923,
+      "28926": 0.07911,
+      "28927": 0.16757,
+      "43759": 0.34271,
+      "43782": 0.32698,
+      "43911": 0.22189
+     }
+    },
+    "only:Idle": {
+     "frames": {
+      "GetUp": 83.24999999,
+      "Idle": 0.24999999000000162
+     },
+     "weights": {
+      "upper": {
+       "Idle": 1.0
+      },
+      "lower": {
+       "Idle": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_04": 0.000669,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.079981,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 43911,
+       "ratio": 0.22187,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32699,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.34271,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 17396,
+       "ratio": 0.35705,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35733,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.36132,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "23453": 1.0,
+      "28926": 1.00055,
+      "28927": 0.80609,
+      "43759": 0.34271,
+      "43782": 0.32699,
+      "43911": 0.22187
+     }
+    }
+   }
+  },
+  {
+   "id": "sleep-getup-wrap-b400-s1.5",
+   "t": 0.841666667,
+   "watch": [
+    5357,
+    5358,
+    5359,
+    13800,
+    14359,
+    14362,
+    22763,
+    22868,
+    22881,
+    25600
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Sleep": 30.750000029999995,
+      "GetUp": 30.750000030000002
+     },
+     "weights": {
+      "upper": {
+       "Sleep": 0.14583333249999997,
+       "GetUp": 0.8541666675
+      },
+      "lower": {
+       "Sleep": 0.14583333249999997,
+       "GetUp": 0.8541666675
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.7330729142708331
+     },
+     "morph_weights": {
+      "SM_RO_core/SKC_core_fold_03": 0.051044,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_coat/SKC_coat_lying": 0.733073
+     },
+     "lowest": [
+      {
+       "triangle": 5357,
+       "ratio": 0.02595,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 5358,
+       "ratio": 0.13857,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 22868,
+       "ratio": 0.14617,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.18044,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.19057,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 14361,
+       "ratio": 0.19113,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.27344
+     },
+     "watch_ratios": {
+      "5357": 0.02595,
+      "5358": 0.13857,
+      "5359": 0.30514,
+      "13800": 0.36191,
+      "14359": 0.35323,
+      "14362": 0.60205,
+      "22763": 0.18044,
+      "22868": 0.14617,
+      "22881": 0.19057,
+      "25600": 0.30059
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Sleep": 30.750000029999995,
+      "GetUp": 30.750000030000002
+     },
+     "weights": {
+      "upper": {
+       "Sleep": 0.14583333249999997,
+       "GetUp": 0.8541666675
+      },
+      "lower": {
+       "Sleep": 0.14583333249999997,
+       "GetUp": 0.8541666675
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.7330729142708331
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.14617,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.18044,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.19057,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25827,
+       "ratio": 0.1967,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22859,
+       "ratio": 0.23553,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23469,
+       "ratio": 0.2541,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.37623
+     },
+     "watch_ratios": {
+      "5357": 0.94753,
+      "5358": 1.03716,
+      "5359": 1.03314,
+      "13800": 1.00001,
+      "14359": 1.0,
+      "14362": 1.72013,
+      "22763": 0.18044,
+      "22868": 0.14617,
+      "22881": 0.19057,
+      "25600": 0.30059
+     }
+    },
+    "only:GetUp": {
+     "frames": {
+      "Sleep": 30.750000029999995,
+      "GetUp": 30.750000030000002
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 1.0
+      },
+      "lower": {
+       "GetUp": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.6874999974999998
+     },
+     "morph_weights": {
+      "SM_RO_core/SKC_core_fold_03": 0.061529,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_coat/SKC_coat_lying": 0.6875
+     },
+     "lowest": [
+      {
+       "triangle": 5359,
+       "ratio": 0.08682,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.13102,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22868,
+       "ratio": 0.14433,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 5360,
+       "ratio": 0.14544,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.15365,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 14361,
+       "ratio": 0.16188,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.30227
+     },
+     "watch_ratios": {
+      "5357": 0.3058,
+      "5358": 0.17217,
+      "5359": 0.08682,
+      "13800": 0.40037,
+      "14359": 0.39147,
+      "14362": 0.75229,
+      "22763": 0.18991,
+      "22868": 0.14433,
+      "22881": 0.15365,
+      "25600": 0.13102
+     }
+    },
+    "only:Sleep": {
+     "frames": {
+      "Sleep": 30.750000029999995,
+      "GetUp": 30.750000030000002
+     },
+     "weights": {
+      "upper": {
+       "Sleep": 1.0
+      },
+      "lower": {
+       "Sleep": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 1.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_hand.R": 0.0,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_finger4.L_03": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_coat/SKC_coat_lying": 1.0
+     },
+     "lowest": [
+      {
+       "triangle": 13800,
+       "ratio": 0.15827,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      },
+      {
+       "triangle": 14359,
+       "ratio": 0.16438,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 14362,
+       "ratio": 0.17255,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 14363,
+       "ratio": 0.17362,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 12876,
+       "ratio": 0.22985,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      },
+      {
+       "triangle": 13216,
+       "ratio": 0.2378,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.00046,
+      "SM_RO_core": 0.003
+     },
+     "watch_ratios": {
+      "5357": 0.88179,
+      "5358": 0.88299,
+      "5359": 0.89386,
+      "13800": 0.15827,
+      "14359": 0.16438,
+      "14362": 0.17255,
+      "22763": 1.03821,
+      "22868": 1.08422,
+      "22881": 1.09463,
+      "25600": 1.03418
+     }
+    }
+   }
+  },
+  {
+   "id": "getup-idle-end-b200-s1.0",
+   "t": 0.508333333,
+   "watch": [
+    22868,
+    22881,
+    25600,
+    43759,
+    43782,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "GetUp": 77.49999998,
+      "Idle": 0.49999998000000323
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      },
+      "lower": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.09597,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.12367,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13619,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.13793,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.18787,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 22882,
+       "ratio": 0.21937,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.18223
+     },
+     "watch_ratios": {
+      "22868": 0.09597,
+      "22881": 0.13619,
+      "25600": 0.12367,
+      "43759": 0.34271,
+      "43782": 0.32699,
+      "43911": 0.22188
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "GetUp": 77.49999998,
+      "Idle": 0.49999998000000323
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      },
+      "lower": {
+       "GetUp": 0.9583333349999997,
+       "Idle": 0.04166666500000027
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.09597,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.12367,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13619,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.13793,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.18787,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.18925,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.18223
+     },
+     "watch_ratios": {
+      "22868": 0.09597,
+      "22881": 0.13619,
+      "25600": 0.12367,
+      "43759": 0.52198,
+      "43782": 0.42447,
+      "43911": 0.18925
+     }
+    },
+    "only:GetUp": {
+     "frames": {
+      "GetUp": 77.49999998,
+      "Idle": 0.49999998000000323
+     },
+     "weights": {
+      "upper": {
+       "GetUp": 1.0
+      },
+      "lower": {
+       "GetUp": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_03": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 25600,
+       "ratio": 0.11794,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22868,
+       "ratio": 0.11832,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13771,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.15227,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.16205,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22882,
+       "ratio": 0.18354,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.19075
+     },
+     "watch_ratios": {
+      "22868": 0.11832,
+      "22881": 0.13771,
+      "25600": 0.11794,
+      "43759": 0.34271,
+      "43782": 0.32699,
+      "43911": 0.22187
+     }
+    },
+    "only:Idle": {
+     "frames": {
+      "GetUp": 77.49999998,
+      "Idle": 0.49999998000000323
+     },
+     "weights": {
+      "upper": {
+       "Idle": 1.0
+      },
+      "lower": {
+       "Idle": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_core/SKC_core_fold_04": 0.000634,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.079955,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_03": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 43911,
+       "ratio": 0.22188,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32698,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.3427,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35734,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 17396,
+       "ratio": 0.36006,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "spine_02",
+        "upper_arm.L"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.36132,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "22868": 1.0,
+      "22881": 1.0,
+      "25600": 1.00001,
+      "43759": 0.3427,
+      "43782": 0.32698,
+      "43911": 0.22188
+     }
+    }
+   }
+  },
+  {
+   "id": "idle-liedown-p0-b200-s1.0",
+   "t": 0.691666667,
+   "watch": [
+    22763,
+    22868,
+    22881,
+    25600,
+    43759,
+    43782,
+    43911
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 0.041666664999999936,
+       "LieDown": 0.9583333350000001
+      },
+      "lower": {
+       "Idle": 0.041666664999999936,
+       "LieDown": 0.9583333350000001
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_finger4.L_03": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.0918,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.13412,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.13752,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13954,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.20509,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.22188,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.16828
+     },
+     "watch_ratios": {
+      "22763": 0.13752,
+      "22868": 0.0918,
+      "22881": 0.13954,
+      "25600": 0.13412,
+      "43759": 0.34271,
+      "43782": 0.32699,
+      "43911": 0.22188
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 0.041666664999999936,
+       "LieDown": 0.9583333350000001
+      },
+      "lower": {
+       "Idle": 0.041666664999999936,
+       "LieDown": 0.9583333350000001
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.0918,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.13412,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.13752,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13954,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 43911,
+       "ratio": 0.18926,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.20509,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.16828
+     },
+     "watch_ratios": {
+      "22763": 0.13752,
+      "22868": 0.0918,
+      "22881": 0.13954,
+      "25600": 0.13412,
+      "43759": 0.52201,
+      "43782": 0.42448,
+      "43911": 0.18926
+     }
+    },
+    "only:Idle": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "Idle": 1.0
+      },
+      "lower": {
+       "Idle": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_hand.R": 0.079494,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 43911,
+       "ratio": 0.22189,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43782,
+       "ratio": 0.32699,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43759,
+       "ratio": 0.34269,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43913,
+       "ratio": 0.35733,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      },
+      {
+       "triangle": 43739,
+       "ratio": 0.36132,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger2.R_01",
+        "hand.R"
+       ]
+      },
+      {
+       "triangle": 43788,
+       "ratio": 0.38565,
+       "mesh": "SM_RO_hand.R",
+       "dominant": [
+        "finger1.R_01",
+        "finger2.R_01"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {},
+     "watch_ratios": {
+      "22763": 1.0,
+      "22868": 1.0,
+      "22881": 1.0,
+      "25600": 1.0002,
+      "43759": 0.34269,
+      "43782": 0.32699,
+      "43911": 0.22189
+     }
+    },
+    "only:LieDown": {
+     "frames": {
+      "Idle": 11.500000020000016,
+      "LieDown": 11.500000020000002
+     },
+     "weights": {
+      "upper": {
+       "LieDown": 1.0
+      },
+      "lower": {
+       "LieDown": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 1.0,
+      "lying": 0.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SK_RO_GraspPulp_Corrective": 1.0,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.275016,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.559557,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.258538,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.335755,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.449125,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.304679,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.409665,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.466379,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.466684,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.590023,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.430016,
+      "SM_RO_hand.R/SKC_finger4.R_03": 0.304235,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.148188,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.045791,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.241712,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.209463,
+      "SM_RO_hand.R/SKC_fist.R": 0.191059,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765
+     },
+     "lowest": [
+      {
+       "triangle": 22868,
+       "ratio": 0.10481,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 25600,
+       "ratio": 0.11644,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22881,
+       "ratio": 0.13527,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22763,
+       "ratio": 0.14693,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 28477,
+       "ratio": 0.16992,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_arm.R"
+       ]
+      },
+      {
+       "triangle": 22882,
+       "ratio": 0.20118,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.17619
+     },
+     "watch_ratios": {
+      "22763": 0.14693,
+      "22868": 0.10481,
+      "22881": 0.13527,
+      "25600": 0.11644,
+      "43759": 0.3427,
+      "43782": 0.32698,
+      "43911": 0.22188
+     }
+    }
+   }
+  },
+  {
+   "id": "liedown-sleep-end-b400-s1.5",
+   "t": 0.541666667,
+   "watch": [
+    13239,
+    13800,
+    14359,
+    14362,
+    22873,
+    22878,
+    22883,
+    22884
+   ],
+   "snapshots": {
+    "blend": {
+     "frames": {
+      "LieDown": 56.75000003,
+      "Sleep": 3.750000029999999
+     },
+     "weights": {
+      "upper": {
+       "LieDown": 0.8958333325000001,
+       "Sleep": 0.10416666749999998
+      },
+      "lower": {
+       "LieDown": 0.8958333325000001,
+       "Sleep": 0.10416666749999998
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.5334201415625002
+     },
+     "morph_weights": {
+      "SM_RO_core/SKC_core_fold_03": 0.070498,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger3.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_03": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_core/SKC_core_fold_37": 0.574935,
+      "SM_RO_core/SKC_core_fold_38": 0.734698,
+      "SM_RO_coat/SKC_coat_lying": 0.53342
+     },
+     "lowest": [
+      {
+       "triangle": 22873,
+       "ratio": 0.09307,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22878,
+       "ratio": 0.11277,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22884,
+       "ratio": 0.20902,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22890,
+       "ratio": 0.2619,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23543,
+       "ratio": 0.27105,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 13239,
+       "ratio": 0.27902,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.35253
+     },
+     "watch_ratios": {
+      "13239": 0.27902,
+      "13800": 0.53261,
+      "14359": 0.52439,
+      "14362": 0.91991,
+      "22873": 0.09307,
+      "22878": 0.11277,
+      "22883": 0.29987,
+      "22884": 0.20902
+     }
+    },
+    "blend_correctives_off": {
+     "frames": {
+      "LieDown": 56.75000003,
+      "Sleep": 3.750000029999999
+     },
+     "weights": {
+      "upper": {
+       "LieDown": 0.8958333325000001,
+       "Sleep": 0.10416666749999998
+      },
+      "lower": {
+       "LieDown": 0.8958333325000001,
+       "Sleep": 0.10416666749999998
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.5334201415625002
+     },
+     "morph_weights": {},
+     "lowest": [
+      {
+       "triangle": 22873,
+       "ratio": 0.05477,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22878,
+       "ratio": 0.07378,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22884,
+       "ratio": 0.20902,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22890,
+       "ratio": 0.2619,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23543,
+       "ratio": 0.27105,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 22788,
+       "ratio": 0.28284,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.38166
+     },
+     "watch_ratios": {
+      "13239": 1.49107,
+      "13800": 1.0,
+      "14359": 1.0,
+      "14362": 1.74544,
+      "22873": 0.05477,
+      "22878": 0.07378,
+      "22883": 0.29987,
+      "22884": 0.20902
+     }
+    },
+    "only:LieDown": {
+     "frames": {
+      "LieDown": 56.75000003,
+      "Sleep": 3.750000029999999
+     },
+     "weights": {
+      "upper": {
+       "LieDown": 1.0
+      },
+      "lower": {
+       "LieDown": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 0.47916666916666684
+     },
+     "morph_weights": {
+      "SM_RO_core/SKC_core_fold_03": 0.079698,
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger2.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger3.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_coat/SKC_coat_lying": 0.479167
+     },
+     "lowest": [
+      {
+       "triangle": 13239,
+       "ratio": 0.10653,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 22873,
+       "ratio": 0.186,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 22883,
+       "ratio": 0.20328,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis",
+        "upper_leg.L"
+       ]
+      },
+      {
+       "triangle": 22878,
+       "ratio": 0.22983,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "pelvis"
+       ]
+      },
+      {
+       "triangle": 23543,
+       "ratio": 0.24305,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      },
+      {
+       "triangle": 23551,
+       "ratio": 0.27726,
+       "mesh": "SM_RO_core",
+       "dominant": [
+        "upper_leg.R"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.34552
+     },
+     "watch_ratios": {
+      "13239": 0.10653,
+      "13800": 0.57968,
+      "14359": 0.57202,
+      "14362": 1.08621,
+      "22873": 0.186,
+      "22878": 0.22983,
+      "22883": 0.20328,
+      "22884": 0.35771
+     }
+    },
+    "only:Sleep": {
+     "frames": {
+      "LieDown": 56.75000003,
+      "Sleep": 3.750000029999999
+     },
+     "weights": {
+      "upper": {
+       "Sleep": 1.0
+      },
+      "lower": {
+       "Sleep": 1.0
+      }
+     },
+     "state": {
+      "grasp.L": 0.0,
+      "grasp.R": 0.0,
+      "lying": 1.0
+     },
+     "morph_weights": {
+      "SM_RO_hand.R/SKC_finger1.R_01": 0.176471,
+      "SM_RO_hand.R/SKC_finger1.R_02": 0.18,
+      "SM_RO_hand.R/SKC_finger1.R_03": 0.0,
+      "SM_RO_hand.R/SKC_finger2.R_01": 0.211765,
+      "SM_RO_hand.R/SKC_finger2.R_02": 0.22,
+      "SM_RO_hand.R/SKC_finger3.R_01": 0.247059,
+      "SM_RO_hand.R/SKC_finger3.R_02": 0.25,
+      "SM_RO_hand.R/SKC_finger4.R_01": 0.282353,
+      "SM_RO_hand.R/SKC_finger4.R_02": 0.28,
+      "SM_RO_hand.R/SKC_thumb.R_01": 0.222222,
+      "SM_RO_hand.R/SKC_thumb.R_02": 0.0,
+      "SM_RO_hand.R/SKC_thumb.R_03": 0.0,
+      "SM_RO_hand.R/SKC_clear_34_j1.R": 0.069758,
+      "SM_RO_hand.R/SKC_clear_23_j2.R": 0.055,
+      "SM_RO_hand.R/SKC_fist.R": 0.061765,
+      "SM_RO_hand.L/SKC_finger1.L_01": 0.176471,
+      "SM_RO_hand.L/SKC_finger1.L_02": 0.18,
+      "SM_RO_hand.L/SKC_finger1.L_03": 0.0,
+      "SM_RO_hand.L/SKC_finger2.L_01": 0.211765,
+      "SM_RO_hand.L/SKC_finger2.L_02": 0.22,
+      "SM_RO_hand.L/SKC_finger3.L_01": 0.247059,
+      "SM_RO_hand.L/SKC_finger3.L_02": 0.25,
+      "SM_RO_hand.L/SKC_finger4.L_01": 0.282353,
+      "SM_RO_hand.L/SKC_finger4.L_02": 0.28,
+      "SM_RO_hand.L/SKC_hand.L": 0.0,
+      "SM_RO_hand.L/SKC_thumb.L_01": 0.222222,
+      "SM_RO_hand.L/SKC_thumb.L_02": 0.0,
+      "SM_RO_hand.L/SKC_clear_34_j1.L": 0.069758,
+      "SM_RO_hand.L/SKC_clear_23_j2.L": 0.055,
+      "SM_RO_hand.L/SKC_fist.L": 0.061765,
+      "SM_RO_coat/SKC_coat_lying": 1.0
+     },
+     "lowest": [
+      {
+       "triangle": 13800,
+       "ratio": 0.15827,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      },
+      {
+       "triangle": 14359,
+       "ratio": 0.16438,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 14362,
+       "ratio": 0.17255,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L",
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 14363,
+       "ratio": 0.17362,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.R"
+       ]
+      },
+      {
+       "triangle": 12876,
+       "ratio": 0.22985,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      },
+      {
+       "triangle": 13216,
+       "ratio": 0.2378,
+       "mesh": "SM_RO_coat",
+       "dominant": [
+        "coat.L"
+       ]
+      }
+     ],
+     "bed_depth_by_mesh_m": {
+      "SM_RO_coat": 0.00046,
+      "SM_RO_core": 0.003
+     },
+     "watch_ratios": {
+      "13239": 1.05358,
+      "13800": 0.15827,
+      "14359": 0.16438,
+      "14362": 0.17255,
+      "22873": 1.04815,
+      "22878": 1.04931,
+      "22883": 1.01973,
+      "22884": 1.04619
+     }
+    }
+   }
+  }
+ ]
+}

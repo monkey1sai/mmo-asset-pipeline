@@ -60,6 +60,8 @@ runs/qa/ro-swordsman-combo-r010/**/*.npz filter=lfs diff=lfs merge=lfs -text
 # 不做換行轉換，照原位元組保存，移機或重新 clone 後雜湊仍可核對。不要改寫這些檔案的換行。
 /runs/qa/ro-swordsman-combo*/** -text
 /runs/qa/ro-swordsman-character-v1*/** -text
+# Git／LFS 推送紀錄：檔案的 SHA-256 記在各自的 record.json，照原位元組保存。
+/runs/qa/git-portability-*/** -text
 /runs/handoffs/** -text
 /runs/ro-swordsman-api-*.json -text
 /assets/raw/ro-swordsman-combo/** -text

@@ -1,0 +1,2883 @@
+{
+ "observed_utc": "2026-10-06T09:27:36.362377+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "46af35eec05edaf0485fb50e055477b8bad5ffee0e5eff7e8b54f00f0b9afba9",
+ "modules": {
+  "cv1_interaction.py": "09d2ce6cf5ebcf9c40fe875d57dc1d4ffa2859a32f505c259d6bf77ecf0c5d30",
+  "cv1_pose_rules.py": "04121ff0b7f72ea65dc26a307606cf56fc2688d25bf1cbd6a7b8e28e9fc158d2",
+  "cv1_transition.py": "d10c6917851d35c8524c9f1cc0ec1515e984849cd4766d55ae9a54d571797f2d",
+  "cv1_soup.py": "384b8664cf5863226a32f3076c2e4e70bf4cfa488ef1d03c4a2ad70c6be22440",
+  "cv1_contract_pose.py": "1855f8b0dad546630ebcc281d6552fa6e05785928bbdc63c90f66cb375b35b99",
+  "ro_certified_grasp_gate.py": "3bf87eeecf4db8d37a7f5fe40887a135ac1c2bd487bfd7be4f60089176527872"
+ },
+ "scenarios_file": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions.json",
+  "sha256": "6ba3bfd4dc42bd0d44e82ab4cfe2b73de3f4571c7b3db450386e9ac5ec8eb1fe"
+ },
+ "thresholds": {
+  "collapse_area_ratio": 0.05,
+  "weapon_body_m": 0.001,
+  "grasp_outside_penetration_m": 0.001,
+  "feet_slide_m": 0.01,
+  "continuity_deg": 0.5,
+  "continuity_m": 0.001,
+  "bed_support_m": 0.005,
+  "bed_clearance_m": 0.005,
+  "bed_clearance_hand_m": 0.05,
+  "bed_clearance_hand_event_window_frames": 6,
+  "source": "requests/ro-swordsman-character-v1-r6.json transition_matrix.gates (feet: 2 x foot_stance_slide 5 mm); bed gates as scripts/cv1_clip_check.py"
+ },
+ "scope": "r6 transition_matrix.gates.continuity only; the other gates are in transition-check.json.",
+ "summary": {
+  "scenarios": 164,
+  "passed": 164
+ },
+ "scenarios": [
+  {
+   "id": "idle-walk-p0-b100-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.3985787785349405e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b100-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b100-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 7.152448122690996e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b100-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.3985787785349405e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b100-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b100-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 7.152448122690996e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b100-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 1.1808491485006893e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b100-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 1.1808491485006893e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b100-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b100-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b100-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 6.938893903907228e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b100-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 6.938893903907228e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b100-s0.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b100-s0.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b100-s0.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b100-s0.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b100-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b100-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b100-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b100-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b100-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b100-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b100-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b100-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b100-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.2780338161092521e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b100-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.2780338161092521e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b100-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b100-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b100-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b100-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b100-s1.0",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b100-s1.0",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b100-s1.0",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b100-s1.0",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b100-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b100-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b100-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b100-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b100-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 3.1031676915590914e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b100-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b100-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b100-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 3.1031676915590914e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b100-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.414225558301634e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b100-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 1.414225558301634e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b100-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b100-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b100-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 3.469446951953614e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b100-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 3.469446951953614e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b100-s1.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b100-s1.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b100-s1.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b100-s1.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b100-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b100-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b200-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b200-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b200-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b200-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b200-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b200-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b200-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.2780338161092521e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b200-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.2780338161092521e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b200-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b200-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b200-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b200-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b200-s0.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b200-s0.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b200-s0.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b200-s0.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b200-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b200-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b200-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b200-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b200-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 3.925231146709438e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b200-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b200-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b200-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 3.925231146709438e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b200-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 1.537210509226406e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b200-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.537210509226406e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b200-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b200-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b200-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b200-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b200-s1.0",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b200-s1.0",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b200-s1.0",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b200-s1.0",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b200-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b200-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b200-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b200-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b200-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 7.850462293418876e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b200-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.4304896245381992e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b200-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b200-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 7.850462293418876e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b200-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.5659171380111762e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b200-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.5659171380111762e-17,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b200-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b200-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 1.734723475976807e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b200-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b200-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 2.6020852139652106e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b200-s1.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b200-s1.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b200-s1.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b200-s1.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b200-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b200-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 2.4148365394514667e-06,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b400-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b400-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b400-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b400-s0.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b400-s0.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b400-s0.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b400-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b400-s0.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b400-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b400-s0.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b400-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b400-s0.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b400-s0.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b400-s0.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b400-s0.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b400-s0.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b400-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b400-s0.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b400-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b400-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b400-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b400-s1.0",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b400-s1.0",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b400-s1.0",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b400-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b400-s1.0",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b400-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b400-s1.0",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b400-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b400-s1.0",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b400-s1.0",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b400-s1.0",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b400-s1.0",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b400-s1.0",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b400-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b400-s1.0",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p0-b400-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p0-b400-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p0-b400-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-walk-p60-b400-s1.5",
+   "pair": "Idle->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-cast-p60-b400-s1.5",
+   "pair": "Idle->Cast",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "idle-liedown-p60-b400-s1.5",
+   "pair": "Idle->LieDown",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-r-b400-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-idle-l-b400-s1.5",
+   "pair": "Walk->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-r-b400-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-run-l-b400-s1.5",
+   "pair": "Walk->Run",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-r-b400-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "run-walk-l-b400-s1.5",
+   "pair": "Run->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "cast-idle-end-b400-s1.5",
+   "pair": "Cast->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "liedown-sleep-end-b400-s1.5",
+   "pair": "LieDown->Sleep",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "getup-idle-end-b400-s1.5",
+   "pair": "GetUp->Idle",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "sleep-getup-wrap-b400-s1.5",
+   "pair": "Sleep->GetUp",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-r-b400-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "walk-castupper-walk-l-b400-s1.5",
+   "pair": "Walk->Cast(upper)->Walk",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 0.0,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "repeat-idle-walk",
+   "pair": "Idle<->Walk repeated",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 3,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 4,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 1.7075472925031877e-06,
+     "end_m": 9.786982112569856e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  },
+  {
+   "id": "repeat-walk-run",
+   "pair": "Walk<->Run repeated",
+   "continuity": [
+    {
+     "event": 1,
+     "start_against": "source_clips",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 2,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 3,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": null,
+     "end_m": null,
+     "end": "interrupted",
+     "pass": true
+    },
+    {
+     "event": 4,
+     "start_against": "pose_before_interrupt",
+     "start_deg": 0.0,
+     "start_m": 0.0,
+     "end_deg": 0.0,
+     "end_m": 3.469446951953614e-18,
+     "pass": true
+    }
+   ],
+   "pass": true
+  }
+ ]
+}
