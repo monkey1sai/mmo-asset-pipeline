@@ -138,9 +138,9 @@ class RequestTests(unittest.TestCase):
 
     def test_library_reports_revision_gaps(self):
         index = identity.read_json(REPO / "library" / "index.json")
-        matches = workbench.search_library(index, "火盆")
+        # The library may hold several braziers; the revision-gap report concerns the one still needing revision.
+        matches = [m for m in workbench.search_library(index, "火盆") if m["status"] == "needs_revision"]
         self.assertEqual(len(matches), 1)
-        self.assertEqual(matches[0]["status"], "needs_revision")
         self.assertEqual(matches[0]["acceptance"]["delivery"], "not_delivered")
         self.assertEqual(workbench.search_library(index, "sword", "changshan-longdan"), [])
 

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "cl-barracks-set-v1",
+  "title": "常山龍膽城池第一批環境資產：營房、火盆、殘骸",
+  "brief": "常山龍膽城池第一批環境資產：一棟魏軍營房（牆身與可獨立隱藏的屋頂分件，尺寸照 layout.ts 13×15 m）、火盆（盆體與炭火發光面分離）、燃燒殘骸；風格化三國、延續 Web 版 voxel 配色；靜態、無骨架；Unity 6 glTFast 匯入；零付費，本機 Blender 程序建模",
+  "purpose": "常山龍膽 E10（小規模場景資產管線）：以共用佈局 src/world/layout.ts 的尺寸，替換 Unity 驗證場景中 E09 的佔位方塊——六棟營房由同一資產實例化、16 座火盆、2 處燃燒殘骸；鏡頭避障與屋頂剖視的契約不變（屋頂是獨立節點，由遊戲端隱藏）。",
+  "task_type": "modular_environment",
+  "project": "changshan-longdan",
+  "status": "specified",
+  "provenance": {
+    "kind": "user_brief",
+    "reference": "requests/cl-barracks-set-v1.json#brief",
+    "game_request": "changshan-longdan docs/art/requests/cl-barracks-set-v1.md",
+    "art_direction_source": "changshan-longdan src/world/castle.ts（buildBarracks／roof／buildBraziers／buildWrecks 的尺寸與調色盤）與 docs/art/art-bible/ENVIRONMENT.md"
+  },
+  "style": {
+    "description": "原創風格化三國，延續 Web 版 voxel 城池：方塊化體積、乾淨輪廓、線性 sRGB 調色盤（石 #8b8074／#62594f、灰泥 #cdbfa8、木 #4a2e21／#6f4a33、屋瓦 #3a4350／#2b3139、金 #c29a45、鐵 #35343a、焦木 #1d1916）；炭火與餘燼為 HDR 自發光（炭火 (4.5,1.6,0.35)、餘燼 (2.4,0.7,0.12)），實際 bloom 由引擎配置。",
+    "references": [
+      "changshan-longdan src/world/castle.ts",
+      "changshan-longdan docs/art/art-bible/ENVIRONMENT.md",
+      "changshan-longdan docs/art/art-bible/MATERIAL.md"
+    ],
+    "must_have": [
+      "營房牆身與屋頂是兩個獨立節點（roof 可單獨隱藏），同一地面中心 pivot",
+      "屋頂含金色收邊、四層瓦、屋脊與四角裝飾，外框超出牆身每邊 1.225 m（BARRACKS_ROOF_OVERHANG）",
+      "營房一側有門（朝向城內，x 較小側）、兩扇小窗、外露木柱",
+      "火盆：石座＋鐵盆＋炭火發光面，三者分離節點",
+      "殘骸：焦木與木塊散落堆，另有餘燼發光塊節點"
+    ],
+    "must_not_have": [
+      "人物",
+      "地面",
+      "整座城池",
+      "烘焙火焰或粒子",
+      "貼圖（本批以頂點色／純色材質交付）",
+      "碰撞體（碰撞由遊戲邏輯層決定）"
+    ]
+  },
+  "spec": {
+    "size_m": [
+      13,
+      4.75,
+      15
+    ],
+    "size_note": "營房牆身 [X,Y,Z]；屋頂件整件 [14.6, 2.6, 16.6]（含收邊，置於 y=4.75 之上）；火盆 [1.15, 1.32, 1.15]；殘骸約 [3.6, 1.3, 3.6]",
+    "target_triangles": 6000,
+    "triangles_note": "營房牆身＋屋頂合計上限 6,000；火盆上限 600；殘骸上限 900。方塊化造型每個方塊 12 三角形；交付後以 inventory 量測實際值",
+    "texture_px": null,
+    "texture_note": "本批不用貼圖（texture_px null）：純色 PBR 材質（base color、roughness 0.85、metallic 0）；自發光材質設 emissive。每個資產材質數上限 8（營房調色盤 8 色）",
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [
+      {
+        "id": "barracks-body",
+        "asset": "cl-barracks",
+        "pivot": "牆身腳印中心、地面（y=0）",
+        "motion": null
+      },
+      {
+        "id": "barracks-roof",
+        "asset": "cl-barracks",
+        "pivot": "與牆身相同的地面中心（屋頂幾何從 y=4.75 起）",
+        "motion": null,
+        "note": "由遊戲端依 RoofCutaway 隱藏／顯示"
+      },
+      {
+        "id": "brazier-body",
+        "asset": "cl-brazier",
+        "pivot": "底面中心",
+        "motion": null
+      },
+      {
+        "id": "brazier-coals",
+        "asset": "cl-brazier",
+        "pivot": "底面中心（與盆體同原點）",
+        "motion": null,
+        "note": "自發光；動態火焰另由引擎特效負責"
+      },
+      {
+        "id": "wreck-debris",
+        "asset": "cl-wreck",
+        "pivot": "散落堆中心、地面",
+        "motion": null
+      },
+      {
+        "id": "wreck-embers",
+        "asset": "cl-wreck",
+        "pivot": "同上",
+        "motion": null,
+        "note": "自發光餘燼塊"
+      }
+    ],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {
+    "scope": "target_environment",
+    "formats": [
+      "glb"
+    ],
+    "target_environment": {
+      "name": "Unity",
+      "version": "6000.6.4f1（URP 17.6.0、glTFast 6.20.0、Mono、D3D11、Linear）",
+      "import": "執行期 glTFast 由 StreamingAssets 載入（同 E03 趙雲路徑），載入失敗保留佔位方塊作可見回退",
+      "verification_context": "changshan-longdan 的 Unity 驗證場景：以 layout.ts 矩形實例化六棟營房、16 座火盆、2 處殘骸，取代 E09 的佔位方塊；鏡頭路線錄影（E09 record:route --mode e09）仍須通過；屋頂節點由 RoofCutaway 隱藏"
+    }
+  },
+  "production": {
+    "route": "generate",
+    "reason": "素材庫無營房／火盆／殘骸（search 無相符）；造型需求明確且由 Web voxel 原始資料定義，採本機 Blender 4.5 程序建模（tools/blender/build_box_assets.py 讀取資產規格 JSON 建立方塊網格並匯出 GLB），零付費，不使用 Hyper3D",
+    "tool": "blender（能力登記 verified_scoped_local_attempt；本次以 blender -b --python 實際執行並保留 stdout）",
+    "reuse_candidates": [],
+    "max_revisions": 2
+  },
+  "additional_checks": [
+    {
+      "id": "roof-separable",
+      "area": "technical",
+      "description": "GLB 內屋頂為獨立命名節點 barracks-roof，遊戲端可單獨 SetActive(false) 而牆身不受影響"
+    },
+    {
+      "id": "footprint-matches-layout",
+      "area": "technical",
+      "description": "牆身腳印 = layout.ts 矩形（13×15 m）每邊內縮 0.3 m（castle.ts buildBarracks 的 span），即 12.4×14.4 m ±0.1；屋頂外框超出矩形每邊 1.225 m（BARRACKS_ROOF_OVERHANG，含角飾）±0.05；屋脊頂 7.57 m ±0.1；火盆底面落在 1.2 m 碰撞矩形內"
+    },
+    {
+      "id": "pivot-ground-centre",
+      "area": "technical",
+      "description": "每個資產原點在腳印中心、y=0；向上 +Y、前方 +Z，匯入 Unity 後不需額外旋轉／縮放"
+    },
+    {
+      "id": "no-external-deps",
+      "area": "technical",
+      "description": "GLB 不引用外部貼圖／bin；無 extensionsRequired；材質數 ≤ 8"
+    },
+    {
+      "id": "budget-measured",
+      "area": "technical",
+      "description": "以 scripts/pipeline.py inspect 量實際三角形與材質數，記入交付 manifest"
+    },
+    {
+      "id": "camera-route-regression",
+      "area": "target_environment",
+      "description": "Unity 場景替換後，E09 鏡頭路線三種解析度錄影仍通過檢查（屋頂剖開／恢復、鏡頭不進建築）"
+    }
+  ],
+  "assumptions": [
+    "m／+Y／+Z 與 GLB 交付；Web 右手座標的 (x, y, z) 直接對應 glTF 的 (x, y, z)，由遊戲端既有 LogicDisplayMapping 鏡射到 Unity 顯示空間",
+    "本批只做一棟營房的通用版本（不含燃燒變體 scorched／ash），燃燒營房與城牆、主堡、城門屬後續批次",
+    "純色材質由頂點色或獨立材質槽表達，不做 UV 貼圖；遊戲端若之後需要貼圖另立修訂",
+    "殘骸的散落以固定種子的程序排列（可重現），不逐塊對照 Web 的亂數",
+    "專案設定不授權改寫來源 repo，需求可另行選擇獨立模型交付",
+    "場景接入時以 src/world/layout.ts 的集中尺寸與碰撞為準",
+    "火盆本體與動態火焰效果分離；Unity 只在需求指定時加入驗收"
+  ],
+  "open_questions": []
+}

@@ -1,0 +1,322 @@
+{
+  "mode": "offline_plan_only",
+  "request_id": "cl-barracks-set-v1",
+  "request_sha256": "60573438cc8eb6dfca0235fb574e48635b5651a0d8ae870d6c543fcfe7a27ecf",
+  "project": "changshan-longdan",
+  "route": "generate",
+  "reason": "素材庫無營房／火盆／殘骸（search 無相符）；造型需求明確且由 Web voxel 原始資料定義，採本機 Blender 4.5 程序建模（tools/blender/build_box_assets.py 讀取資產規格 JSON 建立方塊網格並匯出 GLB），零付費，不使用 Hyper3D",
+  "pending": [],
+  "reuse_candidates": [],
+  "steps": [
+    "理解需求與交付承諾",
+    "制定設計、參考與可修訂預設",
+    "建立原創視覺參考及工具輸入；依已記錄的資源授權產生候選",
+    "製作與需求指定的後製",
+    "逐項記錄美術／技術／必要目標環境證據",
+    "核對交付檔案並歸檔"
+  ],
+  "needed_capabilities": [
+    "reference_design",
+    "candidate_generation",
+    "mesh_edit",
+    "format_export"
+  ],
+  "required_checks": [
+    {
+      "id": "art_match",
+      "area": "art",
+      "description": "造型、比例、風格與材質符合需求及參考"
+    },
+    {
+      "id": "scale_pivot",
+      "area": "technical",
+      "description": "實際尺寸、軸向與 pivot 符合規格"
+    },
+    {
+      "id": "geometry_materials",
+      "area": "technical",
+      "description": "幾何、面數、法線及指定材質要求經檢查"
+    },
+    {
+      "id": "package_complete",
+      "area": "delivery",
+      "description": "指定格式、相依檔案與使用說明齊全"
+    },
+    {
+      "id": "module_fit",
+      "area": "technical",
+      "description": "模組接合邊、間隙及重用規格經檢查"
+    },
+    {
+      "id": "target_environment",
+      "area": "target_environment",
+      "description": "指定目標環境版本及情境實測通過"
+    },
+    {
+      "id": "roof-separable",
+      "area": "technical",
+      "description": "GLB 內屋頂為獨立命名節點 barracks-roof，遊戲端可單獨 SetActive(false) 而牆身不受影響"
+    },
+    {
+      "id": "footprint-matches-layout",
+      "area": "technical",
+      "description": "牆身腳印 = layout.ts 矩形（13×15 m）每邊內縮 0.3 m（castle.ts buildBarracks 的 span），即 12.4×14.4 m ±0.1；屋頂外框超出矩形每邊 1.225 m（BARRACKS_ROOF_OVERHANG，含角飾）±0.05；屋脊頂 7.57 m ±0.1；火盆底面落在 1.2 m 碰撞矩形內"
+    },
+    {
+      "id": "pivot-ground-centre",
+      "area": "technical",
+      "description": "每個資產原點在腳印中心、y=0；向上 +Y、前方 +Z，匯入 Unity 後不需額外旋轉／縮放"
+    },
+    {
+      "id": "no-external-deps",
+      "area": "technical",
+      "description": "GLB 不引用外部貼圖／bin；無 extensionsRequired；材質數 ≤ 8"
+    },
+    {
+      "id": "budget-measured",
+      "area": "technical",
+      "description": "以 scripts/pipeline.py inspect 量實際三角形與材質數，記入交付 manifest"
+    },
+    {
+      "id": "camera-route-regression",
+      "area": "target_environment",
+      "description": "Unity 場景替換後，E09 鏡頭路線三種解析度錄影仍通過檢查（屋頂剖開／恢復、鏡頭不進建築）"
+    }
+  ],
+  "paid_submission_authorized_by_this_plan": false,
+  "note": "計畫不執行工具、不花費；客戶設定、範例及需求單都不能替代外部操作授權。",
+  "creation_workflow": {
+    "owner": "art_engineer",
+    "preferred_execution": "hyper3d_api_via_available_mcp",
+    "execution_state": "not_submitted",
+    "capability_state": "requires_current_probe",
+    "authorization_state": "requires_existing_scope_check",
+    "credit_pool_state": "requires_monthly_credit_evidence",
+    "input_state": "requires_artist_design_and_backend_mapping",
+    "submission_ready": false,
+    "jobs": [
+      {
+        "subject_id": "cl-barracks-set-v1",
+        "design_brief": {
+          "purpose": "常山龍膽 E10（小規模場景資產管線）：以共用佈局 src/world/layout.ts 的尺寸，替換 Unity 驗證場景中 E09 的佔位方塊——六棟營房由同一資產實例化、16 座火盆、2 處燃燒殘骸；鏡頭避障與屋頂剖視的契約不變（屋頂是獨立節點，由遊戲端隱藏）。",
+          "style": {
+            "description": "原創風格化三國，延續 Web 版 voxel 城池：方塊化體積、乾淨輪廓、線性 sRGB 調色盤（石 #8b8074／#62594f、灰泥 #cdbfa8、木 #4a2e21／#6f4a33、屋瓦 #3a4350／#2b3139、金 #c29a45、鐵 #35343a、焦木 #1d1916）；炭火與餘燼為 HDR 自發光（炭火 (4.5,1.6,0.35)、餘燼 (2.4,0.7,0.12)），實際 bloom 由引擎配置。",
+            "references": [
+              "changshan-longdan src/world/castle.ts",
+              "changshan-longdan docs/art/art-bible/ENVIRONMENT.md",
+              "changshan-longdan docs/art/art-bible/MATERIAL.md"
+            ],
+            "must_have": [
+              "營房牆身與屋頂是兩個獨立節點（roof 可單獨隱藏），同一地面中心 pivot",
+              "屋頂含金色收邊、四層瓦、屋脊與四角裝飾，外框超出牆身每邊 1.225 m（BARRACKS_ROOF_OVERHANG）",
+              "營房一側有門（朝向城內，x 較小側）、兩扇小窗、外露木柱",
+              "火盆：石座＋鐵盆＋炭火發光面，三者分離節點",
+              "殘骸：焦木與木塊散落堆，另有餘燼發光塊節點"
+            ],
+            "must_not_have": [
+              "人物",
+              "地面",
+              "整座城池",
+              "烘焙火焰或粒子",
+              "貼圖（本批以頂點色／純色材質交付）",
+              "碰撞體（碰撞由遊戲邏輯層決定）"
+            ]
+          },
+          "part": null,
+          "whole_asset_spec": {
+            "size_m": [
+              13,
+              4.75,
+              15
+            ],
+            "size_note": "營房牆身 [X,Y,Z]；屋頂件整件 [14.6, 2.6, 16.6]（含收邊，置於 y=4.75 之上）；火盆 [1.15, 1.32, 1.15]；殘骸約 [3.6, 1.3, 3.6]",
+            "target_triangles": 6000,
+            "triangles_note": "營房牆身＋屋頂合計上限 6,000；火盆上限 600；殘骸上限 900。方塊化造型每個方塊 12 三角形；交付後以 inventory 量測實際值",
+            "texture_px": null,
+            "texture_note": "本批不用貼圖（texture_px null）：純色 PBR 材質（base color、roughness 0.85、metallic 0）；自發光材質設 emissive。每個資產材質數上限 8（營房調色盤 8 色）",
+            "units": "m",
+            "up_axis": "+Y",
+            "forward_axis": "+Z",
+            "parts": [
+              {
+                "id": "barracks-body",
+                "asset": "cl-barracks",
+                "pivot": "牆身腳印中心、地面（y=0）",
+                "motion": null
+              },
+              {
+                "id": "barracks-roof",
+                "asset": "cl-barracks",
+                "pivot": "與牆身相同的地面中心（屋頂幾何從 y=4.75 起）",
+                "motion": null,
+                "note": "由遊戲端依 RoofCutaway 隱藏／顯示"
+              },
+              {
+                "id": "brazier-body",
+                "asset": "cl-brazier",
+                "pivot": "底面中心",
+                "motion": null
+              },
+              {
+                "id": "brazier-coals",
+                "asset": "cl-brazier",
+                "pivot": "底面中心（與盆體同原點）",
+                "motion": null,
+                "note": "自發光；動態火焰另由引擎特效負責"
+              },
+              {
+                "id": "wreck-debris",
+                "asset": "cl-wreck",
+                "pivot": "散落堆中心、地面",
+                "motion": null
+              },
+              {
+                "id": "wreck-embers",
+                "asset": "cl-wreck",
+                "pivot": "同上",
+                "motion": null,
+                "note": "自發光餘燼塊"
+              }
+            ],
+            "requires_rig": false,
+            "animations": []
+          }
+        },
+        "prompt": null,
+        "reference_images": [],
+        "operation_id": null,
+        "prepare_spec_draft": {
+          "operation_id": "cl-barracks-set-v1-r01",
+          "request": "requests/cl-barracks-set-v1.json",
+          "images": null,
+          "output_directory": "assets/raw/cl-barracks-set-v1/v001",
+          "parameters": {
+            "tier": null,
+            "mesh_mode": "Raw",
+            "geometry_file_format": "glb",
+            "material": null,
+            "prompt": null,
+            "quality_override": 6000
+          },
+          "authorization": null
+        },
+        "draft_notes": [
+          "tier／material／prompt／images 由美術工程師依設計與成本決定；tier 直接影響扣點",
+          "authorization 須記錄使用者實際授權（spending_scope、credit_pool、no_topup_or_upgrade），工具不代填",
+          "operation_id、output_directory 取帳本與檔案系統目前第一個未使用值；prepare 前再確認"
+        ]
+      }
+    ],
+    "preparation_pending": [
+      "美術工程師將需求轉成單件／單部件 prompt，逐張確認參考圖與上傳範圍",
+      "核對當前工具 schema；圖生工具缺圖時先準備設計圖，不把需求文字直接當圖片輸入",
+      "生成參數與最終規格分開；固定輸出無法滿足的面數、尺寸、rig、動畫由後製處理",
+      "查既有 runs，保存唯一 operation ID、需求雜湊、輸入雜湊與 Authorization Envelope"
+    ],
+    "execution_steps": [
+      "探測工具及憑證狀態，查即時餘額；分開記錄 API 能力、額度來源與花費授權",
+      "沿用明確授權，核對月訂分項、單次成本、總預算及候選上限",
+      "逐筆保存 prepared 操作後呼叫 API；保存任務 ID 並查同一任務",
+      "完成後下載至 repo 的新 raw 版本，核對檔案與雜湊",
+      "美術工程師後製、品質比較、驗收及交付歸檔"
+    ],
+    "unknown_submission_policy": "reconcile_original_operation_never_resubmit",
+    "reconstruction_policy": {
+      "trigger": "observed_structural_gap_or_postprocess_cost_exceeds_remaining_revision_budget",
+      "steps": [
+        "preserve_failed_candidate_and_evidence",
+        "prepare_clear_reference_design",
+        "select_available_api_by_gap",
+        "check_existing_spending_scope",
+        "save_new_raw_and_baseline",
+        "blender_detail_rig_animation_and_fixed_review"
+      ],
+      "api_choices": {
+        "shape": "reference_to_3d",
+        "fused_parts": "part_split_if_available",
+        "material_only": "texture_only_if_available"
+      },
+      "capabilities": "probe_current_adapter_never_infer_from_vendor_docs",
+      "budget": "preserve_consumed_trials_and_costs_new_phase_requires_user_scope",
+      "animation": "generated_shape_does_not_supply_verified_rig_or_action_sequence",
+      "automatic_paid_retry": false
+    },
+    "website_policy": "credit_evidence_or_documented_fallback_only",
+    "note": "這是待工程師整理的創作交接；不是可直接送出的 API payload、交易鎖或付費許可。"
+  },
+  "ledger": {
+    "operations_for_request": [],
+    "blocking": [],
+    "planning_blocked": false,
+    "note": "帳本只讀；pending／unknown／無效紀錄須先核對原操作，不得另造 ID 重送"
+  },
+  "evidence_skeleton": {
+    "schema_version": 1,
+    "request_id": "cl-barracks-set-v1",
+    "request_sha256": "60573438cc8eb6dfca0235fb574e48635b5651a0d8ae870d6c543fcfe7a27ecf",
+    "checks": {
+      "art_match": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "scale_pivot": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "geometry_materials": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "package_complete": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "module_fit": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "target_environment": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "roof-separable": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "footprint-matches-layout": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "pivot-ground-centre": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "no-external-deps": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "budget-measured": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      },
+      "camera-route-regression": {
+        "status": "not_run",
+        "method": "",
+        "artifacts": []
+      }
+    },
+    "deliverables": [],
+    "note": "plan 產生的骨架；未填 status／method／artifacts 前不得當作通過證據。"
+  }
+}

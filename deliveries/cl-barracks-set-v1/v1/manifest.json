@@ -1,0 +1,492 @@
+{
+ "schema_version": 1,
+ "request_id": "cl-barracks-set-v1",
+ "request_sha256": "60573438cc8eb6dfca0235fb574e48635b5651a0d8ae870d6c543fcfe7a27ecf",
+ "request_file": "requests/cl-barracks-set-v1.json",
+ "delivery_id": "cl-barracks-set-v1-d1",
+ "asset_id": [
+  "cl-barracks",
+  "cl-brazier",
+  "cl-wreck"
+ ],
+ "version": "v1",
+ "delivery_scope": "target_environment",
+ "source_versions": {
+  "repo": "mmo-asset-pipeline",
+  "head": "e78d10f9cc959ce914c0d25807b39eba9f56ec3d",
+  "worktree_dirty": true,
+  "dirty_entries": [
+   "M library/index.json",
+   " M tests/test_workbench.py",
+   "?? .claude/",
+   "?? assets/processed/cl-barracks-set-v1/",
+   "?? assets/raw/cl-barracks-set-v1/",
+   "?? deliveries/cl-barracks-set-v1/",
+   "?? requests/cl-barracks-set-v1.json",
+   "?? runs/cl-barracks-set-v1-plan.json",
+   "?? runs/qa/cl-barracks-set-v1/",
+   "?? tools/blender/build_box_assets.py",
+   "?? tools/blender/render_preview.py",
+   "?? tools/glb_bounds.py"
+  ],
+  "note": "本交付的新檔案尚未提交；製作可由 spec.json 與 make_spec.py 以 Blender 4.5.5 LTS 重現",
+  "tools": {
+   "blender": "4.5.5 LTS",
+   "builder": "tools/blender/build_box_assets.py",
+   "preview": "tools/blender/render_preview.py",
+   "bounds": "tools/glb_bounds.py"
+  },
+  "art_direction_source": "changshan-longdan src/world/castle.ts @ bcbf5df1b8f4ec47499bf6131ecbf6a2ded65db3"
+ },
+ "files": [
+  {
+   "path": "deliveries/cl-barracks-set-v1/v1/cl-barracks.glb",
+   "purpose": "model",
+   "bytes": 25292,
+   "sha256": "9431e8c367c55afe0b6d1876b1dec75923a6ff79540419b90f63434321a9142f"
+  },
+  {
+   "path": "deliveries/cl-barracks-set-v1/v1/cl-brazier.glb",
+   "purpose": "model",
+   "bytes": 4396,
+   "sha256": "a31c49de3412e5654f860c959111b82ae25511704d57d06c2c353cc434d91daf"
+  },
+  {
+   "path": "deliveries/cl-barracks-set-v1/v1/cl-wreck.glb",
+   "purpose": "model",
+   "bytes": 18496,
+   "sha256": "467f40473bbe7f5ed584eface2fea9d919e09c7c9b75e0ab7c963ee6dd5eebe0"
+  },
+  {
+   "path": "assets/raw/cl-barracks-set-v1/v1/spec.json",
+   "purpose": "source",
+   "bytes": 12886,
+   "sha256": "8ed0a46c840cb7aafdd46e2d44267c3946613c5c00e55a1663b17c76a05294a1"
+  },
+  {
+   "path": "assets/raw/cl-barracks-set-v1/v1/make_spec.py",
+   "purpose": "source",
+   "bytes": 6395,
+   "sha256": "82452d5ffd79b3054ef9f9eb87d996684ddb7744c15a86b08c8a6525f024e928"
+  },
+  {
+   "path": "assets/processed/cl-barracks-set-v1/v1/build-report.json",
+   "purpose": "source",
+   "bytes": 966,
+   "sha256": "35df56803d5a6f641d05e1446989c39a70f4d6b9e1561c11fe8936a165df516c"
+  },
+  {
+   "path": "assets/processed/cl-barracks-set-v1/v1/blender-stdout.log",
+   "purpose": "source",
+   "bytes": 6279,
+   "sha256": "f697f0f8a19eba4d976bc5b71b3046387e216bda8175572ed3d7e5b0a65b5dd0"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-front.png",
+   "purpose": "preview",
+   "bytes": 680456,
+   "sha256": "a809774f0fc8393f44dea228e8d4a8a36d3c8383af062bdb06a2c22ea1686a11"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-three-quarter.png",
+   "purpose": "preview",
+   "bytes": 721075,
+   "sha256": "fc5a0fbdf357498662a9c5e3b6ba0ef0fabb3d83886a54a7e326102e26535a53"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-top.png",
+   "purpose": "preview",
+   "bytes": 676295,
+   "sha256": "11e664f84526ef4fed033b051bd108bfdb857892ffadb805130e161feb471689"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-front.png",
+   "purpose": "preview",
+   "bytes": 652540,
+   "sha256": "9abc9e88d417f155732523ecb86b406137e3850ffb4e734d9280091360d9dc4e"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-three-quarter.png",
+   "purpose": "preview",
+   "bytes": 695217,
+   "sha256": "90ccd8b221748bab6c274577bd2ea08306cfb4f32f48f5687054c137c4594c94"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-top.png",
+   "purpose": "preview",
+   "bytes": 671028,
+   "sha256": "298816cc54387963113be2c88ccd593fbf5ab810d204a3844a37f1f62f6074c0"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-front.png",
+   "purpose": "preview",
+   "bytes": 682271,
+   "sha256": "c111264c38653b115b8e72906399584453af5a140119cdb132a084e4b168e557"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-three-quarter.png",
+   "purpose": "preview",
+   "bytes": 695785,
+   "sha256": "c8cbf2cdf82db22895b95e186522f41e2e74110de8e027c4a10c066de25d853d"
+  },
+  {
+   "path": "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-top.png",
+   "purpose": "preview",
+   "bytes": 721889,
+   "sha256": "bf06c3aa1186cb2ddabca70870c5ad5035563f5c202b9c357b5bc74e5f1c9b9f"
+  }
+ ],
+ "previews": [
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-front.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-three-quarter.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-barracks-top.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-front.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-three-quarter.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-brazier-top.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-front.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-three-quarter.png",
+  "runs/qa/cl-barracks-set-v1/v1/previews/cl-wreck-top.png"
+ ],
+ "inventory": {
+  "cl-barracks": {
+   "status": "structural_inventory_only",
+   "bytes": 25292,
+   "sha256": "9431e8c367c55afe0b6d1876b1dec75923a6ff79540419b90f63434321a9142f",
+   "triangles_per_mesh_copy": 360,
+   "primitives": 8,
+   "meshes": 2,
+   "nodes": 2,
+   "materials": 8,
+   "images": 0,
+   "external_images": 0,
+   "skins": 0,
+   "animations": 0,
+   "warnings": [],
+   "not_verified": [
+    "visual_quality",
+    "mesh_topology",
+    "UV_quality",
+    "dimensions_and_pivot",
+    "LOD",
+    "collider",
+    "rig_mapping",
+    "animation",
+    "game_runtime",
+    "unity_import",
+    "license"
+   ]
+  },
+  "cl-brazier": {
+   "status": "structural_inventory_only",
+   "bytes": 4396,
+   "sha256": "a31c49de3412e5654f860c959111b82ae25511704d57d06c2c353cc434d91daf",
+   "triangles_per_mesh_copy": 36,
+   "primitives": 3,
+   "meshes": 2,
+   "nodes": 2,
+   "materials": 3,
+   "images": 0,
+   "external_images": 0,
+   "skins": 0,
+   "animations": 0,
+   "warnings": [],
+   "not_verified": [
+    "visual_quality",
+    "mesh_topology",
+    "UV_quality",
+    "dimensions_and_pivot",
+    "LOD",
+    "collider",
+    "rig_mapping",
+    "animation",
+    "game_runtime",
+    "unity_import",
+    "license"
+   ]
+  },
+  "cl-wreck": {
+   "status": "structural_inventory_only",
+   "bytes": 18496,
+   "sha256": "467f40473bbe7f5ed584eface2fea9d919e09c7c9b75e0ab7c963ee6dd5eebe0",
+   "triangles_per_mesh_copy": 288,
+   "primitives": 3,
+   "meshes": 2,
+   "nodes": 2,
+   "materials": 3,
+   "images": 0,
+   "external_images": 0,
+   "skins": 0,
+   "animations": 0,
+   "warnings": [],
+   "not_verified": [
+    "visual_quality",
+    "mesh_topology",
+    "UV_quality",
+    "dimensions_and_pivot",
+    "LOD",
+    "collider",
+    "rig_mapping",
+    "animation",
+    "game_runtime",
+    "unity_import",
+    "license"
+   ]
+  }
+ },
+ "bounds": [
+  {
+   "file": "deliveries/cl-barracks-set-v1/v1/cl-barracks.glb",
+   "nodes": [
+    {
+     "node": "barracks-body",
+     "triangles": 216,
+     "materials": 4,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -6.2,
+      0.0,
+      -7.2
+     ],
+     "max": [
+      6.2,
+      4.75,
+      7.2
+     ],
+     "size": [
+      12.4,
+      4.75,
+      14.4
+     ]
+    },
+    {
+     "node": "barracks-roof",
+     "triangles": 144,
+     "materials": 4,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -7.725,
+      4.75,
+      -8.725
+     ],
+     "max": [
+      7.725,
+      7.57,
+      8.725
+     ],
+     "size": [
+      15.45,
+      2.82,
+      17.45
+     ]
+    }
+   ],
+   "triangles": 360,
+   "materials": 8,
+   "extensionsRequired": [],
+   "images": 0
+  },
+  {
+   "file": "deliveries/cl-barracks-set-v1/v1/cl-brazier.glb",
+   "nodes": [
+    {
+     "node": "brazier-body",
+     "triangles": 24,
+     "materials": 2,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -0.575,
+      0.0,
+      -0.575
+     ],
+     "max": [
+      0.575,
+      1.25,
+      0.575
+     ],
+     "size": [
+      1.15,
+      1.25,
+      1.15
+     ]
+    },
+    {
+     "node": "brazier-coals",
+     "triangles": 12,
+     "materials": 1,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -0.425,
+      1.24,
+      -0.425
+     ],
+     "max": [
+      0.425,
+      1.32,
+      0.425
+     ],
+     "size": [
+      0.85,
+      0.08,
+      0.85
+     ]
+    }
+   ],
+   "triangles": 36,
+   "materials": 3,
+   "extensionsRequired": [],
+   "images": 0
+  },
+  {
+   "file": "deliveries/cl-barracks-set-v1/v1/cl-wreck.glb",
+   "nodes": [
+    {
+     "node": "wreck-debris",
+     "triangles": 168,
+     "materials": 2,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -2.5611,
+      -0.0623,
+      -2.8534
+     ],
+     "max": [
+      2.9031,
+      1.315,
+      2.9794
+     ],
+     "size": [
+      5.4642,
+      1.3773,
+      5.8328
+     ]
+    },
+    {
+     "node": "wreck-embers",
+     "triangles": 120,
+     "materials": 1,
+     "translation": [
+      0,
+      0,
+      0
+     ],
+     "rotation": [
+      0,
+      0,
+      0,
+      1
+     ],
+     "scale": [
+      1,
+      1,
+      1
+     ],
+     "min": [
+      -1.2607,
+      0.042,
+      -1.4996
+     ],
+     "max": [
+      1.3773,
+      0.5052,
+      1.6289
+     ],
+     "size": [
+      2.638,
+      0.4632,
+      3.1285
+     ]
+    }
+   ],
+   "triangles": 288,
+   "materials": 3,
+   "extensionsRequired": [],
+   "images": 0
+  }
+ ],
+ "acceptance_record": "runs/qa/cl-barracks-set-v1/v1/acceptance-evidence.json",
+ "status": "delivered",
+ "license": "原創程序建模（本 repo 製作），無第三方素材；依遊戲 repo 授權",
+ "known_limitations": [
+  "純色材質、無貼圖、無 UV",
+  "營房只有一般版本（無燃燒變體）",
+  "殘骸散落為固定種子程序排列，不逐塊對照 Web",
+  "無 LOD、無碰撞體（碰撞由遊戲邏輯層）",
+  "視覺可讀性未經獨立技術美術審查"
+ ],
+ "created_at": "2026-10-07T14:19:59+08:00"
+}
