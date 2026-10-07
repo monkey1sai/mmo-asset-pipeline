@@ -95,9 +95,11 @@ class Hyper3DApiTests(unittest.TestCase):
     def setUp(self):
         self.directory = tempfile.TemporaryDirectory()
         self.addCleanup(self.directory.cleanup)
-        self.root = Path(self.directory.name) / "workspace"
+        # Hosted Windows temp paths may use aliases; normal fixtures must be canonical.
+        temporary_root = Path(self.directory.name).resolve()
+        self.root = temporary_root / "workspace"
         self.root.mkdir()
-        self.state = Path(self.directory.name) / "private-state"
+        self.state = temporary_root / "private-state"
         self.state.mkdir()
         (self.root / "requests").mkdir()
         (self.root / "requests/character.json").write_text(json.dumps({"id": "character-r01", "quality": {"dimensions": ["form"]}}), encoding="utf-8")

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "draft",
+  "request": {
+    "id": "replace-request-id",
+    "sha256": "REPLACE_WITH_CANONICAL_REQUEST_SHA256"
+  },
+  "coordinate_system": "Blender_Z_up_meters",
+  "blender_version": "4.5.5",
+  "camera": {
+    "target_m": [
+      0,
+      0,
+      1
+    ],
+    "orthographic_scale_m": 3,
+    "distance_m": 6,
+    "elevation_deg": 10,
+    "azimuths_deg": [
+      0,
+      90,
+      180,
+      270
+    ]
+  },
+  "render": {
+    "engine": "BLENDER_EEVEE_NEXT",
+    "view_transform": "AgX",
+    "width": 1024,
+    "height": 1024,
+    "exposure": 0
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "replace-source-id",
+  "version": "v001",
+  "request": {
+    "id": "replace-request-id",
+    "sha256": "REPLACE_WITH_CANONICAL_REQUEST_SHA256"
+  },
+  "provider": "user-owned",
+  "asset_kind": "model",
+  "source": {
+    "url": "https://example.invalid/replace-with-canonical-source",
+    "revision": "REPLACE_WITH_SOURCE_REVISION",
+    "content_class": "asset"
+  },
+  "rights": {
+    "license_id": "UNREVIEWED",
+    "commercial_use": "unknown",
+    "public_raw_redistribution": "unknown"
+  },
+  "review": {
+    "status": "not_reviewed",
+    "reviewer": "",
+    "reviewed_on": "",
+    "evidence": {
+      "path": "runs/evidence/replace-license-review.md",
+      "sha256": "REPLACE_WITH_EVIDENCE_FILE_SHA256"
+    }
+  },
+  "files": [
+    {
+      "path": "replace-model.glb",
+      "sha256": "REPLACE_WITH_FILE_SHA256",
+      "bytes": 0
+    }
+  ],
+  "motion": null
+}

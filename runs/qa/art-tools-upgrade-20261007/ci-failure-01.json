@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "classification": "TEST_FAILURE",
+  "commit": "3ef92f64b3ff34b411a3c1f29cc176b4b66e3e76",
+  "run_id": 37590910120,
+  "run_url": "https://github.com/monkey1sai/mmo-asset-pipeline/actions/runs/37590910120",
+  "conclusion": "FAIL",
+  "jobs": [
+    {"platform": "ubuntu-latest", "tests_run": 306, "failures": 1, "errors": 0, "skipped": 0,
+     "finding": "command_path uses native POSIX semantics; backslash is a literal filename character, but the test expected Windows directory separators"},
+    {"platform": "windows-latest", "tests_run": 306, "failures": 1, "errors": 28, "skipped": 0,
+     "finding": "Normal temporary state-root fixture fails the existing resolve() != absolute() private-state guard; CLI prepare failure is consistent with the same guard",
+     "inference": "The runner temporary path may contain a short-name alias; the exact alias was not printed by the failing tests"}
+  ],
+  "repair_scope": ["tests/test_identity.py", "tests/test_hyper3d_api.py"],
+  "production_guards_modified": false,
+  "tests_skipped_to_obtain_green": false,
+  "diagnosis": "Independent read-only debugger accepted native-path expectations and canonical normal fixtures; the explicit noncanonical private-state refusal test remains unchanged",
+  "log_access": "Sandbox log download returned 403 with permissions=null. Host supported gh keyring independently verified monkey1sai/admin=true and read the completed log; no credential or permission changed",
+  "baseline_decision": "NOT_READY_UNTIL_REPAIRED_SHA_CI_PASS",
+  "gait_started": false
+}

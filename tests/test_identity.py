@@ -2,6 +2,7 @@
 import hashlib
 import importlib.util
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -52,9 +53,12 @@ class PathTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaisesRegex(identity.IdentityError, r"\A(RECORDED_PATH_INVALID|PATH_OUTSIDE_WORKSPACE)\Z"):
                 identity.recorded_path(self.root, value)
 
-    def test_command_path_accepts_absolute_and_backslash_inside_root(self):
+    def test_command_path_accepts_absolute_and_native_relative_inside_root(self):
         self.assertEqual(identity.command_path(self.root, str(self.root / "runs" / "qa")), self.root / "runs" / "qa")
-        self.assertEqual(identity.command_path(self.root, "runs\\qa"), self.root / "runs" / "qa")
+        self.assertEqual(identity.command_path(self.root, "runs/qa"), self.root / "runs" / "qa")
+        # Shell paths follow the host OS; recorded JSON paths remain POSIX-only.
+        expected = self.root / "runs" / "qa" if os.name == "nt" else self.root / "runs\\qa"
+        self.assertEqual(identity.command_path(self.root, "runs\\qa"), expected)
 
     def test_command_path_rejects_outside_root(self):
         for value in ("../outside.json", str(self.root.parent)):

@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "research_date": "2026-10-07",
+  "scope": "research_catalog_not_execution_or_spending_authority",
+  "repository_visibility": "public",
+  "providers": [
+    {
+      "id": "user-owned",
+      "name": "使用者自有來源",
+      "asset_kinds": [
+        "model",
+        "motion",
+        "material",
+        "hdri"
+      ],
+      "public_raw_policy": "per_asset_review",
+      "source_domains": [],
+      "production_role": "沿用已持有且符合需求的 master 與動畫；逐項核對共同作者及嵌入素材權利",
+      "integration_mode": "explicit_local_files",
+      "adoption_stage": "adopt_local_workflow",
+      "availability": "not_probed_this_run",
+      "sources": [],
+      "constraints": [
+        "自行持有不等於可公開再散布；仍要來源與審查證據。",
+        "只匯入明確列出的檔案，不掃描整顆磁碟。"
+      ]
+    },
+    {
+      "id": "poly-haven",
+      "name": "Poly Haven",
+      "asset_kinds": [
+        "model",
+        "material",
+        "hdri"
+      ],
+      "public_raw_policy": "cc0_assets_only",
+      "source_domains": [
+        "polyhaven.com"
+      ],
+      "production_role": "真實尺度 PBR、HDRI、道具來源；依需求統一風格",
+      "integration_mode": "authorized_download_then_local_import",
+      "adoption_stage": "adopt_local_workflow",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://polyhaven.com/license"
+      ],
+      "constraints": [
+        "CC0 指素材；網站預覽圖、文字及商標不是自動同授權。",
+        "API 有獨立條款；本工具不爬站、不呼叫 API。"
+      ]
+    },
+    {
+      "id": "ambientcg",
+      "name": "ambientCG",
+      "asset_kinds": [
+        "material",
+        "hdri",
+        "model"
+      ],
+      "public_raw_policy": "cc0_assets_only",
+      "source_domains": [
+        "ambientcg.com"
+      ],
+      "production_role": "PBR 材質及環境來源；先核對實際頁面類型",
+      "integration_mode": "authorized_download_then_local_import",
+      "adoption_stage": "adopt_local_workflow",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://docs.ambientcg.com/license/"
+      ],
+      "constraints": [
+        "逐件記錄下載來源、版本與 CC0 證據。",
+        "不把貼圖套上去就宣稱風格一致。"
+      ]
+    },
+    {
+      "id": "mixamo",
+      "name": "Adobe Mixamo",
+      "asset_kinds": [
+        "model",
+        "motion"
+      ],
+      "public_raw_policy": "blocked",
+      "source_domains": [
+        "mixamo.com",
+        "adobe.com"
+      ],
+      "production_role": "人形基本動作與重定向候選；優先比較自然步態",
+      "integration_mode": "authorized_ui_export_only",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html"
+      ],
+      "constraints": [
+        "免費商用專案使用不等於允許把原始 FBX/動作放入公開 repo。",
+        "公開原始素材匯入預設阻擋；需要另外明確授權證據及獨立儲存決策。",
+        "未確認官方公開自動化 API；不杜撰端點、不繞過網站限制。",
+        "自動 rig 有標準雙足、姿態與分離肢體等要求。"
+      ]
+    },
+    {
+      "id": "deepmotion",
+      "name": "DeepMotion Animate 3D",
+      "asset_kinds": [
+        "motion"
+      ],
+      "public_raw_policy": "blocked",
+      "source_domains": [
+        "deepmotion.com"
+      ],
+      "production_role": "自有或已授權影片的動捕候選，補自訂施法/互動動作",
+      "integration_mode": "account_and_api_access_probe_required",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://www.deepmotion.com/animate-3d",
+        "https://www.deepmotion.com/terms-of-use"
+      ],
+      "constraints": [
+        "必須核對方案、API 存取、費用與表演者/影片權利。",
+        "條款限制原始 standalone 素材再散布；不可因 retarget 就公開。",
+        "本次沒有提交影片或付費任務。"
+      ]
+    },
+    {
+      "id": "meshy",
+      "name": "Meshy",
+      "asset_kinds": [
+        "model",
+        "motion"
+      ],
+      "public_raw_policy": "per_asset_review",
+      "source_domains": [
+        "meshy.ai"
+      ],
+      "production_role": "既有模型 auto-rig / animation 的替代服務，不預設重新生成角色",
+      "integration_mode": "documented_api_not_connected",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://docs.meshy.ai/en/api/rigging",
+        "https://docs.meshy.ai/en/api/animation"
+      ],
+      "constraints": [
+        "API 文件不代表使用者帳戶已開通。",
+        "先驗證輸入限制、方案、模型版本與輸出/公開再散布權利；不得硬編未查驗的 action ID。",
+        "凍結中的 target skeleton 不得由服務骨架直接取代。"
+      ]
+    },
+    {
+      "id": "tripo",
+      "name": "Tripo",
+      "asset_kinds": [
+        "model",
+        "motion"
+      ],
+      "public_raw_policy": "per_asset_review",
+      "source_domains": [
+        "tripo3d.com",
+        "tripo3d.ai"
+      ],
+      "production_role": "rig check、auto-rig、retarget 候選，依即時版本探測支援類型",
+      "integration_mode": "documented_api_not_connected",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://developers.tripo3d.com/en/models/rig",
+        "https://developers.tripo3d.com/en/models/animation",
+        "https://docs.tripo3d.ai/animation/rig-v2-0-20250506.html"
+      ],
+      "constraints": [
+        "文件世代與骨架類型支援不同，先 probe 再選路線。",
+        "remesh、拆件或重組後不能假設原 rig/動畫仍保留。",
+        "費用、帳戶授權、模型輸出與再散布條款尚未在此驗證。"
+      ]
+    },
+    {
+      "id": "hyper3d",
+      "name": "Hyper3D / Rodin",
+      "asset_kinds": [
+        "model",
+        "material"
+      ],
+      "public_raw_policy": "per_asset_review",
+      "source_domains": [
+        "hyper3d.ai",
+        "hyper3d.com"
+      ],
+      "production_role": "沿用 repo 既有 API 創作流程，作為候選模型/材質來源",
+      "integration_mode": "existing_repo_adapter_current_probe_required",
+      "adoption_stage": "retain_existing",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://hyper3d.ai"
+      ],
+      "constraints": [
+        "能力來源是 repo 既有紀錄，不是本次 API 呼叫。",
+        "每筆任務仍須月訂分項/用途/操作 ID 授權；unknown 不重送。",
+        "保留完整來源，不能把生成設定當拓樸或可動性驗收。"
+      ]
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "blender.org"
+      ],
+      "production_role": "主要製作、UV/烘焙/權重/骨架/預覽/GLB 匯出；不換現有版本",
+      "integration_mode": "existing_dcc_plus_explicit_preview_script",
+      "adoption_stage": "retain_existing",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://docs.blender.org/manual/en/5.3/addons/scene_gltf2.html"
+      ],
+      "constraints": [
+        "repo 記錄 4.5.5；文件較新時必須核對實際 API，不自動升級。",
+        "控制 rig、約束/driver 並非 runtime 通用資料；匯出後重匯入驗證。"
+      ]
+    },
+    {
+      "id": "rokoko-blender",
+      "name": "Rokoko Blender retargeting",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "github.com",
+        "rokoko.com"
+      ],
+      "production_role": "把動作来源重定向至既有 target rig，而非重建整隻角色",
+      "integration_mode": "optional_addon_install_requires_authorization",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://github.com/Rokoko/rokoko-studio-live-blender"
+      ],
+      "constraints": [
+        "插件程式 LGPL 不授予動作資料權利。",
+        "需隔離副本核對 Blender/插件版本、rest pose、比例、骨軸、root 與 bake。",
+        "本次不安裝或啟用任何 Blender 插件。"
+      ]
+    },
+    {
+      "id": "material-maker",
+      "name": "Material Maker",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "materialmaker.org",
+        "github.com"
+      ],
+      "production_role": "可重用程序材質：風化、金屬/布料/木材參數，依需求出圖",
+      "integration_mode": "optional_standalone_tool",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://www.materialmaker.org/",
+        "https://github.com/RodZill4/material-maker"
+      ],
+      "constraints": [
+        "工具 MIT（個別檔案例外）不代表每份外部 node/輸入圖都同授權。",
+        "保留 node graph/種子/尺寸與色彩空間；不強制每件素材使用。"
+      ]
+    },
+    {
+      "id": "gltf-validator",
+      "name": "Khronos glTF Validator",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "github.com",
+        "github.khronos.org"
+      ],
+      "production_role": "用真正官方 validator 驗 glTF 結構，不重造縮水版",
+      "integration_mode": "optional_local_npm_wrapper",
+      "adoption_stage": "adopt_local_workflow",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://github.com/KhronosGroup/glTF-Validator/",
+        "https://github.khronos.org/glTF-Validator/"
+      ],
+      "constraints": [
+        "wrapper 需要本機已安裝 gltf-validator；缺少即 not_run。",
+        "結構通過不等於美術、動畫自然度或效能通過。"
+      ]
+    },
+    {
+      "id": "gltf-transform",
+      "name": "glTF Transform",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "gltf-transform.dev",
+        "github.com"
+      ],
+      "production_role": "驗收後的壓縮/貼圖處理衍生版本；按目標 runtime 選擇",
+      "integration_mode": "optional_local_cli_version_pin_required",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://gltf-transform.dev/"
+      ],
+      "constraints": [
+        "凍結角色不自動 simplify/weld 或重整 primitive。",
+        "KTX2/meshopt 等 decoder 相容性及畫面需在指定 runtime 實測。"
+      ]
+    },
+    {
+      "id": "epic-game-animation-sample",
+      "name": "Epic Game Animation Sample",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "dev.epicgames.com",
+        "unrealengine.com"
+      ],
+      "production_role": "研究自然 locomotion、動作資料庫、distance/motion matching 與視覺除錯方法",
+      "integration_mode": "method_reference_not_asset_import",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://dev.epicgames.com/documentation/en-us/unreal-engine/game-animation-sample-project-in-unreal-engine",
+        "https://dev.epicgames.com/documentation/en-us/unreal-engine/distance-matching-in-unreal-engine"
+      ],
+      "constraints": [
+        "只採方法，不要求改用 UE。",
+        "未核對樣本資產跨引擎/公開再散布權利，故不下載或複製素材。"
+      ]
+    },
+    {
+      "id": "godot-retargeting",
+      "name": "Godot retargeting documentation",
+      "asset_kinds": [],
+      "public_raw_policy": "reference_only",
+      "source_domains": [
+        "docs.godotengine.org"
+      ],
+      "production_role": "骨架名稱不等於相容：rest transform、bone map 與比例的參考",
+      "integration_mode": "method_reference",
+      "adoption_stage": "candidate_not_probed",
+      "availability": "not_probed_this_run",
+      "sources": [
+        "https://docs.godotengine.org/en/4.7/tutorials/assets_pipeline/retargeting_3d_skeletons.html"
+      ],
+      "constraints": [
+        "只作跨引擎方法參考，不要求本工作台交付 Godot 專案。"
+      ]
+    }
+  ]
+}

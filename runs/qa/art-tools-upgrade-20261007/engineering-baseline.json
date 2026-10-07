@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "VERIFIED_TOOLING_CHECKPOINT",
+  "repository": "monkey1sai/mmo-asset-pipeline",
+  "branch": "feat/art-engineer-tooling-upgrade-20261007",
+  "base_main": "cc5644e5ac8c10a01815b52ad7d78bd03adc8352",
+  "tool_upgrade_commit": "3ef92f64b3ff34b411a3c1f29cc176b4b66e3e76",
+  "validated_tooling_commit": "ea82ba436ae360c0b5a2f367c80535da76f9db0e",
+  "ci": {
+    "decision": "PASS",
+    "run_id": 37591761561,
+    "url": "https://github.com/monkey1sai/mmo-asset-pipeline/actions/runs/37591761561",
+    "head_sha": "ea82ba436ae360c0b5a2f367c80535da76f9db0e",
+    "metadata": "remote-ci-pass-02.json",
+    "windows": {"job_id": 112694666179, "python": "3.12.10", "node": "22.23.3", "full_tests": 306, "wrapper_tests": 9, "failed": 0, "skipped": 0, "decision": "PASS"},
+    "linux": {"job_id": 112694666508, "python": "3.12.14", "node": "22.23.3", "full_tests": 306, "wrapper_tests": 9, "failed": 0, "skipped": 0, "decision": "PASS"},
+    "checks": ["Full Python suite with no skipped tests", "Node wrapper syntax and native/Windows cross-drive boundaries", "Catalog and operation evidence", "Historical protocol canonical digest, preview script and four PNG byte hashes"],
+    "first_failed_run_preserved": "ci-failure-01.json"
+  },
+  "local_after_fixture_repair": {"full_tests": 306, "failed": 0, "skipped": 0, "decision": "PASS", "log": "ci-repair-01-unittest.log"},
+  "historical_local_verification": "verification.json",
+  "historical_installed_hashes": "installed-files.json",
+  "evidence_scope": "The original local records are immutable snapshots. The subsequent Git-policy append changes AGENTS.md only; its older installed-file hash is not claimed as the current whole-file hash.",
+  "official_glb_validation": {"decision": "NOT_RUN", "reason": "KHRONOS_VALIDATOR_UNAVAILABLE", "record": "official-validator.json"},
+  "remote_blender_render": {"decision": "NOT_RUN", "reason": "CI validates historical capture hashes; it does not rerender in Blender"},
+  "new_art_runtime_or_p5_acceptance": {"decision": "NOT_RUN", "reason": "Outside this tooling checkpoint"},
+  "next_work": {
+    "name": "gait P4 natural-motion improvement",
+    "scope": ["pelvis motion", "spine/thorax counter-rotation", "shoulder sway", "knee flexion curve", "frozen baseline versus candidate A/B"],
+    "new_gait_trial_in_this_checkpoint": false,
+    "freeze_toolchain": true,
+    "preserve": ["target rig", "rest pose", "topology", "weights", "cv1 runtime gates", "existing failed evidence", "real clock and trial budget"],
+    "precondition": "Use this verified tooling state plus the separately verified Git-policy commit; reconcile current gait baseline, clock and trial records before candidate execution",
+    "excluded": ["toolchain modifications", "runtime modifications in gait commit", "P5", "paid API", "merge/deploy", "unrequested gait push"]
+  }
+}
