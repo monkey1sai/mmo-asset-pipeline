@@ -1,0 +1,75 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T09:31:21Z",
+ "status": "decided (D deferred to after run-02)",
+ "question": "P4 run-01: which remedies and rule interpretations should run-02 use?",
+ "evidence": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress.json",
+ "decisions": [
+  {
+   "id": "A",
+   "topic": "feet slide in locomotion and stance-changing transitions",
+   "recommended": "A1",
+   "options": {
+    "A1": "stance-foot lock (two-bone leg IK) in the runtime evaluator and the Blender check, verified by the same closed loop; about 2-3 h",
+    "A2": "accept the slide of in-place cross-fades as a V1 limitation (relaxes the feet gate for those pairs)",
+    "A3": "author start/stop transition clips (new clips; larger scope)"
+   }
+  },
+  {
+   "id": "B",
+   "topic": "seated coat exemption inside transitions",
+   "recommended": "B1",
+   "options": {
+    "B1": "exempt the coat when every bed-clip layer that drives the legs is inside its seated window (non-bed layers neutral): extends entries 19-20 to transitions",
+    "B2": "keep strict: those samples stay failing"
+   }
+  },
+  {
+   "id": "C",
+   "topic": "fade timing around interaction events",
+   "recommended": "C1",
+   "options": {
+    "C1": "a fade may not overlap a socket or bed-support event of either clip: entry fades finish before the target's first event, exit fades start after the source's last event (non-loop clips hold their last frame); combinations that cannot fit are shortened to fit and listed",
+    "C2": "keep the timing: the 400 ms x 1.5 combinations stay failing"
+   }
+  },
+  {
+   "id": "D",
+   "topic": "collapse at crease regions",
+   "recommended": "decide after run-02 (A and C change the leg poses and remove the long-fade cases)",
+   "options": {
+    "D1": "fix the armpit and hip-crease folds in the foundation (b21) and re-verify every clip; hours",
+    "D2": "keep the gate strict and list the remaining cases as V1 known issues",
+    "D3": "judge transition collapse only on triangles that are non-degenerate and unfolded in every active source clip at that time, listing the rest as foundation issues (gate-scope change)"
+   }
+  },
+  {
+   "id": "E",
+   "topic": "interpretations to confirm",
+   "recommended": "keep",
+   "options": {
+    "keep": "playback speed = each layer's clip time scale with blend times in real seconds; interaction states blend with the pose weights during a fade (r6's fixed 12-frame ramp governs the states inside one clip)",
+    "change": "global slow motion and/or the fixed 12-frame state ramp at transitions"
+   }
+  },
+  {
+   "id": "F",
+   "topic": "budget and order",
+   "recommended": "cap the rest of P4 at about 4 h, then decide the combo clip (P3 remainder) and P5",
+   "facts": "active time 39,560 s of 64,800 s at pause-24 (25,240 s left); P3 took about twice its estimate"
+  }
+ ],
+ "resolution": {
+  "decided_utc": "2026-10-06T09:45:26Z",
+  "user_text": "A1 B1 C1 E 維持 F 同意",
+  "options": {
+   "A": "A1",
+   "B": "B1",
+   "C": "C1",
+   "D": "deferred until run-02",
+   "E": "keep",
+   "F": "agreed"
+  },
+  "authorization": "runs/qa/ro-swordsman-character-v1/authorizations.json entry 25"
+ }
+}
