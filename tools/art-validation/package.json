@@ -2,5 +2,8 @@
   "name": "art-engineer-local-gltf-validation",
   "private": true,
   "type": "module",
-  "description": "Optional isolated Khronos validator wrapper; no dependency is installed by this kit."
+  "description": "Isolated wrapper with a pinned official Khronos glTF validator.",
+  "devDependencies": {
+    "gltf-validator": "2.0.0-dev.3.10"
+  }
 }
