@@ -1,0 +1,94 @@
+{
+ "schema_version": 1,
+ "clip": "AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory",
+ "fps": 60,
+ "frames": 300,
+ "loop": false,
+ "ramp_frames": 12,
+ "states": {
+  "grasp.R": {
+   "windows": [
+    [
+     0,
+     299
+    ]
+   ],
+   "establishment_frames": [
+    0
+   ]
+  },
+  "grasp.L": {
+   "windows": [
+    [
+     156,
+     248
+    ]
+   ],
+   "establishment_frames": [
+    156
+   ]
+  }
+ },
+ "stance": {
+  "L": [
+   [
+    0,
+    10
+   ],
+   [
+    26,
+    88
+   ],
+   [
+    102,
+    150
+   ],
+   [
+    172,
+    256
+   ],
+   [
+    270,
+    299
+   ]
+  ],
+  "R": [
+   [
+    0,
+    22
+   ],
+   [
+    38,
+    150
+   ],
+   [
+    172,
+    264
+   ],
+   [
+    278,
+    299
+   ]
+  ]
+ },
+ "events": [
+  {
+   "name": "bash_slash",
+   "frame": 112
+  },
+  {
+   "name": "magnum_impact",
+   "frame": 172
+  },
+  {
+   "name": "endure_start",
+   "frame": 205
+  },
+  {
+   "name": "victory",
+   "frame": 268
+  }
+ ],
+ "nominal_speed_m_s": 0.0,
+ "note": "grasp.R covers the whole clip (contact_window_rules.grasp_R: Combo 全程); grasp.L covers the two-hand phases where the frozen two_hand_chop pose is at full weight (magnum break and endure). Stance windows: each foot while it is planted (steps out 10-26 L / 22-38 R, lunge 88-102 L, jump 150-172 both, steps back 256-270 L / 264-278 R); the jump has no stance. Events time the separate effects layer and are not socket events (the sword stays in hand.R)."
+}

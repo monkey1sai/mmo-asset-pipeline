@@ -6,7 +6,7 @@ source clip at wall time 0 and switches at SWITCH_S (a multiple of 1/30 s, so th
 start). Loop sources leave at two phases (for Walk/Run: mid-stance of each foot), non-loop sources start the fade
 blend_s * speed of clip time before their last frame so the fade ends as the clip ends. Walk<->Run enter the target at
 the matching foot's mid-stance; Idle->Walk enters Walk at the right foot's mid-stance. Walk->Cast(upper)->Walk is one scenario with two upper-body fades. Two repeated-switch
-scenarios interrupt fades. Idle->Combo->Idle waits for the combo clip.
+scenarios interrupt fades. Idle->Combo->Idle is the Idle->Combo entry (two Idle phases) and the Combo->Idle exit.
 Fade timing (user decision C1, authorization entry 25): a fade never spans a socket or bed-support event of either clip.
 An entry fade ends by the target's first event (shortened to fit, recorded in fade_timing); an exit fade from a non-loop
 clip starts at its last event or later (the clip then holds its last frame).
@@ -28,6 +28,7 @@ import cv1_transition as tr
 A = "assets/processed/ro-swordsman-character-v1/v001/clips"
 CURRENT = {"Idle": ("AN_RO_Idle_Sword", "a03"), "Walk": ("AN_RO_Walk_Sword", "a04"), "Run": ("AN_RO_Run_Sword", "a02"),
            "Cast": ("AN_RO_Cast_OpenPalm", "a04"), "LieDown": ("AN_RO_LieDown", "a08"), "Sleep": ("AN_RO_Sleep_Loop", "a04"),
+           "Combo": ("AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory", "a07"),
            "GetUp": ("AN_RO_GetUp", "a02")}
 NOMINAL = {"Walk": 1.4, "Run": 3.5}  # request contact_measurement.nominal_speed_m_s
 BLENDS, SPEEDS, FPS = (0.1, 0.2, 0.4), (0.5, 1.0, 1.5), 120
@@ -130,6 +131,7 @@ def build():
                 # foot lock then starts from where Idle stands instead of a heel strike 30 cm ahead.
                 add(f"idle-walk-p{int(phase)}-{tag}", "Idle->Walk", "Idle", phase, "Walk", walk_r, blend, speed)
                 add(f"idle-cast-p{int(phase)}-{tag}", "Idle->Cast", "Idle", phase, "Cast", 0.0, blend, speed)
+                add(f"idle-combo-p{int(phase)}-{tag}", "Idle->Combo", "Idle", phase, "Combo", 0.0, blend, speed)
                 add(f"idle-liedown-p{int(phase)}-{tag}", "Idle->LieDown", "Idle", phase, "LieDown", 0.0, blend, speed)
             for name, frame in (("r", walk_r), ("l", walk_l)):
                 add(f"walk-idle-{name}-{tag}", "Walk->Idle", "Walk", frame, "Idle", 0.0, blend, speed)
@@ -137,7 +139,7 @@ def build():
             add(f"walk-run-l-{tag}", "Walk->Run", "Walk", walk_l, "Run", run_l, blend, speed)
             add(f"run-walk-r-{tag}", "Run->Walk", "Run", run_r, "Walk", walk_r, blend, speed)
             add(f"run-walk-l-{tag}", "Run->Walk", "Run", run_l, "Walk", walk_l, blend, speed)
-            for src, dst in (("Cast", "Idle"), ("LieDown", "Sleep"), ("GetUp", "Idle")):
+            for src, dst in (("Cast", "Idle"), ("LieDown", "Sleep"), ("GetUp", "Idle"), ("Combo", "Idle")):
                 end = c[src]["frames"] - 1
                 add(f"{src.lower()}-{dst.lower()}-end-{tag}", f"{src}->{dst}", src, end - blend * c[src]["fps"] * speed, dst, 0.0, blend, speed)
             # Sleep -> GetUp: GetUp frame 0 equals Sleep frame 0, so the fade starts as Sleep wraps to frame 0.
@@ -164,7 +166,7 @@ def build():
     changed = [{"id": s["id"], **s["fade_timing"]} for s in out if {"shortened_from_s", "exit_moved_from_frame"} & set(s.get("fade_timing", {}))]
     return {"schema_version": 2, "source": "requests/ro-swordsman-character-v1-r6.json#transition_matrix", "fps_grid": FPS, "switch_s": SWITCH_S,
             "decisions": "authorization entry 25: A1 foot lock (scripts/cv1_foot_lock.py), B1 coat exemption in transitions, C1 fade timing",
-            "clips": c, "scenarios": out, "fade_timing_changed": changed, "pending": ["Idle->Combo->Idle (combo clip not made yet)"]}
+            "clips": c, "scenarios": out, "fade_timing_changed": changed, "pending": []}
 
 
 if __name__ == "__main__":

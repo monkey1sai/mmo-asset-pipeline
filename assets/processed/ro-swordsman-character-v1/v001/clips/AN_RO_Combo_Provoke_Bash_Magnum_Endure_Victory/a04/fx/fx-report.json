@@ -1,0 +1,79 @@
+{
+ "observed_utc": "2026-10-07T03:42:29.819741+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "595bb2533500e85cf52edc77058de9ccafee2a1c4d8d935ec3295b94a25d9766",
+ "inputs": {
+  "clip_blend": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a04/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory.blend",
+   "sha256": "79e6490bbf20216ca32ed3f7bb51888dc2d7c1e06f42448388fad32235670f39"
+  },
+  "interaction": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/interaction.json",
+   "sha256": "5e7d2ec91674082c34978af92c6de92e8788d6b192f24529d7a801cf9052701e"
+  },
+  "foundation": {
+   "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend",
+   "sha256": "8c75c0540c0ddf35fce2f64aab06f9fcf0b9dddfc0f8b49e3cd5b84d30331e3e",
+   "saved": false
+  }
+ },
+ "events": {
+  "bash_slash": 112,
+  "magnum_impact": 172,
+  "endure_start": 205,
+  "victory": 268
+ },
+ "objects": [
+  "FX_BashArc",
+  "FX_MagnumGroundRing",
+  "FX_MagnumFlame00",
+  "FX_MagnumFlame01",
+  "FX_MagnumFlame02",
+  "FX_MagnumFlame03",
+  "FX_MagnumFlame04",
+  "FX_MagnumFlame05",
+  "FX_MagnumFlame06",
+  "FX_MagnumFlame07",
+  "FX_MagnumFlame08",
+  "FX_MagnumFlame09",
+  "FX_MagnumFlame10",
+  "FX_MagnumFlame11",
+  "FX_EndureHaloFront",
+  "FX_EndureHaloSide",
+  "FX_EndureGround",
+  "FX_VictorySparkle00",
+  "FX_VictorySparkle01",
+  "FX_VictorySparkle02",
+  "FX_VictorySparkle03",
+  "FX_VictorySparkle04",
+  "FX_VictorySparkle05",
+  "FX_VictorySparkle06",
+  "FX_VictorySparkle07"
+ ],
+ "triangles": 344,
+ "blade_extent_m": 0.935,
+ "windows": {
+  "bash_arc": [
+   98,
+   126
+  ],
+  "magnum": [
+   172,
+   200
+  ],
+  "endure": [
+   205,
+   258
+  ],
+  "victory": [
+   268,
+   289
+  ]
+ },
+ "output": {
+  "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Combo_Provoke_Bash_Magnum_Endure_Victory/a04/fx/ro_skill_effects.glb",
+  "bytes": 47016,
+  "sha256": "90d2dff2b28b5f5e7acaf989e7138c6a21d5b1b9d343f01d735b2622dfc4df04"
+ },
+ "scope": "Effects layer only: separate GLB, object scale animation, no skinning; switching it off leaves the character clip untouched. Not a measurement of the character; the clip check runs without effects."
+}

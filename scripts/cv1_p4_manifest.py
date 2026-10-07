@@ -21,9 +21,9 @@ import cv1_interaction as interaction
 
 RULES = "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json"
 EXPORT = {"Idle": "a03/export-b20", "Walk": "a04/export-b20", "Run": "a02/export-b20", "Cast": "a04/export-b20", "LieDown": "a08/export",
-          "Sleep": "a04/export", "GetUp": "a02/export"}
+          "Sleep": "a04/export", "GetUp": "a02/export", "Combo": "a07/export"}
 LOOP_QA = {"Idle": "a03-closed-loop-b20", "Walk": "a04-closed-loop-b20", "Run": "a02-closed-loop-b20", "Cast": "a04-closed-loop-b20",
-           "LieDown": "a08-closed-loop", "Sleep": "a04-closed-loop", "GetUp": "a02-closed-loop"}
+           "LieDown": "a08-closed-loop", "Sleep": "a04-closed-loop", "GetUp": "a02-closed-loop", "Combo": "a07-closed-loop"}
 
 
 def info(path):

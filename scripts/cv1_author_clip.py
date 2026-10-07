@@ -12,7 +12,8 @@ value], ...]}) are eased with smoothstep between neighbouring keys, so a value n
 (no overshoot past a key pose) and its speed is zero at every key. An optional "pelvis" block places the pelvis in
 armature space before the steps: "location_m" (the pelvis head; rest head when omitted) and "rotation", a list of
 world-axis turns applied in order to the rest orientation; the pelvis is then keyed on location and rotation, as the
-locomotion author keys it. Named poses may carry a "weight" value (slerp from rest), e.g. a grip that opens.
+locomotion author keys it. Named poses may carry a "weight" value (slerp from the bone's current rotation: rest, or an
+earlier pose in the list), e.g. a grip that opens.
 IK channels blend with the FK pose by a weight value (slerp of the local rotations, 0 = steps only, 1 = IK):
 "sword" (right arm, optional "ik_weight", default 1) and "legs_ik" ({"weight", "pole_yaw_deg", "L"/"R": {"ankle_m",
 "foot_turn_deg"}}: two-bone leg IK with the foot flat at its rest orientation turned about Z). Both IK solvers use
@@ -171,7 +172,10 @@ def pose_frame(f, roll=None, swivel=None):
     for name, weight in pose_entries():
         w = wave(weight, f)
         for bone, quaternion in poses[name].items():
-            arm.pose.bones[bone].rotation_quaternion = Quaternion(quaternion) if w >= 1.0 else Quaternion().slerp(Quaternion(quaternion), w)
+            # A partial pose blends from the rotation the bone already has (an earlier pose in the list), not from rest: a
+            # second pose at weight 0 must leave the first one in place (combo a02: two_hand_chop at 0 undid grasp.R).
+            pb = arm.pose.bones[bone]
+            pb.rotation_quaternion = Quaternion(quaternion) if w >= 1.0 else pb.rotation_quaternion.slerp(Quaternion(quaternion), w)
     place_pelvis(f)
     bpy.context.view_layer.update()
     for step in spec.get("steps", []):
