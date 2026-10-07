@@ -1,0 +1,30 @@
+{
+  "label": "candidate",
+  "run": "20261007t101631z",
+  "saved_as": "runs/qa/ro-swordsman-character-v1/continuation-20261007/20261007t101631z-p4-results.json",
+  "verdicts": {
+    "closed_loop_gate": false,
+    "closed_loop_frames_weights_match": true,
+    "foot_lock_targets_match": true,
+    "sockets_match": true,
+    "determinism": true,
+    "loop_seams": true,
+    "repeated_switch_continuous": true,
+    "negative_controls_detected": true
+  },
+  "pass": false,
+  "blocks": 118,
+  "max_um": 19.08394124832543,
+  "runtime": {
+    "three": "186",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "hardware_concurrency": 20,
+    "device_memory_gb": 32,
+    "webgl": {
+      "vendor": "Google Inc. (NVIDIA)",
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 Ti (0x00002803) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  "errors": [],
+  "mode": "headless_background_local_harness"
+}

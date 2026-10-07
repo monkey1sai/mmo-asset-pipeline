@@ -1,0 +1,38 @@
+{
+ "observed_utc": "2026-10-07T10:04:21.141194+00:00",
+ "blender": "4.5.5 LTS",
+ "script_sha256": "46031575b4cbed96682de0b788605154b4ea8667f09431c1650e064a407455db",
+ "modules": {
+  "cv1_interaction.py": "09d2ce6cf5ebcf9c40fe875d57dc1d4ffa2859a32f505c259d6bf77ecf0c5d30",
+  "cv1_pose_rules.py": "04121ff0b7f72ea65dc26a307606cf56fc2688d25bf1cbd6a7b8e28e9fc158d2",
+  "cv1_transition.py": "d10c6917851d35c8524c9f1cc0ec1515e984849cd4766d55ae9a54d571797f2d",
+  "cv1_foot_lock.py": "a2db2dc937622e852e4a3a33b19285ec01e8c8cc40c0439bb8fcdb2f5dc18615",
+  "cv1_soup.py": "384b8664cf5863226a32f3076c2e4e70bf4cfa488ef1d03c4a2ad70c6be22440",
+  "cv1_contract_pose.py": "1855f8b0dad546630ebcc281d6552fa6e05785928bbdc63c90f66cb375b35b99",
+  "ro_certified_grasp_gate.py": "3bf87eeecf4db8d37a7f5fe40887a135ac1c2bd487bfd7be4f60089176527872"
+ },
+ "scenarios_file": {
+  "path": "runs/qa/ro-swordsman-character-v1/v001/p4/transitions-05.json",
+  "sha256": "42251b87c7b0c1575f92f932c49fc0c91e2cae3c2c49d55894d19e490591248f"
+ },
+ "thresholds": {
+  "collapse_area_ratio": 0.05,
+  "weapon_body_m": 0.001,
+  "grasp_outside_penetration_m": 0.001,
+  "feet_slide_m": 0.01,
+  "continuity_deg": 0.5,
+  "continuity_m": 0.001,
+  "bed_support_m": 0.005,
+  "bed_clearance_m": 0.005,
+  "bed_clearance_hand_m": 0.05,
+  "bed_clearance_hand_event_window_frames": 6,
+  "feet_lift_break_m": 0.005,
+  "source": "requests/ro-swordsman-character-v1-r6.json transition_matrix.gates (feet: 2 x foot_stance_slide 5 mm); bed gates as scripts/cv1_clip_check.py"
+ },
+ "scope": "r6 transition_matrix.gates.continuity only; the other gates are in transition-check.json.",
+ "summary": {
+  "scenarios": 0,
+  "passed": 0
+ },
+ "scenarios": []
+}

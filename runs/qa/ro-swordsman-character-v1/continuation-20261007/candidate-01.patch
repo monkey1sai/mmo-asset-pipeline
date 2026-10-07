@@ -1,0 +1,199 @@
+--- a/tools/runtime-qa/three/src/p4.js
++++ b/tools/runtime-qa/three/src/p4.js
+@@ -8,6 +8,7 @@
+ import { fetchBytes, asJson, describe, save, sha256Of, loadModel, applyHelpers, applyCorrectives, clearCorrectives, measure, prepareSocket, socketAt } from './cv1-runtime.js';
+ import { weights as layerWeights, layers as layerStarts, layerFrame, blendStates, boneGroup, GROUPS } from './cv1-transition.js';
+ import { schedule as footSchedule, neededTimes, soleTarget, twoBone, qmul, qconj, add, sub, SIDES } from './cv1-foot-lock.js';
++import { prepareAffineFK } from './cv1-affine-fk.js';
+ 
+ const $ = (id) => document.getElementById(id);
+ const canvas = $('canvas');
+@@ -109,12 +110,15 @@
+   const prepared = prepareSocket(model, Object.values(socketBlocks)[0] ?? null);
+   // Foot lock: the Blender rest sole point carried rigidly by each foot joint (offset taken at rest, like the socket).
+   const toGl = ([x, y, z]) => [x, z, -y];
++  // Exported node TRS loses tiny rest shear. Near a straight leg IK amplifies that FK difference.
++  // Read the same GLB's original inverse binds for solver FK; never change the binds or the rendered skin path.
++  const affineFK = manifest.foot_lock ? prepareAffineFK(model, SIDES.flatMap((side) => manifest.foot_lock.legs[side])) : null;
+   const footLock = manifest.foot_lock ? (() => {
+     model.root.updateMatrixWorld(true);
+     const soleLocal = {};
+     for (const side of SIDES) {
+       const foot = model.bones[manifest.foot_lock.legs[side][2]];
+-      soleLocal[side] = new THREE.Vector3(...toGl(manifest.foot_lock.sole_rest_world_blender[side])).applyMatrix4(foot.matrixWorld.clone().invert());
++      soleLocal[side] = new THREE.Vector3(...toGl(manifest.foot_lock.sole_rest_world_blender[side])).applyMatrix4(affineFK.restWorld.get(foot).clone().invert());
+     }
+     return { soleLocal, legs: manifest.foot_lock.legs, forward: toGl(manifest.foot_lock.forward_blender), up: toGl(manifest.foot_lock.up_blender),
+              fallback: toGl(manifest.foot_lock.fallback_normal_blender) };
+@@ -122,7 +126,7 @@
+   const flClips = Object.fromEntries(Object.entries(manifest.clips).map(([short, info]) => [short, { frames: info.frames, loop: info.loop, fps: info.fps,
+     nominal_speed_m_s: info.nominal_speed_m_s, stance: info.stance }]));
+   const harness = {};
+-  for (const name of ['p4.html', 'src/p4.js', 'src/cv1-runtime.js', 'src/cv1-pose-rules.js', 'src/cv1-transition.js', 'src/cv1-foot-lock.js']) harness[name] = describe(await fetchBytes(`/tools/runtime-qa/three/${name}`));
++  for (const name of ['p4.html', 'src/p4.js', 'src/cv1-runtime.js', 'src/cv1-pose-rules.js', 'src/cv1-transition.js', 'src/cv1-foot-lock.js', 'src/cv1-affine-fk.js']) harness[name] = describe(await fetchBytes(`/tools/runtime-qa/three/${name}`));
+   const inputs = { manifest: describe(manifestFile), harness, reference: describe(referenceFile), reference_binary: describe(binFile), rules: describe(rulesFile), transitions: describe(transitionsFile), glb: clipFiles };
+ 
+   // ---- scenario actions: one action per layer and bone group, activated at rest in layer order ----
+@@ -207,8 +211,8 @@
+   const v3 = new THREE.Vector3(), q4 = new THREE.Quaternion();
+   const worldPoint = (bone) => bone.getWorldPosition(v3).toArray();
+   const worldQuat = (bone) => { bone.getWorldQuaternion(q4).normalize(); return [q4.w, q4.x, q4.y, q4.z]; };
+-  function solePoints() {
+-    return Object.fromEntries(SIDES.map((side) => [side, footLock.soleLocal[side].clone().applyMatrix4(model.bones[footLock.legs[side][2]].matrixWorld).toArray()]));
++  function solePoints(worlds = affineFK.evaluate()) {
++    return Object.fromEntries(SIDES.map((side) => [side, footLock.soleLocal[side].clone().applyMatrix4(worlds.get(model.bones[footLock.legs[side][2]])).toArray()]));
+   }
+   function fkSolesAt(t) {
+     if (!current.fkSoles.has(t)) {
+@@ -219,15 +223,17 @@
+   }
+   // Two-bone leg solve for the locked feet of the current lock-free pose; returns {side: [mode, target (glTF world)]}.
+   function applyFootLock(t) {
+-    const now = solePoints();
++    const worlds = affineFK.evaluate();
++    const now = solePoints(worlds);
++    const fkPoint = (bone) => new THREE.Vector3().setFromMatrixPosition(worlds.get(bone)).toArray();
+     const fk = (side, at) => (at === t ? now[side] : current.fkSoles.get(at)[side]);
+     const moved = {}, updates = [];
+     for (const side of SIDES) {
+       const target = soleTarget(current.def, flClips, current.locks[side], side, t, fk, footLock.forward, footLock.up);
+       if (target === null) continue;
+       const [thigh, shin, foot, toe] = footLock.legs[side].map((name) => model.bones[name]);
+-      const ankle = worldPoint(foot);
+-      const [kneeTurn, hipTurn] = twoBone(worldPoint(thigh), worldPoint(shin), ankle, add(ankle, sub(target, now[side])), sub(worldPoint(toe), ankle), footLock.fallback);
++      const ankle = fkPoint(foot);
++      const [kneeTurn, hipTurn] = twoBone(fkPoint(thigh), fkPoint(shin), ankle, add(ankle, sub(target, now[side])), sub(fkPoint(toe), ankle), footLock.fallback);
+       const newThigh = qmul(hipTurn, worldQuat(thigh)), newShin = qmul(qmul(hipTurn, kneeTurn), worldQuat(shin));
+       updates.push([thigh, qmul(qconj(worldQuat(thigh.parent)), newThigh)], [shin, qmul(qconj(newThigh), newShin)], [foot, qmul(qconj(newShin), worldQuat(foot))]);
+       moved[side] = target;
+@@ -543,7 +549,7 @@
+     const result = {
+       observed_utc: new Date().toISOString(), run: stamp, check: 'p4-runtime', gate_m: gate, gate_source: manifest.gate_source, inputs,
+       runtime: { three: THREE.REVISION, user_agent: navigator.userAgent, hardware_concurrency: navigator.hardwareConcurrency, device_memory_gb: navigator.deviceMemory ?? null, webgl: webglInfo() },
+-      evaluation_order: ['explicit layer weights (cv1-transition.js)', 'AnimationMixer accumulation', 'stance-foot lock (cv1-foot-lock.js)', 'shared sword socket', 'helper bones (rules.helpers)', 'corrective rules -> morphTargetInfluences', 'engine morph then skin'],
++      evaluation_order: ['explicit layer weights (cv1-transition.js)', 'AnimationMixer accumulation', 'inverse-bind rest affine FK (cv1-affine-fk.js; bind data read-only)', 'stance-foot lock (cv1-foot-lock.js)', 'shared sword socket', 'helper bones (rules.helpers)', 'corrective rules -> morphTargetInfluences', 'engine morph then skin'],
+       closed_loop: closed, determinism, loop_seams: seams, repeated_switch: repeated, negative_controls: negative,
+       cost: { evaluate: stats(costs), render_960: stats(renders), note: 'This machine in the desktop browser pane; test condition, not a performance promise.' },
+       images, verdicts, pass: Object.values(verdicts).every(Boolean), measurement_ms: performance.now() - started,
+--- /dev/null
++++ b/tools/runtime-qa/three/src/cv1-affine-fk.js
+@@ -0,0 +1,56 @@
++// Pre-IK FK retains the original inverse-bind rest affine instead of re-decomposing it as node TRS.
++// This reads bind data only. AnimationMixer, rendered bones, skinning and the comparison formula remain owners
++// of their existing data. Relative animation rotation/scale and local translation are applied to the rest affine.
++import * as THREE from 'three';
++
++export function prepareAffineFK(model, names) {
++  model.root.updateMatrixWorld(true);
++  const indices = new Map(model.skeleton.bones.map((bone, i) => [bone, i]));
++  const needed = new Set();
++  for (const name of names) {
++    const bone = model.bones[name];
++    if (!bone) throw new Error(`AFFINE_FK_MISSING_BONE ${name}`);
++    for (let ancestor = bone; indices.has(ancestor); ancestor = ancestor.parent) needed.add(ancestor);
++  }
++  const restWorld = new Map(), localRest = new Map(), initial = new Map(), outside = new Map();
++  for (const bone of needed) {
++    const inverse = model.skeleton.boneInverses[indices.get(bone)];
++    if (!inverse.elements.every(Number.isFinite) || Math.abs(inverse.determinant()) < 1e-12) {
++      throw new Error(`AFFINE_FK_INVALID_BIND ${bone.name}`);
++    }
++    restWorld.set(bone, inverse.clone().invert());
++  }
++  for (const bone of needed) {
++    const parentRest = restWorld.get(bone.parent);
++    const parentWorld = parentRest ?? bone.parent?.matrixWorld ?? new THREE.Matrix4();
++    localRest.set(bone, parentWorld.clone().invert().multiply(restWorld.get(bone)));
++    const name = bone.userData.name ?? bone.name;
++    const q = model.restLocal[name];
++    if (!q || bone.scale.toArray().some((s) => !Number.isFinite(s) || Math.abs(s) < 1e-12)) {
++      throw new Error(`AFFINE_FK_INVALID_REST ${name}`);
++    }
++    initial.set(bone, { position: bone.position.clone(), scale: bone.scale.clone(), rotation: q.clone().normalize() });
++    if (!parentRest) outside.set(bone, bone.parent);
++  }
++  return {
++    // Used once to calibrate the frozen sole rest point; callers must not mutate these matrices.
++    restWorld,
++    evaluate() {
++      const posed = new Map();
++      function worldOf(bone) {
++        if (posed.has(bone)) return posed.get(bone);
++        const start = initial.get(bone), rest = localRest.get(bone);
++        const rotation = start.rotation.clone().invert().multiply(bone.quaternion).normalize();
++        const scale = bone.scale.clone().divide(start.scale);
++        const local = rest.clone().multiply(new THREE.Matrix4().compose(new THREE.Vector3(), rotation, scale));
++        local.setPosition(new THREE.Vector3().setFromMatrixPosition(rest).add(bone.position).sub(start.position));
++        const parent = localRest.has(bone.parent) ? worldOf(bone.parent) : outside.get(bone)?.matrixWorld;
++        const world = parent ? parent.clone().multiply(local) : local;
++        posed.set(bone, world);
++        return world;
++      }
++      for (const bone of needed) worldOf(bone);
++      return posed;
++    },
++  };
++}
+--- /dev/null
++++ b/tools/runtime-qa/three/test/affine-fk.test.js
+@@ -0,0 +1,60 @@
++import assert from 'node:assert/strict';
++import test from 'node:test';
++import * as THREE from 'three';
++import { prepareAffineFK } from '../src/cv1-affine-fk.js';
++
++function rig(shear = 0, outside = new THREE.Vector3()) {
++  const scene = new THREE.Group();
++  scene.position.copy(outside);
++  const root = new THREE.Bone(), knee = new THREE.Bone(), foot = new THREE.Bone();
++  root.name = 'root'; knee.name = 'knee'; foot.name = 'foot';
++  scene.add(root); root.add(knee); knee.add(foot);
++  knee.position.y = 1; foot.position.y = 1;
++  scene.updateMatrixWorld(true);
++  const rest = new THREE.Matrix4().set(1,shear,0,outside.x, 0,1,0,outside.y, 0,0,1,outside.z, 0,0,0,1);
++  const worlds = [rest, rest.clone().multiply(new THREE.Matrix4().makeTranslation(0,1,0)), rest.clone().multiply(new THREE.Matrix4().makeTranslation(0,2,0))];
++  const skeleton = {bones:[root,knee,foot], boneInverses:worlds.map(m => m.clone().invert())};
++  return {root:scene,bones:{root,knee,foot},skeleton,restLocal:{root:new THREE.Quaternion(),knee:new THREE.Quaternion(),foot:new THREE.Quaternion()}};
++}
++function near(actual, expected) {
++  assert.equal(actual.length, expected.length);
++  actual.forEach((x,i) => assert.ok(Math.abs(x-expected[i]) < 1e-12, `${i}: ${x} != ${expected[i]}`));
++}
++const point = (m) => new THREE.Vector3().setFromMatrixPosition(m).toArray();
++
++test('rest shear is retained from binds; source and rendered bone data stay unchanged', () => {
++  const model=rig(.25), before=JSON.stringify({bind:model.skeleton.boneInverses.map(m=>m.elements), bones:Object.values(model.bones).map(b=>b.matrixWorld.elements)});
++  const fk=prepareAffineFK(model,['foot']);
++  const worlds=fk.evaluate();
++  near(point(worlds.get(model.bones.knee)),[.25,1,0]);
++  near(point(worlds.get(model.bones.foot)),[.5,2,0]);
++  assert.equal(JSON.stringify({bind:model.skeleton.boneInverses.map(m=>m.elements), bones:Object.values(model.bones).map(b=>b.matrixWorld.elements)}),before);
++});
++
++test('relative animation rotates the full affine chain and carries the outside parent', () => {
++  const model=rig(.25,new THREE.Vector3(3,4,5)), fk=prepareAffineFK(model,['foot']);
++  model.bones.root.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/2);
++  model.root.position.x=8;
++  model.root.updateMatrixWorld(true);
++  near(point(fk.evaluate().get(model.bones.foot)),[6,4,5]);
++  // Deterministic reconstruction reads current animation, without accumulating an earlier pose.
++  near(point(fk.evaluate().get(model.bones.foot)),[6,4,5]);
++  model.bones.root.quaternion.identity();
++  near(point(fk.evaluate().get(model.bones.foot)),[8.5,6,5]);
++});
++
++test('pure TRS animations retain ordinary FK with translation and scale', () => {
++  const model=rig(),fk=prepareAffineFK(model,['foot']);
++  model.bones.root.position.set(2,3,4);
++  model.bones.root.scale.set(2,3,4);
++  model.bones.knee.quaternion.setFromAxisAngle(new THREE.Vector3(0,0,1),Math.PI/3);
++  model.bones.knee.position.z=.5;
++  model.root.updateMatrixWorld(true);
++  near(fk.evaluate().get(model.bones.foot).elements,model.bones.foot.matrixWorld.elements);
++});
++
++test('missing bones and singular bind data fail closed', () => {
++  assert.throws(()=>prepareAffineFK(rig(),['missing']),/MISSING_BONE/);
++  const model=rig(); model.skeleton.boneInverses[1].elements.fill(0);
++  assert.throws(()=>prepareAffineFK(model,['foot']),/INVALID_BIND/);
++});

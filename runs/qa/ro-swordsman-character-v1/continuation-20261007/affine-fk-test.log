@@ -1,0 +1,38 @@
+(node:30392) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# (node:79772) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: rest shear is retained from binds; source and rendered bone data stay unchanged
+ok 1 - rest shear is retained from binds; source and rendered bone data stay unchanged
+  ---
+  duration_ms: 2.3324
+  type: 'test'
+  ...
+# Subtest: relative animation rotates the full affine chain and carries the outside parent
+ok 2 - relative animation rotates the full affine chain and carries the outside parent
+  ---
+  duration_ms: 0.9778
+  type: 'test'
+  ...
+# Subtest: pure TRS animations retain ordinary FK with translation and scale
+ok 3 - pure TRS animations retain ordinary FK with translation and scale
+  ---
+  duration_ms: 0.4401
+  type: 'test'
+  ...
+# Subtest: missing bones and singular bind data fail closed
+ok 4 - missing bones and singular bind data fail closed
+  ---
+  duration_ms: 1.888
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 169.3601
