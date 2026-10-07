@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "destination": "github.com/monkey1sai/mmo-asset-pipeline, refs/heads/main",
+  "human_confirmation": "origin/main",
+  "payload_remote_before": "08c454e6c6e7566f7a7625953773b6eb18693f5c",
+  "payload_remote_after": "1ae4f330b2f30ba863785801634e4a803de04b5c",
+  "git_push": "successful normal fast-forward; remote SHA read back matches",
+  "lfs_push": {"result": "successful", "unique_objects": 67, "reported_bytes": "275 MB", "source_lfs_paths": 70},
+  "remote_restore": {
+    "result": "verified",
+    "source_files": 411,
+    "ordinary_git_files": 341,
+    "lfs_paths": 70,
+    "extra_receipts_and_attributes_at_payload_commit": 20,
+    "hash_and_size_problems": 0,
+    "independent_review": "accept; independently rehashed all 411 source files and 20 extra files with zero mismatches",
+    "git_origin_head_and_lfs_endpoint": "verified expected GitHub repo and exact payload SHA",
+    "local_alternates": false,
+    "lfs_objects_before_fetch": 0,
+    "lfs_storage": "fresh task-local .git/lfs, no reference directories",
+    "method": "No-checkout partial clone, exact original Git blob reads, original-pointer-only local scan commit for explicit LFS fetch, SHA gate and direct file copy. HEAD unchanged; no filters, smudge, or checkout.",
+    "local_only_scan_commit": "49caca26550bc8e307e96678709fa28ed6d9633f",
+    "scan_commit_pushed": false
+  },
+  "preserved_failures": {
+    "ro_runtime_closed_loop": "FAIL: 2/118 blocks, 18.731 um > 10 um, no waiver",
+    "combo_h1": "Known collapse/grasp failures retained",
+    "initial_restore_fetch": "TEST_FAILURE in restore harness; ordinary fetch negotiation failed on partial graph. Original error retained; one source-backed correction succeeded.",
+    "initial_missing_419": "Pre-correction snapshot only; final restore has zero missing/mismatched source files.",
+    "git_lfs_hook_side_effect": "TOOL_FAILURE: filters installed four standard hooks in the initially empty task directory; the first Git push used them to recheck LFS at 0 B/s. Whole-session hook disablement claim corrected."
+  },
+  "hook_remedy": "No filters or checkout in final restore; new task hook directory verified empty before/after. Only four task-created old hook files were removed after recording their hashes. No global Git, ACL, branch-protection or visibility changes.",
+  "verification_limits": [
+    "Current batch only, not all history/all assets or standard checkout/smudge",
+    "No new DCC, visual acceptance, engine/runtime or deployment evidence",
+    "No comprehensive image privacy or compressed metadata scan",
+    "LFS service accepted upload/download; remaining account quota was not queried"
+  ],
+  "local_workspaces": "Primary local main remains 7423acd with its local preview configuration preserved; original RO production worktree stays unchanged. The isolated consolidation worktree holds the merged results.",
+  "receipt_note": "This record binds the published payload and executed restore. A subsequent documentation-only commit archives these receipts; its final main SHA is checked separately after normal push."
+}

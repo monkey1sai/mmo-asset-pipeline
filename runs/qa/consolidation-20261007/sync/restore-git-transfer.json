@@ -1,0 +1,9 @@
+{
+  "initial_bulk_fetch_exit": 1,
+  "initial_error": "bad revision during ordinary fetch negotiation; did not send all necessary objects",
+  "selected_git_blob_oids": 419,
+  "still_missing": 419,
+  "new_evidence": "Git v2.42 promisor-remote.c fetch_objects uses fetch.negotiationAlgorithm=noop and explicit --filter=blob:none.",
+  "source": "https://raw.githubusercontent.com/git/git/v2.42.0/promisor-remote.c",
+  "retry_budget": "One narrow corrective transfer for the missing subset only; no pack cleanup or all-history fetch."
+}

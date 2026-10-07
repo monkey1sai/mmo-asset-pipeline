@@ -2,6 +2,16 @@
 
 使用者要求：「先將目前成果收斂到 origin master上」，查明預設分支為 main 後，使用者明確選擇 `origin/main`。此目錄保存本機準備與確認後的同步範圍；授權見 target-choice.json，實際遠端同步與還原結果以執行收據為準。
 
+## 遠端同步與本批還原
+
+`origin/main` 已正常由 `08c454e` 推進至成果提交 `1ae4f330b2f30ba863785801634e4a803de04b5c`，67 個不同 LFS 物件（約 275 MB）已同步。GitHub 全新 no-checkout partial clone 的 HEAD、origin、endpoint、空 LFS store 與無 local alternates 均已核對。從原始 Git blob 與 LFS 物件還原的 411 個來源檔（341 一般 Git、70 LFS 路徑）及當時 20 個附加收據／attributes，SHA-256 與大小全部符合；独立審查重新核對也沒有差異。詳見 [同步摘要](sync/sync-summary.json)、[還原核對](sync/restore-verification.json)。後續收據提交只新增同步紀錄，不變更成果 payload。
+
+還原時首次普通批次 fetch 因 partial graph negotiation 失敗；依 Git 2.42 官方 promisor 參數，針對當時仍缺少的 419 個選中 blobs 做一次修正後成功。`restore-git-transfer.json` 的 `still_missing: 419` 是修正前快照，還原後沒有缺檔。為避免 Git LFS 3.4 掃描時下載其他 Git blobs，以本機限定 70 個原始 pointer 的 local-only scan commit 作 LFS fetch 輸入；真實 GitHub HEAD 始終為 `1ae4f33`，該掃描 commit 未推送、未替代成果來源。
+
+先前指定的空 hook 目錄被 Git LFS 3.4 filter 自動填入四個標準 hooks，並在第一筆普通 Git push 重查了已上傳物件（0 B/s）。因此不能宣稱整段操作的 hooks 始終停用。後續還原不用 filter、smudge 或 checkout，也未變更 filter.required；新 hook 目錄前後都為空。四個本任務自動建立的暫存 hooks 已核對並移除，原始目錄及事件雜湊紀錄保留；見 [hook 更正](sync/hook-correction.json)。
+
+還原驗證僅涵蓋本批來源檔與上述附加檔，未驗完整歷史、全 repo 標準 checkout／smudge、DCC 或新增 runtime。主工作區的 local main 與原 RO 產製工作區保持原狀；完整收斂成果位於本隔離工作區與 origin/main。
+
 基準為 origin/main `08c454e6c6e7566f7a7625953773b6eb18693f5c`，已包含角色分支 `75b8950` 的既有提交。新增成果從 root 與 `tmp/art-quality-loop` 擷取，共 411 檔、374,533,881 bytes；逐檔來源、大小與 SHA-256 見 source-manifest.json。原始需求、失敗紀錄與產製 bytes 保留，不重製資產或放寬門檻。`.claude/launch.json` 是本機預覽設定，未納入。
 
 準備期間 root 新增提交 `7423acdfda94d62ed455e8ed343da6bc024b6fce`，正好包含原先 37 檔；411 檔原始 bytes 全部未變。原始快照不改寫，狀態變動另存 source-state-update.json。收斂保留這筆提交為 merge parent，不 reset 原始工作區。

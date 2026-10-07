@@ -1,0 +1,30 @@
+{
+  "affected_directory": "C:\\Repos\\mmo-asset-pipeline\\tmp\\consolidation-tools-20261007\\empty-hooks",
+  "classification": "TOOL_FAILURE: Git LFS filter auto-install side effect",
+  "removed_at_utc": "2026-10-07T07:38:06.4185807Z",
+  "remedy": "Remove only these four task-created files after all transport completed; preserve the directory and original repository hooks. Subsequent restore used no filters/checkout and the new hook directory stayed empty.",
+  "files": [
+    {
+      "name": "post-checkout",
+      "sha256": "791471b4ff472aab844a4fceaa48bbb0a12193616f971e8e940625498b4938a6",
+      "bytes": 351
+    },
+    {
+      "name": "post-commit",
+      "sha256": "21e961572bb3f43a5f2fbafc1cc764d86046cc2e5f0bbecebfe9684a0b73b664",
+      "bytes": 347
+    },
+    {
+      "name": "post-merge",
+      "sha256": "75da0da66a803b4b030ad50801ba57062c6196105eb1d2251590d100edb9390b",
+      "bytes": 345
+    },
+    {
+      "name": "pre-push",
+      "sha256": "df5417b2daa3aa144c19681d1e997df7ebfe144fb7e3e05138bd80ae998008e4",
+      "bytes": 341
+    }
+  ],
+  "known_pre_push_effect": "LFS checked the already uploaded 67 objects again at 0 B/s during the first normal Git push.",
+  "correction": "The initially empty task hook directory was populated by Git LFS 3.4 filters and later used; whole-session hook disablement is not a verified claim."
+}
