@@ -1,0 +1,26 @@
+{
+ "pending": 310,
+ "modified_tracked": 2,
+ "untracked": 308,
+ "text_scanned": 183,
+ "crlf_in_text_rule_files": [
+  "runs/qa/ro-swordsman-character-v1/v001/p4/run-04/merged/collapse-classes.json",
+  "runs/qa/ro-swordsman-character-v1/v001/p4/run-05/merged/collapse-classes.json"
+ ],
+ "text_like_without_rule": [],
+ "text_like_without_rule_count": 0,
+ "secret_pattern_hits": [
+  {
+   "file": "runs/qa/git-portability-20261007/precommit-check-used.py",
+   "line": 28,
+   "pattern": "signed_url",
+   "text": "   \"signed_url\": re.compile(r\"X-Amz-Signature|X-Goog-Signature|[?&](Signatu"
+  },
+  {
+   "file": "runs/qa/git-portability-20261007/precommit-check-used.py",
+   "line": 28,
+   "pattern": "signed_url",
+   "text": " re.compile(r\"X-Amz-Signature|X-Goog-Signature|[?&](Signature|sig|token|Expi"
+  }
+ ]
+}

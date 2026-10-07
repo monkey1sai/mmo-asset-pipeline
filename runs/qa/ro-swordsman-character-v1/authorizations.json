@@ -457,6 +457,110 @@
      "非快轉被拒、驗證失敗或主機金鑰不符"
     ]
    }
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T08:30:20Z",
+   "text": "開始第 4 里程碑",
+   "covers": [
+    "第四個里程碑＝交接文件代辦 P4：可操作 QA 場景與反例——動作切換、pause/resume/seek、慢放（0.5/1/1.5x）、30/60/120 fps 求值、100/200/400 ms 轉場、修形開關、固定鏡頭；需求 r6 transition_matrix 的關卡（collapse、hand、grasp、weapon_body、feet、continuity、determinism、loop_seam）；在可丟棄副本中注入故障並確認被抓",
+    "轉場組合以已有片段為限：Idle<->Walk、Walk<->Run、Idle->Cast->Idle、Walk->Cast(上半身層)->Walk、Idle->LieDown->Sleep->GetUp->Idle；Idle->Combo->Idle 等連段片段（P3 剩餘項）完成後補",
+    "第三里程碑留下的待機銜接（LieDown/GetUp 與 Idle 端點差 10.6 度）在轉場工作中處理；完成後回報"
+   ],
+   "not_covered": [
+    "300 幀連段與 VFX（P3 剩餘項）",
+    "凍結與 holdout（P5）",
+    "commit／push",
+    "放寬任何門檻或豁免",
+    "重開 r010",
+    "修改需求版本（r7）",
+    "Hyper3D 付費生成"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T09:45:26Z",
+   "text": "A1 B1 C1 E 維持 F 同意",
+   "covers": [
+    "A1：在 runtime 求值器與 Blender 轉場檢查加入同一套著地腳鎖定（腿部兩段 IK），以同一閉環驗證；鎖定只在轉場淡化中、兩端都屬 stance 的腳啟用，於擺動期釋放；目標片段沒有擺動期時，以可量測抬腳的程序化收步回到片段腳位（設計與量測寫入紀錄）",
+    "B1：轉場中，驅動雙腳的床上片段層全部在各自 seated_on_bed 時窗內時，大衣沿用第 19–20 筆的坐姿豁免（非床上片段層不影響判定）",
+    "C1：淡化不得跨過任一端片段的 socket 或床面支撐事件：進入淡化在目標片段第一個事件前完成，離開淡化在來源片段最後一個事件後開始（非 loop 片段停在最後一幀）；放不進去的組合縮短淡化並列出",
+    "E 維持：播放速度＝各層片段時間倍率、淡化時間以實際秒數計；轉場中互動狀態依姿勢權重混合",
+    "F 同意：P4 剩餘上限約 4 小時，之後再決定連段（P3 剩餘項）與 P5",
+    "D（皺褶區 collapse）待 run-02 後再決定"
+   ],
+   "not_covered": [
+    "commit／push",
+    "A2、B2、C2、D 任一選項，或其他門檻與豁免的放寬",
+    "連段片段（P3 剩餘項）與 P5 凍結／holdout",
+    "重開 r010、修改需求版本（r7）",
+    "Hyper3D 付費生成"
+   ]
+  },
+  {
+   "utc_date": "2026-10-06",
+   "recorded_utc": "2026-10-06T11:17:00Z",
+   "text": "D2; 允許將時間擴充至 36小時 ／ G1 列為已知失敗",
+   "covers": [
+    "D2：轉場 collapse 判定維持嚴格；P4 以皺褶區（胯下與髖部前方、右膝後上方、腋下）的 collapse 失敗為已知失敗結案，失敗位置與分類記錄給下一版 foundation",
+    "G1：1.5 倍速 Run→Walk（100／400 ms）與 Walk↔Run 反覆切換的腳步失敗，維持嚴格判定，列為原地片段交叉淡化在腿長上的物理極限",
+    "v001 每候選時間上限由 64,800 秒（18 小時）放寬為 129,600 秒（36 小時）；r6 的總上限 172,800 秒與候選數 4 不變；需求檔 r6 文字不改，放寬以本筆紀錄為準",
+    "以最終版工具重跑完整轉場矩陣與 runtime 閉環，作為 P4 結案證據"
+   ],
+   "not_covered": [
+    "D1 foundation 修正（b21）、D3 或其他門檻與豁免的放寬",
+    "連段片段（P3 剩餘項）與 P5 凍結／holdout",
+    "commit／push",
+    "重開 r010、修改需求版本（r7）",
+    "Hyper3D 付費生成"
+   ]
+  },
+  {
+   "utc_date": "2026-10-07",
+   "recorded_utc": "2026-10-07T02:22:49Z",
+   "text": "接受第四里程碑的轉場; commit push , open pr; 允許使用 hyper3d 付費",
+   "covers": [
+    "第四里程碑美術審查接受：使用者檢視 p4/milestone-04-sheet.png 與 QA 場景後接受轉場（run-05 115/164，D2／G1 已知失敗照第 26 筆）",
+    "把 worktree tmp/art-quality-loop（codex/art-quality-loop）第三里程碑推送後的未提交工作分批 commit：2026-10-06 推送紀錄、P4 工具與測試、P4 情境／結果／紀錄、授權與時鐘",
+    "推送到 origin 的 codex/art-quality-loop（含 Git LFS 物件），並做唯讀的遠端核對",
+    "以 gh 建立 codex/art-quality-loop → main 的 pull request（不合併）",
+    "Hyper3D 付費生成：連段片段（P3 剩餘項）可使用付費點數；每筆提交前保存唯一 operation ID、記錄扣點，pending／unknown 不重送"
+   ],
+   "not_covered": [
+    "合併 PR、推送到 main、force push、改寫遠端歷史",
+    "變更 repo 可見性、購買或升級 LFS 額度、變更 gh 權杖或憑證、修改全域 Git 設定或安裝 hook",
+    "Hyper3D 加購或升級訂閱方案（只用帳戶既有付費點數）",
+    "放寬任何門檻或豁免、重開 r010、修改需求版本（r7）",
+    "P5 凍結／holdout（待連段完成後另行決定）"
+   ],
+   "authorization_envelope": {
+    "destination": "git@github.com:monkey1sai/mmo-asset-pipeline.git refs/heads/codex/art-quality-loop 與其 LFS 儲存；GitHub pull request（gh）",
+    "purpose": "封存已通過技術驗證並經使用者美術審查接受的第四里程碑（P4 QA 場景、轉場工具、結果與紀錄）及 2026-10-06 推送紀錄；開 PR 供審閱",
+    "allowed_operations": [
+     "git add（依核對過的路徑清單分批）",
+     "git commit",
+     "git lfs push origin <commit>",
+     "git push origin <commit>:refs/heads/codex/art-quality-loop（只快轉）",
+     "gh pr create（base main）",
+     "唯讀 git ls-remote、gh repo view、gh pr view"
+    ],
+    "data_transmitted": "P4 工具、情境、Blender／runtime 結果（JSON、float32 參考 .bin 走 LFS、PNG 預覽）、授權與時鐘紀錄；推送前做密鑰樣式掃描",
+    "forbidden_operations": [
+     "push 到 main",
+     "force push",
+     "merge PR",
+     "變更可見性或額度",
+     "修改憑證或全域設定",
+     "刪除遠端物件"
+    ],
+    "stop_conditions": [
+     "遠端分支不在 50daee3",
+     "密鑰樣式掃描有未解釋的命中",
+     "LFS 配額或大小被拒",
+     "非快轉",
+     "驗證失敗"
+    ]
+   }
   }
  ],
  "protected_zone": {

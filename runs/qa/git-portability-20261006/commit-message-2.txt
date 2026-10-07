@@ -1,0 +1,14 @@
+feat(art): 角色動畫 V1 第三里程碑工具——鉸鏈手臂 IK、床面互動與插槽修正
+
+- scripts/cv1_arm_ik.py：solve_hinge（手肘只沿合約屈曲軸彎曲，旋前與上臂扭轉對照合約回報）、手部放鬆
+- scripts/cv1_author_clip.py：劍的 ik 可選 hinge、hand_relax、逐幀手臂診斷
+- scripts/cv1_interaction.py：seated_on_bed 時窗（可與床面支撐時窗共用一個交界幀，支撐接手）、
+  near_socket_event、windows_overlap
+- scripts/cv1_clip_check.py：bed_clearance 關卡（插槽事件 ±6 幀手可壓床 50 mm、坐姿大衣豁免）；
+  手持插槽還原劍的靜置附掛，並拒絕對劍設鍵的插槽片段
+- scripts/cv1_export_clip.py、tools/runtime-qa/three：同一修正（床→手的片段不再殘留床面位置）
+- scripts/cv1_bed_posture.py、scripts/cv1_coat_lying.py：仰躺姿勢求解、大衣躺姿修形建置
+- scripts/cv1_clip_pipeline.py：基礎指向 b20-coatlie3
+- tests/test_cv1_interaction.py：時窗、插槽事件與坐姿視窗測試（全套 162 項通過）
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>

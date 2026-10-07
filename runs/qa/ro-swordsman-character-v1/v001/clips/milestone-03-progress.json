@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "recorded_utc": "2026-10-06T07:50:36Z",
+ "recorded_utc": "2026-10-06T08:24:05Z",
  "milestone": 3,
  "status": "accepted: numerically complete on b20 (Cast a04, LieDown a08, Sleep_Loop a04, GetUp a02 pass the clip check, the runtime closed loop and the readback) and art review accepted by the user (entry 23); independent gray grasp acceptance not separately presented; not in the ledger",
  "authorization": "entries 14 (milestone 3) and 15 (commit/push first) in runs/qa/ro-swordsman-character-v1/authorizations.json; entry 16 (b19 and the rest of milestone 3 on b19); entry 17 (b20 coat lying corrective, then the rest of milestone 3); entry 18 (hand presses into the bed within 6 frames of a socket event, up to 50 mm); entry 19 (seated coat may hang into the bed); entry 20 (the coat may hang into the bed through the lie-back until the bed support is established; GetUp mirrors it); entry 21 (option B: slower end of the release in LieDown, mirrored in GetUp); entry 22 (option a: the seat-turn speed is accepted for now); entry 23 (art review accepted; commit and push of milestone 3)",
@@ -124,8 +124,7 @@
  "not_done": [
   "Idle ends of LieDown/GetUp: frame 0 / 89 differ from Idle a03 frame 0 by up to 10.6 deg (right upper arm; hinge vs swing arm solver) and 2.4 deg (shins, since a05) - for the transition work (P4), the request's continuity gate applies to the blended transition",
   "clean-up of drafts and probes (only on request)",
-  "independent gray grasp acceptance: not separately presented in milestone 3 (batched, as in milestone 2)",
-  "commit / push of milestone 3: authorized by entry 23, in progress (record runs/qa/git-portability-20261006)"
+  "independent gray grasp acceptance: not separately presented in milestone 3 (batched, as in milestone 2)"
  ],
  "foundation": "b20-coatlie3 (runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/build-record.json); Idle, Walk, Run, Cast, Sleep a03 verified on b20 (clips/b20-reverification.json)",
  "in_progress": {},
@@ -138,5 +137,19 @@
   "head extension about 19.8 deg on the bed without a pillow; b20 coat-core pairs as before",
   "turn on the seat (LieDown 50-57, GetUp 33-40): the body yaws 90 deg in 7 frames (about 770 deg/s) and the right hand sweeps with it at up to 11.2 m/s; unchanged since a06 and outside entry 21; slowing it needs more frames than the 90-frame clip contract leaves between the put-down (>= 25%) and the bed support (<= 70%); accepted by the user for now (entry 22, clips/turn-speed-decision-20261006.json)"
  ],
- "preview_sheet": "runs/qa/ro-swordsman-character-v1/v001/clips/milestone-03-sheet-r2.png (first sheet milestone-03-sheet.png kept)"
+ "preview_sheet": "runs/qa/ro-swordsman-character-v1/v001/clips/milestone-03-sheet-r2.png (first sheet milestone-03-sheet.png kept)",
+ "archived": {
+  "authorization": "entry 23",
+  "commits": [
+   "7b73d60",
+   "86091bf",
+   "3a04b55",
+   "9d2a4fc",
+   "50daee3"
+  ],
+  "remote": "origin/codex/art-quality-loop at 50daee36d3c520a4e1588412465a7708adaa45df (main untouched)",
+  "lfs": "445/445 unique objects held by the LFS server after the push (0 B re-uploaded); fresh clone restore not verified",
+  "record": "runs/qa/git-portability-20261006/record.json",
+  "note": "this progress update, the push record and v001-pause-23 were written after the last commit and wait for the next authorized commit"
+ }
 }

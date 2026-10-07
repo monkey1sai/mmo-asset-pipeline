@@ -1,0 +1,166 @@
+{
+ "schema_version": 1,
+ "recorded_utc": "2026-10-06T08:25:00Z",
+ "status": "remote_branch_and_lfs_objects_received; fresh_clone_restore_not_verified",
+ "authorization": {
+  "user_text": "美術審查接受，commit 並 push",
+  "record": "runs/qa/ro-swordsman-character-v1/authorizations.json",
+  "entry": 23,
+  "envelope": "entry 23 authorization_envelope (destination, purpose, allowed and forbidden operations, data, stop conditions) recorded at 2026-10-06T07:50:36Z before staging and pushing"
+ },
+ "remote_before_sync": {
+  "repository": "git@github.com:monkey1sai/mmo-asset-pipeline.git",
+  "visibility": "PUBLIC (gh repo view, 2026-10-06T07:50Z; unchanged from the 2026-10-05 record)",
+  "default_branch": "main",
+  "heads": {
+   "refs/heads/codex/art-quality-loop": "10024506e332f75f6f9b8577fe377fd4796c1b1b",
+   "refs/heads/main": "e78d10f9cc959ce914c0d25807b39eba9f56ec3d (moved since the 2026-10-05 record e077e22; not touched here)"
+  }
+ },
+ "local": {
+  "worktree": "tmp/art-quality-loop",
+  "branch": "codex/art-quality-loop",
+  "base": "1002450 (== origin/codex/art-quality-loop before the sync)",
+  "pending_before": {
+   "files": 1953,
+   "modified_tracked": 12,
+   "untracked": 1941
+  }
+ },
+ "pre_commit_checks": {
+  "secret_patterns": "precommit-check.json: 822 text files scanned (subscription_key values, bearer tokens, cookies, signed-URL parameters, GitHub/AWS/sk- keys, PEM private keys, api_key values); the 2 hits are the scanner's own pattern source",
+  "unittest": "python -B -m unittest discover -s tests: 162 tests OK",
+  "validate": "python -B scripts/pipeline.py validate: valid, 39 assets (schema; source freshness and runtime not checked)",
+  "line_endings": "5 probe JSON files flagged with CRLF sit in the byte-exact area (text unset, eol inert); the 6 text files of git-portability-20261005 had no rule: .gitattributes now keeps /runs/qa/git-portability-*/** byte-exact (they are LF and match the SHA-256 in that record)"
+ },
+ "commits": [
+  {
+   "sha": "7b73d60",
+   "topic": "2026-10-05 push record, pre-push checks of this sync, .gitattributes rule",
+   "files": 12,
+   "regular": 12,
+   "lfs": 0
+  },
+  {
+   "sha": "86091bf",
+   "topic": "milestone 3 tools and tests",
+   "files": 11,
+   "regular": 11,
+   "lfs": 0
+  },
+  {
+   "sha": "3a04b55",
+   "topic": "foundations b19-crotch and b20-coatlie(1-3) with QA",
+   "files": 156,
+   "regular": 138,
+   "lfs": 18,
+   "lfs_bytes": 420893016
+  },
+  {
+   "sha": "9d2a4fc",
+   "topic": "milestone 3 clip assets and exports",
+   "files": 139,
+   "regular": 26,
+   "lfs": 113,
+   "lfs_bytes": 1761294704
+  },
+  {
+   "sha": "50daee3",
+   "topic": "milestone 3 clip QA, decisions and records (art review accepted)",
+   "files": 1635,
+   "regular": 1583,
+   "lfs": 52,
+   "lfs_bytes": 357429402
+  }
+ ],
+ "staging_verification": "runs/qa/git-portability-20261005/verify-stage-used.py per group (commit-groups-used.sh, groups/*.txt): staged set == group list; every regular blob == git hash-object --no-filters of the working file; every LFS pointer oid/size == working-file SHA-256/size with the local object present; 0 problems in all five groups",
+ "push": {
+  "method": "per commit git lfs push origin <sha>, then git push origin <sha>:refs/heads/codex/art-quality-loop (fast-forward only); hooks not installed or changed",
+  "batches": [
+   {
+    "commit": "7b73d60",
+    "lfs_upload": "none",
+    "git": "1002450..7b73d60",
+    "utc": [
+     "07:55:18",
+     "07:55:39"
+    ]
+   },
+   {
+    "commit": "86091bf",
+    "lfs_upload": "none",
+    "git": "7b73d60..86091bf",
+    "utc": [
+     "07:55:39",
+     "07:55:59"
+    ]
+   },
+   {
+    "commit": "3a04b55",
+    "lfs_upload": "16 objects, 355 MB",
+    "git": "86091bf..3a04b55",
+    "utc": [
+     "07:55:59",
+     "07:57:21"
+    ]
+   },
+   {
+    "commit": "9d2a4fc",
+    "lfs_upload": "first attempt stopped at 07:57:21 when the shell died (Cygwin fork error, no git process left, remote stayed at 3a04b55); resumed 08:16:07 with push-batches-resume-used.sh: 113 objects, 1.8 GB",
+    "git": "3a04b55..9d2a4fc",
+    "utc": [
+     "08:16:07",
+     "08:20:42"
+    ]
+   },
+   {
+    "commit": "50daee3",
+    "lfs_upload": "47 objects, 263 MB",
+    "git": "9d2a4fc..50daee3",
+    "utc": [
+     "08:20:42",
+     "08:22:39"
+    ]
+   }
+  ],
+  "quota_or_size_refusals": "none reported",
+  "logs": [
+   "push-log.txt",
+   "push-log-resume.txt"
+  ]
+ },
+ "remote_readback": {
+  "refs/heads/codex/art-quality-loop": "50daee36d3c520a4e1588412465a7708adaa45df",
+  "refs/heads/main": "e78d10f9cc959ce914c0d25807b39eba9f56ec3d (unchanged)",
+  "local_upstream": "codex/art-quality-loop tracks origin/codex/art-quality-loop; HEAD == origin/codex/art-quality-loop (git status -sb, no ahead/behind)"
+ },
+ "lfs_server_presence": "git lfs push --all origin codex/art-quality-loop repeated after the push (08:22:59-08:23:10): 445/445 unique objects, 5.7 GB, 0 B/s (the server already held every object; nothing re-uploaded); git lfs ls-files at HEAD: 479 files / 445 unique objects",
+ "not_verified": [
+  "Fresh clone with git lfs pull and hash comparison on another checkout: not run (about 5.7 GB of LFS download from an account whose remaining bandwidth is unknown), as on 2026-10-05",
+  "Account LFS storage/bandwidth quota: not readable with the current gh token scopes; scopes were not changed"
+ ],
+ "not_done": [
+  "no push to main, no force push, no PR, no merge, no visibility change, no quota purchase, no credential, global Git or hook change"
+ ],
+ "after_push_untracked": "this record folder's files written after commit 7b73d60 (commit messages, scripts, logs, groups, record.json), the milestone 3 progress update and v001-pause-23: left for the next authorized commit, as the 2026-10-05 record was",
+ "files": {
+  "commit-groups-used.sh": "086344d88c39bbea81b8941c650fd13992614468dd5687bc1691acc14b56f155",
+  "commit-message-1.txt": "53af0bf1846a3fab55ad75a7b4908d1336f05eaf4bcba040e84d290f3ce5aa89",
+  "commit-message-2.txt": "9843324764f5603e7d3a63cc1df42a5f9c87e010b3d88632fce54db773ff8a50",
+  "commit-message-3.txt": "ffe225cdd54e9001ab38f7ab4dcb10a5cc78ad63e84c03949c841d6a5191dac9",
+  "commit-message-4.txt": "73a826385d1351d97a245da1ec89d4686d9b0ad30e4f55a397f7511759280108",
+  "commit-message-5.txt": "244f15f4a4ba16ea4f63023d3c50df0a2d6261ca587a3eeae938d16b971d833f",
+  "groups/1-records-attributes.txt": "cd18cfa3336fe1945ee298e7a8a02d7486260edd4f6e80aec594ce4795b857df",
+  "groups/2-tools.txt": "5ee8640730cc5a28b919696a2298c1b6e2155d8b9d7015191778eba4d5956d54",
+  "groups/3-foundations-b19-b20.txt": "6134e287959bf417a080fe3847b9feabce9b2b4ff3dad89f64aaf447606658a1",
+  "groups/4-clip-assets.txt": "5e235417238158b6859aa336d186ece41c1d8c33a41971be907fbacc566171f2",
+  "groups/5-clip-qa-and-records.txt": "eb7db68250fca98f7b6a635d3f7e13123bfeb94a07700a809c3b35f3339fd545",
+  "make-groups-used.py": "3c7a597d5152251098a4fe4e2012aad78b40d594f5eca96852d482e2e44f6b2c",
+  "precommit-check-used.py": "759f589afc9584f4a080ed8dad24436da58d00548fca06163c429565b2caa203",
+  "precommit-check.json": "226eb96e1471fa2a247a283f25cca89154e67aee6aaa07581403a4a52554dfdc",
+  "push-batches-resume-used.sh": "f193e72a4d3b78a198bfe637cf1277197d146d2084e56d8c2cd918675cdbf97d",
+  "push-batches-used.sh": "ab69a5919899fd50b57ce5e5efcae931c43da62a6ed4ce3c9cb9c72aea25adbf",
+  "push-log-resume.txt": "fb6241ceefd64c34f5c7e8255a80531627c71b3c3862f1196515496e7ea29dfd",
+  "push-log.txt": "ca8466cce7bf7fa642f27b76f013159a36546fd47cd27ed5e6cd98e0758d5e3b"
+ }
+}
