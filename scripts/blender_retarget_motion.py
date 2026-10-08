@@ -15,7 +15,7 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import identity
 import art_sources
-from rig_motion import retarget,validate_rig_document,validate_export_channels
+from rig_motion import retarget,validate_rig_document,validate_export_channels,validate_source_clip
 from blender_art_preview import embedded_glb_only
 from cv1_restore_glb_weights import split_glb
 ROOT=Path(__file__).resolve().parents[1]
@@ -34,7 +34,10 @@ profile=identity.read_json(identity.command_path(ROOT,a.profile));mapping=profil
 secondary={n for names in profile['secondary_ownership'].values() for n in names}
 if secondary & set(mapping.values()):raise ValueError('BONE_WRITER_CONFLICT')
 if profile['root_motion_policy']!='in_place':raise ValueError('EXPLICIT_ROOT_MOTION_ADAPTER_REQUIRED')
-validate_rig_document(split_glb(motion.read_bytes())[0],mapping.keys())
+source_document=split_glb(motion.read_bytes())[0]
+if receipt['asset_kind']!='motion':raise ValueError('MOTION_RECEIPT_REQUIRED')
+validate_source_clip(source_document,receipt['motion']['clip_names'])
+validate_rig_document(source_document,mapping.keys())
 validate_rig_document(split_glb(target.read_bytes())[0],set(mapping.values())|secondary)
 if not 0<=a.start<a.end<=10000 or not 1<=a.fps<=240:raise ValueError('FRAME_RANGE')
 out=identity.command_path(ROOT,a.out)
@@ -62,6 +65,9 @@ rig.animation_data_clear();scene=bpy.context.scene;scene.render.fps=a.fps;scene.
 ordered=sorted(rig.pose.bones,key=lambda b:len(b.parent_recursive))
 for frame in range(a.start,a.end+1):
     scene.frame_set(frame);bpy.context.view_layer.update()
+    for armature in (source,rig):
+        if not np.allclose(np.asarray(armature.matrix_world),np.eye(4),atol=1e-6):
+            raise ValueError('ANIMATED_ARMATURE_OBJECT_TRANSFORM_UNSUPPORTED')
     poses={b.name:np.asarray(b.matrix) for b in source.pose.bones}
     transfer=retarget(rest,poses,original_rest,mapping,target_parents=original_parents)
     for bone in ordered:

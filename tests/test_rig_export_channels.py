@@ -3,7 +3,7 @@ from pathlib import Path
 import sys
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from rig_motion import validate_export_channels
+from rig_motion import validate_export_channels,validate_source_clip
 
 
 class ExportOwnershipTests(unittest.TestCase):
@@ -45,3 +45,12 @@ class ExportOwnershipTests(unittest.TestCase):
             validate_export_channels(self.doc,{'body'},{'body'})
         with self.assertRaisesRegex(ValueError,'RIG_BONE_MISSING'):
             validate_export_channels(self.doc,{'missing'},{'secondary'})
+
+    def test_source_clip_count_and_receipt_binding(self):
+        self.doc['animations'][0]['name']='clip'
+        validate_source_clip(self.doc,['clip'])
+        with self.assertRaisesRegex(ValueError,'SOURCE_CLIP_BINDING'):validate_source_clip(self.doc,['other'])
+        self.doc['animations']*=2
+        with self.assertRaisesRegex(ValueError,'SOURCE_CLIP_COUNT'):validate_source_clip(self.doc,['clip'])
+        self.doc['animations']=[]
+        with self.assertRaisesRegex(ValueError,'SOURCE_CLIP_COUNT'):validate_source_clip(self.doc,[])

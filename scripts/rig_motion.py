@@ -40,6 +40,12 @@ def validate_export_channels(document, mapped_names, secondary_names):
     return {'status':'PASS','animation_count':1,'channel_count':len(seen),'animated_bones':sorted(targets)}
 
 
+def validate_source_clip(document, declared_names):
+    animations=document.get('animations',[])
+    if len(animations)!=1 or not animations[0].get('channels'):raise ValueError('SOURCE_CLIP_COUNT')
+    if declared_names!=[animations[0].get('name')]:raise ValueError('SOURCE_CLIP_BINDING')
+
+
 def rigid_matrix(value):
     m=np.asarray(value,dtype=float)
     if m.shape!=(4,4) or not np.isfinite(m).all() or not np.allclose(m[3],[0,0,0,1]):

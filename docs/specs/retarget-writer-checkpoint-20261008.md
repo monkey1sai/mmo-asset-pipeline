@@ -6,7 +6,7 @@
 
 沿用既有 identity、art_sources、embedded GLB 檢查及 GLB parser。新增共用 `scripts/rig_motion.py`：rest 相對旋轉、parent pivot 傳遞、剛性矩陣檢查及匯出動畫通道驗證。`scripts/blender_retarget_motion.py` 使用來源收據與 profile，重定向到 target 副本，不改 rest、骨名或層級。
 
-此 adapter 支援單一 skin／armature、嵌入式 GLB、identity armature object transform、in_place policy。來源需先符合既有來源與公開原始素材審查契約；不能繞過 Mixamo 的公開原始再散布限制。非剛性矩陣、歧義骨名、root_motion 或其他未支援情形會拒絕。Source animation 在 CLI fps 下依 start/end frame 取樣；來源有約束、NLA 或其他資料格式的路徑未驗證。
+此 adapter 支援單一 skin／armature、恰一個非空來源 clip、嵌入式 GLB、全段 identity armature object transform、in_place policy。來源 clip 名稱須與 motion 收據一致；多 clip、零 clip、名稱不符與後續影格物件／父節點的非 identity transform 都會拒絕。來源需先符合既有來源與公開原始素材審查契約；不能繞過 Mixamo 的公開原始再散布限制。非剛性矩陣、歧義骨名、root_motion 或其他未支援情形會拒絕。Source animation 在 CLI fps 下依 start/end frame 取樣；來源有約束、NLA 或其他資料格式的路徑未驗證。
 
 Profile 格式沿用本地既有工具：
 
@@ -35,10 +35,11 @@ blender --background --factory-startup --disable-autoexec --python-exit-code 2 -
 - v004 通道隔離正確，但實際 GLB 時間仍從 1/60 秒開始，與宣告零起點不符；121-frame readback FAIL 保留。
 - 修正後 v005：一個 clip、三個 target_body 通道、無 target_secondary 通道。全新 Blender 5.2.2 LTS session 重匯入 121 個 frame，最大矩陣誤差 1.8898e-7、三個蒙皮頂點最大誤差 4.9747e-8 m、root 位置誤差 0、次級骨 local pose 誤差 0，target rest 誤差 5.9605e-8，層級相同，工程 PASS。
 - CLI writer conflict、target hash drift、無效 frame range、既有輸出均拒絕（exit 2）。直接驗證舊 v003 也拒絕。單元測試另覆蓋偽造 secondary、未知／非法 target、歧義名字、多 clip、空 clip 與重複通道。
-- 本地藝術工作區 351 項 unittest PASS，checkpoint 分支 340 項 PASS；兩邊 pipeline validate 均 valid。
+- 審查修正後 v006：新加入全段 object transform、來源 clip 數／名稱 guard，與 v005 相同條件再實跑；121-frame 矩陣及三頂點往返仍 PASS，GLB bytes 與 v005 同 SHA。新增後續 frame 31 才移動物件、多 clip、零 clip、收據名稱錯誤四項 Blender CLI 拒絕檢查均 PASS，未建立候選輸出。
+- 本地藝術工作區 352 項 unittest PASS，checkpoint 分支 347 項 PASS；兩邊 pipeline validate 均 valid。既有六項重定向數學回歸另拆為 tests/test_rig_motion.py，公開 checkpoint 保留相同覆蓋；不是只保留本地歷史通過。
 - Khronos 2.0.0-dev.3.10：0 errors、1 warning NODE_SKINNED_MESH_NON_ROOT。DCC 頂點往返通過不能替代其他引擎對 skinned mesh parent transform 的驗收；不將此 warning 記作完整技術接受。
 
-v005 GLB SHA-256：`54d1cf1f29395216bc501ad40b5ce334d4e87437ba8614de5ad6b08a5038f67c`。本地證據為 `runs/qa/retarget-clean-readback-v003.json`、`retarget-negative-v001/report.json`、`retarget-khronos-v005.json` 及各版 log；原創 fixture、診斷腳本與輸出保留本地。
+v005／v006 GLB SHA-256：`54d1cf1f29395216bc501ad40b5ce334d4e87437ba8614de5ad6b08a5038f67c`。最新本地證據為 `runs/qa/retarget-clean-readback-v004.json`、`retarget-negative-v001/report.json`、`retarget-source-negative-v001/report.json`、同 bytes 的 `retarget-khronos-v005.json` 及各版 log；原創 fixture、診斷腳本與輸出保留本地。
 
 測試收據使用 example.invalid 與 SYNTHETIC_TEST_NOT_LICENSE，僅驗證工程 schema 與流程，**不是人類素材權利核准，也不是可下載的外部來源**。沒有取得或匯入 Mixamo 動作。合成工程通過不證明其他武將美術接受或趙雲 game_ready。
 
