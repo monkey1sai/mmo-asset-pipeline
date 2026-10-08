@@ -1,0 +1,25 @@
+usage: render.py [-h] -o OUTPUT [--preview] [--draft] [--build-subtitles]
+                 [--no-subtitles] [--no-loudnorm] [--fps FPS]
+                 edl
+
+Render a video from an EDL
+
+positional arguments:
+  edl                   Path to edl.json
+
+options:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Output video path
+  --preview             Preview mode: 1080p, medium, CRF 22 — evaluable for
+                        QC, faster than final.
+  --draft               Draft mode: 720p, ultrafast, CRF 28 — cut-point
+                        verification only.
+  --build-subtitles     Build master.srt from transcripts + EDL offsets before
+                        compositing
+  --no-subtitles        Skip subtitles even if the EDL references one
+  --no-loudnorm         Skip audio loudness normalization. Default is on (-14
+                        LUFS, -1 dBTP, LRA 11).
+  --fps FPS             Output frame rate. Default: preserve the source's
+                        frame rate (falls back to 24 if it can't be probed).
+                        Pass e.g. --fps 30 or --fps 30000/1001 to force.

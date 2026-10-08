@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-08",
+  "base_commit": "af148e41c2a6b9177b4e81801e988fc4bf50c164",
+  "scope": "project-local skill integration; no Windows machine install or game-art acceptance",
+  "authorization": "User approved commit/push to codex/video-skills-20261007 and opening a PR; merge remains user decision.",
+  "checks": [
+    {
+      "name": "pinned_submodule_source_restoration",
+      "status": "PASS",
+      "method": "Both submodules freshly cloned at exact gitlinks; CI source check executed locally; SKILL.md, LICENSE and helper/reference verified."
+    },
+    {
+      "name": "project_unit_tests",
+      "status": "PASS",
+      "count": 314,
+      "skipped": 0,
+      "log": "project-tests.log"
+    },
+    {
+      "name": "project_catalog_validation",
+      "status": "PASS",
+      "receipt": "catalog-validation.json"
+    },
+    {
+      "name": "shotcraft_dependency_install_and_template_bundle",
+      "status": "PASS",
+      "method": "npm ci --ignore-scripts --no-audit --no-fund; npx --no-install remotion bundle src/index.ts",
+      "logs": [
+        "shotcraft-install.log",
+        "shotcraft-bundle.log"
+      ]
+    },
+    {
+      "name": "video_use_synthetic_edl_render_and_cut_filmstrip",
+      "status": "PASS",
+      "method": "Fresh synthetic 2s testsrc2 + sine input, two 0.6s ranges, actual upstream render.py and timeline_view.py; existing execution-environment dependencies, not a new venv install.",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "duration": "1.200000",
+            "nb_frames": "36"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "1.280000",
+            "nb_frames": "61"
+          }
+        ],
+        "format": {
+          "duration": "1.280000"
+        }
+      },
+      "limitation": "Video 1.200s/36 frames; AAC/container 1.280s. Codec/frame-count smoke only; no audio-parity or artistic acceptance claim."
+    },
+    {
+      "name": "shotcraft_frame_render",
+      "status": "NOT_RUN",
+      "reason": "Not retried in PR reconstruction. Previous turn hit Chrome Headless Shell download ERR_PROXY_TUNNEL; original artifact unavailable, not counted as current evidence."
+    },
+    {
+      "name": "elevenlabs_transcription",
+      "status": "NOT_RUN",
+      "reason": "No credential requested or paid API called."
+    },
+    {
+      "name": "windows_dcc_game_runtime",
+      "status": "NOT_RUN",
+      "reason": "No actual game character or user Windows machine tested."
+    },
+    {
+      "name": "prior_turn_artifacts",
+      "status": "UNVERIFIED",
+      "reason": "Previous transient workspace cleared; freshly generated records replace prior evidence without inventing old file hashes."
+    }
+  ],
+  "files": [
+    {
+      "path": "catalog-validation.json",
+      "bytes": 250,
+      "sha256": "605579166ac3833dadb45c05d4db0175c5b2677114060345ee61b9c3e4988bb9"
+    },
+    {
+      "path": "footage/edit/base.mp4",
+      "bytes": 577153,
+      "sha256": "a9e36efe63e9989a75e1c62e8ac148114cff76053adcc034a90c339e078f50a3"
+    },
+    {
+      "path": "footage/edit/clips_graded/seg_00_synthetic.mp4",
+      "bytes": 280510,
+      "sha256": "dd95844831e2eed8ec051f62ea4e935f668e08b39145abfcb32269b13607bb51"
+    },
+    {
+      "path": "footage/edit/clips_graded/seg_01_synthetic.mp4",
+      "bytes": 297935,
+      "sha256": "8152106ff878b4840d071de9171372a5e6f9c22a9b46ed14d15a7e1171847971"
+    },
+    {
+      "path": "footage/edit/cut-check.png",
+      "bytes": 155712,
+      "sha256": "575d9674e3427b8129626b2a0291e42f0c4ab60e3db1b15ab9fa5b09e9c5bf3a"
+    },
+    {
+      "path": "footage/edit/edl.json",
+      "bytes": 277,
+      "sha256": "61684b3bf94228ca48182282ce76b33485cd15b65d3cdd30731e9b3733a6bf98"
+    },
+    {
+      "path": "footage/edit/final.mp4",
+      "bytes": 577116,
+      "sha256": "b6583c5af05fc4d603bb2af561be86a9bedad081b0d96efe820f1a602154b331"
+    },
+    {
+      "path": "footage/source.mp4",
+      "bytes": 81413,
+      "sha256": "44f3a71d9b32b4b31c698b72a0a20fbe8c1ff7b33139d78aa5dcab45eb025cf8"
+    },
+    {
+      "path": "project-tests.log",
+      "bytes": 42555,
+      "sha256": "9f83c634887bc6976761abc5de4fc01f6830bd263964a2227795df98481b66fa"
+    },
+    {
+      "path": "shotcraft-bundle.log",
+      "bytes": 393,
+      "sha256": "e76cec7faac16871bd2010e6eda2105cc7a50d0745c663ec2055851293d0ca6a"
+    },
+    {
+      "path": "shotcraft-install.log",
+      "bytes": 459,
+      "sha256": "68ffaf5ea15c317e48af665a4b0d9b0f2fe8b59344c9b0d20c3a4446bf9fc49e"
+    },
+    {
+      "path": "video-use-helper.log",
+      "bytes": 1163,
+      "sha256": "d1752f41d1f667b26bb1106726c4c3ee41ace08fc75efc036faf4a81a0b6077d"
+    },
+    {
+      "path": "video-use-render.log",
+      "bytes": 4341,
+      "sha256": "1e6f5e90f0f2038ffa048f056c3d49387e0e34c1b63e09ea8c89053131267a2b"
+    }
+  ]
+}
