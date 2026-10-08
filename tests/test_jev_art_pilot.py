@@ -43,7 +43,8 @@ class PilotTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # Windows runners may return an 8.3 alias; match the resolved CLI ROOT.
+        self.root = Path(self.temp.name).resolve()
         for relative in (pilot.DATASET, "library/index.json", "scripts/jev_art_pilot.py", "scripts/workbench.py", "scripts/identity.py"):
             target = self.root / relative
             target.parent.mkdir(parents=True, exist_ok=True)
