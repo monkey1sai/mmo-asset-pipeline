@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "INCOMPLETE_BLOCKED_BY_CLOCK_EVIDENCE",
+  "observed_utc": "2026-10-07T08:34:23Z",
+  "engineering_base": "16344513cb8e6431a0dfcec128fc5c86d351361a",
+  "branch": "codex/gait-p4-natural-motion-20261007",
+  "effective_comparison_plan": "runs/qa/gait-p4-natural-motion-20261007/ab-plan-v002.json",
+  "verification": "runs/qa/gait-p4-natural-motion-20261007/verification-v002.json",
+  "independent_review": {
+    "role": "requirements_reviewer",
+    "task": "/root/preflight_review",
+    "scope": "Static preflight only; no DCC/runtime/art acceptance",
+    "initial_status": "BLOCKED_TRIAL_ADMISSION_WITH_THREE_NONBLOCKING_DOCUMENT_WARNINGS",
+    "followup_status": "PASS_STATIC_PREPARATION",
+    "resolved": [
+      "F2: original Frame1 and full transition conditions",
+      "F3: a04 spec bytes/SHA and frozen fields",
+      "F4: pre-execution and post-execution recording order"
+    ],
+    "remaining": "F1: real clock/trial reconciliation; BLOCKED",
+    "verification_sha256": "1d7d7028047a54ef7b2d0aa830194c95d21bcb1c9bc071d593eb38e7d209a3ec",
+    "followup_evidence": "8 selected byte/size checks and canonical plan digest; coordinator additionally rechecked all protected entries"
+  },
+  "local_checks": {
+    "request_identity_and_schema": "PASS",
+    "baseline_payloads": 3,
+    "baseline_file_identity": "PASS",
+    "glb_inventory": "PASS_STRUCTURAL_INVENTORY_ONLY",
+    "catalog_validate": {
+      "decision": "PASS",
+      "assets": 39,
+      "operations": 11
+    },
+    "protected_file_hashes": {
+      "decision": "PASS",
+      "entries": 336,
+      "mismatches": 0
+    },
+    "snapshot_v001": {
+      "decision": "PASS_BYTES_SIZES_CANONICAL_DIGEST",
+      "comparisons": 345
+    },
+    "snapshot_v002": {
+      "decision": "PASS_BYTES_SIZES_CANONICAL_DIGEST",
+      "comparisons": 347
+    },
+    "new_evidence_json_utf8_whitespace": "PASS",
+    "tracked_diff_to_head": "EMPTY",
+    "staged_diff": "EMPTY",
+    "untracked": [
+      "runs/qa/gait-p4-natural-motion-20261007/"
+    ],
+    "full_local_unit_suite": {
+      "decision": "NOT_RUN",
+      "reason": "No frozen product/tool source changed; the exact engineering SHA CI was queried live separately"
+    }
+  },
+  "clock": {
+    "current_static_preparation_start_utc": "2026-10-07T08:16:22.000Z",
+    "observed_checkpoint_utc": "2026-10-07T08:34:23Z",
+    "observed_wall_seconds": 1081,
+    "active_seconds_allocated_to_formal_ledger": null,
+    "user_wait_exclusions_declared_in_this_task": [],
+    "reason": "Observed wall interval retained as evidence, not asserted as reconciled coordinator/trial elapsed time; overlaps parent chat and original post-pause intervals are incomplete",
+    "closing_rule": "Reconcile bookkeeping after this snapshot using actual completedAt at next resume; do not reset elapsed time or assume zero"
+  },
+  "fresh_dcc_motion_baseline": "NOT_RUN",
+  "candidate": null,
+  "candidate_ab": "NOT_RUN",
+  "candidate_category_signatures": "NOT_RUN",
+  "candidate_dcc_transition_runtime_gates": "NOT_RUN",
+  "naturalness_scores": null,
+  "art_accepted": false,
+  "technical_accepted": false,
+  "p5": "NOT_RUN_OUT_OF_SCOPE",
+  "paid_calls": 0,
+  "commit_created": false,
+  "push_performed": false,
+  "task_owned_background_work": "NONE",
+  "next_input": "Original coordinator work/user-wait intervals after pause-31, inherited baseline/v001/total ledger allocation and candidate/trial identity; reconcile the retained current task interval before execution."
+}

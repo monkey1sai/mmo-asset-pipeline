@@ -1,0 +1,1821 @@
+{
+  "schema_version": 1,
+  "observed_utc": "2026-10-07T08:28:07.478750+00:00",
+  "overall_status": "BLOCKED_BEFORE_ANIMATION_TRIAL",
+  "capture_script": {
+    "path": "runs/qa/gait-p4-natural-motion-20261007/preflight-used.py",
+    "bytes": 7029,
+    "sha256": "a3b6abb3bb5c0f8bc6f19721e04ef6a5046103f41f2ed64f639b5c7eefdfb68c"
+  },
+  "comparison_plan": {
+    "path": "runs/qa/gait-p4-natural-motion-20261007/ab-plan.json",
+    "bytes": 10068,
+    "sha256": "69b0dbff4765e45583e0b9a92388cec6c3b5446c398f3808d2b34bc4350f866d"
+  },
+  "comparison_plan_canonical_sha256": "5d28a51a7aea91f331f782150f2299a2211973087611eff03b27e3f055f05c89",
+  "request": {
+    "status": "PASS_IDENTITY_AND_SCHEMA_ONLY",
+    "request_sha256": "4e48344261912e00dcf9e32fa657cbfbb43124cd639be7d026f081aeb7a93cbb",
+    "quality_sha256": "8df7c6cb88f08cd8bb0547d019f319da66e1cf43bc75a4a2253d1a3edf8663ce",
+    "pending": []
+  },
+  "baseline_artifacts": [
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend",
+      "bytes": 34656060,
+      "sha256": "8c75c0540c0ddf35fce2f64aab06f9fcf0b9dddfc0f8b49e3cd5b84d30331e3e",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/AN_RO_Walk_Sword.blend",
+      "bytes": 859570,
+      "sha256": "e96f0292034f5102caa380e3bf4e70ca4af08919b48dbed632db66be0759bc07",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b20/an_ro_walk_sword_a04_b20_baked_owner_exact_weights.glb",
+      "bytes": 3431896,
+      "sha256": "d4918618acd160b38409edcf3767017aa456d329f6a29b80cc02194181a0db08",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    }
+  ],
+  "source_qa_references": [
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/interaction.json",
+      "bytes": 550,
+      "sha256": "26490785d31f557550ced593da71566e0b0c5034be3170c1159e9ac0155cea6d",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+      "bytes": 39213,
+      "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/contact-fixtures.json",
+      "bytes": 7020,
+      "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+      "bytes": 52934,
+      "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7",
+      "status": "PASS_FILE_IDENTITY_ONLY"
+    }
+  ],
+  "inventory": {
+    "status": "structural_inventory_only",
+    "bytes": 3431896,
+    "sha256": "d4918618acd160b38409edcf3767017aa456d329f6a29b80cc02194181a0db08",
+    "triangles_per_mesh_copy": 56435,
+    "primitives": 10,
+    "meshes": 10,
+    "nodes": 73,
+    "materials": 3,
+    "images": 0,
+    "external_images": 0,
+    "skins": 1,
+    "animations": 1,
+    "warnings": [],
+    "not_verified": [
+      "visual_quality",
+      "mesh_topology",
+      "UV_quality",
+      "dimensions_and_pivot",
+      "LOD",
+      "collider",
+      "rig_mapping",
+      "animation",
+      "game_runtime",
+      "unity_import",
+      "license"
+    ]
+  },
+  "historical_clip_check": {
+    "record": {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-check-b20/clip-check.json",
+      "bytes": 335787,
+      "sha256": "d0c7c743dd677e3ee1eace8d1714e9a4546c3451ee448eca3eb0a274d27b5801"
+    },
+    "sample_count": 137,
+    "failure_count": 0,
+    "fresh_execution": false
+  },
+  "snapshot_clock_arithmetic": {
+    "status": "PASS_SNAPSHOT_ARITHMETIC_ONLY",
+    "record": {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-31.json",
+      "bytes": 8711,
+      "sha256": "2a3e73309c9e4ef8988c323341f99e97d6ec690aa08e814ebc7112214049f4d0"
+    },
+    "intervals": 36,
+    "active_seconds_total": 54306,
+    "recorded_utc": "2026-10-07T05:58:41Z",
+    "current_remaining_seconds": null
+  },
+  "r6_ledger": {
+    "record": {
+      "path": "runs/qa/ro-swordsman-character-v1-r6/quality-ledger.json",
+      "bytes": 14548,
+      "sha256": "49b679700276fea2c8a5cafb80ef933abc79d91aa32167c50c01e14f1f621676"
+    },
+    "trials": [
+      {
+        "id": "baseline",
+        "elapsed_seconds": 2641.0
+      }
+    ],
+    "v001_elapsed_entry_present": false,
+    "is_current_consumption_evidence": false
+  },
+  "protected_files": [
+    {
+      "path": ".github/workflows/art-tooling-ci.yml",
+      "bytes": 3625,
+      "sha256": "1b93bd6d006082b1f66773469dd1ac1bd1cc43fa6b8bcd8b94f63a9ab9b2bf69"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/contact-fixtures.json",
+      "bytes": 7020,
+      "sha256": "c7c813004b08e3509595043ed8a1f3ba3b1477eb55e8d13f13c65515fa398331"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+      "bytes": 39213,
+      "sha256": "cba7b48aa4ab8834714b91bc4136982b9edf4217a27c64068ef8e2ceeb173c6e"
+    },
+    {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/interaction.json",
+      "bytes": 550,
+      "sha256": "26490785d31f557550ced593da71566e0b0c5034be3170c1159e9ac0155cea6d"
+    },
+    {
+      "path": "requests/ro-swordsman-character-v1-r6.json",
+      "bytes": 52961,
+      "sha256": "76cb8b0c3f7719b6ce42a1d9e2ce30d35d3063b16f8184a64b7d5a5d15b9d4ae"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/blender-smoke.log",
+      "bytes": 3782,
+      "sha256": "e0b9baa7d5cb1acfca1208d204b9bb56c20f1313d19890ba5734e38b2afedb26"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/capture-v001/beauty-00.png",
+      "bytes": 211561,
+      "sha256": "51edce29ed92e2539d9b0389e9ad0ff759e906d841e27cde3bbcd311e676afc3"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/capture-v001/beauty-01.png",
+      "bytes": 204281,
+      "sha256": "1d6d690e737287b3fc6b18b165efc3f3a068d812f0065af384ab99294897eda3"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/capture-v001/capture.json",
+      "bytes": 1576,
+      "sha256": "966192fe5b71a7044228ec66b12266349edbda73a776ce3ce15c8a5c8dd9a3af"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/capture-v001/clay-00.png",
+      "bytes": 157886,
+      "sha256": "8be86b003149f96bd13ea27a2c98359b2f039ac4c4b2871be83cb8ba0328d079"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/capture-v001/clay-01.png",
+      "bytes": 151522,
+      "sha256": "3be28f0d3a52eaf1ada2b10657f778cfa9b869415a642d48e2becb814cfbdbb9"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/checkpoint-preflight.md",
+      "bytes": 2629,
+      "sha256": "88fb9d4f7796e5fe0847a10645fb248ed06654f588710a0110006482e5cee167"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/checkpoint-unittest.log",
+      "bytes": 41712,
+      "sha256": "f5f948a6b294deeea722708704eca3da8c16d9d304aa4cd87d2cf3f429ff7c6b"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/CHECKPOINT.md",
+      "bytes": 2127,
+      "sha256": "93a36cf422f0ce1fd7832abc9f0333dd76b88973b1e47fb252a0ad0888784564"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/ci-failure-01.json",
+      "bytes": 1565,
+      "sha256": "12d7a608a6a6c7bfb935e8981655e7d0528d7186812368f78df2eab6e7359940"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/ci-repair-01-unittest.log",
+      "bytes": 41724,
+      "sha256": "6aae7594961c7e18f9ec2ac7128e550167971f1bf4eaab86677e3d2782b12e46"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/engineering-baseline.json",
+      "bytes": 2869,
+      "sha256": "f2d3c0e109a70743c27b53919e4bc38b80d9cab33063d932e2e88375bf1b3c44"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/installed-files.json",
+      "bytes": 2731,
+      "sha256": "8eee4dad00b32b2420a0035a6e0e1f90a3440e8ed9d0271a61e966427b3b81eb"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/kit-reproduction.log",
+      "bytes": 7990,
+      "sha256": "6fe5c296136b36205cb5c0b6772f72bbb30767852f2449f61260a78c1e65bf77"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/main-unittest.log",
+      "bytes": 41712,
+      "sha256": "a5696430246d3e3f6577eb0494067cc653c4f4720da4b11300bb93d74f2edf85"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/main-validate.log",
+      "bytes": 262,
+      "sha256": "106bb3a13bb5b30e058ed51556ccd0917934d8b64cd8129ff29e3aab46503568"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/motion-baseline-plan.json",
+      "bytes": 2354,
+      "sha256": "838ae679d44da1fabc9ab1127bb1eef83d8f73518a21e34f9b9c53040928c7dc"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/official-validator.json",
+      "bytes": 309,
+      "sha256": "dbf693747e2def7d89fdf92d6476326b7d9c85c191d5031b619fde0568590d4f"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/preview-protocol.json",
+      "bytes": 554,
+      "sha256": "1d7db33016923596e063decc64ba42cedcebcd330826a2be961cfbf0aaa06777"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/README.md",
+      "bytes": 5731,
+      "sha256": "f753b81d5df0737d7bb59feec46f9d17a42d848db63eac803ec060bdab08e41e"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/remote-ci-pass-02.json",
+      "bytes": 5838,
+      "sha256": "e49c5cdf480780f39a4bbfad3bc5f22286ef8a0b58a1de0dec219c58a3a111f5"
+    },
+    {
+      "path": "runs/qa/art-tools-upgrade-20261007/verification.json",
+      "bytes": 6164,
+      "sha256": "579af78eb3739c920f0f915321c300b92e2b0fd475a6737c3640db837371bbe2"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress.json",
+      "bytes": 15355,
+      "sha256": "98133fa4a689965540c0de908b98fb0549d18091863c995d9a616016fe3a6def"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-31.json",
+      "bytes": 8711,
+      "sha256": "2a3e73309c9e4ef8988c323341f99e97d6ec690aa08e814ebc7112214049f4d0"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1-r4/joint-range-contract-v5.json",
+      "bytes": 52934,
+      "sha256": "54c90722cdb68cdd665428b2118307a406f3c4b7084c5dcad73c5bb905709ff7"
+    },
+    {
+      "path": "runs/qa/ro-swordsman-character-v1-r6/quality-ledger.json",
+      "bytes": 14548,
+      "sha256": "49b679700276fea2c8a5cafb80ef933abc79d91aa32167c50c01e14f1f621676"
+    },
+    {
+      "path": "scripts/advance_ro_binding_trial.py",
+      "bytes": 3003,
+      "sha256": "3b2ce3415fafa59a2e3792bdcc9fad1a0b6b33818b3096460e5ddccca999e847"
+    },
+    {
+      "path": "scripts/advance_ro_collision_constraints.py",
+      "bytes": 3801,
+      "sha256": "52110fc6a111c2d1bcab967a5fc16c30378c7c6ed14f0a3755f112488afc7c7e"
+    },
+    {
+      "path": "scripts/advance_ro_contact_ik.py",
+      "bytes": 3425,
+      "sha256": "d2b901af669857fa168d4dc22edd27fa900e18d74c5aa384d9497d64380c942a"
+    },
+    {
+      "path": "scripts/advance_ro_corrective_trial.py",
+      "bytes": 2647,
+      "sha256": "938238fbc2bd23676fe88d0b556e728301364cae3bfc5c3170d9dd75abe2685d"
+    },
+    {
+      "path": "scripts/advance_ro_grasp_certification.py",
+      "bytes": 3466,
+      "sha256": "ec19759156b54260fb1f6bae2cce7c42015a080e88465205571235064086a1a7"
+    },
+    {
+      "path": "scripts/advance_ro_grasp_corrective.py",
+      "bytes": 3409,
+      "sha256": "6d867ae961bf3d814df5424f8d2203883705d268ecff9b08f35ed0cb70bc8144"
+    },
+    {
+      "path": "scripts/advance_ro_hand_trial.py",
+      "bytes": 3658,
+      "sha256": "3c00c437d382fe9a51930f1ea6fb94656e1c568e4dcd6c3b8fa413b3fb2ce9d5"
+    },
+    {
+      "path": "scripts/advance_ro_index_pulp.py",
+      "bytes": 3874,
+      "sha256": "eb76bb72ca053158481bd64c0af88d2c3c4b8b828b5df8c838afe779d1a3ad7c"
+    },
+    {
+      "path": "scripts/advance_ro_moving_target.py",
+      "bytes": 3607,
+      "sha256": "48f4bbffc54817b1c59af132c7eb509859f77c88b6b84174e733dc4736b7e197"
+    },
+    {
+      "path": "scripts/advance_ro_underlay_trial.py",
+      "bytes": 4074,
+      "sha256": "f00bf36e955850c156ac4a0b445343fb11d86fbb20a6cc80896d751dfb13cdbd"
+    },
+    {
+      "path": "scripts/advance_ro_vector_direction.py",
+      "bytes": 3291,
+      "sha256": "6e6b2b34d5103417eb86031c588b86b7829cfc2d2e71db33acd7b7d4a2889bf4"
+    },
+    {
+      "path": "scripts/advance_ro_whole_contact.py",
+      "bytes": 4613,
+      "sha256": "5d79e60f74062ecb646b3ab38db9c8873103183b16c94540acd2616ab00873d3"
+    },
+    {
+      "path": "scripts/advance_ro_wrist_rebuild.py",
+      "bytes": 4098,
+      "sha256": "7e336f3e0753b94a78dee7fc79dc22ecc580b2ab1148e15fb9a7781e315fd09c"
+    },
+    {
+      "path": "scripts/advance_ro_wrist_trial.py",
+      "bytes": 3729,
+      "sha256": "6590718a48fbc728a1034fef41c577c98be4355bd27b4ead7b0ca1dde99e6e87"
+    },
+    {
+      "path": "scripts/animate_ro_grasp_corrective.py",
+      "bytes": 10643,
+      "sha256": "e4408e4f7ebe5cf7450d25c3c319613b96ed4fb4e11fef57b32872a84483c33c"
+    },
+    {
+      "path": "scripts/archive_ro_phase_evidence.py",
+      "bytes": 2738,
+      "sha256": "b9f53cff38f8ac9bed448549f90d783c7451241ffe933dcd6a39dd945804de8c"
+    },
+    {
+      "path": "scripts/art_sources.py",
+      "bytes": 15509,
+      "sha256": "0c20d324cb34564733202153e8158047ee111162be9c478d9fcc843b2f528e40"
+    },
+    {
+      "path": "scripts/assemble_ro_batch_baseline.py",
+      "bytes": 6135,
+      "sha256": "6c8989ca68c2e6f158c3d1f2443d7397300bab031bac7d96a35169fc6f06baab"
+    },
+    {
+      "path": "scripts/audit_ro_pulp_surface.py",
+      "bytes": 3997,
+      "sha256": "59848c8159673193d09aa82d4771b80f78a79bbcb5cadec0b81d3404c3f42e14"
+    },
+    {
+      "path": "scripts/audit_ro_thumb_patch_uv.py",
+      "bytes": 2317,
+      "sha256": "b94ca0597ecd1bea6e47701bc21367a91c41b1e749fa9689aa92a8796146b76d"
+    },
+    {
+      "path": "scripts/baseline_ro_hand_phase.py",
+      "bytes": 8326,
+      "sha256": "f0ef7665f47e0bfab60f0aed1b980fa50092c7384dea5b4907ed7fdfec2af88b"
+    },
+    {
+      "path": "scripts/baseline_ro_hand_structure_phase.py",
+      "bytes": 8618,
+      "sha256": "8d4f493f225fb94f397de10b8efdb941dd783354c6cb59b14fdb01929e98a859"
+    },
+    {
+      "path": "scripts/blender_art_preview.py",
+      "bytes": 12309,
+      "sha256": "294e99ff315f747326dc6aee7168cd9fd301af623aaad28681bf79e25a576ef4"
+    },
+    {
+      "path": "scripts/build_ro_apose_baseline.py",
+      "bytes": 4834,
+      "sha256": "c6f10f94d7d6452d2be39fd36cf92f218bf83c278b12fda9747a0490c2acafb7"
+    },
+    {
+      "path": "scripts/build_ro_apose_candidate.py",
+      "bytes": 16699,
+      "sha256": "4bbf7deeafc0e0c071c807620b1af2d38168c766e6a26c709c71a860c64ebcd4"
+    },
+    {
+      "path": "scripts/build_ro_authored_grasp.py",
+      "bytes": 2537,
+      "sha256": "0794fcb9198afb5a7ae93b71d606e958366ceee430de9cc0ba778c193ba7c1f2"
+    },
+    {
+      "path": "scripts/build_ro_grasp_corrective.py",
+      "bytes": 6925,
+      "sha256": "2e0a90a3db1ba301108e76a1482ea5475886214f4629058f1f689d2e9e6d7ce0"
+    },
+    {
+      "path": "scripts/build_ro_index_pulp.py",
+      "bytes": 7006,
+      "sha256": "0aae88fcf7fa19d5f72e090f387e4570ffd50b3da595b96954b1f6a6d6e26f55"
+    },
+    {
+      "path": "scripts/build_ro_source_baseline.py",
+      "bytes": 2879,
+      "sha256": "3231bfdc6d1fedbfdfa88f5331aa53e4e3eba5aa4fe72ce51913c88de3eec7f2"
+    },
+    {
+      "path": "scripts/build_ro_swordsman.py",
+      "bytes": 25474,
+      "sha256": "d5f358f27e4c733a23bf9de2e9fdf46e74b341881f3c95cb7e11110d2a3cb8d4"
+    },
+    {
+      "path": "scripts/build_ro_thumb_quad_patch.py",
+      "bytes": 11881,
+      "sha256": "425e9c9df5673e8ca396e944a6ee81119b141b9ee2c90ad7b5394e467ae536b5"
+    },
+    {
+      "path": "scripts/calibrate_ro_generated_glove.py",
+      "bytes": 8791,
+      "sha256": "75d0b5de1623da7447967ee606dde57bb3bd4f51a455f4cda8d779072fef4690"
+    },
+    {
+      "path": "scripts/calibrate_ro_hand_prototype.py",
+      "bytes": 9827,
+      "sha256": "1c983499278e2f3906d3f335d41af80e437b656541381d91bb15510283a39ebb"
+    },
+    {
+      "path": "scripts/certify_ro_grasp_animation.py",
+      "bytes": 7423,
+      "sha256": "9a63913408bf142b108befbab0a0bb2e85b991fc52f7bcfe54ed1d94620d2968"
+    },
+    {
+      "path": "scripts/check_ro_batch_roundtrip.py",
+      "bytes": 3310,
+      "sha256": "1843c286bfd82bb5dae6f8eb4776ff50c00a21c17384f414fed566257cbd7aef"
+    },
+    {
+      "path": "scripts/check_ro_digit_axis_runtime.py",
+      "bytes": 1921,
+      "sha256": "1fdfb99d432d1bf45a5301dc6a311fa76320cfa70527f08caf1e2d2bf93d2e80"
+    },
+    {
+      "path": "scripts/check_ro_hand_direction.py",
+      "bytes": 3992,
+      "sha256": "e86a23b271eb20c024dd1bdc3f386c92f461994b4ea86616070f8307b954800d"
+    },
+    {
+      "path": "scripts/check_ro_hand_roll.py",
+      "bytes": 4207,
+      "sha256": "508298bba3eeb009ae3ecb1461b48122fe58ede9988608cdc6a5964fe185b3aa"
+    },
+    {
+      "path": "scripts/check_ro_swordsman.py",
+      "bytes": 6660,
+      "sha256": "a003b88180c13adf305042ef0c6eff62649fc1458548e6e4044fb3f56d5a3efe"
+    },
+    {
+      "path": "scripts/check_ro_vector_direction_v002.py",
+      "bytes": 3212,
+      "sha256": "8899ae443ef6aa3039c728c92111b38ff0b051382c277f7979341dadecfde3cb"
+    },
+    {
+      "path": "scripts/check_ro_vector_signed_views.py",
+      "bytes": 1110,
+      "sha256": "6b608cb066ad8d6a6e35468b896fabd0fc8eb46da74108156a64f6396691528b"
+    },
+    {
+      "path": "scripts/check_ro_wrist_animation_roundtrip.py",
+      "bytes": 7514,
+      "sha256": "a4cc77ceccf96a684cc0dfd2a84a957fb00b027d215a7b807b2caf390cb61d92"
+    },
+    {
+      "path": "scripts/clarify_ro_hand_structure_contract.py",
+      "bytes": 3335,
+      "sha256": "a6d93a6216d6d5bcf20196091367e1b077b76287e3c9309ea53f0f1f78c922c1"
+    },
+    {
+      "path": "scripts/close_ro_core_trial.py",
+      "bytes": 5536,
+      "sha256": "4fae03fb930ecce41f328ecae58f3bc3fcda21dd8550579d55e4250deaa0f761"
+    },
+    {
+      "path": "scripts/close_ro_final_prototype.py",
+      "bytes": 8206,
+      "sha256": "a28671e53a6206239bc2d3d821c67bbec62f0d749bc6bb14970a5f333a889e0c"
+    },
+    {
+      "path": "scripts/close_ro_grasp_design_phase.py",
+      "bytes": 6744,
+      "sha256": "5d86772f82ae5a8a8c20b56541fc5352979d03446a45333ef47aac224498c772"
+    },
+    {
+      "path": "scripts/close_ro_hand_phase.py",
+      "bytes": 11725,
+      "sha256": "234ab42266d4cc52b6a9c98fe7416ca258e51f9df72c46732667eb891baf96ec"
+    },
+    {
+      "path": "scripts/close_ro_hand_structure_first_trial.py",
+      "bytes": 5436,
+      "sha256": "9be2cad98da0ce43666db026cc9a6ab41b50bab45ef6f6a3b9069a71ac8268d0"
+    },
+    {
+      "path": "scripts/close_ro_hand_structure_phase.py",
+      "bytes": 8639,
+      "sha256": "4bbd9a81d89794b9ffa4d38a4dd6a53d6d89e30e8e137f7197ceed7b304d0936"
+    },
+    {
+      "path": "scripts/close_ro_thumb_patch_trial.py",
+      "bytes": 4663,
+      "sha256": "94812d7b1a2aad182b671c9c2f7af1cf5a128b12e113f726aad8e8b2c5c33f2a"
+    },
+    {
+      "path": "scripts/close_ro_thumb_two_step.py",
+      "bytes": 3576,
+      "sha256": "d63b6259d90f9b9b530790d7872e82d5170fab9b42a3c1c7c205164175f8b2b5"
+    },
+    {
+      "path": "scripts/close_ro_weight_vector_phase.py",
+      "bytes": 6919,
+      "sha256": "7c256e8bab82395ed0ea6543f3217ab1f0fea84c71fbf230c7c121a7f2e0091c"
+    },
+    {
+      "path": "scripts/close_ro_whole_hand_phase.py",
+      "bytes": 7265,
+      "sha256": "82a8e64c784cd68c3862e8207d46461292011949b044da5dd120d26375decb03"
+    },
+    {
+      "path": "scripts/correct_ro_glove_contact.py",
+      "bytes": 9234,
+      "sha256": "03ace3371801d3d4387243a401ac834f47f18d423b3c09dffea57ecd16c19f2d"
+    },
+    {
+      "path": "scripts/cv1_ab_sheets.py",
+      "bytes": 2828,
+      "sha256": "8bf5efa576842aeda4945cfbcc7283d4392a6136b8237dce3551a96ed670c7a7"
+    },
+    {
+      "path": "scripts/cv1_arm_ik.py",
+      "bytes": 17608,
+      "sha256": "3fe9609f1ba1cb8e2eeeb4ff83a8d7f8d1ce0264cb78f3f688722d740e4b3456"
+    },
+    {
+      "path": "scripts/cv1_author_clip.py",
+      "bytes": 18086,
+      "sha256": "652ec69fa08c089e32dbc98c8cfda6725b2a598a44086872d3f0dfaa9b07cf7d"
+    },
+    {
+      "path": "scripts/cv1_author_locomotion.py",
+      "bytes": 11784,
+      "sha256": "a0ef80372ff4c3029188fda523be0b87551ff2d57c9b8d201d064d7b588fdac9"
+    },
+    {
+      "path": "scripts/cv1_bed_posture.py",
+      "bytes": 12906,
+      "sha256": "225671e31564b564b2fbae8c32fa1e67889e2c2a615c1a0bc08d15ec42047988"
+    },
+    {
+      "path": "scripts/cv1_bind_core_to_armor.py",
+      "bytes": 6895,
+      "sha256": "6609ba102ba47a3ad33f8345aa3ed7d91f6adca1da0827f23b29bda616f54731"
+    },
+    {
+      "path": "scripts/cv1_clip_check.py",
+      "bytes": 29869,
+      "sha256": "5c6482d6c0f2f07745aa7528dcacfd8ee4dd3e437b5d4a26aa4d8020981c28d1"
+    },
+    {
+      "path": "scripts/cv1_clip_pipeline.py",
+      "bytes": 6291,
+      "sha256": "284bc744588d93de084d2eab0bade696d1ef8d59bd1050a78cf726999594ead5"
+    },
+    {
+      "path": "scripts/cv1_coat_lying.py",
+      "bytes": 20621,
+      "sha256": "f4a47fa7630b3f1925556e2debb9c1cfbac6db736cac314bef39783915704b0d"
+    },
+    {
+      "path": "scripts/cv1_contact_fixtures.py",
+      "bytes": 5892,
+      "sha256": "d0c85736d1f70c75feaaab39c0b414cfc9a809b3b554a6119a63b7da2c05c436"
+    },
+    {
+      "path": "scripts/cv1_contact_sheets.py",
+      "bytes": 2052,
+      "sha256": "d0b5eceae0296ef447d9173e0efbd54d327354531118ea6d83ef212d6af2b356"
+    },
+    {
+      "path": "scripts/cv1_contract_pose.py",
+      "bytes": 4409,
+      "sha256": "1855f8b0dad546630ebcc281d6552fa6e05785928bbdc63c90f66cb375b35b99"
+    },
+    {
+      "path": "scripts/cv1_core_microcorrectives.py",
+      "bytes": 15461,
+      "sha256": "2d6e73c37338229932c97ecd12207a07d1243aff33c165852058101edd005d49"
+    },
+    {
+      "path": "scripts/cv1_export_candidate.py",
+      "bytes": 10403,
+      "sha256": "cd3f72c82d8d1d80cd97b03276d31ddf35d0e3b3f838657a0b76c2e229a4ff56"
+    },
+    {
+      "path": "scripts/cv1_export_clip.py",
+      "bytes": 16017,
+      "sha256": "b18b2f26c153880e89fb8b597e19ce3526d815d87655cb8d7760d6908cb36d9e"
+    },
+    {
+      "path": "scripts/cv1_fit_core_under_armor.py",
+      "bytes": 6481,
+      "sha256": "99b38e5201b7b86e7716d68405bc4e90acdd793ae5d5079bff616d37df47a7b8"
+    },
+    {
+      "path": "scripts/cv1_foot_lock.py",
+      "bytes": 12057,
+      "sha256": "a2db2dc937622e852e4a3a33b19285ec01e8c8cc40c0439bb8fcdb2f5dc18615"
+    },
+    {
+      "path": "scripts/cv1_foundation_signature.py",
+      "bytes": 5311,
+      "sha256": "b114c367cfd8c5559a07d926768209593dc979b69d7d7a030fae39e5b24b14cd"
+    },
+    {
+      "path": "scripts/cv1_fx_layer.py",
+      "bytes": 12288,
+      "sha256": "595bb2533500e85cf52edc77058de9ccafee2a1c4d8d935ec3295b94a25d9766"
+    },
+    {
+      "path": "scripts/cv1_gait.py",
+      "bytes": 4159,
+      "sha256": "3e993aae2faf7e12f06a97773c71ee97ea04d2f209248978c7e54593d4081ef2"
+    },
+    {
+      "path": "scripts/cv1_hand_correctives.py",
+      "bytes": 19183,
+      "sha256": "22f5eb13bb97e49689b0319a7578c8f9b48a76cdb98339d1b476aa21e055d448"
+    },
+    {
+      "path": "scripts/cv1_interaction.py",
+      "bytes": 16002,
+      "sha256": "09d2ce6cf5ebcf9c40fe875d57dc1d4ffa2859a32f505c259d6bf77ecf0c5d30"
+    },
+    {
+      "path": "scripts/cv1_joint_contract.py",
+      "bytes": 13830,
+      "sha256": "cd7c55ce1101eb5b42e9228b095e658460be50286019903462dcd5b669cd8fc3"
+    },
+    {
+      "path": "scripts/cv1_joint_range.py",
+      "bytes": 18421,
+      "sha256": "f8d10c25b81e6029db721ce540a4a19b579fbffd0d4bd27a9e5d9b2756010bbf"
+    },
+    {
+      "path": "scripts/cv1_joint_range_summary.py",
+      "bytes": 1483,
+      "sha256": "b91f5a2020f9bcebcbd282cf79d6874e783f7f8982e67195aea4ef20116604cd"
+    },
+    {
+      "path": "scripts/cv1_p1_export_reference.py",
+      "bytes": 12622,
+      "sha256": "26641819be5feca9ffa144a5b6593be3fad5047930558e9f9181086ee94bfd4f"
+    },
+    {
+      "path": "scripts/cv1_p4_manifest.py",
+      "bytes": 7660,
+      "sha256": "2e500121c6e7922fcf93cd5d42495932cb56a65343057016b18a1a206f30179d"
+    },
+    {
+      "path": "scripts/cv1_p4_scenarios.py",
+      "bytes": 12091,
+      "sha256": "23e07af89900c167eb7cb2ccf52c4a9764650356befcb72f1327b107f5197edf"
+    },
+    {
+      "path": "scripts/cv1_pauldron_hinge.py",
+      "bytes": 4445,
+      "sha256": "bc02d71c0938f9eab9097d93fe842d35618608219a05aa77d93f115e7b0b9737"
+    },
+    {
+      "path": "scripts/cv1_pose_rules.py",
+      "bytes": 9734,
+      "sha256": "04121ff0b7f72ea65dc26a307606cf56fc2688d25bf1cbd6a7b8e28e9fc158d2"
+    },
+    {
+      "path": "scripts/cv1_protocol_views.py",
+      "bytes": 1305,
+      "sha256": "c462bf8ed0e58bb95470280a41a944a129cd5e3d10547ad4bed7222a7d725c69"
+    },
+    {
+      "path": "scripts/cv1_restore_glb_weights.py",
+      "bytes": 7419,
+      "sha256": "717ced389cc3e3ebf7ae4fbbceda7cc995fade4593642a341ca5a0ed118a44ba"
+    },
+    {
+      "path": "scripts/cv1_smooth_crease_weights.py",
+      "bytes": 8839,
+      "sha256": "1645fc0d333155f14df534fd49c2dec0c456d4776c5a0c5c8ab7dc0ae45e5ced"
+    },
+    {
+      "path": "scripts/cv1_soup.py",
+      "bytes": 11091,
+      "sha256": "384b8664cf5863226a32f3076c2e4e70bf4cfa488ef1d03c4a2ad70c6be22440"
+    },
+    {
+      "path": "scripts/cv1_strip_bone_channels.py",
+      "bytes": 2718,
+      "sha256": "1632476481d16059ea7a71d22bbe5ee3db00107bd5c3f1455fef8475f7dad9a4"
+    },
+    {
+      "path": "scripts/cv1_transition.py",
+      "bytes": 7446,
+      "sha256": "d10c6917851d35c8524c9f1cc0ec1515e984849cd4766d55ae9a54d571797f2d"
+    },
+    {
+      "path": "scripts/cv1_transition_check.py",
+      "bytes": 47332,
+      "sha256": "46031575b4cbed96682de0b788605154b4ea8667f09431c1650e064a407455db"
+    },
+    {
+      "path": "scripts/cv1_two_hand_pose.py",
+      "bytes": 11142,
+      "sha256": "6e6b8502a6a7fac9df89856a8f42f59d6afe042d360dfd571c5d917ba34815c6"
+    },
+    {
+      "path": "scripts/cv1_v001_assemble.py",
+      "bytes": 26062,
+      "sha256": "f484cfbe2f5d1914cca271d1446a2d3531a02820f1d26b647c68d920c1968ddd"
+    },
+    {
+      "path": "scripts/cv1_verify_glb_roundtrip.py",
+      "bytes": 5788,
+      "sha256": "05c409041163d6f2984f4b24fa4c25b1965c48a098daf7fb3a73997c79199a34"
+    },
+    {
+      "path": "scripts/cv1_weights_snapshot.py",
+      "bytes": 1544,
+      "sha256": "18b1816c01591823d325495e8e65eabee1c1537c3b3911a43044166dbca85674"
+    },
+    {
+      "path": "scripts/derive_ro_collision_constrained_solver.py",
+      "bytes": 4829,
+      "sha256": "51fd1c87e2f2797e2641e1483221addd11ca99c604d4188aa1516f1d34ac851b"
+    },
+    {
+      "path": "scripts/derive_ro_moving_target_solver.py",
+      "bytes": 2451,
+      "sha256": "1d6d55f9404761161cb682952abc5b18fe21bbb93ecd76cb0c3bb09e136477cc"
+    },
+    {
+      "path": "scripts/diagnose_ro_apose_weights.py",
+      "bytes": 2548,
+      "sha256": "aa3824971c878cd5b2d3901f28708921d8493e47e265deb3e1c52eded8ee592e"
+    },
+    {
+      "path": "scripts/diagnose_ro_cloth_boundaries.py",
+      "bytes": 2158,
+      "sha256": "1468e63673a155232e34539766326c9dea6fed819a0abed8ba0c0e5ee394ae07"
+    },
+    {
+      "path": "scripts/diagnose_ro_interval_uncertainty.py",
+      "bytes": 2945,
+      "sha256": "4d76b8a82df300d3707e4ba8485d84d546cb89d9892fe703b78420bddc4fa987"
+    },
+    {
+      "path": "scripts/diagnose_ro_new_hand_skin.py",
+      "bytes": 10594,
+      "sha256": "fbda91d4f5e7fc89dd2c0cb712b91fc094c9369c9ec992479d82ac8344bf09bd"
+    },
+    {
+      "path": "scripts/export_ro_combined_grasp.py",
+      "bytes": 2718,
+      "sha256": "ccd9e6500c77bc8c32b6a218f4272571ac437d8654c48642948e16bc4efd5a29"
+    },
+    {
+      "path": "scripts/extract_ro_batch_parts.py",
+      "bytes": 6139,
+      "sha256": "3384e6d914e8cfa39d60ead221910055debaa592594ee9c0c477321d7627a9b2"
+    },
+    {
+      "path": "scripts/finish_ro_apose_preflight.py",
+      "bytes": 6915,
+      "sha256": "6ea64b5719b63b5f6ba73baf0b606499db46fb7150f772aa19354788b74987d6"
+    },
+    {
+      "path": "scripts/finish_ro_batch_experiment.py",
+      "bytes": 8697,
+      "sha256": "aded312bf530b95098c1e0d7996a7d96e09197e89aab0fd3f9349c4bae6cd724"
+    },
+    {
+      "path": "scripts/finish_ro_hand_structure_preparation.py",
+      "bytes": 4096,
+      "sha256": "a3e5f5ead5ee6d33e3ff0057903fa151e2bdb5f744902b91f808862853beff3e"
+    },
+    {
+      "path": "scripts/finish_ro_repair_phase.py",
+      "bytes": 6451,
+      "sha256": "d5c4d56575181c60d397a23d533812a28962616876404f06197ffa879fd03c24"
+    },
+    {
+      "path": "scripts/fit_ro_batch_candidate.py",
+      "bytes": 4917,
+      "sha256": "549e055cf0888bf2d3e8bafa5e834f7d4d8f2086c7f533365fc6ca8ec08ccb43"
+    },
+    {
+      "path": "scripts/fit_ro_core_fallback.py",
+      "bytes": 6448,
+      "sha256": "692884ae6451df414328e4466032f0826343c487fd299b1677266c271ce07931"
+    },
+    {
+      "path": "scripts/fit_ro_forearm_underlay.py",
+      "bytes": 14407,
+      "sha256": "7a9591103455553f15ffa913198159a3917d4aa901e8ebf3fb7e4eee146ff6eb"
+    },
+    {
+      "path": "scripts/fit_ro_generated_glove.py",
+      "bytes": 11186,
+      "sha256": "10bfbc805db39155e0c8b557462a916c70de80cfa58c7085695ce19c4fa9e196"
+    },
+    {
+      "path": "scripts/hyper3d_api.py",
+      "bytes": 30343,
+      "sha256": "aec1ec0dd087abb059b7d2ba126031236477c9831df23bdc97b9202af5599ed5"
+    },
+    {
+      "path": "scripts/identity.py",
+      "bytes": 3461,
+      "sha256": "ebdc8938a1a31dc9b9b7d8635723f6880262424695d80ce83730239fc3f73aba"
+    },
+    {
+      "path": "scripts/inspect_ro_batch_source.py",
+      "bytes": 8439,
+      "sha256": "d4dcf6f7e7d722dc1f02f73897a56848ecb370e37515a9007896e1ac39b887e6"
+    },
+    {
+      "path": "scripts/inspect_ro_candidate.py",
+      "bytes": 5041,
+      "sha256": "d1d2260d3944f087d1e4a6441c4277022c80e7f1d64d4fc767ba8e616af7c2da"
+    },
+    {
+      "path": "scripts/inspect_ro_core_fallback.py",
+      "bytes": 5621,
+      "sha256": "aa7e90cdf7c72f0bb7139033c43bcd14fe16435480a8642cf083bf93a40b3497"
+    },
+    {
+      "path": "scripts/inspect_ro_hand_source.py",
+      "bytes": 4571,
+      "sha256": "965f03bf92d8d6b1c376e25ba5e05dda9296130fd31f1d630c31d1297a8df718"
+    },
+    {
+      "path": "scripts/inspect_ro_hand_structure_source.py",
+      "bytes": 11157,
+      "sha256": "414163d8ad23e7906fecf340e7fca4408d3045356fe96f95ddc2d37ef16b14a1"
+    },
+    {
+      "path": "scripts/inspect_ro_review_package.py",
+      "bytes": 2156,
+      "sha256": "4de66cff3d7b40800a3f9a978a2e0da8b62dfc1c413609d20f8ceadd9230d70b"
+    },
+    {
+      "path": "scripts/inspect_ro_split_source.py",
+      "bytes": 6669,
+      "sha256": "d7c8b696bdf903851039afc8e4a1ae8fd86547eb48c47c0214224e6ff46f0a5c"
+    },
+    {
+      "path": "scripts/ledger.py",
+      "bytes": 6121,
+      "sha256": "b5043b9a63bce691df5094b79bb5c9f1b9da53ccf329c7339d4faac421e45d34"
+    },
+    {
+      "path": "scripts/locate_ro_vector_function_failure.py",
+      "bytes": 3417,
+      "sha256": "1f0ddb7d96608052a35eafa6778d4f3c15c67003c7d71da0606772feb44ae869"
+    },
+    {
+      "path": "scripts/optimize_ro_core_contact.py",
+      "bytes": 9620,
+      "sha256": "3953d97febc8de0b5b59e9ca6b797ce7a374319d031e2b01c9d92690dc9a66ba"
+    },
+    {
+      "path": "scripts/optimize_ro_repair.py",
+      "bytes": 4500,
+      "sha256": "6df28826855ca16bafc238970cca051b3cb3106394ea67e61cae959681f51eb3"
+    },
+    {
+      "path": "scripts/pipeline.py",
+      "bytes": 14730,
+      "sha256": "c4a490605996405e53e1a9f2fc95d48c19d6eed76cd1dac1af42c7ef9a2ec097"
+    },
+    {
+      "path": "scripts/postprocess_ro_swordsman.py",
+      "bytes": 20808,
+      "sha256": "21a3f23afd47b23a19f4ed650a35039c2a1c30006775b3f2771c04fd4eb82c67"
+    },
+    {
+      "path": "scripts/prepare_ro_apose_phase.py",
+      "bytes": 5065,
+      "sha256": "018d3d29645a17ed257c387de360f75d6916a41538236e9578eeec75219f475a"
+    },
+    {
+      "path": "scripts/prepare_ro_batch_source.py",
+      "bytes": 9775,
+      "sha256": "9a2d2320c677e22bd9e2ced7cbb679de2f571b1fad670b13b9faa219236a5212"
+    },
+    {
+      "path": "scripts/prepare_ro_grasp_design_phase.py",
+      "bytes": 4209,
+      "sha256": "3cc2e6184302a0e70957ef9eea1d048a8e6dfc99d628cc6f941055ad267417fe"
+    },
+    {
+      "path": "scripts/prepare_ro_hand_phase.py",
+      "bytes": 8936,
+      "sha256": "4f7e62d72f9dedc9a945f7c0b8c620bbbd465da2f33a44b80e7d9ee7f6b6335b"
+    },
+    {
+      "path": "scripts/prepare_ro_hand_structure_phase.py",
+      "bytes": 10161,
+      "sha256": "04b4513d498827dbf55362482efa213fd8544ad2874fcbdfbd0ff468372e940a"
+    },
+    {
+      "path": "scripts/prepare_ro_native_hand_skin.py",
+      "bytes": 9453,
+      "sha256": "46b5afabb42d90b1b9d9ff9434aef620d2f7d2a13992a9137a797ce2d2366b52"
+    },
+    {
+      "path": "scripts/prepare_ro_repair_phase.py",
+      "bytes": 3686,
+      "sha256": "31af243805c97555982e3162db0a61c39bf4f24e83507a9f26fd3688751a629c"
+    },
+    {
+      "path": "scripts/prepare_ro_split_phase.py",
+      "bytes": 9689,
+      "sha256": "4806cef0280e610f97306bfa5e22c9c44ae3c2ef0b8d5a3816f7be13bd3432a6"
+    },
+    {
+      "path": "scripts/prepare_ro_swordsman.py",
+      "bytes": 6805,
+      "sha256": "80270411aef7057c8ec39e660e403d26907047cf9e47c0cfb7f13db405b8d5a3"
+    },
+    {
+      "path": "scripts/prepare_ro_weight_vector_phase.py",
+      "bytes": 5787,
+      "sha256": "376950535de892ba5442f81b2ba52f6a7fd403606d84f679bfff9ba06d6af349"
+    },
+    {
+      "path": "scripts/prepare_ro_whole_hand_phase.py",
+      "bytes": 4541,
+      "sha256": "cde7860db3145d4e85fc26660e62811559dd401cdb76dc72f8e022e0ecdd13f0"
+    },
+    {
+      "path": "scripts/probe_ro_apose_structure.py",
+      "bytes": 1696,
+      "sha256": "974208b5937cad715c42dd7ba07eb148ef23ebb352bae28efae482c85b27bc95"
+    },
+    {
+      "path": "scripts/probe_ro_boolean_binding.py",
+      "bytes": 1913,
+      "sha256": "2db48c0caddadbdabcebf53eb8f2ee046bc5f00797f7dd53fd98a7cfa96ddb29"
+    },
+    {
+      "path": "scripts/probe_ro_bracer_cavity.py",
+      "bytes": 1880,
+      "sha256": "349fa92cb910654838822f84d023c46d49a640e915b3c1b566228d4453637d7f"
+    },
+    {
+      "path": "scripts/probe_ro_core_contact.py",
+      "bytes": 4104,
+      "sha256": "8e4f2693ee3363131e3d54d058e220c6cd33c505e0bbc9caaee0f89859d8ef35"
+    },
+    {
+      "path": "scripts/probe_ro_core_digits.py",
+      "bytes": 1994,
+      "sha256": "b3aca0680f576a7172ea62bd87a13f254f3bcec64e886a69f92718dfe27768a2"
+    },
+    {
+      "path": "scripts/probe_ro_core_landmarks.py",
+      "bytes": 2320,
+      "sha256": "ff03495d4553a554abe013859fbb42dbe80f604f8d3091f278721a1a0a4e1bc5"
+    },
+    {
+      "path": "scripts/probe_ro_covered_forearm.py",
+      "bytes": 5031,
+      "sha256": "59e9bb17db93f225933e00b9d80158a8f61d4fb1734c286924a6e240f9b3da54"
+    },
+    {
+      "path": "scripts/probe_ro_equipment_fit.py",
+      "bytes": 2454,
+      "sha256": "c61ed765ed5e273efcddcbdde90f090a428ae77ccc60ccc4bc565a0e27e92e07"
+    },
+    {
+      "path": "scripts/probe_ro_forearm_underlay.py",
+      "bytes": 4995,
+      "sha256": "3042c621efa8dbad32cfe29d5650e02b851513cd3674f276eff02c3dc03ccfd1"
+    },
+    {
+      "path": "scripts/probe_ro_fresh_glb.py",
+      "bytes": 1573,
+      "sha256": "21127d6d04b76701943cdeb15df4a3cf996e06a6ec19cb02d1fb48368a05b623"
+    },
+    {
+      "path": "scripts/probe_ro_glove_anatomy.py",
+      "bytes": 1891,
+      "sha256": "3276205dfb05ce612ddcad4935cc191b2d9037ff0468472db5c604efdef5075e"
+    },
+    {
+      "path": "scripts/probe_ro_glove_cut_loops.py",
+      "bytes": 3070,
+      "sha256": "f5c3bc853c96e8c444cfe31a966adb4a1e78ad357cea2f11d161afc5f4a911fd"
+    },
+    {
+      "path": "scripts/probe_ro_gltf_runtime.py",
+      "bytes": 688,
+      "sha256": "c2491d844b88b730a71f04eb277715c02ddae666be2cd7c1afc01a3b0cb592ba"
+    },
+    {
+      "path": "scripts/probe_ro_grasp_design.py",
+      "bytes": 5236,
+      "sha256": "1b4446c449a6ecd135bdf5572a2e63506ca0bf0e73330740b0f4ce609cf43e31"
+    },
+    {
+      "path": "scripts/probe_ro_grip_contact.py",
+      "bytes": 4741,
+      "sha256": "981b7c54af7504f078c1170e79070bad96ea87e28bc3a6a1b2dd46d96b5243fe"
+    },
+    {
+      "path": "scripts/probe_ro_grip_frame.py",
+      "bytes": 3836,
+      "sha256": "17774ca58bb37840e6b9b58665cb5c1088a6a5901bd17b7bcc2861bc827d1eb8"
+    },
+    {
+      "path": "scripts/probe_ro_hand_baked_interval.py",
+      "bytes": 4257,
+      "sha256": "1795b5769ef905fd65ba5507db562c5c83a6cd9068567af6389956ce0e6a32d9"
+    },
+    {
+      "path": "scripts/probe_ro_hand_baseline_technical.py",
+      "bytes": 3064,
+      "sha256": "2c4a80c936b3f4bb757c4945069753f33375865ae8bab806b62d69bdc3983c4f"
+    },
+    {
+      "path": "scripts/probe_ro_hand_budget.py",
+      "bytes": 2264,
+      "sha256": "a590eac99547f94353c95f3f0e485e318b517ab5a76da8cd6c3045abb81058d4"
+    },
+    {
+      "path": "scripts/probe_ro_hand_prototype_deformation.py",
+      "bytes": 4621,
+      "sha256": "d45150ec08286da66fb24446029bd6657612379ff9eb3711818dc855600f282f"
+    },
+    {
+      "path": "scripts/probe_ro_hand_structure_fit.py",
+      "bytes": 5335,
+      "sha256": "d5cd825adc64b235517c7a0594123aa0a958d6e55658d2e8768a9b3bf2e0e9c9"
+    },
+    {
+      "path": "scripts/probe_ro_hand_structure_landmarks.py",
+      "bytes": 3108,
+      "sha256": "f3f6dc2e531ff0e0ceba5a0dce703eea415c21aa9bc4b7d9724f000abd75bba1"
+    },
+    {
+      "path": "scripts/probe_ro_independent_digit_grip.py",
+      "bytes": 3441,
+      "sha256": "26454a8475e89a53d28a0fe598aa6f03c0b17fcb1ea8c288f72a9ec9a5423b86"
+    },
+    {
+      "path": "scripts/probe_ro_local_actual_sword.py",
+      "bytes": 2867,
+      "sha256": "6f3ffa7f0ed26515c4637043d2eecdaf5d0ece7a107c59ef90a520c0c8e040e1"
+    },
+    {
+      "path": "scripts/probe_ro_new_hand_joints.py",
+      "bytes": 4846,
+      "sha256": "4d7fac0fc0fcb3b78b71b849db3d9f5792b0fb87c98814c1cb04a58197ad643b"
+    },
+    {
+      "path": "scripts/probe_ro_repair_preflight.py",
+      "bytes": 3545,
+      "sha256": "96fdc4c1dabb8b36256218f43ad65b99dfd590cb742f1fd89e8a16fd03cdb19a"
+    },
+    {
+      "path": "scripts/probe_ro_retopo_transfer.py",
+      "bytes": 1205,
+      "sha256": "4192674ce2274e197131341db0a23add657760ca0376103a818d2accbec36a99"
+    },
+    {
+      "path": "scripts/probe_ro_tabard_motion.py",
+      "bytes": 2132,
+      "sha256": "4ad930c1ac427383d864385a31c1e92d7bbcdf758cd40c722eae4c517bf24bae"
+    },
+    {
+      "path": "scripts/probe_ro_topology.py",
+      "bytes": 1618,
+      "sha256": "8276efaa95bdf343c4a62a6b0d97ad4eb8eb3bea95e5436dd63869c75ce70cc3"
+    },
+    {
+      "path": "scripts/probe_ro_vector_combined.py",
+      "bytes": 3763,
+      "sha256": "c52a83602aa15b72e642ad29b4b1b5dd561f70bb318681d36507b0756f17fb5c"
+    },
+    {
+      "path": "scripts/probe_ro_vector_large_curl.py",
+      "bytes": 3357,
+      "sha256": "72df12aafc71f0abd965d6600ef80ee5cd56dd4688b0ea86040831dfc376c7b6"
+    },
+    {
+      "path": "scripts/probe_ro_weight_vector_source.py",
+      "bytes": 4546,
+      "sha256": "a2018efb44c483bec36837950de67999b0f2aec187e96239e9db862c1e49e311"
+    },
+    {
+      "path": "scripts/probe_ro_whole_hand_baseline.py",
+      "bytes": 4992,
+      "sha256": "98e8b669524e812247df99c2898e6625da6356670130e8606235f9f262dc9d8f"
+    },
+    {
+      "path": "scripts/probe_ro_whole_hand_centers.py",
+      "bytes": 2679,
+      "sha256": "361c31669d0599a53223ecd0aab38f27c69e4192d61d2279872680e9e51b42c5"
+    },
+    {
+      "path": "scripts/probe_ro_wrist_interfaces.py",
+      "bytes": 5039,
+      "sha256": "638610ad78196090b768c66898d9812d897c8690fb742b2742f543be68a449a8"
+    },
+    {
+      "path": "scripts/probe_ro_wrist_volume.py",
+      "bytes": 4469,
+      "sha256": "1816559bc8ab791934b248e7b683dded06e504ea905a2541f8c9ce4241f10396"
+    },
+    {
+      "path": "scripts/rebuild_ro_articulation.py",
+      "bytes": 35236,
+      "sha256": "1584df9cb9a4d358e17d38e63d39382f71b3e3afd345d96cff3b53e27b877204"
+    },
+    {
+      "path": "scripts/rebuild_ro_wrist_interface.py",
+      "bytes": 18520,
+      "sha256": "fd2b5fca8fe3ede990837162720e55e25b3bf9b9022c60ed0b27e6b40ed79d4d"
+    },
+    {
+      "path": "scripts/receive_claude_character_handoff.py",
+      "bytes": 8572,
+      "sha256": "494e4be60fde3bc5a2f4e03286e8e41a2a74b8421c39b06b99ba8572d21f6566"
+    },
+    {
+      "path": "scripts/record_ro_apose_baseline.py",
+      "bytes": 5925,
+      "sha256": "584812d3fbc49503a807724322f0c35876ef603ab14b675362ffabbe99d04cf0"
+    },
+    {
+      "path": "scripts/record_ro_apose_preflight_result.py",
+      "bytes": 6353,
+      "sha256": "e7e2a44e50bacbdc629fe1dc87646ed862ac98a2481429a7687f06f5f45047e7"
+    },
+    {
+      "path": "scripts/record_ro_baseline.py",
+      "bytes": 5257,
+      "sha256": "513ac559f5d62b559b95d53e6beaf2ab1e16ee8ac02f105c65aa9384972869a6"
+    },
+    {
+      "path": "scripts/record_ro_batch_baseline.py",
+      "bytes": 4886,
+      "sha256": "d315abdf40debc9db6c28908f55b4ef0c826efcea9417ae89cd9ddbe2ca676ef"
+    },
+    {
+      "path": "scripts/record_ro_batch_verification.py",
+      "bytes": 4693,
+      "sha256": "8568dbdfe8fb536578f13578d9c8bd08882766f3650dbe4532d5412562ab3d1b"
+    },
+    {
+      "path": "scripts/record_ro_failure.py",
+      "bytes": 6414,
+      "sha256": "86dfe5d01c83450787cd5ebc5451aeba1f15b1b306b1ee79c493d9f542b553a6"
+    },
+    {
+      "path": "scripts/record_ro_hand_baseline.py",
+      "bytes": 7202,
+      "sha256": "307e4614022273407c18ad9a27c7f51133ef39856231099480788f888fd1f2a3"
+    },
+    {
+      "path": "scripts/record_ro_hand_structure_baseline.py",
+      "bytes": 7547,
+      "sha256": "82954f2e7c9858d20b9be3a99ba7569639bcbc43c64fd94cecc2b695939f322f"
+    },
+    {
+      "path": "scripts/record_ro_preflight_failure.py",
+      "bytes": 2159,
+      "sha256": "9e1a1e96c15fddf1df34c28ce07cb503435108177282c16b38a2c68c03d54431"
+    },
+    {
+      "path": "scripts/refine_ro_apose_cloth.py",
+      "bytes": 5282,
+      "sha256": "4351f2cc5a5f21d299341f34d1a4ffbf2532b0c5544fd2fa1874539ba46a0e9c"
+    },
+    {
+      "path": "scripts/refine_ro_core_digit_weights.py",
+      "bytes": 8013,
+      "sha256": "3ffdf3df830291695b78aae7d1be9dcaf31d10930316c92748aba226963dc109"
+    },
+    {
+      "path": "scripts/refine_ro_native_thumb_flow.py",
+      "bytes": 8497,
+      "sha256": "b631b601e4dd53e8226ac1b83dfcd8ddd1517f9d17fadcb1fbb7ce522854bc23"
+    },
+    {
+      "path": "scripts/refine_ro_thumb_two_step.py",
+      "bytes": 11013,
+      "sha256": "ce1d4593a9f1c73eeca2e4a01fce4e7b363485eb1e4bf5ad845530b1de1760b0"
+    },
+    {
+      "path": "scripts/refine_ro_thumb_wrist.py",
+      "bytes": 12134,
+      "sha256": "85a7671f52fe158acfee9efaad7fe0ea8a95d03a5d8ebe1a8c414423b0f50732"
+    },
+    {
+      "path": "scripts/register_ro_apose_operation.py",
+      "bytes": 5106,
+      "sha256": "11bc8d491442e4bf239374aac69ed111e93485dde6fefce5382a11a812113b4a"
+    },
+    {
+      "path": "scripts/register_ro_grasp_design_contract.py",
+      "bytes": 6440,
+      "sha256": "e15dd8c7f1eab86ac0491ae94783cdbed1f9d90cf423082570d51cef928c56d5"
+    },
+    {
+      "path": "scripts/register_ro_vector_baseline.py",
+      "bytes": 7660,
+      "sha256": "5fb5667fd96490d8c7739ba863807977a2aef64196dd86c887e87f8575611cb5"
+    },
+    {
+      "path": "scripts/register_ro_whole_hand_contract.py",
+      "bytes": 6728,
+      "sha256": "fad4b3d1680d3a355d93eabb88e12a6b590a736dfec1ce499df1da6435a73cad"
+    },
+    {
+      "path": "scripts/render_ro_stress.py",
+      "bytes": 2891,
+      "sha256": "d01ce28075f329663806b56c4e64f78187dcdee1f942683d7e723bd9e25af983"
+    },
+    {
+      "path": "scripts/repair_ro_front_arm_poles.py",
+      "bytes": 4991,
+      "sha256": "1cfc1de9e3d0e5e7b5a69e57773e1aa1e8779285a15c2577ffa5213b520d1bf0"
+    },
+    {
+      "path": "scripts/repair_ro_motion.py",
+      "bytes": 4211,
+      "sha256": "d2fb351dcbf4948682744c1b6704d2543831f3499468ee6540589f6a0ed24b6e"
+    },
+    {
+      "path": "scripts/repair_ro_paired_reach.py",
+      "bytes": 4011,
+      "sha256": "2780abcc3ba93ee99ab8a6ce20caf742a6d2de5e99a0dcdad0605e7708eb5a69"
+    },
+    {
+      "path": "scripts/repair_ro_rigid_wrist_prototype.py",
+      "bytes": 13585,
+      "sha256": "af725f275fc15c2a71d4941002af53c7d4ac1a90827942f3545875a0992ea40b"
+    },
+    {
+      "path": "scripts/repair_ro_swordsman_api_grant.py",
+      "bytes": 6845,
+      "sha256": "35f8b5e0fe6c24837aeb86f54d157915fb92513f48ea9424c051500e9c482e00"
+    },
+    {
+      "path": "scripts/restore_ro_apose_hands.py",
+      "bytes": 6268,
+      "sha256": "e4f8b0635f22099618b7cb792a7b220668a8bf8ea0040db1571de0afecbdf9c3"
+    },
+    {
+      "path": "scripts/restore_ro_glb_exact_weights.py",
+      "bytes": 4438,
+      "sha256": "15f085418f05ea1db432aa42818a45d1ecc0b10ad096dd5709e31bb8909b80f6"
+    },
+    {
+      "path": "scripts/resume_ro_hand_generation.py",
+      "bytes": 4628,
+      "sha256": "36c2afee449ac67fffefcd0a9fd8b809ca8677fc3e919387e0bf1c6c169c89df"
+    },
+    {
+      "path": "scripts/resume_ro_hand_structure_generation.py",
+      "bytes": 4903,
+      "sha256": "1de6ce690e06a2742a3189e7312373935658cbdf1d5512f42a20692ab78aee9e"
+    },
+    {
+      "path": "scripts/resume_ro_split_preparation.py",
+      "bytes": 4183,
+      "sha256": "238bfe30e1a3d2ea0a3e2bbcc0ee924baad5c55efe15333a932eef036514811d"
+    },
+    {
+      "path": "scripts/retopo_ro_hand_prototype.py",
+      "bytes": 16978,
+      "sha256": "6e22f0ed93ab11dda3b52568000377628b27c12f5038cff304af9e6372529448"
+    },
+    {
+      "path": "scripts/rig_ro_batch_preflight.py",
+      "bytes": 19677,
+      "sha256": "b7da4d74ab5efc8fd1724d3dd37933ba40626fdec7dec689fa30ef5ce622ae50"
+    },
+    {
+      "path": "scripts/rig_ro_core_fallback.py",
+      "bytes": 12620,
+      "sha256": "83b250d6b95917cf17b5976b8ae016848e55f0a6387e9e41e384c5dc4861edda"
+    },
+    {
+      "path": "scripts/ro_actual_grip_common.py",
+      "bytes": 3143,
+      "sha256": "c5b8c56c5516e3b80dc1b86d4b869be8879259480c42dc679e20e538d1c51582"
+    },
+    {
+      "path": "scripts/ro_certified_grasp_gate.py",
+      "bytes": 2531,
+      "sha256": "3bf87eeecf4db8d37a7f5fe40887a135ac1c2bd487bfd7be4f60089176527872"
+    },
+    {
+      "path": "scripts/ro_core_rig.py",
+      "bytes": 10471,
+      "sha256": "8a9184b7067ca6c353ec36d907de7b75e5417f46daed00dafa7b45248c8e9874"
+    },
+    {
+      "path": "scripts/ro_glove_contact_ik.py",
+      "bytes": 3874,
+      "sha256": "8756b90eb70116549ceb4b5f634f5c2885431598b2830b9c98ff51f630f91a8c"
+    },
+    {
+      "path": "scripts/ro_hand_gate.py",
+      "bytes": 6054,
+      "sha256": "f9f84c28038d1a82c519a999c72133ba701e6f211f75619f9a770257b45855a9"
+    },
+    {
+      "path": "scripts/ro_pose_corrective_math.py",
+      "bytes": 865,
+      "sha256": "b586aa2798b64b22382553a99b956e2d70fe3cb522dc45d945a298b7f8eadea3"
+    },
+    {
+      "path": "scripts/ro_review_common.py",
+      "bytes": 2738,
+      "sha256": "98b795e379d682d84476b4e18d7c296364c1a6cf9bb36af6d4e13a08dbe1fc3d"
+    },
+    {
+      "path": "scripts/ro_solid_angle.py",
+      "bytes": 2975,
+      "sha256": "2f75b89b5446b5013a67080693429cd477c3c7417251521fe5401fefc488bdb2"
+    },
+    {
+      "path": "scripts/ro_weight_vector_common.py",
+      "bytes": 9138,
+      "sha256": "09bfb155cede67b03c48dcbe7e2493a081f31367fdd014b19e8d779059f91505"
+    },
+    {
+      "path": "scripts/ro_world_grasp_gate.py",
+      "bytes": 529,
+      "sha256": "2b6f5d202d0b0faa4e3790cae33b5f6131aeb9f95d9854edce6846cd52568281"
+    },
+    {
+      "path": "scripts/scout_ro_thumb_patch_boundary.py",
+      "bytes": 3983,
+      "sha256": "6d24658ee5fe5d930c72434a9a526cb17c45ae653d237ce2b9830e2659f7b997"
+    },
+    {
+      "path": "scripts/smooth_ro_hand_root_weights.py",
+      "bytes": 8832,
+      "sha256": "8019a1268c0bc885cc98e44f913ac30700631dd7bb8244c65f517c6bb6f11fca"
+    },
+    {
+      "path": "scripts/smooth_ro_leg_transitions.py",
+      "bytes": 5150,
+      "sha256": "f8d8b4f1425aca456b39da28fdb9c4f5ca79bda6747b35684a3fed1ff0bda135"
+    },
+    {
+      "path": "scripts/solve_ro_actual_sword_contact.py",
+      "bytes": 6670,
+      "sha256": "9576ccc425e0087f9dc9e0ec2bb3b56b91db511a9238aa8c43b9bbcaf810f04a"
+    },
+    {
+      "path": "scripts/solve_ro_collision_constrained_contact.py",
+      "bytes": 13506,
+      "sha256": "e9fa946134703ba289e1b8544455cb71badf0d3a7fe23d9f3312599edcaa694d"
+    },
+    {
+      "path": "scripts/solve_ro_coupled_hand_contact.py",
+      "bytes": 8276,
+      "sha256": "8b05d7eb8803826cf0473515bacf3357b090bd3c0fa11e78db26df3ee0280532"
+    },
+    {
+      "path": "scripts/solve_ro_glove_joint_contact.py",
+      "bytes": 9790,
+      "sha256": "12a7eb1963789fc4632791ecf9a51a89c86564488c23c0cc5d2ac7c51eafe190"
+    },
+    {
+      "path": "scripts/solve_ro_moving_target_contact.py",
+      "bytes": 10857,
+      "sha256": "9e029486b9102c0d36031fbd21620a31547d1561a5cc30342ce8ac6a985b0a8d"
+    },
+    {
+      "path": "scripts/solve_ro_thumb_vectors.py",
+      "bytes": 6604,
+      "sha256": "cb7da73029f0b447373a1940c686722b86fc86ba7cb78dfd9dd4d46fff78255e"
+    },
+    {
+      "path": "scripts/solve_ro_whole_hand_weights.py",
+      "bytes": 6775,
+      "sha256": "754aa9bfe8def42be3fcfedfa294016265dd179b9a0129c4ca6b0c45b1d81505"
+    },
+    {
+      "path": "scripts/start_ro_contact_solver_trial.py",
+      "bytes": 4535,
+      "sha256": "b4abd9e2ce940a2f8333df3712739e54d14548d5f40cea16723754cc6e1ca704"
+    },
+    {
+      "path": "scripts/start_ro_digit_control_trial.py",
+      "bytes": 5020,
+      "sha256": "9fea7d63447e926ec10fb3343bf2ae0373e8dc705dc42573f9202fd76edd5b9f"
+    },
+    {
+      "path": "scripts/start_ro_hand_root_weights.py",
+      "bytes": 2007,
+      "sha256": "3046da46b84aa2b6d78f1c5701961a6e2a348b8d98215fb860594c9b53e3f53a"
+    },
+    {
+      "path": "scripts/start_ro_hand_structure_phase.py",
+      "bytes": 2536,
+      "sha256": "69f99b6ad73a9f2acc8e8cee9d7987db3177119acf07981131ace200fd9ced47"
+    },
+    {
+      "path": "scripts/start_ro_thumb_patch.py",
+      "bytes": 2466,
+      "sha256": "9b8b9469a4db183ac52eb2e7d0a143bad3648682dcbe7150ee17426bf94da3d0"
+    },
+    {
+      "path": "scripts/start_ro_thumb_two_step.py",
+      "bytes": 2313,
+      "sha256": "10a8970b9a21b181e1f3d4054ad3031ffcfbbec531f247cdbaf3ad09d77b1dca"
+    },
+    {
+      "path": "scripts/stress_ro_repair.py",
+      "bytes": 6075,
+      "sha256": "0da434d0c5ad660db525b6d914e0688341aa608de9af2abdd5ab7090658f3fdd"
+    },
+    {
+      "path": "scripts/supported_weight_solver.py",
+      "bytes": 2602,
+      "sha256": "1eed76731531d0ab9d6dc91d83756b3e68c0f55c5c2862ef2a4d7ea5acee0a50"
+    },
+    {
+      "path": "scripts/tailor_ro_batch_fit.py",
+      "bytes": 5656,
+      "sha256": "f2eee2779d6c214095ca1de8e593644ce45bd64267ca770e6a5edaa127af2c38"
+    },
+    {
+      "path": "scripts/verify_ro_apose_preflight.py",
+      "bytes": 3951,
+      "sha256": "c40eaaeeacb6211fdaebdf280a7263cbfcf7625a451eefe2b323679b12c1434f"
+    },
+    {
+      "path": "scripts/verify_ro_batch_preparation.py",
+      "bytes": 6410,
+      "sha256": "1f5f051a19ace83778c1211cb7faa52b532f8abb3dc6341078529889b8067a46"
+    },
+    {
+      "path": "scripts/verify_ro_core_fit.py",
+      "bytes": 2348,
+      "sha256": "c534623280672a7d308b33e5f3adf6d585d95ed2871dcd12b7e1ba2eb9263925"
+    },
+    {
+      "path": "scripts/verify_ro_fresh_grasp_glb.py",
+      "bytes": 8081,
+      "sha256": "8258a4e9599b88bc1efb6865d6b063589adbd5931d9f22e2509c04bc56cfb5d2"
+    },
+    {
+      "path": "scripts/verify_ro_glb_exact_weights.py",
+      "bytes": 8070,
+      "sha256": "23210354ec9b50369c9f24720b6319986025a31d7ba15e88f463ff58a697f7eb"
+    },
+    {
+      "path": "scripts/verify_ro_grasp_design_phase.py",
+      "bytes": 8151,
+      "sha256": "5766fe25c5118f635015b0d84a621ec36488ed8da6fca0296595e0378fa5e3e6"
+    },
+    {
+      "path": "scripts/verify_ro_hand_api_completion.py",
+      "bytes": 3708,
+      "sha256": "ffbb7bbb9365b8363b057f0c1184051e5be023d01d72e4acba1a25bd6271d717"
+    },
+    {
+      "path": "scripts/verify_ro_hand_phase_final.py",
+      "bytes": 10736,
+      "sha256": "82c63d143da27fccbd3a2ffdca5a7dfe4932d2184d838d675d8c72367895a18e"
+    },
+    {
+      "path": "scripts/verify_ro_hand_preparation.py",
+      "bytes": 4497,
+      "sha256": "5b6d249c291679a04cd2e4841c994c34fbd906b2b54e3ed5d12b9cee35ec2ab2"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_api.py",
+      "bytes": 3663,
+      "sha256": "4c19670cb6a9a030b9eb99e17670abfb305e19422519341af0af16d26af9827a"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_phase.py",
+      "bytes": 10160,
+      "sha256": "da1d41614d0322edcbea579c2dfc8d09f8ba4a7d94da3d3a00d137ffa5e8bf9e"
+    },
+    {
+      "path": "scripts/verify_ro_hand_structure_preparation.py",
+      "bytes": 10436,
+      "sha256": "f0db0a4041812b463192db5be84663f048cfd715e77dbd699c73c8c3e9a8ef30"
+    },
+    {
+      "path": "scripts/verify_ro_phase_final.py",
+      "bytes": 6573,
+      "sha256": "db9d60cf967adcd1545ad96dc82af6da1e9962d4b61582bbd28932b6b60f6cb6"
+    },
+    {
+      "path": "scripts/verify_ro_repair.py",
+      "bytes": 4550,
+      "sha256": "b000d5e4fce40a82c915e35d38068c5753b3c0b64b5d8b73b3f0222f3b65e2bb"
+    },
+    {
+      "path": "scripts/verify_ro_vector_saved_best.py",
+      "bytes": 3346,
+      "sha256": "f75e17c0704a8a249010e01927ff90261050578b0b88a7c7eca352bd0857e67d"
+    },
+    {
+      "path": "scripts/verify_ro_weight_vector_phase.py",
+      "bytes": 7673,
+      "sha256": "c164ee0e9ac7428d0413b4ac5c0daca83f4c84f1870b2ffac137da1101b29ac8"
+    },
+    {
+      "path": "scripts/verify_ro_whole_hand_phase.py",
+      "bytes": 6371,
+      "sha256": "c78f41421dc70d899c9fbb619a54a7e6d37061e2ad6d6d40ab946ab980814cc8"
+    },
+    {
+      "path": "scripts/verify_ro_whole_saved_models.py",
+      "bytes": 3734,
+      "sha256": "fd84c2c2843ef615b260ac3de8ac298658d9f74a4b38cce352f0502f31d82df8"
+    },
+    {
+      "path": "scripts/verify_ro_whole_weight_isolation.py",
+      "bytes": 2135,
+      "sha256": "9679a6ed9e1a4e289f299734e6d37206ab315757ad9a2ce9ccdc897f6a0ec527"
+    },
+    {
+      "path": "scripts/weight_vector_solver.py",
+      "bytes": 2577,
+      "sha256": "34b18ba213de6a4ced45651e1e3a9f92ee496dadc77069f81935f14a5ce37668"
+    },
+    {
+      "path": "scripts/workbench.py",
+      "bytes": 48660,
+      "sha256": "7db962dd8356c0b2fdd047a869a1d69415772ae714c7b750eecb9873401f02b1"
+    },
+    {
+      "path": "tests/make_blender_fixtures.py",
+      "bytes": 2728,
+      "sha256": "37ff3454854fcd2fbd4db6d8522320b2a9c06eef842287deb8ff7050994bcd5d"
+    },
+    {
+      "path": "tests/run_blender_checks.py",
+      "bytes": 3707,
+      "sha256": "a262e6152b2ae08a0d983792c7f047a60ddca551a7a8c5db1efbeba326ae450b"
+    },
+    {
+      "path": "tests/test_api_creation.py",
+      "bytes": 4221,
+      "sha256": "d25351a0a289da94d1ee434ae21d1d41bf533c25d0da3ca2cd909d81233cddd2"
+    },
+    {
+      "path": "tests/test_art_sources.py",
+      "bytes": 11547,
+      "sha256": "e6b5b287679b5a9f3998d5dff1ea6382b81110665aa97f3cfa2e7823f66b8eb6"
+    },
+    {
+      "path": "tests/test_art_validator_wrapper.py",
+      "bytes": 4653,
+      "sha256": "79e282fac2bfea2c88d5d52cff463b42b32cc3ca7129634d9c4e011d0464d232"
+    },
+    {
+      "path": "tests/test_blender_art_preview.py",
+      "bytes": 5709,
+      "sha256": "55395c602109afbeabdc75e094141f2a3c8e7b091ea4d93eeb91e13421a8e5f7"
+    },
+    {
+      "path": "tests/test_cv1_blender_safety.py",
+      "bytes": 843,
+      "sha256": "0b0074552646a0dd62b9be91d47b96a69217cb3264b0fd1a7aea3cdb5a940500"
+    },
+    {
+      "path": "tests/test_cv1_foot_lock.py",
+      "bytes": 9555,
+      "sha256": "b17008a3f8e8fb555f921ab53e6f86072599ab932bca7f6aae80c83924a66bb0"
+    },
+    {
+      "path": "tests/test_cv1_gait.py",
+      "bytes": 2560,
+      "sha256": "3d2a5f380daf34042a4be8372646924c69438c55f018501624c669ed933c97fc"
+    },
+    {
+      "path": "tests/test_cv1_interaction.py",
+      "bytes": 12664,
+      "sha256": "8f109c5e1e094e9a3886a01ea2fdd0e9c7ff97e9769f58e307f512318477c28d"
+    },
+    {
+      "path": "tests/test_cv1_pose_rules.py",
+      "bytes": 14237,
+      "sha256": "99fdf2b3b1a0b6f0dc06dfe1cc18ac75420eeb48148b0668809465f0dddb7b63"
+    },
+    {
+      "path": "tests/test_cv1_transition.py",
+      "bytes": 10102,
+      "sha256": "147546192805c9cf52307f4f202d62e4617703150c2aec45547009a6a5c025e4"
+    },
+    {
+      "path": "tests/test_hyper3d_api.py",
+      "bytes": 29786,
+      "sha256": "c6f762d49feae2dd42a5cb36efde655a1975ababcc9688fdc450f3fad51bffa2"
+    },
+    {
+      "path": "tests/test_identity.py",
+      "bytes": 5051,
+      "sha256": "b9197b31abf8bd44fec68b63ea49d71211913ebfdcc3d1ac77bc3c01b59b7d51"
+    },
+    {
+      "path": "tests/test_ledger.py",
+      "bytes": 7366,
+      "sha256": "6fb97cec568e21c5d196f862e8efe0ce8ff96128eb551ed7c79e3c8709e4817f"
+    },
+    {
+      "path": "tests/test_legacy_pipeline.py",
+      "bytes": 3772,
+      "sha256": "698bef15246744bc21b711a5132524faafd603f9019eac868183caa7c0d8eb5a"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "bytes": 9853,
+      "sha256": "dfbd3b44d0fd2100460364a89e9970c0c0fd4667823a23ed921f210d6b071e8e"
+    },
+    {
+      "path": "tests/test_plan_drafts.py",
+      "bytes": 6476,
+      "sha256": "54040bb261e2519ecad2d290a11187d73fc0037578bc306cc7f4c25eb5a0625c"
+    },
+    {
+      "path": "tests/test_quality_loop.py",
+      "bytes": 16462,
+      "sha256": "e9102d534254ae23e92361b5949f398d3e74450c90978893e85a7e0ae0ee5cab"
+    },
+    {
+      "path": "tests/test_ro_pose_corrective_math.py",
+      "bytes": 1110,
+      "sha256": "031150a291e5541fbac6e6589a5866bd61f73e59b91b7c8b2b69e80bd303b853"
+    },
+    {
+      "path": "tests/test_ro_solid_angle.py",
+      "bytes": 2702,
+      "sha256": "544ec0ae4cd4a883ecb3c0510e61cd62d50b3de9cc53b1c4746aba55e945c9e2"
+    },
+    {
+      "path": "tests/test_supported_weight_solver.py",
+      "bytes": 1464,
+      "sha256": "8a88b20a332f3dae43edb827d78ca462abd94c44021e3589f287eb401ecd2bf7"
+    },
+    {
+      "path": "tests/test_weight_vector_solver.py",
+      "bytes": 1508,
+      "sha256": "9afd8dcfaa432bf3ce8650ad28c035fc7927eeb1dfc06c9db0635673f90d83c5"
+    },
+    {
+      "path": "tests/test_workbench.py",
+      "bytes": 20102,
+      "sha256": "255484218c8d1c73bb5de5ad8013143dcb38daf17d8d2a31327596bad05e77a5"
+    },
+    {
+      "path": "tools/art-sources/catalog.json",
+      "bytes": 12648,
+      "sha256": "5af817afd97df05a77d1d733e75a69b4592cabdd38f72562ead763628c00cc4d"
+    },
+    {
+      "path": "tools/art-validation/package.json",
+      "bytes": 195,
+      "sha256": "c670b4e68ca2df6fc6c873bef8e1857f026e8d045062b42b483a2941d4fa7e2b"
+    },
+    {
+      "path": "tools/art-validation/validate-glb.mjs",
+      "bytes": 5861,
+      "sha256": "0837f4d0714c0fc07a852dde8e331001c866afd3c8c5db70afa25077def63c55"
+    },
+    {
+      "path": "tools/blender/build_box_assets.py",
+      "bytes": 5595,
+      "sha256": "7858b1792dbe9d0dcd367af6b8d9698605df7bdb752fa4ec106f26aea2534f60"
+    },
+    {
+      "path": "tools/blender/inspect_asset.py",
+      "bytes": 6516,
+      "sha256": "90978a5203118d5a9adda7d3faf0fa78d12bd7b205cddecf469e854b4e970034"
+    },
+    {
+      "path": "tools/blender/render_preview.py",
+      "bytes": 4259,
+      "sha256": "461610a5c7c92cec4df1646741a1762d9a1ccf9f8a904bdbdf275232d950fdd9"
+    },
+    {
+      "path": "tools/capabilities.json",
+      "bytes": 1626,
+      "sha256": "1e2c9c8509cdd888a29a182e73a0e9d3aa29197ce6654f182401cdebd92fd125"
+    },
+    {
+      "path": "tools/glb_bounds.py",
+      "bytes": 3326,
+      "sha256": "b3459cae69f19c5416f512d966884bf65c09c878ae2840ac68ee1c62a329e831"
+    },
+    {
+      "path": "tools/pipeline.py",
+      "bytes": 9204,
+      "sha256": "925b6f042a329d695c8652792f04e671e1cf6fe5ff2a53e96e3b4face7d62f42"
+    },
+    {
+      "path": "tools/runtime-qa/three/candidate.html",
+      "bytes": 2952,
+      "sha256": "4314d253e8ef4ac513ed49ec7ac35f33815c4dea37269cf74e3acef88badb2c4"
+    },
+    {
+      "path": "tools/runtime-qa/three/index.html",
+      "bytes": 4167,
+      "sha256": "c8cad7a45f4f503f3c99f3df8f4da15903ba4fe016cf9cdc1db1cdfab8474d4e"
+    },
+    {
+      "path": "tools/runtime-qa/three/p4.html",
+      "bytes": 3706,
+      "sha256": "1c6fb4d16afe31fa64b90808aef7a747e6a92eb85892184ae4cdffd764085729"
+    },
+    {
+      "path": "tools/runtime-qa/three/package-lock.json",
+      "bytes": 541,
+      "sha256": "7c51c8ceb666472e6f9e286040065838aff1f858aee12ad8aede3924e78a12e9"
+    },
+    {
+      "path": "tools/runtime-qa/three/package.json",
+      "bytes": 252,
+      "sha256": "029ff6815189e437ab67c1fa3d013a0c51acb53090e54c82e4f1d06bfc524cbb"
+    },
+    {
+      "path": "tools/runtime-qa/three/serve.py",
+      "bytes": 4068,
+      "sha256": "314c242569a793dd16b891942add6c5594e729cb72aea918ef13a7312165f773"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/candidate.js",
+      "bytes": 16610,
+      "sha256": "462661a1ca3797645a82155eb9b0bf20368ba3a75229b189df1e5faca5c42b75"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/cv1-foot-lock.js",
+      "bytes": 9288,
+      "sha256": "c3938601ef36655fd16e40ae592a38293e945e2784293c5f2599a066196b115d"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/cv1-pose-rules.js",
+      "bytes": 8868,
+      "sha256": "382845fa98b4fdc27dd67c4d734ec3ed43a150a711469bdf5c69b989aae0108a"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/cv1-runtime.js",
+      "bytes": 11995,
+      "sha256": "04f26b23b887232dc2f61eec048e0ddf0ca3eafd7dfc170ac7ed7d34b4486330"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/cv1-transition.js",
+      "bytes": 3318,
+      "sha256": "32fbf051f33ed732c9c733ad56c9e07c9e5e4629bbe46431e723898fd85a8cb3"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/p1.js",
+      "bytes": 26844,
+      "sha256": "f21a821109d67ecf1cdf2830e74cf4f2cd902edc3d432f1139fcbf7e0721aa61"
+    },
+    {
+      "path": "tools/runtime-qa/three/src/p4.js",
+      "bytes": 36141,
+      "sha256": "8b661ccd444787b0b6843241f753eae6b9825b247f20658cd43c7ec347c1f6e8"
+    }
+  ],
+  "protected_files_scope": "Static source bytes and selected historical records; no fresh DCC category signatures. Compare this list at handoff. Git diff separately verifies equality to the engineering checkpoint.",
+  "fresh_motion_baseline": "NOT_RUN",
+  "candidate_ab": "NOT_RUN",
+  "candidate_protected_categories": "NOT_RUN",
+  "candidate_gates": "NOT_RUN",
+  "budget_admission": "UNVERIFIED",
+  "scores": null,
+  "paid_calls": 0,
+  "new_trial_created": false,
+  "art_accepted": false,
+  "technical_accepted": false
+}
