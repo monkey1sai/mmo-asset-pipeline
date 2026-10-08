@@ -1,0 +1,107 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cv1-runtime-qa",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8765"
+      ],
+      "port": 8765
+    },
+    {
+      "name": "cv1-runtime-qa-v001",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8766",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/b03-hands/closed-loop/runtime"
+      ],
+      "port": 8766
+    },
+    {
+      "name": "cv1-runtime-qa-b05",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8767",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/b05-twist/closed-loop/runtime"
+      ],
+      "port": 8767
+    },
+    {
+      "name": "cv1-runtime-qa-clips",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8768",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/clips/runtime"
+      ],
+      "port": 8768
+    },
+    {
+      "name": "cv1-runtime-qa-b18",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8769",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/b18-clipfolds/closed-loop/runtime"
+      ],
+      "port": 8769
+    },
+    {
+      "name": "cv1-runtime-qa-b19",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8770",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/b19-crotch/closed-loop/runtime"
+      ],
+      "port": 8770
+    },
+    {
+      "name": "cv1-runtime-qa-b20",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8771",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/b20-coatlie3/closed-loop/runtime"
+      ],
+      "port": 8771
+    },
+    {
+      "name": "cv1-runtime-qa-p4",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-B",
+        "tools/runtime-qa/three/serve.py",
+        "--port",
+        "8772",
+        "--save-dir",
+        "runs/qa/ro-swordsman-character-v1/v001/p4/runtime"
+      ],
+      "port": 8772
+    }
+  ]
+}
