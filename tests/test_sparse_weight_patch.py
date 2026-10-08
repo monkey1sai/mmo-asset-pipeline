@@ -66,6 +66,39 @@ class SparseWeightPatchTests(unittest.TestCase):
             with self.assertRaises(RestoreError):patch_vertices(fixture(edit),'mesh',[{'vertex':0,'weights':{'root':1}}])
         with self.assertRaises(RestoreError):patch_vertices(fixture()+b'1234','mesh',[{'vertex':0,'weights':{'root':1}}])
 
+    def test_negative_and_boolean_buffer_ranges_rejected(self):
+        edits=[lambda d:d['bufferViews'][1].update(byteOffset=-12),
+               lambda d:d['bufferViews'][2].update(byteLength=True),
+               lambda d:d['buffers'][0].update(byteLength=-1),
+               lambda d:d['bufferViews'][1].update(buffer=True),
+               lambda d:d['accessors'][1].update(bufferView=True),
+               lambda d:d['accessors'][1].update(bufferView=-2),
+               lambda d:d['accessors'][1].update(byteOffset=-4),
+               lambda d:d['accessors'][1].update(count=True),
+               lambda d:d['accessors'][1].update(componentType=5121.0),
+               lambda d:d['bufferViews'][1].update(byteStride=4.0)]
+        for edit in edits:
+            with self.subTest(edit=edit),self.assertRaises(RestoreError):
+                patch_vertices(fixture(edit),'mesh',[{'vertex':0,'weights':{'cloth':1}}])
+
+    def test_other_semantics_and_animation_references_rejected(self):
+        edits=[lambda d:d['meshes'][0]['primitives'][0]['attributes'].update(COLOR_0=2),
+               lambda d:d['meshes'][0]['primitives'][0].update(targets=[{'COLOR_0':2}]),
+               lambda d:d['meshes'][0]['primitives'][0].update(indices=1),
+               lambda d:d.update(animations=[{'samplers':[{'input':0,'output':2}]}]),
+               lambda d:d['skins'][0].update(inverseBindMatrices=2)]
+        for edit in edits:
+            with self.subTest(edit=edit),self.assertRaisesRegex(RestoreError,'SHARED_SKIN_ACCESSOR'):
+                patch_vertices(fixture(edit),'mesh',[{'vertex':0,'weights':{'cloth':1}}])
+
+    def test_direct_image_sparse_and_extension_view_users_rejected(self):
+        edits=[lambda d:d.update(images=[{'bufferView':2,'mimeType':'image/png'}]),
+               lambda d:d['accessors'][0].update(sparse={'count':1,'indices':{'bufferView':1,'componentType':5121},'values':{'bufferView':0}}),
+               lambda d:d.update(extensions={'fixture':{'bufferView':2}})]
+        for edit in edits:
+            with self.subTest(edit=edit),self.assertRaisesRegex(RestoreError,'ALIASED_ACCESSOR'):
+                patch_vertices(fixture(edit),'mesh',[{'vertex':0,'weights':{'cloth':1}}])
+
 
 class SparseWeightCliTests(unittest.TestCase):
     def setUp(self):

@@ -34,7 +34,7 @@ CLI 沿用 identity、workbench、art_sources 的路徑／no-reparse 與 embedde
 
 24個跨遮罩三角形、26條跨界邊及16對近乎重合的未修改頂點全部列入證據。單骨與rest共8組Blender／CPU全頂點對照最大誤差約2.712e-7m；這只確認測量一致，不能將候選FAIL改為PASS。保存FAILED-local-prototype.blend及基準／候選圖片。cape head-tail是製作候選後才記錄，明示此限制，不冒稱前置觀測已完成。
 
-擴大範圍的唯讀診斷找到496頂點／812面白色衣料連通片；近乎同位置合併會牽入其他片，logical weld接近整件角色。幾何連通不是衣料語義；804頂點提案仍NOT_ACCEPTED，不直接套配重，不消耗第二候選。
+擴大範圍的唯讀診斷找到496頂點／812面的連通片；圖中可見白色衣料及下方裝飾表面，尚未確認完整部位身分。近乎同位置合併會牽入其他片，logical weld接近整件角色。幾何連通不是衣料語義；804頂點提案仍NOT_ACCEPTED，不直接套配重，不消耗第二候選。
 
 ## Unity 原版基準
 
@@ -46,6 +46,6 @@ Unity result SHA：`4c07c72e3190f9b24d3cbe5edc9f22ce733e21036fc80cb6c8fc629e69f3
 
 ## 驗證與後續
 
-14項新增單元測試涵蓋非目標bytes、no-op、合法配重與拒絕條件、CLI綁定／scope／覆寫／report collision／來源漂移／URI；真實CLI同bytes正面與5項拒絕檢查PASS。美術工作區全套366項／checkpoint全套361項unittest PASS，兩邊pipeline validate均valid。PR15已由monkey1sai於14:20:24Z合併為main84fdbd92，該main的隔離合併後347項測試及validate PASS；這是GitHub merge紀錄，reviews仍空，不偽造UI approval。首次檢查在worktree checkout完成前誤啟動，為環境準備失敗，原log保留，不算產品FAIL或PASS；完成checkout後才取得上述合併後結果。
+17項新增單元測試涵蓋非目標bytes、no-op、合法配重與拒絕條件、CLI綁定／scope／覆寫／report collision／來源漂移／URI。獨立審查另重現負buffer偏移會寫到BIN前、配重accessor與COLOR共用會同步改色；已拒絕負值／boolean索引與偏移、所有primitive語義／morph／indices／animation／inverseBind引用共用及image／sparse／extension直接bufferView共用，新增回歸檢查。修正後checkpoint全套364項、美術工作區全套369項unittest PASS，pipeline validate均valid；真實CLI新run v002同bytes正面與5項拒絕檢查PASS，沒有覆寫v001。PR15已由monkey1sai於14:20:24Z合併為main84fdbd92，該main的隔離合併後347項測試及validate PASS；這是GitHub merge紀錄，reviews仍空，不偽造UI approval。首次檢查在worktree checkout完成前誤啟動，為環境準備失敗，原log保留，不算產品FAIL或PASS；完成checkout後才取得上述合併後結果。
 
 本次工具完整性可独立使用，失敗候選不能接入或上傳。下一個模型候選需先確認連通片與接縫的真實衣料範圍及固定掛點，不擴大遮罩遮蔽失敗。Mixamo實際綁骨／走跑跳、完整四類次級骨、真實target rig重定向、合法交付及Unity完整修復候選驗收仍未完成。可revert工具commit回滾；原始、失敗与歷史證據保留。

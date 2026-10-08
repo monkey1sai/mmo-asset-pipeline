@@ -32,6 +32,18 @@ def patch_vertices(blob, node_name, changes):
             raise RestoreError('GLB_LENGTH')
         if len(document['buffers']) != 1 or 'uri' in document['buffers'][0]:
             raise RestoreError('EMBEDDED_ONLY')
+        buffer_length = document['buffers'][0]['byteLength']
+        if type(buffer_length) is not int or not 0 <= buffer_length <= bin_length:
+            raise RestoreError('BUFFER_LENGTH')
+        for view in document['bufferViews']:
+            if type(view.get('buffer', 0)) is not int or view.get('buffer', 0) != 0:
+                raise RestoreError('BUFFER_INDEX')
+            if any(type(view.get(key, 0)) is not int or view.get(key, 0) < 0 for key in ('byteOffset', 'byteLength')):
+                raise RestoreError('BUFFER_VIEW_RANGE')
+            if 'byteLength' not in view or view.get('byteOffset', 0) + view['byteLength'] > buffer_length:
+                raise RestoreError('BUFFER_VIEW_RANGE')
+            if 'byteStride' in view and (type(view['byteStride']) is not int or view['byteStride'] <= 0):
+                raise RestoreError('BUFFER_VIEW_STRIDE')
         if not isinstance(node_name,str) or not node_name:
             raise RestoreError('NODE_NAME')
         nodes = document['nodes']
@@ -61,7 +73,14 @@ def patch_vertices(blob, node_name, changes):
         bone_index = {n:i for i,n in enumerate(bone_names)}
         spans = []
         for name in ['JOINTS_0','WEIGHTS_0']:
-            ai = attrs[name]; ac = document['accessors'][ai]; view = document['bufferViews'][ac['bufferView']]
+            ai = attrs[name]; ac = document['accessors'][ai]
+            if type(ac.get('bufferView')) is not int or not 0 <= ac['bufferView'] < len(document['bufferViews']):
+                raise RestoreError('BUFFER_VIEW_INDEX')
+            if type(ac.get('byteOffset', 0)) is not int or ac.get('byteOffset', 0) < 0:
+                raise RestoreError('ACCESSOR_OFFSET')
+            if type(ac.get('count')) is not int or type(ac.get('componentType')) is not int:
+                raise RestoreError('ACCESSOR_COUNT')
+            view = document['bufferViews'][ac['bufferView']]
             offset, letter, _, _ = accessor_span(document, ai, count, 'VEC4')
             size = struct.calcsize('<'+letter)
             if ac.get('normalized') or (name == 'WEIGHTS_0' and letter != 'f') or (name == 'JOINTS_0' and letter not in ('B','H')):
@@ -80,9 +99,25 @@ def patch_vertices(blob, node_name, changes):
                 other = bin_start+view.get('byteOffset',0)
                 if max(start,other) < min(start+length,other+view['byteLength']):
                     raise RestoreError('ALIASED_BUFFER_VIEW')
-            if sum(a.get('bufferView') == document['accessors'][ai]['bufferView'] for a in document['accessors']) != 1:
+            def view_references(value, view_index):
+                if isinstance(value, dict):
+                    return sum(int(key == 'bufferView' and item == view_index) + view_references(item, view_index)
+                               for key, item in value.items())
+                if isinstance(value, list):
+                    return sum(view_references(item, view_index) for item in value)
+                return 0
+            if view_references(document, document['accessors'][ai]['bufferView']) != 1:
                 raise RestoreError('ALIASED_ACCESSOR')
-            if sum(p['attributes'].get(['JOINTS_0','WEIGHTS_0'][k]) == ai for mesh in document['meshes'] for p in mesh['primitives']) != 1:
+            references = 0
+            for mesh in document['meshes']:
+                for primitive in mesh['primitives']:
+                    references += sum(value == ai for value in primitive.get('attributes', {}).values())
+                    references += int(primitive.get('indices') == ai)
+                    references += sum(value == ai for target in primitive.get('targets', []) for value in target.values())
+            references += sum(sampler.get(key) == ai for animation in document.get('animations', [])
+                              for sampler in animation.get('samplers', []) for key in ('input', 'output'))
+            references += sum(skin.get('inverseBindMatrices') == ai for skin in document['skins'])
+            if references != 1:
                 raise RestoreError('SHARED_SKIN_ACCESSOR')
             if sum(n.get('mesh') == node['mesh'] for n in nodes) != 1:
                 raise RestoreError('SHARED_MESH')
