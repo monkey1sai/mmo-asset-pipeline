@@ -42,7 +42,8 @@ def make_handler(save_dir: Path):
                 return
             relative = path.lstrip("/")
             target = (ROOT / relative).resolve()
-            if not relative.startswith(READABLE) or not target.is_relative_to(ROOT) or not target.is_file() or target.suffix.lower() not in TYPES:
+            in_readable_folder = any(target.is_relative_to((ROOT / folder).resolve()) for folder in READABLE)
+            if not relative.startswith(READABLE) or not target.is_relative_to(ROOT) or not in_readable_folder or not target.is_file() or target.suffix.lower() not in TYPES:
                 self.reply(HTTPStatus.NOT_FOUND, b"not found")
                 return
             self.reply(HTTPStatus.OK, target.read_bytes(), TYPES[target.suffix.lower()])

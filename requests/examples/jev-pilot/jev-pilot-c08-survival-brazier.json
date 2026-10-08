@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "jev-pilot-c08-survival-brazier",
+  "title": "jev-pilot-c08-survival-brazier",
+  "brief": "場景要石座、鐵盆、炭火組成的火盆。只要靜態道具，炭火用自發光材質，不把實體火焰黏在模型；不要金屬支腳代替石座。",
+  "purpose": "生存製作：中文語意判斷試點範例，製作用途待整理",
+  "task_type": "static_prop",
+  "project": null,
+  "status": "draft",
+  "provenance": {
+    "kind": "example",
+    "reference": "tools/jev-pilot/zh-game-cases-v1.json#cases/c08-survival-brazier"
+  },
+  "style": {
+    "description": "場景要石座、鐵盆、炭火組成的火盆。只要靜態道具，炭火用自發光材質，不把實體火焰黏在模型；不要金屬支腳代替石座。",
+    "references": [],
+    "must_have": [],
+    "must_not_have": []
+  },
+  "spec": {
+    "size_m": null,
+    "target_triangles": null,
+    "texture_px": null,
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {
+    "scope": "standalone",
+    "formats": [
+      "glb"
+    ],
+    "target_environment": null
+  },
+  "production": {
+    "route": "review_existing",
+    "reason": "先查素材庫，再按差距決定重用、修改、生成或拆件",
+    "reuse_candidates": [],
+    "max_revisions": 1
+  },
+  "additional_checks": [],
+  "assumptions": [
+    "m／+Y／+Z 與 GLB 獨立交付是可修訂預設，不表示已量測或目標引擎已驗",
+    "合成試點需求；類型由預先標籤建立，不是 Jev 的輸出；沒有製作或驗收承諾。"
+  ],
+  "open_questions": [
+    "整理用途、尺寸、面數、造型約束及必要功能；只把真正影響製作的缺項交給委託者決定"
+  ]
+}

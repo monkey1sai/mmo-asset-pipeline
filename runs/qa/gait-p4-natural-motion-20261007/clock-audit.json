@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "status": "UNVERIFIED_NO_TRIAL_ADMISSION",
+  "observed_utc": "2026-10-07 08:28:08 UTC",
+  "authoritative_snapshot": {
+    "path": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-31.json",
+    "utc": "2026-10-07T05:58:41Z",
+    "intervals": 36,
+    "active_seconds_total": 54306,
+    "trial_seconds_cap": 129600,
+    "closing_rule": "reconcile closing bookkeeping in next turn"
+  },
+  "r6_caps": {
+    "standard_trial_seconds": 64800,
+    "total_seconds": 172800,
+    "max_candidate_trials": 4
+  },
+  "r6_quality_ledger": {
+    "path": "runs/qa/ro-swordsman-character-v1-r6/quality-ledger.json",
+    "recorded_trials": [
+      {
+        "id": "baseline",
+        "elapsed_seconds": 2641
+      }
+    ],
+    "candidate_trial_elapsed_recorded": false,
+    "baseline_inclusion_in_snapshot": "UNVERIFIED"
+  },
+  "readable_parent_turn_metadata": {
+    "thread_id": "01a1153c-adb0-78e1-a3d2-e92b06a1a865",
+    "turns": [
+      {
+        "turn_id": "01a11572-6e39-76b1-be5d-e825f47290a1",
+        "status": "inProgress",
+        "started_at_epoch_seconds": 1791361183,
+        "completed_at_epoch_seconds": null,
+        "duration_ms": null
+      },
+      {
+        "turn_id": "01a11556-25c9-7632-a0fc-b199a8e7dc91",
+        "status": "completed",
+        "started_at_epoch_seconds": 1791359330,
+        "completed_at_epoch_seconds": 1791361143,
+        "duration_ms": 1813796
+      },
+      {
+        "turn_id": "01a1154e-2c8b-75d3-b001-66038019743e",
+        "status": "completed",
+        "started_at_epoch_seconds": 1791358807,
+        "completed_at_epoch_seconds": 1791359190,
+        "duration_ms": 382774
+      },
+      {
+        "turn_id": "01a1153d-733f-7ad3-a9b5-1dfa64095d27",
+        "status": "inProgress",
+        "started_at_epoch_seconds": 1791357711,
+        "completed_at_epoch_seconds": null,
+        "duration_ms": null
+      },
+      {
+        "turn_id": "01a1153c-b5f3-7320-b6ab-bd8b2af7ef7d",
+        "status": "completed",
+        "started_at_epoch_seconds": 1791357662,
+        "completed_at_epoch_seconds": 1791357675,
+        "duration_ms": 12614
+      }
+    ],
+    "fetched_utc": "2026-10-07T08:20:15Z",
+    "scope": "Partial metadata only; excludes all user text, tool commands and outputs; missing turn completion is not a confirmed work interval"
+  },
+  "current_task_metadata": {
+    "thread_id": "01a1156f-55d4-7521-ad7e-45d99119d422",
+    "turn_id": "01a1156f-5c42-7c02-b6c5-8fa707a948f4",
+    "status_at_read": "inProgress",
+    "started_at_epoch_seconds": 1791360982,
+    "started_utc": "2026-10-07T08:16:22.000Z",
+    "completed_at_epoch_seconds": null,
+    "scope": "Current static audit only; completion not yet observed. Do not insert zero elapsed or double-count overlap with parent turn."
+  },
+  "unavailable_original_clock": {
+    "thread_id": "01a114d8-92bf-71a0-b52d-ea4aa005ec0c",
+    "error": "Could not determine whether Codex thread 01a114d8-92bf-71a0-b52d-ea4aa005ec0c exists. Unavailable or failed hosts: durable",
+    "failure_class": "TOOL_FAILURE",
+    "attempts": [
+      {
+        "executor": "read-only audit child",
+        "host": "default"
+      },
+      {
+        "executor": "coordinator",
+        "host": "local"
+      }
+    ],
+    "targeted_filename_search": {
+      "root": "C:/Users/IOT/.codex/sessions/2026/10/07",
+      "glob": "*01a114d8-92bf-71a0-b52d-ea4aa005ec0c*",
+      "matches": 0,
+      "scope": "filename search only, not a broad content scan"
+    }
+  },
+  "unresolved": [
+    "Work/user-wait intervals from 2026-10-07T05:58:41Z through this task start; original chat inaccessible.",
+    "Completion and exact wait interval of parent turn 01a1153d-733f-7ad3-a9b5-1dfa64095d27, which remains inProgress in readable metadata.",
+    "Whether and how archival/tooling intervals enter the existing coordinator clock; tool runtimes do not release budget.",
+    "Overlap between parent turn 01a11556 and this task (current task started before parent completion); do not sum wall durations as independent coordinator intervals.",
+    "Formal v001 ledger linkage, inherited baseline elapsed inclusion, candidate count and trial identity for B."
+  ],
+  "current_remaining_seconds": null,
+  "elapsed_seconds_added_to_formal_ledger": null,
+  "new_trial_created": false,
+  "new_budget_assumed": false,
+  "old_records_modified": false,
+  "next_input": "Original coordinator's interval evidence and ledger linkage, or explicit new budget authority retaining all prior consumption and failures; elapsed time alone is not approval."
+}

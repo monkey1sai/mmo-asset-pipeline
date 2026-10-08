@@ -1,0 +1,689 @@
+{
+  "schema_version": 1,
+  "run_id": "jev-zh-pilot-20261007",
+  "generated_at": "2026-10-08T04:58:36.123683+00:00",
+  "status": "partial",
+  "label_source": "Codex 依專案規則預先編寫的合成案例與預期標籤；尚未經人類覆核",
+  "case_count": 20,
+  "genre_count": 12,
+  "models": [
+    "jev-1.13.0"
+  ],
+  "baseline_type_correct": 5,
+  "baseline_rank": {
+    "evaluated_cases": 17,
+    "top1_correct": 16,
+    "top3_correct": 17,
+    "mrr": 0.9706
+  },
+  "paired_baseline_rank": {
+    "evaluated_cases": 7,
+    "top1_correct": 7,
+    "top3_correct": 7,
+    "mrr": 1.0
+  },
+  "jev": {
+    "evaluated_cases": 7,
+    "type_correct": 7,
+    "asset_choice_correct": 7,
+    "rank": {
+      "evaluated_cases": 7,
+      "top1_correct": 7,
+      "top3_correct": 7,
+      "mrr": 1.0
+    },
+    "needs_review": 0,
+    "advisory_coverage": 7,
+    "advisory_type_correct": 7,
+    "advisory_asset_correct": 7
+  },
+  "usage": {
+    "input_tokens": 20488,
+    "output_tokens": 1449,
+    "estimated_usd": 0.0008605,
+    "actual_charge": "UNVERIFIED"
+  },
+  "latency": {
+    "measurement": "每次 provider 呼叫至契約核對完成；不含案例編寫、離線準備或實際美術製作",
+    "mean_ms": 243.19,
+    "median_ms": 236.9,
+    "max_ms": 297.02
+  },
+  "baseline_notes": "分類對照是 intake 的 static_prop 預設，並非語意分類器。排序對照為相同人工候選集合的中文二字組字面相似度；不宣稱全庫檢索品質。",
+  "cases": [
+    {
+      "id": "c01-action-sword",
+      "genre": "動作 ARPG",
+      "brief": "暗黑奇幻動作遊戲要一把樸素的鏽蝕鐵劍。只做獨立靜態武器 GLB，完整單一劍刃，不要雙叉刃、金色裝飾，也不需要骨架。",
+      "candidate_ids": [
+        "evoloot-iron-sword-neutral-v001",
+        "fx-plain-sword",
+        "fx-static-fighter",
+        "fx-rifle-fused"
+      ],
+      "expected_type": "static_prop",
+      "acceptable_assets": [
+        "fx-plain-sword"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-plain-sword",
+        "fx-static-fighter",
+        "fx-rifle-fused",
+        "evoloot-iron-sword-neutral-v001"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "f7a8bacb53dd4a3bf866fd4e75220a54fd56e121f94b6c9189e6dc2ca7b672ce",
+      "provider_status": "completed",
+      "jev_type": "static_prop",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-plain-sword",
+      "asset_confidence": 0.92,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-plain-sword",
+        "evoloot-iron-sword-neutral-v001",
+        "fx-static-fighter",
+        "fx-rifle-fused"
+      ],
+      "fit_scores": {
+        "evoloot-iron-sword-neutral-v001": 1.56,
+        "fx-plain-sword": 3.39,
+        "fx-static-fighter": 0.71,
+        "fx-rifle-fused": 0.06
+      },
+      "needs_review": false,
+      "wall_ms": 279.39
+    },
+    {
+      "id": "c02-action-fighter",
+      "genre": "動作 ARPG",
+      "brief": "做一名原創卡通劍士，完整人形角色要綁骨、可換劍，能跑步、待機與揮劍。武器和身體要分開，交付 GLB。",
+      "candidate_ids": [
+        "fx-static-fighter",
+        "fx-rifle-parts",
+        "fx-rig-fighter",
+        "fx-garden-npc"
+      ],
+      "expected_type": "rigged_character",
+      "acceptable_assets": [
+        "fx-rig-fighter"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-rig-fighter",
+        "fx-garden-npc",
+        "fx-static-fighter",
+        "fx-rifle-parts"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "bce269b82105f3d07a8a20c34668a1a4ae3433106255aa8c546c3a0fe4bf7331",
+      "provider_status": "completed",
+      "jev_type": "rigged_character",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-rig-fighter",
+      "asset_confidence": 0.96,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-rig-fighter",
+        "fx-garden-npc",
+        "fx-static-fighter",
+        "fx-rifle-parts"
+      ],
+      "fit_scores": {
+        "fx-static-fighter": 0.81,
+        "fx-rifle-parts": 0.12,
+        "fx-rig-fighter": 2.79,
+        "fx-garden-npc": 1.43
+      },
+      "needs_review": false,
+      "wall_ms": 297.02
+    },
+    {
+      "id": "c03-mmorpg-healer",
+      "genre": "MMORPG",
+      "brief": "線上角色扮演遊戲需要手繪風長袍治療師，完整角色需骨架與權重，能施法、走路及待機，長袍不要和雙腿黏在一起。",
+      "candidate_ids": [
+        "fx-healer-statue",
+        "fx-rig-fighter",
+        "fx-rig-healer",
+        "fx-horror-doll"
+      ],
+      "expected_type": "rigged_character",
+      "acceptable_assets": [
+        "fx-rig-healer"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-rig-healer",
+        "fx-rig-fighter",
+        "fx-healer-statue",
+        "fx-horror-doll"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "5b3adab663ece948bd9928e5498010a5232b287c99f86bc5925ed8015bdc1ea7",
+      "provider_status": "completed",
+      "jev_type": "rigged_character",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-rig-healer",
+      "asset_confidence": 0.99,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-rig-healer",
+        "fx-rig-fighter",
+        "fx-healer-statue",
+        "fx-horror-doll"
+      ],
+      "fit_scores": {
+        "fx-healer-statue": 0.59,
+        "fx-rig-fighter": 1.52,
+        "fx-rig-healer": 3.38,
+        "fx-horror-doll": 0.13
+      },
+      "needs_review": false,
+      "wall_ms": 239.04
+    },
+    {
+      "id": "c04-mmorpg-statue",
+      "genre": "MMORPG",
+      "brief": "城鎮廣場要一座長袍人物石雕，只作靜態景物。不需要骨架、走路或施法動畫，請交付單件石材模型。",
+      "candidate_ids": [
+        "fx-rig-healer",
+        "fx-healer-statue",
+        "fx-static-fighter",
+        "cl-brazier-v1"
+      ],
+      "expected_type": "static_prop",
+      "acceptable_assets": [
+        "fx-healer-statue"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-healer-statue",
+        "fx-rig-healer",
+        "fx-static-fighter",
+        "cl-brazier-v1"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "7889a85401befe4f2748626ec6e07a39517b2267ff7ba4bb9dc664566c65e5ea",
+      "provider_status": "completed",
+      "jev_type": "static_prop",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-healer-statue",
+      "asset_confidence": 0.99,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-healer-statue",
+        "fx-static-fighter",
+        "fx-rig-healer",
+        "cl-brazier-v1"
+      ],
+      "fit_scores": {
+        "fx-rig-healer": 0.38,
+        "fx-healer-statue": 3.9,
+        "fx-static-fighter": 1.32,
+        "cl-brazier-v1": 0.26
+      },
+      "needs_review": false,
+      "wall_ms": 224.73
+    },
+    {
+      "id": "c05-shooter-rifle",
+      "genre": "射擊 FPS／TPS",
+      "brief": "第一人稱射擊遊戲要寫實步槍模型。槍機和扳機必須分開，能往復拉動槍機及旋轉扳機；本次不做持槍角色或人形骨架。",
+      "candidate_ids": [
+        "fx-rifle-fused",
+        "fx-rig-fighter",
+        "fx-car-parts",
+        "fx-rifle-parts"
+      ],
+      "expected_type": "interactive_prop",
+      "acceptable_assets": [
+        "fx-rifle-parts"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-rifle-parts",
+        "fx-rifle-fused",
+        "fx-car-parts",
+        "fx-rig-fighter"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "d613802d0d8cfba570ac0ab54fe2809802c3568a0e1188f299356976c5c27515",
+      "provider_status": "completed",
+      "jev_type": "interactive_prop",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-rifle-parts",
+      "asset_confidence": 0.99,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-rifle-parts",
+        "fx-rifle-fused",
+        "fx-car-parts",
+        "fx-rig-fighter"
+      ],
+      "fit_scores": {
+        "fx-rifle-fused": 0.8,
+        "fx-rig-fighter": 0.01,
+        "fx-car-parts": 0.07,
+        "fx-rifle-parts": 3.84
+      },
+      "needs_review": false,
+      "wall_ms": 212.17
+    },
+    {
+      "id": "c06-shooter-corridor",
+      "genre": "射擊 FPS／TPS",
+      "brief": "需要科幻基地走廊套件，牆、地板、頂板、轉角採統一模數，接合邊對齊，可反覆拼接成不同路線；不做整條合併走廊。",
+      "candidate_ids": [
+        "fx-corridor-scene",
+        "fx-road-kit",
+        "fx-corridor-kit",
+        "fx-wall-kit"
+      ],
+      "expected_type": "modular_environment",
+      "acceptable_assets": [
+        "fx-corridor-kit"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-corridor-kit",
+        "fx-corridor-scene",
+        "fx-road-kit",
+        "fx-wall-kit"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "02da54ca1111ee774505578fb55b50bcaef0bf6905b3dfdd4ca8810fd9d1a79b",
+      "provider_status": "completed",
+      "jev_type": "modular_environment",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-corridor-kit",
+      "asset_confidence": 1.0,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-corridor-kit",
+        "fx-road-kit",
+        "fx-wall-kit",
+        "fx-corridor-scene"
+      ],
+      "fit_scores": {
+        "fx-corridor-scene": 0.54,
+        "fx-road-kit": 1.19,
+        "fx-corridor-kit": 3.96,
+        "fx-wall-kit": 0.98
+      },
+      "needs_review": false,
+      "wall_ms": 213.1
+    },
+    {
+      "id": "c07-survival-crate",
+      "genre": "生存製作",
+      "brief": "生存遊戲需要可以掀蓋的木製補給箱。箱體與箱蓋分件，箱蓋繞後側鉸鏈開關，必須保留 pivot；不要封死箱蓋的裝飾箱。",
+      "candidate_ids": [
+        "fx-sealed-crate",
+        "fx-door-parts",
+        "fx-hinged-crate",
+        "fx-scarecrow"
+      ],
+      "expected_type": "interactive_prop",
+      "acceptable_assets": [
+        "fx-hinged-crate"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-hinged-crate",
+        "fx-door-parts",
+        "fx-sealed-crate",
+        "fx-scarecrow"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "a8c08681e58be1644d54dca35c4737393054f4e11eb3b321477a3e16bcf51b1c",
+      "provider_status": "completed",
+      "jev_type": "interactive_prop",
+      "type_confidence": 1.0,
+      "jev_asset": "fx-hinged-crate",
+      "asset_confidence": 1.0,
+      "type_correct": true,
+      "asset_correct": true,
+      "jev_ranking": [
+        "fx-hinged-crate",
+        "fx-door-parts",
+        "fx-sealed-crate",
+        "fx-scarecrow"
+      ],
+      "fit_scores": {
+        "fx-sealed-crate": 0.25,
+        "fx-door-parts": 1.04,
+        "fx-hinged-crate": 3.82,
+        "fx-scarecrow": 0.08
+      },
+      "needs_review": false,
+      "wall_ms": 236.9
+    },
+    {
+      "id": "c08-survival-brazier",
+      "genre": "生存製作",
+      "brief": "場景要石座、鐵盆、炭火組成的火盆。只要靜態道具，炭火用自發光材質，不把實體火焰黏在模型；不要金屬支腳代替石座。",
+      "candidate_ids": [
+        "cl-brazier-v001",
+        "cl-wreck-v1",
+        "cl-brazier-v1",
+        "fx-sealed-crate"
+      ],
+      "expected_type": "static_prop",
+      "acceptable_assets": [
+        "cl-brazier-v1"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "cl-brazier-v1",
+        "cl-brazier-v001",
+        "cl-wreck-v1",
+        "fx-sealed-crate"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "258fb59ff8f629ae95599a97da2d067e3a48931e2cace148b32392c46d6da766",
+      "provider_status": "failed"
+    },
+    {
+      "id": "c09-strategy-wall",
+      "genre": "策略 RTS",
+      "brief": "中式戰場需要城牆拼接套件，直牆、角牆、垛口採固定接合尺寸，可重複排成不同城池。門洞只作靜態模組，不要求開門。",
+      "candidate_ids": [
+        "fx-whole-castle",
+        "cl-barracks-v1",
+        "fx-wall-kit",
+        "fx-corridor-kit"
+      ],
+      "expected_type": "modular_environment",
+      "acceptable_assets": [
+        "fx-wall-kit"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-wall-kit",
+        "fx-whole-castle",
+        "fx-corridor-kit",
+        "cl-barracks-v1"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "b5853b5c3178fb2f555c632816fda5b25a79a9f6cab6c909a30045540fad728f",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c10-strategy-barrack",
+      "genre": "策略 RTS",
+      "brief": "魏軍軍營要一棟木構營房，牆身與屋頂分件方便改材質。本次是固定擺放的單棟建築，不需要開門、人物骨架或反覆拼接的場景模組。",
+      "candidate_ids": [
+        "fx-europe-barrack",
+        "fx-wall-kit",
+        "cl-barracks-v1",
+        "fx-whole-castle"
+      ],
+      "expected_type": "static_prop",
+      "acceptable_assets": [
+        "cl-barracks-v1"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-europe-barrack",
+        "cl-barracks-v1",
+        "fx-whole-castle",
+        "fx-wall-kit"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "46e54b6d7ed6fee8a3536910c18f103ec1ca45032a7ce0538309dee6750ca3b8",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c11-tower-turret",
+      "genre": "塔防",
+      "brief": "塔防要一座可以瞄準的砲塔，底座、旋轉盤、砲管分件，盤能左右旋轉，砲管可俯仰；不要底座與砲管融合的固定雕像。",
+      "candidate_ids": [
+        "fx-turret-statue",
+        "fx-rifle-parts",
+        "fx-turret-parts",
+        "fx-car-display"
+      ],
+      "expected_type": "interactive_prop",
+      "acceptable_assets": [
+        "fx-turret-parts"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-turret-parts",
+        "fx-turret-statue",
+        "fx-rifle-parts",
+        "fx-car-display"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "3168c88b01295e86004bb0cf276dbb60850d57808cdd640f620a193541eaad57",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c12-cozy-gardener",
+      "genre": "療癒農場模擬",
+      "brief": "農場遊戲要大頭短身的 Q 版園丁 NPC，完整人形需綁骨與手部掛點，能待機、走路和鋤地，農具要分件。",
+      "candidate_ids": [
+        "fx-scarecrow",
+        "fx-rig-healer",
+        "fx-garden-npc",
+        "fx-static-fighter"
+      ],
+      "expected_type": "rigged_character",
+      "acceptable_assets": [
+        "fx-garden-npc"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-garden-npc",
+        "fx-rig-healer",
+        "fx-scarecrow",
+        "fx-static-fighter"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "ec884f926dfe2fb0b0cd55aa7db1a5b251a0fb2949672463011a9871bc7cf6ce",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c13-cozy-scarecrow",
+      "genre": "療癒農場模擬",
+      "brief": "做 Q 版稻草人放在田裡當裝飾。固定木架與稻草，不是 NPC，不需要骨架、鋤地、走路或其他動畫。",
+      "candidate_ids": [
+        "fx-garden-npc",
+        "fx-horror-doll",
+        "fx-scarecrow",
+        "fx-healer-statue"
+      ],
+      "expected_type": "static_prop",
+      "acceptable_assets": [
+        "fx-scarecrow"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-scarecrow",
+        "fx-garden-npc",
+        "fx-healer-statue",
+        "fx-horror-doll"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "a49c6e3d58e6450f6bd57335754ef8454d9c3187677c66888eaea6f7bbdb12d0",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c14-racing-road",
+      "genre": "競速",
+      "brief": "賽車遊戲需要直線、彎道、坡道三種路段套件，寬度和接合點一致，可拼出不同賽道；不要整圈封閉賽道的單網格。",
+      "candidate_ids": [
+        "fx-road-scene",
+        "fx-corridor-kit",
+        "fx-road-kit",
+        "fx-hex-rooms"
+      ],
+      "expected_type": "modular_environment",
+      "acceptable_assets": [
+        "fx-road-kit"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-road-kit",
+        "fx-road-scene",
+        "fx-corridor-kit",
+        "fx-hex-rooms"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "11bae02f7108d72ca97d1a08f0cc6758f72e3a39b9d37584852d3ce93c77e690",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c15-racing-car",
+      "genre": "競速",
+      "brief": "做可操作的寫實賽車模型，車輪能滾動、前輪能轉向、方向盤能旋轉，車體與四輪及方向盤分件並設定 pivot。不需要人形角色骨架。",
+      "candidate_ids": [
+        "fx-car-display",
+        "fx-turret-parts",
+        "fx-car-parts",
+        "fx-rifle-parts"
+      ],
+      "expected_type": "interactive_prop",
+      "acceptable_assets": [
+        "fx-car-parts"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-car-parts",
+        "fx-rifle-parts",
+        "fx-turret-parts",
+        "fx-car-display"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "d6e01ea2239f636f3a468537da19e185352f85a26a8e448e9667b71b805b2b84",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c16-puzzle-door",
+      "genre": "解謎平台",
+      "brief": "卡通解謎場景要雙扇木門，門框、左門扇、右門扇分離，兩扇門各自繞鉸鏈開關，不能把門框門扇合成一件。",
+      "candidate_ids": [
+        "fx-door-fused",
+        "fx-hinged-crate",
+        "fx-door-parts",
+        "fx-wall-kit"
+      ],
+      "expected_type": "interactive_prop",
+      "acceptable_assets": [
+        "fx-door-parts"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-door-parts",
+        "fx-door-fused",
+        "fx-hinged-crate",
+        "fx-wall-kit"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "9a915b1e8d28ee655ba33a112aa93054944e8b3748b0b354dd6351da83e8183a",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c17-roguelike-room",
+      "genre": "Roguelike 地城",
+      "brief": "低多邊形手繪地城需要六角房間、走道與入口模組，固定邊長且可以程序拼接；不是一次建好的完整地城場景。",
+      "candidate_ids": [
+        "fx-whole-dungeon",
+        "fx-wall-kit",
+        "fx-hex-rooms",
+        "fx-corridor-scene"
+      ],
+      "expected_type": "modular_environment",
+      "acceptable_assets": [
+        "fx-hex-rooms"
+      ],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-hex-rooms",
+        "fx-whole-dungeon",
+        "fx-corridor-scene",
+        "fx-wall-kit"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "d6758bbd8684eb81d25e38c8484a46a278b7fb8fadf4f9ef2fd93d7f435608c3",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c18-card-ui",
+      "genre": "卡牌對戰",
+      "brief": "本次只要 2D 卡面插畫和透明背景 UI 圖示，PNG 交付，不需要任何 3D 模型、GLB、骨架或場景。",
+      "candidate_ids": [
+        "fx-card-frame",
+        "fx-healer-statue",
+        "fx-static-fighter",
+        "fx-turret-statue"
+      ],
+      "expected_type": "out_of_scope",
+      "acceptable_assets": [],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-card-frame",
+        "fx-turret-statue",
+        "fx-static-fighter",
+        "fx-healer-statue"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "4b71d1c0f850da36337333196468126ec1e90ad01ad24d030cb350acf6bb31d9",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c19-horror-unclear",
+      "genre": "恐怖冒險",
+      "brief": "恐怖遊戲要一個人物放在場景裡，但還沒決定是固定擺件、可動 NPC 還是會追人的敵人；骨架與動作需求之後再確認。",
+      "candidate_ids": [
+        "fx-horror-doll",
+        "fx-rig-fighter",
+        "fx-healer-statue",
+        "fx-garden-npc"
+      ],
+      "expected_type": "needs_clarification",
+      "acceptable_assets": [],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-horror-doll",
+        "fx-healer-statue",
+        "fx-garden-npc",
+        "fx-rig-fighter"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "0e590c29400eda8b5c4dcef78a159e42a92fa336c3ebd4b05275005a9fc09445",
+      "provider_status": "NOT_RUN"
+    },
+    {
+      "id": "c20-survival-unclear",
+      "genre": "生存製作",
+      "brief": "生存遊戲要做一個場景素材，用途、造型以及是否互動都還沒決定，請先列待確認事項，不要直接決定製作哪一件。",
+      "candidate_ids": [
+        "fx-sealed-crate",
+        "fx-hinged-crate",
+        "cl-brazier-v1",
+        "fx-scarecrow"
+      ],
+      "expected_type": "needs_clarification",
+      "acceptable_assets": [],
+      "baseline_type": "static_prop",
+      "baseline_ranking": [
+        "fx-scarecrow",
+        "fx-hinged-crate",
+        "cl-brazier-v1",
+        "fx-sealed-crate"
+      ],
+      "existing_exact_matches": [],
+      "payload_sha256": "c85a890a6686d01eda8b897175f888ce763cfd9806b0c17044b0faee30ad1ae3",
+      "provider_status": "NOT_RUN"
+    }
+  ]
+}

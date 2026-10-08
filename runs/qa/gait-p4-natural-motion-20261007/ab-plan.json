@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "comparison_conditions_frozen_execution_blocked",
+  "scope": "gait P4 natural-motion improvement",
+  "authority": "Current task delegation from 01a1153c-adb0-78e1-a3d2-e92b06a1a865; local original-clip revision only; no P5, paid generation, external motion import, push, PR, merge or deployment",
+  "engineering_base": "16344513cb8e6431a0dfcec128fc5c86d351361a",
+  "branch": "codex/gait-p4-natural-motion-20261007",
+  "request": {
+    "path": "requests/ro-swordsman-character-v1-r6.json",
+    "request_sha256": "4e48344261912e00dcf9e32fa657cbfbb43124cd639be7d026f081aeb7a93cbb",
+    "quality_sha256": "8df7c6cb88f08cd8bb0547d019f319da66e1cf43bc75a4a2253d1a3edf8663ce",
+    "unchanged": true
+  },
+  "baseline_a": {
+    "name": "Walk a04 on b20-coatlie3",
+    "foundation": {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/ro_character_v001_b20-coatlie3.blend",
+      "sha256": "8c75c0540c0ddf35fce2f64aab06f9fcf0b9dddfc0f8b49e3cd5b84d30331e3e",
+      "bytes": 34656060
+    },
+    "action": {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/AN_RO_Walk_Sword.blend",
+      "sha256": "e96f0292034f5102caa380e3bf4e70ca4af08919b48dbed632db66be0759bc07",
+      "bytes": 859570
+    },
+    "glb": {
+      "path": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/export-b20/an_ro_walk_sword_a04_b20_baked_owner_exact_weights.glb",
+      "sha256": "d4918618acd160b38409edcf3767017aa456d329f6a29b80cc02194181a0db08",
+      "bytes": 3431896,
+      "morph_owner": "baked_clip",
+      "runtime_qa_rule": "Use a separately generated runtime-owner variant with no baked corrective weights; never load baked-owner tracks together with the runtime corrective evaluator"
+    },
+    "spec": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04/clip-spec.json",
+    "interaction": "assets/processed/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/interaction.json",
+    "historical_clip_check": "runs/qa/ro-swordsman-character-v1/v001/clips/AN_RO_Walk_Sword/a04-check-b20/clip-check.json",
+    "fresh_visual_motion_review": "NOT_RUN",
+    "fresh_dcc_category_signatures": "NOT_RUN",
+    "naturalness_scores": null
+  },
+  "candidate_b": null,
+  "comparison": {
+    "conditions_frozen": true,
+    "scope_note": "Supplemental A/B observation schedule; does not edit the r6 quality protocol, anchors, targets or required checks. No observation has been executed.",
+    "coordinate_system": "Blender Z-up meters; forward -Y; GLB Y-up meters, forward +Z",
+    "blender_version": "4.5.5 LTS build836beaaf597a",
+    "fps": 60,
+    "frames_per_cycle": 60,
+    "in_place": true,
+    "nominal_speed_m_s": 1.4,
+    "playback_speeds": [0.5, 1.0],
+    "visual_cycles_per_speed": 3,
+    "vfx": false,
+    "beauty_and_clay": true,
+    "render": {
+      "engine": "BLENDER_EEVEE_NEXT",
+      "view_transform": "AgX",
+      "exposure": 0,
+      "resolution_px": [1280, 1280],
+      "world_rgb": [0.16, 0.16, 0.16],
+      "floor_rgb": [0.18, 0.19, 0.21],
+      "floor_z_m": 0,
+      "lights": [
+        {"id": "Key", "position_m": [3, -4, 5], "power_w": 700, "size_m": 4},
+        {"id": "Fill", "position_m": [-3, -2, 3], "power_w": 350, "size_m": 3},
+        {"id": "Rim", "position_m": [0, 3, 4], "power_w": 800, "size_m": 3}
+      ]
+    },
+    "cameras": {
+      "full_body_target_m": [0, 0, 0.9],
+      "full_body_ortho_scale_m": 2.25,
+      "front_m": [0, -4, 1.35],
+      "side_m": [4, 0, 1.35],
+      "back_m": [0, 4, 1.35],
+      "three_quarter_m": [2.8, -4, 2],
+      "detail_m": [1.2, -4, 1.75],
+      "detail_target_m": [0, 0, 1.53],
+      "detail_ortho_scale_m": 0.62,
+      "supplemental_feet_m": [2.4, -4, 0.55],
+      "supplemental_feet_target_m": [0, 0, 0.25],
+      "supplemental_feet_ortho_scale_m": 0.95,
+      "supplemental_feet_scoring": false,
+      "auto_fit_candidate_bounds": false
+    },
+    "png_sample_frames": [0, 6, 12, 18, 24, 25, 30, 36, 42, 48, 54, 55, 59, 60],
+    "technical_sampling": "Unchanged cv1 whole frames, half frames and quarter-frame samples around existing contact boundaries; use source QA sample set and the original frozen gates",
+    "contact": {
+      "stance_R_inclusive_frames": [0, 24],
+      "stance_L_inclusive_frames": [30, 54],
+      "grasp_R_inclusive_frames": [0, 59],
+      "grasp_L_windows": [],
+      "sole_ids": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/contact-fixtures.json",
+      "rules": "assets/processed/ro-swordsman-character-v1/v001/b20-coatlie3/corrective-rules.json",
+      "change_windows_speed_sole_ids_or_gate_to_pass": false
+    },
+    "observations": [
+      "Pelvis weight transfer onto the stance leg without excessive vertical bounce",
+      "Spine/thorax counter-rotation and shoulder/arm phase; preserve sword grasp and armored shoulder clearance",
+      "Knee flexion through support, toe-off, swing and landing; inspect the measured curve together with motion",
+      "Heel/toe roll, sole contact and stride-to-speed consistency",
+      "Existing Idle/Walk, Walk/Run and upper-body Cast transitions; start/stop observations belong to these existing scenarios"
+    ],
+    "independent_art_review": "Anonymous A/B under the same frozen conditions; reviewer watches normal and slow motion before receiving numerical results; no scores before actual observation",
+    "no_regression": "Compare corresponding baseline/candidate samples and every existing required gate. Previously passing cases must remain passing; existing failure cases and underlying measured severity must not worsen. Missing measurements are UNVERIFIED, never PASS. A scoped improvement does not close global P4 failures.",
+    "acceptance": "Preserve every r6 quality dimension and target; at least one observed improvement with no dimension regression, protected data unchanged and required checks actually executed. Record failed, not-run and unknown cases separately. Do not infer art acceptance, delivery or P5 readiness from numeric agreement."
+  },
+  "production_route": {
+    "choice": "Adopt frozen local authoring and verification code; modify a new data/action version of the original clip",
+    "inputs_only": true,
+    "reused_code": ["scripts/cv1_author_locomotion.py", "scripts/cv1_gait.py", "scripts/cv1_arm_ik.py", "scripts/cv1_clip_check.py", "scripts/cv1_foundation_signature.py"],
+    "single_hypothesis": "A coherent pelvis/thorax/shoulder phase distribution can improve perceived weight transfer; with the original foot targets, the resulting IK knee curve must stay grounded and avoid abrupt flexion. This is a proposed hypothesis, not an observed defect or improvement.",
+    "hypothesis_status": "pending_fresh_baseline_observation",
+    "parameter_values": null,
+    "allowed_parameter_families": ["pelvis motion", "spine/thorax counter-rotation", "shoulder sway", "derived knee flexion curve"],
+    "knee_rule": "Measure knees produced by unchanged two-bone IK after permitted pelvis motion edits. Direct knee edits must not move ankle/sole targets or violate contacts. If the existing data-only route cannot express the needed curve, record a separate tooling scope rather than editing frozen code.",
+    "external_source_decision": "No new external motion required for original-clip revision. No rights-cleared external-motion receipt found; external imports remain blocked. Existing local task authority is not represented as a new raw-redistribution rights review.",
+    "preserve": ["target rig", "rest pose", "topology", "weights", "morphs", "rules", "evaluator", "original masters", "failed artifacts", "existing clock/trial limits"],
+    "category_signature_gate": "Before editing, run the unchanged cv1_foundation_signature.py on the same frozen foundation. Compare mesh/rest/weights/morphs/rules/evaluator after candidate construction; no category difference allowed. No old b03 signature is substituted for b20.",
+    "output_policy": "New version paths only; candidate path, file hashes, trial identity, start/end intervals and exact parameters must be recorded before execution; do not overwrite a04 or reuse existing a05/a06 failure paths"
+  },
+  "budget": {
+    "status": "UNVERIFIED_CLOCK_RECONCILIATION_REQUIRED",
+    "snapshot": "runs/qa/ro-swordsman-character-v1/v001/v001-pause-31.json",
+    "snapshot_active_seconds": 54306,
+    "snapshot_utc": "2026-10-07T05:58:41Z",
+    "v001_trial_cap_seconds": 129600,
+    "standard_trial_cap_seconds": 64800,
+    "r6_total_cap_seconds": 172800,
+    "max_candidate_trials": 4,
+    "current_remaining_seconds": null,
+    "trial_identity_for_b": null,
+    "new_trial_created": false,
+    "missing": [
+      "Coordinator work and excluded user-wait intervals after the pause-31 snapshot; original clock thread unavailable",
+      "Allocation of later archival/tooling intervals and overlapping parent/current chat intervals; do not infer unused time from tool durations",
+      "Formal link of v001 candidate identity and elapsed time to the r6 ledger; r6 ledger has only the carried baseline",
+      "Whether the carried baseline elapsed 2641 seconds is already included in the trial/total snapshot; do not omit or double-count it",
+      "Current trial identity, total consumed time and available candidate count before any new baseline/candidate execution"
+    ]
+  },
+  "known_failures_preserved": {
+    "source": "runs/qa/ro-swordsman-character-v1/v001/p4/milestone-04-progress.json",
+    "scenarios_passed": 126,
+    "scenarios_total": 191,
+    "runtime_blocks_passed": 116,
+    "runtime_blocks_total": 118,
+    "runtime_max_error_um": 18.731347653251667,
+    "runtime_gate_um": 10,
+    "D2_G1_H1": "unchanged; no gate reinterpretation or repair in this scope",
+    "p5": "NOT_RUN; outside this scope"
+  },
+  "execution": {"baseline_motion_observed": false, "candidate_authored": false, "candidate_exported": false, "candidate_runtime_tested": false, "scores_assigned": false, "art_accepted": false, "technical_accepted": false, "commit_created": false, "push_performed": false}
+}

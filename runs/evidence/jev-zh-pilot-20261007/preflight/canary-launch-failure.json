@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "classification": "ENVIRONMENT_FAILURE",
+  "stage": "python_script_launch",
+  "exit_code": 1,
+  "reported_path": "C:/Repos/mmo-asset-pipeline/scripts/jev_art_pilot.py",
+  "error": "can't open file: [Errno 2] No such file or directory",
+  "inference": "第一個啟動命令落在主工作區，沒有執行隔離 worktree 內的試點程式。",
+  "provider_called": false,
+  "operation_created": false,
+  "correction": "下一個命令使用腳本絕對路徑與明確隔離 worktree；c01 只送出一次，沒有重送推論。"
+}

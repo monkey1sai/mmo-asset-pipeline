@@ -1,0 +1,84 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "task_type": {
+      "type": "choice",
+      "confidence": 1.0,
+      "probabilities": {
+        "needs_clarification": 0.0,
+        "rigged_character": 0.0,
+        "static_prop": 0.0,
+        "out_of_scope": 0.0,
+        "interactive_prop": 0.0,
+        "modular_environment": 1.0
+      },
+      "choice": "modular_environment"
+    },
+    "match_asset": {
+      "type": "choice",
+      "confidence": 1.0,
+      "probabilities": {
+        "fx-corridor-kit": 1.0,
+        "fx-wall-kit": 0.0,
+        "fx-road-kit": 0.0,
+        "none": 0.0,
+        "fx-corridor-scene": 0.0
+      },
+      "choice": "fx-corridor-kit"
+    },
+    "fit_0": {
+      "type": "score",
+      "confidence": 0.58,
+      "probabilities": {
+        "0": 0.48,
+        "1": 0.5,
+        "2": 0.02,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "score": 0.54
+    },
+    "fit_1": {
+      "type": "score",
+      "confidence": 0.38,
+      "probabilities": {
+        "0": 0.28,
+        "1": 0.38,
+        "2": 0.23,
+        "3": 0.1,
+        "4": 0.01
+      },
+      "score": 1.19
+    },
+    "fit_2": {
+      "type": "score",
+      "confidence": 0.97,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.01,
+        "3": 0.01,
+        "4": 0.98
+      },
+      "score": 3.96
+    },
+    "fit_3": {
+      "type": "score",
+      "confidence": 0.54,
+      "probabilities": {
+        "0": 0.29,
+        "1": 0.5,
+        "2": 0.16,
+        "3": 0.05,
+        "4": 0.0
+      },
+      "score": 0.98
+    }
+  },
+  "usage": {
+    "input_tokens": 2873,
+    "output_tokens": 202
+  },
+  "wall_ms": 213.1,
+  "payload_sha256": "02da54ca1111ee774505578fb55b50bcaef0bf6905b3dfdd4ca8810fd9d1a79b"
+}

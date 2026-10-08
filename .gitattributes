@@ -89,3 +89,10 @@ runs/qa/ro-swordsman-combo-r010/**/*.npz filter=lfs diff=lfs merge=lfs -text
 # 本輪技能整合驗證保留實際 bytes；log 不因終端空白改寫。
 /runs/qa/video-skills-pr-20261008/** -text
 /runs/qa/video-skills-pr-20261008/*.log -diff
+# 未完成步態試作保留歸檔 Git blob 的原始位元組。
+/runs/qa/gait-p4-natural-motion-20261007/** -text
+# Jev 凍結輸入及歷史回覆不轉換換行，以維持原始 SHA-256。
+/runs/evidence/jev-zh-pilot-20261007/** -text
+/requests/examples/jev-pilot/** -text
+# 凍結清單含既有末尾空行；只對此檔保留該格式，其他空白檢查照常。
+/runs/evidence/jev-zh-pilot-20261007/中文需求與素材清單.md whitespace=-blank-at-eof,blank-at-eol,space-before-tab,cr-at-eol

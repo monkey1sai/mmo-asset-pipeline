@@ -1,0 +1,102 @@
+{
+  "capabilities": {
+    "art_interactive_prop": {
+      "allowed_files": [],
+      "description": "美術工程師：明確要求開合、旋轉、往復、車輪轉向等的互動物件，包括箱、門、槍械、砲塔與車輛。整理分件、pivot、活動方式與範圍；不因活動需求推定完整角色骨架。需求明確時先用規則，歧義才用 Jev Choice。此次不分配產製檔案；後續委託須另列精確檔案、來源版本與驗收條件。",
+      "role": "worker",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    },
+    "art_modular_environment": {
+      "allowed_files": [],
+      "description": "美術工程師：明確要求統一模數、接合邊與反覆拼接的場景套件，包括走廊、城牆、賽道路段與地城房間。只為換材質拆件的單棟建築不屬此類。需求明確時先用規則，歧義才用 Jev Choice；不改遊戲規則或碰撞範圍。此次不分配產製檔案；後續須列接合契約、精確檔案與目標環境。",
+      "role": "worker",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    },
+    "art_needs_clarification": {
+      "allowed_files": [],
+      "description": "美術工程師需求澄清：用途、是否活動、骨架或交付範圍未定時，保留中文原文，列真正影響製作的 open_questions；不可用信心分數補造規格或強選素材。試點的資訊不足案例尚未實跑，沒有這類準確率證據。僅唯讀整理，不授權生成、改需求或付費提交；Jev 不可代替使用者澄清。",
+      "role": "researcher",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    },
+    "art_out_of_scope": {
+      "allowed_files": [],
+      "description": "美術工程師範圍辨識：明確只要求 2D 插畫、PNG UI、聲音或玩法程式時，說明超出本次 3D 資產工作台並提出相符能力；不能自動變成 3D 需求。試點的 2D 案例尚未實跑。僅唯讀建議，不執行其他專案修改、圖片生成或外部動作。",
+      "role": "researcher",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    },
+    "art_rigged_character": {
+      "allowed_files": [],
+      "description": "美術工程師：完整人物或生物明確需要綁骨、權重、關節變形或角色動作。整理 rig、rest pose、掛點與必要動作；保留既有拓樸與權重，先核對動作來源及重定向。靜態人物石雕或稻草人不因此選此類。需求明確時先用規則，歧義才用 Jev Choice。此次不分配產製檔案；骨架、動畫與目標 runtime 仍需各自實測。",
+      "role": "worker",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    },
+    "art_static_prop": {
+      "allowed_files": [],
+      "description": "美術工程師：固定道具、單棟建築、靜態展示人物的需求整理與製作規劃。只依已提供的用途判斷，不因人物外形推定骨架，不因換材質分件推定模組。沿用 art-engineer 與 workbench；沒有活動部件、綁骨或重複拼接需求時，先用確定性規則選此類。僅在已核對候選皆適用而仍有歧義時使用 Jev Choice。此次只登記能力，不分配產製檔案；allowed_files 空集合表示尚未授予寫入範圍。",
+      "role": "worker",
+      "validators": [
+        "tool_unit",
+        "asset_catalog"
+      ]
+    }
+  },
+  "guidance": [
+    "AGENTS.md",
+    "docs/art-workflow.md",
+    "docs/art-quality-loop.md",
+    "docs/art-production-upgrade.md",
+    "docs/api-creation-workflow.md",
+    "docs/asset-storage.md",
+    "docs/git-workflow.md",
+    "tools/art-sources/catalog.json",
+    "library/index.json"
+  ],
+  "routing": {
+    "jev_enabled": true,
+    "strategy": "rules_then_jev"
+  },
+  "scheduler": {
+    "max_active": 1,
+    "max_attempts": 1
+  },
+  "schema_version": 1,
+  "validators": {
+    "asset_catalog": {
+      "argv": [
+        "python",
+        "-B",
+        "scripts/pipeline.py",
+        "validate"
+      ],
+      "timeout_seconds": 60
+    },
+    "tool_unit": {
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "timeout_seconds": 120
+    }
+  }
+}
