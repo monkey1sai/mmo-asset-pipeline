@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "jev-pilot-c20-survival-unclear",
+  "title": "jev-pilot-c20-survival-unclear",
+  "brief": "生存遊戲要做一個場景素材，用途、造型以及是否互動都還沒決定，請先列待確認事項，不要直接決定製作哪一件。",
+  "purpose": "生存製作：中文語意判斷試點範例，製作用途待整理",
+  "task_type": "static_prop",
+  "project": null,
+  "status": "draft",
+  "provenance": {
+    "kind": "example",
+    "reference": "tools/jev-pilot/zh-game-cases-v1.json#cases/c20-survival-unclear"
+  },
+  "style": {
+    "description": "生存遊戲要做一個場景素材，用途、造型以及是否互動都還沒決定，請先列待確認事項，不要直接決定製作哪一件。",
+    "references": [],
+    "must_have": [],
+    "must_not_have": []
+  },
+  "spec": {
+    "size_m": null,
+    "target_triangles": null,
+    "texture_px": null,
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {
+    "scope": "standalone",
+    "formats": [
+      "glb"
+    ],
+    "target_environment": null
+  },
+  "production": {
+    "route": "review_existing",
+    "reason": "先查素材庫，再按差距決定重用、修改、生成或拆件",
+    "reuse_candidates": [],
+    "max_revisions": 1
+  },
+  "additional_checks": [],
+  "assumptions": [
+    "m／+Y／+Z 與 GLB 獨立交付是可修訂預設，不表示已量測或目標引擎已驗",
+    "合成試點需求；類型由預先標籤建立，不是 Jev 的輸出；沒有製作或驗收承諾。",
+    "static_prop 僅維持草稿結構；本例需澄清或移交 2D 流程，不可依此開始製作。"
+  ],
+  "open_questions": [
+    "整理用途、尺寸、面數、造型約束及必要功能；只把真正影響製作的缺項交給委託者決定"
+  ]
+}

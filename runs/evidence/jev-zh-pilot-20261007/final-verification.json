@@ -1,0 +1,74 @@
+{
+  "checked_at": "2026-10-08T05:02:57.850472+00:00",
+  "run_id": "jev-zh-pilot-20261007",
+  "status": "partial_blocked",
+  "frozen_file_count": 46,
+  "draft_count": 20,
+  "requests_attempted": 8,
+  "provider_completed": 7,
+  "provider_failed": 1,
+  "provider_unknown": 0,
+  "not_run": 12,
+  "all_attempts_one": true,
+  "response_contracts_and_hashes": "PASS",
+  "frozen_sources_inputs_drafts": "PASS",
+  "draft_schema": "PASS",
+  "actual_charge": "UNVERIFIED",
+  "paired_baseline_type_correct": 2,
+  "report_sha256": "483a3c2bf5b937ea60981e1e6ef8c9575fd3b4650cd4a13acf8d791696c11749",
+  "manifest_sha256": "2d137a1a9d874b3f70ce7f78224c9fac26b8e95d5ff44fbca626faff29012d65",
+  "baseline_sha256": "2f1a6f5d3d6e6613370d8bd9493129768395a544e3e1196ddcd2d1e833557f55",
+  "completion_conditions": {
+    "twenty_chinese_drafts": "PASS",
+    "twelve_genres": "PASS",
+    "live_twenty_cases": "NOT_RUN: seven completed, one failed HTTP 503, twelve not submitted",
+    "frozen_and_response_checks": "PASS"
+  },
+  "verification": {
+    "unit_tests": {
+      "status": "PASS",
+      "count": 329,
+      "command": "python -B -m unittest discover -s tests -v",
+      "log": "preflight/unittest-frozen-code.log",
+      "source_sha256": "fae0750fe73429aad282f890b72e4e4d42f470e1681177b5836cb59a295f5dc2"
+    },
+    "pipeline_validate": {
+      "status": "PASS",
+      "command": "python -B scripts/pipeline.py validate",
+      "assets": 39,
+      "operations": 11,
+      "scope": "schema, catalog links and ledger evidence only; not runtime or source freshness"
+    },
+    "independent_source_review": {
+      "recommendation": "accept",
+      "evidence": "preflight/independent-risk-review.md",
+      "scope": "fixed pilot source safety; not full security certification or asset acceptance"
+    },
+    "jev_outcome": {
+      "status": "written",
+      "observation_id": "b1f76f42-1bca-4768-81e7-bffe44d090ec",
+      "result": "failed",
+      "provenance": "caller_reported",
+      "execution_verified": false
+    }
+  },
+  "failure": {
+    "case_id": "c08-survival-brazier",
+    "http_status": 503,
+    "classification": "TOOL_OR_NETWORK_FAILURE",
+    "operation_attempts": 1,
+    "retry": false,
+    "raw_provider_error_body_saved": false,
+    "failed_request_usage": "UNVERIFIED",
+    "service_restoration": "UNVERIFIED"
+  },
+  "scope": {
+    "isolated_worktree": "C:/Repos/mmo-asset-pipeline/tmp/jev-zh-pilot-20261007",
+    "branch": "codex/jev-zh-pilot-20261007",
+    "staged": false,
+    "committed": false,
+    "pushed": false,
+    "hyper3d": false,
+    "background_retry": false
+  }
+}

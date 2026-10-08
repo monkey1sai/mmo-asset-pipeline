@@ -1,0 +1,84 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "task_type": {
+      "type": "choice",
+      "confidence": 1.0,
+      "probabilities": {
+        "needs_clarification": 0.0,
+        "interactive_prop": 0.0,
+        "out_of_scope": 0.0,
+        "modular_environment": 0.0,
+        "rigged_character": 1.0,
+        "static_prop": 0.0
+      },
+      "choice": "rigged_character"
+    },
+    "match_asset": {
+      "type": "choice",
+      "confidence": 0.96,
+      "probabilities": {
+        "none": 0.03,
+        "fx-garden-npc": 0.0,
+        "fx-rifle-parts": 0.0,
+        "fx-static-fighter": 0.0,
+        "fx-rig-fighter": 0.97
+      },
+      "choice": "fx-rig-fighter"
+    },
+    "fit_0": {
+      "type": "score",
+      "confidence": 0.82,
+      "probabilities": {
+        "0": 0.2,
+        "1": 0.79,
+        "2": 0.01,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "score": 0.81
+    },
+    "fit_1": {
+      "type": "score",
+      "confidence": 0.9,
+      "probabilities": {
+        "0": 0.88,
+        "1": 0.12,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "score": 0.12
+    },
+    "fit_2": {
+      "type": "score",
+      "confidence": 0.52,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.39,
+        "3": 0.42,
+        "4": 0.19
+      },
+      "score": 2.79
+    },
+    "fit_3": {
+      "type": "score",
+      "confidence": 0.6,
+      "probabilities": {
+        "0": 0.03,
+        "1": 0.55,
+        "2": 0.39,
+        "3": 0.03,
+        "4": 0.0
+      },
+      "score": 1.43
+    }
+  },
+  "usage": {
+    "input_tokens": 2924,
+    "output_tokens": 209
+  },
+  "wall_ms": 297.02,
+  "payload_sha256": "bce269b82105f3d07a8a20c34668a1a4ae3433106255aa8c546c3a0fe4bf7331"
+}

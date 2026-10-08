@@ -1,0 +1,84 @@
+{
+  "model": "jev-1.13.0",
+  "answers": {
+    "task_type": {
+      "type": "choice",
+      "confidence": 1.0,
+      "probabilities": {
+        "needs_clarification": 0.0,
+        "out_of_scope": 0.0,
+        "static_prop": 0.0,
+        "interactive_prop": 0.0,
+        "modular_environment": 0.0,
+        "rigged_character": 1.0
+      },
+      "choice": "rigged_character"
+    },
+    "match_asset": {
+      "type": "choice",
+      "confidence": 0.99,
+      "probabilities": {
+        "fx-rig-fighter": 0.0,
+        "none": 0.01,
+        "fx-horror-doll": 0.0,
+        "fx-healer-statue": 0.0,
+        "fx-rig-healer": 0.99
+      },
+      "choice": "fx-rig-healer"
+    },
+    "fit_0": {
+      "type": "score",
+      "confidence": 0.63,
+      "probabilities": {
+        "0": 0.43,
+        "1": 0.56,
+        "2": 0.01,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "score": 0.59
+    },
+    "fit_1": {
+      "type": "score",
+      "confidence": 0.54,
+      "probabilities": {
+        "0": 0.02,
+        "1": 0.48,
+        "2": 0.47,
+        "3": 0.03,
+        "4": 0.0
+      },
+      "score": 1.52
+    },
+    "fit_2": {
+      "type": "score",
+      "confidence": 0.49,
+      "probabilities": {
+        "0": 0.0,
+        "1": 0.0,
+        "2": 0.16,
+        "3": 0.29,
+        "4": 0.55
+      },
+      "score": 3.38
+    },
+    "fit_3": {
+      "type": "score",
+      "confidence": 0.89,
+      "probabilities": {
+        "0": 0.87,
+        "1": 0.13,
+        "2": 0.0,
+        "3": 0.0,
+        "4": 0.0
+      },
+      "score": 0.13
+    }
+  },
+  "usage": {
+    "input_tokens": 2905,
+    "output_tokens": 208
+  },
+  "wall_ms": 239.04,
+  "payload_sha256": "5b3adab663ece948bd9928e5498010a5232b287c99f86bc5925ed8015bdc1ea7"
+}

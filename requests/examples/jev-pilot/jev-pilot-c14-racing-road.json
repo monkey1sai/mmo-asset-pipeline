@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "jev-pilot-c14-racing-road",
+  "title": "jev-pilot-c14-racing-road",
+  "brief": "賽車遊戲需要直線、彎道、坡道三種路段套件，寬度和接合點一致，可拼出不同賽道；不要整圈封閉賽道的單網格。",
+  "purpose": "競速：中文語意判斷試點範例，製作用途待整理",
+  "task_type": "modular_environment",
+  "project": null,
+  "status": "draft",
+  "provenance": {
+    "kind": "example",
+    "reference": "tools/jev-pilot/zh-game-cases-v1.json#cases/c14-racing-road"
+  },
+  "style": {
+    "description": "賽車遊戲需要直線、彎道、坡道三種路段套件，寬度和接合點一致，可拼出不同賽道；不要整圈封閉賽道的單網格。",
+    "references": [],
+    "must_have": [],
+    "must_not_have": []
+  },
+  "spec": {
+    "size_m": null,
+    "target_triangles": null,
+    "texture_px": null,
+    "units": "m",
+    "up_axis": "+Y",
+    "forward_axis": "+Z",
+    "parts": [],
+    "requires_rig": false,
+    "animations": []
+  },
+  "delivery": {
+    "scope": "standalone",
+    "formats": [
+      "glb"
+    ],
+    "target_environment": null
+  },
+  "production": {
+    "route": "review_existing",
+    "reason": "先查素材庫，再按差距決定重用、修改、生成或拆件",
+    "reuse_candidates": [],
+    "max_revisions": 1
+  },
+  "additional_checks": [],
+  "assumptions": [
+    "m／+Y／+Z 與 GLB 獨立交付是可修訂預設，不表示已量測或目標引擎已驗",
+    "合成試點需求；類型由預先標籤建立，不是 Jev 的輸出；沒有製作或驗收承諾。"
+  ],
+  "open_questions": [
+    "整理用途、尺寸、面數、造型約束及必要功能；只把真正影響製作的缺項交給委託者決定"
+  ]
+}
