@@ -9,6 +9,7 @@ import hashlib
 import json
 import struct
 import sys
+import math
 from pathlib import Path
 
 COMPONENT = {5121: ("B", 1), 5123: ("H", 2), 5126: ("f", 4)}
@@ -16,6 +17,103 @@ COMPONENT = {5121: ("B", 1), 5123: ("H", 2), 5126: ("f", 4)}
 
 class RestoreError(ValueError):
     pass
+
+
+def patch_vertices(blob, node_name, changes):
+    """Patch explicit primitive-local POSITION IDs, preserving all other bytes.
+
+    This checks integrity only. Caller must establish semantic scope, rights,
+    budget and actual deformation/visual acceptance before using the result.
+    One primitive, non-interleaved FLOAT weights and byte/ushort joints only.
+    """
+    try:
+        document, bin_start, bin_length = split_glb(blob)
+        if struct.unpack_from('<I', blob, 8)[0] != len(blob) or bin_start + bin_length != len(blob):
+            raise RestoreError('GLB_LENGTH')
+        if len(document['buffers']) != 1 or 'uri' in document['buffers'][0]:
+            raise RestoreError('EMBEDDED_ONLY')
+        if not isinstance(node_name,str) or not node_name:
+            raise RestoreError('NODE_NAME')
+        nodes = document['nodes']
+        matches = [n for n in nodes if n.get('name') == node_name]
+        if len(matches) != 1 or 'mesh' not in matches[0] or 'skin' not in matches[0]:
+            raise RestoreError('SKINNED_NODE_UNIQUE')
+        node = matches[0]
+        if any(type(node[key]) is not int or not 0 <= node[key] < len(document[collection]) for key,collection in [('mesh','meshes'),('skin','skins')]):
+            raise RestoreError('NODE_INDEX')
+        primitives = document['meshes'][node['mesh']]['primitives']
+        if len(primitives) != 1:
+            raise RestoreError('EXPLICIT_SINGLE_PRIMITIVE_REQUIRED')
+        attrs = primitives[0]['attributes']
+        if any(type(attrs.get(name)) is not int or not 0 <= attrs[name] < len(document['accessors']) for name in ['POSITION','JOINTS_0','WEIGHTS_0']):
+            raise RestoreError('ATTRIBUTE_INDEX')
+        if 'JOINTS_1' in attrs or 'WEIGHTS_1' in attrs:
+            raise RestoreError('UNSUPPORTED_WEIGHT_LAYOUT')
+        count = document['accessors'][attrs['POSITION']]['count']
+        if type(count) is not int or count <= 0:
+            raise RestoreError('VERTEX_COUNT')
+        joint_ids = document['skins'][node['skin']]['joints']
+        if not joint_ids or any(type(j) is not int or not 0 <= j < len(nodes) for j in joint_ids) or len(set(joint_ids)) != len(joint_ids):
+            raise RestoreError('JOINT_INDEX')
+        bone_names = [nodes[j].get('name') for j in joint_ids]
+        if any(not isinstance(n,str) or not n for n in bone_names) or len(set(bone_names)) != len(bone_names):
+            raise RestoreError('BONE_NAMES_UNIQUE')
+        bone_index = {n:i for i,n in enumerate(bone_names)}
+        spans = []
+        for name in ['JOINTS_0','WEIGHTS_0']:
+            ai = attrs[name]; ac = document['accessors'][ai]; view = document['bufferViews'][ac['bufferView']]
+            offset, letter, _, _ = accessor_span(document, ai, count, 'VEC4')
+            size = struct.calcsize('<'+letter)
+            if ac.get('normalized') or (name == 'WEIGHTS_0' and letter != 'f') or (name == 'JOINTS_0' and letter not in ('B','H')):
+                raise RestoreError('UNSUPPORTED_WEIGHT_LAYOUT')
+            length = count * 4 * size
+            view_start = view.get('byteOffset',0)
+            if offset < view_start or offset+length > view_start+view['byteLength'] or offset+length > document['buffers'][0]['byteLength'] or offset+length > bin_length:
+                raise RestoreError('ACCESSOR_BOUNDS')
+            if offset % size:
+                raise RestoreError('ACCESSOR_ALIGNMENT')
+            spans.append((bin_start+offset,length,letter,size,ai))
+        # Reject aliased payload: another accessor/mesh may otherwise change too.
+        for k,(start,length,_,_,ai) in enumerate(spans):
+            for vi,view in enumerate(document['bufferViews']):
+                if vi == document['accessors'][ai]['bufferView']: continue
+                other = bin_start+view.get('byteOffset',0)
+                if max(start,other) < min(start+length,other+view['byteLength']):
+                    raise RestoreError('ALIASED_BUFFER_VIEW')
+            if sum(a.get('bufferView') == document['accessors'][ai]['bufferView'] for a in document['accessors']) != 1:
+                raise RestoreError('ALIASED_ACCESSOR')
+            if sum(p['attributes'].get(['JOINTS_0','WEIGHTS_0'][k]) == ai for mesh in document['meshes'] for p in mesh['primitives']) != 1:
+                raise RestoreError('SHARED_SKIN_ACCESSOR')
+            if sum(n.get('mesh') == node['mesh'] for n in nodes) != 1:
+                raise RestoreError('SHARED_MESH')
+        if not isinstance(changes,list) or not changes:
+            raise RestoreError('EMPTY_PATCH')
+        out = bytearray(blob); allowed = set(); seen = set()
+        for row in changes:
+            if not isinstance(row,dict) or set(row) != {'vertex','weights'}:
+                raise RestoreError('PATCH_ROW')
+            vid = row['vertex']; weights = row['weights']
+            if type(vid) is not int or not 0 <= vid < count or vid in seen:
+                raise RestoreError('PATCH_VERTEX')
+            seen.add(vid)
+            if not isinstance(weights,dict) or not 1 <= len(weights) <= 4 or any(n not in bone_index for n in weights):
+                raise RestoreError('PATCH_BONE')
+            if any(type(w) not in (int,float) or not math.isfinite(w) or not 0 < w <= 1 for w in weights.values()) or abs(sum(weights.values())-1) > 1e-6:
+                raise RestoreError('PATCH_WEIGHT_SUM')
+            ordered = sorted(weights.items(),key=lambda item:(-item[1],item[0]))
+            joints = [bone_index[n] for n,w in ordered]+[0]*(4-len(ordered))
+            values = [w for n,w in ordered]+[0.]*(4-len(ordered))
+            for (base,_,letter,size,_), values4 in zip(spans,[joints,values]):
+                offset = base+vid*4*size
+                struct.pack_into('<4'+letter,out,offset,*values4)
+                allowed.update(range(offset,offset+4*size))
+        changed = [i for i,(a,b) in enumerate(zip(blob,out)) if a != b]
+        if len(out) != len(blob) or not set(changed) <= allowed:
+            raise RestoreError('CHANGE_OUTSIDE_SELECTED_SKIN_SLOTS')
+        return bytes(out), {'original_vertex_ids':sorted(seen),'changed_bytes':len(changed),
+                            'all_other_bytes_identical':True,'acceptance':'NOT_RUN'}
+    except (KeyError,IndexError,TypeError,struct.error) as error:
+        raise RestoreError('MALFORMED_PATCH_INPUT') from error
 
 
 def split_glb(blob):
@@ -115,7 +213,74 @@ def restore(blob, snapshot):
     return bytes(out), report
 
 
+def patch_main(argv=None):
+    """Request-bound local prototype CLI. Review declarations are not approval."""
+    import argparse
+    import identity
+    import art_sources
+    import workbench
+    from blender_art_preview import embedded_glb_only
+    root = Path(__file__).resolve().parents[1]
+    parser = argparse.ArgumentParser(description=patch_main.__doc__)
+    for name in ('request','source-root','asset','sha256','profile','out'):
+        parser.add_argument('--'+name,required=True)
+    args = parser.parse_args(argv)
+    request = identity.read_json(identity.command_path(root,args.request))
+    if workbench.validate_request(request) or request['task_type'] != 'rigged_character':
+        raise RestoreError('REQUEST_INVALID')
+    profile = identity.read_json(identity.command_path(root,args.profile))
+    if not isinstance(profile,dict):
+        raise RestoreError('PROFILE_INVALID')
+    if profile.get('request_sha256') != identity.json_digest(request) or profile.get('source_sha256') != args.sha256:
+        raise RestoreError('PROFILE_BINDING')
+    review = profile.get('review',{})
+    if not isinstance(review,dict) or review.get('status') != 'local_prototype_accepted' or not isinstance(review.get('reviewer'),str) or not review['reviewer'].strip():
+        raise RestoreError('LOCAL_SCOPE_REVIEW_REQUIRED')
+    ids = review.get('original_vertex_ids')
+    changes = profile.get('changes')
+    if not isinstance(ids,list) or not ids or any(type(i) is not int for i in ids) or len(set(ids)) != len(ids) or not isinstance(changes,list) or any(not isinstance(row,dict) or type(row.get('vertex')) is not int for row in changes) or sorted(ids) != sorted(row['vertex'] for row in changes):
+        raise RestoreError('REVIEWED_MASK_MISMATCH')
+    evidence = review.get('evidence',{})
+    if not isinstance(evidence,dict):
+        raise RestoreError('REVIEW_EVIDENCE_REQUIRED')
+    evidence_path = art_sources.no_symlinks(root,art_sources.safe_relative(evidence.get('path','')))
+    if identity.file_digest(evidence_path) != evidence.get('sha256'):
+        raise RestoreError('REVIEW_EVIDENCE_DRIFT')
+    source_root = Path(args.source_root)
+    source = art_sources.no_symlinks(source_root,art_sources.safe_relative(args.asset))
+    if identity.file_digest(source) != args.sha256:
+        raise RestoreError('SOURCE_DRIFT')
+    embedded_glb_only(source)
+    relative = identity.command_path(root,args.out).relative_to(root).as_posix()
+    art_sources.safe_relative(relative)
+    if not relative.startswith('assets/processed/') or not relative.endswith('.glb'):
+        raise RestoreError('OUTPUT_SCOPE')
+    output = art_sources.no_symlinks(root,relative)
+    report_path = output.with_suffix('.json')
+    if output.exists() or report_path.exists():
+        raise RestoreError('OUTPUT_EXISTS')
+    blob = source.read_bytes()
+    result,report = patch_vertices(blob,profile.get('mesh'),changes)
+    if identity.file_digest(source) != args.sha256:
+        raise RestoreError('SOURCE_DRIFT')
+    report.update(request_sha256=identity.json_digest(request),profile_sha256=identity.json_digest(profile),
+                  source_sha256=args.sha256,output_sha256=hashlib.sha256(result).hexdigest(),
+                  review_evidence_sha256=evidence['sha256'],review_status='DECLARED_NOT_AUTHENTICATED',
+                  game_ready=False,source_rights='CALLER_SCOPE_NOT_PUBLIC_REDISTRIBUTION_APPROVAL')
+    output.parent.mkdir(parents=True,exist_ok=True)
+    with output.open('xb') as handle:handle.write(result)
+    with report_path.open('x',encoding='utf-8') as handle:json.dump(report,handle,indent=2)
+    print(json.dumps(report))
+    return 0
+
+
 if __name__ == "__main__":
+    if len(sys.argv)>1 and sys.argv[1]=='--patch':
+        try:
+            raise SystemExit(patch_main(sys.argv[2:]))
+        except (ValueError,FileNotFoundError) as error:
+            print(str(error),file=sys.stderr)
+            raise SystemExit(2)
     source_path, snapshot_path, target_path = (Path(p) for p in sys.argv[1:4])
     data = source_path.read_bytes()
     result, summary = restore(data, json.loads(snapshot_path.read_text(encoding="utf-8")))
