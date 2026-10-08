@@ -2,6 +2,7 @@
 
 - 核心流程依 `docs/art-workflow.md`：理解需求、制定設計、選擇重用／修改／生成／拆件、製作與後製、依需求驗收、交付歸檔。需求決定必要步驟。
 - 本 repo 的美術資產需求、修訂、驗收與歸檔使用 `.agents/skills/art-engineer/SKILL.md`（`$art-engineer`）；既有 workflow 與工具仍為規格來源。
+- 素材展示影片、技能演示剪輯另依 `docs/video-skills.md`：`$video-shotcraft` 處理分鏡／Remotion 動效，`$video-use` 處理既有錄影剪輯。技能以固定 commit 的 project-local submodule 安裝；先確認初始化與相依工具，不自動追最新。影片不取代模型、骨架、動作或 runtime 驗收；API／音樂／素材用途依當次授權，密鑰只使用既有憑證提供者，不要求貼進聊天。
 - 新製作及品質修訂依 `docs/art-quality-loop.md` 凍結品質標竿與評估條件，先做 baseline，再以有界實驗比較；任一維度退步不得用其他高分抵銷。有 `quality` 的需求必須由 `assess` 核對實驗紀錄與已評估交付內容；不把分數宣稱為自動美術 PASS 或「頂尖」保證。
 - 只在本 repo 維護需求、工程師資產、產製工具與證據。`projects/` 是選用客戶規格；EvoLoot、changshan-longdan 是首批來源，不能寫死在核心。其他 repo 預設唯讀；遊戲接入、Unity、push、PR、部署和排程依使用者具體範圍。
 - 每次製作先查 `library/index.json`、需求、來源版本與現有 master。重新生成取決於需求差距和修訂成本；剩餘點數不能取代用途。遊戲美術不得自行改寫規則、命中範圍或碰撞。
