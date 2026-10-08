@@ -4,6 +4,8 @@
 
 本增補依使用者最新指示，補充 `mixamo-secondary-character-workflow-v1`，不降低原始需求、測試、來源權利、保護介面或品質門檻。原始完整 spec 與實物目前保留在本地美術隔離工作區；本文件不宣稱它們已公開或已合併。
 
+所對讀的完整 spec 身分：spec ID `mixamo-secondary-character-workflow-v1`，相對於美術隔離 worktree 的路徑 `docs/specs/mixamo-secondary-character-workflow-v1.md`，此 checkpoint 對讀版本 SHA-256 `465bfa9f31461896bd9579099a91e814fb859b179d84ca928fe36786d2852157`。後續版本另記雜湊；僅與最新授權衝突的舊條款以本增補為準。
+
 ## 目標與新增授權
 
 以趙雲完成可重用的 Mixamo 身體綁骨／走跑跳與披風、裙甲、長髮、飄帶次級骨鏈工作流。角色差異由設定、映射、語義遮罩與局部美術修整表達，不修改共用核心。
@@ -18,6 +20,8 @@
 ## 階段及完成度計算
 
 每次交付逐項報告階段狀態與可定位證據。只以符合整個階段必要條件的 PASS 計入完成數；部分實作、FAIL、BLOCKED、NOT_RUN、UNVERIFIED 不算完成。完成度以「已完成階段／6」表示，不用檔案數、測試數或估計百分比代替。
+
+D2 的路線決策與必要局部修整驗收仍須 PASS；只有 Hyper3D 生成子項可依具體證據判定 NOT_APPLICABLE。D2 本身不得以 N/A 計入完成數，避免不需生成的修復無法結案或自行跳過必要製作。
 
 | 階段 | 必要完成條件 | 目前狀態（既有本地證據快照） |
 |---|---|---|
