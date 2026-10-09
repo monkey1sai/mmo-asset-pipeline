@@ -169,7 +169,7 @@ class ChainSolver:
         return rest*math.cos(limit)+unit(tangent)*math.sin(limit)
 
     def result(self, anchors, steps, reason):
-        rows = []; maximum = 0.; penetration = 0.; angle_error = 0.; anchor_error = 0.
+        rows = []; maximum = 0.; penetration = 0.; angle_error = 0.; anchor_error = 0.; rigid_error = 0.
         for c in self.profile['chains']:
             m = self._anchor(anchors,c['anchor_bone'])
             # Attach frame output between fixed simulation steps. Transport a
@@ -177,6 +177,11 @@ class ChainSolver:
             transform = m @ np.linalg.inv(self.solved_anchors[c['anchor_bone']])
             x = self.states[c['id']][0] @ transform[:3,:3].T + transform[:3,3]
             anchor_error=max(anchor_error,float(np.linalg.norm(x[0]-m[:3,3])))
+            if c['mode']=='rigid_plate':
+                rest_points=np.vstack((np.zeros(3),np.cumsum(c['rest_vectors'],axis=0)))
+                rest_distances=np.linalg.norm(rest_points[:,None,:]-rest_points[None,:,:],axis=2)
+                actual_distances=np.linalg.norm(x[:,None,:]-x[None,:,:],axis=2)
+                rigid_error=max(rigid_error,float(np.max(abs(actual_distances-rest_distances))))
             for i,v in enumerate(c['rest_vectors'], 1):
                 d=x[i]-x[i-1]; rest=m[:3,:3] @ vector(v)
                 maximum=max(maximum, abs(float(np.linalg.norm(d)-np.linalg.norm(rest))))
@@ -190,5 +195,6 @@ class ChainSolver:
                 'max_length_error_m':maximum,'max_proxy_penetration_m':penetration,
                 'max_angle_error_deg':angle_error,
                 'max_anchor_error_m':anchor_error,
-                'constraints_status':'PASS' if maximum<1e-5 and penetration<1e-5 and angle_error<1e-3 and anchor_error<1e-5 else 'FAIL',
+                'max_rigid_shape_error_m':rigid_error,
+                'constraints_status':'PASS' if maximum<1e-5 and penetration<1e-5 and angle_error<1e-3 and anchor_error<1e-5 and rigid_error<1e-5 else 'FAIL',
                 'visual_acceptance':'NOT_RUN','collision_scope':'tip particles versus supplied proxies; not surfaces or continuous collision'}

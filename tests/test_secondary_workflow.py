@@ -109,6 +109,17 @@ class SecondaryTests(unittest.TestCase):
         for _ in range(30):r=s.advance(1/60,self.anchors)
         pts=np.asarray(r['chains'][0]['points']);np.testing.assert_allclose(np.cross(pts[1]-pts[0],pts[2]-pts[1]),0,atol=1e-12)
 
+    def test_collision_cannot_silently_bend_rigid_plate(self):
+        p=copy.deepcopy(self.p);p['chains']=p['chains'][1:2];c=p['chains'][0]
+        c['bones']=['plate_a','plate_b'];c['rest_vectors']=[[0,0,-.3],[0,0,-.3]];c['max_angle_deg']=60
+        c['colliders']=[{'kind':'sphere','a':[.05,0,-.3],'radius':.08}]
+        s=ChainSolver(p);s.advance(0,self.anchors)
+        for _ in range(60):r=s.advance(1/60,self.anchors)
+        points=np.asarray(r['chains'][0]['points'])
+        if np.linalg.norm(np.cross(points[1]-points[0],points[2]-points[1]))>1e-5:
+            self.assertEqual(r['constraints_status'],'FAIL')
+            self.assertGreater(r['max_rigid_shape_error_m'],1e-5)
+
 
 class WorkflowTests(unittest.TestCase):
     def test_real_presets_request_binding_and_negative_time(self):

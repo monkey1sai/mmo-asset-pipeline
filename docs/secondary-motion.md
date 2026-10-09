@@ -15,6 +15,6 @@ python -B scripts/motion_workflow.py --request requests/secondary-fixture-v001.j
 
 固定步預設 1/120 秒。沒有完成 substep 的幀，輸出點副本剛性跟隨當前掛點，不積分新力、不更動內部 fixed-step 狀態；下一個真正 step 再使用 caller 提供的掛點。caller 需要逐個固定步用相同動畫時間採樣，`advance` 不插值傳入掛點。結果包含長度、擺角、掛點誤差及代理穿入檢查，不只用步數判定 PASS。
 
-pause 凍結模擬時間；顯示仍附著目前掛點。resume、clip 切換、瞬移、重生、旋轉跳變由 caller `reset=True`；大位移或超過 max_frame_dt 自動 reset。碰撞只涵蓋鏈端點與提供的 world sphere／capsule，不涵蓋布面、段中部、掃掠或自碰撞。無法同時滿足的約束回 FAIL。
+pause 凍結模擬時間；顯示仍附著目前掛點。resume、clip 切換、瞬移、重生、旋轉跳變由 caller `reset=True`；大位移或超過 max_frame_dt 自動 reset。碰撞只涵蓋鏈端點與提供的 world sphere／capsule，不涵蓋布面、段中部、掃掠或自碰撞。多段剛片另驗全部節點間距；碰撞使剛片彎折時回 FAIL，不能當柔性衣料接受。目前不是完整剛體碰撞求解器，無法同時滿足的約束回 FAIL。
 
 本入口只產生本地 JSON 點軌跡。Blender bake、動畫 clip 與 runtime 求解器設定是不同交付；GLB 不會自動攜帶可執行的風／彈簧／碰撞程式。合成 fixture PASS 不代表真實角色自然觀感、完整 DCC、引擎或遊戲接受。
