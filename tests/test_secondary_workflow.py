@@ -5,6 +5,8 @@ from pathlib import Path
 import sys
 import unittest
 import tempfile
+import io
+from contextlib import redirect_stdout
 from unittest.mock import patch
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
@@ -134,12 +136,13 @@ class WorkflowTests(unittest.TestCase):
     def test_cli_new_version_and_path_boundary(self):
         import motion_workflow
         with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);(root/'requests').mkdir();(root/'configs').mkdir()
+            # Match identity's canonical root even when caller supplies aliases.
+            root=Path(tmp)/'..'/Path(tmp).name;(root/'requests').mkdir();(root/'configs').mkdir()
             r=identity.read_json(ROOT/'requests/secondary-fixture-v001.json');p=identity.read_json(ROOT/'configs/secondary_presets.json')
             for name,value in [('requests/r.json',r),('configs/p.json',p),('configs/t.json',{'samples':[{'time_seconds':0,'anchors':{'body':np.eye(4).tolist()}}]})]:
                 (root/name).write_text(json.dumps(value),encoding='utf-8')
             args=['--request','requests/r.json','--profile','configs/p.json','--trajectory','configs/t.json','--out','runs/qa/demo/result.json']
-            with patch.object(motion_workflow,'ROOT',root):
+            with patch.object(motion_workflow,'ROOT',root), redirect_stdout(io.StringIO()):
                 self.assertEqual(motion_workflow.main(args),0)
                 with self.assertRaises(FileExistsError):motion_workflow.main(args)
                 with self.assertRaises(identity.IdentityError):motion_workflow.main(args[:-1]+['../escape.json'])

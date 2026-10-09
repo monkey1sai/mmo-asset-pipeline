@@ -32,11 +32,12 @@ def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('request','profile','trajectory','out'):p.add_argument('--'+name,required=True)
     a=p.parse_args(argv)
-    result=simulate(*(identity.read_json(identity.command_path(ROOT,getattr(a,k))) for k in ('request','profile','trajectory')))
+    root=ROOT.resolve()
+    result=simulate(*(identity.read_json(identity.command_path(root,getattr(a,k))) for k in ('request','profile','trajectory')))
     # Reuse receipt portable paths and no-reparse boundary for writable evidence.
-    relative=identity.command_path(ROOT,a.out).relative_to(ROOT).as_posix();art_sources.safe_relative(relative)
+    relative=identity.command_path(root,a.out).relative_to(root).as_posix();art_sources.safe_relative(relative)
     if not relative.startswith('runs/qa/'):raise ValueError('OUTPUT_SCOPE')
-    path=art_sources.no_symlinks(ROOT,relative);encoded=json.dumps(result,allow_nan=False,ensure_ascii=False,indent=2)
+    path=art_sources.no_symlinks(root,relative);encoded=json.dumps(result,allow_nan=False,ensure_ascii=False,indent=2)
     path.parent.mkdir(parents=True,exist_ok=True)
     with path.open('x',encoding='utf-8') as f:f.write(encoded+'\n')
     print(json.dumps({k:v for k,v in result.items() if k!='rows'}));return 0 if result['solver_constraints']=='PASS' else 2
