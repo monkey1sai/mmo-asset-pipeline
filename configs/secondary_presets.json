@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "coordinate_system": "world_meters",
+  "fixed_dt": 0.008333333333333333,
+  "max_frame_dt": 0.1,
+  "teleport_m": 0.75,
+  "iterations": 16,
+  "gravity": [0, 0, -9.81],
+  "wind": [0.3, 0, 0],
+  "body_bones": ["body"],
+  "chains": [
+    {"id":"cape","anchor_bone":"body","bones":["cape_a","cape_b"],"mode":"flexible","rest_vectors":[[0,0,-0.3],[0,0,-0.35]],"stiffness":24,"damping":5,"max_angle_deg":55,"colliders":[]},
+    {"id":"skirt-plate","anchor_bone":"body","bones":["plate_a"],"mode":"rigid_plate","rest_vectors":[[0.15,0,-0.25]],"stiffness":90,"damping":12,"max_angle_deg":22,"colliders":[]},
+    {"id":"long-hair","anchor_bone":"body","bones":["hair_a","hair_b","hair_c"],"mode":"flexible","rest_vectors":[[0,0.02,-0.12],[0,0,-0.15],[0,0,-0.12]],"stiffness":45,"damping":8,"max_angle_deg":35,"colliders":[{"kind":"sphere","a":[0,-0.15,0.0],"radius":0.1}]},
+    {"id":"ribbon","anchor_bone":"body","bones":["ribbon_a","ribbon_b"],"mode":"flexible","rest_vectors":[[0.02,0,-0.2],[0,0,-0.22]],"stiffness":12,"damping":3,"max_angle_deg":65,"colliders":[]}
+  ]
+}

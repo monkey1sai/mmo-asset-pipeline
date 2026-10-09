@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-09T07:27:41.807843+00:00",
+  "baseline_main": "553109fd6a718dc3be93877c39f3e5d68a5dba98",
+  "scope": "generic secondary reference solver and CLI only; no real model candidate",
+  "regression_before": "14 tests, 2 expected failures (substep anchor and cross-chain dependency)",
+  "regression_after": {
+    "tests": 14,
+    "status": "PASS"
+  },
+  "full_suite": {
+    "tests": 378,
+    "skipped": 0,
+    "status": "PASS"
+  },
+  "pipeline_validate": "PASS_SCHEMA_CATALOG_LEDGER_ONLY_39_ASSETS_11_OPERATIONS",
+  "request_validate": "PASS_NO_PENDING",
+  "cli_positive": "PASS_FOUR_PRESETS_THREE_SAMPLES",
+  "cli_negative_checks": [
+    {
+      "case": "overwrite",
+      "exit_code": 1,
+      "expected_rejection": "FileExistsError",
+      "status": "PASS"
+    },
+    {
+      "case": "escape",
+      "exit_code": 1,
+      "expected_rejection": "IdentityError",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong_scope",
+      "exit_code": 1,
+      "expected_rejection": "OUTPUT_SCOPE",
+      "status": "PASS"
+    }
+  ],
+  "existing_output_unchanged": true,
+  "source_sha256": {
+    "scripts/secondary_motion.py": "010bc0d5945bb3475326dfacd47416793d8c738b1cf918aa41d5015dedada471",
+    "scripts/motion_workflow.py": "663ab1e34cc545bf99842c1621925a62bd6d91b3ce225c8778e9f6bb1905ab3e",
+    "tests/test_secondary_workflow.py": "d65b8bc340ec8fdc5994e6dd6f4d7c60dcf1d6c9be37875895ffef40dd533111",
+    "configs/secondary_presets.json": "9dfeeb0814be4a3e47e38018b245894be2dd34b457603e4a88decd9028a79fd9",
+    "configs/examples/secondary-trajectory.json": "162e9bf1859f609857b9b2c30b43788bdc90b229c976ac848782d1df18c7debb",
+    "requests/secondary-fixture-v001.json": "894c8b549f0eeda63ae606f559b3ef2b21b1f4b13b09ce9f9696fcf6ee81f09e"
+  },
+  "fixture_result_sha256": "9bd81f0c663114ba180ee254e68940cb18e4a3d313cd5833bef62e155c7cdbc4",
+  "spec_completed_stages": 1,
+  "spec_total_stages": 6,
+  "art_acceptance": "NOT_RUN",
+  "unity_full_game": "NOT_RUN",
+  "game_ready": false
+}
