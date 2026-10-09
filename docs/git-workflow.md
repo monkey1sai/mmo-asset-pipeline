@@ -2,6 +2,13 @@
 
 這份流程適用本 repo 的需求、工具、資產、實驗、runtime 與證據，補充 AGENTS.md 及 docs/asset-storage.md；不降低人類授權、品質契約、LFS 保存或獨立審查門檻。
 
+## 2026-10-10 使用者決定：取消額外人類 approval 門檻
+
+- 使用者明確指示「我已經合併，移除要人類審批的規定」。本 repo 的已授權開發／進度 PR 不再以額外 GitHub 人類 approval 作為代理自行增加的停止條件；此決定優先於匯入流程文件中的相反預設。
+- 沿用既有 feature → PR → main 流程及具體 push／merge 授權；核對 exact head、完整 diff、適用獨立覆核、同 SHA CI、未解決問題及最新 base 後，依已授權範圍執行。取消 approval 門檻本身不授權無關 repo 或操作。
+- 不偽造 approval，不修改 GitHub protection、CODEOWNERS、ACL、憑證或全域 Codex 設定。若伺服器實際要求 approval，保留阻礙並回報，不繞過。
+- 此變更只處理 PR approval。素材外傳、付費額度、用完的角色修訂上限、品質／美術審查及 Unity 完整遊戲驗收仍各自有效；歷史記錄不改寫。
+
 ## 分支與工作隔離
 
 - 預設使用 feature branch。使用者指定分支名稱時沿用；未指定時採 `codex/<範圍>-<日期>`。
