@@ -1,0 +1,11 @@
+{
+  "schema_version":1,"id":"secondary-fixture-v001","title":"四種附加部位共用骨鏈工程fixture",
+  "brief":"原創合成fixture，驗證披風、剛性裙甲、長髮、飄帶preset重用；不代表其他武將或Mixamo成果。",
+  "purpose":"工程能力及GLB bake讀回","task_type":"rigged_character","project":null,"status":"specified",
+  "provenance":{"kind":"user_brief","reference":"2026-10-08 使用者要求至少兩種配置證明核心重用"},
+  "style":{"description":"四色矩形條帶合成工程fixture","references":[],"must_have":["四preset同核心","標示自製测试動作"],"must_not_have":["角色美術PASS宣稱"]},
+  "spec":{"size_m":[2.1,0.1,1.6],"target_triangles":16,"texture_px":null,"units":"m","up_axis":"+Z","forward_axis":"-Y","parts":[{"id":"cape","pivot":"body掛點","motion":null},{"id":"plate","pivot":"body掛點","motion":null},{"id":"hair","pivot":"body掛點","motion":null},{"id":"ribbon","pivot":"body掛點","motion":null}],"requires_rig":true,"animations":["LOCAL_FIXTURE_LOCOMOTION_SECONDARY_NOT_MIXAMO"]},
+  "delivery":{"scope":"standalone","formats":["glb","blend"],"target_environment":null},
+  "production":{"route":"modify","reason":"用共用骨鏈配置製作無外部素材的合成工具驗證，與真實趙雲品質預算分離，不釋出任何舊預算","reuse_candidates":[],"max_revisions":1},
+  "additional_checks":[],"assumptions":["尺寸為fixture預設；不是趙雲規格"],"open_questions":[]
+}

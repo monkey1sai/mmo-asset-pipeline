@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "request_id": "secondary-fixture-v001",
+  "request_sha256": "26961796ed36cbaf023b371566981ebaf7906b88708281b4f6bac52a9466e921",
+  "profile_sha256": "4d93751da2a2cd37bafe1ca4e344ddc1ca2bb02b1fd100956bc12a7fc90365ae",
+  "trajectory_sha256": "da7e9a04c8543f5689641c8f388963b0cccb4171178bfe14a31443ec83cdd268",
+  "solver_constraints": "PASS",
+  "rows": [
+    {
+      "time_seconds": 0,
+      "chains": [
+        {
+          "id": "cape",
+          "bones": [
+            "cape_a",
+            "cape_b"
+          ],
+          "points": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -0.3
+            ],
+            [
+              0.0,
+              0.0,
+              -0.6499999999999999
+            ]
+          ]
+        },
+        {
+          "id": "skirt-plate",
+          "bones": [
+            "plate_a"
+          ],
+          "points": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.15,
+              0.0,
+              -0.25
+            ]
+          ]
+        },
+        {
+          "id": "long-hair",
+          "bones": [
+            "hair_a",
+            "hair_b",
+            "hair_c"
+          ],
+          "points": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.02,
+              -0.12
+            ],
+            [
+              0.0,
+              0.02,
+              -0.27
+            ],
+            [
+              0.0,
+              0.02,
+              -0.39
+            ]
+          ]
+        },
+        {
+          "id": "ribbon",
+          "bones": [
+            "ribbon_a",
+            "ribbon_b"
+          ],
+          "points": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.02,
+              0.0,
+              -0.2
+            ],
+            [
+              0.02,
+              0.0,
+              -0.42000000000000004
+            ]
+          ]
+        }
+      ],
+      "steps": 0,
+      "reason": "reset",
+      "reset_count": 1,
+      "max_length_error_m": 5.551115123125783e-17,
+      "max_proxy_penetration_m": 0.0,
+      "max_angle_error_deg": 0.0,
+      "max_anchor_error_m": 0.0,
+      "constraints_status": "PASS",
+      "visual_acceptance": "NOT_RUN",
+      "collision_scope": "tip particles versus supplied proxies; not surfaces or continuous collision"
+    },
+    {
+      "time_seconds": 0.004166666666666667,
+      "chains": [
+        {
+          "id": "cape",
+          "bones": [
+            "cape_a",
+            "cape_b"
+          ],
+          "points": [
+            [
+              0.02,
+              0.0,
+              0.0
+            ],
+            [
+              0.02,
+              0.0,
+              -0.3
+            ],
+            [
+              0.02,
+              0.0,
+              -0.6499999999999999
+            ]
+          ]
+        },
+        {
+          "id": "skirt-plate",
+          "bones": [
+            "plate_a"
+          ],
+          "points": [
+            [
+              0.02,
+              0.0,
+              0.0
+            ],
+            [
+              0.16999999999999998,
+              0.0,
+              -0.25
+            ]
+          ]
+        },
+        {
+          "id": "long-hair",
+          "bones": [
+            "hair_a",
+            "hair_b",
+            "hair_c"
+          ],
+          "points": [
+            [
+              0.02,
+              0.0,
+              0.0
+            ],
+            [
+              0.02,
+              0.02,
+              -0.12
+            ],
+            [
+              0.02,
+              0.02,
+              -0.27
+            ],
+            [
+              0.02,
+              0.02,
+              -0.39
+            ]
+          ]
+        },
+        {
+          "id": "ribbon",
+          "bones": [
+            "ribbon_a",
+            "ribbon_b"
+          ],
+          "points": [
+            [
+              0.02,
+              0.0,
+              0.0
+            ],
+            [
+              0.04,
+              0.0,
+              -0.2
+            ],
+            [
+              0.04,
+              0.0,
+              -0.42000000000000004
+            ]
+          ]
+        }
+      ],
+      "steps": 0,
+      "reason": "stepped",
+      "reset_count": 1,
+      "max_length_error_m": 5.551115123125783e-17,
+      "max_proxy_penetration_m": 0.0,
+      "max_angle_error_deg": 0.0,
+      "max_anchor_error_m": 0.0,
+      "constraints_status": "PASS",
+      "visual_acceptance": "NOT_RUN",
+      "collision_scope": "tip particles versus supplied proxies; not surfaces or continuous collision"
+    },
+    {
+      "time_seconds": 0.008333333333333333,
+      "chains": [
+        {
+          "id": "cape",
+          "bones": [
+            "cape_a",
+            "cape_b"
+          ],
+          "points": [
+            [
+              0.03,
+              0.0,
+              0.0
+            ],
+            [
+              0.0002854831951987352,
+              0.0,
+              -0.29852478538817706
+            ],
+            [
+              2.2572197169735183e-05,
+              0.0,
+              -0.6485246866421732
+            ]
+          ]
+        },
+        {
+          "id": "skirt-plate",
+          "bones": [
+            "plate_a"
+          ],
+          "points": [
+            [
+              0.03,
+              0.0,
+              0.0
+            ],
+            [
+              0.15606055162931948,
+              0.0,
+              -0.2628854072079918
+            ]
+          ]
+        },
+        {
+          "id": "long-hair",
+          "bones": [
+            "hair_a",
+            "hair_b",
+            "hair_c"
+          ],
+          "points": [
+            [
+              0.03,
+              0.0,
+              0.0
+            ],
+            [
+              0.0011279075390395951,
+              0.019321860413051232,
+              -0.11658931334862693
+            ],
+            [
+              5.063353395980607e-05,
+              0.019981959355491012,
+              -0.2665839924212666
+            ],
+            [
+              2.188176437015625e-05,
+              0.019999404060104992,
+              -0.3865839877088416
+            ]
+          ]
+        },
+        {
+          "id": "ribbon",
+          "bones": [
+            "ribbon_a",
+            "ribbon_b"
+          ],
+          "points": [
+            [
+              0.03,
+              0.0,
+              0.0
+            ],
+            [
+              0.02004238818445038,
+              0.0,
+              -0.2007507060185115
+            ],
+            [
+              0.020020864788288066,
+              0.0,
+              -0.42075070496565564
+            ]
+          ]
+        }
+      ],
+      "steps": 1,
+      "reason": "stepped",
+      "reset_count": 1,
+      "max_length_error_m": 5.551115123125783e-17,
+      "max_proxy_penetration_m": 0.0,
+      "max_angle_error_deg": 0.0,
+      "max_anchor_error_m": 0.0,
+      "constraints_status": "PASS",
+      "visual_acceptance": "NOT_RUN",
+      "collision_scope": "tip particles versus supplied proxies; not surfaces or continuous collision"
+    }
+  ],
+  "motion_origin": "provided_local_trajectory_not_mixamo",
+  "game_ready": false
+}

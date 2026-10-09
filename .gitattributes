@@ -4,6 +4,8 @@
 .gitignore text eol=lf
 *.md text eol=lf
 *.json text eol=lf
+# S1 數值QA為已雜湊的原始證據，保留實際位元組。
+runs/qa/secondary-s1-v001/** -text
 *.py text eol=lf
 *.toml text eol=lf
 # 執行期 QA 頁面與腳本的 SHA-256 記在閉環紀錄裡；固定 LF，Windows（autocrlf）clone 後雜湊不變。
