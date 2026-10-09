@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "zhaoyun-secondary-rig-extension-v1",
+  "status": "PROPOSED_NOT_APPLIED_REQUIRES_GAME_CONTRACT_DECISION",
+  "execution_profile": false,
+  "source_glb_sha256": "7dccbfae4b61280889a7be98370692143898c3eeef8dcd55dfa36ad4b4248a33",
+  "game_contract_ref": "e85840fad45b7704fab994945aee229f886c3b22",
+  "base_joint_order": ["pelvis", "spine_01", "spine_03", "neck", "head", "upperarm_l", "lowerarm_l", "hand_l", "upperarm_r", "lowerarm_r", "hand_r", "cape_01", "cape_02", "thigh_l", "calf_l", "foot_l", "thigh_r", "calf_r", "foot_r", "skirt_l", "skirt_r"],
+  "proposed_append_only_joints": [
+    {"index": 21, "name": "hair_01", "parent": "head"},
+    {"index": 22, "name": "hair_02", "parent": "hair_01"},
+    {"index": 23, "name": "hair_03", "parent": "hair_02"},
+    {"index": 24, "name": "ribbon_01", "parent": "pelvis"},
+    {"index": 25, "name": "ribbon_02", "parent": "ribbon_01"},
+    {"index": 26, "name": "ribbon_03", "parent": "ribbon_02"}
+  ],
+  "proposed_joint_count": 27,
+  "base_preservation": ["joint order and existing indices", "existing parent hierarchy and rest transforms", "hand_l/hand_r", "SM_ZhaoYunSpear", "tip Z=2.7", "tipBase Z=1.25", "weapon minimum Z=-1.05", "gameplay rules and root-motion policy"],
+  "secondary_owned_bones": ["cape_01", "cape_02", "skirt_l", "skirt_r", "hair_01", "hair_02", "hair_03", "ribbon_01", "ribbon_02", "ribbon_03"],
+  "body_animation_forbidden_bones": ["cape_01", "cape_02", "skirt_l", "skirt_r", "hair_01", "hair_02", "hair_03", "ribbon_01", "ribbon_02", "ribbon_03"],
+  "writer_policy": "Exactly one secondary writer per active bone: baked clip OR runtime solver. Existing procedural cape bindings must be replaced through an approved game integration, never run concurrently.",
+  "hair_anchor": "head-local measured hair-root offset; not head origin",
+  "ribbon_anchor": "pelvis-local measured tie offset; conditional on confirming a separate ribbon surface",
+  "rest_lengths_and_axes": "NOT_MEASURED; frozen DCC mask and neutral copy required before authoring",
+  "collision_proxies": "PROPOSED_ONLY: head/shoulder capsules for hair; pelvis/thigh proxies for ribbon; fitted transforms/radii NOT_MEASURED",
+  "units_and_basis": "Authoring Z-up world metres requires explicit tested conversion to glTF/Unity Y-up and Unity logic/display mirror; no raw preset copy",
+  "required_game_changes": [
+    "Version the asset contract: joint count/order and exact accepted candidate manifest; do not disable validation",
+    "Verify actual imported inverse-bind matrices and old 21-bone transforms after append/export",
+    "Replace existing cape writer and add explicit secondary ownership/write phase after body pose",
+    "Extend CharacterAnimation Transform mapping beyond current PlacedBones for new chains",
+    "Use simDt/simTime; freeze at hitstop/pause; reset all chains on teleport/respawn/large displacement",
+    "Retain weapon grip, tip/tipBase and gameplay contracts; rerun complete Unity gameplay acceptance"
+  ],
+  "unresolved_gates": ["full semantic masks/fixed regions not accepted", "S3 old candidate allowance exhausted", "game-side target-rig extension decision missing", "neutral source and actual Mixamo output missing"],
+  "model_revision": false,
+  "game_runtime_modified": false,
+  "unity_validation": "NOT_RUN",
+  "game_ready": false
+}
